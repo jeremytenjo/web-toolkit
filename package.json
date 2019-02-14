@@ -1,0 +1,26 @@
+{
+  "name": "web-features",
+  "version": "1.0.0",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
+    "hygen-mac": "HYGEN_TMPLS=.hygen/_templates hygen"
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "^4.1.11",
+    "hygen": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-scripts": "latest",
+    "styled-components": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@storybook/addon-console": "^1.1.0",
+    "@storybook/addon-options": "^4.1.11",
+    "@storybook/react": "latest",
+    "babel-loader": "latest",
+    "storybook-addon-jsx": "latest",
+    "storybook-readme": "^4.0.5"
+  }
+}
