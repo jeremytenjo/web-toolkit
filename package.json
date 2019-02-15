@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
     "hygen-mac": "HYGEN_TMPLS=.hygen/_templates hygen"
   },

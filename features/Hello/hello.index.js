@@ -10,4 +10,4 @@ import Hello from './hello.comp'
 import HelloMockData from './hello.mockData'
 
 // Exports
-export { Hello, HelloReadme,HelloMockData }
+export { Hello, HelloReadme, HelloMockData }
