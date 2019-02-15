@@ -955,6 +955,18 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@bit/bit.utils.object.group-by@^1.0.0":
+  version "1.0.0"
+  resolved "https://node.bitsrc.io/bit.utils.object.group-by/-/bit.utils.object.group-by-1.0.0.tgz#9b34d24bb5515bed59b3d685ac8e8a4385d3b085"
+  integrity sha1-mzTSS7VRW+1Zs9aFrI6KQ4XTsIU=
+  dependencies:
+    "@bit/bit.utils.object.has-own-property" "1.0.0"
+
+"@bit/bit.utils.object.has-own-property@1.0.0":
+  version "1.0.0"
+  resolved "https://node.bitsrc.io/bit.utils.object.has-own-property/-/bit.utils.object.has-own-property-1.0.0.tgz#d2f2cad1f9f465384f53e20d70bc7ebfe4df640b"
+  integrity sha1-0vLK0fn0ZThPU+INcLx+v+TfZAs=
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"

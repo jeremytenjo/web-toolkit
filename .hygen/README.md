@@ -1,7 +1,27 @@
-1. `yarn global add hygen`
+Install hygen
 
-2. Add to package.json scripts `"hygen": "HYGEN_TMPLS=.hygen/_templates hygen"` `package.json`
+```sh
+yarn add hygen
+```
 
-3. To generate a Feature run (inlude folders in _filename_)
+Add to `package.json`
+_On Windows:_
+`"hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen"`
+_On Mac:_
+`"hygen-mac": "HYGEN_TMPLS=.hygen/_templates hygen"`
 
-- `yarn hygen feature new --name _filename_`
+Crate new feature
+
+```sh
+Yarn hygen feature —name <feature name>
+```
+
+Generates
+<Component name>
+Ui/
+<Component name>.comp.js
+Functions/
+<Component name>.func.js
+<Component name>.index.js
+<Component name>.stories.js
+<Component name>.readme.js

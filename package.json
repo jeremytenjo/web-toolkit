@@ -7,6 +7,7 @@
     "hygen-mac": "HYGEN_TMPLS=.hygen/_templates hygen"
   },
   "dependencies": {
+    "@bit/bit.utils.object.group-by": "^1.0.0",
     "@storybook/addon-actions": "^4.1.11",
     "hygen": "latest",
     "react": "latest",

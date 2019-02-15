@@ -22,7 +22,7 @@ import Button from 'components/button';
 
 ```
 Requirements: 
-    *  Must have firebase initialized in client https://axiomlegal.atlassian.net/browse/CI-1332
+    *
 ```
 ### Bit Information
 * Url: https://bitsrc.io/bit/movie-app/components/hero-button

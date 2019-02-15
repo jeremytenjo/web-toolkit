@@ -6,5 +6,8 @@ import HelloReadme from './hello.readme.md'
 // Ui
 import Hello from './hello.comp'
 
+// Mock Data
+import HelloMockData from './hello.mockData'
+
 // Exports
-export { Hello, HelloReadme }
+export { Hello, HelloReadme,HelloMockData }

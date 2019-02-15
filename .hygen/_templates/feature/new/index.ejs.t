@@ -6,6 +6,7 @@ to: features/<%= Name %>.index.js
 <%_ compNameLower = compName.charAt(0).toLowerCase() + compName.slice(1) _%>
 <%_ compNameUpper = compName.charAt(0).toUpperCase() + compName.slice(1); _%>
 <%_ compNameReadme = compNameUpper + 'Readme' _%>
+<%_ compNameMockData = compNameUpper + 'MockData' _%>
 // README
 import <%= compNameReadme %> from './<%= compNameLower %>.readme.md'
 
@@ -14,5 +15,8 @@ import <%= compNameReadme %> from './<%= compNameLower %>.readme.md'
 // Ui
 import <%= compNameUpper %> from './<%= compNameLower %>.comp'
 
+// Mock Data
+import <%= compNameMockData %> from './<%= compNameLower %>.mockData'
+
 // Exports
-export { <%= compNameUpper %>, <%= compNameReadme %> }
+export { <%= compNameUpper %>, <%= compNameReadme %>, <%= compNameMockData %> }

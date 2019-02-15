@@ -1,10 +1,9 @@
 // Vendors
-import React, { memo } from 'react'
-import styled from 'styled-components'
+import React, { memo, Fragment } from 'react'
 
 // Main
 const Hello = () => {
-  return <>Hello </>
+  return <Fragment>Hello </Fragment>
 }
 
 // Exports
