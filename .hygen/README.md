@@ -16,6 +16,12 @@ Crate new feature
 Yarn hygen feature —name <feature name>
 ```
 
+shortcut:
+
+```sh
+hfn <feature name>
+```
+
 Generates
 <Component name>
 Ui/

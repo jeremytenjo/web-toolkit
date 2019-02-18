@@ -13,3 +13,9 @@
 ```sh
 bit export tenjojeremy.web-features
 ```
+
+## Import tagged components
+
+Package naming convention
+
+yarn add <owner>.<collection>.<component-ID>
