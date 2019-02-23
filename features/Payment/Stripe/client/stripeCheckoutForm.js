@@ -107,11 +107,11 @@ const CheckoutForm = ({ stripe }) => {
 
   // Template
   return (
-    <Overlay id="checkoutForm">
-      <Wrapper className="checkout">
+    <Overlay id='checkoutForm'>
+      <Wrapper className='checkout'>
         <Header>
           <span>CHECKOUT</span>
-          <img onClick={close} src={imgClose} alt="icon" />
+          <img onClick={close} src={imgClose} alt='icon' />
         </Header>
 
         <CheckoutList

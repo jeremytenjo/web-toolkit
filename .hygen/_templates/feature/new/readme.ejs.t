@@ -31,6 +31,7 @@ Requirements:
 * Tag (Version):
     * `bit tag --minor <%= compNameLower %>`
     * `bit tag --mayor <%= compNameLower %>`
-* Remove: `bit remove tenjojeremy.web-features/<%= Name %>`
+* Remove Locally: `bit remove tenjojeremy.web-features/<%= compNameUpper %>`
+* Remove Remote: `bit remove tenjojeremy.web-features/<%= compNameUpper %> --remote`
 
 

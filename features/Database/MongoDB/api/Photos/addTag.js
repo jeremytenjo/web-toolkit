@@ -1,5 +1,5 @@
 const addTag = async (req, res) => {
-  const payload = req.payload  
+  const payload = req.payload
   const client = req.client
   const collection = req.collection
   console.log(payload)

@@ -11,9 +11,9 @@ const searchByCategory = require('./searchByCategory')
 
 // Middleware
 router.use((req, res, next) => {
-  const db = req.db  
+  const db = req.db
   req.collection = db.collection('users')
-  req.payload = req.body.payload  
+  req.payload = req.body.payload
 
   return next()
 })

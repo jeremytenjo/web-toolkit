@@ -24,7 +24,7 @@ Input.defaultProps = {
   placeholder: '',
   showErrMsg: null,
   errMesgStyle: {},
-  errMsg: ''
+  errMsg: '',
 }
 
 // Exports

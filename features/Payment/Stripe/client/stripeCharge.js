@@ -15,8 +15,8 @@ export const create = async (stripe, currency, amount, name) => {
         token: token.id,
         amount: amountInDollars,
         currency,
-        name
-      })
+        name,
+      }),
     })
 
     // console.log(res)
@@ -27,8 +27,8 @@ export const create = async (stripe, currency, amount, name) => {
     return {
       type: 'error',
       error: {
-        message: 'Server error, please try again later'
-      }
+        message: 'Server error, please try again later',
+      },
     }
   }
 }

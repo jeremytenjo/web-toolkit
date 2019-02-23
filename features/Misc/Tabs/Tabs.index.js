@@ -26,12 +26,12 @@ const Tabs = (props) => {
         value={currentTabIndex}
         indicatorColor={color}
         textColor={color}
-        variant="fullWidth"
+        variant='fullWidth'
       >
         {tabList.map((item) => (
           <Tab
             style={{
-              width: tabWidth
+              width: tabWidth,
             }}
             key={item.label}
             label={item.label}

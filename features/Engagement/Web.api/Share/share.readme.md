@@ -1,7 +1,7 @@
 ### Usage
 
 ```js
-import Button from 'components/button'
+import { Share } from '@bit/tenjojeremy.web-features.share'
 ```
 
 ### Properties
@@ -26,4 +26,5 @@ Requirements:
   - `bit tag --minor share`
   - `bit tag --mayor share`
 - Export `bit export tenjojeremy.web-features`
-- Remove: `bit remove tenjojeremy.web-features/Engagement/share/share`
+- Remove Locally: `bit remove tenjojeremy.web-features/share`
+- Remove Remote: `bit remove tenjojeremy.web-features/share --remote`

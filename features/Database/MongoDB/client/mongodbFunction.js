@@ -11,10 +11,10 @@ export default (data) => {
         const dbData = await fetch(url, {
           headers: {
             Accept: 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
           method: 'POST',
-          body: JSON.stringify({ userId, payload })
+          body: JSON.stringify({ userId, payload }),
         })
         const dbDataJson = await dbData.json()
 

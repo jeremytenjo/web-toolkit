@@ -1,26 +1,24 @@
-'use strict';
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+})
 
-var _react = require('react');
+var _react = require('react')
 
-var _react2 = _interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react)
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj }
+}
 
 // Main
 var Hello = function Hello() {
-  return _react2.default.createElement(
-    _react.Fragment,
-    null,
-    'Hello '
-  );
-};
+  return _react2.default.createElement(_react.Fragment, null, 'Hello ')
+}
 
 // Exports
 // Vendors
-exports.default = (0, _react.memo)(Hello);
+exports.default = (0, _react.memo)(Hello)
 
 //# sourceMappingURL=hello.comp.js.map

@@ -1,12 +1,12 @@
-"use strict";
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+Object.defineProperty(exports, '__esModule', {
+  value: true,
+})
 // Main
-var HelloMockData = [];
+var HelloMockData = []
 
 // Exports
-exports.default = HelloMockData;
+exports.default = HelloMockData
 
 //# sourceMappingURL=hello.mockData.js.map

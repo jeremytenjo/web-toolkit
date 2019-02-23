@@ -18,7 +18,7 @@ const stripeCharge = async (req, res) => {
       amount,
       currency,
       description,
-      source: token
+      source: token,
     })
 
     res.json({ status })

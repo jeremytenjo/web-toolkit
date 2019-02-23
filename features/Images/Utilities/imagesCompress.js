@@ -11,7 +11,7 @@ export default (file) => {
       error(e) {
         new Error('Compression Failed ' + e.message)
         resolve(false)
-      }
+      },
     })
   })
 }

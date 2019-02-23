@@ -1,0 +1,7 @@
+# Build
+/build/*
+/src/serviceWorker/sw.js
+
+ .bit
+ .out
+

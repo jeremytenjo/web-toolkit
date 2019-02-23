@@ -1,5 +1,5 @@
-const removeCategory = (req, res) => { 
-  const collection = req.collection 
+const removeCategory = (req, res) => {
+  const collection = req.collection
   const name = req.payload
 
   //remove category from categories

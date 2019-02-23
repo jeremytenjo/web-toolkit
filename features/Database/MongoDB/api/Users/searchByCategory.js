@@ -2,7 +2,7 @@
 // https://docs.mongodb.com/manual/tutorial/query-arrays/
 
 const searchByCategory = (req, res) => {
-  const query = req.payload    
+  const query = req.payload
   const client = req.client
   const collection = req.collection
   let users
@@ -15,7 +15,7 @@ const searchByCategory = (req, res) => {
       res.json(users)
     })
     .catch((error) => {
-     res.status(500).json(error)
+      res.status(500).json(error)
     })
 
   client.close()

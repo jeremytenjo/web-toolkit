@@ -7,9 +7,9 @@ const addTag = require('./addTag')
 
 // Middleware
 router.use((req, res, next) => {
-  const db = req.db  
+  const db = req.db
   req.collection = db.collection('photos')
-  req.payload = req.body.payload  
+  req.payload = req.body.payload
 
   return next()
 })
