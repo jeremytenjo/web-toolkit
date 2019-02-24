@@ -1,4 +1,4 @@
-import { ShareSchema } from './share.index'
+import ShareSchema from '../share.schema'
 
 const shareFunction = async (data) => {
   let dataIsValid = null

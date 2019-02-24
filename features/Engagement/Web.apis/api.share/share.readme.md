@@ -24,7 +24,7 @@ Requirements:
 
 #### Export
 
-- Add: `bit add features/Engagement/Web.api/api.share/ --main share.index.js --id api-share`
+- Add: `bit add features/Engagement/Web.apis/api.share/ --main share.index.js --id api-share`
 - Tag (Version):
   - `bit tag --minor api-share`
   - or

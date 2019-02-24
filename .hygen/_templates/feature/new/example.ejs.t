@@ -1,5 +1,5 @@
 ---
-to: features/<%= Name %>.example.js
+to: features/<%= Name %>.examples/<%= Name %>.example.simple.js
 ---
 <%_ compName = name.split('/') _%>
 <%_ compName = compName[compName.length - 1] _%>

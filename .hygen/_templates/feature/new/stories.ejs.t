@@ -15,7 +15,8 @@ import { storiesOf } from '@storybook/react'
 import { withReadme } from 'storybook-readme';
 
 // Component 
-import { <%= compNameUpper %>,  <%= compNameReadme %>, <%= compNameExample %>  } from './<%= compNameLower %>.index'
+import  <%= compNameExample %> from './<%= compNameLower %>.functions/<%= compNameLower %>.simple'
+import { <%= compNameUpper %>,  <%= compNameReadme %>  } from './<%= compNameLower %>.index'
 
 
 // Stories

@@ -1,7 +1,7 @@
 // Vendors
 import React, { useState, Fragment } from 'react'
 //
-import { Share, ShareMockData } from './share.index'
+import { ShareInit, ShareMockData } from '../share.index'
 
 const ShareExample = () => {
   // State
@@ -9,7 +9,7 @@ const ShareExample = () => {
 
   // Functions
   const useShareFun = async () => {
-    const { errorMessage, success } = await Share(ShareMockData)
+    const { errorMessage, success } = await ShareInit(ShareMockData)
 
     if (success) setresMsg('Share Successful')
     if (errorMessage) setresMsg(errorMessage)

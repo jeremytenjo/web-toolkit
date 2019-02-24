@@ -13,7 +13,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _share = require('./share.index');
+var _share = require('../share.index');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38,7 +38,7 @@ var ShareExample = function ShareExample() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return (0, _share.Share)(_share.ShareMockData);
+              return (0, _share.ShareInit)(_share.ShareMockData);
 
             case 2:
               _ref2 = _context.sent;
@@ -77,4 +77,4 @@ var ShareExample = function ShareExample() {
 
 exports.default = ShareExample;
 
-//# sourceMappingURL=share.example.js.map
+//# sourceMappingURL=share.example.simple.js.map

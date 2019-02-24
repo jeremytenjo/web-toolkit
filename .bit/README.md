@@ -8,6 +8,10 @@
 
 > Removeing: `https://docs.bitsrc.io/docs/remove-deprecate.html`
 
+## Project Install
+
+`yarn config set "@bit:registry" "https://node.bitsrc.io/"`
+
 ## Export tagged components
 
 ```sh
