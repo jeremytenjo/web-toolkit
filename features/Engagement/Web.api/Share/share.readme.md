@@ -8,13 +8,13 @@ import { Share } from '@bit/tenjojeremy.web-features.share'
 
 | **propName** | **propType** | **defaultValue** | **isRequired** |
 | ------------ | ------------ | ---------------- | -------------- |
-|              |              |                  |                |
-|              |              |                  |                |
-|              |              |                  |                |
+| title        | string       | ''               | false          |
+| text         | string       | ''               | false          |
+| url          | string       | ''               | true           |
 
 ```
 Requirements:
-    *
+    * Musit be on mobile
 ```
 
 ### Bit Information

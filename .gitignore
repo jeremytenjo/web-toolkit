@@ -10,10 +10,15 @@
 /build
 /.out
 
-# misc
+# FIrebase 
+/.firebase
+
+# Bit
 .bit/components
 .bit/objects
 .bit/tmp
+
+# misc
 .DS_Store
 .env.local
 .env.development.local
