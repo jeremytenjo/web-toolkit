@@ -1,0 +1,10 @@
+{
+  "name": "api-share",
+  "version": "0.1.0",
+  "description": "Share API",
+  "main": "share.index.js",
+  "license": "MIT",
+  "dependencies": {
+    "yup": "^0.26.10"
+  }
+}
