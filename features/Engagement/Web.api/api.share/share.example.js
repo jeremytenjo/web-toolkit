@@ -1,6 +1,5 @@
 // Vendors
 import React, { useState, Fragment } from 'react'
-
 //
 import { Share, ShareMockData } from './share.index'
 

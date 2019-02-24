@@ -7,6 +7,7 @@ to: features/<%= Name %>.stories.js
 <%_ compNameUpper = compName.charAt(0).toUpperCase() + compName.slice(1) _%>
 <%_ compNameReadme = compNameUpper + 'Readme' _%>
 <%_ compNameMockData = compNameUpper + 'MockData' _%>
+<%_ compNameExample = compNameUpper + 'exmaple' _%>
 
 // Vendors
 import React from 'react'
@@ -14,8 +15,8 @@ import { storiesOf } from '@storybook/react'
 import { withReadme } from 'storybook-readme';
 
 // Component 
-import { <%= compNameUpper %>,  <%= compNameReadme %>, <%= compNameMockData %>  } from './<%= compNameLower %>.index'
+import { <%= compNameUpper %>,  <%= compNameReadme %>, <%= compNameExample %>  } from './<%= compNameLower %>.index'
 
 
 // Stories
-storiesOf('<%= compNameUpper %>', module).add('default', withReadme(<%= compNameReadme %> ,() => <<%= compNameUpper %> />))
+storiesOf('<%= compNameUpper %>', module).add('default', withReadme(<%= compNameReadme %> ,() => <<%= compNameExample %> />))
