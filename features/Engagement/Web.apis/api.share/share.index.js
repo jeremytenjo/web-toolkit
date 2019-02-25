@@ -1,5 +1,5 @@
 // README
-import ShareReadme from './share.readme.md'
+import ShareReadme from './README.md'
 
 // Functions
 import ShareInit from './share.functions/share.init'
