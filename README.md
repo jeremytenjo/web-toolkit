@@ -6,9 +6,9 @@ Code generator
 - Index
 - Stories
 
-`Bit`
+`NPM`
 
-Components Repo
+Every features has a `package.json` and `node_modules`
 
 `Storybook`
 

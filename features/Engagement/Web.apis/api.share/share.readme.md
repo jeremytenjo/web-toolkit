@@ -17,29 +17,19 @@ Requirements:
     * Must be on mobile
 ```
 
-### Bit Information
+### Information
 
-- Url: https://bitsrc.io/tenjojeremy/web-features/api-share
-- Install: `yarn add @bit/tenjojeremy.web-features.api-share`
-
-#### Export
-
-- Add: `bit add features/Engagement/Web.apis/api.share/ --main share.index.js --id api-share`
-- Tag (Version):
-  - `bit tag --minor api-share`
-  - or
-  - `bit tag --mayor api-share`
-- Export `bit export tenjojeremy.web-features api-share`
+- Url: https://www.npmjs.com/package/@tenjo/api-share
+- Install: `yarn add @tenjo/api-share`
 
 #### Update
 
-- Tag (Version):
-  - `bit tag --minor api-share`
+- Export
+
+  - `yarn update --minor`
   - or
-  - `bit tag --mayor api-share`
-- Export `bit export tenjojeremy.web-features api-share`
+  - `yarn update --mayor`
 
 #### Remove
 
-- Remove Locally: `bit remove tenjojeremy.web-features/api-share`
-- Remove Remote: `bit remove tenjojeremy.web-features/api-share --remote`
+`npm unpublish @tenjo/api-share --force`

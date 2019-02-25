@@ -24,30 +24,20 @@ import Button from 'components/button';
 Requirements: 
     *
 ```
-### Bit Information
-* Url: https://bitsrc.io/bit/movie-app/components/hero-button
-* Install: `yarn add @bit/bit.movie-app.components.hero-button`
-
-#### Export
-
-* Add: `bit add <%= compLocation %>/ --main <%= compNameLower %>.index.js`
-* Tag (Version):
-    * `bit tag --minor <%= compNameLower %>`
-    * or
-    * `bit tag --mayor <%= compNameLower %>`
-* Export `bit export tenjojeremy.web-features <%= compNameLower %>`
+### Information
+* Url: https://www.npmjs.com/package/<%= compNameUpper %>
+* Install: `yarn add `
 
 #### Update
 
-* Tag (Version):
-    * `bit tag --minor <%= compNameLower %>`
-    * or
-    * `bit tag --mayor <%= compNameLower %>`
-* Export `bit export tenjojeremy.web-features <%= compNameLower %>`
+- Export
+
+  - `yarn update --minor`
+  - or
+  - `yarn update --mayor`
 
 #### Remove
 
-* Remove Locally: `bit remove tenjojeremy.web-features/<%= compNameUpper %>`
-* Remove Remote: `bit remove tenjojeremy.web-features/<%= compNameUpper %> --remote`
+* `npm unpublish @tenjo/<%= compNameUpper %> --force`
 
 
