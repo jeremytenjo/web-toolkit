@@ -21,7 +21,6 @@ export default memo(<%= compNameUpper %>)
   "description": "<%= Name %>",
   "main": "share.index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "publish-minor": "yarn publish --minor"
   },
   "author": "Jeremy Tenjo <tenjojeremy@gmail.com>",
