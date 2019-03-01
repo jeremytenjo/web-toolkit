@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/eslint-config",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Global Eslint config",
   "main": "eslint.index.js",
   "scripts": {
