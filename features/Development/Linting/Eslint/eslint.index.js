@@ -7,6 +7,7 @@ module.exports = {
     commonjs: true,
     node: true,
     es6: true,
+    jest: true,
   },
   parser: 'babel-eslint',
   plugins: ['react', 'babel', 'react-hooks'],
