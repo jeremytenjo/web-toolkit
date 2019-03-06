@@ -1,0 +1,15 @@
+{
+  "name": "@tenjo/comunication-chat",
+  "version": "0.0.1",
+  "description": "```sh yarn add @tenjo/communication-chat ```",
+  "main": "chat.index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Tenjo <tenjojeremy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "styled-components": "^4.1.3",
+    "prop-types": "^15.7.2"
+  }
+}
