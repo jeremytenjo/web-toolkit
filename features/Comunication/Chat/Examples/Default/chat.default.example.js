@@ -16,7 +16,7 @@ const Example = () => {
 
     const newMessage = {
       id: Math.random(),
-      userId: 1,
+      userId: '1',
       message,
     }
 
@@ -28,7 +28,6 @@ const Example = () => {
     <div className='App'>
       <h1>Add Other user message</h1>
       <button onClick={addMessage}>Add Message</button>
-
       <h1>Component</h1>
       <Chat
         messagesData={data}

@@ -7,6 +7,7 @@ addParameters({
     name: 'Web Features',
     theme,
     panelPosition: 'right',
+    showPanel: false,
   },
 })
 

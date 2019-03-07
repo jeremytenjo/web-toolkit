@@ -3,7 +3,13 @@ import React, { useRef, useEffect, useState, memo } from 'react'
 // PropTypes
 import { defaultProps, propTypes } from './chat.propTypes'
 // Styles
-import { ChatWrapper, ChatList, CurrentUserCompWrapper, OtherUserCompWrapper, InputCompWrapper } from './chat.styles'
+import {
+  ChatWrapper,
+  ChatList,
+  CurrentUserCompWrapper,
+  OtherUserCompWrapper,
+  InputCompWrapper,
+} from './chat.styles'
 // Main
 const Chat = ({
   senderIds,
@@ -30,7 +36,7 @@ const Chat = ({
     scrollToBottom()
     addEventListeners()
     return removeEventListeners()
-  }, [])
+  }, [addEventListeners, removeEventListeners, scrollToBottom])
 
   // Functions
   const addEventListeners = () => {
@@ -43,7 +49,8 @@ const Chat = ({
     ChatList_Ref.current.removeEventListener('scroll', handleScroll)
   }
 
-  const scrollToBottom = () => (ChatList_Ref.current.scrollTop = ChatList_Ref.current.scrollHeight)
+  const scrollToBottom = () =>
+    (ChatList_Ref.current.scrollTop = ChatList_Ref.current.scrollHeight)
 
   const handleScroll = () => {
     const reachedTop = ChatList_Ref.current.scrollTop === 0
@@ -52,8 +59,8 @@ const Chat = ({
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
-
     const submitConditions = inputMessageValue !== ''
+
     if (submitConditions) {
       onSubmit(inputMessageValue)
       scrollToBottom()
@@ -83,7 +90,11 @@ const Chat = ({
         {loadMessages(messagesData)}
       </ChatList>
       <InputCompWrapper>
-        <InputComp styles={inputCompStyles} onChange={messageInputOnChange} onFocus={scrollToBottom} />
+        <InputComp
+          styles={inputCompStyles}
+          onChange={messageInputOnChange}
+          onFocus={scrollToBottom}
+        />
       </InputCompWrapper>
     </ChatWrapper>
   )

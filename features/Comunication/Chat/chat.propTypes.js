@@ -1,6 +1,16 @@
 // Vednors
 import React, { useState } from 'react'
-import { func, array, arrayOf, object, shape, bool, string } from 'prop-types'
+import {
+  func,
+  array,
+  arrayOf,
+  object,
+  shape,
+  bool,
+  string,
+  number,
+  oneOfType,
+} from 'prop-types'
 
 // Default
 const Input = ({ onChange, onFocus }) => {
@@ -9,7 +19,14 @@ const Input = ({ onChange, onFocus }) => {
     setInputMessageValue(value)
     onChange(value)
   }
-  return <input type='text' onChange={handleChange} value={inputMessageValue} onFocus={onFocus} />
+  return (
+    <input
+      type='text'
+      onChange={handleChange}
+      value={inputMessageValue}
+      onFocus={onFocus}
+    />
+  )
 }
 
 export const defaultProps = {
@@ -33,8 +50,18 @@ export const propTypes = {
   onReachedTop: func,
   InputComp: func,
   wrapperStyles: object,
-  messagesData: arrayOf(shape({ id: string, userId: string })).isRequired,
-  previousMessageData: arrayOf(shape({ id: string, userId: string })).isRequired,
+  messagesData: arrayOf(
+    shape({
+      id: oneOfType([string, number]),
+      userId: oneOfType([string, number]),
+    }),
+  ).isRequired,
+  previousMessageData: arrayOf(
+    shape({
+      id: oneOfType([string, number]),
+      userId: oneOfType([string, number]),
+    }),
+  ).isRequired,
   fetchingPreviousMessageData: bool,
   LoadingComp: func,
   onSubmit: func,
