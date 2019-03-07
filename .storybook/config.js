@@ -1,21 +1,17 @@
-import { configure, addDecorator } from '@storybook/react'
+import { configure, addParameters } from '@storybook/react'
+import theme from './storybook.theme'
 
-// Addons
-import { withOptions } from '@storybook/addon-options'
-import { withPrettierSource } from 'storybook-addon-prettier-source'
-
-// Addons
-addDecorator(
-  withOptions({
+// Theme
+addParameters({
+  options: {
     name: 'Web Features',
-    addonPanelInRight: true,
-  }),
-)
+    theme,
+    panelPosition: 'right',
+  },
+})
 
-addDecorator((story, context) => withPrettierSource()(story)(context))
-
+// Load Stories
 const req = require.context('../features', true, /\.stories\.js$/)
-
 function loadStories() {
   req.keys().forEach((filename) => req(filename))
 }

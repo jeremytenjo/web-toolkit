@@ -9,24 +9,17 @@
     "hygen-mac": "HYGEN_TMPLS=.hygen/_templates hygen"
   },
   "dependencies": {
-    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
-    "@storybook/addon-actions": "^4.1.11",
+    "@babel/core": "^7.3.4",
+    "@storybook/react": "^5.0.0",
     "@tenjo/eslint-config": "^0.0.1",
+    "babel-loader": "^8.0.5",
     "ejs-lint": "^0.3.0",
     "hygen": "latest",
-    "react": "16.8.2",
-    "react-dom": "16.8.2",
-    "react-scripts": "latest",
-    "storybook-addon-prettier-source": "^2.1.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "^2.1.8",
+    "storybook-readme": "^4.0.5",
+    "styled-components": "^4.1.3",
     "yup": "^0.26.10"
-  },
-  "devDependencies": {
-    "@babel/core": "7.3.3",
-    "@storybook/addon-console": "^1.1.0",
-    "@storybook/addon-options": "^4.1.11",
-    "@storybook/react": "latest",
-    "babel-loader": "latest",
-    "storybook-addon-jsx": "latest",
-    "storybook-readme": "^4.0.5"
   }
 }
