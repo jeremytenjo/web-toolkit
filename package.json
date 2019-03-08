@@ -4,7 +4,7 @@
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
     "build": "build-storybook -c .storybook -o .storybook-build",
-    "deploy": "yarn build && firebase deploy",
+    "deploy": "yarn build && firebase deploy && gpush",
     "pretty": "prettier \"**/*.js\" --write",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
     "hygen-mac": "HYGEN_TMPLS=.hygen/_templates hygen"
