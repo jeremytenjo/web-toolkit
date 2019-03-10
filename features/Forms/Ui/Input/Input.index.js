@@ -10,6 +10,7 @@ const Input = (
     errMsg = '',
     errMesgStyle = { color: 'red' },
     placeholder = '',
+    style = {},
   },
   ref,
 ) => {
@@ -44,6 +45,7 @@ const Input = (
         placeholder={placeholder}
         onChange={handleChange}
         onFocus={onFocus}
+        style={style}
       />
       {errMsg !== '' && <p style={errMesgStyle}>{errMsg}</p>}
     </>
