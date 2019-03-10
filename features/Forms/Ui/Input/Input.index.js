@@ -20,6 +20,8 @@ const Input = (
   useImperativeHandle(ref, () => ({
     clearInput() {
       clearInput()
+    },
+    getCurrentValue() {
       getCurrentValue()
     },
   }))

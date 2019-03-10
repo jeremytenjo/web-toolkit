@@ -23,10 +23,22 @@ const Example = () => {
     setData(newData)
   }
 
+  const addOtherPersonMessage = () => {
+    const newData = data.slice()
+    const newMessage = {
+      id: Math.random(),
+      userId: '2',
+      message: 'Hello thewrwe',
+    }
+
+    newData.push(newMessage)
+    setData(newData)
+  }
+
   return (
     <div>
       <h1>Add Other user message</h1>
-      <button onClick={addMessage}>Add Message</button>
+      <button onClick={addOtherPersonMessage}>Add other user Message</button>
       <h1>Component</h1>
       <Chat
         messagesData={data}
