@@ -9,7 +9,10 @@
   "author": "Jeremy Tenjo <tenjojeremy@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "styled-components": "^4.1.3",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "styled-components": "^4.1.3"
+  },
+  "dependencies": {
+    "@tenjo/forms-input": "^0.2.0"
   }
 }

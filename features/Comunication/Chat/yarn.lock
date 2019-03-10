@@ -42,6 +42,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.3.tgz#6310a047f12d21a1036fb031317219892440416f"
   integrity sha512-4zAPlpDEh2VwXswwr/t8xGNDGg8RQiPxtxZ3qQEXyQsBV39ptTdESCjuBvGze1nLMVrxmTIKmnO/nAV8Tqjjzg==
 
+"@tenjo/forms-input@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@tenjo/forms-input/-/forms-input-0.2.0.tgz#72c57b8fc465570245bb6add4bf89033d5c73f6f"
+  integrity sha512-MwZXAd5EinWmQahK2kuAJORUbq5O1+dRw65M2TvcW3rDsg4r5pB4qWGTBXdC4lyGV1VxElF21RLC4f/WC3f2zw==
+
 "babel-plugin-styled-components@>= 1":
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.10.0.tgz#ff1f42ad2cc78c21f26b62266b8f564dbc862939"

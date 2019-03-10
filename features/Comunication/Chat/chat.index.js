@@ -10,7 +10,6 @@ import {
   OtherUserCompWrapper,
   InputCompWrapper,
 } from './chat.styles'
-import Input from './Examples/DefaultComoponents/input'
 
 // Main
 const Chat = ({
@@ -86,6 +85,7 @@ const Chat = ({
         </OtherUserCompWrapper>
       ),
     )
+
   // Template
   return (
     <ChatWrapper styles={wrapperStyles} onSubmit={handleOnSubmit}>

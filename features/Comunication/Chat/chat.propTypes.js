@@ -13,7 +13,7 @@ import {
 } from 'prop-types'
 
 // Default Components
-import Input from './Examples/DefaultComoponents/input'
+import Input from '@tenjo/forms-input'
 
 export const defaultProps = {
   senderIds: [],

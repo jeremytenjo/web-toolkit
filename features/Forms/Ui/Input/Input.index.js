@@ -1,31 +1,53 @@
 // Vendors
-import React, { useState, memo, Fragment } from 'react'
+import React, { useState, memo, useImperativeHandle, forwardRef } from 'react'
 
-// Main Component
-const Input = ({ errMsg, errMesgStyle, showErrMsg, placeholder }) => {
+// Main
+const Input = (
+  {
+    onChange = () => null,
+    onFocus = () => null,
+    type = 'text',
+    errMsg = '',
+    errMesgStyle = { color: 'red' },
+    placeholder = '',
+  },
+  ref,
+) => {
   // State
   const [input, setInput] = useState('')
 
+  // Shared Functions
+  useImperativeHandle(ref, () => ({
+    clearInput() {
+      clearInput()
+      getCurrentValue()
+    },
+  }))
+
   // Functions
-  const updateInput = async (e) => {
-    setInput(e.target.value)
+  const clearInput = () => setInput('')
+  const getCurrentValue = () => input
+
+  const handleChange = async ({ target: { value } }) => {
+    setInput(value)
+    onChange(value)
   }
 
   // Template
   return (
-    <Fragment>
-      <input value={input} onChange={updateInput} placeholder={placeholder} />
-      {showErrMsg && <p style={errMesgStyle}>{errMsg}</p>}
-    </Fragment>
+    <>
+      <input
+        type={type}
+        value={input}
+        placeholder={placeholder}
+        onChange={handleChange}
+        onFocus={onFocus}
+      />
+      {errMsg !== '' && <p style={errMesgStyle}>{errMsg}</p>}
+    </>
   )
 }
 
-Input.defaultProps = {
-  placeholder: '',
-  showErrMsg: null,
-  errMesgStyle: {},
-  errMsg: '',
-}
-
 // Exports
-export default memo(Input)
+export default memo(forwardRef(Input))
+// forwardRef does not support proptypes
