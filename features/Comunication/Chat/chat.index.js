@@ -10,6 +10,8 @@ import {
   OtherUserCompWrapper,
   InputCompWrapper,
 } from './chat.styles'
+import Input from './Examples/DefaultComoponents/input'
+
 // Main
 const Chat = ({
   senderIds,
@@ -27,6 +29,7 @@ const Chat = ({
 }) => {
   // Refs
   const ChatList_Ref = useRef(null)
+  const inputRef = useRef(null)
 
   // States
   const [inputMessageValue, setInputMessageValue] = useState('')
@@ -36,7 +39,7 @@ const Chat = ({
     scrollToBottom()
     addEventListeners()
     return removeEventListeners()
-  }, [addEventListeners, removeEventListeners, scrollToBottom])
+  }, [addEventListeners, removeEventListeners, scrollToBottom, messagesData])
 
   // Functions
   const addEventListeners = () => {
@@ -64,6 +67,8 @@ const Chat = ({
     if (submitConditions) {
       onSubmit(inputMessageValue)
       scrollToBottom()
+      setInputMessageValue('')
+      inputRef.current.clearInput()
     }
   }
 
@@ -91,6 +96,7 @@ const Chat = ({
       </ChatList>
       <InputCompWrapper>
         <InputComp
+          ref={inputRef}
           styles={inputCompStyles}
           onChange={messageInputOnChange}
           onFocus={scrollToBottom}

@@ -12,8 +12,7 @@ const Example = () => {
   const [data, setData] = useState(dataInit)
 
   const addMessage = (message) => {
-    const newData = data
-
+    const newData = data.slice()
     const newMessage = {
       id: Math.random(),
       userId: '1',
@@ -25,13 +24,13 @@ const Example = () => {
   }
 
   return (
-    <div className='App'>
+    <div>
       <h1>Add Other user message</h1>
       <button onClick={addMessage}>Add Message</button>
       <h1>Component</h1>
       <Chat
         messagesData={data}
-        senderIds={[1]}
+        senderIds={['1']}
         CurrentUserComp={CurrentUserComp}
         OtherUserComp={OtherUserComp}
         onReachedTop={() => console.log('reachedTop')}

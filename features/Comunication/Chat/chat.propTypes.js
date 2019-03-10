@@ -1,5 +1,5 @@
 // Vednors
-import React, { useState } from 'react'
+import React from 'react'
 import {
   func,
   array,
@@ -12,29 +12,15 @@ import {
   oneOfType,
 } from 'prop-types'
 
-// Default
-const Input = ({ onChange, onFocus }) => {
-  const [inputMessageValue, setInputMessageValue] = useState('')
-  const handleChange = ({ target: { value } }) => {
-    setInputMessageValue(value)
-    onChange(value)
-  }
-  return (
-    <input
-      type='text'
-      onChange={handleChange}
-      value={inputMessageValue}
-      onFocus={onFocus}
-    />
-  )
-}
+// Default Components
+import Input from './Examples/DefaultComoponents/input'
 
 export const defaultProps = {
   senderIds: [],
   CurrentUserComp: ({ message }) => <div>{message}</div>,
   OtherUserComp: ({ message }) => <div>{message}</div>,
   onReachedTop: null,
-  InputComp: (props) => <Input {...props} />,
+  InputComp: Input,
   wrapperStyles: {},
   messagesData: [],
   previousMessageData: [],
@@ -48,7 +34,7 @@ export const propTypes = {
   CurrentUserComp: func,
   OtherUserComp: func,
   onReachedTop: func,
-  InputComp: func,
+  InputComp: object,
   wrapperStyles: object,
   messagesData: arrayOf(
     shape({

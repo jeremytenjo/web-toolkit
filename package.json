@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
-    "@storybook/react": "^5.0.0",
+    "@storybook/react": "^5.0.1",
     "@tenjo/eslint-config": "^0.0.1",
     "babel-loader": "^8.0.5",
     "ejs-lint": "^0.3.0",
