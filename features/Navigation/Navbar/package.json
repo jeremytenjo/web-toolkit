@@ -2,10 +2,7 @@
   "name": "@tenjo/navigation-navbar",
   "version": "0.2.0",
   "description": "",
-  "main": "navBar.index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "./dist/index.js",
   "author": "Jeremy Tenjo <tenjojeremy@gmail.com>",
   "license": "MIT"
 }
