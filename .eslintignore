@@ -1,7 +1,7 @@
 # Build
 /build/*
 /src/serviceWorker/sw.js
-
+dist/
  .bit
  .out
 
