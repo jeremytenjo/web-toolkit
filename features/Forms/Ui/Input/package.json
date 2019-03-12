@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/forms-input",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "",
   "main": "dist/input.dist.js",
   "scripts": {
