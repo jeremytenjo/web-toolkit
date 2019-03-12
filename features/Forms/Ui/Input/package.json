@@ -2,7 +2,7 @@
   "name": "@tenjo/forms-input",
   "version": "0.7.0",
   "description": "",
-  "main": "dist/input.dist.js",
+  "main": "./dist/input.dist.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
