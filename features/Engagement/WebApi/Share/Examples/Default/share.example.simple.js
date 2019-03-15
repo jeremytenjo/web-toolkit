@@ -1,7 +1,8 @@
 // Vendors
 import React, { useState, Fragment } from 'react'
 //
-import { ShareInit, ShareMockData } from '../../share.index'
+import ShareMockData from '../share.mockData'
+import ShareInit from '../../Functions/share.init'
 
 const ShareExample = () => {
   // State
