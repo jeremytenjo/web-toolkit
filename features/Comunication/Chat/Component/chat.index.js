@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // Vendors
 import React, { useRef, useEffect, useState, memo } from 'react'
 // PropTypes
@@ -38,7 +39,7 @@ const Chat = ({
     scrollToBottom()
     addEventListeners()
     return removeEventListeners()
-  }, [addEventListeners, removeEventListeners, scrollToBottom, messagesData])
+  }, [])
 
   // Functions
   const addEventListeners = () => {

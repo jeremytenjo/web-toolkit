@@ -1,8 +1,0 @@
-{
-  "name": "@tenjo/navigation-navbar",
-  "version": "0.6.0",
-  "description": "",
-  "main": "./dist/navBar.dist.js",
-  "author": "Jeremy Tenjo <tenjojeremy@gmail.com>",
-  "license": "MIT"
-}

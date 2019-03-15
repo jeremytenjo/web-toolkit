@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import data from './example.defalt.mockdata'
-import Bar from '../navBar.index'
+import Bar from '../../Component/navBar.index'
 
 const NavBar = () => {
   return (

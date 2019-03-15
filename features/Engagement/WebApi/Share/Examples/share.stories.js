@@ -5,7 +5,10 @@ import { withReadme } from 'storybook-readme'
 
 // Component
 import ShareExample from './share.examples/share.example.simple'
-import { ShareReadme } from './share.index'
+import { ShareReadme } from '../share.index'
 
 // Stories
-storiesOf('Share', module).add('default', withReadme(ShareReadme, () => <ShareExample />))
+storiesOf('Share', module).add(
+  'default',
+  withReadme(ShareReadme, () => <ShareExample />),
+)

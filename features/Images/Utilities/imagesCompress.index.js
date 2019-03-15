@@ -1,8 +1,8 @@
 // Vendors
 import ImageCompressor from 'image-compressor.js'
 
-export default (file) => {
-  return new Promise((resolve, reject) => {
+const ImagesCompress = (file) => {
+  return new Promise((resolve) => {
     new ImageCompressor(file, {
       quality: 0.5,
       success(result) {
@@ -15,3 +15,5 @@ export default (file) => {
     })
   })
 }
+
+export default ImagesCompress
