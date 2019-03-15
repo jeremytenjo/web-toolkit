@@ -10,7 +10,8 @@
     "deploy:library": "yarn build:library && yarn publish --minor && gpush",
     "pretty": "prettier \"**/*.js\" --write",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
-    "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen"
+    "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen",
+    "publish-minor": "yarn lint && yarn test && yarn publish --minor && gpush"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
