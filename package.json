@@ -1,9 +1,9 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "main": "build/index.js",
   "files": [
-    "/build/index.js"
+    "build/index.js"
   ],
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
