@@ -1,13 +1,13 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "main": "build/index.js",
   "files": [
     "build/index.js"
   ],
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
-    "build": "webpack --config webpack/config.library -p",
+    "build": "yarn webpack-scripts build:library",
     "deploy": "yarn build && yarn publish --minor && gpush",
     "build:storybook": "build-storybook -c .storybook -o .storybook-build",
     "deploy:storybook": "yarn build:storybook && firebase deploy && gpush",
@@ -16,25 +16,25 @@
     "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen"
   },
   "dependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/preset-react": "^7.0.0",
-    "@storybook/react": "^5.0.1",
-    "@tenjo/eslint-config": "^0.0.1",
+    "@babel/plugin-syntax-throw-expressions": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@storybook/react": "^5.0.2",
+    "@tenjo/eslint-config": "^0.7.0",
     "@tenjo/forms-input": "^0.9.0",
-    "@tenjo/webpack-config": "^3.14.0",
+    "@tenjo/webpack-config": "^3.15.0",
     "babel-loader": "^8.0.5",
     "ejs-lint": "^0.3.0",
     "hygen": "latest",
     "image-compressor.js": "^1.1.4",
-    "markdown-loader": "^5.0.0",
-    "path": "^0.12.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "^2.1.8",
-    "storybook-readme": "^4.0.5",
+    "storybook-readme": "^5.0.0",
     "styled-components": "^4.1.3",
     "webpack-node-externals": "^1.7.2",
-    "yup": "^0.26.10"
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
   }
 }
