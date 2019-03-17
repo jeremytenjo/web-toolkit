@@ -41,6 +41,11 @@ const Chat = ({
     return removeEventListeners()
   }, [])
 
+  // Scroll to bottom when new messages are sent/reevided
+  useEffect(() => {
+    scrollToBottom()
+  }, [messagesData])
+
   // Functions
   const addEventListeners = () => {
     if (onReachedTop) {
@@ -66,7 +71,6 @@ const Chat = ({
 
     if (submitConditions) {
       onSubmit(inputMessageValue)
-      scrollToBottom()
       setInputMessageValue('')
       inputRef.current.clearInput()
     }

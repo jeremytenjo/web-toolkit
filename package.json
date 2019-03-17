@@ -11,7 +11,7 @@
     "pretty": "prettier \"**/*.js\" --write",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
     "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen",
-    "publish-minor": "yarn lint && yarn test && yarn publish --minor && gpush"
+    "publish:minor": "yarn lint && yarn test && yarn publish --minor && gpush"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
@@ -20,10 +20,11 @@
     "@storybook/react": "^5.0.1",
     "@tenjo/eslint-config": "^0.0.1",
     "@tenjo/forms-input": "^0.9.0",
-    "@tenjo/webpack-config": "^3.13.0",
+    "@tenjo/webpack-config": "^3.14.0",
     "babel-loader": "^8.0.5",
     "ejs-lint": "^0.3.0",
     "hygen": "latest",
+    "image-compressor.js": "^1.1.4",
     "markdown-loader": "^5.0.0",
     "path": "^0.12.7",
     "react": "^16.8.4",
