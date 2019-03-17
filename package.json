@@ -2,6 +2,7 @@
   "name": "@tenjo/web-features",
   "version": "1.6.0",
   "main": "build/index.js",
+  "files": ["/build/index.js"],
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
     "build": "webpack --config webpack/config.library -p",
