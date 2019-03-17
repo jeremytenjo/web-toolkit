@@ -1,11 +1,11 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "build/index.js",
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
     "build": "webpack --config webpack/config.library -p",
-    "deploy": "yarn build:library && yarn publish --minor && gpush",
+    "deploy": "yarn build && yarn publish --minor && gpush",
     "build:storybook": "build-storybook -c .storybook -o .storybook-build",
     "deploy:storybook": "yarn build:storybook && firebase deploy && gpush",
     "pretty": "prettier \"**/*.js\" --write",
