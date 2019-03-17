@@ -1,8 +1,10 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "main": "build/index.js",
-  "files": ["build/index.js"],
+  "files": [
+    "build/index.js"
+  ],
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
     "build": "yarn webpack-scripts build:library",
