@@ -1,5 +1,6 @@
 features/
 logo/
+.hygen
 .storybook
 .storybook-build
 webpack/
@@ -8,4 +9,4 @@ README.md
 .firebase
 .prettierrc.js
 eslintrc.js 
-node_modules/
+/node_modules/

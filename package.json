@@ -4,10 +4,10 @@
   "main": "build/index.js",
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
-    "build:library": "webpack --config webpack/config.library -p",
+    "build": "webpack --config webpack/config.library -p",
+    "deploy": "yarn build:library && yarn publish --minor && gpush",
     "build:storybook": "build-storybook -c .storybook -o .storybook-build",
     "deploy:storybook": "yarn build:storybook && firebase deploy && gpush",
-    "deploy:library": "yarn build:library && yarn publish --minor && gpush",
     "pretty": "prettier \"**/*.js\" --write",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
     "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen"
