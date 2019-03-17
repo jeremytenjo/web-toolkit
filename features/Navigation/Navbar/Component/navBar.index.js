@@ -2,6 +2,7 @@
 import React, { memo } from 'react'
 import { Wrapper, IconCon } from './navBar.styles'
 
+import { defaultProps, propTypes } from './navBar.propTypes'
 // Main
 const BottomNav = ({
   data,
@@ -43,5 +44,8 @@ const BottomNav = ({
     </Wrapper>
   )
 }
+// PropTypes
+BottomNav.defaultProps = defaultProps
+BottomNav.propTypes = propTypes
 
 export default memo(BottomNav)
