@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 
 // Main Component
-const Button = (props) => {
+const Button = () => {
   // Template
   return <div>Button Bit</div>
 }

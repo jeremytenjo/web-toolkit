@@ -1,9 +1,4 @@
-var allModules = {}
+import Button from './Misc/Button/Button.index'
+import Input from './Forms/Ui/Input/Input.index'
 
-function importAll(r) {
-  r.keys().forEach((key) => (allModules[key] = r(key)))
-}
-
-importAll(require.context('./', true, /\.index\.js$/))
-
-module.exports = allModules
+export { Button, Input }
