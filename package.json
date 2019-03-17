@@ -6,7 +6,7 @@
   "scripts": {
     "start": "start-storybook -p 9001 -c .storybook --quiet",
     "build": "yarn webpack-scripts build:library",
-    "deploy": "yarn build && yarn publish --minor && gpush",
+    "deploy": "yarn run build && yarn publish --minor && gpush",
     "build:storybook": "build-storybook -c .storybook -o .storybook-build",
     "deploy:storybook": "yarn build:storybook && firebase deploy && gpush",
     "pretty": "prettier \"**/*.js\" --write",
