@@ -1,10 +1,9 @@
 var nodeExternals = require('webpack-node-externals')
-const path = require('path')
 
 module.exports = {
   entry: './features/features.index.js',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: `${process.cwd()}/build`,
     filename: `index.js`,
     libraryTarget: 'commonjs2',
   },
