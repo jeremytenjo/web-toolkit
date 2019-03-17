@@ -1,3 +1,11 @@
 features/
 logo/
 .storybook
+.storybook-build
+webpack/
+firebase.json
+README.md
+.firebase
+.prettierrc.js
+eslintrc.js 
+node_modules/
