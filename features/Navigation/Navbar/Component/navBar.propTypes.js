@@ -1,4 +1,4 @@
-import { array, node, func } from 'prop-types'
+import { array, node, func, oneOfType } from 'prop-types'
 
 export const defaultProps = {
   data: [],
@@ -8,6 +8,6 @@ export const defaultProps = {
 
 export const propTypes = {
   data: array.isRequired,
-  MainIcon: node,
+  MainIcon: oneOfType([node, func]),
   onMainIconClick: func,
 }
