@@ -13,6 +13,7 @@ const BottomNav = ({
   backgroundColor,
   labelStyle,
   MainIcon,
+  children,
   onMainIconClick,
 }) => {
   const openLink = ({
@@ -35,11 +36,12 @@ const BottomNav = ({
 
         return (
           <Fragment key={id}>
-            {MainIcon && isCenter && (
-              <MainIconCon onClick={onMainIconClick}>
-                <MainIcon />
-              </MainIconCon>
-            )}
+            {MainIcon ||
+              (children && isCenter && (
+                <MainIconCon onClick={onMainIconClick}>
+                  <MainIcon />
+                </MainIconCon>
+              ))}
             <IconCon
               data-link={link}
               color={color}
