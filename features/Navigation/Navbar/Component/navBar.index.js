@@ -4,7 +4,7 @@ import { Wrapper, IconCon, MainIconCon } from './navBar.styles'
 
 import { defaultProps, propTypes } from './navBar.propTypes'
 // Main
-const BottomNav = ({
+const NavBar = ({
   data,
   wrapperStyle,
   router,
@@ -14,7 +14,6 @@ const BottomNav = ({
   labelStyle,
   MainIcon,
   children,
-  onMainIconClick,
 }) => {
   const openLink = ({
     currentTarget: {
@@ -36,13 +35,7 @@ const BottomNav = ({
 
         return (
           <Fragment key={id}>
-            {MainIcon ||
-              (children && isCenter && (
-                <MainIconCon onClick={onMainIconClick}>
-                  <MainIcon />
-                  {children}
-                </MainIconCon>
-              ))}
+            {children && isCenter && <MainIconCon>{children}</MainIconCon>}
             <IconCon
               data-link={link}
               color={color}
@@ -59,7 +52,7 @@ const BottomNav = ({
   )
 }
 // PropTypes
-BottomNav.defaultProps = defaultProps
-BottomNav.propTypes = propTypes
+NavBar.defaultProps = defaultProps
+NavBar.propTypes = propTypes
 
-export default memo(BottomNav)
+export default memo(NavBar)

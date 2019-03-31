@@ -39,8 +39,9 @@ const NavBar = () => {
       activeColor='#24c3a9'
       defaultColor='#b0b0b0'
       backgroundColor='rgba(36, 195, 169, 0.2)'
-      MainIcon={MainIcon}
-    />
+    >
+      <MainIcon />
+    </Bar>
   )
 }
 

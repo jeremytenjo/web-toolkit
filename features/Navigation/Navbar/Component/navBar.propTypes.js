@@ -2,12 +2,10 @@ import { array, node, func, oneOfType } from 'prop-types'
 
 export const defaultProps = {
   data: [],
-  MainIcon: null,
-  onMainIconClick: () => null,
+  children: null,
 }
 
 export const propTypes = {
   data: array.isRequired,
-  MainIcon: oneOfType([node, func]),
-  onMainIconClick: func,
+  children: oneOfType([node, func]),
 }
