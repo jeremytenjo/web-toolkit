@@ -40,6 +40,7 @@ const BottomNav = ({
               (children && isCenter && (
                 <MainIconCon onClick={onMainIconClick}>
                   <MainIcon />
+                  {children}
                 </MainIconCon>
               ))}
             <IconCon
