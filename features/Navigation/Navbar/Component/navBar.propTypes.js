@@ -1,23 +1,13 @@
-import {
-  func,
-  array,
-  arrayOf,
-  object,
-  shape,
-  bool,
-  string,
-  number,
-  oneOfType,
-} from 'prop-types'
+import { array, node, func } from 'prop-types'
 
 export const defaultProps = {
   data: [],
+  MainIcon: null,
+  onMainIconClick: () => null,
 }
 
 export const propTypes = {
   data: array.isRequired,
+  MainIcon: node,
+  onMainIconClick: func,
 }
-
-// export const propTypes = {
-//   data: arrayOf(shape{})
-// }

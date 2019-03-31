@@ -52,3 +52,15 @@ export const IconCon = styled.div`
     height: 35px;
   }
 `
+
+export const MainIconCon = styled.div`
+  potistion: relative;
+
+  svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-25px);
+  }
+`
