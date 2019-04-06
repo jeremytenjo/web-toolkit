@@ -1,4 +1,3 @@
-// Vendors
 import styled from 'styled-components'
 
 //Styles
@@ -22,6 +21,7 @@ export const Wrapper = styled.footer`
 `
 
 export const IconCon = styled.div`
+  potistion: relative;
   width: 50px;
   text-align: center;
   font-size: 10px;
@@ -54,7 +54,7 @@ export const IconCon = styled.div`
 `
 
 export const MainIconCon = styled.div`
-  potistion: relative;
+  position: relative;
 
   svg {
     position: absolute;
@@ -63,4 +63,15 @@ export const MainIconCon = styled.div`
     margin: auto;
     transform: translateY(-25px);
   }
+`
+
+export const Background = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  opacity: ${({ opacity }) => opacity};
+  z-index: -1;
 `

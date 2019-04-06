@@ -1,6 +1,6 @@
 //Vendors
 import React, { memo, Fragment } from 'react'
-import { Wrapper, IconCon, MainIconCon } from './navBar.styles'
+import { Wrapper, IconCon, MainIconCon, Background } from './navBar.styles'
 
 import { defaultProps, propTypes } from './navBar.propTypes'
 // Main
@@ -12,8 +12,8 @@ const NavBar = ({
   activeColor,
   backgroundColor,
   labelStyle,
-  MainIcon,
   children,
+  opacity,
 }) => {
   const openLink = ({
     currentTarget: {
@@ -24,6 +24,7 @@ const NavBar = ({
 
   return (
     <Wrapper style={wrapperStyle}>
+      <Background opacity={opacity} />
       {data.map(({ id, link, svg, label }, index) => {
         let isFocused = window.location.pathname
         isFocused = isFocused.split('/')
