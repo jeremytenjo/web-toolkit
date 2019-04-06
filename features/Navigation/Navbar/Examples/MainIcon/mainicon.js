@@ -1,6 +1,8 @@
 import React, { memo } from 'react'
-import data from './example.defalt.mockdata'
+
 import Bar from '../../Component/navBar.index'
+
+import data from './example.defalt.mockdata'
 // import MainIcon from './Upload.svg'
 
 const MainIcon = () => {

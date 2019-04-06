@@ -1,4 +1,4 @@
-import { object, string, number, array } from 'yup'
+import { object, string } from 'yup'
 
 const validateAgainstshareSchema = async ({ ...values }) => {
   const shareSchema = object().shape({

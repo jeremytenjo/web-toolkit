@@ -6,7 +6,11 @@ const data = [
     link: 'explore',
     label: 'Explore',
     svg: (
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 17' style={{ width: '30px' }}>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 0 32 17'
+        style={{ width: '30px' }}
+      >
         <g id='Canvas' transform='translate(1247 287)'>
           <use xlinkHref='#path0_fill' transform='translate(-1247 -287)' />
         </g>

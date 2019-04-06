@@ -1,7 +1,7 @@
-const addTag = async (req, res) => {
+const addTag = async (req) => {
   const payload = req.payload
-  const client = req.client
-  const collection = req.collection
+  // const client = req.client
+  // const collection = req.collection
   console.log(payload)
   //  collection
   //    .find({ name: data.name })

@@ -5,7 +5,6 @@ const searchByCategory = (req, res) => {
   const query = req.payload
   const client = req.client
   const collection = req.collection
-  let users
 
   collection
     .find({ categories: { $all: query } })

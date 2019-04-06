@@ -1,18 +1,17 @@
-// Vendors
-import React, { memo } from 'reactn'
-import { Elements, StripeProvider } from 'react-stripe-elements'
+// import React, { memo } from 'react'
+// import { Elements, StripeProvider } from 'react-stripe-elements'
 
-const Stripe = ({ children }) => {
-  const apiKeyTest = 'pk_test_oKRPq00ZTrEbXkhZD9g0IrGR'
-  const apiKeyLive = 'pk_live_eLYIhpxUkoy0JZrCePI6i1lG'
-  const apiKey = process.env.NODE_ENV === 'development' ? apiKeyTest : apiKeyLive
+// const Stripe = ({ children }) => {
+//   const apiKeyTest = 'pk_test_oKRPq00ZTrEbXkhZD9g0IrGR'
+//   const apiKeyLive = 'pk_live_eLYIhpxUkoy0JZrCePI6i1lG'
+//   const apiKey =
+//     process.env.NODE_ENV === 'development' ? apiKeyTest : apiKeyLive
 
-  return (
-    <StripeProvider apiKey={apiKey}>
-      <Elements>{children}</Elements>
-    </StripeProvider>
-  )
-}
+//   return (
+//     <StripeProvider apiKey={apiKey}>
+//       <Elements>{children}</Elements>
+//     </StripeProvider>
+//   )
+// }
 
-// Exports
-export default memo(Stripe)
+// export default memo(Stripe)

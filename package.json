@@ -11,13 +11,16 @@
     "deploy": "yarn webpack-scripts build:library && yarn publish --minor && gpush",
     "build:storybook": "build-storybook -c .storybook -o .storybook-build",
     "deploy:storybook": "yarn build:storybook && firebase deploy && gpush",
-    "pretty": "prettier \"**/*.js\" --write",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
-    "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen"
+    "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen",
+    "pretty": "prettier \"**/*.js\" --write",
+    "check-staged": "lint-staged",
+    "lint": "eslint ./features"
   },
   "dependencies": {
     "@babel/plugin-syntax-throw-expressions": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@material-ui/core": "^3.9.3",
     "@storybook/react": "^5.0.2",
     "@tenjo/eslint-config": "^0.16.0",
     "@tenjo/forms-input": "^0.9.0",

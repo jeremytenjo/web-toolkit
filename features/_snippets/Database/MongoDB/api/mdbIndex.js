@@ -32,7 +32,7 @@ app.use('/users', Users)
 app.use('/photos', Photos)
 
 // Endware
-app.use((req, res) => {
+app.use((req) => {
   console.log('SHOULD RUN LATS to close client')
   req.client.close()
 })

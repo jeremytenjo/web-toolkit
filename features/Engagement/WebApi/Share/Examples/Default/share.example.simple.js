@@ -1,6 +1,5 @@
-// Vendors
 import React, { useState, Fragment } from 'react'
-//
+
 import ShareMockData from '../share.mockData'
 import ShareInit from '../../Functions/share.init'
 

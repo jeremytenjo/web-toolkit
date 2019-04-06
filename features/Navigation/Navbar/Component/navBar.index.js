@@ -1,4 +1,3 @@
-//Vendors
 import React, { memo, Fragment } from 'react'
 
 import { Wrapper, IconCon, MainIconCon, Background } from './navBar.styles'

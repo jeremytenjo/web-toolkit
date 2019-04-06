@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 
 import Chat from '../../Component/chat.index'
+
 import dataInit from './chat.default.mockData'
 
 const CurrentUserComp = ({ message }) => <p>{message}</p>

@@ -2,7 +2,8 @@
 import React from 'react'
 import TabsMui from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
-import Sticky from './../templates/Sticky'
+
+// import Sticky from './../templates/Sticky'
 
 const Tabs = (props) => {
   // props
@@ -20,7 +21,7 @@ const Tabs = (props) => {
 
   //Template
   return (
-    <Sticky>
+    <>
       <TabsMui
         style={TabsMuiStyle}
         value={currentTabIndex}
@@ -39,7 +40,7 @@ const Tabs = (props) => {
           />
         ))}
       </TabsMui>
-    </Sticky>
+    </>
   )
 }
 

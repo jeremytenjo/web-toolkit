@@ -1,9 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-// Vendors
 import React, { useRef, useEffect, useState, memo } from 'react'
-// PropTypes
+
 import { defaultProps, propTypes } from './chat.propTypes'
-// Styles
 import {
   ChatWrapper,
   ChatList,

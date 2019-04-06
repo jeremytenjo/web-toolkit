@@ -1,4 +1,3 @@
-// Vednors
 import React from 'react'
 import {
   func,
@@ -11,8 +10,6 @@ import {
   number,
   oneOfType,
 } from 'prop-types'
-
-// Default Components
 import Input from '@tenjo/forms-input'
 
 export const defaultProps = {
