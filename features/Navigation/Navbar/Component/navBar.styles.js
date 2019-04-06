@@ -8,7 +8,7 @@ export const Wrapper = styled.footer`
   grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
   background: rgba(37, 49, 55, 0.2);
   bottom: 0;
-  background-color: white;
+  background-color: transparent;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   padding-bottom: 2px;
   margin: auto;
