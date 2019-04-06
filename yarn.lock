@@ -1571,10 +1571,10 @@
     "@svgr/plugin-svgo" "^4.0.3"
     loader-utils "^1.1.0"
 
-"@tenjo/eslint-config@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@tenjo/eslint-config/-/eslint-config-0.7.0.tgz#2d972fec5a846455c5549bb772811e29649aa018"
-  integrity sha512-p4DOzZOI7ANKlQD/KAztLvVWDZtHYDosjaAjUH5HRvP91oA+c8TPsHJfSQmFurjXSgFa1lI+UViJ+UoWbsek/A==
+"@tenjo/eslint-config@^0.16.0":
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/@tenjo/eslint-config/-/eslint-config-0.16.0.tgz#c6344f782ceacdb560f319b1802f822de4b5ceaa"
+  integrity sha512-Jm8P9sKe1RXNr7ZDUAABKlAH6Kl1eSoDiMzt0H+gidGuVad/BomRwKpFQKnDsx1GJqTBLWAHC1Chhsd7hhAlgw==
   dependencies:
     eslint "^5.14.1"
     eslint-config-react-app "^3.0.7"

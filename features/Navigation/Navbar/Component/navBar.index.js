@@ -1,7 +1,7 @@
 //Vendors
 import React, { memo, Fragment } from 'react'
-import { Wrapper, IconCon, MainIconCon, Background } from './navBar.styles'
 
+import { Wrapper, IconCon, MainIconCon, Background } from './navBar.styles'
 import { defaultProps, propTypes } from './navBar.propTypes'
 // Main
 const NavBar = ({
