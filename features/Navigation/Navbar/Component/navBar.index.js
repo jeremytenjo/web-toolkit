@@ -43,7 +43,7 @@ const NavBar = ({
               backgroundColor={backgroundColor}
             >
               {svg}
-              <span style={labelStyle}>{label}</span>
+              {label && <span style={labelStyle}>{label}</span>}
             </IconCon>
           </Fragment>
         )
