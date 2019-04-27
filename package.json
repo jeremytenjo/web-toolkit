@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.24.0",
+  "version": "1.25.0",
   "main": "build/index.js",
   "files": [
     "build/index.js"
