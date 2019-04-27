@@ -41,6 +41,7 @@ const NavBar = ({
               color={color}
               onClick={openLink}
               backgroundColor={backgroundColor}
+              label={label}
             >
               {svg}
               {label && <span style={labelStyle}>{label}</span>}

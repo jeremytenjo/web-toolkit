@@ -25,12 +25,12 @@ export const IconCon = styled.div`
   width: 50px;
   text-align: center;
   font-size: 10px;
-  display: grid;
+  display: ${({ label }) => (label ? 'grid' : 'block')};
   grid-template-rows: 32px 12px;
   cursor: pointer;
   box-sizing: border-box;
-  padding-top: 2px;
-  padding-bottom: 5px;
+  padding-top: ${({ label }) => (label ? '2px' : '0')};
+  padding-bottom: ${({ label }) => (label ? '5px' : '0')};
   transition: 0.2s;
   border-radius: 100px;
 
