@@ -2,7 +2,7 @@ import React, { memo, Fragment } from 'react'
 
 import { Wrapper, IconCon, MainIconCon, Background } from './navBar.styles'
 import { defaultProps, propTypes } from './navBar.propTypes'
-// Main
+
 const NavBar = ({
   data,
   wrapperStyle,
@@ -11,44 +11,50 @@ const NavBar = ({
   activeColor,
   backgroundColor,
   labelStyle,
-  children,
   opacity,
+  onMainIconClick,
 }) => {
   const openLink = ({
     currentTarget: {
       dataset: { link },
     },
   }) => router(`/${link}`)
-  const dataLength = data.length
 
   return (
     <Wrapper style={wrapperStyle}>
       <Background opacity={opacity} />
-      {data.map(({ id, link, svg, label }, index) => {
-        let isFocused = window.location.pathname
-        isFocused = isFocused.split('/')
-        isFocused = isFocused[1]
-        isFocused = isFocused === link
-        let color = isFocused ? activeColor : defaultColor
-        const middleIndex = Math.ceil(index / dataLength + 1)
-        const isCenter = middleIndex === index
+      {data.map(
+        ({ id, link, svg, label, mainIcon = null, mainIconShadow = null }) => {
+          let isFocused = window.location.pathname
+          isFocused = isFocused.split('/')
+          isFocused = isFocused[1]
+          isFocused = isFocused === link
+          let color = isFocused ? activeColor : defaultColor
 
-        return (
-          <Fragment key={id}>
-            {children && isCenter && <MainIconCon>{children}</MainIconCon>}
-            <IconCon
-              data-link={link}
-              color={color}
-              onClick={openLink}
-              backgroundColor={backgroundColor}
-              label={label}
+          return !mainIcon ? (
+            <Fragment key={id}>
+              <IconCon
+                data-link={link}
+                color={color}
+                onClick={openLink}
+                backgroundColor={backgroundColor}
+                label={label}
+              >
+                {svg}
+                {label && <span style={labelStyle}>{label}</span>}
+              </IconCon>
+            </Fragment>
+          ) : (
+            <MainIconCon
+              activeColor={activeColor}
+              mainIconShadow={mainIconShadow}
+              onClick={onMainIconClick}
             >
               {svg}
-              {label && <span style={labelStyle}>{label}</span>}
-            </IconCon>
-          </Fragment>
-        )
-      })}
+            </MainIconCon>
+          )
+        },
+      )}
     </Wrapper>
   )
 }

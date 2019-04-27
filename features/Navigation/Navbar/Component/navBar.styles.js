@@ -54,15 +54,14 @@ export const IconCon = styled.div`
 `
 
 export const MainIconCon = styled.div`
-  position: relative;
-
-  svg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(-25px);
-  }
+  background-color: ${({ activeColor }) => activeColor};
+  width: 50px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  box-shadow: ${({ mainIconShadow }) => mainIconShadow};
 `
 
 export const Background = styled.div`

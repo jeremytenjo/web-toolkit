@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 
 // Examples
 import Default from './Default/example.default'
-import Main from './MainIcon/mainicon'
+import Main from './MainIcon/example.mainIcon.index'
 import NoLabels from './NoLabels/example.noLabels'
 
 // Stories
