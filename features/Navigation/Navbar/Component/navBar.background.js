@@ -12,26 +12,25 @@ const style = {
 const NavBarBackground = () => (
   <svg
     style={style}
-    width='440'
+    width='900'
     height='77'
-    viewBox='0 0 440 77'
+    viewBox='0 0 900 77'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
   >
-    <g filter='url(#filter0_d)'>
-      <path
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M426 67H221.648H14V18H171.899C176.317 18 179.811 21.6135 180.529 25.9731C183.817 45.9572 199.6 57 219 57C238.401 57 254.896 45.9559 258.342 25.9697C259.093 21.6156 262.584 18 267.003 18H426V67Z'
-        fill='white'
-      />
-    </g>
+    <path
+      fillRule='evenodd'
+      clipRule='evenodd'
+      d='M899.5 67H451.648H1V18H401.899C406.317 18 409.811 21.6135 410.529 25.9731C413.817 45.9572 429.6 57 449 57C468.401 57 484.896 45.9559 488.342 25.9697C489.093 21.6156 492.584 18 497.003 18H899.5V67Z'
+      fill='#fff'
+      filter='url(#filter0_d)'
+    />
     <defs>
       <filter
         id='filter0_d'
-        x='0'
+        x='-13'
         y='0'
-        width='440'
+        width='926.5'
         height='77'
         filterUnits='userSpaceOnUse'
         colorInterpolationFilters='sRGB'
@@ -39,26 +38,13 @@ const NavBarBackground = () => (
         <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
-          type='matrix'
           values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
         />
         <feOffset dy='-4' />
         <feGaussianBlur stdDeviation='7' />
-        <feColorMatrix
-          type='matrix'
-          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-        />
-        <feBlend
-          mode='normal'
-          in2='BackgroundImageFix'
-          result='effect1_dropShadow'
-        />
-        <feBlend
-          mode='normal'
-          in='SourceGraphic'
-          in2='effect1_dropShadow'
-          result='shape'
-        />
+        <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+        <feBlend in2='BackgroundImageFix' result='effect1_dropShadow' />
+        <feBlend in='SourceGraphic' in2='effect1_dropShadow' result='shape' />
       </filter>
     </defs>
   </svg>
