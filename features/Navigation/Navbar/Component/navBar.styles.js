@@ -16,6 +16,7 @@ export const Wrapper = styled.footer`
   justify-items: center;
   font-family: ${({ fontFamily }) => fontFamily};
   box-shadow: 0px -4px 14px rgba(0, 0, 0, 0.06);
+  position: relative;
 
   * {
     position: relative;
@@ -78,13 +79,12 @@ export const MainIconCon = styled.div`
   transform: translateY(-25px);
 `
 
-export const Background = styled.div`
+export const Background = styled.svg`
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: white;
-  opacity: ${({ opacity }) => opacity};
+  margin: auto;
   z-index: -1;
 `
