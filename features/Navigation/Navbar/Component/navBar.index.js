@@ -71,6 +71,7 @@ const NavBar = ({
               activeColor={activeColor}
               mainIconShadow={mainIconShadow}
               onClick={onMainIconClick}
+              key={id}
             >
               {svg}
               {fileInput && (
