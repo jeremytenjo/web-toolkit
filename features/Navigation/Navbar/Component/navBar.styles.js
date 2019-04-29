@@ -74,14 +74,5 @@ export const MainIconCon = styled.div`
   align-items: center;
   justify-content: center;
   box-shadow: ${({ mainIconShadow }) => mainIconShadow};
-  transform: translateY(-25px);
-`
-
-export const Background = styled.svg`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  filter: drop-shadow(0px -4px 14px rgba(0, 0, 0, 0.06));
+  transform: translateY(-15px);
 `
