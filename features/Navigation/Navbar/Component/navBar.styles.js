@@ -15,10 +15,25 @@ export const Wrapper = styled.footer`
   left: 0;
   right: 0;
   justify-items: center;
+
+  * {
+    position: relative;
+  }
+
+  input {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+  }
 `
 
 export const IconCon = styled.div`
-  potistion: relative;
+  position: relative;
   width: 50px;
   text-align: center;
   font-size: 10px;

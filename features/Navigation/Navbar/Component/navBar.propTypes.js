@@ -5,6 +5,7 @@ export const defaultProps = {
   children: null,
   opacity: '1',
   onMainIconClick: () => null,
+  onFileSelect: () => null,
 }
 
 export const propTypes = {
@@ -12,4 +13,5 @@ export const propTypes = {
   children: oneOfType([node, func]),
   opacity: string,
   onMainIconClick: func,
+  onFileSelect: func,
 }

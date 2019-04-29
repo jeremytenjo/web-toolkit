@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from 'react'
+import React, { memo, Fragment, useRef } from 'react'
 
 import { Wrapper, IconCon, MainIconCon, Background } from './navBar.styles'
 import { defaultProps, propTypes } from './navBar.propTypes'
@@ -13,18 +13,32 @@ const NavBar = ({
   labelStyle,
   opacity,
   onMainIconClick,
+  onFileSelect,
 }) => {
+  const inputRef = useRef(null)
   const openLink = ({
     currentTarget: {
       dataset: { link },
     },
   }) => router(`/${link}`)
+  const handleFIleUpload = async (e, file) => {
+    const selectedFile = file || inputRef.current.files[0]
+    if (typeof selectedFile === 'object') onFileSelect(selectedFile)
+  }
 
   return (
     <Wrapper style={wrapperStyle}>
       <Background opacity={opacity} />
       {data.map(
-        ({ id, link, svg, label, mainIcon = null, mainIconShadow = null }) => {
+        ({
+          id,
+          link,
+          svg,
+          label,
+          mainIcon = null,
+          mainIconShadow = null,
+          fileInput = null,
+        }) => {
           let isFocused = window.location.pathname
           isFocused = isFocused.split('/')
           isFocused = isFocused[1]
@@ -36,12 +50,20 @@ const NavBar = ({
               <IconCon
                 data-link={link}
                 color={color}
-                onClick={openLink}
+                onClick={fileInput ? () => null : openLink}
                 backgroundColor={backgroundColor}
                 label={label}
               >
                 {svg}
                 {label && <span style={labelStyle}>{label}</span>}
+                {fileInput && (
+                  <input
+                    ref={inputRef}
+                    type='file'
+                    accept='.jpg, .jpeg, .png'
+                    onChange={handleFIleUpload}
+                  />
+                )}
               </IconCon>
             </Fragment>
           ) : (
@@ -51,6 +73,14 @@ const NavBar = ({
               onClick={onMainIconClick}
             >
               {svg}
+              {fileInput && (
+                <input
+                  ref={inputRef}
+                  type='file'
+                  accept='.jpg, .jpeg, .png'
+                  onChange={handleFIleUpload}
+                />
+              )}
             </MainIconCon>
           )
         },
@@ -58,7 +88,7 @@ const NavBar = ({
     </Wrapper>
   )
 }
-// PropTypes
+
 NavBar.defaultProps = defaultProps
 NavBar.propTypes = propTypes
 
