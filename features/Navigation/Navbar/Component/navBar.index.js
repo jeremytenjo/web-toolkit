@@ -27,9 +27,15 @@ const NavBar = ({
     if (typeof selectedFile === 'object') onFileSelect(selectedFile)
   }
 
+  const hasMainIcon = data.some((item) => item.mainIcon === true)
+
   return (
-    <Wrapper style={wrapperStyle} fontFamily={fontFamily}>
-      <Background />
+    <Wrapper
+      style={wrapperStyle}
+      hasMainIcon={hasMainIcon}
+      fontFamily={fontFamily}
+    >
+      {hasMainIcon && <Background />}
       {data.map(
         ({
           id,
