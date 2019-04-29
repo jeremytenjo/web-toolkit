@@ -14,6 +14,7 @@ const NavBar = ({
   opacity,
   onMainIconClick,
   onFileSelect,
+  fontFamily,
 }) => {
   const inputRef = useRef(null)
   const openLink = ({
@@ -27,7 +28,7 @@ const NavBar = ({
   }
 
   return (
-    <Wrapper style={wrapperStyle}>
+    <Wrapper style={wrapperStyle} fontFamily={fontFamily}>
       <Background opacity={opacity} />
       {data.map(
         ({

@@ -15,6 +15,7 @@ export const Wrapper = styled.footer`
   left: 0;
   right: 0;
   justify-items: center;
+  font-family: ${({ fontFamily }) => fontFamily};
 
   * {
     position: relative;

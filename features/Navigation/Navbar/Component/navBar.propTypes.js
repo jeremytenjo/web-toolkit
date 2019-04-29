@@ -1,17 +1,28 @@
-import { array, node, func, oneOfType, string } from 'prop-types'
+import {
+  arrayOf,
+  node,
+  shape,
+  func,
+  oneOfType,
+  number,
+  string,
+} from 'prop-types'
 
 export const defaultProps = {
   data: [],
   children: null,
   opacity: '1',
+  fontFamily: 'Roboto',
   onMainIconClick: () => null,
   onFileSelect: () => null,
 }
 
 export const propTypes = {
-  data: array.isRequired,
+  data: arrayOf(shape({ id: oneOfType([string, number]).isRequired }))
+    .isRequired,
   children: oneOfType([node, func]),
   opacity: string,
+  fontFamily: string,
   onMainIconClick: func,
   onFileSelect: func,
 }
