@@ -9,13 +9,13 @@ export const Wrapper = styled.footer`
   background: rgba(37, 49, 55, 0.2);
   bottom: 0;
   background-color: transparent;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
   padding-bottom: 2px;
   margin: auto;
   left: 0;
   right: 0;
   justify-items: center;
   font-family: ${({ fontFamily }) => fontFamily};
+  box-shadow: 0px -4px 14px rgba(0, 0, 0, 0.06);
 
   * {
     position: relative;
@@ -75,6 +75,7 @@ export const MainIconCon = styled.div`
   align-items: center;
   justify-content: center;
   box-shadow: ${({ mainIconShadow }) => mainIconShadow};
+  transform: translateY(-25px);
 `
 
 export const Background = styled.div`
