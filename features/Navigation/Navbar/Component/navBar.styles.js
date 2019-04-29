@@ -6,7 +6,6 @@ export const Wrapper = styled.footer`
   display: grid;
   max-width: 900px;
   grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-  background: rgba(37, 49, 55, 0.2);
   bottom: 0;
   background-color: transparent;
   padding-bottom: 2px;
@@ -15,7 +14,6 @@ export const Wrapper = styled.footer`
   right: 0;
   justify-items: center;
   font-family: ${({ fontFamily }) => fontFamily};
-  box-shadow: 0px -4px 14px rgba(0, 0, 0, 0.06);
   position: relative;
 
   * {
@@ -87,4 +85,5 @@ export const Background = styled.svg`
   bottom: 0;
   margin: auto;
   z-index: -1;
+  filter: drop-shadow(0px -4px 14px rgba(0, 0, 0, 0.06));
 `
