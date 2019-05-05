@@ -33,16 +33,15 @@ const Calendar = ({ onEventClick, yearRange }) => {
   const currentDay = new Date().getDate()
   const currentMonthString = monthList[currentMonth]
   const currentDate = new Date(`${currentMonthString}, ${currentYear}`)
-  const daystoSkip = currentDate.getDay()
 
   const [yearList, setyearList] = useState([])
   const [currentMonthDaysArray, setcurrentMonthDaysArray] = useState([])
   const [selectedDay, setSelectedDay] = useState(currentDay)
-  const [selectedMonth, setSelectedMonth] = useState(currentMonth)
+  const [selectedMonth, setSelectedMonth] = useState(currentDate)
   const [selectedYear, setSelecteYear] = useState(currentYear)
 
   useEffect(() => {
-    calcCurrentMonthDays(currentDate, daystoSkip)
+    handleDateChange()
     calcYearRange()
   }, [])
 
