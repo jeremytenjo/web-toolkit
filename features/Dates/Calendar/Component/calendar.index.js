@@ -57,7 +57,11 @@ const Calendar = () => {
       </WeekDaysTitles>
       <DayGrid>
         {currentMonthDaysArray.map((day) =>
-          day ? <Day key={day} accepted number={day} /> : <div />,
+          day ? (
+            <Day key={day} accepted number={day} />
+          ) : (
+            <div key={Math.random()} />
+          ),
         )}
       </DayGrid>
     </Wrapper>
