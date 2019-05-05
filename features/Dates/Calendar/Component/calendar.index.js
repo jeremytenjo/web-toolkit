@@ -12,7 +12,7 @@ import {
   DatePickersCon,
 } from './calendar.styles'
 
-const Calendar = () => {
+const Calendar = ({ onEventClick, yearRange }) => {
   const monthList = [
     'Jan',
     'Feb',
@@ -33,6 +33,7 @@ const Calendar = () => {
   const currentMonthString = monthList[currentMonth]
   const currentDate = new Date(`${currentMonthString}, ${currentYear}`)
   const daystoSkip = currentDate.getDay()
+  const yearList = []
 
   const [selectedMonth, setselectedMonth] = useState(currentDate)
   const [currentMonthDaysArray, setcurrentMonthDaysArray] = useState([])
@@ -55,6 +56,11 @@ const Calendar = () => {
     setcurrentMonthDaysArray(current)
   }
 
+  const handleEventClick = (value) => {
+    console.log(value)
+    onEventClick(value)
+  }
+
   return (
     <Wrapper>
       <DatePickersCon>
@@ -69,7 +75,7 @@ const Calendar = () => {
       <DayGrid>
         {currentMonthDaysArray.map((day) =>
           day ? (
-            <Day key={day} accepted number={day} />
+            <Day key={day} accepted number={day} onClick={handleEventClick} />
           ) : (
             <div key={Math.random()} />
           ),

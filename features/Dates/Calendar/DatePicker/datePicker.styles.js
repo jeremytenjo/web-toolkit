@@ -11,6 +11,12 @@ export const Wrapper = styled.div`
     cursor: pointer;
     padding: 10px;
     fill: ${({ arrowColor }) => `var(--color-${arrowColor})`};
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   }
 
   select {
