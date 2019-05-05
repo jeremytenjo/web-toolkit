@@ -26,6 +26,14 @@ export const DayCon = styled.div`
   border: 2px solid ${activeColor};
   color: black;`,
     )}
+
+  ${(props) =>
+    isGrey(
+      props,
+      `
+  background: transparent;
+  color: grey;`,
+    )}
 `
 
 export const StatusCon = styled.div`
@@ -37,3 +45,4 @@ export const StatusCon = styled.div`
 
 // Variants
 const isCurrentDay = ({ isCurrentDay }, styles) => isCurrentDay && styles
+const isGrey = ({ grey }, styles) => grey && styles

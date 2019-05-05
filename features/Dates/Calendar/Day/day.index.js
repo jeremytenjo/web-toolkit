@@ -15,6 +15,7 @@ const Day = ({
   accepted,
   pending,
   rejected,
+  grey,
 }) => {
   const circleWidthHeight = 12
   const cicleCCyx = circleWidthHeight / 2
@@ -26,6 +27,7 @@ const Day = ({
         isCurrentDay={isCurrentDay}
         active={active}
         activeColor={activeColor}
+        grey={grey}
       >
         {number}
       </DayCon>
