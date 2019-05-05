@@ -21,6 +21,8 @@ export const Wrapper = styled.div`
   }
 
   select {
+    font-size: 19px;
+    background: transparent;
     text-align-last: center;
     width: 100px;
     border: none;
@@ -28,6 +30,10 @@ export const Wrapper = styled.div`
     -moz-appearance: none;
     appearance: none;
     -ms-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 `
 
