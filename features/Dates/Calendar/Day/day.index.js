@@ -3,6 +3,12 @@ import React, { memo } from 'react'
 import { defaultProps, propTypes } from './day.propTypes'
 import { Wrapper, DayCon, StatusCon } from './day.styles'
 
+const CircleIcon = ({ circleWidthHeight, cicleCCyx, circleRadius, color }) => (
+  <svg height={circleWidthHeight} width={circleWidthHeight}>
+    <circle cx={cicleCCyx} cy={cicleCCyx} r={circleRadius} fill={color} />
+  </svg>
+)
+
 const Day = ({
   number,
   isCurrentDay,
@@ -20,6 +26,11 @@ const Day = ({
   const circleWidthHeight = 12
   const cicleCCyx = circleWidthHeight / 2
   const circleRadius = 3
+  const circleDefaultProps = {
+    circleWidthHeight,
+    cicleCCyx,
+    circleRadius,
+  }
   const handleClick = () => onClick(number)
 
   return (
@@ -36,36 +47,13 @@ const Day = ({
 
       <StatusCon>
         {accepted && (
-          <svg height={circleWidthHeight} width={circleWidthHeight}>
-            <circle
-              cx={cicleCCyx}
-              cy={cicleCCyx}
-              r={circleRadius}
-              fill={acceptedColor}
-            />
-          </svg>
+          <CircleIcon {...circleDefaultProps} color={acceptedColor} />
         )}
 
-        {pending && (
-          <svg height={circleWidthHeight} width={circleWidthHeight}>
-            <circle
-              cx={cicleCCyx}
-              cy={cicleCCyx}
-              r={circleRadius}
-              fill={pendingColor}
-            />
-          </svg>
-        )}
+        {pending && <CircleIcon {...circleDefaultProps} color={pendingColor} />}
 
         {rejected && (
-          <svg height={circleWidthHeight} width={circleWidthHeight}>
-            <circle
-              cx={cicleCCyx}
-              cy={cicleCCyx}
-              r={circleRadius}
-              fill={rejectedColor}
-            />
-          </svg>
+          <CircleIcon {...circleDefaultProps} color={rejectedColor} />
         )}
       </StatusCon>
     </Wrapper>
