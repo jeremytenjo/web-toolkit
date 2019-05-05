@@ -15,7 +15,8 @@ export const Wrapper = styled.div`
     transition: 0.3s;
 
     &:active {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: ${({ color }) =>
+        color ? `var(--color-${color}-background)` : 'rgba(0, 0, 0, 0.1)'};
     }
   }
 

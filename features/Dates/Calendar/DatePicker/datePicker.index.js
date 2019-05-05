@@ -26,12 +26,13 @@ const DatePicker = ({
   onSelect,
   onRightClick,
   onLeftClick,
+  color,
 }) => {
   const handleOnSelect = ({ target: { value } }) => {
     onSelect(value)
   }
   return (
-    <Wrapper arrowColor={arrowColor}>
+    <Wrapper arrowColor={arrowColor} color={color}>
       <LeftArrow onClick={onLeftClick}>
         <ArrowSVG />
       </LeftArrow>
