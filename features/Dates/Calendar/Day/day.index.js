@@ -20,10 +20,12 @@ const Day = ({
   const circleWidthHeight = 12
   const cicleCCyx = circleWidthHeight / 2
   const circleRadius = 3
+  const handleClick = () => onClick(number)
 
   return (
-    <Wrapper onClick={onClick}>
+    <Wrapper>
       <DayCon
+        onClick={handleClick}
         isCurrentDay={isCurrentDay}
         active={active}
         activeColor={activeColor}

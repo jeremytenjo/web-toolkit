@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
+const DAY_SIZE = '30px'
+
 export const Wrapper = styled.div`
   display: grid;
   background: lightblue;
   grid-template-rows: fit-content(100%) fit-content(100%);
 `
-
 export const DayCon = styled.div`
   background-color: ${({ activeColor }) => activeColor};
-  padding: 10px 15px;
+  width: ${DAY_SIZE};
+  height: ${DAY_SIZE};
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -17,6 +19,8 @@ export const DayCon = styled.div`
   font-size: 14px;
   font-weight: 500;
   justify-self: center;
+  cursor: pointer;
+  user-select: none;
 
   ${({ activeColor, ...props }) =>
     isCurrentDay(
