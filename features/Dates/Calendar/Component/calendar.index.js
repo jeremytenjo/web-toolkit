@@ -36,14 +36,19 @@ const Calendar = ({ onEventClick, yearRange }) => {
   const daystoSkip = currentDate.getDay()
 
   const [yearList, setyearList] = useState([])
-  const [selectedMonth, setselectedMonth] = useState(currentDate)
   const [currentMonthDaysArray, setcurrentMonthDaysArray] = useState([])
   const [selectedDay, setSelectedDay] = useState(currentDay)
+  const [selectedMonth, setSelectedMonth] = useState(currentMonth)
+  const [selectedYear, setSelecteYear] = useState(currentYear)
 
   useEffect(() => {
-    calcCurrentMonthDays(selectedMonth)
-    calcYearRange(selectedMonth)
+    calcCurrentMonthDays(currentDate, daystoSkip)
+    calcYearRange()
   }, [])
+
+  useEffect(() => {
+    currentMonthDaysArray.length > 0 && handleDateChange()
+  }, [selectedMonth, selectedYear])
 
   const calcYearRange = () => {
     const years = []
@@ -60,18 +65,18 @@ const Calendar = ({ onEventClick, yearRange }) => {
     setyearList(years)
   }
 
-  const calcCurrentMonthDays = (monthDays) => {
-    const monthDaysAmount = getDaysInMonth(monthDays)
-    const current = currentMonthDaysArray.slice()
+  const calcCurrentMonthDays = (date, daystoSkip) => {
+    const monthDaysAmount = getDaysInMonth(date)
+    const newMonths = []
 
     for (let i = 0; i < daystoSkip; i++) {
-      current.push(null)
+      newMonths.push(null)
     }
 
     for (let i = 0; i < monthDaysAmount; i++) {
-      current.push(i + 1)
+      newMonths.push(i + 1)
     }
-    setcurrentMonthDaysArray(current)
+    setcurrentMonthDaysArray(newMonths)
   }
 
   const handleEventClick = (value) => {
@@ -79,11 +84,29 @@ const Calendar = ({ onEventClick, yearRange }) => {
     onEventClick(value)
   }
 
+  const handleMonthSelect = (value) => setSelectedMonth(value)
+
+  const handleYearSelect = (value) => setSelecteYear(value)
+
+  const handleDateChange = () => {
+    const currentDate = new Date(`${selectedMonth}, ${selectedYear}`)
+    const daystoSkip = currentDate.getDay()
+    calcCurrentMonthDays(currentDate, daystoSkip)
+  }
+
   return (
     <Wrapper>
       <DatePickersCon>
-        <DatePicker data={monthList} defaultValue={currentMonthString} />
-        <DatePicker data={yearList} defaultValue={currentYear} />
+        <DatePicker
+          data={monthList}
+          defaultValue={currentMonthString}
+          onSelect={handleMonthSelect}
+        />
+        <DatePicker
+          data={yearList}
+          defaultValue={currentYear}
+          onSelect={handleYearSelect}
+        />
       </DatePickersCon>
       <WeekDaysTitles>
         {daysTitles.map((title) => (
