@@ -22,6 +22,7 @@ const ArrowSVG = () => (
 const DatePicker = ({
   data,
   arrowColor,
+  defaultValue,
   onSelect,
   onRightClick,
   onLeftClick,
@@ -35,7 +36,7 @@ const DatePicker = ({
         <ArrowSVG />
       </LeftArrow>
 
-      <select onChange={handleOnSelect}>
+      <select onChange={handleOnSelect} defaultValue={defaultValue}>
         {data.map((item) => (
           <option key={item} value={item}>
             {item}

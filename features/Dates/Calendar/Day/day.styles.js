@@ -5,7 +5,7 @@ const DAY_SIZE = '30px'
 export const Wrapper = styled.div`
   display: grid;
   background: lightblue;
-  grid-template-rows: fit-content(100%) fit-content(100%);
+  grid-auto-flow: row;
 `
 export const DayCon = styled.div`
   background-color: ${({ activeColor }) => activeColor};

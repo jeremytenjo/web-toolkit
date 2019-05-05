@@ -18,6 +18,12 @@ export const WeekDaysTitles = styled.div`
   }
 `
 
+export const DatePickersCon = styled.div`
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+`
+
 export const DayGrid = styled.div`
   background-color: green;
   display: grid;
