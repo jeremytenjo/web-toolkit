@@ -3,7 +3,7 @@ import { string, func, bool, number } from 'prop-types'
 export const defaultProps = {
   number: 0,
   isCurrentDay: null,
-  active: null,
+  isActive: null,
   acceptedColor: 'green',
   pendingColor: 'orange',
   rejectedColor: 'red',

@@ -30,13 +30,17 @@ const Calendar = ({ onEventClick, yearRange }) => {
   const daysTitles = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   const currentYear = new Date().getFullYear()
   const currentMonth = new Date().getMonth()
+  const currentDay = new Date().getDate()
   const currentMonthString = monthList[currentMonth]
   const currentDate = new Date(`${currentMonthString}, ${currentYear}`)
   const daystoSkip = currentDate.getDay()
   const yearList = []
 
+  console.log(currentDay)
+
   const [selectedMonth, setselectedMonth] = useState(currentDate)
   const [currentMonthDaysArray, setcurrentMonthDaysArray] = useState([])
+  const [selectedDay, setSelectedDay] = useState(currentDay)
 
   useEffect(() => {
     setCurrentMonthDays(selectedMonth)
@@ -57,7 +61,7 @@ const Calendar = ({ onEventClick, yearRange }) => {
   }
 
   const handleEventClick = (value) => {
-    console.log(value)
+    setSelectedDay(value)
     onEventClick(value)
   }
 
@@ -73,13 +77,21 @@ const Calendar = ({ onEventClick, yearRange }) => {
         ))}
       </WeekDaysTitles>
       <DayGrid>
-        {currentMonthDaysArray.map((day) =>
-          day ? (
-            <Day key={day} accepted number={day} onClick={handleEventClick} />
+        {currentMonthDaysArray.map((day) => {
+          const isCurrentDay = day === currentDay
+          const active = day === selectedDay
+          return day ? (
+            <Day
+              key={day}
+              number={day}
+              onClick={handleEventClick}
+              isCurrentDay={isCurrentDay}
+              isActive={active}
+            />
           ) : (
             <div key={Math.random()} />
-          ),
-        )}
+          )
+        })}
       </DayGrid>
     </Wrapper>
   )

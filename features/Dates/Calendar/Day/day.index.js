@@ -13,7 +13,7 @@ const Day = ({
   number,
   isCurrentDay,
   activeColor,
-  active,
+  isActive,
   onClick,
   acceptedColor,
   pendingColor,
@@ -38,7 +38,7 @@ const Day = ({
       <DayCon
         onClick={handleClick}
         isCurrentDay={isCurrentDay}
-        active={active}
+        isActive={isActive}
         activeColor={activeColor}
         grey={grey}
       >
