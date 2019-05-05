@@ -34,19 +34,33 @@ const Calendar = ({ onEventClick, yearRange }) => {
   const currentMonthString = monthList[currentMonth]
   const currentDate = new Date(`${currentMonthString}, ${currentYear}`)
   const daystoSkip = currentDate.getDay()
-  const yearList = []
 
-  console.log(currentDay)
-
+  const [yearList, setyearList] = useState([])
   const [selectedMonth, setselectedMonth] = useState(currentDate)
   const [currentMonthDaysArray, setcurrentMonthDaysArray] = useState([])
   const [selectedDay, setSelectedDay] = useState(currentDay)
 
   useEffect(() => {
-    setCurrentMonthDays(selectedMonth)
+    calcCurrentMonthDays(selectedMonth)
+    calcYearRange(selectedMonth)
   }, [])
 
-  const setCurrentMonthDays = (monthDays) => {
+  const calcYearRange = () => {
+    const years = []
+    for (let i = 0; i < yearRange; i++) {
+      years.push(Math.abs(i + 1 - currentYear))
+    }
+
+    years.reverse()
+    years.push(currentYear)
+
+    for (let i = 0; i < yearRange; i++) {
+      years.push(Math.abs(i + 1 + currentYear))
+    }
+    setyearList(years)
+  }
+
+  const calcCurrentMonthDays = (monthDays) => {
     const monthDaysAmount = getDaysInMonth(monthDays)
     const current = currentMonthDaysArray.slice()
 
@@ -69,7 +83,7 @@ const Calendar = ({ onEventClick, yearRange }) => {
     <Wrapper>
       <DatePickersCon>
         <DatePicker data={monthList} defaultValue={currentMonthString} />
-        <DatePicker data={monthList} defaultValue={currentYear} />
+        <DatePicker data={yearList} defaultValue={currentYear} />
       </DatePickersCon>
       <WeekDaysTitles>
         {daysTitles.map((title) => (

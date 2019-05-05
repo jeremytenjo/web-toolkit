@@ -31,19 +31,22 @@ const DatePicker = ({
   const handleOnSelect = ({ target: { value } }) => {
     onSelect(value)
   }
+
   return (
     <Wrapper arrowColor={arrowColor} color={color}>
       <LeftArrow onClick={onLeftClick}>
         <ArrowSVG />
       </LeftArrow>
 
-      <select onChange={handleOnSelect} defaultValue={defaultValue}>
-        {data.map((item) => (
-          <option key={item} value={item}>
-            {item}
-          </option>
-        ))}
-      </select>
+      {data.length > 0 && (
+        <select onChange={handleOnSelect} defaultValue={defaultValue}>
+          {data.map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+      )}
 
       <RightArrow onClick={onRightClick}>
         <ArrowSVG />

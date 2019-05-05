@@ -20,6 +20,7 @@ export const DayCon = styled.div`
   cursor: pointer;
   user-select: none;
   font-family: Roboto;
+  transition: .2s;
 
   &:active {
     background-color: ${({ activeColor }) =>
