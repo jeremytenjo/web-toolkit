@@ -1,4 +1,4 @@
-import React, { memo, useRef } from 'react'
+import React, { memo, useRef, useState, useEffect } from 'react'
 
 import { defaultProps, propTypes } from './datePicker.propTypes'
 import { Wrapper, LeftArrow, RightArrow } from './datePicker.styles'
@@ -19,9 +19,51 @@ const ArrowSVG = () => (
   </svg>
 )
 
-const DatePicker = ({ data, arrowColor, value, onSelect, color }) => {
+const DatePicker = ({ arrowColor, onSelect, color, type, yearRange }) => {
   const selectRef = useRef(null)
+
+  const monthData = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'June',
+    'July',
+    'Aug',
+    'Sept',
+    'Oct',
+    'Nov',
+    'Dec',
+  ]
+  const currentYear = new Date().getFullYear()
+  const currentMonth = new Date().getMonth()
+  const currentMonthString = monthData[currentMonth]
+  const initData = type === 'month' ? monthData : []
+  const initSelectedValue = type === 'month' ? currentMonthString : currentYear
+
+  const [data, setData] = useState(initData)
+  const [selectedValue, setselectedValue] = useState(initSelectedValue)
+
+  useEffect(() => {
+    type === 'year' && calcYearRange()
+  }, [])
+
+  const calcYearRange = () => {
+    const years = []
+    for (let i = 0; i < yearRange; i++) {
+      years.push(Math.abs(i + 1 - currentYear).toString())
+    }
+    years.reverse()
+    years.push(currentYear.toString())
+    for (let i = 0; i < yearRange; i++) {
+      years.push(Math.abs(i + 1 + currentYear).toString())
+    }
+    setData(years)
+  }
+
   const handleOnSelect = ({ target: { value } }) => {
+    setselectedValue(value)
     onSelect(value)
   }
 
@@ -32,6 +74,7 @@ const DatePicker = ({ data, arrowColor, value, onSelect, color }) => {
     const prevItem = data[selectedItemIndex]
     const returnItem = prevItem || data[data.length - 1]
 
+    setselectedValue(returnItem)
     onSelect(returnItem)
   }
   const handleNext = () => {
@@ -41,6 +84,7 @@ const DatePicker = ({ data, arrowColor, value, onSelect, color }) => {
     const nextItem = data[selectedItemIndex]
     const returnItem = nextItem || data[0]
 
+    setselectedValue(returnItem)
     onSelect(returnItem)
   }
 
@@ -51,7 +95,7 @@ const DatePicker = ({ data, arrowColor, value, onSelect, color }) => {
       </LeftArrow>
 
       {data.length > 0 && (
-        <select ref={selectRef} onChange={handleOnSelect} value={value}>
+        <select ref={selectRef} onChange={handleOnSelect} value={selectedValue}>
           {data.map((item) => (
             <option key={item} value={item}>
               {item}

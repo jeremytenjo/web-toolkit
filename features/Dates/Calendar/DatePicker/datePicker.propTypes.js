@@ -1,8 +1,9 @@
-import { array, string, func } from 'prop-types'
+import { number, array, string, func } from 'prop-types'
 
 export const defaultProps = {
   data: [],
   arrowColor: 'black',
+  yearRange: 5,
   defaultValue: null,
   onSelect: () => null,
 }
@@ -10,5 +11,6 @@ export const defaultProps = {
 export const propTypes = {
   data: array,
   arrowColor: string,
+  yearRange: number,
   onSelect: func,
 }
