@@ -11,12 +11,14 @@ storiesOf('Dates', module)
   .add('Calendar Day - isCurrentDay', () => <Day isCurrentDay />)
   .add('Calendar Day - grey', () => <Day grey />)
   .add('Calendar Day Active', () => <Day isActive />)
-  .add('Event Calendar', () => <Calendar />)
-  .add('Event Calendar + Agenda', () => <Calendar />)
   .add('Date Picker', () => <DatePicker />)
   .add('Date Picker with data', () => (
     <DatePicker
       data={['December', 2019]}
       onSelect={(value) => console.log(value)}
     />
+  ))
+  .add('Event Calendar', () => <Calendar />)
+  .add('Event Calendar + Agenda', () => (
+    <Calendar onDateSelect={(e) => console.log(e)} />
   ))

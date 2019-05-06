@@ -12,7 +12,7 @@ import {
   DatePickersCon,
 } from './calendar.styles'
 
-const Calendar = ({ onEventClick, yearRange }) => {
+const Calendar = ({ onDateSelect, yearRange }) => {
   const monthList = [
     'Jan',
     'Feb',
@@ -60,14 +60,20 @@ const Calendar = ({ onEventClick, yearRange }) => {
     setcurrentMonthDaysArray(newMonths)
   }
 
-  const handleEventClick = (value) => {
+  const handleDaySelect = (value) => {
     setSelectedDay(value)
-    onEventClick(value)
+    onDateSelect({ day: value, month: selectedMonth, year: selectedYear })
   }
 
-  const handleMonthSelect = (value) => setSelectedMonth(value)
+  const handleMonthSelect = (value) => {
+    setSelectedMonth(value)
+    onDateSelect({ day: selectedDay, month: value, year: selectedYear })
+  }
 
-  const handleYearSelect = (value) => setSelecteYear(value)
+  const handleYearSelect = (value) => {
+    setSelecteYear(value)
+    onDateSelect({ day: selectedDay, month: selectedMonth, year: value })
+  }
 
   const setMonthDays = () => {
     const currentDate = new Date(`${selectedMonth}, ${selectedYear}`)
@@ -105,7 +111,7 @@ const Calendar = ({ onEventClick, yearRange }) => {
             <Day
               key={day}
               number={day}
-              onClick={handleEventClick}
+              onClick={handleDaySelect}
               isCurrentDay={isCurrentDay}
               isActive={active}
             />
