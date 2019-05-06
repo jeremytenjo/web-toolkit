@@ -6,7 +6,7 @@ node_modules/
 
 # production
 /build
-.storybook-build
+/.storybook-build
 
 # Firebase 
 /.firebase
