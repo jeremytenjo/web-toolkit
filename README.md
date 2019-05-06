@@ -15,3 +15,7 @@ Component development
 runtime error
 
 - make sure not to publish React components
+
+## License
+
+MIT

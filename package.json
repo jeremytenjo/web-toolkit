@@ -2,9 +2,8 @@
   "name": "@tenjo/web-features",
   "version": "1.33.0",
   "main": "build/index.js",
-  "files": [
-    "build/index.js"
-  ],
+  "files": ["build/index.js"],
+  "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook --quiet",
     "build": "yarn webpack-scripts build:library",
