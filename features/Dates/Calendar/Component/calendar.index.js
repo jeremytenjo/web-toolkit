@@ -92,7 +92,11 @@ const Calendar = ({ onEventClick, yearRange }) => {
       </WeekDaysTitles>
       <DayGrid>
         {currentMonthDaysArray.map((day) => {
-          const isCurrentDay = day === currentDay
+          const isCurrentYear =
+            currentYear.toString() === selectedYear.toString()
+          const isCurrentMonth = currentMonthString === selectedMonth
+          const isCurrentDay =
+            isCurrentMonth && isCurrentYear && day === currentDay
           const active = day === selectedDay
           return day ? (
             <Day
