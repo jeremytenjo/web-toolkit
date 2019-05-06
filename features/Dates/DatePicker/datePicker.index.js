@@ -1,5 +1,7 @@
 import React, { memo, useRef, useState, useEffect } from 'react'
 
+import monthData from '../Utils/monthList'
+
 import { defaultProps, propTypes } from './datePicker.propTypes'
 import { Wrapper, LeftArrow, RightArrow } from './datePicker.styles'
 
@@ -22,20 +24,6 @@ const ArrowSVG = () => (
 const DatePicker = ({ arrowColor, onSelect, color, type, yearRange }) => {
   const selectRef = useRef(null)
 
-  const monthData = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'June',
-    'July',
-    'Aug',
-    'Sept',
-    'Oct',
-    'Nov',
-    'Dec',
-  ]
   const currentYear = new Date().getFullYear()
   const currentMonth = new Date().getMonth()
   const currentMonthString = monthData[currentMonth]
