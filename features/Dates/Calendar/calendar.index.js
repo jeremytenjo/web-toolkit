@@ -60,19 +60,19 @@ const Calendar = ({ onDateSelect, yearRange }) => {
     setcurrentMonthDaysArray(newMonths)
   }
 
-  const handleDaySelect = (value) => {
-    setSelectedDay(value)
-    onDateSelect({ day: value, month: selectedMonth, year: selectedYear })
+  const handleDaySelect = (day) => {
+    setSelectedDay(day)
+    onDateSelect({ day, month: selectedMonth, year: selectedYear })
   }
 
-  const handleMonthSelect = (value) => {
-    setSelectedMonth(value)
-    onDateSelect({ day: selectedDay, month: value, year: selectedYear })
+  const handleMonthSelect = (month) => {
+    setSelectedMonth(month)
+    onDateSelect({ day: selectedDay, month, year: selectedYear })
   }
 
-  const handleYearSelect = (value) => {
-    setSelecteYear(value)
-    onDateSelect({ day: selectedDay, month: selectedMonth, year: value })
+  const handleYearSelect = (year) => {
+    setSelecteYear(year)
+    onDateSelect({ day: selectedDay, month: selectedMonth, year })
   }
 
   const setMonthDays = () => {
