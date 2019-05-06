@@ -1,6 +1,7 @@
 import React, { memo, useEffect, useState } from 'react'
 import getDaysInMonth from 'date-fns/get_days_in_month'
 
+import daysList from '../Utils/daysList'
 import monthList from '../Utils/monthList'
 import Day from '../Day/day.index'
 import DatePicker from '../DatePicker/datePicker.index'
@@ -14,7 +15,6 @@ import {
 } from './calendar.styles'
 
 const Calendar = ({ onDateSelect, yearRange }) => {
-  const daysTitles = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   const currentYear = new Date().getFullYear()
   const currentMonth = new Date().getMonth()
   const currentDay = new Date().getDate()
@@ -86,7 +86,7 @@ const Calendar = ({ onDateSelect, yearRange }) => {
         />
       </DatePickersCon>
       <WeekDaysTitles>
-        {daysTitles.map((title) => (
+        {daysList.map((title) => (
           <span key={title}>{title}</span>
         ))}
       </WeekDaysTitles>
