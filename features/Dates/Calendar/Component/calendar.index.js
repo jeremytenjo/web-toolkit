@@ -75,6 +75,13 @@ const Calendar = ({ onEventClick, yearRange }) => {
     calcCurrentMonthDays(currentDate, daystoSkip)
   }
 
+  const defineIsCurrentDate = (day) => {
+    const isCurrentYear = currentYear.toString() === selectedYear.toString()
+    const isCurrentMonth = currentMonthString === selectedMonth
+    const isCurrentDay = day === currentDay
+    return isCurrentYear && isCurrentMonth && isCurrentDay
+  }
+
   return (
     <Wrapper>
       <DatePickersCon>
@@ -92,11 +99,7 @@ const Calendar = ({ onEventClick, yearRange }) => {
       </WeekDaysTitles>
       <DayGrid>
         {currentMonthDaysArray.map((day) => {
-          const isCurrentYear =
-            currentYear.toString() === selectedYear.toString()
-          const isCurrentMonth = currentMonthString === selectedMonth
-          const isCurrentDay =
-            isCurrentMonth && isCurrentYear && day === currentDay
+          const isCurrentDay = defineIsCurrentDate(day)
           const active = day === selectedDay
           return day ? (
             <Day
