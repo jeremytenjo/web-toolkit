@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Calendar from './Component/calendar.index'
+import Calendar from './Calendar/calendar.index'
 import Day from './Day/day.index'
 import DatePicker from './DatePicker/datePicker.index'
 
