@@ -32,12 +32,11 @@ const Calendar = ({ onEventClick, yearRange }) => {
   const currentMonth = new Date().getMonth()
   const currentDay = new Date().getDate()
   const currentMonthString = monthList[currentMonth]
-  const currentDate = new Date(`${currentMonthString}, ${currentYear}`)
 
   const [yearList, setyearList] = useState([])
   const [currentMonthDaysArray, setcurrentMonthDaysArray] = useState([])
   const [selectedDay, setSelectedDay] = useState(currentDay)
-  const [selectedMonth, setSelectedMonth] = useState(currentDate)
+  const [selectedMonth, setSelectedMonth] = useState(currentMonthString)
   const [selectedYear, setSelecteYear] = useState(currentYear)
 
   useEffect(() => {
@@ -52,14 +51,14 @@ const Calendar = ({ onEventClick, yearRange }) => {
   const calcYearRange = () => {
     const years = []
     for (let i = 0; i < yearRange; i++) {
-      years.push(Math.abs(i + 1 - currentYear))
+      years.push(Math.abs(i + 1 - currentYear).toString())
     }
 
     years.reverse()
-    years.push(currentYear)
+    years.push(currentYear.toString())
 
     for (let i = 0; i < yearRange; i++) {
-      years.push(Math.abs(i + 1 + currentYear))
+      years.push(Math.abs(i + 1 + currentYear).toString())
     }
     setyearList(years)
   }
@@ -98,12 +97,12 @@ const Calendar = ({ onEventClick, yearRange }) => {
       <DatePickersCon>
         <DatePicker
           data={monthList}
-          defaultValue={currentMonthString}
+          value={selectedMonth}
           onSelect={handleMonthSelect}
         />
         <DatePicker
           data={yearList}
-          defaultValue={currentYear}
+          value={selectedYear}
           onSelect={handleYearSelect}
         />
       </DatePickersCon>

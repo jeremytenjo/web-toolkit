@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useRef } from 'react'
 
 import { defaultProps, propTypes } from './datePicker.propTypes'
 import { Wrapper, LeftArrow, RightArrow } from './datePicker.styles'
@@ -19,27 +19,39 @@ const ArrowSVG = () => (
   </svg>
 )
 
-const DatePicker = ({
-  data,
-  arrowColor,
-  defaultValue,
-  onSelect,
-  onRightClick,
-  onLeftClick,
-  color,
-}) => {
+const DatePicker = ({ data, arrowColor, value, onSelect, color }) => {
+  const selectRef = useRef(null)
   const handleOnSelect = ({ target: { value } }) => {
     onSelect(value)
   }
 
+  const handlePrev = () => {
+    const selectedItem = selectRef.current.value
+    const selectedItemIndex =
+      data.findIndex((item) => item === selectedItem) - 1
+    const prevItem = data[selectedItemIndex]
+    const returnItem = prevItem || data[data.length - 1]
+
+    onSelect(returnItem)
+  }
+  const handleNext = () => {
+    const selectedItem = selectRef.current.value
+    const selectedItemIndex =
+      data.findIndex((item) => item === selectedItem) + 1
+    const nextItem = data[selectedItemIndex]
+    const returnItem = nextItem || data[0]
+
+    onSelect(returnItem)
+  }
+
   return (
     <Wrapper arrowColor={arrowColor} color={color}>
-      <LeftArrow onClick={onLeftClick}>
+      <LeftArrow onClick={handlePrev}>
         <ArrowSVG />
       </LeftArrow>
 
       {data.length > 0 && (
-        <select onChange={handleOnSelect} defaultValue={defaultValue}>
+        <select ref={selectRef} onChange={handleOnSelect} value={value}>
           {data.map((item) => (
             <option key={item} value={item}>
               {item}
@@ -48,7 +60,7 @@ const DatePicker = ({
         </select>
       )}
 
-      <RightArrow onClick={onRightClick}>
+      <RightArrow onClick={handleNext}>
         <ArrowSVG />
       </RightArrow>
     </Wrapper>
