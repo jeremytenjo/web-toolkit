@@ -6,5 +6,6 @@ import {
   ShareIsSupported,
 } from './Engagement/WebApi/Share/share.index'
 import NavBar from './Navigation/Navbar/Component/navBar.index'
+import Calendar from './Dates/Calendar/calendar.index'
 
-export { Button, Input, Chat, ShareInit, ShareIsSupported, NavBar }
+export { Button, Input, Chat, ShareInit, ShareIsSupported, NavBar, Calendar }
