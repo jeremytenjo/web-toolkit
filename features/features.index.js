@@ -1,4 +1,3 @@
-import Button from './Misc/Button/Button.index'
 import Input from './Forms/Ui/Input/Input.index'
 import Chat from './Comunication/Chat/Component/chat.index'
 import {
@@ -8,4 +7,4 @@ import {
 import NavBar from './Navigation/Navbar/Component/navBar.index'
 import Calendar from './Dates/Calendar/calendar.index'
 
-export { Button, Input, Chat, ShareInit, ShareIsSupported, NavBar, Calendar }
+export { Input, Chat, ShareInit, ShareIsSupported, NavBar, Calendar }
