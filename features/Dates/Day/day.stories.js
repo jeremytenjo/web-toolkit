@@ -5,7 +5,7 @@ import Title from '../../../.storybook/CustomComponents/title'
 
 import Day from './day.index'
 
-const DayStories = () => (
+const Variations = () => (
   <>
     <Title>Default</Title>
     <Day />
@@ -21,5 +21,5 @@ const DayStories = () => (
 )
 
 storiesOf('Dates/Day', module)
-  .add('Variations', () => <DayStories />)
+  .add('Variations', () => <Variations />)
   .add('Dev', () => <Day />)

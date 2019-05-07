@@ -5,7 +5,7 @@ import Title from '../../../.storybook/CustomComponents/title'
 
 import DatePicker from './datePicker.index'
 
-const DayPickerStories = () => (
+const Variations = () => (
   <>
     <Title>Date Picker - Month</Title>
     <DatePicker type='month' />
@@ -15,5 +15,5 @@ const DayPickerStories = () => (
 )
 
 storiesOf('Dates/Date Picker', module)
-  .add('Variations', () => <DayPickerStories />)
+  .add('Variations', () => <Variations />)
   .add('Dev', () => <DatePicker />)
