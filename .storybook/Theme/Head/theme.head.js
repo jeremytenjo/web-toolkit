@@ -4,18 +4,14 @@ const { selection } = require('../Browser/browser.selection')
 const { body } = require('../Browser/browser.body')
 const { boxShadows } = require('../Shadows/boxShadows')
 const { typography } = require('../Typography/typography.css')
-const { mediaQueries } = require('../MediaQueries/mediaQueries')
-const { spacing } = require('../Spacing/spacing.index')
 
 exports.headCss = `
 <style type="text/css">
 ${typographyResets}
 ${typography}
-${mediaQueries}
 ${boxShadows}
 ${body}
 ${selection}
 ${colorVars}
-${spacing}
 </style>
 `
