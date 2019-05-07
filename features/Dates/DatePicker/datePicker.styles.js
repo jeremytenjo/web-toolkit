@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 
   svg {
     display: block;
+    box-sizing: content-box;
     cursor: pointer;
     padding: 10px;
     fill: ${({ arrowColor }) => `var(--color-${arrowColor})`};
