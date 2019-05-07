@@ -1,13 +1,15 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import Title from '../../../.storybook/CustomComponents/title'
+
 import DatePicker from './datePicker.index'
 
 const DayPickerStories = () => (
   <>
-    <p>Date Picker - Month</p>
+    <Title>Date Picker - Month</Title>
     <DatePicker type='month' />
-    <p>Date Picker - Year</p>
+    <Title>Date Picker - Year</Title>
     <DatePicker type='year' onSelect={(value) => console.log(value)} />
   </>
 )

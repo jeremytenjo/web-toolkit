@@ -1,19 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import Title from '../../../.storybook/CustomComponents/title'
+
 import Day from './day.index'
 
 const DayStories = () => (
   <>
-    <p>Default</p>
+    <Title>Default</Title>
     <Day />
-    <p>Status</p>
+    <Title>Status</Title>
     <Day accepted rejected pending />
-    <p>isCurrentDay</p>
+    <Title>isCurrentDay</Title>
     <Day isCurrentDay />
-    <p>grey</p>
+    <Title>grey</Title>
     <Day grey />
-    <p>isActive</p>
+    <Title>isActive</Title>
     <Day isActive />
   </>
 )
