@@ -1,8 +1,10 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.43.0",
+  "version": "1.44.0",
   "main": "build/index.js",
-  "files": ["build/index.js"],
+  "files": [
+    "build/index.js"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook --quiet",
