@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useState } from 'react'
 import getDaysInMonth from 'date-fns/get_days_in_month'
+import isSameDay from 'date-fns/is_same_day'
 
 import daysList from '../Utils/daysList'
 import monthList from '../Utils/monthList'
@@ -14,7 +15,7 @@ import {
   DatePickersCon,
 } from './calendar.styles'
 
-const Calendar = ({ onDateSelect, yearRange }) => {
+const Calendar = ({ onDateSelect, yearRange, events }) => {
   const currentYear = new Date().getFullYear()
   const currentMonth = new Date().getMonth()
   const currentDay = new Date().getDate()
@@ -94,6 +95,12 @@ const Calendar = ({ onDateSelect, yearRange }) => {
         {currentMonthDaysArray.map((day) => {
           const isCurrentDay = defineIsCurrentDate(day)
           const active = day === selectedDay
+          const dayDate = new Date(`${selectedMonth} ${day}, ${selectedYear}`)
+          const filterDate = events.filter(({ date }) =>
+            isSameDay(date, dayDate),
+          )
+          const statuses = filterDate.map(({ status }) => status)
+
           return day ? (
             <Day
               key={day}
@@ -101,6 +108,7 @@ const Calendar = ({ onDateSelect, yearRange }) => {
               onClick={handleDaySelect}
               isCurrentDay={isCurrentDay}
               isActive={active}
+              statuses={statuses}
             />
           ) : (
             <div key={Math.random()} />

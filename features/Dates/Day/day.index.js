@@ -10,6 +10,7 @@ const CircleIcon = ({ circleWidthHeight, cicleCCyx, circleRadius, color }) => (
 )
 
 const Day = ({
+  statuses,
   number,
   isCurrentDay,
   activeColor,
@@ -18,9 +19,6 @@ const Day = ({
   acceptedColor,
   pendingColor,
   rejectedColor,
-  accepted,
-  pending,
-  rejected,
   grey,
 }) => {
   const circleWidthHeight = 12
@@ -31,6 +29,12 @@ const Day = ({
     cicleCCyx,
     circleRadius,
   }
+  const statusColors = {
+    accepted: acceptedColor,
+    pending: pendingColor,
+    rejected: rejectedColor,
+  }
+
   const handleClick = () => onClick(number)
 
   return (
@@ -46,15 +50,13 @@ const Day = ({
       </DayCon>
 
       <StatusCon>
-        {accepted && (
-          <CircleIcon {...circleDefaultProps} color={acceptedColor} />
-        )}
-
-        {pending && <CircleIcon {...circleDefaultProps} color={pendingColor} />}
-
-        {rejected && (
-          <CircleIcon {...circleDefaultProps} color={rejectedColor} />
-        )}
+        {statuses.map((item) => (
+          <CircleIcon
+            {...circleDefaultProps}
+            key={item}
+            color={statusColors[item]}
+          />
+        ))}
       </StatusCon>
     </Wrapper>
   )
