@@ -9,4 +9,19 @@ export default [
     date: new Date(),
     status: 'accepted',
   },
+  {
+    id: 3,
+    date: new Date(),
+    status: 'rejected',
+  },
+  {
+    id: 4,
+    date: new Date(),
+    status: 'rejected',
+  },
+  {
+    id: 4,
+    date: new Date('may 17, 2019'),
+    status: 'accepted',
+  },
 ]

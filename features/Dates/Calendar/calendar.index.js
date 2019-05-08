@@ -104,7 +104,7 @@ const Calendar = ({ onDateSelect, yearRange, events }) => {
           const filterDate = events.filter(({ date }) =>
             isSameDay(date, dayDate),
           )
-          const statuses = filterDate.map(({ status }) => status)
+          const statuses = [...new Set(filterDate.map(({ status }) => status))]
 
           return day ? (
             <Day
