@@ -1,4 +1,4 @@
-import { array, string, func, bool, number, oneOf } from 'prop-types'
+import { array, string, func, bool, number } from 'prop-types'
 
 export const defaultProps = {
   number: 0,
@@ -20,7 +20,7 @@ export const propTypes = {
   acceptedColor: string,
   pendingColor: string,
   rejectedColor: string,
-  statuses: oneOf(['accepted', 'rejected', 'pending']),
+  statuses: array,
   events: array,
   onClick: func,
 }
