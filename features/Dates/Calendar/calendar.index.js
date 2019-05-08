@@ -48,9 +48,14 @@ const Calendar = ({ onDateSelect, yearRange, events }) => {
     setcurrentMonthDaysArray(newMonths)
   }
 
-  const handleDaySelect = (day) => {
+  const handleDaySelect = ({ day, events }) => {
+    const date = new Date(`${selectedMonth} ${day}, ${selectedYear}`)
+
     setSelectedDay(day)
-    onDateSelect({ day, month: selectedMonth, year: selectedYear })
+    onDateSelect({
+      date,
+      events,
+    })
   }
 
   const handleMonthSelect = (month) => {
@@ -109,6 +114,7 @@ const Calendar = ({ onDateSelect, yearRange, events }) => {
               isCurrentDay={isCurrentDay}
               isActive={active}
               statuses={statuses}
+              events={filterDate}
             />
           ) : (
             <div key={Math.random()} />

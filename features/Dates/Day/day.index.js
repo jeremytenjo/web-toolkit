@@ -11,6 +11,7 @@ const CircleIcon = ({ circleWidthHeight, cicleCCyx, circleRadius, color }) => (
 
 const Day = ({
   statuses,
+  events,
   number,
   isCurrentDay,
   activeColor,
@@ -35,7 +36,7 @@ const Day = ({
     rejected: rejectedColor,
   }
 
-  const handleClick = () => onClick(number)
+  const handleClick = () => onClick({ day: number, events })
 
   return (
     <Wrapper>
