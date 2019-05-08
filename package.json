@@ -2,9 +2,7 @@
   "name": "@tenjo/web-features",
   "version": "1.43.0",
   "main": "build/index.js",
-  "files": [
-    "build/index.js"
-  ],
+  "files": ["build/index.js"],
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook --quiet",
@@ -16,7 +14,7 @@
     "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen",
     "pretty": "prettier \"**/*.js\" --write",
     "check-staged": "lint-staged",
-    "lint": "eslint ./features"
+    "lint": "eslint ./features --fix"
   },
   "dependencies": {
     "@babel/plugin-syntax-throw-expressions": "^7.2.0",

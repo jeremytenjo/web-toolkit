@@ -9,7 +9,7 @@ export const create = async (stripe, currency, amount, name) => {
       return { type: 'error', error }
     }
 
-    const res = await fetch(window.apiURL + '/stripe/charge', {
+    const res = await fetch(`${window.apiURL}/stripe/charge`, {
       method: 'POST',
       body: JSON.stringify({
         token: token.id,

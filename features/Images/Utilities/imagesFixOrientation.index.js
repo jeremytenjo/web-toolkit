@@ -8,7 +8,7 @@ const ImagesFixRotation = (file) => {
         resolve(result)
       },
       error(e) {
-        reject('Fix orientaition Failed ' + e.message)
+        reject(`Fix orientaition Failed ${e.message}`)
       },
     })
   })

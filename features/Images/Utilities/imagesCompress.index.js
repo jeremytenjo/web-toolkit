@@ -9,7 +9,7 @@ const CompressImage = (file) => {
         resolve(result)
       },
       error(e) {
-        reject('Compression Failed ' + e.message)
+        reject(`Compression Failed ${e.message}`)
       },
     })
   })
