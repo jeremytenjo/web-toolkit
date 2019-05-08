@@ -10,7 +10,7 @@ const Variations = () => (
     <Title>Default</Title>
     <Day />
     <Title>Status</Title>
-    <Day accepted rejected pending />
+    <Day statuses={['accepted', 'rejected', 'pending']} />
     <Title>isCurrentDay</Title>
     <Day isCurrentDay />
     <Title>grey</Title>
