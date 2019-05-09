@@ -1891,10 +1891,10 @@
   resolved "https://registry.yarnpkg.com/@tenjo/forms-input/-/forms-input-0.9.0.tgz#3ecd59c918d86f39f184ad840e279f5ca7faefef"
   integrity sha512-delWp/fuWslkemsccztICrcagsPb1nfeBPVB4gVYk4+5UAAX0QxcfMkU9ooWDThssXH9QDZTkhIA+eTYZ2kmVQ==
 
-"@tenjo/webpack-config@^3.74.0":
-  version "3.74.0"
-  resolved "https://registry.yarnpkg.com/@tenjo/webpack-config/-/webpack-config-3.74.0.tgz#792f2ad2810a5bedaed1df09288248fd06daeabf"
-  integrity sha512-+Fn/ZzK/0VGHMKhzW2T63THGbPjHHkIIw+WGZVZS5iKLJs/OqhFTdMIUEkSSBxU0CpRGHV5ZgzuKyhrytUCeCw==
+"@tenjo/webpack-config@^3.75.0":
+  version "3.75.0"
+  resolved "https://registry.yarnpkg.com/@tenjo/webpack-config/-/webpack-config-3.75.0.tgz#4dcb99a660f6706525bd721cc3129a6bfa0a97e3"
+  integrity sha512-0DKp+EOzLwL6O351RkERVKtH9zvpgsbmsEdNdBXlsEyqq7Q+tF9/bO4Lbp+JIQezEtPo4bS71btd4Dd1sYc0+g==
   dependencies:
     "@babel/core" "^7.4.3"
     "@babel/plugin-proposal-class-properties" "^7.3.3"
