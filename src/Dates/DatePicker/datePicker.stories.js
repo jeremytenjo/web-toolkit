@@ -15,5 +15,5 @@ const Variations = () => (
 )
 
 storiesOf('Dates/Date Picker', module)
-  .add('Variations', () => <Variations />)
-  .add('Dev', () => <DatePicker />)
+  .add('variations', () => <Variations />)
+  .add('dev', () => <DatePicker />)
