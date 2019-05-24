@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.50.0",
+  "version": "1.51.0",
   "main": "build/index.js",
   "files": [
     "build/index.js"
@@ -10,13 +10,13 @@
     "start": "start-storybook -p 9002 -c .storybook --quiet",
     "build": "yarn webpack-scripts build:library",
     "deploy": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
-    "build:storybook": "build-storybook -c .storybook -o .storybook-build",
+    "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build",
     "deploy:storybook": "yarn build:storybook && firebase deploy && gpush",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
     "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen",
     "pretty": "prettier \"**/*.js\" --write",
     "check-staged": "lint-staged",
-    "lint": "eslint ./features --fix"
+    "lint": "eslint ./src --fix"
   },
   "dependencies": {
     "@babel/plugin-syntax-throw-expressions": "^7.2.0",
@@ -24,8 +24,7 @@
     "@material-ui/core": "^3.9.3",
     "@storybook/react": "^5.0.11",
     "@tenjo/eslint-config": "^0.18.0",
-    "@tenjo/forms-input": "^0.9.0",
-    "@tenjo/webpack-config": "^3.75.0",
+    "@tenjo/webpack-config": "^3.76.0",
     "babel-loader": "^8.0.5",
     "date-fns": "^1.30.1",
     "ejs-lint": "^0.3.0",
@@ -34,6 +33,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.8.4",
+    "react-lazyload": "^2.5.0",
     "react-scripts": "^3.0.0",
     "storybook-readme": "^5.0.3",
     "styled-components": "^4.2.0",
