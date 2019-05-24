@@ -4,7 +4,7 @@ import theme from './storybook.theme'
 // Theme
 addParameters({
   options: {
-    name: 'Web Features',
+    name: 'Web Toolkit',
     theme,
     panelPosition: 'right',
     showPanel: false,
@@ -12,7 +12,7 @@ addParameters({
 })
 
 // Load Stories
-const req = require.context('../features', true, /\.stories\.js$/)
+const req = require.context('../src', true, /\.stories\.js$/)
 function loadStories() {
   req.keys().forEach((filename) => req(filename))
 }

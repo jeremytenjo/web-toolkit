@@ -1891,10 +1891,10 @@
   resolved "https://registry.yarnpkg.com/@tenjo/forms-input/-/forms-input-0.9.0.tgz#3ecd59c918d86f39f184ad840e279f5ca7faefef"
   integrity sha512-delWp/fuWslkemsccztICrcagsPb1nfeBPVB4gVYk4+5UAAX0QxcfMkU9ooWDThssXH9QDZTkhIA+eTYZ2kmVQ==
 
-"@tenjo/webpack-config@^3.75.0":
-  version "3.75.0"
-  resolved "https://registry.yarnpkg.com/@tenjo/webpack-config/-/webpack-config-3.75.0.tgz#4dcb99a660f6706525bd721cc3129a6bfa0a97e3"
-  integrity sha512-0DKp+EOzLwL6O351RkERVKtH9zvpgsbmsEdNdBXlsEyqq7Q+tF9/bO4Lbp+JIQezEtPo4bS71btd4Dd1sYc0+g==
+"@tenjo/webpack-config@^3.76.0":
+  version "3.76.0"
+  resolved "https://registry.yarnpkg.com/@tenjo/webpack-config/-/webpack-config-3.76.0.tgz#5bf32f4287b0f3e1a519517ef2bfe9f28f292f78"
+  integrity sha512-ir319xbq3xpCACrCgRAv0PzVwNkBXbTR4fH/5T36lk3K7AAPgeDd3BnxLAEo7yXmouqXpaWB+N9vqsNsaJwLMQ==
   dependencies:
     "@babel/core" "^7.4.3"
     "@babel/plugin-proposal-class-properties" "^7.3.3"
@@ -12366,6 +12366,11 @@ react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+
+react-lazyload@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.5.0.tgz#7ed20bf0408dc684c10e808060e51d904cc0ab8d"
+  integrity sha512-RkEwpJDqEUVkXodxBXAI/UDyGYUBTZCU9kdG0Lwmg8BIv8zDvP+exFwUzc7wP4HX6n33CCsz+cjG2FpwdRoxpw==
 
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"

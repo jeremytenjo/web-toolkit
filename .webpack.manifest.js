@@ -1,6 +1,6 @@
 exports.manifest = {
   webpack: {
-    entry: './features/features.index.js',
+    entry: './src/src.index.js',
     output: {
       filename: 'index.js',
       libraryTarget: 'commonjs2',
