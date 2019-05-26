@@ -9,11 +9,11 @@ document.write(headCss)
 
 export default () => {
   // Project Theme
-  const { primary: colorSecondary } = colors
+  const { primary } = colors
 
   // Return storybook theme
   return create({
     base: 'light',
-    colorSecondary,
+    colorPrimary: primary,
   })
 }
