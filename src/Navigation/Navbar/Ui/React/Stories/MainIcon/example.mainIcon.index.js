@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Bar from '../../Component/navBar.index'
+import Bar from '../../navBar.index'
 
 import data from './example.mainIcon.mockdata'
 

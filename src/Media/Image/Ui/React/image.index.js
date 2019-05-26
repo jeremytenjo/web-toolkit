@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import OnVisibility from '../../../_miscUtils/Rendering/renderingOnVisibility'
+import OnVisibility from '../../../../_Misc-Utils/Rendering/renderingOnVisibility'
 
 import { defaultProps, propTypes } from './image.propTypes'
 import { Wrapper } from './image.styles'

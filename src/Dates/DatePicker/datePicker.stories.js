@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Title from '../../../.storybook/CustomComponents/title'
+import Title from '../../../.storybook/Custom-Components/Title/title'
 
 import DatePicker from './datePicker.index'
 
