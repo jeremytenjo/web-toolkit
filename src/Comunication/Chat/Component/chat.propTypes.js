@@ -10,7 +10,8 @@ import {
   number,
   oneOfType,
 } from 'prop-types'
-import Input from '@tenjo/forms-input'
+
+import Input from '../../../Input/Text-Field/Ui/React/textField.index'
 
 export const defaultProps = {
   senderIds: [],

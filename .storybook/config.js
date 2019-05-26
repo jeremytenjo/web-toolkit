@@ -1,5 +1,6 @@
 import { configure, addParameters } from '@storybook/react'
 import theme from './Theme/storybook.theme'
+import './Firebase/firebase.index'
 
 // Theme
 addParameters({
