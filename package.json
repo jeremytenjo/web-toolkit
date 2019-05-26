@@ -2,9 +2,7 @@
   "name": "@tenjo/web-features",
   "version": "1.63.0",
   "main": "build/index.js",
-  "files": [
-    "build/index.js"
-  ],
+  "files": ["build/index.js"],
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
@@ -12,6 +10,7 @@
     "deploy": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:storybook": "yarn build:storybook && firebase deploy && gpush",
+    "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
     "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
     "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen",
     "pretty": "prettier \"**/*.js\" --write",
