@@ -15,8 +15,6 @@ export default () => {
   return create({
     base: 'light',
     brandUrl: 'https://github.com/tenjojeremy/Web-Toolkit',
-    brandImage:
-      'https://firebasestorage.googleapis.com/v0/b/tenjo-web-toolkit.appspot.com/o/logo.svg?alt=media&token=7c793c04-67c2-4eba-bb5a-3857c2b2aa75',
     colorSecondary: primary,
   })
 }
