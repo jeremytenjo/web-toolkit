@@ -10,8 +10,8 @@ jobs:
       - checkout
 
       - run:
-        name: Install Dependencies
-        command: yarn install
+          name: Install Dependencies
+          command: yarn install
 
       - save_cache:
           paths:
@@ -19,9 +19,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-        name: Lint files
-        command: yarn lint:check
+          name: Lint files
+          command: yarn lint:check
 
       - run:
-        name: Build Storybook
-        command: yarn build:storybook
+          name: Build Storybook
+          command: yarn build:storybook
