@@ -5,11 +5,11 @@ node_modules/
 /coverage
 
 # production
-/build
+build
 .storybook/storybook-build
 
 # Firebase 
-/.firebase
+.firebase
 
 # misc
 .DS_Store
