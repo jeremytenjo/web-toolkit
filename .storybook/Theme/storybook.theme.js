@@ -14,6 +14,9 @@ export default () => {
   // Return storybook theme
   return create({
     base: 'light',
-    colorPrimary: primary,
+    brandUrl: 'https://github.com/tenjojeremy/Web-Toolkit',
+    brandImage:
+      'https://firebasestorage.googleapis.com/v0/b/tenjo-web-toolkit.appspot.com/o/logo.svg?alt=media&token=eedd5b33-9fb1-45a5-b9b3-1283fbff1eb0',
+    colorSecondary: primary,
   })
 }

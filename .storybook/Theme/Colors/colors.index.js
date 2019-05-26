@@ -3,7 +3,7 @@ exports.colors = {
   primaryDarker: '#005a34',
   primaryBackground: '#aaffdb',
 
-  secondary: '#ada3ff',
+  secondary: '#31FFCE',
   secondaryDarker: '#6700ca',
   secondaryBackground: '#ebe8ff',
 

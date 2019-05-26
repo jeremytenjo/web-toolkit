@@ -6,7 +6,7 @@ import './Firebase/firebase.index'
 addParameters({
   options: {
     name: 'Web Toolkit',
-    theme,
+    theme: theme(),
     panelPosition: 'right',
     showPanel: false,
   },
