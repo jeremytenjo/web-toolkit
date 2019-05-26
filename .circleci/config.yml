@@ -1,31 +1,22 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/node:latest
+     deploy-job:
+       docker:
+         - image: circleci/node:latest
 
-    working_directory: ~/repo
+       working_directory: /tmp/my-project
+       steps:
+         - run:
+             name: Deploy Master to Firebase
+             command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
-    steps:
-      - checkout
+    workflows:
+      version: 2
 
-      - run:
-          name: Install Dependencies
-          command: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run:
-          name: Lint files
-          command: yarn lint:check
-
-      - run:
-          name: Build Storybook
-          command: yarn build:storybook
-
-      - run:
-          name: Deploy to Firebase
-          command: yarn deploy:firebase
+      -deploy:
+        jobs:
+          - build-job
+          - deploy-job:
+              requires:
+                - build-job
+              filters:
+                branches:
+                  only: master
