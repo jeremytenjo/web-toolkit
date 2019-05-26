@@ -28,4 +28,4 @@ jobs:
 
       - run:
           name: Deploy to Firebase
-          command: yarn run deploy:firebase
+          command: yarn deploy:firebase
