@@ -1,7 +1,7 @@
 import dynamicCondition from '../../../Operator/dynamicOperator'
 
 export default function({ array, post, condition, value }) {
-  // handle array of strings
+  // handle array of single values
   const result = array.filter((item) => {
     return dynamicCondition(item, condition, value)
   })
