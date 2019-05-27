@@ -1,3 +1,3 @@
 ## Usage
 
-array('filter', {params})
+array('functionName', {params})
