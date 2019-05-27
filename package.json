@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
+    "deploy": "gpush",
     "build:library": "yarn webpack-scripts build:library",
     "publish": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
