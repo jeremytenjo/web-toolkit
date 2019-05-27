@@ -1,18 +1,20 @@
-export default ({post, operator, value}) => {
+export default ({ post, operator, value }) => {
   switch (operator) {
-    case '>':
-      return post > value
-    case '<':
-      return post < value
-    case '>=':
-      return post >= value
-    case '<=':
-      return post <= value
-    case '===':
-      return post === value
-    case '!==':
-      return post !== value
-    default:
-      return 'use > , < , >= , <= , === or !=='
+    case ">":
+      return post > value;
+    case "<":
+      return post < value;
+    case ">=":
+      return post >= value;
+    case "<=":
+      return post <= value;
+    case "==":
+      return post == value;
+    case "!=":
+      return post != value;
+    case "===":
+      return post === value;
+    case "!==":
+      return post !== value;
   }
-}
+};
