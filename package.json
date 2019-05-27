@@ -17,6 +17,14 @@
     "lint": "eslint ./src --fix",
     "lint:check": "eslint ./src"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": ["eslint --fix", "prettier --list-different"]
+  },
   "dependencies": {
     "@babel/plugin-syntax-throw-expressions": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.4.4",
@@ -28,6 +36,7 @@
     "date-fns": "^1.30.1",
     "ejs-lint": "^0.3.0",
     "firebase": "^6.0.4",
+    "husky": "^2.3.0",
     "hygen": "latest",
     "image-compressor.js": "^1.1.4",
     "react": "^16.8.6",
