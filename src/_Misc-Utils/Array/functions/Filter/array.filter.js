@@ -2,9 +2,9 @@ import dynamicCondition from '../../../Operator/dynamicOperator'
 
 export default function({ array, post, condition, value }) {
   // handle array of strings
-  const result = array.filter((item) =>
-    dynamicCondition(item, condition, value),
-  )
+  const result = array.filter((item) => {
+    return dynamicCondition(item, condition, value)
+  })
 
   return result
 
