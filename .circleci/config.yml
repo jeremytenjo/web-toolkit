@@ -21,7 +21,7 @@ jobs:
             - node_modules
           key: 'v1-dependencies-{{ checksum "package.json" }}'
       - run:
-          name: 'Build Project'
+          name: 'Build'
           command: 'yarn build:storybook'
       - run:
           name: 'Test'
