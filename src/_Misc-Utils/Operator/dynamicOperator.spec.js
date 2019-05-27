@@ -1,4 +1,4 @@
-import dynamicOperator from "./dynamicConditional";
+import dynamicOperator from "./dynamicOperator";
 
 test("Equal === works", () => {
   const result = dynamicOperator({
