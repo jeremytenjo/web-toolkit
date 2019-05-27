@@ -13,7 +13,9 @@ jobs:
           keys:
             - 'v1-dependencies-{{ checksum "package.json" }}'
             - v1-dependencies-
-      - run: 'yarn install'
+      - run:
+          name: 'Install Dependencies'
+          command: 'yarn install'
       - save_cache:
           paths:
             - node_modules
