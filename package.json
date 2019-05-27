@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "deploy": "gpush",
     "build:library": "yarn webpack-scripts build:library",
     "publish": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
@@ -23,7 +23,11 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix", "prettier --list-different", "yarn jest"]
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --list-different",
+      "jest --passWithNoTests"
+    ]
   },
   "dependencies": {
     "@babel/plugin-syntax-throw-expressions": "^7.2.0",
