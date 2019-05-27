@@ -21,11 +21,11 @@ jobs:
             - node_modules
           key: 'v1-dependencies-{{ checksum "package.json" }}'
       - run:
-          name: 'Test'
-          command: 'yarn test'
-      - run:
           name: 'Build Project'
           command: 'yarn build:storybook'
+      - run:
+          name: 'Test'
+          command: 'yarn test'
       - run:
           name: 'Deploy to Firebase Hosting'
           command: 'yarn deploy:firebase'
