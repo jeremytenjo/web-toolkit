@@ -1,10 +1,14 @@
-// should Filter array of strings
+import filter from './array.filter'
+
+test('should Filter array of strings', () => {
+  const arrayOfStrings = ['1', '2', '3']
+  const result = filter({
+    array: arrayOfStrings,
+    post: '',
+    condition: '===',
+    value: '3',
+  })
+  expect(result).toContain('3')
+})
 
 // should Filter array of objects
-function sum(a, b) {
-  return a + b
-}
-
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3)
-})

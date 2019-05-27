@@ -1,9 +1,9 @@
 import dynamicCondition from '../../../Operator/dynamicOperator'
 
-export default function({ array, condition, post }) {
+export default function({ array, post, condition, value }) {
   // handle array of strings
   const result = array.filter((item) =>
-    dynamicCondition(item[post], condition, 6),
+    dynamicCondition(item, condition, value),
   )
 
   return result
