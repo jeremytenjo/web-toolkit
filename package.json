@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "deploy": "gpush",
     "build:library": "yarn webpack-scripts build:library",
     "publish": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
