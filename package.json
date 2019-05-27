@@ -6,15 +6,13 @@
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
-    "build": "yarn webpack-scripts build:library",
-    "deploy": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
+    "build:library": "yarn webpack-scripts build:library",
+    "publish": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
-    "hygen": "set HYGEN_TMPLS=.hygen/_templates&& hygen",
-    "hygen:mac": "HYGEN_TMPLS=.hygen/_templates hygen",
     "pretty": "prettier \"**/*.js\" --write",
     "check-staged": "lint-staged",
-    "lint": "eslint ./src --fix",
+    "lint:fix": "eslint ./src --fix",
     "lint:check": "eslint ./src"
   },
   "husky": {
@@ -37,7 +35,6 @@
     "ejs-lint": "^0.3.0",
     "firebase": "^6.0.4",
     "husky": "^2.3.0",
-    "hygen": "latest",
     "image-compressor.js": "^1.1.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
