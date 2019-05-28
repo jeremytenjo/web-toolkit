@@ -1,10 +1,11 @@
-// External Usage: 
+// External Usage:
 // import { array } from '@tenjo/web-toolkit'
 
 // const result = array('filter', {
-//   array: array,
-//   condition: '===',
-//   value: '3',
+//   post,
+//   array,
+//   condition,
+//   value,
 // })
 
 import filter from './array.filter.index'
