@@ -1,3 +1,0 @@
-## Usage
-
-array('functionName', {params})

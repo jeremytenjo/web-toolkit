@@ -1,36 +1,34 @@
 // External Usage:
 
 // import { array } from '@tenjo/web-toolkit'
-// const result = array('filter', { params})
+// const result = array('findIndex', { params})
 
 // Available params: post, array, condition, value
 
-import filter from './array.filter.index'
+import arrayFunc from './array.func'
 
 // Features
-test('Filter array of single values', () => {
+test('Return the index of the first element in the array that satisfies - Single Value', () => {
   const arrayOfSingleValues = ['1', '2', '3']
-  const result = filter({
+  const result = arrayFunc('findIndex', {
     array: arrayOfSingleValues,
     condition: '===',
     value: '3',
   })
-  expect(result).toContain('3')
+  expect(result).toBe(2)
 })
 
-test('Filter array of objects', () => {
+test('Return the index of the first element in the array that satisfies - Object', () => {
   const arrayOfObjects = [
     { id: 1, name: 'jeremy' },
     { id: 2, name: 'hayle' },
     { id: 3, name: 'jen' },
   ]
-  const result = filter({
+  const result = arrayFunc('findIndex', {
     array: arrayOfObjects,
     post: 'id',
     condition: '===',
-    value: 2,
+    value: 3,
   })
-  expect(result).toContainEqual(
-    expect.objectContaining({ id: 2, name: 'hayle' }),
-  )
+  expect(result).toBe(2)
 })
