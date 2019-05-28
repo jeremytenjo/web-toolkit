@@ -24,8 +24,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
-      "eslint",
+      "eslint .src --fix",
+      "eslint .src",
       "prettier --write",
       "prettier --list-different",
       "jest --passWithNoTests"
