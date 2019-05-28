@@ -1,4 +1,4 @@
-import dynamicCondition from '../../../Operator/dynamicOperator'
+import dynamicCondition from '../../../Operator/DynamicOperator/dynamicOperator'
 
 export default function({ array, post, condition, value }) {
   const result = array.filter((item) => {
