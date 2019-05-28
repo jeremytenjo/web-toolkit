@@ -1,4 +1,4 @@
-// External Usage:
+// Usage:
 
 // import { array } from '@tenjo/web-toolkit'
 // const result = array('filter', { params})
