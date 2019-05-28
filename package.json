@@ -24,7 +24,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint ./src",
+      "yarn eslint ./src",
       "prettier --write",
       "prettier --list-different",
       "jest --passWithNoTests"
