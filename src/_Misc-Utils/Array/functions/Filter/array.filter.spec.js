@@ -4,11 +4,25 @@ test('should Filter array of single values', () => {
   const arrayOfStrings = ['1', '2', '3']
   const result = filter({
     array: arrayOfStrings,
-    post: '',
     condition: '===',
     value: '3',
   })
   expect(result).toContain('3')
 })
 
-// should Filter array of objects
+test('should Filter array of objects', () => {
+  const arrayOfObjects = [
+    { id: 1, name: 'jeremy' },
+    { id: 2, name: 'hayle' },
+    { id: 3, name: 'jen' },
+  ]
+  const result = filter({
+    array: arrayOfObjects,
+    post: 'id',
+    condition: '===',
+    value: 2,
+  })
+  expect(result).toContainEqual(
+    expect.objectContaining({ id: 2, name: 'hayle' }),
+  )
+})
