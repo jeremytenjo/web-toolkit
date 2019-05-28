@@ -1,6 +1,15 @@
+// External Usage: 
+// import { array } from '@tenjo/web-toolkit'
+
+// const result = array('filter', {
+//   array: array,
+//   condition: '===',
+//   value: '3',
+// })
+
 import filter from './array.filter.index'
 
-test('should Filter array of single values', () => {
+test('Filter array of single values', () => {
   const arrayOfSingleValues = ['1', '2', '3']
   const result = filter({
     array: arrayOfSingleValues,
@@ -10,7 +19,7 @@ test('should Filter array of single values', () => {
   expect(result).toContain('3')
 })
 
-test('should Filter array of objects', () => {
+test('Filter array of objects', () => {
   const arrayOfObjects = [
     { id: 1, name: 'jeremy' },
     { id: 2, name: 'hayle' },
