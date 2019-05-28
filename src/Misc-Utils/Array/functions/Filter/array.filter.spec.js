@@ -1,9 +1,9 @@
 import filter from './array.filter'
 
 test('should Filter array of single values', () => {
-  const arrayOfStrings = ['1', '2', '3']
+  const arrayOfSingleValues = ['1', '2', '3']
   const result = filter({
-    array: arrayOfStrings,
+    array: arrayOfSingleValues,
     condition: '===',
     value: '3',
   })
