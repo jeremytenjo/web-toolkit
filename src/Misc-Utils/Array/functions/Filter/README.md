@@ -6,7 +6,7 @@ import { array } from '@tenjo/web-toolkit'
 
 ## Usage
 
-### Array with single values
+#### Array with single values
 
 ```js
 const arrayOfStrings = ['1', '2', '3']
