@@ -9,6 +9,7 @@
 
 import filter from './array.filter.index'
 
+// Features
 test('Filter array of single values', () => {
   const arrayOfSingleValues = ['1', '2', '3']
   const result = filter({
