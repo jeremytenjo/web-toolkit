@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import filter from './array.filter'
+import filter from './array.filter.index'
 
 const ArrayofStrings = () => {
   const dataset = ['1', '2', '3']

@@ -1,4 +1,4 @@
-import filter from './array.filter'
+import filter from './array.filter.index'
 
 test('should Filter array of single values', () => {
   const arrayOfSingleValues = ['1', '2', '3']
