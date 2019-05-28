@@ -19,7 +19,7 @@ const result = array('filter', {
 // ['3']
 ```
 
-### Array with objects
+#### Array with objects
 
 ```js
 const arrayOfObjects = [
