@@ -10,7 +10,7 @@ const ArrayofStrings = () => {
   return <>Result: {result}</>
 }
 
-storiesOf('_Misc-Utils|Array/Filter', module).add(
+storiesOf('Misc-Utils|Array/Filter', module).add(
   'Array of Strings',
   <ArrayofStrings />,
 )

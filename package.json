@@ -24,8 +24,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "yarn lint:check",
-      "prettier --write",
+      "yarn lint:fix",
+      "yarn pretty",
       "prettier --list-different",
       "jest --passWithNoTests"
     ]
