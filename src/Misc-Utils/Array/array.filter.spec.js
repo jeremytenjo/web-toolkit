@@ -5,7 +5,7 @@
 
 // Available params: post, array, condition, value
 
-import arrayFunc from './array.func'
+import arrayFunc from './functions/array.func'
 
 // Features
 test('Check whether at least one element in the array passes the test implemented by the provided function - Single Values', () => {

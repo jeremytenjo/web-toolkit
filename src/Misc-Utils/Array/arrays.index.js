@@ -1,4 +1,20 @@
 export default async ({ type, ...params }) => {
-  const arrayFunc = await import(`./functions/arrays.${type}`)
+  let func = null
+
+  switch (type) {
+    case 'filter':
+      func = 'func'
+      break
+    case 'some':
+      func = 'func'
+      break
+    case 'indexOf':
+      func = 'func'
+      break
+
+    default:
+      break
+  }
+  const arrayFunc = await import(`./functions/array.${func}`)
   return arrayFunc.default(params)
 }

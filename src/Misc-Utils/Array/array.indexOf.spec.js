@@ -5,7 +5,7 @@
 
 // Available params: post, array, condition, value
 
-import arrayFunc from './array.func'
+import arrayFunc from './functions/array.func'
 
 // Features
 test('Return the index of the first element in the array that satisfies - Single Value', () => {
