@@ -7,10 +7,10 @@ import DatePicker from './datePicker.index'
 
 const Variations = () => (
   <>
-    <B title='Date Picker - Month' style={{ width: 'fit-content' }}>
+    <B title='Date Picker - Month'>
       <DatePicker type='month' />
     </B>
-    <B title='Date Picker - Year' style={{ width: 'fit-content' }}>
+    <B title='Date Picker - Year'>
       <DatePicker type='year' onSelect={(value) => console.log(value)} />
     </B>
   </>
