@@ -9,7 +9,11 @@ export const Wrapper = styled.div`
 export const Title = styled.span`
   font-family: monospace;
   font-weight: bold;
-  color: #757575;
+  color: #cdfff9;
 `
 
-export const Content = styled.div``
+export const Content = styled.div`
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+`

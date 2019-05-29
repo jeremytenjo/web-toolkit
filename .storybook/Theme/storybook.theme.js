@@ -13,7 +13,7 @@ export default () => {
 
   // Return storybook theme
   return create({
-    base: 'light',
+    base: 'dark',
     brandUrl: 'https://github.com/tenjojeremy/Web-Toolkit',
     colorSecondary: primary,
   })
