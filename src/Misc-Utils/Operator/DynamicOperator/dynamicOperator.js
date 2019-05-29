@@ -12,5 +12,7 @@ export default ({ post, operator, value }) => {
       return post === value
     case '!==':
       return post !== value
+    default:
+      return `Options available > , < , >= , <= , === , !== , instead got ${operator}`
   }
 }
