@@ -1,8 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import List from '../list.index'
+import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+
+import List from './list.index'
 
 // Test Data
 const dataSet1 = ['block', 'block', 'block', 'block']
