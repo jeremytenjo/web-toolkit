@@ -1,25 +1,32 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Title from '../../../.storybook/Custom-Components/Title/title'
+import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 import Day from './day.index'
 
 const Variations = () => (
   <>
-    <Title>Default</Title>
-    <Day />
-    <Title>Status</Title>
-    <Day statuses={['accepted', 'rejected', 'pending']} />
-    <Title>isCurrentDay</Title>
-    <Day isCurrentDay />
-    <Title>grey</Title>
-    <Day grey />
-    <Title>isActive</Title>
-    <Day isActive />
+    <B title='Default'>
+      <Day />
+    </B>
+
+    <B title='Status'>
+      <Day statuses={['accepted', 'rejected', 'pending']} />
+    </B>
+
+    <B title='isCurrentDay'>
+      <Day isCurrentDay />
+    </B>
+
+    <B title='grey'>
+      <Day grey />
+    </B>
+
+    <B title='isActive'>
+      <Day isActive />
+    </B>
   </>
 )
 
-storiesOf('Dates/Day', module)
-  .add('Variations', () => <Variations />)
-  .add('Dev', () => <Day />)
+storiesOf('Dates|Day', module).add('Variations', () => <Variations />)

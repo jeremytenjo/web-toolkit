@@ -1,19 +1,19 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Title from '../../../.storybook/Custom-Components/Title/title'
+import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 import DatePicker from './datePicker.index'
 
 const Variations = () => (
   <>
-    <Title>Date Picker - Month</Title>
-    <DatePicker type='month' />
-    <Title>Date Picker - Year</Title>
-    <DatePicker type='year' onSelect={(value) => console.log(value)} />
+    <B title='Date Picker - Month' style={{ width: 'fit-content' }}>
+      <DatePicker type='month' />
+    </B>
+    <B title='Date Picker - Year' style={{ width: 'fit-content' }}>
+      <DatePicker type='year' onSelect={(value) => console.log(value)} />
+    </B>
   </>
 )
 
-storiesOf('Dates/Date Picker', module)
-  .add('variations', () => <Variations />)
-  .add('dev', () => <DatePicker />)
+storiesOf('Dates/Date Picker', module).add('variations', () => <Variations />)
