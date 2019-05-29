@@ -16,7 +16,7 @@ const Watcher = ({
   //Effects
   useEffect(() => {
     if (enabled) {
-      window.addEventListener('scroll', handleScroll)
+      window.addEventListener('scroll', handleScroll, true)
       return () => {
         window.removeEventListener('scroll', handleScroll)
       }
@@ -36,6 +36,7 @@ const Watcher = ({
         elToWatched.scrollTop + window.innerHeight
 
     if (reachEnd) setreachedEnd(true)
+    else setreachedEnd(false)
   }
 
   return reachedEnd

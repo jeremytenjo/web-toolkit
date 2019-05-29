@@ -1,22 +1,44 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import VariationBlock from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import List from '../list.index'
 
 // Test Data
-const testData = ['hello', 'hello', 'hello', 'hello']
+const dataSet1 = ['block', 'block', 'block', 'block']
+const dataSet2 = ['block', 'block', 'block', 'block', 'block', 'block', 'block']
 const itemComponent = ({ item }) => <p>{item}</p>
 
 const Variations = () => (
   <>
-    <VariationBlock title='Direction - Vertical'>
-      <List data={testData} ItemComponent={itemComponent} direction='row' />
-    </VariationBlock>
+    <B title='Direction - Vertical'>
+      <List data={dataSet1} ItemComponent={itemComponent} direction='row' />
+    </B>
 
-    <VariationBlock title='Direction - Horizontal'>
-      <List data={testData} ItemComponent={itemComponent} direction='column' />
-    </VariationBlock>
+    <B title='Direction - Horizontal'>
+      <List data={dataSet2} ItemComponent={itemComponent} direction='column' />
+    </B>
+
+    <B title='Direction - Horizontal - Overflow' style={{ width: '50%' }}>
+      <List
+        data={dataSet2}
+        ItemComponent={itemComponent}
+        direction='column'
+        gap='xxl'
+        overflows
+      />
+    </B>
+
+    <B title='Grid'>
+      <List
+        data={dataSet2}
+        ItemComponent={itemComponent}
+        grid
+        repeat={3}
+        repeatOnMinWidth={4}
+        minWidth={800}
+      />
+    </B>
   </>
 )
 

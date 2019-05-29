@@ -2,11 +2,19 @@ import React, { memo } from 'react'
 
 import { Wrapper, Title, Content } from './variationBlock.styles'
 
-const VariationBlock = ({ children, title }) => {
+const VariationBlock = ({
+  children,
+  title,
+  style,
+  contentStyles,
+  containerId,
+}) => {
   return (
-    <Wrapper>
-      <Title>{title}</Title>
-      <Content> {children} </Content>
+    <Wrapper style={style}>
+      <Title style={style}>{title}</Title>
+      <Content style={contentStyles || style} id={containerId}>
+        {children}
+      </Content>
     </Wrapper>
   )
 }

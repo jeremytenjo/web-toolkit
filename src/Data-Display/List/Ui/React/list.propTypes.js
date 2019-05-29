@@ -5,21 +5,23 @@ import PropTypes, {
   element,
   oneOf,
   number,
+  string,
+  bool,
 } from 'prop-types'
 
 export const defaultProps = {
   data: [],
   direction: 'column',
   ItemComponent: null,
+  minWidth: 600,
   repeat: 3,
+  repeatOnMinWidth: 3,
+  gap: 's',
+  padding: 5,
+  overflows: null,
   listItemDefinitions: null,
   onItemClick: () => null,
-  onScrollListEnd: () => null,
-  skeletonItemLength: Array.apply(1, Array(12)),
-  listLoading: null,
-  elToWatched: null,
   autoColumns: null,
-  onlyMobileStyle: null,
 }
 
 export const propTypes = {
@@ -27,7 +29,11 @@ export const propTypes = {
   direction: oneOf(['column', 'row', 'grid']),
   ItemComponent: PropTypes.oneOfType([object, func, element]),
   repeat: number,
+  minWidth: number,
+  repeatOnMinWidth: number,
+  gap: string,
+  padding: number,
+  overflows: bool,
   listItemDefinitions: object,
   onItemClick: func,
-  onScrollListEnd: func,
 }

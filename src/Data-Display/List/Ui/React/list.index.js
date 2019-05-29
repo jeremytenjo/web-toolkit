@@ -1,36 +1,22 @@
 import React, { memo, Fragment } from 'react'
 
-// Optinal Funcitons
-import useEndScroll from '../../../../Misc-Utils/Scrolling/EventListeners/scrollingEventListeners.index'
-
 import { Wrapper } from './list.styles'
 import { defaultProps, propTypes } from './list.propTypes'
 
 const List = ({
   data,
   direction,
-  onScrollListEnd,
-  onListItemClick,
+  onItemClick,
   ItemComponent,
   listItemDefinitions,
-  skeletonItemLength,
-  listLoading,
-  elToWatched,
-  theme,
   repeat,
   autoColumns,
-  onlyMobileStyle,
-  mediaQuery,
-  style,
+  overflows,
+  minWidth,
+  repeatOnMinWidth,
   ...styles
 }) => {
   const dataLength = data.length
-  const thereIsData = dataLength > 0 || false
-
-  // Optional Funcitons
-  const hi = useEndScroll({ elToWatched, enabled: onScrollListEnd })
-    ? onScrollListEnd()
-    : null
 
   const loadNoItemComponent = () =>
     data.map((Item, index) => (
@@ -45,7 +31,7 @@ const List = ({
         item={item}
         key={item._id || item.id || index}
         index={index}
-        onClick={() => onListItemClick({ item, index })}
+        onClick={() => onItemClick({ item, index })}
         id={item._id || item.id || index}
         definitions={listItemDefinitions}
         {...item}
@@ -59,13 +45,12 @@ const List = ({
       dataLength={dataLength}
       repeat={repeat}
       autoColumns={autoColumns}
-      onlyMobileStyle={onlyMobileStyle}
-      style={style}
-      mediaQuery={mediaQuery}
+      overflows={overflows}
+      minWidth={minWidth}
+      repeatOnMinWidth={repeatOnMinWidth}
       {...styles}
     >
       {!ItemComponent && loadNoItemComponent()}
-
       {ItemComponent && loadWithItemComponent()}
     </Wrapper>
   )
