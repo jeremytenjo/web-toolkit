@@ -38,9 +38,9 @@ const Example = () => {
 
   return (
     <div>
-      <h1>Add Other user message</h1>
+      <h5>Add Other user message</h5>
       <button onClick={addOtherPersonMessage}>Add other user Message</button>
-      <h1>Component</h1>
+      <h5>Component</h5>
       <Chat
         messagesData={data}
         senderIds={['1']}
