@@ -19,4 +19,4 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Media|Image/React', module).add('variaitons', () => <Variations />)
+storiesOf('Media|Image/React', module).add('variations', () => <Variations />)

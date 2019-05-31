@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   min-height: 100%;
   background-repeat: no-repeat;
-  padding-top: 100%;
   cursor: ${({ cursor }) => cursor};
   transition: 0.2s;
   height: 0;
