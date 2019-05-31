@@ -3,22 +3,23 @@ import React, { memo } from 'react'
 import OnVisibility from '../../../../Misc-Utils/Rendering/renderingOnVisibility'
 
 import { defaultProps, propTypes } from './image.propTypes'
-import { Wrapper } from './image.styles'
+import { Wrapper, Imgage } from './image.styles'
 
 // Entity
 const Image = ({
   src,
-  index,
+  alt,
   onClick,
   definitions,
-  skeleton,
-  OnVisibilityParams,
+  isLazyLoaded,
+  OnVisibilityProps,
   cursor,
   position,
+  size,
+  width,
+  height,
   ...props
 }) => {
-  const isLazyLoaded = index > 12
-
   // In case  the src key in not called src in props, expects {src: <propsrcname>}
   if (definitions) {
     for (var key in definitions) {
@@ -29,18 +30,22 @@ const Image = ({
   // Template
   return (
     <>
-      {skeleton && <Wrapper skeleton={skeleton} />}
       {isLazyLoaded ? (
-        <OnVisibility {...OnVisibilityParams}>
-          <Wrapper src={src} onClick={() => onClick(props)} />
+        <OnVisibility {...OnVisibilityProps}>
+          <Wrapper width={width} height={height} size={size}>
+            <Imgage alt={alt} src={src} onClick={() => onClick(props)} />
+          </Wrapper>
         </OnVisibility>
       ) : (
-        <Wrapper
-          cursor={cursor}
-          position={position}
-          src={src}
-          onClick={() => onClick(props)}
-        />
+        <Wrapper width={width} height={height} size={size}>
+          <Imgage
+            cursor={cursor}
+            position={position}
+            src={src}
+            alt={alt}
+            onClick={() => onClick(props)}
+          />
+        </Wrapper>
       )}
     </>
   )

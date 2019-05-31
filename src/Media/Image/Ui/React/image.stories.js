@@ -1,23 +1,22 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import testImage from '../../../../../.storybook/Custom-Components/Test-Images/testImag.jpg'
+import testImage2 from '../../../../../.storybook/Custom-Components/Test-Images/test2.jpg'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 import Image from './image.index'
 
-// Test Data
-const testSrc = 'https://pbs.twimg.com/media/DsidDmwXcAAwG9i.jpg:large'
-
 const Variations = () => (
   <>
     <B title='default'>
-      <Image src={testSrc} />
+      <Image src={testImage} width={400} height={400} />
     </B>
 
-    <B title='Skeleton'>
-      <Image skeleton />
+    <B title='isLazyLoaded'>
+      <Image isLazyLoaded src={testImage2} />
     </B>
   </>
 )
 
-storiesOf('Media|Image', module).add('variaitons', () => <Variations />)
+storiesOf('Media|Image/React', module).add('variaitons', () => <Variations />)
