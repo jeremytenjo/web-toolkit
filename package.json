@@ -1,17 +1,14 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.67.0",
+  "version": "1.69.0",
   "main": "build/index.js",
-  "files": [
-    "build/index.js"
-  ],
+  "files": ["build/index.js"],
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "test": "jest",
     "deploy": "gpush",
     "build:library": "yarn webpack-scripts build:library",
-    "publish": "yarn webpack-scripts build:library && yarn publish --minor && gpush && yarn build:storybook && firebase deploy",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
     "pretty": "prettier \"**/*.js\" --write",
@@ -38,7 +35,7 @@
     "@material-ui/core": "^4.0.0",
     "@storybook/react": "^5.0.11",
     "@tenjo/eslint-config": "^0.18.0",
-    "@tenjo/webpack-config": "^3.76.0",
+    "@tenjo/webpack-config": "^3.77.0",
     "babel-loader": "^8.0.5",
     "date-fns": "^1.30.1",
     "ejs-lint": "^0.3.0",
