@@ -22,18 +22,19 @@ export const Wrapper = styled.div`
   `}
 
     /* Grid */
-    ${({ grid, repeat }) =>
+    ${({ grid, repeat, minWidth, repeatOnMinWidth }) =>
       grid &&
       repeat &&
       `
       grid-auto-flow: row;
       align-items: stretch;
       grid-template-columns: repeat(${repeat}, minmax(10px, 1fr));
-    `} 
 
   /* Min Width */
-  @media (min-width: ${({ minWidth }) => `${minWidth}px`}) {
-    grid-template-columns: repeat(${({ repeatOnMinWidth }) =>
-      repeatOnMinWidth}, minmax(10px, 1fr));
+  @media (min-width: ${minWidth}px) {
+    grid-template-columns: repeat(${repeatOnMinWidth}, minmax(10px, 1fr));
   }   
+    `} 
+
+
 `
