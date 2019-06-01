@@ -1,1 +1,2 @@
-.storybook/.storybook-build
+.storybook/storybook-build
+build
