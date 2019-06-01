@@ -1,7 +1,7 @@
 import { configure, addParameters } from '@storybook/react'
 import theme from './Theme/storybook.theme'
 import './Firebase/firebase.index'
-
+import ViewportOptions from './Addons/Viewport/addon.viewport'
 // Theme
 addParameters({
   options: {
@@ -10,6 +10,7 @@ addParameters({
     panelPosition: 'right',
     showPanel: false,
   },
+  viewport: ViewportOptions,
 })
 
 // Load Stories
