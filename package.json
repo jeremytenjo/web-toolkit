@@ -1,6 +1,6 @@
 {
   "name": "@tenjo/web-features",
-  "version": "1.70.0",
+  "version": "1.71.0",
   "main": "build/index.js",
   "files": [
     "build/index.js"
@@ -13,6 +13,7 @@
     "build:library": "yarn webpack-scripts build:library",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
+    "publish:minor": "yarn publish --minor",
     "pretty": "prettier \"**/*.js\" --write",
     "lint:fix": "eslint ./src --fix",
     "lint:check": "eslint ./src",
