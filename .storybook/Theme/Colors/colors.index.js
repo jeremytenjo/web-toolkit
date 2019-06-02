@@ -28,6 +28,8 @@ exports.colors = {
   success: '#48FE93',
   successForeground: '#005a34',
 
+  red: '#D50000',
+
   error: '#FE4848',
   errorForeground: 'white',
 }

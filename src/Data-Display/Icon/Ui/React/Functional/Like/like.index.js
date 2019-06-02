@@ -4,14 +4,24 @@ import Icon from '../../icon.index'
 
 import { defaultProps, propTypes } from './like.propTypes.js'
 
-const IconHeartFilled = ({ liked, onLike, onUnlike }) =>
+const IconLike = ({ liked, onLike, onUnlike }) =>
   liked ? (
-    <Icon name='material/heart/filled' onClick={onUnlike} background />
+    <Icon
+      name='material/heart/filled'
+      onClick={onUnlike}
+      background
+      color='red'
+    />
   ) : (
-    <Icon name='material/heart/outlined' onClick={onLike} background />
+    <Icon
+      name='material/heart/outlined'
+      onClick={onLike}
+      background
+      color='none'
+    />
   )
 
-IconHeartFilled.defaultProps = defaultProps
-IconHeartFilled.propTypes = propTypes
+IconLike.defaultProps = defaultProps
+IconLike.propTypes = propTypes
 
-export default memo(IconHeartFilled)
+export default memo(IconLike)

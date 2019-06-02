@@ -17,6 +17,8 @@ const {
 
     yellow,
 
+    red,
+
     white,
     whiteOpaque,
 
@@ -50,6 +52,8 @@ exports.colorVars = `
   --color-grey: ${grey};
 
   --color-yellow: ${yellow};
+
+  --color-red: ${red};
 
   --color-white: ${white};
   --color-white-opaque: ${whiteOpaque};
