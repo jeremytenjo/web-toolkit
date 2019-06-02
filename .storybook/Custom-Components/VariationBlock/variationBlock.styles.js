@@ -13,7 +13,8 @@ export const Title = styled.span`
 `
 
 export const Content = styled.div`
-  background-color: white;
+  background-color: ${({ noBackground, color }) =>
+    noBackground ? 'transparent' : color};
   border-radius: 5px;
   padding: 10px;
   width: fit-content;

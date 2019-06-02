@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import OnVisibility from '../../../../Misc-Utils/Rendering/renderingOnVisibility'
 
 import { defaultProps, propTypes } from './image.propTypes'
-import { Wrapper, Imgage } from './image.styles'
+import { Wrapper, InnerImage, Letters } from './image.styles'
 
 // Entity
 const Image = ({
@@ -14,10 +14,15 @@ const Image = ({
   isLazyLoaded,
   OnVisibilityProps,
   cursor,
-  position,
   size,
   width,
   height,
+  round,
+  borderColor,
+  background,
+  name,
+  lettersFont,
+  letterColor,
   ...props
 }) => {
   // In case  the src key in not called src in props, expects {src: <propsrcname>}
@@ -27,25 +32,43 @@ const Image = ({
     }
   }
 
+  // create inirials
+  let initials = name.split(' ')
+
+  initials =
+    initials.length > 1
+      ? initials[0].substring(0, 1) + initials[1].substring(0, 1)
+      : initials[0].substring(0, 1)
+
+  const ImageComp = () => (
+    <Wrapper
+      width={width}
+      height={height}
+      size={size}
+      round={round}
+      borderColor={borderColor}
+      onClick={() => onClick(props)}
+      cursor={cursor}
+      letterColor={letterColor}
+    >
+      {src && <InnerImage alt={alt} src={src} />}
+      {background === 'letter' && (
+        <Letters lettersFont={lettersFont} letterColor={letterColor}>
+          {initials}
+        </Letters>
+      )}
+    </Wrapper>
+  )
+
   // Template
   return (
     <>
       {isLazyLoaded ? (
         <OnVisibility {...OnVisibilityProps}>
-          <Wrapper width={width} height={height} size={size}>
-            <Imgage alt={alt} src={src} onClick={() => onClick(props)} />
-          </Wrapper>
+          <ImageComp />
         </OnVisibility>
       ) : (
-        <Wrapper width={width} height={height} size={size}>
-          <Imgage
-            cursor={cursor}
-            position={position}
-            src={src}
-            alt={alt}
-            onClick={() => onClick(props)}
-          />
-        </Wrapper>
+        <ImageComp />
       )}
     </>
   )

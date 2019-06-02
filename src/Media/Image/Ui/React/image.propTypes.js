@@ -3,7 +3,13 @@ import { string, number, bool, object, func } from 'prop-types'
 export const defaultProps = {
   src: '',
   alt: 'estilistta',
+  background: 'none',
+  name: '',
   index: null,
+  round: null,
+  borderColor: null,
+  lettersFont: 'Roboto',
+  letterColor: 'primary',
   size: 50,
   width: null,
   height: null,
@@ -22,7 +28,9 @@ export const defaultProps = {
 export const propTypes = {
   src: string,
   alt: string,
-  size: string,
+  size: number,
+  name: string,
+  background: string,
   width: number,
   height: number,
   isLazyLoaded: bool,
@@ -32,4 +40,6 @@ export const propTypes = {
   onClick: func,
   definitions: object,
   skeleton: bool,
+  round: bool,
+  borderColor: string,
 }

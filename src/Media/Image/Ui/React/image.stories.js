@@ -9,14 +9,46 @@ import Image from './image.index'
 
 const Variations = () => (
   <>
-    <B title='default'>
-      <Image src={testImage} width={400} height={400} />
+    <B title='default' noBackground>
+      <Image
+        src={testImage}
+        width={400}
+        height={400}
+        onClick={() => console.log('Clicked')}
+      />
     </B>
 
-    <B title='isLazyLoaded'>
-      <Image isLazyLoaded src={testImage2} />
+    <B title='round' noBackground>
+      <Image round src={testImage} />
+    </B>
+
+    <B title='with Border' noBackground>
+      <Image round src={testImage} borderColor='secondary' />
+    </B>
+
+    <B title='no image - color baxkground' noBackground>
+      <Image round background='white' />
+    </B>
+
+    <B title='no image - letter background' noBackground>
+      <Image
+        round
+        background='letter'
+        name='Jeremy tenjo'
+        borderColor='primary-darker'
+      />
+    </B>
+
+    <B title='isLazyLoaded' noBackground>
+      <Image
+        isLazyLoaded
+        src={testImage2}
+        onClick={() => console.log('Clicked')}
+      />
     </B>
   </>
 )
 
-storiesOf('Media|Image/React', module).add('variations', () => <Variations />)
+storiesOf('Media|Image/Ui/React', module).add('variations', () => (
+  <Variations />
+))

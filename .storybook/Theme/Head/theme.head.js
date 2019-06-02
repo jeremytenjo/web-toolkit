@@ -5,6 +5,7 @@ const { body } = require('../Browser/browser.body')
 const { boxShadows } = require('../Shadows/boxShadows')
 const { typography } = require('../Typography/typography.css')
 const { spacing } = require('../Spacing/spacing.index')
+const { transitions } = require('../Transitions/transitions.index')
 
 exports.headCss = `
 <style type="text/css">
@@ -15,5 +16,6 @@ ${body}
 ${selection}
 ${colorVars}
 ${spacing}
+${transitions}
 </style>
 `

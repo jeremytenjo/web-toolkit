@@ -5,6 +5,12 @@ Fonts available:
   Roboto
 */
 exports.typography = `
+
+:root {
+ --font-primary: Roboto;
+ --font-secondary: Montserrat;
+}
+
 h1 {
   font-family: Roboto;
   font-style: normal;
