@@ -15,7 +15,7 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Chat', module).add(
+storiesOf('Engagement|Chat', module).add(
   'default',
   withReadme(README, () => <Variations />),
 )

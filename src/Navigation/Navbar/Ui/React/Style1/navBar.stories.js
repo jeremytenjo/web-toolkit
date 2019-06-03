@@ -58,6 +58,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Navigation|Nav Bar/React/Style1', module).add('default', () => (
+storiesOf('Navigation|Nav Bar/React', module).add('Style1', () => (
   <Variations />
 ))

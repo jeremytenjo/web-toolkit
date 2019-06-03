@@ -5,7 +5,7 @@ import Icon from '../../icon.index'
 const IconBack = ({
   onGoBack = () => null,
   to = null,
-  icon = 'material/back',
+  icon = 'arrow/material',
 }) => {
   // Local Vars
   const historyRouter = window.historyRouter

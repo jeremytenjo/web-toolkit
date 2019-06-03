@@ -8,16 +8,16 @@ import Icon from './icon.index'
 const Variations = () => (
   <>
     <B title='Default' color='black'>
-      <Icon name='material/camera' />
+      <Icon name='camera/material' />
     </B>
 
     <B title='background'>
-      <Icon name='material/camera' background />
+      <Icon name='camera/material' background />
     </B>
 
     <B title='with Color'>
       <Icon
-        name='material/camera'
+        name='camera/material'
         background
         color='primary'
         noBackgroundChange
@@ -25,7 +25,7 @@ const Variations = () => (
     </B>
 
     <B title='with Size' color='black'>
-      <Icon name='material/camera' background size={60} />
+      <Icon name='camera/material' background size={60} />
     </B>
   </>
 )

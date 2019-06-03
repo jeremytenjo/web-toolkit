@@ -7,14 +7,14 @@ import { defaultProps, propTypes } from './like.propTypes.js'
 const IconLike = ({ liked, onLike, onUnlike }) =>
   liked ? (
     <Icon
-      name='material/heart/filled'
+      name='heart/filled/material'
       onClick={onUnlike}
       background
       color='red'
     />
   ) : (
     <Icon
-      name='material/heart/outlined'
+      name='heart/outlined/material'
       onClick={onLike}
       background
       color='none'

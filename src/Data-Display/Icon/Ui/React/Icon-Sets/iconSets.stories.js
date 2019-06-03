@@ -30,6 +30,6 @@ const getIconName = (paths) =>
 const MaterialIcons = () => <List grid>{getIconName(materialIconPaths)}</List>
 const Style1Icons = () => <List grid>{getIconName(style1Paths)}</List>
 
-storiesOf('Data-Display|Icon/Icon-Set/', module)
+storiesOf('Data-Display|Icon/React/Icon-Set/', module)
   .add('Material', () => <MaterialIcons />)
   .add('Style1', () => <Style1Icons />)
