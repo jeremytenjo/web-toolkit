@@ -6,7 +6,7 @@ import ShareReadme from '../README.md'
 
 import ShareExample from './Default/share.example.simple'
 
-storiesOf('Share', module).add(
+storiesOf('Engagement|Utils/Share', module).add(
   'default',
   withReadme(ShareReadme, () => <ShareExample />),
 )

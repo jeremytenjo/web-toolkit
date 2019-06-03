@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 
 const AccountIllustration = () => (
   <svg
@@ -181,4 +181,4 @@ const AccountIllustration = () => (
   </svg>
 )
 
-export default memo(AccountIllustration)
+export default AccountIllustration

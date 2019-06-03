@@ -30,6 +30,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Icon/React', module).add('variations', () => (
+storiesOf('Data-Display|Icon/React', module).add('component', () => (
   <Variations />
 ))
