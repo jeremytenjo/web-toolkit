@@ -30,6 +30,14 @@ const Variations = () => (
       />
     </B>
 
+    <B title='with Children'>
+      <List direction='column'>
+        <p>hello</p>
+        <p>hello</p>
+        <p>hello</p>
+      </List>
+    </B>
+
     <B title='Grid'>
       <List
         data={dataSet2}

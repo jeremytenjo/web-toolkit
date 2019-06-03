@@ -5,6 +5,7 @@ import { defaultProps, propTypes } from './list.propTypes'
 
 const List = ({
   data,
+  children,
   direction,
   onItemClick,
   ItemComponent,
@@ -50,6 +51,7 @@ const List = ({
       repeatOnMinWidth={repeatOnMinWidth}
       {...styles}
     >
+      {children && children}
       {!ItemComponent && loadNoItemComponent()}
       {ItemComponent && loadWithItemComponent()}
     </Wrapper>
