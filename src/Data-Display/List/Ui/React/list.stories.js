@@ -51,6 +51,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Ui|Display-Data/List/React', module).add('Variations', () => (
+storiesOf('Data-Display|List/Ui/React', module).add('Variations', () => (
   <Variations />
 ))

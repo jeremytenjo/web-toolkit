@@ -6,7 +6,7 @@ const VariationBlock = ({
   children,
   title,
   style,
-  contentStyles,
+  contentStyle,
   containerId,
   noBackground,
   color = 'white',
@@ -15,7 +15,7 @@ const VariationBlock = ({
     <Wrapper style={style}>
       <Title style={style}>{title}</Title>
       <Content
-        style={contentStyles || style}
+        style={contentStyle || style}
         id={containerId}
         noBackground={noBackground}
         color={color}

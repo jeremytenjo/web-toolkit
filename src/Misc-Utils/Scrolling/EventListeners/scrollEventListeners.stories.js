@@ -41,7 +41,7 @@ const Variations = () => {
     <>
       <B
         title='Trigger on Scroll End'
-        contentStyles={{ height: 100, width: 200, overflow: 'auto' }}
+        contentStyle={{ height: 100, width: 200, overflow: 'auto' }}
         containerId={containerId}
       >
         <ChildComp />

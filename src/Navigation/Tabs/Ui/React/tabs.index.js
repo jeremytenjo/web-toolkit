@@ -3,14 +3,7 @@ import React from 'react'
 import TabsMui from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
-// import Sticky from './../templates/Sticky'
-
-const Tabs = (props) => {
-  // props
-  const tabList = props.tabList
-  const color = props.color || 'primary'
-
-  // Local Vars
+const Tabs = ({ tabList, color = 'primary', style = {} }) => {
   const historyRouter = window.historyRouter
   const tabWidth = 100 / tabList.length
   const currentUrl = window.location.pathname
@@ -23,7 +16,7 @@ const Tabs = (props) => {
   return (
     <>
       <TabsMui
-        style={TabsMuiStyle}
+        style={{ ...TabsMuiStyle, ...style }}
         value={currentTabIndex}
         indicatorColor={color}
         textColor={color}
@@ -44,16 +37,6 @@ const Tabs = (props) => {
   )
 }
 
-//Style
 const TabsMuiStyle = { backgroundColor: 'white' }
 
 export default Tabs
-
-// Template example
-// const DataTabs = [
-//   { label: 'Photos', link: '/profile/photos' },
-//   { label: 'Favourites', link: '/profile/favourites' },
-//   { label: 'Edit Profile', link: '/profile/edit' }
-// ]
-
-// const Component = () => <Tabs tabList={DataTabs} color="primary" sticky />
