@@ -1,7 +1,8 @@
-//Vendors
 import React from 'react'
 import TabsMui from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
+
+import { Wrapper } from './tabs.styles'
 
 const Tabs = ({ tabList, color = 'primary', style = {} }) => {
   const historyRouter = window.historyRouter
@@ -14,9 +15,8 @@ const Tabs = ({ tabList, color = 'primary', style = {} }) => {
 
   //Template
   return (
-    <>
+    <Wrapper style={{ ...style }} color={color}>
       <TabsMui
-        style={{ ...TabsMuiStyle, ...style }}
         value={currentTabIndex}
         indicatorColor={color}
         textColor={color}
@@ -26,6 +26,7 @@ const Tabs = ({ tabList, color = 'primary', style = {} }) => {
           <Tab
             style={{
               width: tabWidth,
+              color: `var(--color-${color})`,
             }}
             key={item.label}
             label={item.label}
@@ -33,10 +34,8 @@ const Tabs = ({ tabList, color = 'primary', style = {} }) => {
           />
         ))}
       </TabsMui>
-    </>
+    </Wrapper>
   )
 }
-
-const TabsMuiStyle = { backgroundColor: 'white' }
 
 export default Tabs
