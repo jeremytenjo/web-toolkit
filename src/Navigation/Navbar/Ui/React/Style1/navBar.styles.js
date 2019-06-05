@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-//Styles
 export const Wrapper = styled.footer`
   width: 100%;
   display: grid;
