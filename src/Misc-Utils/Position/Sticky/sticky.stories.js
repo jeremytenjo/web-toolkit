@@ -14,7 +14,10 @@ const DataTabs = [
 
 const Variations = () => (
   <>
-    <B title='simple' contentStyle={{ overflow: 'auto', height: 200 }}>
+    <B
+      title='simple'
+      contentStyle={{ overflow: 'auto', height: 200, width: 'auto' }}
+    >
       <p>text</p>
       <p>text</p>
       <p>text</p>
