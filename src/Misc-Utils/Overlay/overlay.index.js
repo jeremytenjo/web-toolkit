@@ -11,6 +11,15 @@ const Overlay = ({ show, onClick, backgroundcolor, noAnimation, zIndex }) => {
     if (show !== null && !noAnimation) animation(overlayRef.current, !!show)
   }, [show])
 
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyInput, true)
+    return window.removeEventListener('keydown', handleKeyInput)
+  }, [])
+
+  const handleKeyInput = ({ key }) => {
+    if (key === 'Escape') onClick()
+  }
+
   return (
     <Wrapper
       ref={overlayRef}
