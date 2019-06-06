@@ -1,40 +1,31 @@
+import colors from './colors.index'
+
 const {
-  colors: {
-    primary,
-    primaryDarker,
-    primaryBackground,
+  primary,
+  primaryDarker,
+  primaryBackground,
+  secondary,
+  secondaryDarker,
+  secondaryBackground,
+  disabledForeground,
+  disabledBackground,
+  lightgrey,
+  darkgrey,
+  grey,
+  yellow,
+  red,
+  white,
+  whiteOpaque,
+  black,
+  blackBackground,
+  blackOpaque,
+  success,
+  successForeground,
+  error,
+  errorForeground,
+} = colors
 
-    secondary,
-    secondaryDarker,
-    secondaryBackground,
-
-    disabledForeground,
-    disabledBackground,
-
-    lightgrey,
-    darkgrey,
-    grey,
-
-    yellow,
-
-    red,
-
-    white,
-    whiteOpaque,
-
-    black,
-    blackBackground,
-    blackOpaque,
-
-    success,
-    successForeground,
-
-    error,
-    errorForeground,
-  },
-} = require('./colors.index')
-
-exports.colorVars = `
+export default `
 :root {
   --color-primary: ${primary};
   --color-primary-darker: ${primaryDarker};

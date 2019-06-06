@@ -1,4 +1,4 @@
-exports.spacing = `
+export default `
 :root {
     --spacing-unit: 16px;
     --spacing-xxs: calc(0.25 * var(--spacing-unit));

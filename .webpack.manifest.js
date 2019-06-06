@@ -1,4 +1,4 @@
-exports.manifest = {
+export default {
   webpack: {
     entry: './src/src.index.js',
     output: {

@@ -4,7 +4,7 @@ Fonts available:
   Quicksand
   Roboto
 */
-exports.typography = `
+export default `
 
 :root {
  --font-primary: Roboto;

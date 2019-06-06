@@ -1,4 +1,4 @@
-exports.colors = {
+export default {
   primary: '#24c3a9',
   primaryDarker: '#005a34',
   primaryBackground: '#aaffdb',

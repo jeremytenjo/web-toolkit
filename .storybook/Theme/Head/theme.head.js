@@ -1,13 +1,13 @@
-const { typographyResets } = require('../Typography/typography.resets')
-const { colorVars } = require('../Colors/colors.vars')
-const { selection } = require('../Browser/browser.selection')
-const { body } = require('../Browser/browser.body')
-const { boxShadows } = require('../Shadows/boxShadows')
-const { typography } = require('../Typography/typography.css')
-const { spacing } = require('../Spacing/spacing.index')
-const { transitions } = require('../Transitions/transitions.index')
+import typographyResets from '../Typography/typography.resets'
+import colorVars from '../Colors/colors.vars'
+import selection from '../Browser/browser.selection'
+import body from '../Browser/browser.body'
+import boxShadows from '../Shadows/boxShadows'
+import typography from '../Typography/typography.css'
+import spacing from '../Spacing/spacing.index'
+import transitions from '../Transitions/transitions.index'
 
-exports.headCss = `
+export default `
 <style type="text/css">
 ${typographyResets}
 ${typography}
