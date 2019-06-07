@@ -14,6 +14,7 @@ const Variations = () => {
     <>
       <B title='Center'>
         <button onClick={showit}>Show Modal</button>
+
         <Modal
           show={show}
           animationStyle='centerOut'
