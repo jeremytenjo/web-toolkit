@@ -1,5 +1,5 @@
 // Keyframes should be set before used in animate()
-export default (el, config, show) => {
+export default ({ el, config, show }) => {
   const keyframes = [
     {
       opacity: show ? 0 : 1,

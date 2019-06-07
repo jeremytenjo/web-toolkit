@@ -4,6 +4,7 @@ export const defaultProps = {
   fullscreen: null,
   loading: null,
   confirmation: null,
+  message: '',
   confirmationCancelText: 'Cancel',
   confirmationAcceptText: 'Accept',
   onConfirmationCancel: () => null,
@@ -18,6 +19,7 @@ export const defaultProps = {
 export const propTypes = {
   fullscreen: bool,
   loading: bool,
+  message: string,
   confirmation: bool,
   confirmationCancelText: string,
   confirmationAcceptText: string,
@@ -26,6 +28,4 @@ export const propTypes = {
   title: string,
   children: node,
   onClose: func,
-  show: bool,
-  animationStyle: string,
 }

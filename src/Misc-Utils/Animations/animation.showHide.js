@@ -1,4 +1,4 @@
-export default (el, show, fill = 'forwards', duration = 200) => {
+export default ({ el, show, fill = 'forwards', duration = 200 }) => {
   const config = { fill, duration }
 
   el.style.display = 'block'
