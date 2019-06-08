@@ -1,5 +1,4 @@
-import onlyOpacity from '../../../../Misc-Utils/Animations/animation.onlyOpacity'
-import centerOut from '../../../../Misc-Utils/Animations/animation.centerOut'
+import animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 const config = {
   fill: 'forwards',
@@ -8,15 +7,14 @@ const config = {
   easing: 'ease-out',
 }
 
-const ModalAnimation = (el, animationStyle, show) => {
-  switch (animationStyle) {
-    case 'centerOut':
-      return centerOut(el, config, show)
-    case 'onlyOpacity':
-      return onlyOpacity(el, config, show)
-    default:
-      return centerOut
-  }
-}
+const ModalAnimation = (el, animationStyle, show) =>
+  animation(
+    animation({
+      name: animationStyle,
+      el,
+      config,
+      show,
+    }),
+  )
 
 export default ModalAnimation
