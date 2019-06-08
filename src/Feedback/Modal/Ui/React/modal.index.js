@@ -1,7 +1,7 @@
 import React, { memo, useRef, useEffect } from 'react'
 
 import Overlay from '../../../../Misc-Utils/Overlay/overlay.index'
-import animation from '../../../../Misc-Utils/Animations/animation.index'
+import animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 import { defaultProps, propTypes } from './modal.propTypes'
 import { Wrapper } from './modal.styles'

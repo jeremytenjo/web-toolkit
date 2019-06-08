@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 
+import animation from '../Animations/Web-Animations-API/animation.index'
+
 import { defaultProps, propTypes } from './overlay.propTypes'
 import { Wrapper } from './overlay.styles'
-import animation from './../Animations/animation.index'
 
 const Overlay = ({ show, onClick, backgroundcolor, noAnimation, zIndex }) => {
   const overlayRef = useRef(null)
