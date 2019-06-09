@@ -1,9 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withReadme } from 'storybook-readme'
 
 import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import README from '../README.md'
+import markdown from '../README.md'
 
 import Default from './Default/chat.default.example'
 
@@ -15,7 +14,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Engagement|Chat', module).add(
-  'default',
-  withReadme(README, () => <Variations />),
-)
+storiesOf('Engagement|Chat', module).add('default', () => <Variations />, {
+  notes: { markdown },
+})
