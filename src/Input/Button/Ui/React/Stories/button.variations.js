@@ -1,11 +1,8 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
-import Button from './button.index'
-
-const Variations = () => {
+const Variations = ({ Button }) => {
   return (
     <>
       <B title='color - primary'>
@@ -33,6 +30,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Input|Button/Ui/React', module).add('Variations', () => (
-  <Variations />
-))
+export default Variations

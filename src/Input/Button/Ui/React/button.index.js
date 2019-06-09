@@ -9,9 +9,9 @@ const ButtonIcon = lazy(() =>
 )
 
 import { defaultProps, propTypes } from './button.propTypes'
-import { Wrapper } from './button.styles'
 
 const Button = ({
+  Wrapper,
   type,
   color,
   text,
