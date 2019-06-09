@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../,,/../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Dialog from '../../../Dialog/Ui/React/dialog.index'
 
+import markdown from './README.md'
 import Modal from './modal.index'
 
 const Variations = () => {
@@ -27,6 +28,10 @@ const Variations = () => {
   )
 }
 
-storiesOf('Feedback|Modal/Ui/React', module).add('variations', () => (
-  <Variations />
-))
+storiesOf('Feedback|Modal/Ui/React', module).add(
+  'variations',
+  () => <Variations />,
+  {
+    notes: { markdown },
+  },
+)
