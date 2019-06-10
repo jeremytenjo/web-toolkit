@@ -8,7 +8,7 @@ const Variations = ({ Button, name }) => {
     <div>
       <Typography
         text={name}
-        variation='h5'
+        variant='h5'
         color='white'
         fontWeight='bold'
         paddingLeft='20px'
