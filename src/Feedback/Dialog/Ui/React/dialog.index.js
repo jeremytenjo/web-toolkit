@@ -1,12 +1,13 @@
 import React, { memo, useRef } from 'react'
 
-import Button from '../../../../Input/Button/Ui/React/Styles/Style1/style1.index'
+import Button from '../../../../Input/Button/Ui/React/Styles/Style1/button.style1.index'
 import Typography from '../../../../Data-Display/Typography/Ui/React/typography.index'
 
 import { defaultProps, propTypes } from './dialog.propTypes'
-import { Wrapper, ConfirmationCon } from './dialog.styles'
 
 const Dialog = ({
+  Wrapper,
+  ConfirmationCon,
   title,
   message,
   fullscreen,
@@ -14,14 +15,8 @@ const Dialog = ({
   confirmationAcceptText,
   onCancel,
   onAccept,
-  onClose,
 }) => {
   const dialogRef = useRef(null)
-
-  const close = () => {
-    onClose()
-    onCancel()
-  }
 
   return (
     <Wrapper ref={dialogRef} fullscreen={fullscreen}>
@@ -34,7 +29,7 @@ const Dialog = ({
       />
 
       <ConfirmationCon>
-        <Button outlined text={confirmationCancelText} onClick={close} />
+        <Button outlined text={confirmationCancelText} onClick={onCancel} />
         <Button text={confirmationAcceptText} onClick={onAccept} />
       </ConfirmationCon>
     </Wrapper>

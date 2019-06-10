@@ -5,9 +5,3 @@
 [Designs]()
 
 [Board]()
-
-## Usage
-
-```js
-<Modal show={show} animation='centerOut' />
-```
