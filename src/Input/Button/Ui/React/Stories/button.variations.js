@@ -17,7 +17,7 @@ const Variations = ({ Button, name }) => {
       <B title='color - primary'>
         <Button color='primary' />
       </B>
-      <B title='color - secondary'>
+      <B title='alternative color'>
         <Button color='secondary' />
       </B>
       <B title='active'>
