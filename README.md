@@ -5,7 +5,9 @@
 <h1 align="center">Web-Toolkit</h1>
 
 <div align="center">
+
 [![CircleCI](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master.svg?style=svg)](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master)
+
 </div>
 
 ## Installation
