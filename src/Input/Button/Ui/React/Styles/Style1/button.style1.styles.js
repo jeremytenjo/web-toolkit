@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  /* Default */
+  /* Base */
   background-color: ${({ color }) => `var(--color-${color}-background)`};
   border-radius: 100px;
   cursor: pointer;
@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
   transition: 0.2s ease-in-out;
   height: 40px;  
   border: 2px solid ${({ color }) => `var(--color-${color}-background)`};
+  user-select: none;
 
   &:active {
     border: 2px solid ${({ color }) => `var(--color-${color}-darker)`};
