@@ -1,10 +1,19 @@
 import React from 'react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
 
-const Variations = ({ Button }) => {
+const Variations = ({ Button, name }) => {
   return (
     <div>
+      <Typography
+        text={name}
+        variation='h5'
+        color='white'
+        fontWeight='bold'
+        paddingLeft='20px'
+      />
+
       <B title='color - primary'>
         <Button color='primary' />
       </B>

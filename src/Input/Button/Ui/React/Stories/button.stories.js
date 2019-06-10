@@ -10,7 +10,7 @@ import Variations from './button.variations'
 const All = () => {
   return (
     <List>
-      <Variations Button={ButtonStyle1} />
+      <Variations Button={ButtonStyle1} name='style1' />
     </List>
   )
 }
