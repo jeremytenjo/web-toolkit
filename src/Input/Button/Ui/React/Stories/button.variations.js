@@ -4,7 +4,7 @@ import B from '../../../../../../.storybook/Custom-Components/VariationBlock/var
 
 const Variations = ({ Button }) => {
   return (
-    <>
+    <div>
       <B title='color - primary'>
         <Button color='primary' />
       </B>
@@ -21,12 +21,12 @@ const Variations = ({ Button }) => {
         <Button outlined />
       </B>
       <B title='iconName'>
-        <Button iconName='camera' />
+        <Button iconName='camera/material' />
       </B>
       <B title='FAB'>
-        <Button iconName='camera' type='FAB' />
+        <Button iconName='camera/material' type='FAB' />
       </B>
-    </>
+    </div>
   )
 }
 
