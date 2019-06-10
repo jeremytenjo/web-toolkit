@@ -1,6 +1,6 @@
 import React, { memo, useRef } from 'react'
 
-import Button from '../../../../Input/Button/Ui/React/button.index'
+import Button from '../../../../Input/Button/Ui/React/Styles/Style1/style1.index'
 import Typography from '../../../../Data-Display/Typography/Ui/React/typography.index'
 
 import { defaultProps, propTypes } from './dialog.propTypes'
