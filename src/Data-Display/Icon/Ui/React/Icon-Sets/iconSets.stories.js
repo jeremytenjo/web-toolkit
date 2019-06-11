@@ -11,6 +11,15 @@ const materialIconPaths = materialIconsReq.keys()
 const style1Req = require.context('./', true, /style1\.js$/)
 const style1Paths = style1Req.keys()
 
+const roundFilledReq = require.context('./', true, /round-filled\.js$/)
+const roundFilledPaths = roundFilledReq.keys()
+
+const blag1 = require.context('./')
+const blag2 = blag1.keys()
+
+console.log(blag1)
+console.log(blag2)
+
 const getIconName = (paths) =>
   paths.map((icon) => {
     icon = icon.substring(0, icon.length - 3)
@@ -29,7 +38,9 @@ const getIconName = (paths) =>
 
 const MaterialIcons = () => <List grid>{getIconName(materialIconPaths)}</List>
 const Style1Icons = () => <List grid>{getIconName(style1Paths)}</List>
+const RoundFilled = () => <List grid>{getIconName(roundFilledPaths)}</List>
 
 storiesOf('Data-Display|Icon/React/Icon-Set/', module)
   .add('Material', () => <MaterialIcons />)
   .add('Style1', () => <Style1Icons />)
+  .add('RoundFilled', () => <RoundFilled />)
