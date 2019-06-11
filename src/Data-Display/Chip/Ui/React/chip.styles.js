@@ -14,7 +14,12 @@ export const Wrapper = styled.div`
   grid-template-columns: auto auto;
   user-select: none;
   cursor: ${({ noCancel }) => noCancel && `pointer`};
+  border: 2px solid transparent;
+  transition: 0.2s;
 
+  &:active {
+    border: 2px solid ${({ color }) => `var(--color-${color}-darker)`};
+  }
   svg {
     fill: ${({ color }) => `var(--color-${color}-darker)`};
     cursor: pointer;
