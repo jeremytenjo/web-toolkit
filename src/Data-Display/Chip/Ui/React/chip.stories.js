@@ -8,15 +8,11 @@ import Chip from './chip.index'
 const Variations = () => (
   <>
     <B title='default'>
-      <Chip
-        text='hello'
-        onClick={() => console.log('click')}
-        onClose={() => console.log('close')}
-      />
+      <Chip text='hello' onClick={() => console.log('click')} />
     </B>
 
-    <B title='no close button'>
-      <Chip text='hello' noClose />
+    <B title='toRemove button'>
+      <Chip text='hello' toRemove />
     </B>
   </>
 )

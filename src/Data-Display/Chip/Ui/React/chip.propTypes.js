@@ -3,15 +3,13 @@ import { string, bool, func } from 'prop-types'
 export const defaultProps = {
   color: 'primary',
   text: 'Chip',
-  noClose: null,
+  toRemove: null,
   onClick: () => null,
-  onClose: () => null,
 }
 
 export const propTypes = {
   color: string,
   text: string,
-  noClose: bool,
+  toRemove: bool,
   onClick: func,
-  onClose: func,
 }
