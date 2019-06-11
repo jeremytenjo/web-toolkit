@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   justify-contents: center;
   text-align: center;
   width: fit-content;
-  grid-gap: var(--spacing-xs);
+  grid-gap: var(--spacing-xxs);
   grid-template-columns: auto auto;
   user-select: none;
   cursor: ${({ noCancel }) => noCancel && `pointer`};

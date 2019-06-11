@@ -14,4 +14,6 @@ import Chip from '@tenjo/web-toolkit/data-display/chip/ui/react'
   --color-<name>: <color>;
   --color-<name>-darker: <color>;
   --color-<name>-background: <color>;
+
+  --spacing-<size>: <number>;
 ```
