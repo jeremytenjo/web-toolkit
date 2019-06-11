@@ -72,6 +72,7 @@ export const WrapperIcon = styled.div`
     display: block;
     margin: 0 auto;
     align-self: center;
+    width: ${({ size }) => size}px;
   }
 
 `
