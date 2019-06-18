@@ -1,9 +1,11 @@
 {
   "name": "@tenjojeremy/web-toolkit",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "main": "build/index.js",
-  "files": ["build/index.js"],
+  "files": [
+    "build/index.js"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
