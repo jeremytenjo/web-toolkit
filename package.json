@@ -4,6 +4,7 @@
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "license": "MIT",
+  "files": ["build/*"],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "test": "jest",
