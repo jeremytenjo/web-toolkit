@@ -13,7 +13,7 @@
 ## Installation
 
 ```sh
-yarn add @tenjo/web-toolkit
+yarn add @tenjojeremy/web-toolkit
 ```
 
 ## License
