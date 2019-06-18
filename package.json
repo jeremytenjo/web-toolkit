@@ -2,13 +2,15 @@
   "name": "@tenjo/web-features",
   "version": "1.71.0",
   "main": "build/index.js",
-  "files": ["build/index.js"],
+  "files": [
+    "build/index.js"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "test": "jest",
     "deploy": "gpush",
-    "build:library": "yarn webpack-scripts build:library",
+    "build:library": "rollup -c",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
     "publish:minor": "yarn publish --minor",
@@ -49,6 +51,10 @@
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.11.0",
     "react-lazyload": "^2.6.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup-plugin-terser": "^5.0.0",
     "styled-components": "^4.3.1",
     "webpack-node-externals": "^1.7.2",
     "yup": "^0.27.0"
