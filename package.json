@@ -1,6 +1,7 @@
 {
-  "name": "@tenjo/web-features",
-  "version": "1.71.0",
+  "name": "@tenjo/web-toolkit",
+  "version": "2.0.0",
+  "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "main": "build/index.js",
   "files": [
     "build/index.js"
