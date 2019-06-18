@@ -1,6 +1,6 @@
 {
   "name": "@tenjojeremy/web-toolkit",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "main": "build/index.js",
   "files": ["build/index.js"],
