@@ -4,15 +4,13 @@
 
 <h1 align="center">Web-Toolkit</h1>
 
-<div align="center"> Library of reusable UI and utilities </div>
-
 <div align="center">
+
+Library of reusable UI and utilities
 
 [![CircleCI](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master.svg?style=svg)](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master)
 
 </div>
-
-Library with reusable UI and utilities
 
 ## Installation
 
