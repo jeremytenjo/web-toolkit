@@ -37,4 +37,4 @@ jobs:
           command: dir
       - run:
           name: Publish package to Github registry
-          command: yarn publish:minor
+          command: npm publish
