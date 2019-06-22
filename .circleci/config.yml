@@ -32,9 +32,9 @@ jobs:
       # - run:
       #     name: Authenticate with registry
       #     command: echo "//npm.pkg.github.com/:_authToken=fc3219040f6ec91884e05dbb8188554dc80e7a7a" > .npmrc
-      # - run:
-      #     name: list
-      #     command: dir
+      - run:
+          name: list
+          command: dir
       - run:
           name: Publish package to Github registry
           command: npm publish --access public
