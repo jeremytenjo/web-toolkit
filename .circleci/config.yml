@@ -29,3 +29,6 @@ jobs:
       - run:
           name: 'Deploy to Firebase Hosting'
           command: 'yarn deploy:firebase'
+      - run:
+          name: Publish package to Github Packages
+          command: yarn publish:minor
