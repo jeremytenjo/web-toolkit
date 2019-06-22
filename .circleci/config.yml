@@ -31,7 +31,7 @@ jobs:
           command: 'yarn deploy:firebase'
       - run:
           name: Authenticate with registry
-          command: npm login --registry=https://npm.pkg.github.com --scope=@tenjojeremy
+          command: echo "//npm.pkg.github.com/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
           name: Publish package to Github Packages
           command: yarn publish:minor
