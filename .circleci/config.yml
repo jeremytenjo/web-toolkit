@@ -37,4 +37,4 @@ jobs:
           command: dir
       - run:
           name: Publish package to Github registry
-          command: npm publish
+          command: npm publish --access public
