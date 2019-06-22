@@ -30,8 +30,8 @@ jobs:
           name: 'Deploy to Firebase Hosting'
           command: 'yarn deploy:firebase'
       - run:
-          name: Authenticate with registry
-          command: echo "//npm.pkg.github.com/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+          name: Authenticate with Github registry
+          command: echo "//npm.pkg.github.com/:_authToken=$GPM_TOKEN" > ~/repo/.npmrc
       - run:
-          name: Publish package to Github Packages
+          name: Publish package to Github registry
           command: npm publish
