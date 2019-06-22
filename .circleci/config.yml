@@ -34,4 +34,4 @@ jobs:
           command: echo "//npm.pkg.github.com/:_authToken=$GPM_TOKEN" > ~/repo/.npmrc
       - run:
           name: Publish package to Github registry
-          command: npm publish
+          command: yarn publish:minor
