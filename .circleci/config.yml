@@ -30,5 +30,8 @@ jobs:
           name: 'Deploy to Firebase Hosting'
           command: 'yarn deploy:firebase'
       - run:
+          name: Authenticate with registry
+          command: npm login --registry=https://npm.pkg.github.com --scope=@tenjojeremy
+      - run:
           name: Publish package to Github Packages
           command: yarn publish:minor
