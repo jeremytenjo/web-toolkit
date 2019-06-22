@@ -31,7 +31,7 @@ jobs:
           command: 'yarn deploy:firebase'
       - run:
           name: Authenticate with registry
-          command: echo //npm.pkg.github.com/:_authToken=fc3219040f6ec91884e05dbb8188554dc80e7a7a > .npmrc
+          command: echo "//npm.pkg.github.com/:_authToken=fc3219040f6ec91884e05dbb8188554dc80e7a7a" > .npmrc
       - run:
           name: list
           command: dir
