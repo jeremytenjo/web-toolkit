@@ -1,10 +1,12 @@
 {
   "name": "@tenjojeremy/web-toolkit",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "gpush",
