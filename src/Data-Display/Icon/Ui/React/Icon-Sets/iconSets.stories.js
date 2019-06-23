@@ -17,8 +17,8 @@ const roundFilledPaths = roundFilledReq.keys()
 const blag1 = require.context('./')
 const blag2 = blag1.keys()
 
-console.log(blag1)
-console.log(blag2)
+// console.log(blag1)
+// console.log(blag2)
 
 const getIconName = (paths) =>
   paths.map((icon) => {
