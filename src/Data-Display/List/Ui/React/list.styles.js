@@ -24,7 +24,6 @@ export const Wrapper = styled.div`
     /* Grid */
     ${({ grid, repeat, minWidth, repeatOnMinWidth }) =>
       grid &&
-      repeat &&
       `
       grid-auto-flow: row;
       align-items: stretch;
@@ -34,6 +33,24 @@ export const Wrapper = styled.div`
   @media (min-width: ${minWidth}px) {
     grid-template-columns: repeat(${repeatOnMinWidth}, minmax(10px, 1fr));
   }   
+    `} 
+
+    /* Grid of photos */
+    ${({ photoGrid, repeat, minWidth, repeatOnMinWidth }) =>
+      photoGrid &&
+      `
+      grid-auto-flow: row;
+      align-items: stretch;
+      grid-template-columns: repeat(${repeat}, minmax(10px, 1fr));
+      
+      /* Min Width */
+  @media (min-width: ${minWidth}px) {
+    grid-template-columns: repeat(${repeatOnMinWidth}, minmax(10px, 1fr));
+  }   
+  > div {
+    padding-top: 100%;
+    width: auto;
+  }
     `} 
 
 

@@ -1,9 +1,10 @@
-import React, { memo, Fragment } from 'react'
+import React, { memo } from 'react'
 
 import { Wrapper } from './list.styles'
 import { defaultProps, propTypes } from './list.propTypes'
 
 const List = ({
+  photoGrid,
   data,
   children,
   direction,
@@ -18,13 +19,6 @@ const List = ({
   ...styles
 }) => {
   const dataLength = data.length
-
-  const loadNoItemComponent = () =>
-    data.map((Item, index) => (
-      <Fragment key={index}>
-        <Item />
-      </Fragment>
-    ))
 
   const loadWithItemComponent = () =>
     data.map((item, index) => (
@@ -49,10 +43,10 @@ const List = ({
       overflows={overflows}
       minWidth={minWidth}
       repeatOnMinWidth={repeatOnMinWidth}
+      photoGrid={photoGrid}
       {...styles}
     >
       {children && children}
-      {!ItemComponent && loadNoItemComponent()}
       {ItemComponent && loadWithItemComponent()}
     </Wrapper>
   )
