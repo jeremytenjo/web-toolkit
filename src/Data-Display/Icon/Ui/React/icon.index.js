@@ -2,7 +2,7 @@ import React, { memo, useState, useEffect } from 'react'
 
 import { WrapperIcon, Wrapper, Label } from './icon.styles'
 import { defaultProps, propTypes } from './icon.propTypes'
-
+console.log('HERE!')
 const Icon = ({
   background,
   name,
