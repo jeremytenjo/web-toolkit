@@ -6,10 +6,8 @@ const Watcher = ({
   offset = 10,
   enabled = null,
 }) => {
-  const elToWatched =
-    _elToWatched || document.scrollingElement || document.documentElement
-
   // State
+  const [el, ele] = useState(_elToWatched)
   const [reachedEnd, setreachedEnd] = useState(false)
   const reset = useCallback(() => setreachedEnd(false))
 
@@ -30,6 +28,11 @@ const Watcher = ({
 
   // Functions
   const handleScroll = () => {
+    const elToWatched =
+      document.querySelector(`#${el}`) ||
+      document.scrollingElement ||
+      document.documentElement
+
     const reachEnd =
       elToWatched != null &&
       elToWatched.scrollHeight - offset <=

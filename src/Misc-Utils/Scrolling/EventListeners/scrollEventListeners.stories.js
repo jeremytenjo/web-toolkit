@@ -13,18 +13,18 @@ const containerId = 'containerId'
 
 const Variations = () => {
   const ChildComp = () => {
-    const elToWatched = document.querySelector(containerId)
     const handleScrollEnd = () => {
       // TODO: enusre is only triggered when reched end
       console.log('Scrolled to end')
     }
 
     const hi = useEndScroll({
-      elToWatched,
+      elToWatched: containerId,
       enabled: true,
     })
       ? handleScrollEnd()
       : null
+
     return (
       <>
         <List
