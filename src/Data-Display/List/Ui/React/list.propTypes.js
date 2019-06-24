@@ -13,6 +13,7 @@ export const defaultProps = {
   data: [],
   direction: 'column',
   ItemComponent: null,
+  photoGrid: null,
   minWidth: 600,
   repeat: 3,
   repeatOnMinWidth: 3,
@@ -34,6 +35,7 @@ export const propTypes = {
   gap: string,
   padding: number,
   overflows: bool,
+  photoGrid: bool,
   listItemDefinitions: object,
   onItemClick: func,
 }

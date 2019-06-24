@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import Image from '../../../../Media/Image/Ui/React/image.index'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 import List from './list.index'
@@ -8,6 +9,37 @@ import List from './list.index'
 // Test Data
 const dataSet1 = ['block', 'block', 'block', 'block']
 const dataSet2 = ['block', 'block', 'block', 'block', 'block', 'block', 'block']
+const dataSetImages = [
+  {
+    src:
+      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+  },
+  {
+    src:
+      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+  },
+  {
+    src:
+      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+  },
+  {
+    src:
+      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+  },
+  {
+    src:
+      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+  },
+  {
+    src:
+      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+  },
+  {
+    src:
+      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+  },
+]
+
 const itemComponent = ({ item }) => <p>{item}</p>
 
 const Variations = () => (
@@ -46,6 +78,18 @@ const Variations = () => (
         repeat={3}
         repeatOnMinWidth={4}
         minWidth={800}
+      />
+    </B>
+
+    <B title='photoGrid' style={{ width: '100%' }}>
+      <List
+        data={dataSetImages}
+        ItemComponent={Image}
+        photoGrid
+        repeat={3}
+        repeatOnMinWidth={4}
+        minWidth={800}
+        onItemClick={(e) => console.log(e)}
       />
     </B>
   </>
