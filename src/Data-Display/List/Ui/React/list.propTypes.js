@@ -23,6 +23,7 @@ export const defaultProps = {
   listItemDefinitions: null,
   onItemClick: () => null,
   autoColumns: null,
+  onScrollEnd: null,
 }
 
 export const propTypes = {
@@ -38,4 +39,5 @@ export const propTypes = {
   photoGrid: bool,
   listItemDefinitions: object,
   onItemClick: func,
+  onScrollEnd: func,
 }

@@ -1,5 +1,7 @@
 import React, { memo } from 'react'
 
+import BottomScrollListener from '../../../../Misc-Utils/Scrolling/EventListeners/scrollEnd'
+
 import { Wrapper } from './list.styles'
 import { defaultProps, propTypes } from './list.propTypes'
 
@@ -16,6 +18,7 @@ const List = ({
   overflows,
   minWidth,
   repeatOnMinWidth,
+  onScrollEnd,
   ...styles
 }) => {
   const dataLength = data.length
@@ -33,9 +36,9 @@ const List = ({
       />
     ))
 
-  // Template
-  return (
+  const Main = (scrollRef) => (
     <Wrapper
+      ref={scrollRef}
       direction={direction}
       dataLength={dataLength}
       repeat={repeat}
@@ -49,6 +52,13 @@ const List = ({
       {children && children}
       {ItemComponent && loadWithItemComponent()}
     </Wrapper>
+  )
+
+  // Template
+  return onScrollEnd ? (
+    <BottomScrollListener onBottom={onScrollEnd}>{Main}</BottomScrollListener>
+  ) : (
+    Main()
   )
 }
 

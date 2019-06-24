@@ -92,6 +92,22 @@ const Variations = () => (
         onItemClick={(e) => console.log(e)}
       />
     </B>
+
+    <B title='onScrollEnd' style={{ width: '100%' }}>
+      <List
+        data={dataSetImages}
+        ItemComponent={Image}
+        photoGrid
+        repeat={3}
+        repeatOnMinWidth={4}
+        minWidth={800}
+        onItemClick={(e) => console.log(e)}
+        direction='row'
+        gap='xl'
+        style={{ height: 100, overflow: 'scroll' }}
+        onScrollEnd={() => console.log('Reached Bottom')}
+      />
+    </B>
   </>
 )
 
