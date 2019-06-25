@@ -1,7 +1,7 @@
 ## Usage
 
 ```js
-import Chip from '@tenjo/web-toolkit/data-display/chip/ui/react'
+import Chip from '@tenjojeremy/web-toolkit/data-display/chip/ui/react'
 ```
 
 ```js

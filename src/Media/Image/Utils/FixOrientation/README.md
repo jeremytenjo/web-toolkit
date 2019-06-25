@@ -1,7 +1,7 @@
 ## Usage
 
 ```js
-import fixOrientation from '@tenjo/image/fixOrientation'
+import fixOrientation from '@tenjojeremy/image/fixOrientation'
 
 const res = await fixOrientation({ file })
 ```

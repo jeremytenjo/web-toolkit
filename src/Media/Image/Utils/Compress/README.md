@@ -1,7 +1,7 @@
 ## Usage
 
 ```js
-import compressImage from '@tenjo/image/compress'
+import compressImage from '@tenjojeremy/image/compress'
 
 const res = await compressImage({ file, quality })
 ```

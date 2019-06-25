@@ -1,7 +1,7 @@
 ## Usage
 
 ```js
-import Button from '@tenjo/web-toolkit/input/button/ui/react/style1'
+import Button from '@tenjojeremy/web-toolkit/input/button/ui/react/style1'
 ```
 
 ```js

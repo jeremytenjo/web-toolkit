@@ -1,7 +1,7 @@
 ## Usage
 
 ```js
-import resize from '@tenjo/image/resize'
+import resize from '@tenjojeremy/image/resize'
 
 const res = await resize({ file, width })
 ```

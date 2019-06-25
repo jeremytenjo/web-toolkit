@@ -1,7 +1,7 @@
 ## Installation
 
 ```sh
-yarn add @tenjo/communication-chat
+yarn add @tenjojeremy/communication-chat
 ```
 
 ### TODO

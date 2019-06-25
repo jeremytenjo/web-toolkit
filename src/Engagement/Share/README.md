@@ -19,8 +19,8 @@ Requirements:
 
 ### Information
 
-- Url: https://www.npmjs.com/package/@tenjo/api-share
-- Install: `yarn add @tenjo/api-share`
+- Url: https://www.npmjs.com/package/@tenjojeremy/api-share
+- Install: `yarn add @tenjojeremy/api-share`
 
 #### Update
 
@@ -32,4 +32,4 @@ Requirements:
 
 #### Remove
 
-`npm unpublish @tenjo/api-share --force`
+`npm unpublish @tenjojeremy/api-share --force`
