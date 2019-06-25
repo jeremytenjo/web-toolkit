@@ -1,3 +1,3 @@
-import { useForm } from 'react-final-form-hooks'
+import { useForm, useField } from 'react-final-form-hooks'
 
-export default useForm
+export { useForm, useField }
