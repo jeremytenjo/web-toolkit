@@ -73,7 +73,12 @@ export const WrapperIcon = styled.div`
     margin: 0 auto;
     align-self: center;
     width: ${({ size }) => size}px;
-  }
+     /*  No Background */
+  ${({ noBackground }) =>
+    noBackground &&
+    `    
+   width: auto;
+   `}
 
 `
 

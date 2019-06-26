@@ -1,0 +1,62 @@
+import React, { useState } from 'react'
+import { storiesOf } from '@storybook/react'
+
+import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Form from '../../../Ui/React/form.index'
+import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
+
+import TextField from './textField.index'
+
+// Test data
+const placeholder = 'this is a Placeholder'
+
+const Variations = () => {
+  const [submitValue, setsubmitValue] = useState(null)
+  const handleSubmit = ({ exampleField }) => {
+    setsubmitValue(exampleField)
+  }
+
+  return (
+    <>
+      <B title='default'>
+        <TextField placeholder={placeholder} />
+      </B>
+
+      <B title='with parent form'>
+        <Form onSubmitSuccess={handleSubmit}>
+          <TextField placeholder={placeholder} name='exampleField' />
+          <br />
+          <button type='submit'>Submit</button>
+          <br />
+          <br />
+          <span>value:{submitValue}</span>
+        </Form>
+      </B>
+
+      <B title='round'>
+        <TextField round placeholder={placeholder} />
+      </B>
+      <B title='Icon Left'>
+        <TextField
+          placeholder={placeholder}
+          iconLeft={
+            <Icon name='plus/material' color='secondary' noBackground />
+          }
+        />
+      </B>
+      <B title='Icon  right'>
+        <TextField
+          placeholder={placeholder}
+          iconRight={
+            <Icon name='plus/material' color='secondary' noBackground />
+          }
+        />
+      </B>
+    </>
+  )
+}
+
+// Stories
+storiesOf('Input|Form/TextField', module).add('Variations', () => (
+  <Variations />
+))
