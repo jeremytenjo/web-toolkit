@@ -3,8 +3,8 @@ import SwipeableViews from 'react-swipeable-views'
 
 import { defaultProps, propTypes } from './drawer.propTypes'
 import { Wrapper, Overlay, ShadowTip, Body, BottomSlide } from './drawer.styles'
-import HeightUpdater from './HeightUpdater'
-import ScrollToTop from './ScrollToTop'
+import HeightUpdater from './Utils/HeightUpdater'
+import ScrollToTop from './Utils/ScrollToTop'
 
 const SwipeableBottomSheet = ({
   overflowHeight,
@@ -24,7 +24,7 @@ const SwipeableBottomSheet = ({
   onChange,
   open,
   borderRadius,
-  padding
+  padding,
 }) => {
   const [height, setHeight] = useState(window.innerHeight)
   const hiddenWhenClosed = overflowHeight === 0
@@ -51,24 +51,24 @@ const SwipeableBottomSheet = ({
   const stylesRoot = {
     overflowY: 'initial',
     boxSizing: 'border-box',
-    ...swipeableViewsProps.style
+    ...swipeableViewsProps.style,
   }
 
   const stylesContainer = {
     boxSizing: 'border-box',
     ...(topShadow &&
       !hideShadows && {
-        boxShadow: 'rgba(0, 0, 0, 0.156863) 0px -6px 5px'
+        boxShadow: 'rgba(0, 0, 0, 0.156863) 0px -6px 5px',
       }),
     borderRadius: `${borderRadius}px ${borderRadius}px 0 0`,
-    ...swipeableViewsProps.containerStyle
+    ...swipeableViewsProps.containerStyle,
   }
 
   const stylesSlide = {
     boxSizing: 'border-box',
     overflow: 'visible',
     marginBottom: -overflowHeight,
-    ...swipeableViewsProps.slideStyle
+    ...swipeableViewsProps.slideStyle,
   }
 
   return (
@@ -84,7 +84,7 @@ const SwipeableBottomSheet = ({
       )}
       <SwipeableViews
         index={index}
-        axis="y"
+        axis='y'
         enableMouseEvents
         onChangeIndex={onChangeIndex}
         onTransitionEnd={onTransitionEnd}
