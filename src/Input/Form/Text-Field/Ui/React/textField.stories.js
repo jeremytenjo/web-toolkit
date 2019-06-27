@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Button from '../../../../Button/Ui/React/Styles/Style1/button.style1.index'
 import Form from '../../../Ui/React/form.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
 
@@ -26,11 +27,30 @@ const Variations = () => {
         <Form onSubmitSuccess={handleSubmit}>
           <TextField placeholder={placeholder} name='exampleField' />
           <br />
-          <button type='submit'>Submit</button>
+          <Button type='submit' text='Submit' color='secondary' />
           <br />
           <br />
           <span>value:{submitValue}</span>
         </Form>
+      </B>
+
+      <B title='with parent form - validation - required'>
+        <Form onSubmitSuccess={handleSubmit}>
+          <TextField
+            placeholder={placeholder}
+            name='exampleField'
+            validation={['required']}
+          />
+          <br />
+          <Button type='submit' text='Submit' color='secondary' />
+          <br />
+          <br />
+          <span>value:{submitValue}</span>
+        </Form>
+      </B>
+
+      <B title='color=secondary'>
+        <TextField color='secondary' placeholder={placeholder} />
       </B>
 
       <B title='round'>

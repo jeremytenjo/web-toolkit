@@ -8,7 +8,7 @@ const TextField = (
     onFocus = () => null,
     type = 'text',
     name = 'UNAMEDtextField',
-    validation = true,
+    validation = [],
     errMesgStyle = { color: 'red' },
     color = 'primary',
     round,
@@ -28,7 +28,7 @@ const TextField = (
   // State
   const [input, setInput] = useState('')
   const [errMsg, seterrMsg] = useState(null)
-  const [isValid, setisValid] = useState(validation)
+  const [isValid, setisValid] = useState(true)
   const [focus, setfocus] = useState(null)
 
   // Shared Functions

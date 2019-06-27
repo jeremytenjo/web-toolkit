@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.button`
   /* Base */
   background-color: ${({ color }) => `var(--color-${color}-background)`};
   border-radius: 100px;
   cursor: pointer;
-  padding: var(--spacing-s);
+  padding: 0 var(--spacing-s);
   display: flex;  
   align-items: center;
   justify-content: center;
@@ -14,6 +14,9 @@ export const Wrapper = styled.div`
   height: 40px;  
   border: 2px solid ${({ color }) => `var(--color-${color}-background)`};
   user-select: none;
+  box-sizing: content-box;
+  &:focus {outline:0;}
+
 
   &:active {
     border: 2px solid ${({ color }) => `var(--color-${color}-darker)`};
