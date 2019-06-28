@@ -4,7 +4,9 @@
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "echo rmdir /s /q  build && yarn lint:check && yarn test && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && gpush",
@@ -50,12 +52,13 @@
     "image-compressor.js": "^1.1.4",
     "react": "^16.8.6",
     "react-bottom-scroll-listener": "^3.0.0",
-    "react-swipeable-bottom-sheet": "^1.1.1",
     "react-dom": "^16.8.6",
     "react-final-form-hooks": "^2.0.0",
     "react-hot-loader": "^4.11.1",
     "react-lazyload": "^2.6.1",
     "react-stars": "^2.2.5",
+    "react-swipeable-bottom-sheet": "^1.1.1",
+    "react-swipeable-views": "^0.13.3",
     "styled-components": "^5.0.0-beta.5",
     "yup": "^0.27.0"
   },
