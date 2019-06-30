@@ -6,7 +6,12 @@ export const Wrapper = styled.div`
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   display: grid;
-  padding: ${({ padding }) => `var(--spacing-${padding})`};
+  padding: ${({ padding, noPaddingTB, noPaddingSides }) =>
+    noPaddingTB
+      ? `0 var(--spacing-${padding})`
+      : noPaddingSides
+      ? `var(--spacing-${padding}) 0`
+      : `var(--spacing-${padding})`};
   grid-gap: ${({ gap }) => `var(--spacing-${gap})`};
   grid-auto-flow: ${({ direction }) => direction};
 

@@ -24,6 +24,8 @@ export const defaultProps = {
   onItemClick: () => null,
   autoColumns: null,
   onScrollEnd: null,
+  noPaddingTB: null,
+  noPaddingSides: null,
 }
 
 export const propTypes = {
@@ -40,4 +42,6 @@ export const propTypes = {
   listItemDefinitions: object,
   onItemClick: func,
   onScrollEnd: func,
+  noPaddingTB: bool,
+  noPaddingSides: bool,
 }
