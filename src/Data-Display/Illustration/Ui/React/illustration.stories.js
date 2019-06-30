@@ -19,12 +19,7 @@ const getIconName = (paths) =>
     return (
       <B key={icon} title={icon} noBackground style={{ width: '400px' }}>
         {icon !== './illustrations.stories' && iconLength === 1 ? (
-          <Illustration
-            name={icon}
-            type='illustrations'
-            size={200}
-            noBackground
-          />
+          <Illustration name={icon} size={200} />
         ) : null}
       </B>
     )
