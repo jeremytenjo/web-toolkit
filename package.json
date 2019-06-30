@@ -4,12 +4,10 @@
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
+  "files": ["build"],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
-    "deploy": "echo rmdir /s /q  build && yarn lint:check && yarn test && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && gpush && echo rmdir /s /q  build",
+    "deploy": "node rmdir /s /q  build && yarn lint:check && yarn test && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && gpush && node rmdir /s /q  build",
     "build:library": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./.babelrc ./src --out-dir ./build/ --ignore 'src/**/*.spec.js','src/**/*.test.js','src/**/*.stories.js' ",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
