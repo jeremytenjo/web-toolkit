@@ -1,9 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import List from '../../../../List/Ui/React/list.index'
-import Icon from '../icon.index'
+import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import List from '../../../List/Ui/React/list.index'
+
+import Illustration from './illustration.index'
 
 const illustrationsReq = require.context('./', true, /.js$/)
 const illustrationsPaths = illustrationsReq.keys()
@@ -14,18 +15,24 @@ const getIconName = (paths) =>
     icon = icon.replace('./', '')
     const iconArray = icon.split('.')
     const iconLength = iconArray.length
+    console.log(icon)
 
     return (
       <B key={icon} title={icon} noBackground style={{ width: '400px' }}>
         {icon !== './illustrations.stories' && iconLength === 1 ? (
-          <Icon name={icon} type='illustrations' size={200} noBackground />
+          <Illustration
+            name={icon}
+            type='illustrations'
+            size={200}
+            noBackground
+          />
         ) : null}
       </B>
     )
   })
 const Illustrations = () => <List grid>{getIconName(illustrationsPaths)}</List>
 
-storiesOf('Data-Display|Icon/React/Illustrations', module).add(
+storiesOf('Data-Display|Illustrations/Ui/React', module).add(
   'collection',
   () => <Illustrations />,
 )
