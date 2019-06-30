@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
+import markdown from './icon.readme.md'
 import Icon from './icon.index'
 
 const Variations = () => (
@@ -30,6 +31,10 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Icon/React', module).add('component', () => (
-  <Variations />
-))
+storiesOf('Data-Display|Icon/React', module).add(
+  'component',
+  () => <Variations />,
+  {
+    notes: { markdown },
+  },
+)
