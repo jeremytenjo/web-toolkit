@@ -1,10 +1,12 @@
 {
   "name": "@tenjojeremy/web-toolkit",
-  "version": "3.15.0",
+  "version": "3.16.0",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "echo rmdir /s /q  build && yarn lint:check && yarn test && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && gpush && echo rmdir /s /q  build",
