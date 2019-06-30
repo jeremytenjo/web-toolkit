@@ -1,4 +1,4 @@
-import { number, node, string } from 'prop-types'
+import { node, string } from 'prop-types'
 
 export const defaultProps = {
   padding: 's',
@@ -7,7 +7,7 @@ export const defaultProps = {
 }
 
 export const propTypes = {
-  padding: number,
+  padding: string,
   children: node,
   color: string,
 }

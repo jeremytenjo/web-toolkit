@@ -36,7 +36,7 @@ export const propTypes = {
   minWidth: number,
   repeatOnMinWidth: number,
   gap: string,
-  padding: number,
+  padding: string,
   overflows: bool,
   photoGrid: bool,
   listItemDefinitions: object,
