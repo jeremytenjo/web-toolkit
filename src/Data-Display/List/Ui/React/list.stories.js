@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import Image from '../../../../Media/Image/Ui/React/image.index'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
+import markdown from './list.readme.md'
 import List from './list.index'
 
 // Test Data
@@ -111,6 +112,10 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|List/Ui/React', module).add('Variations', () => (
-  <Variations />
-))
+storiesOf('Data-Display|List/Ui/React', module).add(
+  'Variations',
+  () => <Variations />,
+  {
+    notes: { markdown },
+  },
+)
