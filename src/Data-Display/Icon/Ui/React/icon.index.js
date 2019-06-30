@@ -14,13 +14,12 @@ const Icon = ({
   noBackground,
   dark,
   noBackgroundChange,
-  type,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
   const getModule = async () => {
     if (name) {
-      const module = await import(`./${type}/${name}.js`)
+      const module = await import(`./Library/${name}.js`)
       setIconComp(module.default())
     }
   }

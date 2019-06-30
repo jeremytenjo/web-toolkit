@@ -40,7 +40,7 @@ const MaterialIcons = () => <List grid>{getIconName(materialIconPaths)}</List>
 const Style1Icons = () => <List grid>{getIconName(style1Paths)}</List>
 const RoundFilled = () => <List grid>{getIconName(roundFilledPaths)}</List>
 
-storiesOf('Data-Display|Icon/React/Icon-Set/', module)
+storiesOf('Data-Display|Icon/React/Library/', module)
   .add('Material', () => <MaterialIcons />)
   .add('Style1', () => <Style1Icons />)
   .add('RoundFilled', () => <RoundFilled />)

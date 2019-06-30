@@ -11,7 +11,6 @@ export const defaultProps = {
   noBackground: null,
   dark: null,
   noBackgroundChange: null,
-  type: 'Icon-Sets',
 }
 
 export const propTypes = {
