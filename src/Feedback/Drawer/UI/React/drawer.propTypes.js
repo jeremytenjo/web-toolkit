@@ -11,7 +11,7 @@ export const defaultProps = {
   swipeableViewsProps: {},
   topShadow: true,
   borderRadius: 20,
-  padding: 15
+  padding: 15,
 }
 
 export const propTypes = {
@@ -32,5 +32,5 @@ export const propTypes = {
   swipeableViewsProps: object,
   topShadow: bool,
   borderRadius: number,
-  padding: number
+  padding: number,
 }

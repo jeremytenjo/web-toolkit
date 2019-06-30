@@ -17,7 +17,7 @@ const HeightUpdater = ({ height, onHeightChange }) => {
 
 HeightUpdater.propTypes = {
   height: PropTypes.number,
-  onHeightChange: PropTypes.func
+  onHeightChange: PropTypes.func,
 }
 
 export default HeightUpdater
