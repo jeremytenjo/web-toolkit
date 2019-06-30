@@ -18,7 +18,7 @@ export const defaultProps = {
   repeat: 3,
   repeatOnMinWidth: 3,
   gap: 's',
-  padding: 5,
+  padding: 's',
   overflows: null,
   listItemDefinitions: null,
   onItemClick: () => null,
