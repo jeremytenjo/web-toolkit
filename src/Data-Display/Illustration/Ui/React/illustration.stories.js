@@ -15,7 +15,6 @@ const getIconName = (paths) =>
     icon = icon.replace('./', '')
     const iconArray = icon.split('.')
     const iconLength = iconArray.length
-    console.log(icon)
 
     return (
       <B key={icon} title={icon} noBackground style={{ width: '400px' }}>
