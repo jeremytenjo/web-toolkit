@@ -2069,10 +2069,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tenjojeremy/eslint-config@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@tenjojeremy/eslint-config/1.0.0/e6df0ee47034e5992401778ea3aac0e7747ae19b#e6df0ee47034e5992401778ea3aac0e7747ae19b"
-  integrity sha1-5t8O5HA05ZkkAXeOo6rA53R64Zs=
+"@tenjojeremy/eslint-config@^1.1.0":
+  version "1.1.0"
+  resolved "https://npm.pkg.github.com/download/@tenjojeremy/eslint-config/1.1.0/edbb9bff2ae32b3f02424acb50cae9654325d474#edbb9bff2ae32b3f02424acb50cae9654325d474"
+  integrity sha1-7bub/yrjKz8CQkrLUMrpZUMl1HQ=
 
 "@tenjojeremy/webpack-config@^1.3.0":
   version "1.5.0"
@@ -4225,7 +4225,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.1.2, classnames@^2.2.5:
+classnames@^2.2.5:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
@@ -13235,22 +13235,6 @@ react-stars@^2.2.5:
   resolved "https://registry.yarnpkg.com/react-stars/-/react-stars-2.2.5.tgz#911852018e1574a0f9a2c1dfa4f0bc9af071b921"
   integrity sha1-kRhSAY4VdKD5osHfpPC8mvBxuSE=
 
-react-swipeable-bottom-sheet@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-swipeable-bottom-sheet/-/react-swipeable-bottom-sheet-1.1.1.tgz#6448ee3c8cfa12277a743c1ab48182280dc9e7da"
-  integrity sha512-CEHNFEaXlHpJsLRxc3trI9SuOgWN9hz1z/+Nr1VEo8/409IllEfMZ/a7J/U0zg9nreXAL4tE9DDbXmXG0sl/7A==
-  dependencies:
-    classnames "^2.1.2"
-    react-swipeable-views "^0.12.8"
-
-react-swipeable-views-core@^0.12.17:
-  version "0.12.17"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views-core/-/react-swipeable-views-core-0.12.17.tgz#0998f55fd2f8595bcd01bead1c19516dc561c1cf"
-  integrity sha512-KfQ+BPfLVBe7kxb+0zbVJp3eGQfZlt1gn5J+GYAgnYoZ29GrqkTfiQFKmrG4tmVnhxvRiXFA7Q0q9EBMYTc/FA==
-  dependencies:
-    "@babel/runtime" "7.0.0"
-    warning "^4.0.1"
-
 react-swipeable-views-core@^0.13.1:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/react-swipeable-views-core/-/react-swipeable-views-core-0.13.1.tgz#8829a922462a8bdd701709cd1b385393d38f1527"
@@ -13258,18 +13242,6 @@ react-swipeable-views-core@^0.13.1:
   dependencies:
     "@babel/runtime" "7.0.0"
     warning "^4.0.1"
-
-react-swipeable-views-utils@^0.12.18:
-  version "0.12.18"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views-utils/-/react-swipeable-views-utils-0.12.18.tgz#6edfcc9d722901f0edaf79c78bc6c4a7cc25da81"
-  integrity sha512-Y8APE9bSfZhebYHRGDOoHeIqNJbrZMlpIiHqD0hovdlYv+HvBAdqAKdwppzIE1QXISqBKwJAlYl86plvfTW1dg==
-  dependencies:
-    "@babel/runtime" "7.0.0"
-    fbjs "^0.8.4"
-    keycode "^2.1.7"
-    prop-types "^15.6.0"
-    react-event-listener "^0.6.0"
-    react-swipeable-views-core "^0.12.17"
 
 react-swipeable-views-utils@^0.13.3:
   version "0.13.3"
@@ -13282,18 +13254,6 @@ react-swipeable-views-utils@^0.13.3:
     prop-types "^15.6.0"
     react-event-listener "^0.6.0"
     react-swipeable-views-core "^0.13.1"
-
-react-swipeable-views@^0.12.8:
-  version "0.12.18"
-  resolved "https://registry.yarnpkg.com/react-swipeable-views/-/react-swipeable-views-0.12.18.tgz#3b5d75bbfb826553fe0e42bc04b9c1c4b45acd77"
-  integrity sha512-/8OCD2jBWzPNUi+GgRVwNqAz/SANoAzYDKnxE0VtchkL8gSssjEICVCaNF5aGFavY9fizjHxc2avDLfNYMy+Dg==
-  dependencies:
-    "@babel/runtime" "7.0.0"
-    dom-helpers "^3.2.1"
-    prop-types "^15.5.4"
-    react-swipeable-views-core "^0.12.17"
-    react-swipeable-views-utils "^0.12.18"
-    warning "^4.0.1"
 
 react-swipeable-views@^0.13.3:
   version "0.13.3"
