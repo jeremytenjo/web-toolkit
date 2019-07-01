@@ -19,7 +19,7 @@ import {
               itemComponent={Chip}
               type={tagListType}
               data={cardTags}
-              onListItemClick={removeTag}
+              onItemClick={removeTag}
               padding={10}
               gap={10}
             />

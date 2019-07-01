@@ -69,7 +69,7 @@ const CardPhoto = ({
         ItemComponent={({ item, onClick }) => (
           <Chip noCancel text={item} onClick={onClick} />
         )}
-        onListItemClick={onTagClick}
+        onItemClick={onTagClick}
       />
 
       {children}
