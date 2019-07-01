@@ -1,0 +1,29 @@
+import React from 'react'
+import StarRatings from 'react-stars'
+
+import { defaultProps, propTypes } from './ratings.propTypes'
+
+const Ratings = ({
+  rating,
+  onChange,
+  count,
+  isSelectable,
+  starDimension,
+  starSpacing,
+}) => (
+  <StarRatings
+    changeRating={onChange}
+    rating={rating}
+    numberOfStars={count}
+    isSelectable={isSelectable}
+    starRatedColor={'yellow'}
+    starHoverColor={'yellow'}
+    starDimension={starDimension}
+    starSpacing={starSpacing}
+  />
+)
+
+Ratings.defaultProps = defaultProps
+Ratings.propTypes = propTypes
+
+export default Ratings
