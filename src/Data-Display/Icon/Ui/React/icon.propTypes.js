@@ -3,7 +3,7 @@ import { string, number, func, object, bool } from 'prop-types'
 export const defaultProps = {
   name: null,
   style: {},
-  color: 'primary',
+  color: 'white',
   onClick: () => null,
   background: null,
   size: 45,
@@ -11,6 +11,7 @@ export const defaultProps = {
   noBackground: null,
   dark: null,
   noBackgroundChange: null,
+  outlined: null,
 }
 
 export const propTypes = {
@@ -24,4 +25,5 @@ export const propTypes = {
   label: string,
   dark: bool,
   noBackgroundChange: bool,
+  outlined: bool,
 }

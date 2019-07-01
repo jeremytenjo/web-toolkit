@@ -13,7 +13,12 @@ const Variations = () => (
     </B>
 
     <B title='background'>
-      <Icon name='camera/material' background />
+      <Icon
+        name='camera/material'
+        color='primary'
+        background
+        noBackgroundChange
+      />
     </B>
 
     <B title='with Color'>
@@ -23,6 +28,10 @@ const Variations = () => (
         color='primary'
         noBackgroundChange
       />
+    </B>
+
+    <B title='outlined'>
+      <Icon name='camera/material' color='primary' outlined />
     </B>
 
     <B title='with Size' color='black'>

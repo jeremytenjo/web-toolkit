@@ -14,6 +14,7 @@ const Icon = ({
   noBackground,
   dark,
   noBackgroundChange,
+  outlined,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
@@ -39,6 +40,7 @@ const Icon = ({
         noBackground={noBackground}
         dark={dark}
         noBackgroundChange={noBackgroundChange}
+        outlined={outlined}
       >
         {IconComp}
       </WrapperIcon>
