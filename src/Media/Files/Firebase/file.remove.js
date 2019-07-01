@@ -1,5 +1,5 @@
 import { storageRemove } from '../../../Storage/FIrebase/Storage/storage.index'
-import { firestoreRemove } from '../../../Database/Firestore/firestoreIndex'
+import { firestoreRemove } from '../../../Database/Firestore/firestore.index'
 
 export default async (_userId, _fileId, _fileName, _collection) => {
   const userId = _userId || false

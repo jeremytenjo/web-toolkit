@@ -1,5 +1,5 @@
 import { storageAdd } from '../../../Storage/FIrebase/Storage/storage.index'
-import { firestoreCreate } from '../../../Database/Firestore/firestoreIndex'
+import { firestoreCreate } from '../../../Database/Firestore/firestore.index'
 import compressImage from '../../Image/Utils/Compress/images.compress.index'
 import imagesResize from '../../Image/Utils/Resize/image.resize.index'
 import imagesFixOrientation from '../../Image/Utils/FixOrientation/images.fixOrientation.index'
