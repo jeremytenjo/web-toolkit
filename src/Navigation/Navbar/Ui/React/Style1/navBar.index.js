@@ -14,6 +14,7 @@ const NavBar = ({
   onMainIconClick,
   onFileSelect,
   fontFamily,
+  position,
 }) => {
   const inputRef = useRef(null)
   const openLink = ({
@@ -33,6 +34,7 @@ const NavBar = ({
       style={wrapperStyle}
       hasMainIcon={hasMainIcon}
       fontFamily={fontFamily}
+      position={position}
     >
       {hasMainIcon && <Background />}
       {data.map(

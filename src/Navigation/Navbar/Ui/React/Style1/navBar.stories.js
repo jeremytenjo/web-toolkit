@@ -17,7 +17,6 @@ const Variations = () => (
   <>
     <B title='Default' noBackground style={{ width: 'auto' }}>
       <Bar
-        router={() => null}
         data={defaultData}
         activeColor='#24c3a9'
         defaultColor='#b0b0b0'
@@ -27,7 +26,6 @@ const Variations = () => (
 
     <B title='with center icon' noBackground style={{ width: 'auto' }}>
       <Bar
-        router={() => null}
         data={mainIconData}
         activeColor='#24c3a9'
         defaultColor='#b0b0b0'
@@ -37,7 +35,6 @@ const Variations = () => (
 
     <B title='no labels' noBackground style={{ width: 'auto' }}>
       <Bar
-        router={() => null}
         data={noLabelsdata}
         activeColor='#24c3a9'
         defaultColor='#b0b0b0'
@@ -47,12 +44,22 @@ const Variations = () => (
 
     <B title='File upload Icon' noBackground style={{ width: 'auto' }}>
       <Bar
-        router={() => null}
         data={fileUplaodData}
         activeColor='#24c3a9'
         defaultColor='#b0b0b0'
         backgroundColor='rgba(36, 195, 169, 0.2)'
         onFileSelect={testFileInput}
+      />
+    </B>
+
+    <B title='position - bottom' noBackground style={{ width: 'auto' }}>
+      <Bar
+        data={fileUplaodData}
+        activeColor='#24c3a9'
+        defaultColor='#b0b0b0'
+        backgroundColor='rgba(36, 195, 169, 0.2)'
+        onFileSelect={testFileInput}
+        position='bottom'
       />
     </B>
   </>
