@@ -23,12 +23,7 @@ export const WrapperIcon = styled.div`
       color ? `var(--color-${color}-background)` : 'rgba(0, 0, 0, 0.1)'};
   }
 
-  /* Outlined */
-  ${({ outlined, color }) =>
-    outlined &&
-    `
-  border: 2px solid var(--color-${color});
-  `}
+
   
   /* Background */
   ${({ background, size, color }) =>
@@ -66,6 +61,17 @@ export const WrapperIcon = styled.div`
     &:active {
     background-color: transparent;
     border: none;
+    }
+  `}
+
+    /* Outlined */
+    ${({ outlined, color }) =>
+      outlined &&
+      `
+  border: 2px solid var(--color-${color});
+  &:active {
+    background-color: var(--color-${color}-background);
+
     }
   `}
 

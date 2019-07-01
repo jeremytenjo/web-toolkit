@@ -31,7 +31,7 @@ const Variations = () => (
     </B>
 
     <B title='outlined'>
-      <Icon name='camera/material' color='primary' outlined />
+      <Icon name='camera/material' color='primary' outlined background />
     </B>
 
     <B title='with Size' color='black'>
