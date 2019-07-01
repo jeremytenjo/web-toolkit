@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Buttom from '../../../Input/Button/Ui/React/button.index'
+import Buttom from '../../../Input/Button/Ui/React/Styles/Style1/button.style1.index'
 
 import { defaultProps, propTypes } from './emptyPage.propTypes'
 import { Wrapper, InnerWrapper, Title } from './emptyPage.styles'
