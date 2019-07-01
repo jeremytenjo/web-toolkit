@@ -7,7 +7,6 @@ import { defaultProps, propTypes } from './navBar.propTypes'
 const NavBar = ({
   data,
   wrapperStyle,
-  router,
   defaultColor,
   activeColor,
   backgroundColor,
@@ -21,7 +20,7 @@ const NavBar = ({
     currentTarget: {
       dataset: { link },
     },
-  }) => router(`/${link}`)
+  }) => window.historyRouter.push(`/${link}`)
   const handleFIleUpload = async (e, file) => {
     const selectedFile = file || inputRef.current.files[0]
     if (typeof selectedFile === 'object') onFileSelect(selectedFile)
