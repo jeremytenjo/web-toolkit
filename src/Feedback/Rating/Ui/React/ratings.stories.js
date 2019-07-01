@@ -1,8 +1,18 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
+import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+
 import Ratings from './ratings.index'
 
-storiesOf('Ratings', module)
-  .add('Default', () => <Ratings rating={5} />)
-  .add('Les numers', () => <Ratings rating={3} />)
+const Variations = () => {
+  return (
+    <>
+      <B title='default' noBackground>
+        <Ratings rating={5} />
+      </B>
+    </>
+  )
+}
+
+storiesOf('Data-Display|Ratings', module).add('Default', () => <Variations />)

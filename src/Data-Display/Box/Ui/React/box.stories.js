@@ -6,7 +6,7 @@ import Icon from '../../../Icon/Ui/React/icon.index'
 import markdown from './box.readme.md'
 import Box from './box.index'
 
-storiesOf('Box', module).add(
+storiesOf('Data-Display|Box/Ui/React', module).add(
   'Primary',
   () => (
     <Box>

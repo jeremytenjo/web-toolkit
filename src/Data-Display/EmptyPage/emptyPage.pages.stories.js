@@ -1,9 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Chat from './Pages/emptyPage.chat'
-import Schedule from './Pages/emptyPage.schedule'
+import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import IllChat from '../Illustration/Ui/React/chat/style1'
 
-storiesOf('Empty Page/Pages', module)
-  .add('Chat', () => <Chat />)
-  .add('Schedule', () => <Schedule />)
+import EmptyPage from './Style1/emptyPage.index'
+
+const Variations = () => {
+  return (
+    <>
+      <B title='style1' noBackground>
+        <EmptyPage image={<IllChat />} />
+      </B>
+    </>
+  )
+}
+
+storiesOf('Data-Display|Empty Page', module).add('Variations', () => (
+  <Variations />
+))

@@ -22,5 +22,4 @@ const Wrapper = styled.div`
   animation: ${donutSpin} 0.7s linear infinite;
 `
 
-// Exports
 export default memo(Donut)

@@ -4,7 +4,7 @@ import List from '../../List/Ui/React/list.index'
 import Image from '../../../Media/Image/Ui/React/image.index'
 // import IconBack from '../../Icons/Functional/Back/back.index'
 import Menu from '../../../Input/Menu/menu.index'
-import Donut from '../../../Feedback/Progress/Ui/React/Donut/donutIndex'
+import Donut from '../../../Feedback/Progress/Ui/React/Donut/donut.index'
 import Chip from '../../Chip/Ui/React/chip.index'
 // import LikeButton from '../../Icons/Functional/Like/like.index'
 
