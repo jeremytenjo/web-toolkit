@@ -3,7 +3,7 @@ import { string, number, func, object, bool } from 'prop-types'
 export const defaultProps = {
   name: null,
   style: {},
-  color: null,
+  color: 'primary',
   onClick: () => null,
   background: null,
   size: 45,
