@@ -69,8 +69,6 @@ const CardPhoto = ({
         ItemComponent={({ item, onClick }) => (
           <Chip noCancel text={item} onClick={onClick} />
         )}
-        gap={10}
-        padding={10}
         onListItemClick={onTagClick}
       />
 
