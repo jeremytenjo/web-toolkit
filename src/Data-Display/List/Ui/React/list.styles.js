@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   display: grid;
-  margin: ${({ padding, noPaddingTB, noPaddingSides }) =>
+  padding: ${({ padding, noPaddingTB, noPaddingSides }) =>
     noPaddingTB
       ? `0 var(--spacing-${padding})`
       : noPaddingSides
@@ -14,6 +14,8 @@ export const Wrapper = styled.div`
       : `var(--spacing-${padding})`};
   grid-gap: ${({ gap }) => `var(--spacing-${gap})`};
   grid-auto-flow: ${({ direction }) => direction};
+
+
 
   /* Overflows */
   ${({ overflows, dataLength }) =>
@@ -24,6 +26,11 @@ export const Wrapper = styled.div`
     grid-template-columns: repeat(${dataLength > 0 && dataLength}, auto);
     grid-template-rows: 100%;
     justify-content: flex-start;
+
+    span:last-child {
+      width: 0.1px;
+      opacity: 0;
+    }
   `}
 
     /* Grid */

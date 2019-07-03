@@ -51,6 +51,7 @@ const List = ({
     >
       {children && children}
       {ItemComponent && loadWithItemComponent()}
+      {overflows && <span />}
     </Wrapper>
   )
 

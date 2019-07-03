@@ -53,7 +53,10 @@ const Variations = () => (
       <List data={dataSet2} ItemComponent={itemComponent} direction='column' />
     </B>
 
-    <B title='Direction - Horizontal - Overflow' style={{ width: '50%' }}>
+    <B
+      title='Direction - Horizontal - Overflow'
+      contentStyle={{ width: '50%', padding: 0 }}
+    >
       <List
         data={dataSet2}
         ItemComponent={itemComponent}
