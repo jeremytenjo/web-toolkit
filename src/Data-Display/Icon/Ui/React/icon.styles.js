@@ -19,8 +19,7 @@ export const WrapperIcon = styled.div`
   height: ${({ size }) => size}px;
 
   &:active {
-    background-color: ${({ color }) =>
-      color ? `var(--color-${color}-background)` : 'rgba(0, 0, 0, 0.1)'};
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
 
@@ -35,6 +34,7 @@ export const WrapperIcon = styled.div`
     height: ${size}px;  
 
     &:active {
+    background-color: var(--color-${color}-background);   
     border: 2px solid var(--color-${color});
     }
   `}

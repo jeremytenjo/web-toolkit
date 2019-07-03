@@ -35,7 +35,7 @@ const Variations = () => (
     </B>
 
     <B title='size' color='black' noBackground>
-      <Icon name='camera/material' background size={60} />
+      <Icon name='camera/material' size={60} />
     </B>
   </>
 )
