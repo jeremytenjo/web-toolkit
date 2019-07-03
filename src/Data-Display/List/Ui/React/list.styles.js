@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
     grid-template-rows: 100%;
     justify-content: flex-start;
 
-    span:last-child {
+    .min {
       width: 0.1px;
       opacity: 0;
     }

@@ -51,7 +51,7 @@ const List = ({
     >
       {children && children}
       {ItemComponent && loadWithItemComponent()}
-      {overflows && <span />}
+      {overflows && <span className='min' />}
     </Wrapper>
   )
 

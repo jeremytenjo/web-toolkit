@@ -25,7 +25,6 @@ const CardPhoto = ({
   menuOptions,
   onMenuOptionSelect,
   children,
-  tags,
   likeable,
   liked,
   onLike,
@@ -62,17 +61,6 @@ const CardPhoto = ({
           </LikeIconCon>
         )}
       </ImageCon>
-
-      <List
-        overflow
-        autoColumns
-        data={tags}
-        type='horizontal'
-        ItemComponent={({ item, onClick }) => (
-          <Chip noCancel text={item} onClick={onClick} />
-        )}
-        onItemClick={onTagClick}
-      />
       {children}
     </Wrapper>
   )
