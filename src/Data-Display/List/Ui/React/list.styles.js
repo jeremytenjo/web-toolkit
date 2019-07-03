@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   display: grid;
-  padding: ${({ padding, noPaddingTB, noPaddingSides }) =>
+  margin: ${({ padding, noPaddingTB, noPaddingSides }) =>
     noPaddingTB
       ? `0 var(--spacing-${padding})`
       : noPaddingSides

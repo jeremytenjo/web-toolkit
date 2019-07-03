@@ -58,7 +58,6 @@ const Variations = () => (
         data={dataSet2}
         ItemComponent={itemComponent}
         direction='column'
-        gap='xxl'
         overflows
       />
     </B>
