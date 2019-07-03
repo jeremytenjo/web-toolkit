@@ -30,6 +30,7 @@ const CardPhoto = ({
   liked,
   onLike,
   onUnlike,
+  style,
 }) => {
   const goBack = () => onGoBack()
   const handleOnLike = () => onLike()
@@ -37,7 +38,7 @@ const CardPhoto = ({
 
   //Template
   return (
-    <Wrapper>
+    <Wrapper style={style}>
       <TopRow>
         <IconBack to={goBackUrl} onGoBack={goBack} />
         {menuOptions.length > 0 && (

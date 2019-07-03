@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Contact from '../../../Contact/React/Ui/1/contact.index'
+import Modal from '../../../../../Feedback/Modal/Ui/React/modal.index'
 
 import Photo1 from './1/photo.index'
 
@@ -14,10 +15,27 @@ const photoUrl =
 const cardOptions = ['Remove']
 
 const Variations = () => {
+  const [modal, setmodal] = useState(null)
   return (
     <>
       <B title='style1' noBackground contentStyle={{ width: 300, height: 600 }}>
         <Photo1 photoUrl={photoUrl} menuOptions={cardOptions} />
+      </B>
+
+      <B title='style1 - in modal' noBackground>
+        <button onClick={() => setmodal(true)}>OPEN </button>
+
+        <Modal
+          show={modal}
+          onClose={() => setmodal(false)}
+          animationStyle='showHide'
+        >
+          <Photo1
+            photoUrl={photoUrl}
+            menuOptions={cardOptions}
+            style={{ width: 300, height: 600 }}
+          />
+        </Modal>
       </B>
     </>
   )
