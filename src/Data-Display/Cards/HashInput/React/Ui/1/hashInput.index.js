@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Avatar from '../../Avatars/avatar.index'
-import Rating from '../../../Feedback/Rating/Ui/React/ratings.index'
-import Button from '../../../Input/Button/Ui/React/Styles/Style1/button.style1.index'
+import Rating from '../../../../../../Feedback/Rating/Ui/React/ratings.index'
+import Button from '../../../../../../Input/Button/Ui/React/Styles/Style1/button.style1.index'
 
 import { defaultProps, propTypes } from './hashInput.propTypes'
 import {

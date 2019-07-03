@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: 100%;
 
   @media (min-width: 600px) {
     width: 400px;
