@@ -51,3 +51,15 @@ export const Body = styled.div`
 export const BottomSlide = styled.div`
   margin-bottom: ${({ overflowHeight }) => `${overflowHeight}px`};
 `
+
+export const Pill = styled.svg`
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-3px);
+
+  rect {
+    fill: black;
+    strokewidth: 5;
+    opacity: 0.4;
+  }
+`

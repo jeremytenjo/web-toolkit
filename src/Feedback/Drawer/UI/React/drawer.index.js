@@ -2,7 +2,14 @@ import React, { useState } from 'react'
 import SwipeableViews from 'react-swipeable-views'
 
 import { defaultProps, propTypes } from './drawer.propTypes'
-import { Wrapper, Overlay, ShadowTip, Body, BottomSlide } from './drawer.styles'
+import {
+  Wrapper,
+  Overlay,
+  ShadowTip,
+  Body,
+  BottomSlide,
+  Pill,
+} from './drawer.styles'
 import HeightUpdater from './Utils/HeightUpdater'
 import ScrollToTop from './Utils/ScrollToTop'
 
@@ -102,6 +109,9 @@ const SwipeableBottomSheet = ({
           borderRadius={borderRadius}
           padding={padding}
         >
+          <Pill width='30px' height='10px'>
+            <rect rx='3' ry='5' width='30px' height='5px' />
+          </Pill>
           {children}
         </Body>
         <BottomSlide overflowHeight={overflowHeight} />
