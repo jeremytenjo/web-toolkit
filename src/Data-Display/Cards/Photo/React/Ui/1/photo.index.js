@@ -6,7 +6,7 @@ import IconBack from '../../../../../Icon/Ui/React/Functional/Back/back.index'
 import Menu from '../../../../../../Input/Menu/menu.index'
 import Donut from '../../../../../../Feedback/Progress/Ui/React/Donut/donut.index'
 import Chip from '../../../../../Chip/Ui/React/chip.index'
-// import LikeButton from '../../Icons/Functional/Like/like.index'
+import LikeButton from '../../../../../Icon/Ui/React/Functional/Like/like.index'
 
 import {
   Wrapper,
@@ -44,6 +44,7 @@ const CardPhoto = ({
           <Menu options={menuOptions} onSelect={onMenuOptionSelect} />
         )}
       </TopRow>
+
       <ImageCon>
         {photoUrl ? (
           <Image src={photoUrl} cursor='default' position='top' width='100%' />
@@ -52,11 +53,11 @@ const CardPhoto = ({
         )}
         {likeable && (
           <LikeIconCon>
-            {/* <LikeButton
+            <LikeButton
               liked={liked}
               onLike={handleOnLike}
               onUnlike={handleOnUnlike}
-            /> */}
+            />
           </LikeIconCon>
         )}
       </ImageCon>
@@ -71,7 +72,6 @@ const CardPhoto = ({
         )}
         onItemClick={onTagClick}
       />
-
       {children}
     </Wrapper>
   )

@@ -26,7 +26,7 @@ const Menu = ({ options, onSelect }) => {
   // Template
   return (
     <>
-      <Icon name='options/material' onClick={handleClick} background />
+      <Icon name='options/material' onClick={handleClick} />
 
       {optionsLength > 0 && (
         <Menu_ui

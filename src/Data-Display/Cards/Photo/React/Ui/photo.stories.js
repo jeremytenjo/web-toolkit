@@ -16,7 +16,7 @@ const cardOptions = ['Remove']
 const Variations = () => {
   return (
     <>
-      <B title='style1' noBackground>
+      <B title='style1' noBackground contentStyle={{ width: 300, height: 600 }}>
         <Photo1 photoUrl={photoUrl} menuOptions={cardOptions} />
       </B>
     </>

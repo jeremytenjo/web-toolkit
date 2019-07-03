@@ -17,7 +17,7 @@ const IconBack = ({
   }
 
   // Template
-  return <Icon name={icon} onClick={goBack} background />
+  return <Icon name={icon} onClick={goBack} />
 }
 
 export default memo(IconBack)
