@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const IconRow = styled.div`
+export const TopRow = styled.div`
   padding: var(--spacing-s);
   display: flex;
   justify-content: space-between;

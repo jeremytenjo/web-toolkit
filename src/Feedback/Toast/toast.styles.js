@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: Montserrat;
+  font-family: var(--font-secondary);
   font-size: 16px;
 
   img {

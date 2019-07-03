@@ -179,7 +179,7 @@
 //   height: 50px;
 //   display: flex;
 //   align-items: center;
-//   font-family: Roboto;
+//   font-family: var(--font-primary);
 //   justify-content: space-between;
 //   font-weight: 500;
 //   padding: 0 20px;

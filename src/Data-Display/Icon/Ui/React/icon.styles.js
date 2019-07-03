@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: grid;
   grid-gap: var(--spacing-xs);
   user-select: none;
-  font-family: Montserrat;
+  font-family: var(--font-secondary);
   font-weight: bolder;
 `
 export const WrapperIcon = styled.div`
@@ -29,15 +29,13 @@ export const WrapperIcon = styled.div`
   ${({ background, size, color }) =>
     background &&
     `
-    background-color:${
-      color ? `var(--color-${color}-background)` : 'rgba(0, 0, 0, 0.1)'
-    };
-    border: 2px solid ${color ? `var(--color-${color}-background)` : 'none'};
+    background-color: var(--color-${color}-background);    
+    border: 2px solid var(--color-${color}-background);
     width: ${size}px;
     height: ${size}px;  
 
     &:active {
-    border: 2px solid ${color ? `var(--color-${color}-darker)` : 'none'};
+    border: 2px solid var(--color-${color});
     }
   `}
 
@@ -47,7 +45,7 @@ export const WrapperIcon = styled.div`
     !noBackgroundChange &&
     `
     &:active {
-    background-color: ${color ? 'transparent' : 'rgba(97, 97, 97, 0.5)'};
+    background-color: transparent;
     }
   `}
 
@@ -68,10 +66,10 @@ export const WrapperIcon = styled.div`
     ${({ outlined, color }) =>
       outlined &&
       `
-  border: 2px solid var(--color-${color});
+  border: 2px solid var(--color-${color}-darker);
   &:active {
     background-color: var(--color-${color}-background);
-
+    border: 2px solid var(--color-${color}-darker);    
     }
   `}
 
@@ -93,10 +91,17 @@ export const WrapperIcon = styled.div`
    width: auto;
    `}
 
+       /* Outlined */
+       ${({ outlined, color }) =>
+         outlined &&
+         `
+         fill: var(--color-${color}-darker);
+  `}
+
 `
 
 export const Label = styled.div`
-  font-family: Montserrat;
+  font-family: var(--font-secondary);
   font-weight: bold;
   font-size: 14px;
   text-align: center;

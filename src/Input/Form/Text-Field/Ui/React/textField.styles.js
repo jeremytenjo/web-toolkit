@@ -38,7 +38,7 @@ export const Input = styled.input`
 
   color: ${({ color }) => `var(--color-${color}-darker)`};
   user-select: none;
-  font-family: Montserrat;
+  font-family: var(--font-secondary);
   font-size: 16px;
   font-weight: bold;
   width: 100%;

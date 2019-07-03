@@ -12,7 +12,7 @@ export const defaultProps = {
   data: [],
   children: null,
   opacity: '1',
-  fontFamily: 'Roboto',
+  fontFamily: 'var(--font-primary)',
   onMainIconClick: () => null,
   onFileSelect: () => null,
 }

@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 
 import List from '../../../../../List/Ui/React/list.index'
 import Image from '../../../../../../Media/Image/Ui/React/image.index'
-// import IconBack from '../../Icons/Functional/Back/back.index'
+import IconBack from '../../../../../Icon/Ui/React/Functional/Back/back.index'
 import Menu from '../../../../../../Input/Menu/menu.index'
 import Donut from '../../../../../../Feedback/Progress/Ui/React/Donut/donut.index'
 import Chip from '../../../../../Chip/Ui/React/chip.index'
@@ -10,7 +10,7 @@ import Chip from '../../../../../Chip/Ui/React/chip.index'
 
 import {
   Wrapper,
-  IconRow,
+  TopRow,
   ImageCon,
   donutStyle,
   LikeIconCon,
@@ -38,15 +38,15 @@ const CardPhoto = ({
   //Template
   return (
     <Wrapper>
-      <IconRow>
-        {/* <IconBack to={goBackUrl} onGoBack={goBack} />
+      <TopRow>
+        <IconBack to={goBackUrl} onGoBack={goBack} />
         {menuOptions.length > 0 && (
           <Menu options={menuOptions} onSelect={onMenuOptionSelect} />
-        )} */}
-      </IconRow>
+        )}
+      </TopRow>
       <ImageCon>
         {photoUrl ? (
-          <Image src={photoUrl} cursor='default' position='top' />
+          <Image src={photoUrl} cursor='default' position='top' width='100%' />
         ) : (
           <Donut style={donutStyle} />
         )}
