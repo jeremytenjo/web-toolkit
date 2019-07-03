@@ -8,8 +8,16 @@ import Ratings from './ratings.index'
 const Variations = () => {
   return (
     <>
-      <B title='default' noBackground>
-        <Ratings rating={5} />
+      <B title='default'>
+        <Ratings />
+      </B>
+
+      <B title='set'>
+        <Ratings rating={4} />
+      </B>
+
+      <B title='non editable'>
+        <Ratings rating={4} edit={null} />
       </B>
     </>
   )

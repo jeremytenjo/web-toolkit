@@ -1,7 +1,8 @@
 import { number, func, bool, string } from 'prop-types'
 
 export const defaultProps = {
-  rating: 5,
+  rating: 0,
+  edit: true,
   count: 5,
   isSelectable: null,
   starDimension: '25px',
@@ -11,6 +12,7 @@ export const defaultProps = {
 
 export const propTypes = {
   rating: number,
+  edit: bool,
   count: number,
   starDimension: string,
   starSpacing: string,

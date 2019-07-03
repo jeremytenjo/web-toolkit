@@ -10,10 +10,12 @@ const Ratings = ({
   isSelectable,
   starDimension,
   starSpacing,
+  edit,
 }) => (
   <StarRatings
+    edit={edit}
     changeRating={onChange}
-    rating={rating}
+    value={rating}
     numberOfStars={count}
     isSelectable={isSelectable}
     starRatedColor={'yellow'}
