@@ -3,7 +3,7 @@ import React from 'react'
 import Icon from '../../../../../Icon/Ui/React/icon.index'
 import Avatar from '../../../../../Avatars/avatar.index'
 import Rating from '../../../../../../Feedback/Rating/Ui/React/ratings.index'
-import Button from '../../../../../../Input/Button/Ui/React/Styles/Style1/button.style1.index'
+import Button from '../../../../../../Input/Button/Ui/React/Styles/1'
 
 import { defaultProps, propTypes } from './contact.propTypes'
 import {

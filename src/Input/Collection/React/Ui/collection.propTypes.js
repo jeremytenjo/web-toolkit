@@ -1,7 +1,7 @@
 import { number, func, string } from 'prop-types'
 
 export const defaultProps = {
-  name: 'Name',
+  textFieldStyle: 1,
   rating: 5,
   city: '',
   photoUrl: null,
@@ -10,7 +10,7 @@ export const defaultProps = {
 }
 
 export const propTypes = {
-  name: string,
+  textFieldStyle: number,
   rating: number,
   city: string,
   photoUrl: string,

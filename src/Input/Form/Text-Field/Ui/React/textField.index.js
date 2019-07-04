@@ -1,9 +1,11 @@
 import React, { useState, memo, useImperativeHandle, forwardRef } from 'react'
 
-import { Wrapper, Input, IconLeftCon, IconRightCon } from './textField.styles'
-
 const TextField = (
   {
+    Wrapper,
+    Input,
+    IconLeftCon,
+    IconRightCon,
     onChange = () => null,
     onFocus = () => null,
     type = 'text',

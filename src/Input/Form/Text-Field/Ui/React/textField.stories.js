@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Button from '../../../../Button/Ui/React/Styles/Style1/button.style1.index'
+import Button from '../../../../Button/Ui/React/Styles/1'
 import Form from '../../../Ui/React/form.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
 
-import TextField from './textField.index'
+import TextField from './Styles/1'
 
 // Test data
 const placeholder = 'this is a Placeholder'

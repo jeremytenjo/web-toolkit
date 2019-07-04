@@ -11,7 +11,7 @@ const Form = ({ children, onSubmitSuccess, emptyFormMessage }) => {
   const onSubmit = (e) => {
     e.preventDefault()
     const formValues = serialize(formRef.current)
-    console.log(formValues)
+    // console.log(formValues)
     if (formValues === null) return null
     if (formValues === 'empty') {
       setisEmptyForm(true)

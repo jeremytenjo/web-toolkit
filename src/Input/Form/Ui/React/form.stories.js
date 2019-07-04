@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import TextField from '../../Text-Field/Ui/React/textField.index'
+import TextField from '../../Text-Field/Ui/React/Styles/1'
 
 import Form from './form.index'
 

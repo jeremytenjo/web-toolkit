@@ -1,6 +1,8 @@
+import React from 'react'
 import styled from 'styled-components'
+import TextField from '../textField.index'
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   transition: .2s;
   background-color: ${({ color }) => `var(--color-${color}-background)`};
   color: ${({ color }) => `var(--color-${color}-darker)`};
@@ -30,7 +32,7 @@ export const Wrapper = styled.div`
 
 `
 
-export const Input = styled.input`
+const Input = styled.input`
   ::placeholder {
     opacity: 0.5;
     color: ${({ color }) => `var(--color-${color}-darker)`};
@@ -47,9 +49,21 @@ export const Input = styled.input`
   background-color: transparent;
 `
 
-export const IconLeftCon = styled.div`
+const IconLeftCon = styled.div`
   margin-right: 5px;
 `
-export const IconRightCon = styled.div`
+const IconRightCon = styled.div`
   margin-left: 10px;
 `
+
+export default (props) => (
+  <>
+    <TextField
+      Wrapper={Wrapper}
+      Input={Input}
+      IconLeftCon={IconLeftCon}
+      IconRightCon={IconRightCon}
+      {...props}
+    />
+  </>
+)

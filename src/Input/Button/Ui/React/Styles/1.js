@@ -1,6 +1,8 @@
+import React from 'react'
 import styled from 'styled-components'
+import Button from '../button.index'
 
-export const Wrapper = styled.button`
+const Wrapper = styled.button`
   /* Base */
   background-color: ${({ color }) => `var(--color-${color}-background)`};
   border-radius: 100px;
@@ -71,3 +73,9 @@ export const Wrapper = styled.button`
     }
   `}
 `
+
+export default (props) => (
+  <>
+    <Button Wrapper={Wrapper} {...props} />
+  </>
+)
