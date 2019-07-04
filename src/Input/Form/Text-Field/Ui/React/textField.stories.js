@@ -23,6 +23,16 @@ const Variations = () => {
         <TextField placeholder={placeholder} />
       </B>
 
+      <B title='clear after input'>
+        <Form onSubmitSuccess={handleSubmit}>
+          <TextField
+            placeholder={placeholder}
+            name='textfield2'
+            clearOnSubmit
+          />
+        </Form>
+      </B>
+
       <B title='with parent form'>
         <Form onSubmitSuccess={handleSubmit}>
           <TextField placeholder={placeholder} name='exampleField' />

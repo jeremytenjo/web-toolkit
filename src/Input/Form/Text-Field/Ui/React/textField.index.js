@@ -1,4 +1,11 @@
-import React, { useState, memo, useImperativeHandle, forwardRef } from 'react'
+import React, {
+  useState,
+  memo,
+  useImperativeHandle,
+  forwardRef,
+  useEffect,
+  useRef,
+} from 'react'
 
 const TextField = (
   {
@@ -6,7 +13,6 @@ const TextField = (
     Input,
     IconLeftCon,
     IconRightCon,
-    onChange = () => null,
     onFocus = () => null,
     type = 'text',
     name = 'UNAMEDtextField',
@@ -24,14 +30,24 @@ const TextField = (
     onLeftIconClick = () => null,
     onRightIconClick = () => null,
     autocomplete = 'off',
+    initialInput = '',
+    clearOnSubmit = null,
   },
   ref,
 ) => {
+  // Refs
+  const inputRef = useRef(null)
+
   // State
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState(initialInput)
   const [errMsg, seterrMsg] = useState(null)
   const [isValid, setisValid] = useState(true)
   const [focus, setfocus] = useState(null)
+
+  useEffect(() => {
+    clearOnSubmit && startOnSubmitListener()
+    return removeOnSubmitListener
+  }, [])
 
   // Shared Functions
   useImperativeHandle(ref, () => ({
@@ -44,13 +60,23 @@ const TextField = (
   }))
 
   // Functions
+  const startOnSubmitListener = () => {
+    const parentForm = inputRef.current.parentNode.parentNode
+    parentForm.addEventListener('submit', handleFormListener, true)
+  }
+  const removeOnSubmitListener = () => {
+    const parentForm = inputRef.current.parentNode.parentNode
+    parentForm.removeEventListener('submit', handleFormListener, true)
+  }
+
+  const handleFormListener = () => isValid && setInput('')
+
   const clearInput = () => setInput('')
   const getCurrentValue = () => input
   const handleValidation = () => {}
 
   const handleChange = async ({ target: { value } }) => {
     setInput(value)
-    onChange(value)
     validation && handleValidation()
   }
 
@@ -80,6 +106,7 @@ const TextField = (
       {label && label}
 
       <Input
+        ref={inputRef}
         type={type}
         value={input}
         onChange={handleChange}

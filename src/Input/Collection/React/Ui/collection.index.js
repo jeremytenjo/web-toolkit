@@ -7,13 +7,14 @@ import { defaultProps, propTypes } from './collection.propTypes'
 import { Wrapper } from './collection.styles'
 
 const Collection = ({
+  initialData,
   onClick,
   ItemComponent,
   placeholder,
   textFieldStyle,
   itemComponentTextKey,
 }) => {
-  const [data, setdata] = useState([])
+  const [data, setdata] = useState(initialData)
   const [TextField, setTextField] = useState(null)
 
   useEffect(() => {

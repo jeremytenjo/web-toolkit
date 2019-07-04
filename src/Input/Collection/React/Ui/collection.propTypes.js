@@ -1,7 +1,8 @@
-import { number, func, string } from 'prop-types'
+import { number, array, func, string } from 'prop-types'
 
 export const defaultProps = {
   textFieldStyle: 1,
+  initialData: [],
   rating: 5,
   city: '',
   photoUrl: null,
@@ -11,7 +12,7 @@ export const defaultProps = {
 
 export const propTypes = {
   textFieldStyle: number,
-  rating: number,
+  initialData: array,
   city: string,
   photoUrl: string,
   onContactClick: func,
