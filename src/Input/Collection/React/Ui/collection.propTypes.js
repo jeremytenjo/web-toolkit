@@ -1,20 +1,21 @@
-import { number, array, func, string } from 'prop-types'
+import { number, array, bool, func } from 'prop-types'
 
 export const defaultProps = {
   textFieldStyle: 1,
   initialData: [],
-  rating: 5,
-  city: '',
-  photoUrl: null,
-  onContactClick: () => null,
-  onAvatarClick: () => null,
+  editable: true,
+  removeItemOnClick: null,
+  onItemClick: () => null,
+  onItemAdded: () => null,
+  onItemRemoved: () => null,
 }
 
 export const propTypes = {
   textFieldStyle: number,
   initialData: array,
-  city: string,
-  photoUrl: string,
-  onContactClick: func,
-  onAvatarClick: func,
+  editable: bool,
+  removeItemOnClick: bool,
+  onItemClick: func,
+  onItemAdded: func,
+  onItemRemoved: func,
 }
