@@ -6,6 +6,7 @@ export const defaultProps = {
   backgroundcolor: 'white',
   noAnimation: null,
   zIndex: 1,
+  disableScrollOnShow: true,
 }
 
 export const propTypes = {
@@ -14,4 +15,5 @@ export const propTypes = {
   onClick: func,
   backgroundcolor: string,
   zIndex: number,
+  disableScrollOnShow: bool,
 }

@@ -44,7 +44,6 @@ const CardPhoto = ({
           <Menu options={menuOptions} onSelect={onMenuOptionSelect} />
         )}
       </TopRow>
-
       <ImageCon>
         {photoUrl ? (
           <Image src={photoUrl} cursor='default' position='top' width='100%' />

@@ -5,7 +5,14 @@ import animation from '../Animations/Web-Animations-API/animation.index'
 import { defaultProps, propTypes } from './overlay.propTypes'
 import { Wrapper } from './overlay.styles'
 
-const Overlay = ({ show, onClick, backgroundcolor, noAnimation, zIndex }) => {
+const Overlay = ({
+  show,
+  onClick,
+  backgroundcolor,
+  noAnimation,
+  zIndex,
+  disableScrollOnShow,
+}) => {
   const overlayRef = useRef(null)
 
   const config = {
@@ -30,9 +37,23 @@ const Overlay = ({ show, onClick, backgroundcolor, noAnimation, zIndex }) => {
     return window.removeEventListener('keydown', handleKeyInput)
   }, [])
 
-  const handleKeyInput = ({ key }) => {
-    if (key === 'Escape') onClick()
+  useEffect(() => {
+    if (disableScrollOnShow) show ? disableScroll() : enableScroll()
+  }, [show])
+
+  const disableScroll = () => {
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${window.scrollY}px`
   }
+
+  const enableScroll = () => {
+    const top = document.body.style.top
+    document.body.style.position = ''
+    document.body.style.top = ''
+    window.scrollTo(0, parseInt(scrollY || '0') * -1)
+  }
+
+  const handleKeyInput = ({ key }) => key === 'Escape' && onClick()
 
   return (
     <Wrapper
