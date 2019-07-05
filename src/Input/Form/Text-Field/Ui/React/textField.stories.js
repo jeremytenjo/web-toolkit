@@ -19,11 +19,11 @@ const Variations = () => {
 
   return (
     <>
-      <B title='default'>
+      <B title='default' noBackground>
         <TextField placeholder={placeholder} />
       </B>
 
-      <B title='clear after input'>
+      <B title='clear after input' noBackground>
         <Form onSubmitSuccess={handleSubmit}>
           <TextField
             placeholder={placeholder}

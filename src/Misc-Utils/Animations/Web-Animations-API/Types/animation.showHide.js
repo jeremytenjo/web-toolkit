@@ -1,19 +1,28 @@
-export default ({ el, show, fill = 'forwards', duration = 200 }) => {
+export default ({
+  el,
+  show,
+  fill = 'forwards',
+  duration = 200,
+  keepSpace = null,
+}) => {
   const config = { fill, duration }
+  const displayType = keepSpace ? 'visibility' : 'display'
+  const displayValuetypeShow = keepSpace ? 'visible' : 'block'
+  const displayValuetypeHide = keepSpace ? 'hidden' : 'none'
 
-  el.style.display = 'block'
+  el.style[keepSpace] = displayValuetypeShow
   const start = {
     opacity: show ? 0 : 1,
-    display: 'none',
+    [keepSpace]: displayValuetypeHide,
   }
   const to = {
     opacity: show ? 1 : 0,
-    display: 'block',
+    [keepSpace]: displayValuetypeShow,
   }
 
   const anim = el.animate([start, to], config)
 
   anim.onfinish = () => {
-    if (!show) el.style.display = 'none'
+    if (!show) el.style[keepSpace] = displayValuetypeHide
   }
 }

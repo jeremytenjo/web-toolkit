@@ -56,6 +56,13 @@ const IconRightCon = styled.div`
   margin-left: 10px;
 `
 
+const InputCon = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: var(--spacing-xs);
+  position: relative;
+`
+
 export default (props) => (
   <>
     <TextField
@@ -63,6 +70,7 @@ export default (props) => (
       Input={Input}
       IconLeftCon={IconLeftCon}
       IconRightCon={IconRightCon}
+      InputCon={InputCon}
       {...props}
     />
   </>
