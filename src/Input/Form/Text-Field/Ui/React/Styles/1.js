@@ -40,7 +40,6 @@ const Input = styled.input`
   }
 
   color: ${({ color }) => `var(--color-${color}-darker)`};
-  user-select: none;
   font-family: var(--font-secondary);
   font-size: 16px;
   font-weight: bold;
