@@ -44,7 +44,6 @@ const TextField = (
   const closeIconRef = useRef(null)
 
   const config = {
-    keepSpace: true,
     fill: 'forwards',
     duration: 100,
     direction: 'normal',
@@ -56,7 +55,6 @@ const TextField = (
   const [errMsg, seterrMsg] = useState(null)
   const [isValid, setisValid] = useState(true)
   const [focus, setfocus] = useState(null)
-  const [prevanim, setprevanim] = useState(null)
 
   useEffect(() => {
     clearOnSubmit && startOnSubmitListener()
@@ -64,8 +62,6 @@ const TextField = (
   }, [])
 
   useEffect(() => {
-    console.log(input)
-
     if (input !== null)
       animation({
         name: 'showHide',
