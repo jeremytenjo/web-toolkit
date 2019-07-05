@@ -15,7 +15,7 @@
     "test": "jest",
     "pretty": "prettier \"**/*.js\" --write",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec='src/**/*.spec.js'",
+    "cypress:run": "cypress run",
     "lint:fix": "eslint ./src --fix",
     "lint:check": "eslint ./src",
     "check-staged": "lint-staged"
