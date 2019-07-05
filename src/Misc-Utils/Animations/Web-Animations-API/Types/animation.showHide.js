@@ -1,10 +1,4 @@
-export default ({
-  el,
-  show,
-  fill = 'forwards',
-  duration = 200,
-  keepSpace = null,
-}) => {
+export default ({ el, show, fill = 'forwards', duration = 200 }) => {
   const config = { fill, duration }
 
   console.log(show)
