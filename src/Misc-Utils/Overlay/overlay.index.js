@@ -12,6 +12,7 @@ const Overlay = ({
   noAnimation,
   zIndex,
   disableScrollOnShow,
+  dataCy,
 }) => {
   const overlayRef = useRef(null)
 
@@ -53,6 +54,7 @@ const Overlay = ({
       backgroundcolor={backgroundcolor}
       noAnimation={noAnimation}
       zIndex={zIndex}
+      data-cy={dataCy}
     />
   )
 }

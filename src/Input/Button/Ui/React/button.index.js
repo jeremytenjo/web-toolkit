@@ -21,6 +21,7 @@ const Button = ({
   outlined,
   style,
   iconName,
+  dataCy,
 }) => {
   const textColor = disabled
     ? 'disabled-darker'
@@ -40,6 +41,7 @@ const Button = ({
       outlined={outlined}
       icon={iconName}
       style={style}
+      data-cy={dataCy}
     >
       <Typography text={text} variant='button' color={textColor} />
       {iconName && (

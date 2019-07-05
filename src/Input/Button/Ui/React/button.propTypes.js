@@ -12,6 +12,7 @@ export const defaultProps = {
   textStyle: {},
   text: 'Button',
   onClick: () => null,
+  dataCy: null,
 }
 
 export const propTypes = {
@@ -26,4 +27,5 @@ export const propTypes = {
   style: object,
   textStyle: object,
   onClick: func,
+  dataCy: string,
 }

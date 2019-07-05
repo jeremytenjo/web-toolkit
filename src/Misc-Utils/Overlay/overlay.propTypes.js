@@ -7,6 +7,7 @@ export const defaultProps = {
   noAnimation: null,
   zIndex: 1,
   disableScrollOnShow: true,
+  dataCy: null,
 }
 
 export const propTypes = {
@@ -16,4 +17,5 @@ export const propTypes = {
   backgroundcolor: string,
   zIndex: number,
   disableScrollOnShow: bool,
+  dataCy: string,
 }
