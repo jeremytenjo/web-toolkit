@@ -1,5 +1,7 @@
 describe('Overlay shows and hides', function() {
   it('open page', function() {
-    cy.visit('https://example.cypress.io')
+    cy.visit(
+      'http://localhost:9002/?path=/story/misc-utils-overlay-ui-react--variations',
+    )
   })
 })

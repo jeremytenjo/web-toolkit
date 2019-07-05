@@ -1,5 +1,4 @@
 {
-  "baseUrl": "http://localhost:9001",
   "integrationFolder": "src",
   "testFiles": "**/*.spec-cy.js"
 }
