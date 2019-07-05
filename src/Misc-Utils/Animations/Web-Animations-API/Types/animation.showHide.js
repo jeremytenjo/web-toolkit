@@ -6,30 +6,24 @@ export default ({
   keepSpace = null,
 }) => {
   const config = { fill, duration }
-  const displayType = keepSpace ? 'visibility' : 'display'
-  const displayValuetypeShow = keepSpace ? 'visible' : 'block'
-  const displayValuetypeHide = keepSpace ? 'hidden' : 'none'
 
-  const current = el.style[keepSpace]
+  console.log(show)
+
+  el.style.display = 'block'
 
   const start = {
     opacity: show ? 0 : 1,
-    [displayType]: displayValuetypeHide,
+    display: 'none',
   }
 
   const to = {
     opacity: show ? 1 : 0,
-    [displayType]: displayValuetypeShow,
+    display: 'block',
   }
 
-  if (
-    (show !== true && current !== 'none') ||
-    (show !== false && current !== 'block')
-  ) {
-    const anim = el.animate([start, to], config)
-    anim.onfinish = () => {
-      if (!show) el.style[keepSpace] = displayValuetypeHide
-      if (show) el.style[keepSpace] = displayValuetypeShow
-    }
+  const anim = el.animate([start, to], config)
+
+  anim.onfinish = () => {
+    if (!show) el.style.display = 'none'
   }
 }
