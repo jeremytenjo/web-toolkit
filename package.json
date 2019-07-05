@@ -4,9 +4,7 @@
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
+  "files": ["build"],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn test && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && gpush && rmdir /s /q build",
@@ -16,6 +14,8 @@
     "publish:minor": "yarn build:library && yarn publish --minor",
     "test": "jest",
     "pretty": "prettier \"**/*.js\" --write",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --spec='src/**/*.spec.js'",
     "lint:fix": "eslint ./src --fix",
     "lint:check": "eslint ./src",
     "check-staged": "lint-staged"
