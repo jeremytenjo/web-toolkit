@@ -30,7 +30,8 @@
       "yarn lint:fix",
       "yarn pretty",
       "prettier --list-different",
-      "jest --passWithNoTests"
+      "jest --passWithNoTests",
+      "yarn cypress run"
     ]
   },
   "dependencies": {
