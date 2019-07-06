@@ -1,5 +1,5 @@
 {
   "integrationFolder": "src",
   "testFiles": "**/*.spec-cy.js",
-  "video": "false"
+  "video": false
 }
