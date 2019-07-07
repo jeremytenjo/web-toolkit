@@ -122,7 +122,15 @@ const TextField = (
       width={width}
     >
       {iconLeft && (
-        <IconLeftCon onClick={onLeftIconClick}>{iconLeft}</IconLeftCon>
+        <IconLeftCon onClick={onLeftIconClick}>
+          <Icon
+            name={iconLeft}
+            onClick={clearInput}
+            style={{
+              height: '100%',
+            }}
+          />
+        </IconLeftCon>
       )}
 
       {label && label}
@@ -157,7 +165,15 @@ const TextField = (
       {errMsg !== '' && <p style={errMesgStyle}>{errMsg}</p>}
 
       {iconRight && (
-        <IconRightCon onClick={onRightIconClick}>{iconRight}</IconRightCon>
+        <IconRightCon onClick={onRightIconClick}>
+          <Icon
+            name={iconRight}
+            onClick={clearInput}
+            style={{
+              height: '100%',
+            }}
+          />
+        </IconRightCon>
       )}
     </Wrapper>
   )

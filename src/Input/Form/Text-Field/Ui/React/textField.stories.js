@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Button from '../../../../Button/Ui/React/Styles/1'
 import Form from '../../../Ui/React/form.index'
-import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
 
+import markdown from './textField.readme.md'
 import TextField from './Styles/1'
 
 // Test data
@@ -67,26 +67,20 @@ const Variations = () => {
         <TextField round placeholder={placeholder} />
       </B>
       <B title='Icon Left'>
-        <TextField
-          placeholder={placeholder}
-          iconLeft={
-            <Icon name='plus/material' color='secondary' noBackground />
-          }
-        />
+        <TextField placeholder={placeholder} iconLeft='plus/material' />
       </B>
       <B title='Icon  right'>
-        <TextField
-          placeholder={placeholder}
-          iconRight={
-            <Icon name='plus/material' color='secondary' noBackground />
-          }
-        />
+        <TextField placeholder={placeholder} iconRight='plus/material' />
       </B>
     </>
   )
 }
 
 // Stories
-storiesOf('Input|Form/TextField', module).add('Variations', () => (
-  <Variations />
-))
+storiesOf('Input|Form/TextField', module).add(
+  'Variations',
+  () => <Variations />,
+  {
+    notes: { markdown },
+  },
+)
