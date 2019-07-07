@@ -3,8 +3,9 @@ import TabsMui from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
 import { Wrapper } from './tabs.styles'
+import { defaultProps, propTypes } from './tabs.propTypes'
 
-const Tabs = ({ tabList, color = 'primary', style = {} }) => {
+const Tabs = ({ tabList, color, style }) => {
   const historyRouter = window.historyRouter
   const tabWidth = 100 / tabList.length
   const currentUrl = window.location.pathname
@@ -37,5 +38,8 @@ const Tabs = ({ tabList, color = 'primary', style = {} }) => {
     </Wrapper>
   )
 }
+
+Tabs.defaultProps = defaultProps
+Tabs.propTypes = propTypes
 
 export default Tabs
