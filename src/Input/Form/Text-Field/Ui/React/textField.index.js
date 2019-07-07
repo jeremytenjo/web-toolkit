@@ -23,6 +23,7 @@ const TextField = (
     name = 'UNAMEDtextField',
     validation = [],
     errMesgStyle = { color: 'red' },
+    font = 'primary',
     color = 'white',
     foregroundColor = 'primary',
     backgroundColor = 'white',
@@ -156,6 +157,7 @@ const TextField = (
           autoComplete={autocomplete}
           placeholder={placeholder}
           onBlur={handleBlur}
+          font={font}
         />
 
         <CloseIconCon ref={closeIconRef} textColor={textColor}>

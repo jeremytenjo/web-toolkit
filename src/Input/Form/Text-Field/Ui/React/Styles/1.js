@@ -41,7 +41,7 @@ const Input = styled.input`
   }
 
   color: ${({ color }) => `var(--color-${color}-darker)`};
-  font-family: var(--font-secondary);
+  font-family: ${({ font }) => `var(--font-${font})`};
   font-size: 16px;
   font-weight: bold;
   width: 100%;
