@@ -17,12 +17,16 @@ const TextField = (
     IconLeftCon,
     IconRightCon,
     InputCon,
+    CloseIconCon,
     onFocus = () => null,
     type = 'text',
     name = 'UNAMEDtextField',
     validation = [],
     errMesgStyle = { color: 'red' },
-    color = 'primary',
+    color = 'white',
+    foregroundColor = 'primary',
+    backgroundColor = 'white',
+    textColor = 'black',
     round,
     iconLeft,
     iconRight,
@@ -120,12 +124,16 @@ const TextField = (
       isFocused={focus}
       style={style}
       width={width}
+      foregroundColor={foregroundColor}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
     >
       {iconLeft && (
         <IconLeftCon onClick={onLeftIconClick}>
           <Icon
             name={iconLeft}
             onClick={clearInput}
+            noBackground
             style={{
               height: '100%',
             }}
@@ -150,16 +158,17 @@ const TextField = (
           onBlur={handleBlur}
         />
 
-        <div ref={closeIconRef}>
+        <CloseIconCon ref={closeIconRef} textColor={textColor}>
           <Icon
             name='close/material'
             onClick={clearInput}
             size={16}
+            fill='black'
             style={{
               height: '100%',
             }}
           />
-        </div>
+        </CloseIconCon>
       </InputCon>
 
       {errMsg !== '' && <p style={errMesgStyle}>{errMsg}</p>}
@@ -169,6 +178,7 @@ const TextField = (
           <Icon
             name={iconRight}
             onClick={clearInput}
+            noBackground
             style={{
               height: '100%',
             }}

@@ -40,7 +40,7 @@ export const WrapperIcon = styled.div`
   `}
 
   /* noBackgroundChange */
-  ${({ background, color, noBackgroundChange }) =>
+  ${({ background, noBackgroundChange }) =>
     background &&
     !noBackgroundChange &&
     `

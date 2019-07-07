@@ -63,14 +63,26 @@ const Variations = () => {
         <TextField color='secondary' placeholder={placeholder} />
       </B>
 
-      <B title='round'>
+      <B title='all color' noBackground>
+        <TextField
+          placeholder={placeholder}
+          backgroundColor='primary-background'
+          textColor='primary-darker'
+          foregroundColor='primary-darker'
+        />
+      </B>
+
+      <B title='round' noBackground>
         <TextField round placeholder={placeholder} />
       </B>
-      <B title='Icon Left'>
+      <B title='Icon Left' noBackground>
         <TextField placeholder={placeholder} iconLeft='plus/material' />
       </B>
-      <B title='Icon  right'>
+      <B title='Icon  right' noBackground>
         <TextField placeholder={placeholder} iconRight='plus/material' />
+      </B>
+      <B title='Icon  right round' noBackground>
+        <TextField placeholder={placeholder} round iconRight='plus/material' />
       </B>
     </>
   )

@@ -5,8 +5,9 @@ import TextField from '../textField.index'
 
 const Wrapper = styled.div`
   transition: .2s;
-  background-color: ${({ color }) => `var(--color-${color}-background)`};
-  color: ${({ color }) => `var(--color-${color}-darker)`};
+  background-color: ${({ backgroundColor }) =>
+    `var(--color-${backgroundColor})`};
+  color: ${({ textColor }) => `var(--color-${textColor})`};
   border-radius: 10px;
   padding: 8px;
   display: flex;
@@ -24,11 +25,11 @@ const Wrapper = styled.div`
   ${({ round }) => round && ` border-radius: 100px;`}
 
     /* Focused */
-  ${({ isFocused, color }) =>
-    isFocused && `border: 2px solid var(--color-${color}-darker);`}
+  ${({ isFocused, foregroundColor }) =>
+    isFocused && `border: 2px solid var(--color-${foregroundColor});`}
 
     svg {
-    fill: ${({ color }) => `var(--color-${color}-darker)`};
+    fill: ${({ foregroundColor }) => `var(--color-${foregroundColor})`};
   }
 
 `
@@ -63,6 +64,12 @@ const InputCon = styled.div`
   position: relative;
 `
 
+const CloseIconCon = styled.div`
+  svg {
+    fill: ${({ textColor }) => `var(--color-${textColor})`};
+  }
+`
+
 export default (props) => (
   <>
     <TextField
@@ -71,6 +78,7 @@ export default (props) => (
       IconLeftCon={IconLeftCon}
       IconRightCon={IconRightCon}
       InputCon={InputCon}
+      CloseIconCon={CloseIconCon}
       {...props}
     />
   </>
