@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import TextField from '../../Text-Field/Ui/React/Styles/1'
 
+import markdown from './form.readme.md'
 import Form from './form.index'
 
 const General = () => (
@@ -25,4 +26,6 @@ const General = () => (
   </>
 )
 
-storiesOf('Input|Form', module).add('Full Example', () => <General />)
+storiesOf('Input|Form', module).add('Full Example', () => <General />, {
+  notes: { markdown },
+})
