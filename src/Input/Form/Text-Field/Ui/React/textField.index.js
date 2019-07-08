@@ -1,49 +1,39 @@
-import React, {
-  useState,
-  memo,
-  useImperativeHandle,
-  forwardRef,
-  useEffect,
-  useRef,
-} from 'react'
+import React, { useState, memo, useEffect, useRef } from 'react'
 
 import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
 import animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
-const TextField = (
-  {
-    Wrapper,
-    Input,
-    IconLeftCon,
-    IconRightCon,
-    InputCon,
-    CloseIconCon,
-    onFocus = () => null,
-    type = 'text',
-    name = 'UNAMEDtextField',
-    validation = [],
-    errMesgStyle = { color: 'red' },
-    font = 'primary',
-    color = 'white',
-    foregroundColor = 'primary',
-    backgroundColor = 'white',
-    textColor = 'black',
-    round,
-    iconLeft,
-    iconRight,
-    placeholder,
-    onBlur = () => null,
-    style,
-    width,
-    label,
-    onLeftIconClick = () => null,
-    onRightIconClick = () => null,
-    autocomplete = 'off',
-    initialInput = '',
-    clearOnSubmit = null,
-  },
-  ref,
-) => {
+const TextField = ({
+  Wrapper,
+  Input,
+  IconLeftCon,
+  IconRightCon,
+  InputCon,
+  CloseIconCon,
+  onFocus = () => null,
+  type = 'text',
+  name = 'UNAMEDtextField',
+  validation = [],
+  errMesgStyle = { color: 'red' },
+  font = 'primary',
+  color = 'white',
+  foregroundColor = 'primary',
+  backgroundColor = 'white',
+  textColor = 'black',
+  round,
+  iconLeft,
+  iconRight,
+  placeholder,
+  onBlur = () => null,
+  style,
+  width,
+  label,
+  onLeftIconClick = () => null,
+  onRightIconClick = () => null,
+  autocomplete = 'off',
+  initialInput = '',
+  clearOnSubmit = null,
+}) => {
   // Refs
   const inputRef = useRef(null)
   const closeIconRef = useRef(null)
@@ -77,16 +67,6 @@ const TextField = (
       })
   }, [input])
 
-  // Shared Functions
-  useImperativeHandle(ref, () => ({
-    clearInput() {
-      clearInput()
-    },
-    getCurrentValue() {
-      getCurrentValue()
-    },
-  }))
-
   // Functions
   const startOnSubmitListener = () => {
     const parentForm = inputRef.current.parentNode.parentNode.parentNode
@@ -104,7 +84,6 @@ const TextField = (
     inputRef.current.focus()
     setInput('')
   }
-  const getCurrentValue = () => input
   const handleValidation = () => {}
 
   const handleChange = async ({ target: { value } }) => {
@@ -200,5 +179,4 @@ const TextField = (
   )
 }
 
-export default memo(forwardRef(TextField))
-// forwardRef does not support proptypes
+export default memo(TextField)
