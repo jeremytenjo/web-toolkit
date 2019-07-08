@@ -4,6 +4,7 @@ const {
   primary,
   primaryDarker,
   primaryBackground,
+  primaryOpaque,
   secondary,
   secondaryDarker,
   secondaryBackground,
@@ -30,6 +31,7 @@ export default `
   --color-primary: ${primary};
   --color-primary-darker: ${primaryDarker};
   --color-primary-background: ${primaryBackground};
+  --color-primary-opaque: ${primaryOpaque};
 
   --color-secondary: ${secondary};
   --color-secondary-darker: ${secondaryDarker};

@@ -2,6 +2,7 @@ export default {
   primary: '#24c3a9',
   primaryDarker: '#005a34',
   primaryBackground: '#aaffdb',
+  primaryOpaque: '#aaffdb',
 
   secondary: '#6700ca',
   secondaryDarker: '#6700ca',

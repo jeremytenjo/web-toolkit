@@ -27,7 +27,7 @@ export const Link = styled.div`
     color: var(--color-${color});
     `
         : `
-    color: var(--color-${color}-background);
+    color: var(--color-${color}-opaque);
     `}
   }
 `
