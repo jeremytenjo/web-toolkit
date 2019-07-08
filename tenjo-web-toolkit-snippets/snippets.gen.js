@@ -1,5 +1,4 @@
 const fs = require('fs')
-
 const glob = require('glob')
 
 const capitalizeFirstLetter = (string) =>
@@ -18,8 +17,10 @@ glob(`build/**/*.index.js`, function(err, files) {
 
     //  Componets/funciton name
     let itemName = fileSplit[fileSplit.length - 1]
-    itemName = itemName.split('.')[0]
+    let itemNameSplit = itemName.split('.')
+    itemName = itemNameSplit[0]
     itemName = capitalizeFirstLetter(itemName)
+
     let firstLetter = itemName
       .split('.')[0]
       .charAt(0)
@@ -28,7 +29,14 @@ glob(`build/**/*.index.js`, function(err, files) {
       .split('.')[0]
       .charAt(1)
       .toLowerCase()
+
     let letters = firstLetter.concat(SecondLetter)
+
+    if (itemNameSplit.length > 3) {
+      let secondParam = itemNameSplit[1].split('.')[0]
+      letters = letters.concat(secondParam)
+      itemName = itemName.concat(` ${secondParam}`)
+    }
 
     //  Framework shortname
     let framework = frameworks.map(({ name, shortName }) => {
@@ -50,12 +58,8 @@ glob(`build/**/*.index.js`, function(err, files) {
   fileString += ' }'
 
   // 2. create snipet file and attach created snippets
-  fs.writeFile(
-    'tenjo-web-toolkit-snippets/snippets/snippets.json',
-    fileString,
-    function(err) {
-      if (err) throw err
-      console.log('Snippet file created successfully :)')
-    },
-  )
+  fs.writeFile('snippets/snippets.json', fileString, function(err) {
+    if (err) throw err
+    console.log('Snippet file created successfully :)')
+  })
 })
