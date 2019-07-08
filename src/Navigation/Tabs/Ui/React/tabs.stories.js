@@ -19,11 +19,11 @@ const DataTabs2 = [
 
 const Variations = () => (
   <>
-    <B title='1' noBackground>
+    <B title='1' noBackground style={{ width: '100%' }}>
       <Tabs1 tabList={DataTabs} />
     </B>
 
-    <B title='2' noBackground>
+    <B title='2' noBackground style={{ width: '100%' }}>
       <Tabs2 tabList={DataTabs2} font='secondary' />
     </B>
   </>
