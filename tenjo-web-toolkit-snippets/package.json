@@ -1,6 +1,7 @@
 {
   "name": "tenjo-web-toolkit-snippets",
   "displayName": "tenjo-web-toolkit-snippets",
+  "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Snippets for @tenjojeremy/tenjo-web-toolkit",
   "publisher": "tenjojeremy",
   "version": "0.0.1",
