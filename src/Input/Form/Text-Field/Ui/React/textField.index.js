@@ -99,6 +99,10 @@ const TextField = (
   const handleFormListener = () => isValid && setInput('')
 
   const clearInput = () => setInput('')
+  const clearIconClick = () => {
+    inputRef.current.focus()
+    setInput('')
+  }
   const getCurrentValue = () => input
   const handleValidation = () => {}
 
@@ -163,7 +167,7 @@ const TextField = (
         <CloseIconCon ref={closeIconRef} textColor={textColor}>
           <Icon
             name='close/material'
-            onClick={clearInput}
+            onClick={clearIconClick}
             size={16}
             fill='black'
             style={{
