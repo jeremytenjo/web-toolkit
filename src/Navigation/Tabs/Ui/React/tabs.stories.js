@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
-import Tabs1 from './1/tabs.index'
-import Tabs2 from './2/tabs.index'
+import Tabs1 from './Styles/1/tabs.index'
+import Tabs2 from './Styles/2/tabs.index'
 
 const DataTabs = [
   { label: 'Photos', link: '/profile/photos' },

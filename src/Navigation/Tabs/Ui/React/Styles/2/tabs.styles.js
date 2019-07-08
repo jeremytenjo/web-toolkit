@@ -12,7 +12,7 @@ export const Link = styled.div`
   span {
     transition: var(--transition-main);
     font-style: normal;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 22px;
     line-height: 27px;
     white-space: nowrap;
