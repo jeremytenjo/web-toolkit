@@ -73,6 +73,7 @@ const TextField = (
         el: closeIconRef.current,
         config,
         show: input !== '',
+        displayType: 'visibility',
       })
   }, [input])
 
@@ -164,7 +165,11 @@ const TextField = (
           font={font}
         />
 
-        <CloseIconCon ref={closeIconRef} textColor={textColor}>
+        <CloseIconCon
+          ref={closeIconRef}
+          textColor={textColor}
+          style={{ visibility: 'hidden' }}
+        >
           <Icon
             name='close/material'
             onClick={clearIconClick}

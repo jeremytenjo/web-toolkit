@@ -1,23 +1,35 @@
-export default ({ el, show, fill = 'forwards', duration = 200 }) => {
+export default ({
+  el,
+  show,
+  fill = 'forwards',
+  duration = 200,
+  displayType = 'display',
+}) => {
   const config = { fill, duration }
+  const showAttr = displayType === 'display' ? 'block' : 'visible'
+  const hideAttr = displayType === 'display' ? 'none' : 'hidden'
 
-  console.log(show)
+  if (
+    (el.style[displayType] === showAttr && show) ||
+    (el.style[displayType] === hideAttr && !show)
+  )
+    return null
 
-  el.style.display = 'block'
+  el.style[displayType] = showAttr
 
   const start = {
     opacity: show ? 0 : 1,
-    display: 'none',
+    [displayType]: hideAttr,
   }
 
   const to = {
     opacity: show ? 1 : 0,
-    display: 'block',
+    [displayType]: showAttr,
   }
 
   const anim = el.animate([start, to], config)
 
   anim.onfinish = () => {
-    if (!show) el.style.display = 'none'
+    if (!show) el.style[displayType] = hideAttr
   }
 }

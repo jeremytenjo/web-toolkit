@@ -14,7 +14,8 @@ const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   width: ${({ width }) => width};
-  border: 2px solid var(--color-${({ color }) => color}-background);
+  border: 2px solid var(--color-${({ foregroundColor }) =>
+    foregroundColor}-background);
 
   img {
     color: ${({ color }) => `var(--color-${color})`};
