@@ -5,6 +5,7 @@ import B from '../../../../../.storybook/Custom-Components/VariationBlock/variat
 
 import Tabs1 from './Styles/1/tabs.index'
 import Tabs2 from './Styles/2/tabs.index'
+import markdown from './tabs.readme.md'
 
 const DataTabs = [
   { label: 'Photos', link: '/profile/photos' },
@@ -29,4 +30,10 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Navigation|Tabs/Ui/React/', module).add('all', () => <Variations />)
+storiesOf('Navigation|Tabs/Ui/React/', module).add(
+  'all',
+  () => <Variations />,
+  {
+    notes: { markdown },
+  },
+)
