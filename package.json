@@ -5,9 +5,7 @@
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
+  "files": ["build"],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && yarn publish:snippets && gpush && rmdir /s /q build",
@@ -43,7 +41,8 @@
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "react-lazyload": "^2.6.2",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "react-bottom-scroll-listener": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
@@ -68,7 +67,6 @@
     "image-compressor.js": "^1.1.4",
     "jest": "^24.8.0",
     "react": "^16.8.6",
-    "react-bottom-scroll-listener": "^3.0.0",
     "react-dom": "^16.8.6",
     "react-final-form-hooks": "^2.0.0",
     "react-hot-loader": "^4.12.5",
