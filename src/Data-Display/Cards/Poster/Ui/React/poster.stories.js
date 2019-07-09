@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 import markdown from './poster.readme.md'
-import One from './Styles/1.index'
+import One from './Styles/poster.1.index'
 const image =
   'https://images-na.ssl-images-amazon.com/images/I/818NtgncwLL._SL1500_.jpg'
 
