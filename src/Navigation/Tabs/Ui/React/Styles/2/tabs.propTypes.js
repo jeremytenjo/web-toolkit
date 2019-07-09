@@ -3,13 +3,13 @@ import { string, array, object } from 'prop-types'
 export const defaultProps = {
   color: 'primary',
   font: 'primary',
-  tabList: [],
+  data: [],
   style: {},
 }
 
 export const propTypes = {
   color: string,
   font: string,
-  tabList: array,
+  data: array,
   style: object,
 }

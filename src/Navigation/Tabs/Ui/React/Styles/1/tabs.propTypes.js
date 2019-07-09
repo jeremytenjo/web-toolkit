@@ -2,12 +2,12 @@ import { string, array, object } from 'prop-types'
 
 export const defaultProps = {
   color: 'primary',
-  tabList: [],
+  data: [],
   style: {},
 }
 
 export const propTypes = {
   color: string,
-  tabList: array,
+  data: array,
   style: object,
 }

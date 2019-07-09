@@ -3,14 +3,14 @@ import React from 'react'
 import { Wrapper, Link } from './tabs.styles'
 import { defaultProps, propTypes } from './tabs.propTypes'
 
-const Tabs = ({ tabList, color, font, style }) => {
+const Tabs = ({ data, color, font, style }) => {
   const historyRouter = window.historyRouter
   const currentUrl = window.location.pathname
 
   //Template
   return (
     <Wrapper style={{ ...style }} color={color}>
-      {tabList.map(({ label, link }) => {
+      {data.map(({ label, link }) => {
         console.log(currentUrl)
         console.log(link)
         const isActive = currentUrl === link

@@ -5,13 +5,13 @@ import Tab from '@material-ui/core/Tab'
 import { Wrapper } from './tabs.styles'
 import { defaultProps, propTypes } from './tabs.propTypes'
 
-const Tabs = ({ tabList, color, style }) => {
+const Tabs = ({ data, color, style }) => {
   const historyRouter = window.historyRouter
-  const tabWidth = 100 / tabList.length
+  const tabWidth = 100 / data.length
   const currentUrl = window.location.pathname
   let currentTabIndex
 
-  currentTabIndex = tabList.findIndex((tab) => tab.link === currentUrl)
+  currentTabIndex = data.findIndex((tab) => tab.link === currentUrl)
   currentTabIndex === -1 && (currentTabIndex = 0)
 
   //Template
@@ -23,7 +23,7 @@ const Tabs = ({ tabList, color, style }) => {
         textColor={color}
         variant='fullWidth'
       >
-        {tabList.map((item) => (
+        {data.map((item) => (
           <Tab
             style={{
               width: tabWidth,
