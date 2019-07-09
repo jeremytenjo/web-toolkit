@@ -11,8 +11,6 @@ const Tabs = ({ data, color, font, style, router, pathname }) => {
   return (
     <Wrapper style={{ ...style }} color={color}>
       {data.map(({ label, link }) => {
-        console.log(currentUrl)
-        console.log(link)
         const isActive = currentUrl === link
 
         return (
