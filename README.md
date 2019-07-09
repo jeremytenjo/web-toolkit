@@ -14,9 +14,15 @@ Library of reusable UI and utilities
 
 ## Installation
 
-```sh
+```
 yarn add @tenjojeremy/web-toolkit
 ```
+
+## Snippet Extension
+
+Download the VS Code snippet extension to save yourself time 😎
+
+https://marketplace.visualstudio.com/items?itemName=tenjojeremy.tenjo-web-toolkit-snippets
 
 ## License
 
