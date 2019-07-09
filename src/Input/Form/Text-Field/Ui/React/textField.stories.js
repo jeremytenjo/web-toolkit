@@ -6,7 +6,7 @@ import Button from '../../../../Button/Ui/React/Styles/1'
 import Form from '../../../Ui/React/form.index'
 
 import markdown from './textField.readme.md'
-import TextField from './Styles/1'
+import TextField from './Styles/style1'
 
 // Test data
 const placeholder = 'this is a Placeholder'

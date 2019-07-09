@@ -34,7 +34,7 @@ const TextField = (
     placeholder,
     onBlur = () => null,
     style,
-    width,
+    width = 'fit-content',
     label,
     onLeftIconClick = () => null,
     onRightIconClick = () => null,
