@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Wrapper, Link } from './tabs.styles'
-import { defaultProps, propTypes } from './tabs.propTypes'
+import { Wrapper, Link } from './tabs.2.styles'
+import { defaultProps, propTypes } from './tabs.2.propTypes'
 
 const Tabs = ({ data, color, font, style, router, pathname }) => {
   const historyRouter = router || window.historyRouter
