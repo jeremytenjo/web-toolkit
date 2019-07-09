@@ -94,9 +94,9 @@
       "body": ["import Firestore from '@tenjojeremy/web-toolkit/build/Database/Firestore/firestore.index.js'"],
     },
     
-    "Firestore": {
-      "prefix": "wtfi",
-      "body": ["import Firestore from '@tenjojeremy/web-toolkit/build/Database/Firestore/Update/firestore.update.index.js'"],
+    "Firestore update": {
+      "prefix": "wtfiupdate",
+      "body": ["import Firestore update from '@tenjojeremy/web-toolkit/build/Database/Firestore/Update/firestore.update.index.js'"],
     },
     
     "Calendar": {
@@ -134,9 +134,9 @@
       "body": ["import Dialog from '@tenjojeremy/web-toolkit/build/Feedback/Dialog/Ui/React/dialog.index.js'"],
     },
     
-    "Dialog": {
-      "prefix": "wtdir",
-      "body": ["import Dialog from '@tenjojeremy/web-toolkit/build/Feedback/Dialog/Ui/React/Styles/Style1/dialog.style1.index.js'"],
+    "Dialog style1": {
+      "prefix": "wtdistyle1r",
+      "body": ["import Dialog style1 from '@tenjojeremy/web-toolkit/build/Feedback/Dialog/Ui/React/Styles/Style1/dialog.style1.index.js'"],
     },
     
     "Drawer": {
@@ -204,19 +204,19 @@
       "body": ["import Image from '@tenjojeremy/web-toolkit/build/Media/Image/Ui/React/image.index.js'"],
     },
     
-    "Images": {
-      "prefix": "wtim",
-      "body": ["import Images from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Compress/images.compress.index.js'"],
+    "Images compress": {
+      "prefix": "wtimcompress",
+      "body": ["import Images compress from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Compress/images.compress.index.js'"],
     },
     
-    "Images": {
-      "prefix": "wtim",
-      "body": ["import Images from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/FixOrientation/images.fixOrientation.index.js'"],
+    "Images fixOrientation": {
+      "prefix": "wtimfixOrientation",
+      "body": ["import Images fixOrientation from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/FixOrientation/images.fixOrientation.index.js'"],
     },
     
-    "Image": {
-      "prefix": "wtim",
-      "body": ["import Image from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Resize/image.resize.index.js'"],
+    "Image resize": {
+      "prefix": "wtimresize",
+      "body": ["import Image resize from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Resize/image.resize.index.js'"],
     },
     
     "AddToHomeScreen": {

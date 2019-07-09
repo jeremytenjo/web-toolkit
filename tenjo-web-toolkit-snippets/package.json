@@ -3,13 +3,15 @@
   "displayName": "tenjo-web-toolkit-snippets",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Snippets for @tenjojeremy/web-toolkit",
-  "icon": "https://firebasestorage.googleapis.com/v0/b/tenjo-web-toolkit.appspot.com/o/logo.png?alt=media&token=61a2cce1-e622-4495-8e18-372efb02159e",
+  "icon": "logo-snippets.png",
   "publisher": "tenjojeremy",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.36.0"
   },
-  "categories": ["Snippets"],
+  "categories": [
+    "Snippets"
+  ],
   "contributes": {
     "snippets": [
       {

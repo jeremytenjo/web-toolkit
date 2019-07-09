@@ -1,4 +1,5 @@
 const fs = require('fs')
+
 const glob = require('glob')
 
 const capitalizeFirstLetter = (string) =>
@@ -58,8 +59,12 @@ glob(`build/**/*.index.js`, function(err, files) {
   fileString += ' }'
 
   // 2. create snipet file and attach created snippets
-  fs.writeFile('snippets/snippets.json', fileString, function(err) {
-    if (err) throw err
-    console.log('Snippet file created successfully :)')
-  })
+  fs.writeFile(
+    'tenjo-web-toolkit-snippets/snippets/snippets.json',
+    fileString,
+    function(err) {
+      if (err) throw err
+      console.log('Snippet file created successfully :)')
+    },
+  )
 })

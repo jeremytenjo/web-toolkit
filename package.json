@@ -9,11 +9,12 @@
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && gpush && rmdir /s /q build",
-    "build:snippets": "cd tenjo-web-toolkit-snippets && node tenjo-web-toolkit-snippets/snippets.gen.js",
+    "build:snippets": "node tenjo-web-toolkit-snippets/snippets.gen.js",
     "build:library": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./.babelrc ./src --out-dir ./build/ --ignore 'src/**/*.spec.js','src/**/*.test.js','src/**/*.stories.js' ",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
     "publish:minor": "yarn build:library && yarn publish --minor",
+    "publish:snippets": " cd tenjo-web-toolkit-snippets && vsce publish minor",
     "test": "jest",
     "pretty": "prettier \"**/*.js\" --write",
     "cy:open": "cypress open",
