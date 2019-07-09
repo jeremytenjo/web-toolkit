@@ -3,9 +3,9 @@ import React from 'react'
 import { Wrapper, Link } from './tabs.styles'
 import { defaultProps, propTypes } from './tabs.propTypes'
 
-const Tabs = ({ data, color, font, style }) => {
-  const historyRouter = window.historyRouter
-  const currentUrl = window.location.pathname
+const Tabs = ({ data, color, font, style, router, pathname }) => {
+  const historyRouter = router || window.historyRouter
+  const currentUrl = pathname || window.location.pathname
 
   //Template
   return (
