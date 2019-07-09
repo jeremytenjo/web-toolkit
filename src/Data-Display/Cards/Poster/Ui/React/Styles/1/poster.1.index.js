@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Image from '../../../../../../Media/Image/Ui/React/image.index'
+import Image from '../../../../../../../Media/Image/Ui/React/image.index'
 
 import { defaultProps, propTypes } from './poster.1.propTypes'
 import { Wrapper } from './poster.1.styles'
