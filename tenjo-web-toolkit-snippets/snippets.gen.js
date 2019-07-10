@@ -9,7 +9,7 @@ const capitalizeFirstLetter = (string) =>
 const frameworks = [{ name: 'React', shortName: 'r' }]
 
 let fileString = '{ '
-const packageName = '@tenjo/web-features'
+const packageName = '@tenjojeremy/web-toolkit'
 
 glob(`build/**/*.index.js`, function(err, files) {
   if (err) throw err
