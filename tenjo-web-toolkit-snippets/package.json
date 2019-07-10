@@ -5,7 +5,7 @@
   "description": "Snippets for @tenjojeremy/web-toolkit",
   "icon": "logo-snippets.png",
   "publisher": "tenjojeremy",
-  "version": "0.18.0",
+  "version": "0.19.0",
   "engines": {
     "vscode": "^1.36.0"
   },
