@@ -9,6 +9,7 @@ const capitalizeFirstLetter = (string) =>
 const frameworks = [{ name: 'React', shortName: 'r' }]
 
 let fileString = '{ '
+const packageName = '@tenjo/web-features'
 
 glob(`build/**/*.index.js`, function(err, files) {
   if (err) throw err
@@ -49,7 +50,7 @@ glob(`build/**/*.index.js`, function(err, files) {
     const snippet = `
     "${itemName}": {
       "prefix": "wt${letters}${inial}",
-      "body": ["import ${itemName} from '@tenjo/web-features/${file}'"],
+      "body": ["import ${itemName} from '${packageName}/${file}'"],
     },
     `
 
