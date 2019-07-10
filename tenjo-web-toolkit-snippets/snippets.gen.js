@@ -49,7 +49,7 @@ glob(`build/**/*.index.js`, function(err, files) {
     const snippet = `
     "${itemName}": {
       "prefix": "wt${letters}${inial}",
-      "body": ["import ${itemName} from '@tenjojeremy/web-toolkit/${file}'"],
+      "body": ["import ${itemName} from '@tenjo/web-features/${file}'"],
     },
     `
 
