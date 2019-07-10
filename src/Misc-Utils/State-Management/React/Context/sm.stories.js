@@ -16,6 +16,6 @@ const App = () => {
   )
 }
 
-storiesOf('Misc-Utils|State-Management/React', module).add('Example', () => (
+storiesOf('Misc-Utils|State-Management/React', module).add('Context', () => (
   <App />
 ))
