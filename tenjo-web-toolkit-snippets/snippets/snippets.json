@@ -269,6 +269,26 @@
       "body": ["import Update from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Actions/Update/update.index.js'"],
     },
     
+    "Context create": {
+      "prefix": "wtcocreater",
+      "body": ["import Context create from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Create/context.create.index.js'"],
+    },
+    
+    "Context delete": {
+      "prefix": "wtcodeleter",
+      "body": ["import Context delete from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Delete/context.delete.index.js'"],
+    },
+    
+    "Context read": {
+      "prefix": "wtcoreadr",
+      "body": ["import Context read from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Read/context.read.index.js'"],
+    },
+    
+    "Context update": {
+      "prefix": "wtcoupdater",
+      "body": ["import Context update from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Update/context.update.index.js'"],
+    },
+    
     "NavBar": {
       "prefix": "wtnar",
       "body": ["import NavBar from '@tenjojeremy/web-toolkit/build/Navigation/Navbar/Ui/React/Style1/navBar.index.js'"],

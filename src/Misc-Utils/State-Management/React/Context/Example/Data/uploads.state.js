@@ -1,9 +1,9 @@
 import React, { useState, createContext, useContext } from 'react'
 
-import _uploadsRead from '../../Actions/Read/read.index'
-import _uploadsUpdate from '../../Actions/Update/update.index'
-import _uploadsCreate from '../../Actions/Create/create.index'
-import _uploadsDelete from '../../Actions/Delete/delete.index'
+import _uploadsRead from '../../Actions/Read/context.read.index'
+import _uploadsUpdate from '../../Actions/Update/context.update.index'
+import _uploadsCreate from '../../Actions/Create/context.create.index'
+import _uploadsDelete from '../../Actions/Delete/context.delete.index'
 
 export const UploadsContext = createContext(null)
 
