@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from '../button.index'
+import Button from '../button.base'
 
 const Wrapper = styled.button`
   /* Base */

@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import markdown from '../README.md'
-import ButtonStyle1 from '../Styles/1'
+import ButtonStyle1 from '../Styles/style1.index'
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
 
 import Variations from './button.variations'

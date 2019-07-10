@@ -29,6 +29,9 @@ const Variations = ({ Button, name }) => {
       <B title='outlined' color='black'>
         <Button outlined />
       </B>
+      <B title='loading'>
+        <Button loading />
+      </B>
       <B title='iconName'>
         <Button iconName='camera/material' />
       </B>
