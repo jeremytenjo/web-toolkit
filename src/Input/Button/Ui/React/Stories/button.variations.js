@@ -31,8 +31,7 @@ const Variations = ({ Button, name }) => {
         <Button outlined />
       </B>
       <B title='loading'>
-        <button onClick={() => setLoading(true)}>true</button>
-        <button onClick={() => setLoading(false)}>false</button>
+        <button onClick={() => setLoading(!loading)}>toggle</button>
         <br />
         <br />
         <Button loading={loading} />
