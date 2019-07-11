@@ -1,7 +1,6 @@
 /*
 Fonts available:
   Montserrat
-  Quicksand
   Roboto
 */
 export default `
@@ -97,7 +96,7 @@ span[variant="subtitle2"] {
 span[variant="button"] {
   font-family: var(--font-primary);
   font-style: normal;
-  font-weight: bold;
+  font-weight: medium;
   font-size: 14px;
   letter-spacing: 0.75px;
   text-transform: uppercase;

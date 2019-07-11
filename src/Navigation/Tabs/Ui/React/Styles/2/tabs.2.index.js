@@ -1,35 +1,31 @@
 import React from 'react'
+import styled from 'styled-components'
 
-import { Wrapper, Link } from './tabs.2.styles'
-import { defaultProps, propTypes } from './tabs.2.propTypes'
+import Base from '../../tabs.base'
 
-const Tabs = ({ data, color, font, style, router, pathname }) => {
-  const historyRouter = router || window.historyRouter
-  const currentUrl = pathname || window.location.pathname
+const Tab = styled.div`
+  cursor: pointer;
+  user-select: none;
+  span {
+    transition: var(--transition-main);
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 22px;
+    line-height: 27px;
+    white-space: nowrap;
+    ${({ font }) => `
+    font-family: var(--font-${font});
+    `}
 
-  //Template
-  return (
-    <Wrapper style={{ ...style }} color={color}>
-      {data.map(({ label, link }) => {
-        const isActive = currentUrl === link
+    ${({ color, isActive }) =>
+      isActive
+        ? `
+    color: var(--color-${color});
+    `
+        : `
+    color: var(--color-${color}-opaque);
+    `}
+  }
+`
 
-        return (
-          <Link
-            color={color}
-            key={label}
-            onClick={() => historyRouter.push(link)}
-            font={font}
-            isActive={isActive}
-          >
-            <span>{label}</span>
-          </Link>
-        )
-      })}
-    </Wrapper>
-  )
-}
-
-Tabs.defaultProps = defaultProps
-Tabs.propTypes = propTypes
-
-export default Tabs
+export default (props) => <Base Tab={Tab} {...props} />

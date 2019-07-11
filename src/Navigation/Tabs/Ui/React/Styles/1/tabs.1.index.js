@@ -2,8 +2,8 @@ import React from 'react'
 import TabsMui from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
-import { Wrapper } from './tabs.styles'
-import { defaultProps, propTypes } from './tabs.propTypes'
+import { Wrapper } from './tabs.1.styles'
+import { defaultProps, propTypes } from './tabs.1.propTypes'
 
 const Tabs = ({ data, color, style }) => {
   const historyRouter = window.historyRouter
