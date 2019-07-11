@@ -66,6 +66,8 @@ const InputCon = styled.div`
 `
 
 const CloseIconCon = styled.div`
+  display: flex;
+  align-items: center;
   svg {
     fill: ${({ textColor }) => `var(--color-${textColor})`};
   }
