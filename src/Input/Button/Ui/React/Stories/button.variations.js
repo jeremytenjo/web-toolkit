@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
 
 const Variations = ({ Button, name }) => {
+  const [loading, setLoading] = useState(null)
   return (
     <div>
       <Typography
@@ -30,7 +31,11 @@ const Variations = ({ Button, name }) => {
         <Button outlined />
       </B>
       <B title='loading'>
-        <Button loading />
+        <button onClick={() => setLoading(true)}>true</button>
+        <button onClick={() => setLoading(false)}>false</button>
+        <br />
+        <br />
+        <Button loading={loading} />
       </B>
       <B title='iconName'>
         <Button iconName='camera/material' />

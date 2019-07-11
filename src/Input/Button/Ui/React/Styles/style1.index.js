@@ -3,7 +3,11 @@ import styled from 'styled-components'
 
 import Button from '../button.base'
 
-const Wrapper = styled.button`
+const Wrapper = styled.div`
+  position: relative;
+`
+
+const StyledButton = styled.button`
   /* Base */
   background-color: ${({ color }) => `var(--color-${color}-background)`};
   border-radius: 100px;
@@ -75,8 +79,28 @@ const Wrapper = styled.button`
   `}
 `
 
+const LoadingCon = styled.div`
+  ${({ color }) => `
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-${color}-opaque);
+    border-radius: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  `}
+`
+
 export default (props) => (
   <>
-    <Button Wrapper={Wrapper} {...props} />
+    <Button
+      Wrapper={Wrapper}
+      StyledButton={StyledButton}
+      LoadingCon={LoadingCon}
+      {...props}
+    />
   </>
 )

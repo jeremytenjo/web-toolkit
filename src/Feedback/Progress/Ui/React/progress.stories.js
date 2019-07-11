@@ -5,15 +5,19 @@ import B from '../../../../../.storybook/Custom-Components/VariationBlock/variat
 
 import Linear from './Linear/linear.index'
 import Donut from './Donut/donut.index'
+import Dots from './Dots/dots.index'
 
 const Variations = () => {
   return (
     <>
-      <B title='linear'>
+      <B title='linear' noBackground>
         <Linear color='secondary' />
       </B>
-      <B title='donut'>
+      <B title='donut' noBackground>
         <Donut color='primary' />
+      </B>
+      <B title='dots' noBackground>
+        <Dots />
       </B>
     </>
   )
