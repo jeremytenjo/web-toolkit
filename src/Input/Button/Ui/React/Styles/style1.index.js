@@ -88,7 +88,7 @@ const LoadingCon = styled.div`
     left: 0;
     background-color: var(--color-${color}-opaque);
     border-radius: 100px;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
   `}
