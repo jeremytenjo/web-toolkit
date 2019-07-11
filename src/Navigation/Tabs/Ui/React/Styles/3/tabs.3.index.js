@@ -28,7 +28,7 @@ const Tab = styled.div`
     font-family: var(--font-${font});
     `}
 
-    ${({ color, active }) =>
+    ${({ active }) =>
       active &&
       `
     color: var(--color-black);
@@ -40,6 +40,7 @@ const WrapperStyles = {
   backgroundColor: 'rgba(255,255,255,0.6)',
   borderRadius: '100px',
   width: 'fit-content',
+  margin: '0 auto',
   gridGap: 0,
 }
 

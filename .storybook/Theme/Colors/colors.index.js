@@ -21,7 +21,7 @@ export default {
   white: '#fff',
   whiteOpaque: 'rgba(255, 255, 255, 0.8)',
 
-  black: '#212121',
+  black: '#263238',
   blackBackground: 'rgba(0, 0, 0, 0.1)',
   blackOpaque: 'rgba(33, 33, 33, 0.8)',
 

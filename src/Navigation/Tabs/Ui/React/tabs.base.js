@@ -19,8 +19,7 @@ const Tabs = ({ Tab, data, color, font, style, router, pathname }) => {
             key={label}
             onClick={() => historyRouter.push(link)}
             font={font}
-            // active={active}
-            active
+            active={active}
           >
             <span>{label}</span>
           </Tab>
