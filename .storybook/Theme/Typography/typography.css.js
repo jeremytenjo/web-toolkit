@@ -7,7 +7,7 @@ Fonts available:
 export default `
 
 :root {
- --font-primary: Roboto;
+ --font-primary: Montserrat;
  --font-secondary: Montserrat;
 }
 
