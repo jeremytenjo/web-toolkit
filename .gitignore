@@ -11,6 +11,9 @@ build
 # Firebase 
 .firebase
 
+# Cypress 
+cypress/screenshots
+
 # misc
 .DS_Store
 .env.local
