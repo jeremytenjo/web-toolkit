@@ -41,6 +41,8 @@ glob(`build/**/*.index.js`, function(err, files) {
       itemName = itemName.concat(` ${secondParam}`)
     }
 
+    let importName = itemName.split(' ')[0]
+
     //  Framework shortname
     let framework = frameworks.map(({ name, shortName }) => {
       let isFramework = fileSplit.includes(name)
@@ -51,7 +53,7 @@ glob(`build/**/*.index.js`, function(err, files) {
     const snippet = `
     "${itemName}": {
       "prefix": "wt${letters}${inial}",
-      "body": ["import ${itemName} from '${packageName}/${file}'"],
+      "body": ["import ${importName} from '${packageName}/${file}'"],
     },
     `
 

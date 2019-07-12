@@ -46,7 +46,7 @@
     
     "Poster 1": {
       "prefix": "wtpo1r",
-      "body": ["import Poster 1 from '@tenjojeremy/web-toolkit/build/Data-Display/Cards/Poster/Ui/React/Styles/1/poster.1.index.js'"],
+      "body": ["import Poster from '@tenjojeremy/web-toolkit/build/Data-Display/Cards/Poster/Ui/React/Styles/1/poster.1.index.js'"],
     },
     
     "Chip": {
@@ -96,7 +96,7 @@
     
     "Firestore update": {
       "prefix": "wtfiupdate",
-      "body": ["import Firestore update from '@tenjojeremy/web-toolkit/build/Database/Firestore/Update/firestore.update.index.js'"],
+      "body": ["import Firestore from '@tenjojeremy/web-toolkit/build/Database/Firestore/Update/firestore.update.index.js'"],
     },
     
     "Calendar": {
@@ -136,7 +136,7 @@
     
     "Dialog style1": {
       "prefix": "wtdistyle1r",
-      "body": ["import Dialog style1 from '@tenjojeremy/web-toolkit/build/Feedback/Dialog/Ui/React/Styles/Style1/dialog.style1.index.js'"],
+      "body": ["import Dialog from '@tenjojeremy/web-toolkit/build/Feedback/Dialog/Ui/React/Styles/Style1/dialog.style1.index.js'"],
     },
     
     "Drawer": {
@@ -159,6 +159,11 @@
       "body": ["import Donut from '@tenjojeremy/web-toolkit/build/Feedback/Progress/Ui/React/Donut/donut.index.js'"],
     },
     
+    "Dots": {
+      "prefix": "wtdor",
+      "body": ["import Dots from '@tenjojeremy/web-toolkit/build/Feedback/Progress/Ui/React/Dots/dots.index.js'"],
+    },
+    
     "Linear": {
       "prefix": "wtlir",
       "body": ["import Linear from '@tenjojeremy/web-toolkit/build/Feedback/Progress/Ui/React/Linear/linear.index.js'"],
@@ -174,9 +179,9 @@
       "body": ["import Toast from '@tenjojeremy/web-toolkit/build/Feedback/Toast/toast.index.js'"],
     },
     
-    "Button": {
-      "prefix": "wtbur",
-      "body": ["import Button from '@tenjojeremy/web-toolkit/build/Input/Button/Ui/React/button.index.js'"],
+    "Style1": {
+      "prefix": "wtstr",
+      "body": ["import Style1 from '@tenjojeremy/web-toolkit/build/Input/Button/Ui/React/Styles/style1.index.js'"],
     },
     
     "Collection": {
@@ -184,9 +189,9 @@
       "body": ["import Collection from '@tenjojeremy/web-toolkit/build/Input/Collection/React/Ui/collection.index.js'"],
     },
     
-    "TextField": {
-      "prefix": "wtter",
-      "body": ["import TextField from '@tenjojeremy/web-toolkit/build/Input/Form/Text-Field/Ui/React/textField.index.js'"],
+    "Textfield 1": {
+      "prefix": "wtte1r",
+      "body": ["import Textfield from '@tenjojeremy/web-toolkit/build/Input/Form/Text-Field/Ui/React/Styles/textfield.1.index.js'"],
     },
     
     "Form": {
@@ -206,17 +211,17 @@
     
     "Images compress": {
       "prefix": "wtimcompress",
-      "body": ["import Images compress from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Compress/images.compress.index.js'"],
+      "body": ["import Images from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Compress/images.compress.index.js'"],
     },
     
     "Images fixOrientation": {
       "prefix": "wtimfixOrientation",
-      "body": ["import Images fixOrientation from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/FixOrientation/images.fixOrientation.index.js'"],
+      "body": ["import Images from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/FixOrientation/images.fixOrientation.index.js'"],
     },
     
     "Image resize": {
       "prefix": "wtimresize",
-      "body": ["import Image resize from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Resize/image.resize.index.js'"],
+      "body": ["import Image from '@tenjojeremy/web-toolkit/build/Media/Image/Utils/Resize/image.resize.index.js'"],
     },
     
     "AddToHomeScreen": {
@@ -249,44 +254,29 @@
       "body": ["import Sticky from '@tenjojeremy/web-toolkit/build/Misc-Utils/Position/Sticky/sticky.index.js'"],
     },
     
-    "Create": {
-      "prefix": "wtcrr",
-      "body": ["import Create from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Actions/Create/create.index.js'"],
-    },
-    
-    "Delete": {
-      "prefix": "wtder",
-      "body": ["import Delete from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Actions/Delete/delete.index.js'"],
-    },
-    
-    "Read": {
-      "prefix": "wtrer",
-      "body": ["import Read from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Actions/Read/read.index.js'"],
-    },
-    
-    "Update": {
-      "prefix": "wtupr",
-      "body": ["import Update from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Actions/Update/update.index.js'"],
-    },
-    
     "Context create": {
       "prefix": "wtcocreater",
-      "body": ["import Context create from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Create/context.create.index.js'"],
+      "body": ["import Context from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Create/context.create.index.js'"],
     },
     
     "Context delete": {
       "prefix": "wtcodeleter",
-      "body": ["import Context delete from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Delete/context.delete.index.js'"],
+      "body": ["import Context from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Delete/context.delete.index.js'"],
     },
     
     "Context read": {
       "prefix": "wtcoreadr",
-      "body": ["import Context read from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Read/context.read.index.js'"],
+      "body": ["import Context from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Read/context.read.index.js'"],
     },
     
     "Context update": {
       "prefix": "wtcoupdater",
-      "body": ["import Context update from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Update/context.update.index.js'"],
+      "body": ["import Context from '@tenjojeremy/web-toolkit/build/Misc-Utils/State-Management/React/Context/Actions/Update/context.update.index.js'"],
+    },
+    
+    "ToBoolean": {
+      "prefix": "wtto",
+      "body": ["import ToBoolean from '@tenjojeremy/web-toolkit/build/Misc-Utils/String/toBoolean.index.js'"],
     },
     
     "NavBar": {
@@ -294,14 +284,19 @@
       "body": ["import NavBar from '@tenjojeremy/web-toolkit/build/Navigation/Navbar/Ui/React/Style1/navBar.index.js'"],
     },
     
-    "Tabs": {
-      "prefix": "wttar",
-      "body": ["import Tabs from '@tenjojeremy/web-toolkit/build/Navigation/Tabs/Ui/React/Styles/1/tabs.index.js'"],
+    "Tabs 1": {
+      "prefix": "wtta1r",
+      "body": ["import Tabs from '@tenjojeremy/web-toolkit/build/Navigation/Tabs/Ui/React/Styles/1/tabs.1.index.js'"],
     },
     
     "Tabs 2": {
       "prefix": "wtta2r",
-      "body": ["import Tabs 2 from '@tenjojeremy/web-toolkit/build/Navigation/Tabs/Ui/React/Styles/2/tabs.2.index.js'"],
+      "body": ["import Tabs from '@tenjojeremy/web-toolkit/build/Navigation/Tabs/Ui/React/Styles/2/tabs.2.index.js'"],
+    },
+    
+    "Tabs 3": {
+      "prefix": "wtta3r",
+      "body": ["import Tabs from '@tenjojeremy/web-toolkit/build/Navigation/Tabs/Ui/React/Styles/3/tabs.3.index.js'"],
     },
     
     "Stripe": {
