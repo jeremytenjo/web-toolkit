@@ -1,20 +1,14 @@
 import React, { useState } from 'react'
+import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
+import markdown from '../button.readme.md'
+import Button from '../Styles/button.1.index'
 
-const Variations = ({ Button, name }) => {
+export const States = ({ Button }) => {
   const [loading, setLoading] = useState(null)
   return (
     <div>
-      <Typography
-        text={name}
-        variant='h6'
-        color='white'
-        fontWeight='bold'
-        paddingLeft='20px'
-      />
-
       <B title='color - primary'>
         <Button color='primary' />
       </B>
@@ -46,4 +40,11 @@ const Variations = ({ Button, name }) => {
   )
 }
 
-export default Variations
+// Stories
+storiesOf('Input|Form/Button', module).add(
+  'Base',
+  () => <States Button={Button} />,
+  {
+    notes: { markdown },
+  },
+)

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Button from '../../../../../../Button/Ui/React/Styles/style1.index'
+import Button from '../../../../../../Button/Ui/React/Styles/button.1.index'
 import Form from '../../../../../Ui/React/form.index'
 import markdown from '../../textField.readme.md'
 import TextField from '../../Styles/textfield.1.index'
