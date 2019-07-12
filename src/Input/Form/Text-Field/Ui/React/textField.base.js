@@ -1,52 +1,44 @@
-import React, {
-  useState,
-  memo,
-  useImperativeHandle,
-  forwardRef,
-  useEffect,
-  useRef,
-} from 'react'
+import React, { useState, memo, useEffect, useRef } from 'react'
 
+import toBoolean from '../../../../../Misc-Utils/String/toBoolean.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
 import animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
 
-const TextField = (
-  {
-    Wrapper,
-    Input,
-    IconLeftCon,
-    IconRightCon,
-    InputCon,
-    CloseIconCon,
-    onFocus = () => null,
-    type = 'text',
-    name = 'UNAMEDtextField',
-    validation = [],
-    errMesgStyle = { color: 'red' },
-    font = 'primary',
-    color = 'white',
-    foregroundColor = 'primary',
-    backgroundColor = 'white',
-    textColor = 'black',
-    round,
-    iconLeft,
-    iconRight,
-    placeholder,
-    onBlur = () => null,
-    style,
-    width = 'fit-content',
-    label,
-    onLeftIconClick = () => null,
-    onRightIconClick = () => null,
-    autocomplete = 'off',
-    initialInput = '',
-    clearOnSubmit = null,
-  },
-  ref,
-) => {
+const TextField = ({
+  Wrapper,
+  Input,
+  IconLeftCon,
+  IconRightCon,
+  InputCon,
+  CloseIconCon,
+  onFocus = () => null,
+  type = 'text',
+  name = 'UNAMEDtextField',
+  validation = [],
+  font = 'primary',
+  color = 'white',
+  foregroundColor = 'primary',
+  backgroundColor = 'white',
+  textColor = 'black',
+  round,
+  iconLeft,
+  iconRight,
+  placeholder,
+  onBlur = () => null,
+  style,
+  width = 'fit-content',
+  label,
+  onLeftIconClick = () => null,
+  onRightIconClick = () => null,
+  autocomplete = 'off',
+  initialInput = '',
+  clearOnSubmit = null,
+}) => {
   // Refs
   const inputRef = useRef(null)
   const closeIconRef = useRef(null)
+  const errMessagesRef = useRef(null)
 
   const config = {
     fill: 'forwards',
@@ -57,12 +49,14 @@ const TextField = (
 
   // State
   const [input, setInput] = useState(initialInput)
-  const [errMsg, seterrMsg] = useState(null)
-  const [isValid, setisValid] = useState(true)
+  const [errorMessages, seterrorMessages] = useState([])
+  const [isValid, setIsValid] = useState(true)
+  const [isValidFormCheck, setIsValidFormCheck] = useState(null)
   const [focus, setfocus] = useState(null)
+  const noValidation = validation.length === 0
 
   useEffect(() => {
-    clearOnSubmit && startOnSubmitListener()
+    startOnSubmitListener()
     return removeOnSubmitListener
   }, [])
 
@@ -77,15 +71,23 @@ const TextField = (
       })
   }, [input])
 
-  // Shared Functions
-  useImperativeHandle(ref, () => ({
-    clearInput() {
-      clearInput()
-    },
-    getCurrentValue() {
-      getCurrentValue()
-    },
-  }))
+  useEffect(() => {
+    if (isValid !== null)
+      animation({
+        name: 'showHide',
+        el: errMessagesRef.current,
+        config,
+        show: !isValid,
+      })
+  }, [isValid])
+
+  useEffect(() => {
+    validation && initialValidation(input)
+  }, [])
+
+  useEffect(() => {
+    isValidFormCheck !== null && validation && onChangeVaildation(input)
+  }, [input])
 
   // Functions
   const startOnSubmitListener = () => {
@@ -94,23 +96,59 @@ const TextField = (
   }
   const removeOnSubmitListener = () => {
     const parentForm = inputRef.current.parentNode.parentNode.parentNode
-    parentForm.removeEventListener('submit', handleFormListener, true)
+    parentForm.removeEventListener('submit', handleFormListener)
   }
 
-  const handleFormListener = () => isValid && setInput('')
+  const handleFormListener = () => {
+    const isInputvalid = toBoolean(inputRef.current.dataset.isvalid)
+    isInputvalid && clearOnSubmit && setInput('')
 
-  const clearInput = () => setInput('')
+    setIsValid(isInputvalid)
+    setIsValidFormCheck(isInputvalid)
+  }
   const clearIconClick = () => {
     inputRef.current.focus()
     setInput('')
   }
-  const getCurrentValue = () => input
-  const handleValidation = () => {}
 
-  const handleChange = async ({ target: { value } }) => {
-    setInput(value)
-    validation && handleValidation()
+  const initialValidation = async (value) => {
+    if (noValidation) {
+      setIsValid(true)
+      setIsValidFormCheck(true)
+      return null
+    }
+
+    const errorMessages = await checkValidation(value)
+    const errorMessagesBool = !!errorMessages
+
+    errorMessages && seterrorMessages(errorMessages)
+    setIsValidFormCheck(!errorMessagesBool)
+    value !== '' && setIsValid(false)
   }
+
+  const onChangeVaildation = (value) => {
+    const valid = checkValidation(value)
+    setIsValid(valid)
+    setIsValidFormCheck(valid)
+  }
+
+  const checkValidation = async (value) => {
+    if (validation) {
+      const messages = await validation.map(async (val) => {
+        const mod = await import(`./Validation/textfield.${val}.js`)
+        const errMessage = mod.default(value)
+
+        if (errMessage) {
+          return errMessage
+        }
+      })
+
+      const allMessage = await Promise.all(messages)
+      return allMessage.length > 0 ? allMessage : null
+    }
+  }
+
+  const handleChange = async ({ target: { value } }) => setInput(value)
 
   const handleFocus = () => {
     onFocus()
@@ -124,81 +162,93 @@ const TextField = (
 
   // Template
   return (
-    <Wrapper
-      color={color}
-      round={round}
-      isFocused={focus}
-      style={style}
-      width={width}
-      foregroundColor={foregroundColor}
-      backgroundColor={backgroundColor}
-      textColor={textColor}
-    >
-      {iconLeft && (
-        <IconLeftCon onClick={onLeftIconClick}>
-          <Icon
-            name={iconLeft}
-            onClick={clearInput}
-            noBackground
-            style={{
-              height: '100%',
-            }}
+    <>
+      <Wrapper
+        color={color}
+        round={round}
+        isFocused={focus}
+        style={style}
+        width={width}
+        foregroundColor={foregroundColor}
+        backgroundColor={backgroundColor}
+        textColor={textColor}
+        isValid={isValid}
+      >
+        {iconLeft && (
+          <IconLeftCon onClick={onLeftIconClick}>
+            <Icon
+              name={iconLeft}
+              noBackground
+              style={{
+                height: '100%',
+              }}
+            />
+          </IconLeftCon>
+        )}
+
+        {label && label}
+
+        <InputCon>
+          <Input
+            ref={inputRef}
+            data-isvalid={isValidFormCheck}
+            type={type}
+            value={input}
+            onChange={handleChange}
+            onFocus={handleFocus}
+            name={name}
+            id={name}
+            autoComplete={autocomplete}
+            placeholder={placeholder}
+            onBlur={handleBlur}
+            font={font}
           />
-        </IconLeftCon>
-      )}
 
-      {label && label}
+          <CloseIconCon
+            ref={closeIconRef}
+            textColor={textColor}
+            style={{ visibility: 'hidden' }}
+          >
+            <Icon
+              name='close/material'
+              onClick={clearIconClick}
+              size={16}
+              fill='black'
+              style={{
+                height: '100%',
+              }}
+            />
+          </CloseIconCon>
+        </InputCon>
 
-      <InputCon>
-        <Input
-          ref={inputRef}
-          type={type}
-          value={input}
-          onChange={handleChange}
-          onFocus={handleFocus}
-          name={name}
-          id={name}
-          data-isvalidate={isValid}
-          autoComplete={autocomplete}
-          placeholder={placeholder}
-          onBlur={handleBlur}
-          font={font}
-        />
-
-        <CloseIconCon
-          ref={closeIconRef}
-          textColor={textColor}
-          style={{ visibility: 'hidden' }}
-        >
-          <Icon
-            name='close/material'
-            onClick={clearIconClick}
-            size={16}
-            fill='black'
-            style={{
-              height: '100%',
-            }}
+        {iconRight && (
+          <IconRightCon onClick={onRightIconClick}>
+            <Icon
+              name={iconRight}
+              noBackground
+              style={{
+                height: '100%',
+              }}
+            />
+          </IconRightCon>
+        )}
+      </Wrapper>
+      <div
+        data-cy='textfield_errorMessages'
+        ref={errMessagesRef}
+        style={{ marginTop: 10, display: 'none' }}
+      >
+        {errorMessages.map((message) => (
+          <Typography
+            key={message}
+            text={message}
+            color='red'
+            variant='body2'
           />
-        </CloseIconCon>
-      </InputCon>
-
-      {errMsg !== '' && <p style={errMesgStyle}>{errMsg}</p>}
-
-      {iconRight && (
-        <IconRightCon onClick={onRightIconClick}>
-          <Icon
-            name={iconRight}
-            onClick={clearInput}
-            noBackground
-            style={{
-              height: '100%',
-            }}
-          />
-        </IconRightCon>
-      )}
-    </Wrapper>
+        ))}
+      </div>
+    </>
   )
 }
 
-export default memo(forwardRef(TextField))
-// forwardRef does not support proptypes
+export default memo(TextField)

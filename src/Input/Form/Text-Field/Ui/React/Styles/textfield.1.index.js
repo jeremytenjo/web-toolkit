@@ -14,8 +14,7 @@ const Wrapper = styled.div`
   align-items: center;
   text-align: center;
   width: ${({ width }) => width};
-  border: 2px solid var(--color-${({ foregroundColor }) =>
-    foregroundColor}-background);
+  border: 2px solid transparent;
 
   img {
     color: ${({ color }) => `var(--color-${color})`};
@@ -33,6 +32,9 @@ const Wrapper = styled.div`
     fill: ${({ foregroundColor }) => `var(--color-${foregroundColor})`};
   }
 
+    /* isValid */
+  ${({ isValid }) => !isValid && `border: 2px solid var(--color-red);`}  
+
 `
 
 const Input = styled.input`
@@ -44,7 +46,6 @@ const Input = styled.input`
   color: ${({ color }) => `var(--color-${color}-darker)`};
   font-family: ${({ font }) => `var(--font-${font})`};
   font-size: 16px;
-  font-weight: bold;
   width: 100%;
   border: none;
   outline: none;

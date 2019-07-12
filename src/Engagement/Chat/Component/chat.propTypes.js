@@ -11,7 +11,7 @@ import {
   oneOfType,
 } from 'prop-types'
 
-import Input from '../../../Input/Form/Text-Field/Ui/React/Styles/style1.index'
+import Input from '../../../Input/Form/Text-Field/Ui/React/Styles/textfield.1.index'
 
 export const defaultProps = {
   senderIds: [],

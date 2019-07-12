@@ -1,8 +1,8 @@
+import { cypressVisitBaseUrl } from '../../../.storybook/contants'
+
 context('Overlay', () => {
   beforeEach(() => {
-    cy.visit(
-      'http://localhost:9002/iframe.html?id=misc-utils-overlay-ui-react--variations',
-    )
+    cy.visit(`${cypressVisitBaseUrl}misc-utils-overlay-ui-react--variations`)
   })
 
   it('shows on button click & hides on overlay click', function() {

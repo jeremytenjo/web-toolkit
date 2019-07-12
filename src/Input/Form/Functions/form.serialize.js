@@ -8,7 +8,7 @@ const serialize = function(form) {
     let selections = []
     let field = form.elements[i]
     // console.log(field);
-    console.log(field.type)
+    // console.log(field.type)
     // Don't serialize fields without a name, submits, buttons, file and reset inputs, and disabled fields
     if (
       !field.name ||
