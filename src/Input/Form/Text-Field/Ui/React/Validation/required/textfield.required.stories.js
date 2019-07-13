@@ -13,8 +13,6 @@ const placeholder = 'this is a Placeholder'
 const Variations = () => {
   const [submitValue, setsubmitValue] = useState(null)
   const handleSubmit = ({ exampleField1 }) => {
-    console.log(exampleField1)
-
     setsubmitValue(exampleField1)
   }
 
@@ -24,7 +22,7 @@ const Variations = () => {
         <Form onSubmitSuccess={handleSubmit}>
           <TextField
             placeholder={placeholder}
-            name='exampleField2'
+            name='exampleField1'
             errorMessage='this is an error message'
             validation={['required']}
           />

@@ -53,7 +53,9 @@ const TextField = ({
   // State
   const [input, setInput] = useState(initialInput)
   const [errorMessages, seterrorMessages] = useState([])
+  // Tracks validilty with react
   const [isValid, setIsValid] = useState(true)
+  // Tracks validilty with data attribute for use with Form component
   const [isValidFormCheck, setIsValidFormCheck] = useState(null)
   const [focus, setfocus] = useState(null)
   const noValidation = validation.length === 0
@@ -129,10 +131,13 @@ const TextField = ({
     value !== '' && setIsValid(false)
   }
 
-  const onChangeVaildation = (value) => {
-    const valid = checkValidation(value)
-    setIsValid(valid)
-    setIsValidFormCheck(valid)
+  const onChangeVaildation = async (value) => {
+    const errorMessages = await checkValidation(value)
+    errorMessages && seterrorMessages(errorMessages)
+
+    const hasErrorMessages = errorMessages.includes(undefined)
+    setIsValidFormCheck(hasErrorMessages)
+    setIsValid(hasErrorMessages)
   }
 
   const checkValidation = async (value) => {
@@ -141,13 +146,11 @@ const TextField = ({
         const mod = await import(`../Validation/${val}/textfield.${val}.js`)
         const errMessage = mod.default(value)
 
-        if (errMessage) {
-          return errMessage
-        }
+        if (errMessage) return errMessage
       })
 
-      const allMessage = await Promise.all(messages)
-      return allMessage.length > 0 ? allMessage : null
+      const allerrorMessages = await Promise.all(messages)
+      return allerrorMessages.length > 0 ? allerrorMessages : null
     }
   }
 
