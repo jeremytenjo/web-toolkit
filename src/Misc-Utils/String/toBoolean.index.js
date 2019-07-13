@@ -1,4 +1,6 @@
 export default (string) => {
+  if (typeof string !== 'string') return null
+
   switch (string.toLowerCase().trim()) {
     case 'true':
     case 'yes':

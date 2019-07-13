@@ -1,11 +1,11 @@
 import { cypressVisitBaseUrl } from '../../../../../../../.storybook/contants'
 
-context('Textfiel: Base', () => {
+context('Textfield: Base', () => {
   beforeEach(() => {
     cy.visit(`${cypressVisitBaseUrl}input-form-textfield--base`)
   })
 
-  it('Should render styped text', function() {
+  it('Should render typed text', function() {
     cy.get('[data-cy="default_textfield"]').type('hello')
     cy.get('[data-cy="default_textfield"]').should('value', 'hello')
   })
