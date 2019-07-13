@@ -124,11 +124,10 @@ const TextField = ({
     }
 
     const errorMessages = await checkValidation(value)
-    const errorMessagesBool = !!errorMessages
+    const hasErrorMessages = errorMessages.includes(undefined)
 
     errorMessages && seterrorMessages(errorMessages)
-    setIsValidFormCheck(!errorMessagesBool)
-    value !== '' && setIsValid(false)
+    setIsValidFormCheck(hasErrorMessages)
   }
 
   const onChangeVaildation = async (value) => {
