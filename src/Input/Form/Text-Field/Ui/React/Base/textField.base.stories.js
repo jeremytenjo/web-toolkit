@@ -18,7 +18,7 @@ export const States = ({ TextField }) => {
   return (
     <>
       <B title='default' noBackground>
-        <TextField placeholder={placeholder} />
+        <TextField placeholder={placeholder} name='default_textfield' />
       </B>
 
       <B title='clear after input' noBackground>

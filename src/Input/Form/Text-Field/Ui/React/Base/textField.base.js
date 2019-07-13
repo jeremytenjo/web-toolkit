@@ -205,7 +205,7 @@ const TextField = ({
             placeholder={placeholder}
             onBlur={handleBlur}
             font={font}
-            data-cy={dataCy}
+            data-cy={dataCy || name}
           />
 
           <CloseIconCon

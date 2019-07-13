@@ -29,7 +29,7 @@ export const defaultProps = {
   autocomplete: 'off',
   initialInput: '',
   clearOnSubmit: null,
-  dataCy: 'textfield',
+  dataCy: null,
 }
 
 export const propTypes = {
