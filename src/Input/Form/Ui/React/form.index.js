@@ -1,24 +1,43 @@
 import React, { memo, useRef, useState } from 'react'
 
-import serialize from '../../Functions/form.serialize'
+import getValues from '../../Functions/form.getValues'
+import checkInvalidValues from '../../Functions/form.checkInvalidValues'
 
 import { defaultProps, propTypes } from './form.propTypes'
 
-const Form = ({ children, onSubmitSuccess, emptyFormMessage }) => {
+const Form = ({
+  children,
+  onSubmitSuccess,
+  onSubmitFail,
+  emptyFormMessage,
+}) => {
   const formRef = useRef(null)
   const { isEmptyForm, setisEmptyForm } = useState(null)
 
   const onSubmit = (e) => {
     e.preventDefault()
-    const formValues = serialize(formRef.current)
-    // console.log(formValues)
+    const formEl = formRef.current
+
+    // Handle Invalid Inputs
+    const hasInvalid = checkInvalidValues(formEl)
+    if (hasInvalid) {
+      onSubmitFail()
+      return null
+    }
+
+    // Handle Values
+    const formValues = getValues(formEl)
+
     if (formValues === null) return null
     if (formValues === 'empty') {
       setisEmptyForm(true)
+      onSubmitFail()
       return null
     }
+
     onSubmitSuccess(formValues)
   }
+
   return (
     <form onSubmit={onSubmit} ref={formRef}>
       {children}

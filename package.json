@@ -5,9 +5,7 @@
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
+  "files": ["build"],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && yarn build:snippets && yarn publish:snippets && gpush && rmdir /s /q build",
@@ -16,7 +14,7 @@
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
     "publish:minor": "yarn build:library && yarn publish --minor",
-    "publish:snippets": " cd tenjo-web-toolkit-snippets && vsce publish minor",
+    "publish:snippets": "yarn build:library && cd tenjo-web-toolkit-snippets && vsce publish minor",
     "test": "jest",
     "pretty": "prettier \"**/*.js\" --write",
     "cy:open": "cypress open",
@@ -37,11 +35,12 @@
       "yarn pretty",
       "prettier --list-different",
       "jest --passWithNoTests",
-      "yarn cypress run"
+      "yarn cy:run"
     ]
   },
   "dependencies": {
     "@material-ui/core": "^4.2.0",
+    "node-emoji": "^1.10.0",
     "react-bottom-scroll-listener": "^3.0.0",
     "react-lazyload": "^2.6.2",
     "styled-components": "^4.3.2"

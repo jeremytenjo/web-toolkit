@@ -1,9 +1,11 @@
 import React, { useState, memo, useEffect, useRef } from 'react'
 
-import toBoolean from '../../../../../Misc-Utils/String/toBoolean.index'
-import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
-import animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
-import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
+import toBoolean from '../../../../../../Misc-Utils/String/toBoolean.index'
+import Icon from '../../../../../../Data-Display/Icon/Ui/React/icon.index'
+import animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
+
+import { defaultProps, propTypes } from './textField.base.propTypes'
 
 const TextField = ({
   Wrapper,
@@ -12,28 +14,29 @@ const TextField = ({
   IconRightCon,
   InputCon,
   CloseIconCon,
-  onFocus = () => null,
-  type = 'text',
-  name = 'UNAMEDtextField',
-  validation = [],
-  font = 'primary',
-  color = 'white',
-  foregroundColor = 'primary',
-  backgroundColor = 'white',
-  textColor = 'black',
+  onFocus,
+  type,
+  name,
+  validation,
+  font,
+  color,
+  foregroundColor,
+  backgroundColor,
+  textColor,
   round,
   iconLeft,
   iconRight,
   placeholder,
-  onBlur = () => null,
+  onBlur,
   style,
-  width = 'fit-content',
+  width,
   label,
-  onLeftIconClick = () => null,
-  onRightIconClick = () => null,
-  autocomplete = 'off',
-  initialInput = '',
-  clearOnSubmit = null,
+  onLeftIconClick,
+  onRightIconClick,
+  autocomplete,
+  initialInput,
+  clearOnSubmit,
+  dataCy,
 }) => {
   // Refs
   const inputRef = useRef(null)
@@ -135,7 +138,7 @@ const TextField = ({
   const checkValidation = async (value) => {
     if (validation) {
       const messages = await validation.map(async (val) => {
-        const mod = await import(`./Validation/textfield.${val}.js`)
+        const mod = await import(`../Validation/${val}/textfield.${val}.js`)
         const errMessage = mod.default(value)
 
         if (errMessage) {
@@ -202,12 +205,14 @@ const TextField = ({
             placeholder={placeholder}
             onBlur={handleBlur}
             font={font}
+            data-cy={dataCy || name}
           />
 
           <CloseIconCon
             ref={closeIconRef}
             textColor={textColor}
             style={{ visibility: 'hidden' }}
+            data-cy='textfield_closeIcon'
           >
             <Icon
               name='close/material'
@@ -250,5 +255,8 @@ const TextField = ({
     </>
   )
 }
+
+TextField.defaultProps = defaultProps
+TextField.propTypes = propTypes
 
 export default memo(TextField)

@@ -1,13 +1,13 @@
 // https://gomakethings.com/how-to-serialize-form-data-with-vanilla-js/
 const serialize = function(form) {
   // Setup our serialized data
-  let values = {}
+  let formValues = {}
 
   // Loop through each field in the form
   for (let i = 0; i < form.elements.length; i++) {
     let selections = []
     let field = form.elements[i]
-    // console.log(field);
+    // console.log(field)
     // console.log(field.type)
     // Don't serialize fields without a name, submits, buttons, file and reset inputs, and disabled fields
     if (
@@ -20,14 +20,6 @@ const serialize = function(form) {
     )
       continue
 
-    // if field has error, scroll to field with error
-    if (field.error) {
-      field.scrollIntoView({
-        behavior: 'smooth',
-      })
-      return null
-    }
-
     // handle text, number, checkbox, radio fields
     if (
       field.type === 'text' ||
@@ -35,7 +27,7 @@ const serialize = function(form) {
       (field.type !== 'checkbox' && field.type !== 'radio') ||
       field.checked
     ) {
-      values[field.name] = field.value
+      formValues[field.name] = field.value
     }
 
     // If a multi-select, get all selections
@@ -44,12 +36,12 @@ const serialize = function(form) {
         if (!field.options[n].selected) continue
         selections.push(field.options[n].value)
       }
-      values[field.name] = selections
+      formValues[field.name] = selections
     }
   }
 
-  // check if all values are empty
-  return values
+  // check if all formValues are empty
+  return formValues
 }
 
 export default serialize

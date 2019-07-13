@@ -1,8 +1,8 @@
-import { cypressVisitBaseUrl } from '../../../../../../.storybook/contants'
+import { cypressVisitBaseUrl } from '../../../../../../../../.storybook/contants'
 
-context('Textfield Validation', () => {
+context('Textfield Validation: Required', () => {
   beforeEach(() => {
-    cy.visit(`${cypressVisitBaseUrl}input-form-textfield--validation`)
+    cy.visit(`${cypressVisitBaseUrl}input-form-textfield-validation--required`)
   })
 
   it('Required - On initial Load input field should not show error message but if submitted it will show error messages', function() {

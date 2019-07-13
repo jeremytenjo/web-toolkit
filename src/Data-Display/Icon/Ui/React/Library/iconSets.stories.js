@@ -14,12 +14,6 @@ const style1Paths = style1Req.keys()
 const roundFilledReq = require.context('./', true, /round-filled\.js$/)
 const roundFilledPaths = roundFilledReq.keys()
 
-const blag1 = require.context('./')
-const blag2 = blag1.keys()
-
-// console.log(blag1)
-// console.log(blag2)
-
 const getIconName = (paths) =>
   paths.map((icon) => {
     icon = icon.substring(0, icon.length - 3)

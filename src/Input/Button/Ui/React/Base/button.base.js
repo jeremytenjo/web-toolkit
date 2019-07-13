@@ -1,20 +1,20 @@
 import React, { memo, lazy, Suspense, useRef, useEffect } from 'react'
 
-import Typography from '../../../../Data-Display/Typography/Ui/React/typography.index'
-import animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
+import animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 const ButtonIcon = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../Data-Display/Icon/Ui/React/icon.index'
+    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/icon.index'
   ),
 )
 const Dots = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../Feedback/Progress/Ui/React/Dots/dots.index'
+    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Feedback/Progress/Ui/React/Dots/dots.index'
   ),
 )
 
-import { defaultProps, propTypes } from './button.propTypes'
+import { defaultProps, propTypes } from './button.base.propTypes'
 
 const Button = ({
   Wrapper,

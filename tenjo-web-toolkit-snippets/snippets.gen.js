@@ -1,6 +1,7 @@
 const fs = require('fs')
 
 const glob = require('glob')
+var emoji = require('node-emoji')
 
 const capitalizeFirstLetter = (string) =>
   string.charAt(0).toUpperCase() + string.slice(1)
@@ -40,6 +41,8 @@ glob(`build/**/*.index.js`, function(err, files) {
       itemName = itemName.concat(` ${secondParam}`)
     }
 
+    let importName = itemName.split(' ')[0]
+
     //  Framework shortname
     let framework = frameworks.map(({ name, shortName }) => {
       let isFramework = fileSplit.includes(name)
@@ -50,7 +53,7 @@ glob(`build/**/*.index.js`, function(err, files) {
     const snippet = `
     "${itemName}": {
       "prefix": "wt${letters}${inial}",
-      "body": ["import ${itemName} from '${packageName}/${file}'"],
+      "body": ["import ${importName} from '${packageName}/${file}'"],
     },
     `
 
@@ -59,13 +62,23 @@ glob(`build/**/*.index.js`, function(err, files) {
 
   fileString += ' }'
 
+  const successEmogi = emoji.get('white_check_mark')
+
   // 2. create snipet file and attach created snippets
   fs.writeFile(
     'tenjo-web-toolkit-snippets/snippets/snippets.json',
     fileString,
     function(err) {
       if (err) throw err
-      console.log('Snippet file created successfully :)')
+      console.log(`${successEmogi}  snippet.json created`)
     },
   )
+
+  // 3. Add snippets to README
+  fs.writeFile('tenjo-web-toolkit-snippets/README.md', fileString, function(
+    err,
+  ) {
+    if (err) throw err
+    console.log(`${successEmogi}  README.md created`)
+  })
 })

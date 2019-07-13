@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Form from '../../../Ui/React/form.index'
-
-import markdown from './textField.readme.md'
-import TextField from './Styles/textfield.1.index'
+import B from '../../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Form from '../../../../Ui/React/form.index'
+import markdown from '../textField.readme.md'
+import TextField from '../Styles/textfield.1.index'
 
 // Test data
 const placeholder = 'this is a Placeholder'
 
-const Variations = () => {
+export const States = ({ TextField }) => {
   const [f, setsubmitValue] = useState(null)
   const handleSubmit = ({ exampleField }) => {
     setsubmitValue(exampleField)
@@ -19,7 +18,7 @@ const Variations = () => {
   return (
     <>
       <B title='default' noBackground>
-        <TextField placeholder={placeholder} />
+        <TextField placeholder={placeholder} name='default_textfield' />
       </B>
 
       <B title='clear after input' noBackground>
@@ -62,6 +61,10 @@ const Variations = () => {
 }
 
 // Stories
-storiesOf('Input|Form/TextField', module).add('Styles', () => <Variations />, {
-  notes: { markdown },
-})
+storiesOf('Input|Form/TextField', module).add(
+  'Base',
+  () => <States TextField={TextField} />,
+  {
+    notes: { markdown },
+  },
+)

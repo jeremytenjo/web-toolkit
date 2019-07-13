@@ -20,7 +20,7 @@ yarn add @tenjojeremy/web-toolkit
 
 ## Snippet Extension
 
-Download the VS Code snippet extension to save yourself time 😎
+Download the VS Code snippet extension to save yourself time importing UI and utils 😎
 
 https://marketplace.visualstudio.com/items?itemName=tenjojeremy.tenjo-web-toolkit-snippets
 
