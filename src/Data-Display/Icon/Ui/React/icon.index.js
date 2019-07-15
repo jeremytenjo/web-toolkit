@@ -16,6 +16,7 @@ const Icon = ({
   noBackgroundChange,
   outlined,
   font,
+  link,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
@@ -30,12 +31,17 @@ const Icon = ({
     getModule()
   }, [])
 
+  const handleClick = () => {
+    link && window.historyRouter(link)
+    onClick()
+  }
+
   return (
     <Wrapper label={label}>
       <WrapperIcon
         style={style}
         color={color}
-        onClick={onClick}
+        onClick={handleClick}
         background={!!background}
         size={size}
         noBackground={noBackground}

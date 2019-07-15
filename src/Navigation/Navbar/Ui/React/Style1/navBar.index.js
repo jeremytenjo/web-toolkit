@@ -22,6 +22,7 @@ const NavBar = ({
       dataset: { link },
     },
   }) => window.historyRouter.push(`/${link}`)
+
   const handleFIleUpload = async (e, file) => {
     const selectedFile = file || inputRef.current.files[0]
     if (typeof selectedFile === 'object') onFileSelect(selectedFile)

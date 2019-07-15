@@ -13,6 +13,7 @@ export const defaultProps = {
   dark: null,
   noBackgroundChange: null,
   outlined: null,
+  link: null,
 }
 
 export const propTypes = {
@@ -28,4 +29,5 @@ export const propTypes = {
   dark: bool,
   noBackgroundChange: bool,
   outlined: bool,
+  link: string,
 }

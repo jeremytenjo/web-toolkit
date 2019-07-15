@@ -5,8 +5,8 @@ export const Wrapper = styled.div`
   width: fit-content;
   display: grid;
   user-select: none;
-  font-family: var(--font-secondary);
-  font-weight: bolder;
+  cursor: pointer;
+  align-content: space-between;
 
   ${({ label }) =>
     label &&
@@ -17,7 +17,6 @@ export const Wrapper = styled.div`
 export const WrapperIcon = styled.div`
   display: flex;
   transition: 0.3s;
-  cursor: pointer;
   border-radius: 100px;
   animation-timing-function: ease-out;
   width: ${({ size }) => size}px;
