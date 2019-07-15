@@ -37,8 +37,8 @@ const General = () => {
             data-cy='upload_button'
             text='Upload'
             color='secondary'
-            isInput
             name='file_upload'
+            inputProps={{ errorMessage: 'Please upload profile picture' }}
           />
 
           <br />

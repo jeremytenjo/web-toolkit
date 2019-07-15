@@ -17,6 +17,7 @@ export const defaultProps = {
   isInput: null,
   accept: '.jpg, .jpeg, .png',
   name: 'upload_button',
+  inputProps: null,
 }
 
 export const propTypes = {

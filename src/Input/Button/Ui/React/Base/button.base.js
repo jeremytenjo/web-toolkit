@@ -37,10 +37,7 @@ const Button = ({
   iconName,
   dataCy,
   loading,
-  // Input Props
-  isInput,
-  accept,
-  name,
+  inputProps,
 }) => {
   const spinnerRef = useRef(null)
 
@@ -69,11 +66,11 @@ const Button = ({
     ? 'white'
     : `${color}-darker`
 
-  const WrappingComp = isInput ? FileInput : Fragment
+  const WrappingComp = inputProps ? FileInput : Fragment
 
   return (
     <Suspense fallback={null}>
-      <WrappingComp accept={accept} name={name}>
+      <WrappingComp {...inputProps}>
         <Wrapper>
           <StyledButton
             type={type}
