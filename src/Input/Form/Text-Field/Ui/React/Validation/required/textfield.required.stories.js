@@ -25,7 +25,7 @@ const Variations = () => {
             name='exampleField1'
             errorMessage='this is an error message'
             validation={[
-              { name: 'required', message: 'Input required on this field' },
+              { name: 'required', message: 'Input required in this field' },
             ]}
           />
           <br />
