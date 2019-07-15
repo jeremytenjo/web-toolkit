@@ -7,13 +7,13 @@ const serialize = function(form) {
   for (let i = 0; i < form.elements.length; i++) {
     let selections = []
     let field = form.elements[i]
+
     // console.log(field)
     // console.log(field.type)
     // Don't serialize fields without a name, submits, buttons, file and reset inputs, and disabled fields
     if (
       !field.name ||
       field.disabled ||
-      field.type === 'file' ||
       field.type === 'reset' ||
       field.type === 'submit' ||
       field.type === 'button'
@@ -37,6 +37,13 @@ const serialize = function(form) {
         selections.push(field.options[n].value)
       }
       formValues[field.name] = selections
+    }
+
+    // Handle file input
+    if (field.type === 'file') {
+      let filesList = field.files
+      filesList = filesList.length === 1 ? field.files[0] : filesList
+      formValues[field.name] = filesList
     }
   }
 

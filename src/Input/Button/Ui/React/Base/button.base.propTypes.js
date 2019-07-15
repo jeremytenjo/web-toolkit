@@ -1,7 +1,7 @@
 import { string, func, bool, any, object } from 'prop-types'
 
 export const defaultProps = {
-  type: 'default',
+  type: 'button',
   outlined: null,
   active: null,
   iconName: null,
@@ -14,6 +14,9 @@ export const defaultProps = {
   onClick: () => null,
   dataCy: null,
   loading: null,
+  isInput: null,
+  accept: '.jpg, .jpeg, .png',
+  name: 'upload_button',
 }
 
 export const propTypes = {
@@ -30,4 +33,7 @@ export const propTypes = {
   onClick: func,
   dataCy: string,
   loading: bool,
+  isInput: bool,
+  inputProps: object,
+  name: string,
 }

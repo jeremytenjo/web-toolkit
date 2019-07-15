@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   width: fit-content;
   height: fit-content;
   cursor: pointer;
+  overflow: hidden;
 `
 
 export const Input = styled.input`
@@ -16,5 +17,9 @@ export const Input = styled.input`
   bottom: 0;
   opacity: 0;
   width: fit-content;
-  height: fit-content;
+  height: 100%;
+  z-index: 1;
+`
+export const ChildrenWrap = styled.div`
+  z-index: 0;
 `

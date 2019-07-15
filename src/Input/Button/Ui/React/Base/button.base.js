@@ -1,4 +1,4 @@
-import React, { memo, lazy, Suspense, useRef, useEffect } from 'react'
+import React, { memo, lazy, Suspense, useRef, useEffect, Fragment } from 'react'
 
 import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
 import animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
@@ -11,6 +11,12 @@ const ButtonIcon = lazy(() =>
 const Dots = lazy(() =>
   import(
     /* webpackChunkName: 'ButtonIcon' */ '../../../../../Feedback/Progress/Ui/React/Dots/dots.index'
+  ),
+)
+
+const FileInput = lazy(() =>
+  import(
+    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Media/Files/Ui/React/fileInput.index'
   ),
 )
 
@@ -31,6 +37,10 @@ const Button = ({
   iconName,
   dataCy,
   loading,
+  // Input Props
+  isInput,
+  accept,
+  name,
 }) => {
   const spinnerRef = useRef(null)
 
@@ -59,35 +69,41 @@ const Button = ({
     ? 'white'
     : `${color}-darker`
 
+  const WrappingComp = isInput ? FileInput : Fragment
+
   return (
-    <Wrapper>
-      <StyledButton
-        type={type}
-        color={color}
-        onClick={disabled ? () => null : onClick}
-        disabled={disabled}
-        active={active}
-        outlined={outlined}
-        icon={iconName}
-        style={style}
-        data-cy={dataCy}
-        loading={loading}
-      >
-        <Typography text={text} variant='button' color={textColor} />
-        {iconName && (
+    <Suspense fallback={null}>
+      <WrappingComp accept={accept} name={name}>
+        <Wrapper>
+          <StyledButton
+            type={type}
+            color={color}
+            onClick={disabled ? () => null : onClick}
+            disabled={disabled}
+            active={active}
+            outlined={outlined}
+            icon={iconName}
+            style={style}
+            data-cy={dataCy}
+            loading={loading}
+          >
+            <Typography text={text} variant='button' color={textColor} />
+            {iconName && (
+              <Suspense fallback={null}>
+                <ButtonIcon name={iconName} noBackground />
+              </Suspense>
+            )}
+          </StyledButton>
           <Suspense fallback={null}>
-            <ButtonIcon name={iconName} noBackground />
+            <div ref={spinnerRef} style={{ display: 'none' }}>
+              <LoadingCon color={color}>
+                <Dots />
+              </LoadingCon>
+            </div>
           </Suspense>
-        )}
-      </StyledButton>
-      <Suspense fallback={null}>
-        <div ref={spinnerRef} style={{ display: 'none' }}>
-          <LoadingCon color={color}>
-            <Dots />
-          </LoadingCon>
-        </div>
-      </Suspense>
-    </Wrapper>
+        </Wrapper>
+      </WrappingComp>
+    </Suspense>
   )
 }
 

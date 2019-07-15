@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Button from '../../../Button/Ui/React/Styles/button.1.index'
+// Inputs
 import TextField from '../../Text-Field/Ui/React/Styles/textfield.1.index'
 
 import markdown from './form.readme.md'
@@ -10,7 +12,7 @@ import Form from './form.index'
 const General = () => {
   const [result, setresult] = useState('')
   const handleSubmitSuccess = (values) => {
-    // console.log(values)
+    console.log(values)
     setresult('success')
   }
   const handleSubmitFail = () => setresult('fail')
@@ -26,20 +28,25 @@ const General = () => {
             type='text'
             placeholder='textfield1'
             name='textfield1'
-            validation={['required']}
+            validation={[{ name: 'required' }]}
           />
 
-          <TextField
-            type='number'
-            placeholder='textfield2'
-            name='textfield2'
-            validation={['required']}
+          <br />
+
+          <Button
+            data-cy='upload_button'
+            text='Upload'
+            color='secondary'
+            isInput
+            name='file_upload'
           />
 
-          <button type='submit' data-cy='form_submit_button'>
-            Submit
-          </button>
+          <br />
+
+          <Button type='submit' data-cy='form_submit_button' text='Submit' />
         </Form>
+
+        <br />
 
         <p data-cy='form_result'>Result: {result}</p>
       </B>

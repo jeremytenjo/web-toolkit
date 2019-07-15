@@ -1,9 +1,9 @@
 import React, { useRef, memo } from 'react'
 
 import { defaultProps, propTypes } from './fileInput.propTypes'
-import { Wrapper, Input } from './fileInput.styles'
+import { Wrapper, Input, ChildrenWrap } from './fileInput.styles'
 
-const FileInput = ({ accept, children, onInput, ...nativeProps }) => {
+const FileInput = ({ accept, children, onInput, name, ...nativeProps }) => {
   const inputRef = useRef(null)
 
   const handleFileUpload = async () => {
@@ -20,9 +20,10 @@ const FileInput = ({ accept, children, onInput, ...nativeProps }) => {
         type='file'
         accept={accept}
         onChange={handleFileUpload}
+        name={name}
         {...nativeProps}
       />
-      {children}
+      <ChildrenWrap>{children}</ChildrenWrap>
     </Wrapper>
   )
 }
