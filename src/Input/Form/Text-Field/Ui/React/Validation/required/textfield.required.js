@@ -1,1 +1,2 @@
-export default (value) => (value === '' ? 'Field required' : null)
+export default ({ value, message = 'Field required' }) =>
+  value === '' ? message : null

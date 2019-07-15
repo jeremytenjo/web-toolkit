@@ -141,9 +141,9 @@ const TextField = ({
 
   const checkValidation = async (value) => {
     if (validation) {
-      const messages = await validation.map(async (val) => {
-        const mod = await import(`../Validation/${val}/textfield.${val}.js`)
-        const errMessage = mod.default(value)
+      const messages = await validation.map(async ({ name, message }) => {
+        const mod = await import(`../Validation/${name}/textfield.${name}.js`)
+        const errMessage = mod.default({ value, message })
 
         if (errMessage) return errMessage
       })

@@ -24,7 +24,9 @@ const Variations = () => {
             placeholder={placeholder}
             name='exampleField1'
             errorMessage='this is an error message'
-            validation={['required']}
+            validation={[
+              { name: 'required', message: 'Input required on this field' },
+            ]}
           />
           <br />
           <Button
