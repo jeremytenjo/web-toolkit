@@ -37,6 +37,9 @@ const Variations = () => (
     <B title='size' color='black' noBackground>
       <Icon name='camera/material' size={60} />
     </B>
+    <B title='label' color='black' noBackground>
+      <Icon name='camera/material' label='Labelo' size={60} />
+    </B>
   </>
 )
 

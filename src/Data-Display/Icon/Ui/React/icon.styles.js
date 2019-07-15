@@ -4,10 +4,15 @@ export const Wrapper = styled.div`
   text-align: center;
   width: fit-content;
   display: grid;
-  grid-gap: var(--spacing-xs);
   user-select: none;
   font-family: var(--font-secondary);
   font-weight: bolder;
+
+  ${({ label }) =>
+    label &&
+    `    
+  grid-gap: var(--spacing-xxs);
+  `}
 `
 export const WrapperIcon = styled.div`
   display: flex;
@@ -21,8 +26,6 @@ export const WrapperIcon = styled.div`
   &:active {
     background-color: rgba(0, 0, 0, 0.1);
   }
-
-
   
   /* Background */
   ${({ background, size, color }) =>
@@ -101,8 +104,12 @@ export const WrapperIcon = styled.div`
 `
 
 export const Label = styled.div`
-  font-family: var(--font-secondary);
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: normal;
+  font-size: 12px;
   text-align: center;
+
+  ${({ color, font }) => ` 
+  color: var(--color-${color}); 
+  font-family: var(--font-${font}); 
+  `}
 `

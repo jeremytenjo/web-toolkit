@@ -15,6 +15,7 @@ const Icon = ({
   dark,
   noBackgroundChange,
   outlined,
+  font,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
@@ -30,7 +31,7 @@ const Icon = ({
   }, [])
 
   return (
-    <Wrapper>
+    <Wrapper label={label}>
       <WrapperIcon
         style={style}
         color={color}
@@ -44,7 +45,11 @@ const Icon = ({
       >
         {IconComp}
       </WrapperIcon>
-      {label && <Label> {label} </Label>}
+      {label && (
+        <Label color={color} font={font}>
+          {label}
+        </Label>
+      )}
     </Wrapper>
   )
 }
