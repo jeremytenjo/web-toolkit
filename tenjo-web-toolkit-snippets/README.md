@@ -204,6 +204,11 @@
       "body": ["import Menu from '@tenjojeremy/web-toolkit/build/Input/Menu/menu.index.js'"],
     },
     
+    "FileInput": {
+      "prefix": "wtfir",
+      "body": ["import FileInput from '@tenjojeremy/web-toolkit/build/Media/Files/Ui/React/fileInput.index.js'"],
+    },
+    
     "Image": {
       "prefix": "wtimr",
       "body": ["import Image from '@tenjojeremy/web-toolkit/build/Media/Image/Ui/React/image.index.js'"],
@@ -277,6 +282,11 @@
     "ToBoolean": {
       "prefix": "wtto",
       "body": ["import ToBoolean from '@tenjojeremy/web-toolkit/build/Misc-Utils/String/toBoolean.index.js'"],
+    },
+    
+    "NavBar": {
+      "prefix": "wtnar",
+      "body": ["import NavBar from '@tenjojeremy/web-toolkit/build/Navigation/Navbar/Ui/React/Base/navBar.index.js'"],
     },
     
     "NavBar": {
