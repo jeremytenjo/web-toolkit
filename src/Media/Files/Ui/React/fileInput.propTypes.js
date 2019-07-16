@@ -1,17 +1,19 @@
-import { string, func, bool } from 'prop-types'
+import { string, func, bool, array } from 'prop-types'
 
 export const defaultProps = {
   accept: '.jpg, .jpeg, .png',
   onInput: () => null,
   name: 'input_name',
-  inputError: null,
+  isValid: null,
   errorMessage: null,
+  validation: [],
 }
 
 export const propTypes = {
   accept: string,
   onInput: func,
   name: string.isRequired,
-  inputError: bool,
+  isValid: bool,
   errorMessage: string,
+  validation: array,
 }

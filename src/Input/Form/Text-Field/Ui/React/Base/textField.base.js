@@ -243,7 +243,7 @@ const TextField = ({
       <div
         data-cy='textfield_errorMessages'
         ref={errMessagesRef}
-        style={{ marginTop: 10, display: 'none' }}
+        style={{ marginTop: 'var(--spacing-xs', display: 'none' }}
       >
         {errorMessages.map((message) => (
           <Typography
