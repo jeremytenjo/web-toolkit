@@ -34,7 +34,7 @@ const General = () => {
           <br />
 
           <Button
-            data-cy='upload_button'
+            dataCy='upload_button'
             text='Upload'
             color='secondary'
             name='file_upload'
@@ -43,7 +43,7 @@ const General = () => {
 
           <br />
 
-          <Button type='submit' data-cy='form_submit_button' text='Submit' />
+          <Button type='submit' dataCy='form_submit_button' text='Submit' />
         </Form>
 
         <br />
