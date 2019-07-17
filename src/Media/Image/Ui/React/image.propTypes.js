@@ -23,6 +23,7 @@ export const defaultProps = {
     offset: 200,
     once: true,
   },
+  inputProps: null,
 }
 
 export const propTypes = {
@@ -42,4 +43,5 @@ export const propTypes = {
   skeleton: bool,
   round: bool,
   borderColor: string,
+  inputProps: object,
 }
