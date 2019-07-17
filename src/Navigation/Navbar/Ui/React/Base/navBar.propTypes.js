@@ -2,12 +2,12 @@ import { string, func } from 'prop-types'
 
 export const defaultProps = {
   color: 'primary',
-  text: 'Chip',
+  router: window.historyRouter || {},
   onClick: () => null,
 }
 
 export const propTypes = {
   color: string,
-  text: string,
+  router: func,
   onClick: func,
 }

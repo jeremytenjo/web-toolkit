@@ -5,12 +5,12 @@ export default [
     url: 'explore',
   },
   {
-    label: 'Explore',
+    label: 'Perla',
     icon: 'phone/material',
     url: 'explore',
   },
   {
-    label: 'Explore',
+    label: 'Find',
     icon: 'search/material',
     url: 'explore',
   },
