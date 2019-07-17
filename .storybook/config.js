@@ -20,4 +20,6 @@ function loadStories() {
   req.keys().forEach((filename) => req(filename))
 }
 
+window.historyRouter = () => null
+
 configure(loadStories, module)

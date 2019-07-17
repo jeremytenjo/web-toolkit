@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, Fragment } from 'react'
 
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
@@ -15,26 +15,32 @@ const NavBar = ({ data, color, onInput, router }) => {
           const { location } = router
           const isActive = location === link
           const inputProps = file ? { onInput } : null
+          const key = label || link || icon
 
-          return icon ? (
-            <Icon
-              key={label}
-              name={icon}
-              label={label}
-              color={isActive ? color : 'grey'}
-              link={link}
-              noBackground
-              inputProps={inputProps}
-            />
-          ) : src ? (
-            <Image
-              src={src}
-              round
-              borderColor={isActive ? color : null}
-              inputProps={inputProps}
-              size={40}
-            />
-          ) : null
+          return (
+            <Fragment key={key}>
+              {icon && (
+                <Icon
+                  name={icon}
+                  label={label}
+                  color={isActive ? color : 'grey'}
+                  link={link}
+                  noBackground
+                  inputProps={inputProps}
+                />
+              )}
+
+              {src && (
+                <Image
+                  src={src}
+                  round
+                  borderColor={isActive ? color : null}
+                  inputProps={inputProps}
+                  size={40}
+                />
+              )}
+            </Fragment>
+          )
         })}
       </List>
     </Wrapper>
