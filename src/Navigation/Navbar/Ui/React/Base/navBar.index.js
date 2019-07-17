@@ -15,7 +15,7 @@ const NavBar = ({ data, color, onInput, router }) => {
           const { location } = router
           const isActive = location === link
           const inputProps = file ? { onInput } : null
-          const key = label || link || icon
+          const key = label || link || icon || Math.random()
 
           return (
             <Fragment key={key}>
