@@ -6,6 +6,7 @@ export const defaultProps = {
   id: '',
   rating: 0,
   onClick: () => null,
+  router: window.historyRouter || {},
 }
 
 export const propTypes = {
@@ -14,4 +15,5 @@ export const propTypes = {
   photoUrl: string,
   rating: number,
   onClick: func,
+  router: func,
 }

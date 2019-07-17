@@ -5,10 +5,8 @@ import Buttom from '../../../Input/Button/Ui/React/Styles/button.1.index'
 import { defaultProps, propTypes } from './emptyPage.propTypes'
 import { Wrapper, InnerWrapper, Title } from './emptyPage.styles'
 
-const EmptyPage = ({ image, title, buttonText, redUrl }) => {
-  const historyRouter = window.historyRouter
-
-  const redirect = () => historyRouter.push(redUrl)
+const EmptyPage = ({ image, title, buttonText, redUrl, router }) => {
+  const redirect = () => router.push(redUrl)
 
   return (
     <Wrapper>

@@ -13,6 +13,7 @@ export const defaultProps = {
   children: null,
   opacity: '1',
   fontFamily: 'var(--font-primary)',
+  router: window.historyRouter || {},
   onMainIconClick: () => null,
   onFileSelect: () => null,
 }
@@ -25,4 +26,5 @@ export const propTypes = {
   fontFamily: string,
   onMainIconClick: func,
   onFileSelect: func,
+  router: func,
 }

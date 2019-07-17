@@ -4,7 +4,6 @@ import { Wrapper } from './tabs.base.styles'
 import { defaultProps, propTypes } from './tabs.propTypes'
 
 const Tabs = ({ Tab, data, color, font, style, router, pathname }) => {
-  const historyRouter = router || window.historyRouter
   const currentUrl = pathname || window.location.pathname
 
   //Template
@@ -17,7 +16,7 @@ const Tabs = ({ Tab, data, color, font, style, router, pathname }) => {
           <Tab
             color={color}
             key={label}
-            onClick={() => historyRouter.push(link)}
+            onClick={() => router.push(link)}
             font={font}
             active={active}
           >

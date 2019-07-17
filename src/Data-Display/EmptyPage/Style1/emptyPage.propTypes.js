@@ -1,10 +1,11 @@
-import { string, object } from 'prop-types'
+import { string, object, func } from 'prop-types'
 
 export const defaultProps = {
   image: null,
   title: 'No active',
   buttonText: 'FIND STYLIST',
   redUrl: '/explore',
+  router: window.historyRouter || {},
 }
 
 export const propTypes = {
@@ -12,4 +13,5 @@ export const propTypes = {
   title: string,
   buttonText: string,
   redUrl: string,
+  router: func,
 }

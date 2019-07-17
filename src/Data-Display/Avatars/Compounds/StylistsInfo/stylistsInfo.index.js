@@ -6,13 +6,11 @@ import Rating from '../../../../Feedback/Rating/Ui/React/ratings.index'
 import { defaultProps, propTypes } from './stylistsInfo.propTypes'
 import { Wrapper, StylistName } from './stylistsInfo.styles'
 
-const StylistsInfo = ({ name, rating, onClick, photoUrl }) => {
+const StylistsInfo = ({ name, rating, onClick, photoUrl, router }) => {
   const size = 120
-  // const historyRouter = window.historyRouter
-
   // Functions
   const redirect = () => {
-    // historyRouter.push(`/stylists/${id}`)
+    // router(`/stylists/${id}`)
     onClick()
   }
 

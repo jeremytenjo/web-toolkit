@@ -15,6 +15,7 @@ export const defaultProps = {
   outlined: null,
   link: null,
   inputProps: null,
+  router: window.historyRouter || {},
 }
 
 export const propTypes = {
@@ -32,4 +33,5 @@ export const propTypes = {
   outlined: bool,
   link: string,
   inputProps: object,
+  router: func,
 }

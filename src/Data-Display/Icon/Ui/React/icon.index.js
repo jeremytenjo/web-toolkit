@@ -31,6 +31,7 @@ const Icon = ({
   font,
   link,
   inputProps,
+  router,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
@@ -46,7 +47,7 @@ const Icon = ({
   }, [])
 
   const handleClick = () => {
-    link && window.historyRouter(link)
+    link && router(link)
     onClick()
   }
   const WrappingComp = inputProps ? FileInput : Fragment

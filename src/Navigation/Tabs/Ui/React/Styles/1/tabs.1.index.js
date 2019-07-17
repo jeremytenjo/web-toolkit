@@ -5,8 +5,7 @@ import Tab from '@material-ui/core/Tab'
 import { Wrapper } from './tabs.1.styles'
 import { defaultProps, propTypes } from './tabs.1.propTypes'
 
-const Tabs = ({ data, color, style }) => {
-  const historyRouter = window.historyRouter
+const Tabs = ({ data, color, style, router }) => {
   const tabWidth = 100 / data.length
   const currentUrl = window.location.pathname
   let currentTabIndex
@@ -31,7 +30,7 @@ const Tabs = ({ data, color, style }) => {
             }}
             key={item.label}
             label={item.label}
-            onClick={() => historyRouter.push(item.link)}
+            onClick={() => router.push(item.link)}
           />
         ))}
       </TabsMui>

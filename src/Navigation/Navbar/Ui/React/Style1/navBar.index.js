@@ -15,13 +15,14 @@ const NavBar = ({
   onFileSelect,
   fontFamily,
   position,
+  router,
 }) => {
   const inputRef = useRef(null)
   const openLink = ({
     currentTarget: {
       dataset: { link },
     },
-  }) => window.historyRouter.push(`/${link}`)
+  }) => router.push(`/${link}`)
 
   const handleFIleUpload = async (e, file) => {
     const selectedFile = file || inputRef.current.files[0]

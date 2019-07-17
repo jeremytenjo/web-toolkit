@@ -6,13 +6,11 @@ const IconBack = ({
   onGoBack = () => null,
   to = null,
   icon = 'arrow/material',
+  router = window.historyRouter || {},
 }) => {
-  // Local Vars
-  const historyRouter = window.historyRouter
-
   // Functions
   const goBack = () => {
-    to ? historyRouter.push(to) : historyRouter.goBack()
+    to ? router.push(to) : router.goBack()
     onGoBack()
   }
 
