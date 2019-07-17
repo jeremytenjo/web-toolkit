@@ -25,12 +25,7 @@ const NavBar = ({ data, color, onInput }) => {
               inputProps={inputProps}
             />
           ) : src ? (
-            <Image
-              src={src}
-              round
-              borderColor={color}
-              inputProps={inputProps}
-            />
+            <Image src={src} round inputProps={inputProps} size={40} />
           ) : null
         })}
       </List>
