@@ -8,8 +8,6 @@ import { defaultProps, propTypes } from './navBar.propTypes'
 import { Wrapper } from './navBar.styles'
 
 const NavBar = ({ data, color, onInput, router }) => {
-  console.log(router)
-
   return (
     <Wrapper>
       <List style={{ justifyContent: 'space-around' }}>
