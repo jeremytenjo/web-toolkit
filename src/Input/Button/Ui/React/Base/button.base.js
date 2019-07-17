@@ -67,7 +67,6 @@ const Button = ({
     : `${color}-darker`
 
   const WrappingComp = inputProps ? FileInput : Fragment
-  console.log(dataCy)
 
   return (
     <Suspense fallback={null}>

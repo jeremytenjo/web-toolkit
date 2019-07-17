@@ -38,7 +38,17 @@ const Variations = () => (
       <Icon name='camera/material' size={60} />
     </B>
     <B title='label' color='black' noBackground>
-      <Icon name='camera/material' label='Labelo' size={60} />
+      <Icon name='camera/material' label='Label' size={60} />
+    </B>
+    <B title='file upload' color='black' noBackground>
+      <Icon
+        name='camera/material'
+        inputProps={{
+          name: 'file_upload',
+          onInput: (file) => console.log(file),
+        }}
+        size={60}
+      />
     </B>
   </>
 )

@@ -57,8 +57,6 @@ const FileInput = ({
   }
 
   const handleFormListener = () => {
-    console.log('asdf')
-
     const isInputvalid = toBoolean(inputRef.current.dataset.isvalid)
 
     setIsValid(isInputvalid)

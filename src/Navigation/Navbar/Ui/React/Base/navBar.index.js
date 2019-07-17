@@ -19,9 +19,7 @@ const NavBar = ({ data, color }) => {
               color={color}
               link={link}
               noBackground
-            >
-              gfgfgf
-            </Icon>
+            />
           )
         })}
       </List>

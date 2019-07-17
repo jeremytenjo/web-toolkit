@@ -14,6 +14,7 @@ export const defaultProps = {
   noBackgroundChange: null,
   outlined: null,
   link: null,
+  inputProps: null,
 }
 
 export const propTypes = {
@@ -30,4 +31,5 @@ export const propTypes = {
   noBackgroundChange: bool,
   outlined: bool,
   link: string,
+  inputProps: object,
 }

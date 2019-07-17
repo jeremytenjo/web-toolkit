@@ -1,7 +1,20 @@
-import React, { memo, useState, useEffect } from 'react'
+import React, {
+  memo,
+  useState,
+  useEffect,
+  lazy,
+  Fragment,
+  Suspense,
+} from 'react'
 
 import { WrapperIcon, Wrapper, Label } from './icon.styles'
 import { defaultProps, propTypes } from './icon.propTypes'
+
+const FileInput = lazy(() =>
+  import(
+    /* webpackChunkName: 'ButtonIcon' */ '../../../../Media/Files/Ui/React/fileInput.index'
+  ),
+)
 
 const Icon = ({
   background,
@@ -17,6 +30,7 @@ const Icon = ({
   outlined,
   font,
   link,
+  inputProps,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
@@ -35,28 +49,33 @@ const Icon = ({
     link && window.historyRouter(link)
     onClick()
   }
+  const WrappingComp = inputProps ? FileInput : Fragment
 
   return (
-    <Wrapper label={label}>
-      <WrapperIcon
-        style={style}
-        color={color}
-        onClick={handleClick}
-        background={!!background}
-        size={size}
-        noBackground={noBackground}
-        dark={dark}
-        noBackgroundChange={noBackgroundChange}
-        outlined={outlined}
-      >
-        {IconComp}
-      </WrapperIcon>
-      {label && (
-        <Label color={color} font={font}>
-          {label}
-        </Label>
-      )}
-    </Wrapper>
+    <Suspense fallback={null}>
+      <WrappingComp {...inputProps}>
+        <Wrapper label={label}>
+          <WrapperIcon
+            style={style}
+            color={color}
+            onClick={handleClick}
+            background={!!background}
+            size={size}
+            noBackground={noBackground}
+            dark={dark}
+            noBackgroundChange={noBackgroundChange}
+            outlined={outlined}
+          >
+            {IconComp}
+          </WrapperIcon>
+          {label && (
+            <Label color={color} font={font}>
+              {label}
+            </Label>
+          )}
+        </Wrapper>
+      </WrappingComp>
+    </Suspense>
   )
 }
 
