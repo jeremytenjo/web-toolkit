@@ -11,11 +11,11 @@ const NavBar = ({ data, color, onInput, router }) => {
   return (
     <Wrapper>
       <List style={{ justifyContent: 'space-around' }}>
-        {data.map(({ file = null, src = null, icon, label, link }) => {
+        {data.map(({ file = null, src = null, icon, label, link }, index) => {
           const { location } = router
           const isActive = location === link
           const inputProps = file ? { onInput } : null
-          const key = label || link || icon || Math.random()
+          const key = label || link || icon || index
 
           return (
             <Fragment key={key}>
