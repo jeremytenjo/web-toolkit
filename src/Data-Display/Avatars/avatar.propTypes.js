@@ -1,7 +1,8 @@
 import { string, func, number } from 'prop-types'
 
 export const defaultProps = {
-  type: 'primary',
+  type: 'primary-background',
+  borderColor: 'primary',
   name: 'N',
   photoUrl: null,
   size: 80,

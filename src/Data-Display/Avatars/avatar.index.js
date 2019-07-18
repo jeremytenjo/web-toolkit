@@ -3,7 +3,15 @@ import React from 'react'
 import { defaultProps, propTypes } from './avatar.propTypes'
 import { Wrapper, Image } from './avatar.styles'
 
-const Avatar = ({ type, name, photoUrl, onClick, size, radius }) => {
+const Avatar = ({
+  type,
+  borderColor,
+  name,
+  photoUrl,
+  onClick,
+  size,
+  radius,
+}) => {
   let initials = name.split(' ')
 
   initials =
@@ -17,6 +25,7 @@ const Avatar = ({ type, name, photoUrl, onClick, size, radius }) => {
         radius={radius}
         photoUrl={photoUrl}
         type={type}
+        borderColor={borderColor}
         onClick={onClick}
         size={size}
       >

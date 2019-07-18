@@ -7,9 +7,9 @@ import Image from '../../../../../Media/Image/Ui/React/image.index'
 import { defaultProps, propTypes } from './navBar.propTypes'
 import { Wrapper } from './navBar.styles'
 
-const NavBar = ({ data, color, onInput, router }) => {
+const NavBar = ({ data, backgroundColor, color, onInput, router }) => {
   return (
-    <Wrapper>
+    <Wrapper backgroundColor={backgroundColor}>
       <List style={{ justifyContent: 'space-around' }}>
         {data.map(({ file = null, src = null, icon, label, link }, index) => {
           const { location } = router
