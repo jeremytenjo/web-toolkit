@@ -14,23 +14,14 @@ const Autocomplete = ({ inputStyle }) => {
     let mod = await import(
       `../../../Form/Text-Field/Ui/React/Styles/textfield.${inputStyle}.index.js`
     )
-    setTextField(mod.default())
+    setTextField(mod.default({ onInput: handleInput }))
   }
 
   const handleInput = (value) => {
     console.log(value)
   }
 
-  console.log(Textfield)
-
-  return (
-    <Wrapper>
-      {Textfield}
-      {Textfield && React.cloneElement(Textfield, { onInput: handleInput })}
-      {/* {Textfield && <Textfield />} */}
-      dd
-    </Wrapper>
-  )
+  return <Wrapper>{Textfield}</Wrapper>
 }
 console.log(Autocomplete)
 

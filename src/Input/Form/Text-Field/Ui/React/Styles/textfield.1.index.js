@@ -74,20 +74,16 @@ const CloseIconCon = styled.div`
   }
 `
 
-export default (props) => {
-  console.log(props)
-
-  return (
-    <>
-      <TextField
-        Wrapper={Wrapper}
-        Input={Input}
-        IconLeftCon={IconLeftCon}
-        IconRightCon={IconRightCon}
-        InputCon={InputCon}
-        CloseIconCon={CloseIconCon}
-        {...props}
-      />
-    </>
-  )
-}
+export default (props) => (
+  <>
+    <TextField
+      Wrapper={Wrapper}
+      Input={Input}
+      IconLeftCon={IconLeftCon}
+      IconRightCon={IconRightCon}
+      InputCon={InputCon}
+      CloseIconCon={CloseIconCon}
+      {...props}
+    />
+  </>
+)

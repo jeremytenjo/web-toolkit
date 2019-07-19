@@ -155,8 +155,6 @@ const TextField = ({
   }
 
   const handleChange = async ({ target: { value } }) => {
-    console.log(onInput)
-
     onInput(value)
     setInput(value)
   }
