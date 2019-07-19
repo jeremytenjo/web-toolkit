@@ -33,6 +33,7 @@ const TextField = ({
   label,
   onLeftIconClick,
   onRightIconClick,
+  onInput,
   autocomplete,
   initialInput,
   clearOnSubmit,
@@ -49,6 +50,7 @@ const TextField = ({
     direction: 'normal',
     easing: 'ease-out',
   }
+  const hasValidation = validation.length > 0
 
   // State
   const [input, setInput] = useState(initialInput)
@@ -58,7 +60,6 @@ const TextField = ({
   // Tracks validilty with data attribute for use with Form component
   const [isValidFormCheck, setIsValidFormCheck] = useState(null)
   const [focus, setfocus] = useState(null)
-  const noValidation = validation.length === 0
 
   useEffect(() => {
     startOnSubmitListener()
@@ -87,11 +88,11 @@ const TextField = ({
   }, [isValid])
 
   useEffect(() => {
-    validation && initialValidation(input)
+    hasValidation && initialValidation(input)
   }, [])
 
   useEffect(() => {
-    isValidFormCheck !== null && validation && onChangeVaildation(input)
+    isValidFormCheck !== null && hasValidation && onChangeVaildation(input)
   }, [input])
 
   // Functions
@@ -117,7 +118,7 @@ const TextField = ({
   }
 
   const initialValidation = async (value) => {
-    if (noValidation) {
+    if (!hasValidation) {
       setIsValid(true)
       setIsValidFormCheck(true)
       return null
@@ -140,7 +141,7 @@ const TextField = ({
   }
 
   const checkValidation = async (value) => {
-    if (validation) {
+    if (hasValidation) {
       const messages = await validation.map(async ({ name, message }) => {
         const mod = await import(`../Validation/${name}/textfield.${name}.js`)
         const errMessage = mod.default({ value, message })
@@ -153,7 +154,12 @@ const TextField = ({
     }
   }
 
-  const handleChange = async ({ target: { value } }) => setInput(value)
+  const handleChange = async ({ target: { value } }) => {
+    console.log(onInput)
+
+    onInput(value)
+    setInput(value)
+  }
 
   const handleFocus = () => {
     onFocus()
