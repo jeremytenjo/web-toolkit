@@ -115,6 +115,7 @@ const TextField = ({
   const clearIconClick = () => {
     inputRef.current.focus()
     setInput('')
+    onInput('')
   }
 
   const initialValidation = async (value) => {

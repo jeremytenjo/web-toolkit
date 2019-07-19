@@ -1,14 +1,37 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo, useEffect, useState, useRef } from 'react'
+
+import List from '../../../../Data-Display/List/Ui/React/list.index'
+import animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 import { defaultProps, propTypes } from './autocomplete.propTypes'
 import { Wrapper, Other } from './autocomplete.styles'
 
 const Autocomplete = ({ inputStyle }) => {
+  const listRef = useRef(null)
+
   const [Textfield, setTextField] = useState(null)
+  const [showList, setshowList] = useState(null)
 
   useEffect(() => {
     importTextfield()
   }, [])
+
+  const config = {
+    fill: 'forwards',
+    duration: 50,
+    direction: 'normal',
+    easing: 'ease-out',
+  }
+
+  useEffect(() => {
+    if (showList !== null)
+      animation({
+        name: 'showHide',
+        el: listRef.current,
+        config,
+        show: showList,
+      })
+  }, [showList])
 
   const importTextfield = async () => {
     let mod = await import(
@@ -18,12 +41,22 @@ const Autocomplete = ({ inputStyle }) => {
   }
 
   const handleInput = (value) => {
-    console.log(value)
+    setshowList(value !== '')
   }
 
-  return <Wrapper>{Textfield}</Wrapper>
+  return (
+    <Wrapper>
+      {Textfield}
+      <div ref={listRef} style={{ display: 'none' }}>
+        <List direction='row'>
+          <span>hello</span>
+          <span>hello</span>
+          <span>hello</span>
+        </List>
+      </div>
+    </Wrapper>
+  )
 }
-console.log(Autocomplete)
 
 Autocomplete.defaultProps = defaultProps
 Autocomplete.propTypes = propTypes
