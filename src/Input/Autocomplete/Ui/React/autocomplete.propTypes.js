@@ -1,13 +1,13 @@
-import { string, func, number } from 'prop-types'
+import { array, func, number } from 'prop-types'
 
 export const defaultProps = {
   inputStyle: 1,
-  text: 'Chip',
+  data: [],
   onClick: () => null,
 }
 
 export const propTypes = {
   inputStyle: number,
-  text: string,
+  data: array,
   onClick: func,
 }

@@ -6,11 +6,17 @@ import animation from '../../../../Misc-Utils/Animations/Web-Animations-API/anim
 import { defaultProps, propTypes } from './autocomplete.propTypes'
 import { Wrapper, Other } from './autocomplete.styles'
 
-const Autocomplete = ({ inputStyle }) => {
+const Autocomplete = ({ inputStyle, data }) => {
   const listRef = useRef(null)
 
   const [Textfield, setTextField] = useState(null)
   const [showList, setshowList] = useState(null)
+  const [_data, setData] = useState(data)
+  const hasData = _data.length > 0
+
+  // useEffect(() => {
+  //   hasData
+  // }, [_data])
 
   useEffect(() => {
     importTextfield()
