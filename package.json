@@ -1,11 +1,13 @@
 {
   "name": "@tenjojeremy/web-toolkit",
-  "version": "3.89.0",
+  "version": "3.90.0",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && yarn build:snippets && yarn publish:snippets && gpush && rmdir /s /q build",
@@ -43,8 +45,8 @@
     "node-emoji": "^1.10.0",
     "react-bottom-scroll-listener": "^3.0.0",
     "react-lazyload": "^2.6.2",
-    "styled-components": "^4.3.2",
-    "react-stars": "^2.2.5"
+    "react-stars": "^2.2.5",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
