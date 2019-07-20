@@ -15,7 +15,7 @@ const Variations = () => (
     <B title='background' noBackground>
       <Icon
         name='camera/material'
-        color='primary'
+        color='white'
         background
         noBackgroundChange
       />
