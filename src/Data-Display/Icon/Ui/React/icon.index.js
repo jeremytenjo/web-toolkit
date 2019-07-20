@@ -32,6 +32,7 @@ const Icon = ({
   link,
   inputProps,
   router,
+  backgroundColor,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
@@ -66,6 +67,7 @@ const Icon = ({
             dark={dark}
             noBackgroundChange={noBackgroundChange}
             outlined={outlined}
+            backgroundColor={backgroundColor}
           >
             {IconComp}
           </WrapperIcon>

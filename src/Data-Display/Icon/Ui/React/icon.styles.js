@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
     label &&
     `    
   grid-gap: var(--spacing-xxs);
-  `}
+  `};
 `
 export const WrapperIcon = styled.div`
   display: flex;
@@ -27,17 +27,17 @@ export const WrapperIcon = styled.div`
   }
   
   /* Background */
-  ${({ background, size, color }) =>
+  ${({ background, size, backgroundColor }) =>
     background &&
     `
-    background-color: var(--color-${color}-background);    
-    border: 2px solid var(--color-${color}-background);
+    background-color: var(--color-${backgroundColor});    
+    border: 2px solid var(--color-${backgroundColor});
     width: ${size}px;
     height: ${size}px;  
 
     &:active {
-    background-color: var(--color-${color}-background);   
-    border: 2px solid var(--color-${color});
+    background-color: var(--color-${backgroundColor});   
+    border: 2px solid var(--color-${backgroundColor});
     }
   `}
 

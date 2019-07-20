@@ -10,38 +10,54 @@ import { Wrapper } from './navBar.styles'
 const NavBar = ({ data, backgroundColor, color, onInput, router }) => {
   return (
     <Wrapper backgroundColor={backgroundColor}>
-      <List style={{ justifyContent: 'space-around' }}>
-        {data.map(({ file = null, src = null, icon, label, link }, index) => {
-          const { location } = router
-          const isActive = location === link
-          const inputProps = file ? { onInput } : null
-          const key = label || link || icon || index
+      <List style={{ justifyContent: 'space-around', alignItems: 'center' }}>
+        {data.map(
+          (
+            {
+              file = null,
+              src = null,
+              icon,
+              label,
+              link,
+              iconColor,
+              iconBackgroundColor,
+              iconSize,
+            },
+            index,
+          ) => {
+            const { location } = router
+            const isActive = location === link
+            const inputProps = file ? { onInput } : null
+            const key = label || link || icon || index
 
-          return (
-            <Fragment key={key}>
-              {icon && (
-                <Icon
-                  name={icon}
-                  label={label}
-                  color={isActive ? color : 'grey'}
-                  link={link}
-                  noBackground
-                  inputProps={inputProps}
-                />
-              )}
+            return (
+              <Fragment key={key}>
+                {icon && (
+                  <Icon
+                    name={icon}
+                    label={label}
+                    color={iconColor ? iconColor : isActive ? color : 'grey'}
+                    link={link}
+                    size={iconSize}
+                    background={iconBackgroundColor}
+                    backgroundColor={iconBackgroundColor}
+                    inputProps={inputProps}
+                  />
+                )}
 
-              {src && (
-                <Image
-                  src={src}
-                  round
-                  borderColor={isActive ? color : null}
-                  inputProps={inputProps}
-                  size={40}
-                />
-              )}
-            </Fragment>
-          )
-        })}
+                {src && (
+                  <Image
+                    src={src}
+                    round
+                    borderColor={isActive ? color : null}
+                    inputProps={inputProps}
+                    size={40}
+                  />
+                )}
+              </Fragment>
+            )
+          },
+        )}
       </List>
     </Wrapper>
   )
