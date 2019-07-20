@@ -179,6 +179,11 @@
       "body": ["import Toast from '@tenjojeremy/web-toolkit/build/Feedback/Toast/toast.index.js'"],
     },
     
+    "Autocomplete": {
+      "prefix": "wtaur",
+      "body": ["import Autocomplete from '@tenjojeremy/web-toolkit/build/Input/Autocomplete/Ui/React/autocomplete.index.js'"],
+    },
+    
     "Button 1": {
       "prefix": "wtbu1r",
       "body": ["import Button from '@tenjojeremy/web-toolkit/build/Input/Button/Ui/React/Styles/button.1.index.js'"],
@@ -187,6 +192,11 @@
     "Collection": {
       "prefix": "wtcor",
       "body": ["import Collection from '@tenjojeremy/web-toolkit/build/Input/Collection/React/Ui/collection.index.js'"],
+    },
+    
+    "Dropdown": {
+      "prefix": "wtdrr",
+      "body": ["import Dropdown from '@tenjojeremy/web-toolkit/build/Input/Dropdown/Ui/React/dropdown.index.js'"],
     },
     
     "Textfield 1": {
