@@ -10,7 +10,12 @@ import { Wrapper } from './navBar.styles'
 const NavBar = ({ data, backgroundColor, color, onInput, router }) => {
   return (
     <Wrapper backgroundColor={backgroundColor}>
-      <List style={{ justifyContent: 'space-around', alignItems: 'center' }}>
+      <List
+        style={{
+          alignItems: 'center',
+          justifyItems: 'center',
+        }}
+      >
         {data.map(
           (
             {
