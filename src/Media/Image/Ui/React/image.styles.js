@@ -29,6 +29,7 @@ height: ${height || size}px;
 
 const _round = () => `
 border-radius: 100px;
+min-height: auto;
 `
 
 const _borderColor = (borderColor) => `
