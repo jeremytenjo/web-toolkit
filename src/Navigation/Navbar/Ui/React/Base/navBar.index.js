@@ -14,9 +14,14 @@ const NavBar = ({
   onInput,
   router,
   position,
+  shadow,
 }) => {
   return (
-    <Wrapper backgroundColor={backgroundColor} position={position}>
+    <Wrapper
+      backgroundColor={backgroundColor}
+      position={position}
+      shadow={shadow}
+    >
       <List
         style={{
           alignItems: 'center',
