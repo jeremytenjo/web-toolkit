@@ -2,8 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Bar from '../Base/navBar.index'
 
-import Bar from './navBar.index'
 import data from './navBar.links'
 
 const testFileInput = (file) => {
