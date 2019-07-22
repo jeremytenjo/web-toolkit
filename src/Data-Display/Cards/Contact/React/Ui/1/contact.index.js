@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Icon from '../../../../../Icon/Ui/React/icon.index'
+import Icon from '../../../../../Icon/Ui/React/Base/icon.index'
 import Avatar from '../../../../../Avatars/avatar.index'
 import Rating from '../../../../../../Feedback/Rating/Ui/React/ratings.index'
 import Button from '../../../../../../Input/Button/Ui/React/Styles/button.1.index'

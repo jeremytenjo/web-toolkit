@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
-import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
+import Icon from '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 import Image from '../../../../../Media/Image/Ui/React/image.index'
 
 import { defaultProps, propTypes } from './navBar.propTypes'

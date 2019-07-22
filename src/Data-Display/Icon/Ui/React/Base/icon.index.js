@@ -12,7 +12,7 @@ import { defaultProps, propTypes } from './icon.propTypes'
 
 const FileInput = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../Media/Files/Ui/React/fileInput.index'
+    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Media/Files/Ui/React/fileInput.index'
   ),
 )
 
@@ -39,7 +39,7 @@ const Icon = ({
 
   const getModule = async () => {
     if (name) {
-      const module = await import(`./Library/${name}.js`)
+      const module = await import(`../Library/${name}.js`)
       setIconComp(module.default())
     }
   }

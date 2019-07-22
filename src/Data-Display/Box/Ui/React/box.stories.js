@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Icon from '../../../Icon/Ui/React/icon.index'
+import Icon from '../../../Icon/Ui/React/Base/icon.index'
 
 import markdown from './box.readme.md'
 import Box from './box.index'

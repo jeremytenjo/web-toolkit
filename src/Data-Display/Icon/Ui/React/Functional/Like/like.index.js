@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Icon from '../../icon.index'
+import Icon from '../../Base/icon.index'
 
 import { defaultProps, propTypes } from './like.propTypes.js'
 

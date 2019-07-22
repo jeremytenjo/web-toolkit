@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 import markdown from './icon.readme.md'
-import Icon from './icon.index'
+import Icon from './Base/icon.index'
 
 const Variations = () => (
   <>

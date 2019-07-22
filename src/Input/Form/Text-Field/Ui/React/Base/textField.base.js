@@ -1,7 +1,7 @@
 import React, { useState, memo, useEffect, useRef } from 'react'
 
 import toBoolean from '../../../../../../Misc-Utils/String/toBoolean.index'
-import Icon from '../../../../../../Data-Display/Icon/Ui/React/icon.index'
+import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 import animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
 

@@ -2,7 +2,7 @@ import React, { useState, memo } from 'react'
 import Menu_ui from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 
-import Icon from '../../Data-Display/Icon/Ui/React/icon.index'
+import Icon from '../../Data-Display/Icon/Ui/React/Base/icon.index'
 
 import { defaultProps, propTypes } from './menu.propTypes'
 

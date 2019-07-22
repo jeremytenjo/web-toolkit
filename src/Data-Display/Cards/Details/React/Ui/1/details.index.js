@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Icon from '../../../../../Icon/Ui/React/icon.index'
+import Icon from '../../../../../Icon/Ui/React/Base/icon.index'
 import StarsRating from '../../../../../../Feedback/Rating/Ui/React/ratings.index'
 import Typography from '../../../../../Typography/Ui/React/typography.index'
 import Avatar from '../../../../../Avatars/avatar.index'

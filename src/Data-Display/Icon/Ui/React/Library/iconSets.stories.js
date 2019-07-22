@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import List from '../../../../List/Ui/React/list.index'
-import Icon from '../icon.index'
+import Icon from '../Base/icon.index'
 
 const materialIconsReq = require.context('./', true, /material\.js$/)
 const materialIconPaths = materialIconsReq.keys()

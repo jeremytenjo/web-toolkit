@@ -5,7 +5,7 @@ import animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/a
 
 const ButtonIcon = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/icon.index'
+    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
   ),
 )
 const Dots = lazy(() =>
