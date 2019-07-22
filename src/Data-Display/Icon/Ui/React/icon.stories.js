@@ -20,6 +20,9 @@ const Variations = () => (
         noBackgroundChange
       />
     </B>
+    <B title='plain' noBackground>
+      <Icon name='camera/material' plain />
+    </B>
 
     <B title='color' noBackground>
       <Icon
@@ -53,10 +56,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Icon/React', module).add(
-  'component',
-  () => <Variations />,
-  {
-    notes: { markdown },
-  },
-)
+storiesOf('Data-Display|Icon/React', module).add('Base', () => <Variations />, {
+  notes: { markdown },
+})

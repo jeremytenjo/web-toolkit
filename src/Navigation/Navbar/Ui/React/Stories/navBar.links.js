@@ -15,6 +15,8 @@ export default [
     iconBackgroundColor: 'primary',
     iconSize: 50,
     file: true,
+    iconPlain: false,
+    top: true,
   },
   {
     src:

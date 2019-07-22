@@ -33,6 +33,7 @@ const Icon = ({
   inputProps,
   router,
   backgroundColor,
+  plain,
 }) => {
   const [IconComp, setIconComp] = useState(null)
 
@@ -58,6 +59,7 @@ const Icon = ({
       <WrappingComp {...inputProps}>
         <Wrapper label={label}>
           <WrapperIcon
+            plain={plain}
             style={style}
             color={color}
             onClick={handleClick}

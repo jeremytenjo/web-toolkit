@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from 'react'
+import React, { memo } from 'react'
 
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/icon.index'
@@ -35,6 +35,8 @@ const NavBar = ({
               iconColor,
               iconBackgroundColor,
               iconSize,
+              iconPlain = true,
+              top,
             },
             index,
           ) => {
@@ -42,9 +44,11 @@ const NavBar = ({
             const isActive = location === link
             const inputProps = file ? { onInput } : null
             const key = label || link || icon || index
+            const isPlain = iconPlain
+            const iconPosition = top ? { transform: 'translateY(-30px)' } : null
 
             return (
-              <Fragment key={key}>
+              <div key={key} style={iconPosition}>
                 {icon && (
                   <Icon
                     name={icon}
@@ -55,6 +59,7 @@ const NavBar = ({
                     background={iconBackgroundColor}
                     backgroundColor={iconBackgroundColor}
                     inputProps={inputProps}
+                    plain={isPlain}
                   />
                 )}
 
@@ -67,7 +72,7 @@ const NavBar = ({
                     size={40}
                   />
                 )}
-              </Fragment>
+              </div>
             )
           },
         )}

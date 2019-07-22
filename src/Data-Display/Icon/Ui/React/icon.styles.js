@@ -75,6 +75,18 @@ export const WrapperIcon = styled.div`
     }
   `}
 
+      /* Plain */
+      ${({ plain }) =>
+        plain &&
+        `
+        width: auto;
+        height: auto;
+  &:active {
+    background-color: transparent;
+    border: none;    
+    }
+  `}
+
   svg {
     fill: ${({ color, dark }) =>
       color && !dark
