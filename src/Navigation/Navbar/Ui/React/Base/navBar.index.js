@@ -14,6 +14,7 @@ const NavBar = ({ data, backgroundColor, color, onInput, router }) => {
         style={{
           alignItems: 'center',
           justifyItems: 'center',
+          gridAutoColumns: '1fr',
         }}
       >
         {data.map(
