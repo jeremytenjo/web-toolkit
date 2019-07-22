@@ -8,7 +8,7 @@ const VariationBlock = ({
   style,
   contentStyle,
   containerId,
-  noBackground,
+  background,
   color = 'white',
 }) => {
   return (
@@ -17,7 +17,7 @@ const VariationBlock = ({
       <Content
         style={contentStyle || style}
         id={containerId}
-        noBackground={noBackground}
+        background={background}
         color={color}
       >
         {children}

@@ -13,7 +13,6 @@ const FileInput = lazy(() =>
 
 const Avatar = ({
   type,
-  borderColor,
   name,
   photoUrl,
   onClick,
@@ -35,10 +34,9 @@ const Avatar = ({
       <WrappingComp {...inputProps}>
         <Wrapper>
           <Image
-            radius={radius}
+            borderRadius={radius}
             src={photoUrl}
             type={type}
-            borderColor={borderColor}
             onClick={onClick}
             size={size}
           >
