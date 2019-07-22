@@ -21,8 +21,8 @@ const Variations = () => {
       <B title='No Image no lastname'>
         <Avatar name='Hayle' rating={5} />
       </B>
-      <B title='Secondary'>
-        <Avatar type='secondary' name='Hayle Whitehead' rating={5} />
+      <B title='editable'>
+        <Avatar type='secondary' name='Hayle Whitehead' rating={5} editable />
       </B>
     </>
   )

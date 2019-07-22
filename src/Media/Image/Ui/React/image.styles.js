@@ -17,26 +17,12 @@ export const Wrapper = styled.div`
   background-color: ${({ letterColor }) =>
     `var(--color-${letterColor}-background)`};
 
-  ${({ round }) => round && _round()}
-  ${({ borderColor }) => borderColor && _borderColor(borderColor)}
   ${({ size, width, height }) => _size(size, width, height)}
 `
 
 const _size = (size, width, height) => `
 width: ${width || size}px;
 height: ${height || size}px;
-`
-
-const _round = () => `
-border-radius: 100px;
-min-height: auto;
-`
-
-const _borderColor = (borderColor) => `
-border: 2px solid transparent;
-&:active {
-  border: 2px solid var(--color-${borderColor});
-}
 `
 
 export const InnerImage = styled.img`
@@ -46,13 +32,4 @@ export const InnerImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`
-
-export const Letters = styled.span`
-  font-family: ${({ lettersFont }) => `var(--font-${lettersFont})`};
-  text-transform: uppercase;
-  color: ${({ letterColor }) => `var(--color-${letterColor})`};
-  font-size: 32px;
-  font-weight: bold;
-  user-select: none;
 `

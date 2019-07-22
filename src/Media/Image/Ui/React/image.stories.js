@@ -18,27 +18,6 @@ const Variations = () => (
       />
     </B>
 
-    <B title='round' noBackground>
-      <Image round src={testImage} />
-    </B>
-
-    <B title='with Border' noBackground>
-      <Image round src={testImage} borderColor='secondary' />
-    </B>
-
-    <B title='no image - color baxkground' noBackground>
-      <Image round background='white' />
-    </B>
-
-    <B title='no image - letter background' noBackground>
-      <Image
-        round
-        background='letter'
-        name='Jeremy tenjo'
-        borderColor='primary-darker'
-      />
-    </B>
-
     <B title='isLazyLoaded' noBackground>
       <Image
         isLazyLoaded

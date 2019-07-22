@@ -1,15 +1,9 @@
-import React, { memo, lazy, Fragment, Suspense } from 'react'
+import React, { memo } from 'react'
 
 import OnVisibility from '../../../../Misc-Utils/Rendering/renderingOnVisibility'
 
 import { defaultProps, propTypes } from './image.propTypes'
-import { Wrapper, InnerImage, Letters } from './image.styles'
-
-const FileInput = lazy(() =>
-  import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../Media/Files/Ui/React/fileInput.index'
-  ),
-)
+import { Wrapper, InnerImage } from './image.styles'
 
 const Image = ({
   src,
@@ -22,13 +16,6 @@ const Image = ({
   size,
   width,
   height,
-  round,
-  borderColor,
-  background,
-  name,
-  lettersFont,
-  letterColor,
-  inputProps,
   ...props
 }) => {
   // In case  the src key in not called src in props, expects {src: <propsrcname>}
@@ -38,39 +25,16 @@ const Image = ({
     }
   }
 
-  // create inirials
-  let initials = name.split(' ')
-
-  initials =
-    initials.length > 1
-      ? initials[0].substring(0, 1) + initials[1].substring(0, 1)
-      : initials[0].substring(0, 1)
-
-  // Handle file input
-  const WrappingComp = inputProps ? FileInput : Fragment
-
   const ImageComp = () => (
-    <Suspense fallback={null}>
-      <WrappingComp {...inputProps}>
-        <Wrapper
-          width={width}
-          height={height}
-          size={size}
-          round={round}
-          borderColor={borderColor}
-          onClick={() => onClick(props)}
-          cursor={cursor}
-          letterColor={letterColor}
-        >
-          {src && <InnerImage alt={alt} src={src} />}
-          {background === 'letter' && (
-            <Letters lettersFont={lettersFont} letterColor={letterColor}>
-              {initials}
-            </Letters>
-          )}
-        </Wrapper>
-      </WrappingComp>
-    </Suspense>
+    <Wrapper
+      width={width}
+      height={height}
+      size={size}
+      onClick={() => onClick(props)}
+      cursor={cursor}
+    >
+      {src && <InnerImage alt={alt} src={src} />}
+    </Wrapper>
   )
 
   // Template

@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { lazy, Suspense, Fragment } from 'react'
+
+import Image from '../../Media/Image/Ui/React/image.index'
 
 import { defaultProps, propTypes } from './avatar.propTypes'
-import { Wrapper, Image } from './avatar.styles'
+import { Wrapper } from './avatar.styles'
+
+const FileInput = lazy(() =>
+  import(
+    /* webpackChunkName: 'ButtonIcon' */ '../../Media/Files/Ui/React/fileInput.index'
+  ),
+)
 
 const Avatar = ({
   type,
@@ -11,6 +19,7 @@ const Avatar = ({
   onClick,
   size,
   radius,
+  inputProps,
 }) => {
   let initials = name.split(' ')
 
@@ -19,19 +28,25 @@ const Avatar = ({
       ? initials[0].substring(0, 1) + initials[1].substring(0, 1)
       : initials[0].substring(0, 1)
 
+  const WrappingComp = inputProps ? FileInput : Fragment
+
   return (
-    <Wrapper>
-      <Image
-        radius={radius}
-        photoUrl={photoUrl}
-        type={type}
-        borderColor={borderColor}
-        onClick={onClick}
-        size={size}
-      >
-        {!photoUrl && <span>{initials}</span>}
-      </Image>
-    </Wrapper>
+    <Suspense fallback={null}>
+      <WrappingComp {...inputProps}>
+        <Wrapper>
+          <Image
+            radius={radius}
+            src={photoUrl}
+            type={type}
+            borderColor={borderColor}
+            onClick={onClick}
+            size={size}
+          >
+            {!photoUrl && <span>{initials}</span>}
+          </Image>
+        </Wrapper>
+      </WrappingComp>
+    </Suspense>
   )
 }
 
