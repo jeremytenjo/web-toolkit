@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 export const Title = styled.span`
   font-family: monospace;
   font-weight: bold;
-  color: #cdfff9;
+  color: ${({ titleColor }) => titleColor};
 `
 
 export const Content = styled.div`

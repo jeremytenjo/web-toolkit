@@ -9,11 +9,14 @@ const VariationBlock = ({
   contentStyle,
   containerId,
   background,
+  titleColor = '#cdfff9',
   color = 'white',
 }) => {
   return (
     <Wrapper style={style}>
-      <Title style={style}>{title}</Title>
+      <Title style={style} titleColor={titleColor}>
+        {title}
+      </Title>
       <Content
         style={contentStyle || style}
         id={containerId}

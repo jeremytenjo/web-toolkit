@@ -11,7 +11,6 @@ const Variations = () => {
       <B title='With image'>
         <Avatar
           name='Hayle Whitehead'
-          rating={5}
           src='https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'
         />
       </B>
