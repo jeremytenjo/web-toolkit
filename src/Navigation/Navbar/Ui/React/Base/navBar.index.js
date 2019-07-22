@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
-import Image from '../../../../../Media/Image/Ui/React/image.index'
+import Avatar from '../../../../../Data-Display/Avatars/avatar.index'
 
 import { defaultProps, propTypes } from './navBar.propTypes'
 import { Wrapper } from './navBar.styles'
@@ -67,9 +67,9 @@ const NavBar = ({
                 )}
 
                 {src && (
-                  <Image
+                  <Avatar
                     src={src}
-                    round
+                    radius={100}
                     borderColor={isActive ? color : null}
                     inputProps={inputProps}
                     size={40}
