@@ -1,19 +1,21 @@
 import { string, func, number } from 'prop-types'
 
 export const defaultProps = {
-  type: 'primary-background',
-  borderColor: 'primary',
+  color: 'primary-background',
+  letterColor: 'primary-darker',
+  borderColor: null,
   name: 'N',
-  photoUrl: null,
+  src: null,
   size: 80,
   radius: 100,
   onClick: () => null,
 }
 
 export const propTypes = {
-  type: string,
+  color: string,
   name: string,
-  photoUrl: string,
+  letterColor: string,
+  src: string,
   size: number,
   radius: number,
   onClick: func,

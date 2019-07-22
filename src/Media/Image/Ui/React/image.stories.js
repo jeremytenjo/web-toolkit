@@ -9,7 +9,7 @@ import Image from './image.index'
 
 const Variations = () => (
   <>
-    <B title='default' noBackground>
+    <B title='default'>
       <Image
         src={testImage}
         width={400}
@@ -18,7 +18,7 @@ const Variations = () => (
       />
     </B>
 
-    <B title='isLazyLoaded' noBackground>
+    <B title='isLazyLoaded'>
       <Image
         isLazyLoaded
         src={testImage2}

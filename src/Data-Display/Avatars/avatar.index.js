@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, Fragment } from 'react'
 
 import Image from '../../Media/Image/Ui/React/image.index'
+import Typography from '../Typography/Ui/React/typography.index'
 
 import { defaultProps, propTypes } from './avatar.propTypes'
 import { Wrapper } from './avatar.styles'
@@ -12,13 +13,15 @@ const FileInput = lazy(() =>
 )
 
 const Avatar = ({
-  type,
+  color,
   name,
-  photoUrl,
+  src,
   onClick,
   size,
   radius,
   inputProps,
+  letterColor,
+  borderColor,
 }) => {
   let initials = name.split(' ')
 
@@ -32,16 +35,24 @@ const Avatar = ({
   return (
     <Suspense fallback={null}>
       <WrappingComp {...inputProps}>
-        <Wrapper>
-          <Image
-            borderRadius={radius}
-            src={photoUrl}
-            type={type}
-            onClick={onClick}
-            size={size}
-          >
-            {!photoUrl && <span>{initials}</span>}
-          </Image>
+        <Wrapper
+          color={color}
+          src={src}
+          radius={radius}
+          letterColor={letterColor}
+          size={size}
+          borderColor={borderColor}
+        >
+          {src ? (
+            <Image
+              src={src}
+              onClick={onClick}
+              size={size}
+              borderRadius={radius}
+            />
+          ) : (
+            <Typography text={initials} color={letterColor} />
+          )}
         </Wrapper>
       </WrappingComp>
     </Suspense>

@@ -12,17 +12,21 @@ const Variations = () => {
         <Avatar
           name='Hayle Whitehead'
           rating={5}
-          photoUrl='https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'
+          src='https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'
         />
       </B>
       <B title='No Image'>
-        <Avatar name='Hayle Whitehead' rating={5} />
+        <Avatar name='Hayle Whitehead' />
       </B>
       <B title='No Image no lastname'>
-        <Avatar name='Hayle' rating={5} />
+        <Avatar name='Hayle' />
       </B>
       <B title='editable'>
-        <Avatar type='secondary' name='Hayle Whitehead' rating={5} editable />
+        <Avatar
+          type='secondary'
+          name='Hayle Whitehead'
+          inputProps={{ onInput: (file) => console.log(file) }}
+        />
       </B>
     </>
   )
