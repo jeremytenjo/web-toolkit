@@ -37,6 +37,7 @@ const NavBar = ({
               iconSize,
               iconPlain = true,
               top,
+              url,
             },
             index,
           ) => {
@@ -47,8 +48,10 @@ const NavBar = ({
             const isPlain = iconPlain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
 
+            const handleClick = () => url && router.push(url)
+
             return (
-              <div key={key} style={iconPosition}>
+              <div key={key} style={iconPosition} onClick={handleClick}>
                 {icon && (
                   <Icon
                     name={icon}
