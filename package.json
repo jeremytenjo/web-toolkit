@@ -5,17 +5,15 @@
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
+  "files": ["build"],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
-    "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && yarn build:snippets && rmdir /s /q build",
+    "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && rmdir /s /q build",
     "build:snippets": "node tenjo-web-toolkit-snippets/snippets.gen.js",
     "build:library": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./.babelrc ./src --out-dir ./build/ --ignore 'src/**/*.spec.js','src/**/*.spec-cy.js','src/**/*.test.js','src/**/*.stories.js' ",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
-    "publish:snippets": "cd tenjo-web-toolkit-snippets && vsce publish minor && git add -A && git commit -a --allow-empty-message && git push",
+    "publish:snippets": "yarn build:snippets && cd tenjo-web-toolkit-snippets && vsce publish minor && git add -A && git commit -a --allow-empty-message && git push",
     "test": "jest",
     "pretty": "prettier \"**/*.js\" --write",
     "cy:open": "cypress open",
