@@ -88,7 +88,7 @@ const TextField = ({
   }, [isValid])
 
   useEffect(() => {
-    hasValidation && initialValidation(input)
+    initialValidation(input)
   }, [])
 
   useEffect(() => {
