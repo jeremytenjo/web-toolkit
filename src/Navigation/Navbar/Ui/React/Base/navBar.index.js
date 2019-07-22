@@ -7,9 +7,16 @@ import Image from '../../../../../Media/Image/Ui/React/image.index'
 import { defaultProps, propTypes } from './navBar.propTypes'
 import { Wrapper } from './navBar.styles'
 
-const NavBar = ({ data, backgroundColor, color, onInput, router }) => {
+const NavBar = ({
+  data,
+  backgroundColor,
+  color,
+  onInput,
+  router,
+  position,
+}) => {
   return (
-    <Wrapper backgroundColor={backgroundColor}>
+    <Wrapper backgroundColor={backgroundColor} position={position}>
       <List
         style={{
           alignItems: 'center',

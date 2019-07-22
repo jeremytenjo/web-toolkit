@@ -13,7 +13,13 @@ const testFileInput = (file) => {
 const Variations = () => (
   <>
     <B title='Example 1' noBackground style={{ width: 'auto' }}>
-      <Bar data={data} activeColor='primary' defaultColor='grey' />
+      <Bar
+        data={data}
+        activeColor='primary'
+        defaultColor='grey'
+        position='bottom'
+        onInput={testFileInput}
+      />
     </B>
   </>
 )
