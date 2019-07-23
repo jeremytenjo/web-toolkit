@@ -45,16 +45,17 @@ const itemComponent = ({ item }) => <p>{item}</p>
 
 const Variations = () => (
   <>
-    <B title='Direction - Vertical'>
+    <B title='Direction - Vertical' background>
       <List data={dataSet1} ItemComponent={itemComponent} direction='row' />
     </B>
 
-    <B title='Direction - Horizontal'>
+    <B title='Direction - Horizontal' background>
       <List data={dataSet2} ItemComponent={itemComponent} direction='column' />
     </B>
 
     <B
       title='Direction - Horizontal - Overflow'
+      background
       contentStyle={{ width: '50%', padding: 0 }}
     >
       <List
@@ -65,7 +66,7 @@ const Variations = () => (
       />
     </B>
 
-    <B title='with Children'>
+    <B title='with Children' background>
       <List direction='column'>
         <p>hello</p>
         <p>hello</p>
@@ -73,7 +74,7 @@ const Variations = () => (
       </List>
     </B>
 
-    <B title='Grid'>
+    <B title='Grid' background>
       <List
         data={dataSet2}
         ItemComponent={itemComponent}
@@ -84,7 +85,7 @@ const Variations = () => (
       />
     </B>
 
-    <B title='photoGrid' style={{ width: '100%' }}>
+    <B title='photoGrid' style={{ width: '100%' }} background>
       <List
         data={dataSetImages}
         ItemComponent={Image}
@@ -96,7 +97,7 @@ const Variations = () => (
       />
     </B>
 
-    <B title='onScrollEnd' style={{ width: '100%' }}>
+    <B title='onScrollEnd' style={{ width: '100%' }} background>
       <List
         data={dataSetImages}
         ItemComponent={Image}
