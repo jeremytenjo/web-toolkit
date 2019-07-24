@@ -13,7 +13,6 @@ const iconsPaths = iconsReq.keys()
 let iconNames = {}
 
 iconsPaths.map((path) => {
-  // console.log(path)
   let split = path.split('/')
   const shortname = split[1]
   const hasKey = iconNames.hasOwnProperty(shortname)
