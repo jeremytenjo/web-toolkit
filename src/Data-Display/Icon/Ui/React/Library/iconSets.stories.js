@@ -5,36 +5,44 @@ import B from '../../../../../../.storybook/Custom-Components/VariationBlock/var
 import List from '../../../../List/Ui/React/list.index'
 import Icon from '../Base/icon.index'
 
-const materialIconsReq = require.context('./', true, /material\.js$/)
-const materialIconPaths = materialIconsReq.keys()
+const pathsToIgnore = ['./iconSets.stories.js']
 
-const style1Req = require.context('./', true, /style1\.js$/)
-const style1Paths = style1Req.keys()
+const iconsReq = require.context('./', true, /.js$/)
+const iconsPaths = iconsReq.keys()
 
-const roundFilledReq = require.context('./', true, /round-filled\.js$/)
-const roundFilledPaths = roundFilledReq.keys()
+let iconNames = {}
 
-const getIconName = (paths) =>
-  paths.map((icon) => {
-    icon = icon.substring(0, icon.length - 3)
-    icon = icon.replace('./', '')
-    const iconArray = icon.split('.')
-    const iconLength = iconArray.length
+iconsPaths.map((path) => {
+  // console.log(path)
+  let split = path.split('/')
+  const shortname = split[1]
+  const hasKey = iconNames.hasOwnProperty(shortname)
 
-    return (
-      <B key={icon} title={icon} color='black'>
-        {icon !== './icons.material.stories' && iconLength === 1 ? (
-          <Icon name={icon} />
-        ) : null}
-      </B>
-    )
-  })
+  if (hasKey) iconNames[shortname].push(path)
+  else iconNames[shortname] = [path]
+})
 
-const MaterialIcons = () => <List grid>{getIconName(materialIconPaths)}</List>
-const Style1Icons = () => <List grid>{getIconName(style1Paths)}</List>
-const RoundFilled = () => <List grid>{getIconName(roundFilledPaths)}</List>
+const loadIcons = () => {
+  for (let [key, value] of Object.entries(iconNames)) {
+    if (!pathsToIgnore.includes(`./${key}`)) {
+      storiesOf('Data-Display|Icon/React/Library/', module).add(key, () => (
+        <List grid>
+          {value.map((path) => {
+            let split = path.split('/')
+            split.shift()
+            let longName = split.join('/')
+            longName = longName.substring(0, longName.length - 3)
 
-storiesOf('Data-Display|Icon/React/Library/', module)
-  .add('Material', () => <MaterialIcons />)
-  .add('Style1', () => <Style1Icons />)
-  .add('RoundFilled', () => <RoundFilled />)
+            return (
+              <B key={longName} title={longName} color='black'>
+                <Icon name={longName} />
+              </B>
+            )
+          })}
+        </List>
+      ))
+    }
+  }
+}
+
+loadIcons()
