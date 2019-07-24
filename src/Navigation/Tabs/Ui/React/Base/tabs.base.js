@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Wrapper } from './tabs.base.styles'
-import { defaultProps, propTypes } from './tabs.propTypes'
+import { defaultProps, propTypes } from './tabs.base.propTypes'
 
 const Tabs = ({ Tab, data, color, font, style, router, pathname }) => {
   const currentUrl = pathname || window.location.pathname

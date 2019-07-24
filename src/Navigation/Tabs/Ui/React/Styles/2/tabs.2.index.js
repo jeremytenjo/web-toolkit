@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Base from '../../tabs.base'
+import Base from '../../Base/tabs.base'
 
 const Tab = styled.div`
   cursor: pointer;
