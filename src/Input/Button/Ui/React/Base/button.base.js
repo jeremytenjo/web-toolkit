@@ -10,13 +10,13 @@ const ButtonIcon = lazy(() =>
 )
 const Dots = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Feedback/Progress/Ui/React/Dots/dots.index'
+    /* webpackChunkName: 'LoadingDots' */ '../../../../../Feedback/Progress/Ui/React/Dots/dots.index'
   ),
 )
 
 const FileInput = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Media/Files/Ui/React/fileInput.index'
+    /* webpackChunkName: 'FileiNput' */ '../../../../../Media/Files/Ui/React/fileInput.index'
   ),
 )
 
