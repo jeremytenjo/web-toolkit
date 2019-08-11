@@ -46,7 +46,7 @@ const NavBar = ({
             },
             index,
           ) => {
-            console.log(location === link)
+            console.log(location, link)
             const { location } = router
             const isActive = location === link
             const inputProps = file ? { onInput } : null
