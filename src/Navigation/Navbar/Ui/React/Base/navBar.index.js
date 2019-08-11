@@ -36,7 +36,6 @@ const NavBar = ({
               src = null,
               icon,
               label,
-              link,
               iconColor,
               iconBackgroundColor,
               iconSize,
@@ -46,15 +45,17 @@ const NavBar = ({
             },
             index,
           ) => {
-            console.log(location, link)
+            console.log(router)
             const { location } = router
-            const isActive = location === link
+            const isActive = location === url
             const inputProps = file ? { onInput } : null
-            const key = label || link || icon || index
+            const key = label || url || icon || index
             const isPlain = iconPlain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
 
             const handleClick = () => url && router.push(url)
+
+            console.log(location, url)
 
             return (
               <div key={key} style={iconPosition} onClick={handleClick}>
@@ -63,7 +64,7 @@ const NavBar = ({
                     name={icon}
                     label={label}
                     color={iconColor ? iconColor : isActive ? color : 'grey'}
-                    link={link}
+                    link={url}
                     size={iconSize}
                     background={iconBackgroundColor}
                     backgroundColor={iconBackgroundColor}

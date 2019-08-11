@@ -6,7 +6,7 @@ import Rating from '../../../../Feedback/Rating/Ui/React/ratings.index'
 import { defaultProps, propTypes } from './stylistsInfo.propTypes'
 import { Wrapper, StylistName } from './stylistsInfo.styles'
 
-const StylistsInfo = ({ name, rating, onClick, photoUrl, router }) => {
+const StylistsInfo = ({ name, rating, onClick, src, router }) => {
   const size = 120
   // Functions
   const redirect = () => {
@@ -16,13 +16,7 @@ const StylistsInfo = ({ name, rating, onClick, photoUrl, router }) => {
 
   return (
     <Wrapper onClick={redirect} width={120}>
-      <Avatar
-        name={name}
-        rating={rating}
-        photoUrl={photoUrl}
-        radius={10}
-        size={size}
-      />
+      <Avatar name={name} rating={rating} src={src} radius={10} size={size} />
       <StylistName>{name}</StylistName>
       <Rating value={rating} starDimension='16' starSpacing='1' />
     </Wrapper>

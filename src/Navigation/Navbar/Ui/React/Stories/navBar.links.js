@@ -2,12 +2,12 @@ export default [
   {
     label: 'Explore',
     icon: 'camera/material',
-    url: 'explore',
+    url: '/explore',
   },
   {
     label: 'Perla',
     icon: 'phone/material',
-    url: 'explore',
+    url: '/explore',
   },
   {
     icon: 'camera/material',
@@ -26,6 +26,6 @@ export default [
   {
     src:
       'https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604',
-    url: 'profile',
+    url: '/profile',
   },
 ]
