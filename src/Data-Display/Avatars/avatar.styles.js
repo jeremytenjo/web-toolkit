@@ -10,12 +10,6 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  ${({ borderColor }) =>
-    borderColor &&
-    `
-    border: 2px solid var(--color-${borderColor});  
-  `}
-
   * {
     border-radius: ${({ radius }) => `${radius}px`};
   }

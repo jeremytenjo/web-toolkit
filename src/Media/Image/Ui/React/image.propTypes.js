@@ -24,6 +24,7 @@ export const defaultProps = {
     once: true,
   },
   inputProps: null,
+  style: null,
 }
 
 export const propTypes = {

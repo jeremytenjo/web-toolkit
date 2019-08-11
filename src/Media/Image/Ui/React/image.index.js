@@ -16,6 +16,7 @@ const Image = ({
   size,
   width,
   height,
+  style,
   ...props
 }) => {
   // In case  the src key in not called src in props, expects {src: <propsrcname>}
@@ -32,6 +33,7 @@ const Image = ({
       size={size}
       onClick={() => onClick(props)}
       cursor={cursor}
+      style={style}
     >
       {src && <InnerImage alt={alt} src={src} />}
     </Wrapper>

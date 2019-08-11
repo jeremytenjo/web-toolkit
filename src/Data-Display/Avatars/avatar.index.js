@@ -41,7 +41,6 @@ const Avatar = ({
           radius={radius}
           letterColor={letterColor}
           size={size}
-          borderColor={borderColor}
         >
           {src ? (
             <Image
@@ -49,6 +48,7 @@ const Avatar = ({
               onClick={onClick}
               size={size}
               borderRadius={radius}
+              style={{ border: `2px solid var(--color-${borderColor})` }}
             />
           ) : (
             <Typography text={initials} color={letterColor} />
