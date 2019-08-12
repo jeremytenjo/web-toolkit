@@ -23,6 +23,7 @@ const NavBar = ({
       shadow={shadow}
     >
       <List
+        padding='none'
         style={{
           alignItems: 'center',
           justifyItems: 'center',
