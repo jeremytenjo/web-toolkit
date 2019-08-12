@@ -117,7 +117,7 @@ export const WrapperIcon = styled.div`
        isStroke &&
        `
      fill: none;
-     stroke: ${color};     
+     stroke: var(--color-${color});     
      `}
 
 
