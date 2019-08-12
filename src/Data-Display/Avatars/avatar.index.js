@@ -22,7 +22,17 @@ const Avatar = ({
   inputProps,
   letterColor,
   borderColor,
+  transparentBorder,
 }) => {
+  const border = {
+    border: `2px solid ${
+      borderColor
+        ? `var(--color-${borderColor})`
+        : transparentBorder
+        ? 'transparent'
+        : null
+    } `,
+  }
   let initials = name.split(' ')
 
   initials =
@@ -41,6 +51,7 @@ const Avatar = ({
           radius={radius}
           letterColor={letterColor}
           size={size}
+          style={border}
         >
           {src ? (
             <Image
@@ -48,7 +59,6 @@ const Avatar = ({
               onClick={onClick}
               size={size}
               borderRadius={radius}
-              style={{ border: `2px solid var(--color-${borderColor})` }}
             />
           ) : (
             <Typography text={initials} color={letterColor} />
