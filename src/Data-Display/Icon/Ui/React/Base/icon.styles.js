@@ -112,6 +112,16 @@ export const WrapperIcon = styled.div`
          fill: var(--color-${color}-darker);
   `}
 
+     /* Stroke */
+     ${({ color, isStroke }) =>
+       isStroke &&
+       `
+     fill: none;
+     stroke: ${color};     
+     `}
+
+
+  }
 `
 
 export const Label = styled.div`

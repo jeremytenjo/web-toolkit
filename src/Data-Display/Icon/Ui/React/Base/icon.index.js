@@ -36,6 +36,9 @@ const Icon = ({
   plain,
 }) => {
   const [IconComp, setIconComp] = useState(null)
+  const strokeTypes = ['feather']
+  const iconType = name.split('/')[1]
+  const isStroke = strokeTypes.includes(iconType)
 
   const getModule = async () => {
     if (name) {
@@ -70,6 +73,7 @@ const Icon = ({
             noBackgroundChange={noBackgroundChange}
             outlined={outlined}
             backgroundColor={backgroundColor}
+            isStroke={isStroke}
           >
             {IconComp}
           </WrapperIcon>
