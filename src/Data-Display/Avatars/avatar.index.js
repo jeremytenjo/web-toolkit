@@ -51,7 +51,6 @@ const Avatar = ({
           radius={radius}
           letterColor={letterColor}
           size={size}
-          style={border}
         >
           {src ? (
             <Image
@@ -59,6 +58,7 @@ const Avatar = ({
               onClick={onClick}
               size={size}
               borderRadius={radius}
+              style={border}
             />
           ) : (
             <Typography text={initials} color={letterColor} />
