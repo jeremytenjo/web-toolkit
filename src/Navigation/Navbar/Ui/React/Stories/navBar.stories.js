@@ -20,7 +20,6 @@ const Child = (router) => {
         data={data}
         activeColor='primary'
         defaultColor='grey'
-        position='bottom'
         onInput={testFileInput}
       />
     </B>
