@@ -2,12 +2,12 @@ export default [
   {
     label: 'Explore',
     icon: 'camera/material',
-    url: '/explore',
+    url: '/',
   },
   {
-    label: 'Perla',
+    label: 'Schedule',
     icon: 'phone/material',
-    url: '/explore',
+    url: 'schedule',
   },
   {
     icon: 'camera/material',
@@ -19,13 +19,13 @@ export default [
     top: true,
   },
   {
-    src:
-      'https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604',
-    file: true,
+    label: 'Chat',
+    icon: 'calendar/feather',
+    url: 'chat',
   },
   {
     src:
       'https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604',
-    url: '/profile',
+    url: 'profile',
   },
 ]
