@@ -5,14 +5,14 @@ import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlo
 
 import Avatar from './avatar.index'
 
+const img =
+  'https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'
+
 const Variations = () => {
   return (
     <>
       <B title='With image'>
-        <Avatar
-          name='Hayle Whitehead'
-          src='https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'
-        />
+        <Avatar name='Hayle Whitehead' src={img} />
       </B>
       <B title='No Image'>
         <Avatar name='Hayle Whitehead' />
@@ -32,7 +32,16 @@ const Variations = () => {
           type='secondary'
           name='Hayle Whitehead'
           borderColor='primary'
-          src='https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'
+          src={img}
+        />
+      </B>
+      <B title='transparentBorder'>
+        <Avatar
+          type='secondary'
+          name='Hayle Whitehead'
+          borderColor='primary'
+          transparentBorder
+          src={img}
         />
       </B>
     </>

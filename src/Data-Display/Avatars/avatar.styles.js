@@ -13,4 +13,21 @@ export const Wrapper = styled.div`
   * {
     border-radius: ${({ radius }) => `${radius}px`};
   }
+
+  /* Transparent Background */
+  ${({ transparentBorder }) =>
+    transparentBorder &&
+    `
+  background-color: transparent;
+
+  * {
+    background-color: transparent;
+  }
+
+  img {
+    padding: 5px;
+    background-color: transparent;
+  }
+
+  `}
 `

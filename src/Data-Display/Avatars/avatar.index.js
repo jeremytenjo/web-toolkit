@@ -51,6 +51,7 @@ const Avatar = ({
           radius={radius}
           letterColor={letterColor}
           size={size}
+          transparentBorder={transparentBorder}
         >
           {src ? (
             <Image

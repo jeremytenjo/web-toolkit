@@ -78,7 +78,7 @@ const NavBar = ({
                   <Avatar
                     src={src}
                     radius={100}
-                    borderColor={isActive ? color : null}
+                    borderColor={isActive && color}
                     transparentBorder
                     inputProps={inputProps}
                     size={40}
