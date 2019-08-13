@@ -22,13 +22,13 @@ const Avatar = ({
   inputProps,
   letterColor,
   borderColor,
-  transparentBorder,
+  paddedBorder,
 }) => {
   const border = {
     border: `2px solid ${
       borderColor
         ? `var(--color-${borderColor})`
-        : transparentBorder
+        : paddedBorder
         ? 'transparent'
         : null
     } `,
@@ -51,7 +51,7 @@ const Avatar = ({
           radius={radius}
           letterColor={letterColor}
           size={size}
-          transparentBorder={transparentBorder}
+          paddedBorder={paddedBorder}
         >
           {src ? (
             <Image

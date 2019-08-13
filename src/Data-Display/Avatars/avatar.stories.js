@@ -35,12 +35,12 @@ const Variations = () => {
           src={img}
         />
       </B>
-      <B title='transparentBorder'>
+      <B title='paddedBorder'>
         <Avatar
           type='secondary'
           name='Hayle Whitehead'
           borderColor='primary'
-          transparentBorder
+          paddedBorder
           src={img}
         />
       </B>

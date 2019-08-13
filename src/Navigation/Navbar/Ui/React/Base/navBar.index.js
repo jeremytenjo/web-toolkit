@@ -79,7 +79,7 @@ const NavBar = ({
                     src={src}
                     radius={100}
                     borderColor={isActive && color}
-                    transparentBorder
+                    paddedBorder
                     inputProps={inputProps}
                     size={40}
                   />

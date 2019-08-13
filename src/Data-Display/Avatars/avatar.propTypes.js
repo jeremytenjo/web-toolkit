@@ -6,7 +6,7 @@ export const defaultProps = {
   borderColor: null,
   name: 'N',
   src: null,
-  transparentBorder: null,
+  paddedBorder: null,
   size: 80,
   radius: 100,
   onClick: () => null,

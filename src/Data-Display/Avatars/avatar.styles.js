@@ -15,8 +15,8 @@ export const Wrapper = styled.div`
   }
 
   /* Transparent Background */
-  ${({ transparentBorder }) =>
-    transparentBorder &&
+  ${({ paddedBorder }) =>
+    paddedBorder &&
     `
   background-color: transparent;
 
