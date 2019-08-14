@@ -31,6 +31,7 @@ export const defaultProps = {
   initialInput: '',
   clearOnSubmit: null,
   dataCy: null,
+  setInSessionStorage: null,
 }
 
 export const propTypes = {
@@ -57,5 +58,6 @@ export const propTypes = {
   autocomplete: string,
   initialInput: string,
   clearOnSubmit: bool,
+  setInSessionStorage: bool,
   dataCy: string,
 }

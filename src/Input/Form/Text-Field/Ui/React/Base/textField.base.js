@@ -38,6 +38,7 @@ const TextField = ({
   initialInput,
   clearOnSubmit,
   dataCy,
+  setInSessionStorage,
 }) => {
   // Refs
   const inputRef = useRef(null)
@@ -65,6 +66,20 @@ const TextField = ({
     startOnSubmitListener()
     return removeOnSubmitListener
   }, [])
+
+  // handle Session stoage
+  useEffect(() => {
+    if (setInSessionStorage) {
+      let sessionInput = sessionStorage.getItem(name)
+      if (sessionInput !== '') {
+        setInput(sessionInput)
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (setInSessionStorage && input !== '') sessionStorage.setItem(name, input)
+  }, [input])
 
   useEffect(() => {
     if (input !== null)

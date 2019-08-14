@@ -30,6 +30,15 @@ export const States = ({ TextField }) => {
           />
         </Form>
       </B>
+      <B title='save input in session storage' noBackground>
+        <Form onSubmitSuccess={handleSubmit}>
+          <TextField
+            placeholder={placeholder}
+            name='textfieldsetInSessionStorage'
+            setInSessionStorage
+          />
+        </Form>
+      </B>
 
       <B title='color=secondary' noBackground>
         <TextField color='secondary' placeholder={placeholder} />
