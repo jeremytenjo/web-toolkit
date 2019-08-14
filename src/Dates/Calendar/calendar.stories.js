@@ -8,7 +8,7 @@ import Calendar from './calendar.index'
 
 const Variations = () => (
   <>
-    <B title='Default'>
+    <B title='Default' background>
       <Calendar events={stubs} onDateSelect={(e) => console.log(e)} />
     </B>
   </>
