@@ -6,21 +6,6 @@ export const Wrapper = styled.div`
   align-items: center;
   grid-gap: 5px;
 
-  svg {
-    display: block;
-    box-sizing: content-box;
-    cursor: pointer;
-    padding: 10px;
-    fill: ${({ arrowColor }) => `var(--color-${arrowColor})`};
-    border-radius: 50%;
-    transition: 0.3s;
-
-    &:active {
-      background-color: ${({ color }) =>
-        color ? `var(--color-${color}-background)` : 'rgba(0, 0, 0, 0.1)'};
-    }
-  }
-
   select {
     font-size: 19px;
     background: transparent;
@@ -36,9 +21,4 @@ export const Wrapper = styled.div`
       outline: none;
     }
   }
-`
-
-export const LeftArrow = styled.div``
-export const RightArrow = styled.div`
-  transform: rotate(180deg);
 `

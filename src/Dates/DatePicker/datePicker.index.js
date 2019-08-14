@@ -1,27 +1,19 @@
 import React, { memo, useRef, useState, useEffect } from 'react'
 
 import monthData from '../Utils/monthList'
+import Icon from '../../Data-Display/Icon/Ui/React/Base/icon.index'
 
 import { defaultProps, propTypes } from './datePicker.propTypes'
-import { Wrapper, LeftArrow, RightArrow } from './datePicker.styles'
+import { Wrapper } from './datePicker.styles'
 
-const ArrowSVG = () => (
-  <svg
-    width='8'
-    height='12'
-    viewBox='0 0 8 12'
-    fill='none'
-    xmlns='http://www.w3.org/2000/svg'
-  >
-    <path
-      fillRule='evenodd'
-      clipRule='evenodd'
-      d='M7.4 1.4L6 0L0 6L6 12L7.4 10.6L2.8 6L7.4 1.4Z'
-    />
-  </svg>
-)
-
-const DatePicker = ({ arrowColor, onSelect, color, type, yearRange }) => {
+const DatePicker = ({
+  arrowColor,
+  onSelect,
+  color,
+  type,
+  yearRange,
+  arrowName,
+}) => {
   const selectRef = useRef(null)
 
   const currentYear = new Date().getFullYear()
@@ -78,9 +70,7 @@ const DatePicker = ({ arrowColor, onSelect, color, type, yearRange }) => {
 
   return (
     <Wrapper arrowColor={arrowColor} color={color}>
-      <LeftArrow onClick={handlePrev}>
-        <ArrowSVG />
-      </LeftArrow>
+      <Icon name={arrowName} color={arrowColor} onClick={handlePrev} />
 
       {data.length > 0 && (
         <select ref={selectRef} onChange={handleOnSelect} value={selectedValue}>
@@ -92,9 +82,12 @@ const DatePicker = ({ arrowColor, onSelect, color, type, yearRange }) => {
         </select>
       )}
 
-      <RightArrow onClick={handleNext}>
-        <ArrowSVG />
-      </RightArrow>
+      <Icon
+        name={arrowName}
+        color={arrowColor}
+        onClick={handleNext}
+        style={{ transform: 'rotate(180deg)' }}
+      />
     </Wrapper>
   )
 }
