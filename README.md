@@ -8,7 +8,7 @@
 
 Library of reusable UI and utilities
 
-[![CircleCI](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master.svg?style=svg)](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master)
+<!-- [![CircleCI](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master.svg?style=svg)](https://circleci.com/gh/tenjojeremy/Web-Toolkit/tree/master) -->
 
 </div>
 
