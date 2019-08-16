@@ -3,9 +3,9 @@ import React, { memo } from 'react'
 import { defaultProps, propTypes } from './box.propTypes'
 import { Wrapper } from './box.styles'
 
-const Box = ({ children, padding, color, style }) => {
+const Box = ({ children, mediaQueries, ...styles }) => {
   return (
-    <Wrapper padding={padding} color={color} style={style}>
+    <Wrapper mediaQueries={mediaQueries} {...styles}>
       {children}
     </Wrapper>
   )
