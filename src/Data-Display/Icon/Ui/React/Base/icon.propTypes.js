@@ -37,5 +37,5 @@ export const propTypes = {
   outlined: bool,
   link: string,
   inputProps: object,
-  router: func,
+  router: object,
 }

@@ -11,5 +11,5 @@ export const propTypes = {
   color: string,
   data: array,
   style: object,
-  router: func,
+  router: object,
 }

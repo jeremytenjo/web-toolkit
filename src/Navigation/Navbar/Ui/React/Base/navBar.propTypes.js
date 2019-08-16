@@ -1,4 +1,4 @@
-import { string, func, number } from 'prop-types'
+import { string, func, number, object } from 'prop-types'
 
 export const defaultProps = {
   color: 'primary',
@@ -11,7 +11,7 @@ export const defaultProps = {
 export const propTypes = {
   color: string,
   backgroundColor: string,
-  router: func,
+  router: object,
   onClick: func,
   shadow: number,
 }

@@ -1,4 +1,4 @@
-import { string, func, number, oneOfType } from 'prop-types'
+import { string, func, number, oneOfType, object } from 'prop-types'
 
 export const defaultProps = {
   name: '',
@@ -15,5 +15,5 @@ export const propTypes = {
   photoUrl: string,
   rating: number,
   onClick: func,
-  router: func,
+  router: object,
 }

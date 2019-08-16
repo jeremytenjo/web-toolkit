@@ -52,7 +52,7 @@ const Icon = ({
   }, [])
 
   const handleClick = () => {
-    link && router(link)
+    link && router.history.push(link)
     onClick()
   }
   const WrappingComp = inputProps ? FileInput : Fragment

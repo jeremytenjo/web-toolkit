@@ -13,5 +13,5 @@ export const propTypes = {
   title: string,
   buttonText: string,
   redUrl: string,
-  router: func,
+  router: object,
 }
