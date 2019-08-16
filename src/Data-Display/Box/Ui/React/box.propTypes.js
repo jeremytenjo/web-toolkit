@@ -1,13 +1,12 @@
-import { node, string } from 'prop-types'
+import { node, array } from 'prop-types'
 
 export const defaultProps = {
-  padding: 's',
-  children: 10,
-  color: 'black',
+  display: 'grid',
+  children: null,
+  mediaQueries: [600, 900],
 }
 
 export const propTypes = {
-  padding: string,
   children: node,
-  color: string,
+  mediaQueries: array,
 }

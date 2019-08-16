@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
+import withMediaQueries from '../../../../Theme/MediaQuery/WithMediaQueries/withMediaQueries.index'
+
 export const Wrapper = styled.div`
-  display: grid;
-  align-items: center;
-  padding: ${({ padding }) => `0 var(--spacing-${padding})`};
+  ${({ mediaQueries, ...styles }) => withMediaQueries({ styles, mediaQueries })}
 `

@@ -6,19 +6,26 @@ import Rating from '../../../../Feedback/Rating/Ui/React/ratings.index'
 import { defaultProps, propTypes } from './stylistsInfo.propTypes'
 import { Wrapper, StylistName } from './stylistsInfo.styles'
 
-const StylistsInfo = ({ name, rating, onClick, src, router }) => {
+const StylistsInfo = ({ name, rating, src, onInfoClick, onRatingChange }) => {
   const size = 120
-  // Functions
-  const redirect = () => {
-    // router(`/stylists/${id}`)
-    onClick()
-  }
 
   return (
-    <Wrapper onClick={redirect} width={120}>
-      <Avatar name={name} rating={rating} src={src} radius={10} size={size} />
-      <StylistName>{name}</StylistName>
-      <Rating value={rating} starDimension='16' starSpacing='1' />
+    <Wrapper width={120}>
+      <Avatar
+        onClick={onInfoClick}
+        name={name}
+        rating={rating}
+        src={src}
+        radius={10}
+        size={size}
+      />
+      <StylistName onClick={onInfoClick}>{name}</StylistName>
+      <Rating
+        onRatingChange={onRatingChange}
+        value={rating}
+        starDimension='16'
+        starSpacing='1'
+      />
     </Wrapper>
   )
 }
