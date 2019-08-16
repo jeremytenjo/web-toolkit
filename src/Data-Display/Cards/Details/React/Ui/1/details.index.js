@@ -43,7 +43,7 @@ const DetailsCard = ({ photoURL, name, rating, location }) => {
           <Location>{location} </Location>
           <ContactIcons>
             <Icon name='phone/material' color='primary' />
-            <Icon name='comment/1' color='primary' />
+            <Icon name='message/1' color='primary' />
           </ContactIcons>
         </LocationIcons>
       </InfoCon>
