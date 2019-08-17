@@ -9,7 +9,7 @@ import Box from './box.index'
 
 const Variations = () => (
   <>
-    <B title='default' background style={{ width: '400px' }}>
+    <B title='default' background style={{ width: '400px', padding: 0 }}>
       <Box
         justifyContent='space-between'
         gridAutoFlow={['column', 'row']}
