@@ -52,7 +52,10 @@ const NavBar = ({
             } = router
             const splitUrl = url ? url.split('/')[0] : undefined
             const currentUrl = splitUrl === '/' ? '/' : `/${splitUrl}`
-            const isActive = pathname === currentUrl
+            const splitpathname = pathname ? pathname.split('/')[1] : undefined
+            const currentpathname =
+              splitpathname === '/' ? '/' : `/${splitpathname}`
+            const isActive = currentpathname === currentUrl
             const inputProps = file ? { onInput } : null
             const key = label || currentUrl || icon || index
             const isPlain = iconPlain
