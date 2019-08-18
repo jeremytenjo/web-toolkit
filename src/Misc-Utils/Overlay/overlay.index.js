@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-import animation from '../Animations/Web-Animations-API/animation.index'
+import Animation from '../Animations/Web-Animations-API/animation.index'
 
 import { defaultProps, propTypes } from './overlay.propTypes'
 import { Wrapper } from './overlay.styles'
@@ -15,23 +15,6 @@ const Overlay = ({
   dataCy,
 }) => {
   const overlayRef = useRef(null)
-
-  const config = {
-    fill: 'forwards',
-    duration: 200,
-    direction: 'normal',
-    easing: 'ease-out',
-  }
-
-  useEffect(() => {
-    if (show !== null && !noAnimation)
-      animation({
-        name: 'showHide',
-        el: overlayRef.current,
-        show: !!show,
-        config,
-      })
-  }, [show])
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyInput, true)
@@ -48,14 +31,16 @@ const Overlay = ({
   const handleKeyInput = ({ key }) => key === 'Escape' && onClick()
 
   return (
-    <Wrapper
-      ref={overlayRef}
-      onClick={onClick}
-      backgroundcolor={backgroundcolor}
-      noAnimation={noAnimation}
-      zIndex={zIndex}
-      data-cy={dataCy}
-    />
+    <Animation name='showHide' show={show} el={overlayRef}>
+      <Wrapper
+        ref={overlayRef}
+        onClick={onClick}
+        backgroundcolor={backgroundcolor}
+        noAnimation={noAnimation}
+        zIndex={zIndex}
+        data-cy={dataCy}
+      />
+    </Animation>
   )
 }
 
