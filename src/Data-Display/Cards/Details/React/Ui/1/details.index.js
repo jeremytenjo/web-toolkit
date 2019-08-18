@@ -16,13 +16,13 @@ import {
 } from './details.styles'
 import { defaultProps, propTypes } from './details.propTypes'
 
-const DetailsCard = ({ photoURL, name, rating, location }) => {
+const DetailsCard = ({ src, name, rating, location }) => {
   // Global State
   const reviewsLength = 65
 
   return (
     <Wrapper>
-      <Avatar name={name} photoUrl={photoURL} size={120} />
+      <Avatar name={name} src={src} size={120} />
 
       <InfoCon>
         <Typography variant='h6' text={name} />
