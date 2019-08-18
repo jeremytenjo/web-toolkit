@@ -17,7 +17,7 @@ const donutSpin = keyframes`
 const Wrapper = styled.div`
   display: inline-block;
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: ${(color) => `var(--color-${color})`};
+  border-left-color: ${({ color }) => `var(--color-${color})`};
   border-radius: 50%;
   width: 30px;
   height: 30px;

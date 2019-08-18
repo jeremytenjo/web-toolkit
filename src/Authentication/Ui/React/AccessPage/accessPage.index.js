@@ -27,6 +27,10 @@ const AccessPage = ({
     const { token, user, error } = await res.default(provider)
     if (error) return setErrMessage(error.errorMessage)
     onSuccess({ token, user })
+
+    // If new user - add to crecential manager
+
+    // if user exists - load from credential manager
   }
 
   return (

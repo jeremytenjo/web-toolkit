@@ -15,7 +15,7 @@ const Variations = () => (
     >
       <AccessPage
         variation={1}
-        onSuccess={() => console.log('success')}
+        onSuccess={(userInfo) => console.log(userInfo)}
         logo={Logo}
         name='Estilitta'
         desc='Find a stylist for you'
