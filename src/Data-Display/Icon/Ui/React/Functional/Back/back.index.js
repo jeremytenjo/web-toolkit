@@ -10,7 +10,7 @@ const IconBack = ({
 }) => {
   // Functions
   const goBack = () => {
-    to ? router.push(to) : router.goBack()
+    to ? router.history.push(to) : router.goBack()
     onGoBack()
   }
 

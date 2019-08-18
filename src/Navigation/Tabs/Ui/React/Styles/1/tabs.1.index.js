@@ -30,7 +30,7 @@ const Tabs = ({ data, color, style, router }) => {
             }}
             key={item.label}
             label={item.label}
-            onClick={() => router.push(item.link)}
+            onClick={() => router.history.push(item.link)}
           />
         ))}
       </TabsMui>

@@ -6,7 +6,7 @@ import { defaultProps, propTypes } from './emptyPage.propTypes'
 import { Wrapper, InnerWrapper, Title } from './emptyPage.styles'
 
 const EmptyPage = ({ image, title, buttonText, redUrl, router }) => {
-  const redirect = () => router.push(redUrl)
+  const redirect = () => router.history.push(redUrl)
 
   return (
     <Wrapper>

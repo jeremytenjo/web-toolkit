@@ -16,7 +16,7 @@ const Tabs = ({ Tab, data, color, font, style, router, pathname }) => {
           <Tab
             color={color}
             key={label}
-            onClick={() => router.push(link)}
+            onClick={() => router.history.push(link)}
             font={font}
             active={active}
           >
