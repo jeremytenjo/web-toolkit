@@ -12,14 +12,10 @@ const Example = ({ type }) => {
     <>
       <button onClick={toggleAnimation}>Toggle</button>
 
-      <Animation name={type} show={show} el={divRef}>
-        <div
-          ref={divRef}
-          style={{ background: 'lightblue', marginTop: '20px' }}
-        >
-          animate me
-        </div>
-      </Animation>
+      <Animation name={type} show={show} el={divRef} />
+      <div ref={divRef} style={{ background: 'lightblue', marginTop: '20px' }}>
+        animate me
+      </div>
     </>
   )
 }

@@ -12,7 +12,6 @@ const AnimationIndex = ({
   el = null,
   config = defaultConfig,
   show,
-  children,
   rest,
 }) => {
   const [animation, setAnimation] = useState(null)
@@ -39,7 +38,7 @@ const AnimationIndex = ({
     setAnimation(module)
   }
 
-  return <>{children}</>
+  return null
 }
 
 export default AnimationIndex

@@ -31,7 +31,8 @@ const Overlay = ({
   const handleKeyInput = ({ key }) => key === 'Escape' && onClick()
 
   return (
-    <Animation name='showHide' show={show} el={overlayRef}>
+    <>
+      <Animation name='showHide' show={show} el={overlayRef} />
       <Wrapper
         ref={overlayRef}
         onClick={onClick}
@@ -40,7 +41,7 @@ const Overlay = ({
         zIndex={zIndex}
         data-cy={dataCy}
       />
-    </Animation>
+    </>
   )
 }
 

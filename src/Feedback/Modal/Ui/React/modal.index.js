@@ -11,11 +11,10 @@ const Modal = ({ show, type, children, onClose, animationStyle }) => {
 
   return (
     <>
-      <Animation name={animationStyle} show={show} el={modalRef}>
-        <Wrapper ref={modalRef} type={type}>
-          {children}
-        </Wrapper>
-      </Animation>
+      <Animation name={animationStyle} show={show} el={modalRef} />
+      <Wrapper ref={modalRef} type={type}>
+        {children}
+      </Wrapper>
 
       <Overlay show={show} onClick={onClose} zIndex={1} />
     </>
