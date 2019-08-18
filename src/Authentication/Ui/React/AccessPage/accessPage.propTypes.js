@@ -4,7 +4,7 @@ export const defaultProps = {
   onSuccess: () => null,
   logo: null,
   name: '',
-  providers: ['apple', 'google', 'microsoft'],
+  providers: ['apple', 'google', 'facebook'],
   service: 'firebase',
 }
 

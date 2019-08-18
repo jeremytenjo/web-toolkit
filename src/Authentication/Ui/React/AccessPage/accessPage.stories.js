@@ -20,7 +20,7 @@ const Variations = () => (
         name='Estilitta'
         desc='Find a stylist for you'
         service='firebase'
-        providers={['apple', 'google', 'microsoft']}
+        providers={['apple', 'google', 'facebook']}
       />
     </B>
   </>
