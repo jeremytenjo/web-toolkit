@@ -26,6 +26,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Authentication/AccessPage', module).add('variations', () => (
+storiesOf('Authentication|AccessPage', module).add('variations', () => (
   <Variations />
 ))
