@@ -1,11 +1,4 @@
-export default ({
-  el,
-  show,
-  fill = 'forwards',
-  duration = 200,
-  displayType = 'display',
-}) => {
-  const config = { fill, duration }
+export default ({ el, show, config, displayType = 'display' }) => {
   const showAttr = displayType === 'display' ? 'block' : 'visible'
   const hideAttr = displayType === 'display' ? 'none' : 'hidden'
 
