@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState, useRef } from 'react'
 
 import List from '../../../../Data-Display/List/Ui/React/list.index'
-import animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 import { defaultProps, propTypes } from './autocomplete.propTypes'
 import { Wrapper, Other } from './autocomplete.styles'
@@ -22,23 +22,6 @@ const Autocomplete = ({ inputStyle, data }) => {
     importTextfield()
   }, [])
 
-  const config = {
-    fill: 'forwards',
-    duration: 50,
-    direction: 'normal',
-    easing: 'ease-out',
-  }
-
-  useEffect(() => {
-    if (showList !== null)
-      animation({
-        name: 'showHide',
-        el: listRef.current,
-        config,
-        show: showList,
-      })
-  }, [showList])
-
   const importTextfield = async () => {
     let mod = await import(
       `../../../Form/Text-Field/Ui/React/Styles/textfield.${inputStyle}.index.js`
@@ -53,6 +36,8 @@ const Autocomplete = ({ inputStyle, data }) => {
   return (
     <Wrapper>
       {Textfield}
+
+      <Animation name='showHide' show={showList} el={listRef} />
       <div ref={listRef} style={{ display: 'none' }}>
         <List direction='row'>
           <span>hello</span>

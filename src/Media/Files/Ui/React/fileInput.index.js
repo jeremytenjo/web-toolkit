@@ -2,7 +2,7 @@ import React, { useRef, memo, useState, useEffect } from 'react'
 
 import toBoolean from '../../../../Misc-Utils/String/toBoolean.index'
 import Typography from '../../../../Data-Display/Typography/Ui/React/typography.index'
-import animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 import { defaultProps, propTypes } from './fileInput.propTypes'
 import { Wrapper, Input, ChildrenWrap } from './fileInput.styles'
@@ -25,27 +25,11 @@ const FileInput = ({
   const [isValidFormCheck, setIsValidFormCheck] = useState(
     validation.length === 0,
   )
-  const config = {
-    fill: 'forwards',
-    duration: 100,
-    direction: 'normal',
-    easing: 'ease-out',
-  }
 
   useEffect(() => {
     startOnSubmitListener()
     return removeOnSubmitListener
   }, [])
-
-  useEffect(() => {
-    if (isValid !== null)
-      animation({
-        name: 'showHide',
-        el: errMessagesRef.current,
-        config,
-        show: !isValid,
-      })
-  }, [isValid])
 
   const startOnSubmitListener = () => {
     const parentForm = inputRef.current.parentNode.parentNode.parentNode
@@ -108,6 +92,7 @@ const FileInput = ({
         {...nativeProps}
       />
       <ChildrenWrap>{children}</ChildrenWrap>
+      <Animation name='showHide' show={!isValid} el={errMessagesRef} />
       <div
         data-cy='fileinput_errorMessages'
         ref={errMessagesRef}

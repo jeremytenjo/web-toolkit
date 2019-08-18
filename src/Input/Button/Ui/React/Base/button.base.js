@@ -1,7 +1,7 @@
 import React, { memo, lazy, Suspense, useRef, useEffect, Fragment } from 'react'
 
 import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
-import animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 const ButtonIcon = lazy(() =>
   import(
@@ -48,16 +48,6 @@ const Button = ({
     easing: 'ease-out',
   }
 
-  useEffect(() => {
-    if (loading !== null)
-      animation({
-        name: 'showHide',
-        el: spinnerRef.current,
-        config,
-        show: loading,
-      })
-  }, [loading])
-
   const textColor = disabled
     ? 'disabled-darker'
     : outlined
@@ -92,6 +82,8 @@ const Button = ({
             )}
           </StyledButton>
           <Suspense fallback={null}>
+            <Animation name='showHide' show={loading} el={spinnerRef} />
+
             <div ref={spinnerRef} style={{ display: 'none' }}>
               <LoadingCon color={color}>
                 <Dots />
