@@ -2,7 +2,7 @@ import React, { useState, memo, useEffect, useRef } from 'react'
 
 import toBoolean from '../../../../../../Misc-Utils/String/toBoolean.index'
 import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
-import animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
 
 import { defaultProps, propTypes } from './textField.base.propTypes'
@@ -45,13 +45,8 @@ const TextField = ({
   const closeIconRef = useRef(null)
   const errMessagesRef = useRef(null)
 
-  const config = {
-    fill: 'forwards',
-    duration: 100,
-    direction: 'normal',
-    easing: 'ease-out',
-  }
   const hasValidation = validation.length > 0
+  const animationType = 'showHide'
 
   // State
   const [input, setInput] = useState(initialInput)
@@ -80,27 +75,6 @@ const TextField = ({
   useEffect(() => {
     if (setInSessionStorage && input !== '') sessionStorage.setItem(name, input)
   }, [input])
-
-  useEffect(() => {
-    if (input !== null)
-      animation({
-        name: 'showHide',
-        el: closeIconRef.current,
-        config,
-        show: input !== '',
-        displayType: 'visibility',
-      })
-  }, [input])
-
-  useEffect(() => {
-    if (isValid !== null)
-      animation({
-        name: 'showHide',
-        el: errMessagesRef.current,
-        config,
-        show: !isValid,
-      })
-  }, [isValid])
 
   useEffect(() => {
     initialValidation(input)
@@ -230,6 +204,12 @@ const TextField = ({
             data-cy={dataCy || name}
           />
 
+          <Animation
+            name={animationType}
+            show={input !== ''}
+            el={closeIconRef}
+            displayType='visibility'
+          />
           <CloseIconCon
             ref={closeIconRef}
             textColor={textColor}
@@ -260,6 +240,8 @@ const TextField = ({
           </IconRightCon>
         )}
       </Wrapper>
+
+      <Animation name={animationType} show={!isValid} el={errMessagesRef} />
       <div
         data-cy='textfield_errorMessages'
         ref={errMessagesRef}

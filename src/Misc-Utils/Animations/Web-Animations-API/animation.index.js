@@ -12,7 +12,7 @@ const AnimationIndex = ({
   el = null,
   config = defaultConfig,
   show,
-  rest,
+  ...rest
 }) => {
   const [animation, setAnimation] = useState(null)
 
@@ -21,7 +21,7 @@ const AnimationIndex = ({
   }, [])
 
   useEffect(() => {
-    if (show !== null) {
+    if (show !== null && animation !== null) {
       animation.default({
         el: el.current,
         name,
