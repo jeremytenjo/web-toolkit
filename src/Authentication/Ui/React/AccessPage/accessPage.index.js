@@ -25,7 +25,6 @@ const AccessPage = ({
     const capProvider = capitalize(service)
     let res = await import(`../../../Functions/${capProvider}/auth.social`)
     const { token, user, error } = await res.default(provider)
-    console.log({ token, user, error })
     if (error) return setErrMessage(error.errorMessage)
     onSuccess({ token, user })
   }
