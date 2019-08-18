@@ -19,8 +19,8 @@ const AccessPage = ({
 }) => {
   const handleClick = async (provider) => {
     const capProder = capitalize(service)
-    let res = await import(`../../../Functions/${capProder}/auth.${provider}`)
-    res = res.default()
+    let res = await import(`../../../Functions/${capProder}/auth.social`)
+    res = res.default(provider)
     console.log(res)
   }
 
