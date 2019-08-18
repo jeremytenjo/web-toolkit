@@ -40,14 +40,6 @@ const Button = ({
   inputProps,
 }) => {
   const spinnerRef = useRef(null)
-
-  const config = {
-    fill: 'forwards',
-    duration: 100,
-    direction: 'normal',
-    easing: 'ease-out',
-  }
-
   const textColor = disabled
     ? 'disabled-darker'
     : outlined
