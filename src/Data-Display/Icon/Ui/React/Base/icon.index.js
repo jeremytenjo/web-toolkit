@@ -34,6 +34,8 @@ const Icon = ({
   router,
   backgroundColor,
   plain,
+  backgroundSize,
+  ...restStyles
 }) => {
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
@@ -74,6 +76,8 @@ const Icon = ({
             outlined={outlined}
             backgroundColor={backgroundColor}
             isStroke={isStroke}
+            backgroundSize={backgroundSize}
+            {...restStyles}
           >
             {IconComp}
           </WrapperIcon>

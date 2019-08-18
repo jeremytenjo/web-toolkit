@@ -46,6 +46,15 @@ const Variations = () => (
     <B title='isStroke' color='black' noBackground>
       <Icon name='camera/feather' color='primary' label='Label' size={60} />
     </B>
+    <B title='backgroundSize' color='black' noBackground>
+      <Icon
+        name='camera/feather'
+        color='primary'
+        label='Label'
+        size={20}
+        backgroundSize={80}
+      />
+    </B>
     <B title='file upload' color='black' noBackground>
       <Icon
         name='camera/material'

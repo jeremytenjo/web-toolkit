@@ -19,8 +19,8 @@ export const WrapperIcon = styled.div`
   transition: 0.3s;
   border-radius: 100px;
   animation-timing-function: ease-out;
-  width: ${({ size }) => size}px;
-  height: ${({ size }) => size}px;
+  width: ${({ backgroundSize, size }) => backgroundSize || size}px;
+  height: ${({ backgroundSize, size }) => backgroundSize || size}px;
 
   &:active {
     background-color: rgba(0, 0, 0, 0.1);

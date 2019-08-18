@@ -6,7 +6,7 @@ const themableStyles = {
     value: (value) => `var(--color-${value})`,
   },
   spacing: {
-    names: ['padding', 'margin', 'gridGap'],
+    names: ['padding', 'paddingTop', 'paddingBottom', 'margin', 'gridGap'],
     value: (value) => `var(--spacing-${value})`,
   },
 }
