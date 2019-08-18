@@ -221,9 +221,7 @@ const TextField = ({
               onClick={clearIconClick}
               size={16}
               fill='black'
-              style={{
-                height: '100%',
-              }}
+              backgroundSize={25}
             />
           </CloseIconCon>
         </InputCon>
