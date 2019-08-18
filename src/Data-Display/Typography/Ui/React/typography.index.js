@@ -1,6 +1,4 @@
-import React from 'react'
-
-import { defaultProps, propTypes } from './typography.propTypes'
+import React, { memo, forwardRef } from 'react'
 
 const defineTag = (variant) => {
   switch (variant) {
@@ -19,7 +17,10 @@ const defineTag = (variant) => {
   }
 }
 
-const Typography = ({ variant, color, text, ...otherStyles }) => {
+const Typography = (
+  { variant = 'body1', color = null, text = '', ...otherStyles },
+  ref,
+) => {
   const style = {
     color: color ? `var(--color-${color})` : null,
     ...otherStyles,
@@ -27,13 +28,10 @@ const Typography = ({ variant, color, text, ...otherStyles }) => {
   const Tag = defineTag(variant)
 
   return (
-    <Tag style={style} variant={variant}>
+    <Tag style={style} variant={variant} ref={ref}>
       {text}
     </Tag>
   )
 }
 
-Typography.defaultProps = defaultProps
-Typography.propTypes = propTypes
-
-export default Typography
+export default memo(forwardRef(Typography))

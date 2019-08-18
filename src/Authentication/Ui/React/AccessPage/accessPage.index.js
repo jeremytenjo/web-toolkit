@@ -1,5 +1,6 @@
-import React, { memo } from 'react'
+import React, { memo, useState, useRef } from 'react'
 
+import Animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 import capitalize from '../../../../Misc-Utils/String/capitalize.index'
 import Box from '../../../../Data-Display/Box/Ui/React/box.index'
 import Image from '../../../../Media/Image/Ui/React/image.index'
@@ -17,11 +18,16 @@ const AccessPage = ({
   service,
   providers,
 }) => {
+  const errorRef = useRef(null)
+  const [errMessage, setErrMessage] = useState(null)
+
   const handleClick = async (provider) => {
     const capProvider = capitalize(service)
     let res = await import(`../../../Functions/${capProvider}/auth.social`)
-    res = res.default(provider)
-    console.log(res)
+    const { token, user, error } = await res.default(provider)
+    console.log({ token, user, error })
+    if (error) return setErrMessage(error.errorMessage)
+    onSuccess({ token, user })
   }
 
   return (
@@ -77,6 +83,14 @@ const AccessPage = ({
               />
             ))}
           </Box>
+
+          <Animation name='showHide' show={errMessage} el={errorRef} />
+          <Typography
+            text={errMessage}
+            variant='body2'
+            color='error'
+            ref={errorRef}
+          />
         </Box>
       </Box>
     </Box>

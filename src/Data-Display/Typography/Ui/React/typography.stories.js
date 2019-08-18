@@ -7,7 +7,7 @@ import Typography from './typography.index'
 
 const Variatons = () => (
   <>
-    <B>
+    <B background>
       <div style={{ display: 'grid', gridGap: '20px' }}>
         <Typography variant='h1' text='Header 1' />
         <Typography variant='h2' text='Header 2' />
