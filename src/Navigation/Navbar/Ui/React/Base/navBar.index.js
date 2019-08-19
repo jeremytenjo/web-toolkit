@@ -3,6 +3,7 @@ import React, { memo } from 'react'
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 import Avatar from '../../../../../Data-Display/Avatars/avatar.index'
+import SearchIcon from '../../../../../Data-Display/Icon/Ui/React/Functional/Search/search.index'
 
 import { defaultProps, propTypes } from './navBar.propTypes'
 import { Wrapper } from './navBar.styles'
@@ -15,6 +16,7 @@ const NavBar = ({
   router,
   position,
   shadow,
+  onSearchSubmit,
 }) => {
   return (
     <Wrapper
@@ -40,6 +42,7 @@ const NavBar = ({
               top,
               url,
               iconStyles = { plain: true },
+              search,
             },
             index,
           ) => {
@@ -62,7 +65,13 @@ const NavBar = ({
 
             return (
               <div key={key} style={iconPosition} onClick={handleClick}>
-                {icon && (
+                {search ? (
+                  <SearchIcon
+                    onSubmitSuccess={onSearchSubmit}
+                    icon={icon}
+                    iconStyles={iconStyles}
+                  />
+                ) : icon ? (
                   <Icon
                     name={icon}
                     label={label}
@@ -80,7 +89,7 @@ const NavBar = ({
                     plain={isPlain}
                     {...iconStyles}
                   />
-                )}
+                ) : null}
 
                 {src && (
                   <Avatar

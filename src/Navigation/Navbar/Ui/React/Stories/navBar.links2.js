@@ -7,6 +7,7 @@ export default [
   {
     icon: 'search/feather',
     top: true,
+    search: true,
     iconStyles: {
       color: 'white',
       backgroundColor: 'primary',

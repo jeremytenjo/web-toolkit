@@ -32,6 +32,7 @@ const Child = (router) => {
           activeColor='primary'
           defaultColor='grey'
           onInput={testFileInput}
+          onSearchSubmit={(value) => console.log(value)}
         />
       </B>
     </>

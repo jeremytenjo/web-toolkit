@@ -5,6 +5,7 @@ export const defaultProps = {
   backgroundColor: 'white-opaque',
   router: window.historyRouter || {},
   onClick: () => null,
+  onSearchSubmit: () => null,
   shadow: 2,
 }
 
@@ -13,5 +14,6 @@ export const propTypes = {
   backgroundColor: string,
   router: object,
   onClick: func,
+  onSearchSubmit: func,
   shadow: number,
 }
