@@ -1,21 +1,25 @@
 export default [
   {
     label: 'MOVIES',
-    icon: 'film/feather',
-    url: '/movies',
+    icon: 'film/material',
+    url: 'movies',
   },
   {
     icon: 'search/feather',
+    iconStyles: {
+      color: 'white',
+      backgroundColor: 'primary',
+      boxShadow: '0px 4px 12px rgba(36, 195, 169, 0.5)',
+    },
     iconColor: 'white',
     iconBackgroundColor: 'primary',
     iconSize: 50,
     iconPlain: false,
-    file: true,
     top: true,
   },
   {
     label: 'TV',
-    icon: 'tv/feather',
+    icon: 'tv/material',
     url: 'schedule',
   },
 ]

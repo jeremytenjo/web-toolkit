@@ -25,7 +25,7 @@ const Child = (router) => {
           onInput={testFileInput}
         />
       </B>
-      <B title='Example 1' noBackground style={{ width: 'auto' }}>
+      <B title='Example 2' noBackground style={{ width: 'auto' }}>
         <Bar
           router={router}
           data={data2}

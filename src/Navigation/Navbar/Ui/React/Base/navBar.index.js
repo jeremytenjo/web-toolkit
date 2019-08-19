@@ -43,6 +43,7 @@ const NavBar = ({
               iconPlain = true,
               top,
               url,
+              iconStyles = {},
             },
             index,
           ) => {
@@ -75,6 +76,7 @@ const NavBar = ({
                     backgroundColor={iconBackgroundColor}
                     inputProps={inputProps}
                     plain={isPlain}
+                    {...iconStyles}
                   />
                 )}
 
