@@ -7,6 +7,7 @@ import B from '../../../../../../.storybook/Custom-Components/VariationBlock/var
 import Bar from '../Base/navBar.index'
 
 import data from './navBar.links'
+import data2 from './navBar.links2'
 
 const testFileInput = (file) => {
   console.log(file)
@@ -14,15 +15,26 @@ const testFileInput = (file) => {
 
 const Child = (router) => {
   return (
-    <B title='Example 1' noBackground style={{ width: 'auto' }}>
-      <Bar
-        router={router}
-        data={data}
-        activeColor='primary'
-        defaultColor='grey'
-        onInput={testFileInput}
-      />
-    </B>
+    <>
+      <B title='Example 1' noBackground style={{ width: 'auto' }}>
+        <Bar
+          router={router}
+          data={data}
+          activeColor='primary'
+          defaultColor='grey'
+          onInput={testFileInput}
+        />
+      </B>
+      <B title='Example 1' noBackground style={{ width: 'auto' }}>
+        <Bar
+          router={router}
+          data={data2}
+          activeColor='primary'
+          defaultColor='grey'
+          onInput={testFileInput}
+        />
+      </B>
+    </>
   )
 }
 
