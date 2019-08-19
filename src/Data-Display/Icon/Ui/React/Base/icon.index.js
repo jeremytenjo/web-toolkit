@@ -37,8 +37,6 @@ const Icon = ({
   backgroundSize,
   ...restStyles
 }) => {
-  console.log(restStyles)
-
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
   const iconType = name.split('/')[1]

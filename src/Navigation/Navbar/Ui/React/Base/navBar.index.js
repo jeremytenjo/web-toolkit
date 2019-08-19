@@ -60,7 +60,6 @@ const NavBar = ({
 
             const handleClick = () => url && history.push(`/${url}`)
 
-            console.log(iconStyles)
             return (
               <div key={key} style={iconPosition} onClick={handleClick}>
                 {icon && (
