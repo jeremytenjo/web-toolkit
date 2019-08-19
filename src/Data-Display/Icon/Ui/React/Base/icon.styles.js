@@ -87,6 +87,13 @@ export const WrapperIcon = styled.div`
     }
   `}
 
+      /* boxShadow */
+      ${({ boxShadow }) =>
+        boxShadow &&
+        `
+        box-shadow: ${boxShadow};
+  `}
+
   svg {
     fill: ${({ color, dark }) =>
       color && !dark

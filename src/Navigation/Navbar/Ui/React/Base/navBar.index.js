@@ -37,13 +37,9 @@ const NavBar = ({
               src = null,
               icon,
               label,
-              iconColor,
-              iconBackgroundColor,
-              iconSize,
-              iconPlain = true,
               top,
               url,
-              iconStyles = {},
+              iconStyles = { plain: true },
             },
             index,
           ) => {
@@ -59,21 +55,28 @@ const NavBar = ({
             const isActive = currentpathname === currentUrl
             const inputProps = file ? { onInput } : null
             const key = label || currentUrl || icon || index
-            const isPlain = iconPlain
+            const isPlain = iconStyles.plain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
 
             const handleClick = () => url && history.push(`/${url}`)
 
+            console.log(iconStyles)
             return (
               <div key={key} style={iconPosition} onClick={handleClick}>
                 {icon && (
                   <Icon
                     name={icon}
                     label={label}
-                    color={iconColor ? iconColor : isActive ? color : 'grey'}
-                    size={iconSize}
-                    background={!!iconBackgroundColor}
-                    backgroundColor={iconBackgroundColor}
+                    color={
+                      iconStyles.color
+                        ? iconStyles.color
+                        : isActive
+                        ? color
+                        : 'grey'
+                    }
+                    size={iconStyles.size}
+                    background={!!iconStyles.backgroundColor}
+                    backgroundColor={iconStyles.backgroundColor}
                     inputProps={inputProps}
                     plain={isPlain}
                     {...iconStyles}

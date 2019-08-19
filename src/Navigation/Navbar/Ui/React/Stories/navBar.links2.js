@@ -6,16 +6,14 @@ export default [
   },
   {
     icon: 'search/feather',
+    top: true,
     iconStyles: {
       color: 'white',
       backgroundColor: 'primary',
       boxShadow: '0px 4px 12px rgba(36, 195, 169, 0.5)',
+      size: 50,
+      plain: false,
     },
-    iconColor: 'white',
-    iconBackgroundColor: 'primary',
-    iconSize: 50,
-    iconPlain: false,
-    top: true,
   },
   {
     label: 'TV',

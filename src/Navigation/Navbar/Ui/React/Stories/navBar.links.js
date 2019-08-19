@@ -11,12 +11,14 @@ export default [
   },
   {
     icon: 'camera/material',
-    iconColor: 'white',
-    iconBackgroundColor: 'primary',
-    iconSize: 50,
-    iconPlain: false,
     file: true,
     top: true,
+    iconStyles: {
+      color: 'white',
+      backgroundColor: 'primary',
+      size: 50,
+      plain: false,
+    },
   },
   {
     label: 'Chat',
