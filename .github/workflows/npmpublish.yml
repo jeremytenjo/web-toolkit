@@ -18,7 +18,7 @@ jobs:
           node-version: 12
       - run: yarn    
          env:
-          NODE_AUTH_TOKEN: ${{secrets.gpnToken}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: yarn lint:check
       - run: yarn cy:run-ci
       - run: yarn build:storybook
@@ -35,4 +35,4 @@ jobs:
           scope: '@tenjojeremy'
       - run: npm publish --minor
         env:
-          NODE_AUTH_TOKEN: ${{secrets.gpnToken}}
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
