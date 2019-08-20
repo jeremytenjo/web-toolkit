@@ -35,6 +35,6 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@tenjojeremy'
-      - run: npm publish --minor
+      - run: yarn publish --minor
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
