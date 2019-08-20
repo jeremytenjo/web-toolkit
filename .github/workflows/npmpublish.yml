@@ -16,7 +16,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: yarn test
+      - run: yarn    
+      - run: yarn lint:check
+      - run: yarn cy:run-ci
+      - run: yarn build:storybook
 
   publish-gpr:
     needs: build
