@@ -11,8 +11,8 @@ export const Wrapper = styled.div`
   border-radius: 100px;
   height: 100px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  background: ${({ variant }) => `var(--color-${variant})`};
-  color: ${({ variant }) => `var(--color-${variant}-foreground)`};
+  background: ${({ background }) => `var(--color-${background})`};
+  color: ${({ foreground }) => `var(--color-${foreground})`};
   text-align: center;
   height: 40px;
   width: 200px;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
   opacity: 0;
   display: none;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-shrink: 0;
   font-family: var(--font-secondary);
   font-size: 16px;
