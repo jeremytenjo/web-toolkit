@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 import Avatar from '../../../../../Data-Display/Avatars/avatar.index'
-import SearchIcon from '../../../../../Data-Display/Icon/Ui/React/Functional/Search/search.index'
+import SearchIcon from '../../../../../Data-Display/Icon/Ui/React/Special/Search/search.index'
 
 import { defaultProps, propTypes } from './navBar.propTypes'
 import { Wrapper } from './navBar.styles'

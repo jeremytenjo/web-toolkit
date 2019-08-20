@@ -61,12 +61,12 @@
   
  "Back": {
 "prefix": "wtbar",
-"body": ["import Back from '@tenjojeremy/web-toolkit/build/Data-Display/Icon/Ui/React/Functional/Back/back.index.js'"],
+"body": ["import Back from '@tenjojeremy/web-toolkit/build/Data-Display/Icon/Ui/React/Special/Back/back.index.js'"],
 },
   
  "Like": {
 "prefix": "wtlir",
-"body": ["import Like from '@tenjojeremy/web-toolkit/build/Data-Display/Icon/Ui/React/Functional/Like/like.index.js'"],
+"body": ["import Like from '@tenjojeremy/web-toolkit/build/Data-Display/Icon/Ui/React/Special/Like/like.index.js'"],
 },
   
  "Icon": {

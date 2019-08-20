@@ -28,6 +28,6 @@ const Example = () => {
     </>
   )
 }
-storiesOf('Data-Display|Icon/React/Functional', module).add('Like', () => (
+storiesOf('Data-Display|Icon/React/Special', module).add('Like', () => (
   <Example />
 ))

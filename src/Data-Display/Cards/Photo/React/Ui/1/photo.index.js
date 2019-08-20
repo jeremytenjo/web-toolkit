@@ -2,11 +2,11 @@ import React, { memo } from 'react'
 
 import List from '../../../../../List/Ui/React/list.index'
 import Image from '../../../../../../Media/Image/Ui/React/image.index'
-import IconBack from '../../../../../Icon/Ui/React/Functional/Back/back.index'
+import IconBack from '../../../../../Icon/Ui/React/Special/Back/back.index'
 import Menu from '../../../../../../Input/Menu/menu.index'
 import Donut from '../../../../../../Feedback/Progress/Ui/React/Donut/donut.index'
 import Chip from '../../../../../Chip/Ui/React/chip.index'
-import LikeButton from '../../../../../Icon/Ui/React/Functional/Like/like.index'
+import LikeButton from '../../../../../Icon/Ui/React/Special/Like/like.index'
 
 import {
   Wrapper,
