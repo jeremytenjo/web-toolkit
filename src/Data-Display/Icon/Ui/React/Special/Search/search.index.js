@@ -15,8 +15,8 @@ const IconSearch = ({
   backgroundColor,
   onSubmit,
   boxShadow,
+  inputName,
 }) => {
-  const inputName = 'query'
   const [show, setShow] = useState(null)
 
   const toggleShow = () => setShow(!show)
