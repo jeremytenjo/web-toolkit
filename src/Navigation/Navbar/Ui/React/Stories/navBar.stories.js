@@ -50,3 +50,17 @@ const Variations = () => {
 storiesOf('Navigation|Nav Bar/React', module)
   .addDecorator(StoryRouter())
   .add('Example', () => <Variations />)
+  .add('Bottom', () => (
+    <B
+      noBackground
+      style={{ width: 'auto', position: 'fixed', bottom: 0, left: 0, right: 0 }}
+    >
+      <Bar
+        data={data2}
+        activeColor='primary'
+        defaultColor='grey'
+        onInput={testFileInput}
+        onSearchSubmit={(value) => console.log(value)}
+      />
+    </B>
+  ))
