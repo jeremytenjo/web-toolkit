@@ -24,6 +24,7 @@ jobs:
       - run: yarn lint:check
       - run: yarn cy:run-ci
       - run: yarn build:storybook
+      - run: firebase deploy --token=${{secrets.firebase}}
       - run: yarn build:library
 
   publish-gpr:
