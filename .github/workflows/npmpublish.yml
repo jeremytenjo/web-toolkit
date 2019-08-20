@@ -16,9 +16,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: |
-          git config user.name "tenjojeremy"
-          git config user.email "tenjojeremy@gmail.com"
+      - run: npm login --registry=https://npm.pkg.github.com --scope=@tenjojeremy
       - run: yarn    
       - run: yarn lint:check
       - run: yarn cy:run-ci
