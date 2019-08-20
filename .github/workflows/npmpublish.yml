@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: docker login docker.pkg.github.com -u tenjojeremy --password-stdin ${{secrets.gpnToken}}
+      - run: docker login docker.pkg.github.com -u tenjojeremy --p ${{secrets.gpnToken}}
       - run: yarn    
       - run: yarn lint:check
       - run: yarn cy:run-ci
