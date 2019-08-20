@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 const defaultConfig = {
   fill: 'forwards',
@@ -8,12 +8,16 @@ const defaultConfig = {
 }
 
 const AnimationIndex = ({
-  name,
+  name = 'showHide',
   el = null,
   config = defaultConfig,
   show,
+  children,
   ...rest
 }) => {
+  const wrapperRef = useRef(null)
+  const element = el || wrapperRef
+
   const [animation, setAnimation] = useState(null)
 
   useEffect(() => {
@@ -23,7 +27,7 @@ const AnimationIndex = ({
   useEffect(() => {
     if (show !== null && animation !== null) {
       animation.default({
-        el: el.current,
+        el: element.current,
         name,
         config,
         show,
@@ -38,7 +42,11 @@ const AnimationIndex = ({
     setAnimation(module)
   }
 
-  return null
+  return children ? (
+    <div style={{ display: 'none' }} ref={wrapperRef}>
+      {children}
+    </div>
+  ) : null
 }
 
 export default AnimationIndex

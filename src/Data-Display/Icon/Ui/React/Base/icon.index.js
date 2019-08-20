@@ -51,7 +51,7 @@ const Icon = ({
 
   useEffect(() => {
     getModule()
-  }, [])
+  }, [name])
 
   const handleClick = () => {
     link && router.history.push(link)

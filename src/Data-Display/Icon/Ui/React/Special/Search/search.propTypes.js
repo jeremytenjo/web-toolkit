@@ -1,13 +1,16 @@
 import { string, func } from 'prop-types'
 
 export const defaultProps = {
-  type: 'primary',
-  text: 'Chip',
-  onClick: () => null,
+  mainIcon: 'search/feather',
+  closeIcon: 'close/feather',
+  backgroundColor: 'primary',
+  boxShadow: '0px 4px 12px rgba(36, 195, 169, 0.5)',
+  onSubmit: () => null,
 }
 
 export const propTypes = {
-  type: string,
-  text: string,
-  onClick: func,
+  mainIcon: string,
+  closeIcon: string,
+  backgroundColor: string,
+  onSubmit: func,
 }
