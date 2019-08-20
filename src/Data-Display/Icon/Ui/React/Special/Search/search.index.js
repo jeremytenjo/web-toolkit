@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react'
+import React, { useState, memo, useEffect } from 'react'
 
 import Form from '../../../../../../Input/Form/Ui/React/form.index'
 import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
@@ -16,16 +16,23 @@ const IconSearch = ({
   onSubmit,
   boxShadow,
 }) => {
+  const inputName = 'query'
   const [show, setShow] = useState(null)
 
   const toggleShow = () => setShow(!show)
+
+  useEffect(() => {
+    const inputEl = document.querySelector(`input[id=${inputName}]`)
+    if (show) inputEl.focus()
+    if (!show) inputEl.blur()
+  }, [show])
 
   return (
     <Box {...Wrapper}>
       <Box {...WrapperInput}>
         <Animation show={show}>
           <Form onSubmitSuccess={onSubmit}>
-            <Textfield name='query' placeholder={'Search...'} />
+            <Textfield name={inputName} placeholder='Search...' />
           </Form>
         </Animation>
       </Box>

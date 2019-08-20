@@ -4,6 +4,7 @@ export const defaultProps = {
   mainIcon: 'search/feather',
   closeIcon: 'close/feather',
   backgroundColor: 'primary',
+  inputId: 'textfield_search_id',
   boxShadow: '0px 4px 12px rgba(36, 195, 169, 0.5)',
   onSubmit: () => null,
 }
