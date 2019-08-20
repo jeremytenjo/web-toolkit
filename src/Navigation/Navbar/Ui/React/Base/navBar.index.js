@@ -67,7 +67,7 @@ const NavBar = ({
               <div key={key} style={iconPosition} onClick={handleClick}>
                 {search ? (
                   <SearchIcon
-                    onSubmitSuccess={onSearchSubmit}
+                    onSubmit={onSearchSubmit}
                     icon={icon}
                     iconStyles={iconStyles}
                   />
