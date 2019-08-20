@@ -8,6 +8,7 @@ export const defaultProps = {
   zIndex: 1,
   disableScrollOnShow: true,
   dataCy: null,
+  appendToBody: null,
 }
 
 export const propTypes = {

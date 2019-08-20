@@ -5,6 +5,7 @@ import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
 import Textfield from '../../../../../../Input/Form/Text-Field/Ui/React/Styles/textfield.1.index'
 import Icon from '../../Base/icon.index'
 import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Overlay from '../../../../../../Misc-Utils/Overlay/overlay.index'
 
 import { defaultProps, propTypes } from './search.propTypes'
 import { Wrapper, WrapperInput } from './search.styles'
@@ -18,7 +19,6 @@ const IconSearch = ({
   inputName,
 }) => {
   const [show, setShow] = useState(null)
-
   const toggleShow = () => setShow(!show)
 
   useEffect(() => {
@@ -28,25 +28,34 @@ const IconSearch = ({
   }, [show])
 
   return (
-    <Box {...Wrapper}>
-      <Box {...WrapperInput}>
-        <Animation show={show}>
-          <Form onSubmitSuccess={onSubmit}>
-            <Textfield name={inputName} placeholder='Search...' />
-          </Form>
-        </Animation>
-      </Box>
+    <>
+      <Box {...Wrapper}>
+        <Overlay
+          show={show}
+          backgroundcolor='black'
+          onClick={toggleShow}
+          appendToBody
+        />
 
-      <Icon
-        onClick={toggleShow}
-        name={show ? closeIcon : mainIcon}
-        backgroundColor={backgroundColor}
-        background
-        noBackgroundChange
-        size={50}
-        boxShadow={boxShadow}
-      />
-    </Box>
+        <Box {...WrapperInput}>
+          <Animation show={show}>
+            <Form onSubmitSuccess={onSubmit}>
+              <Textfield name={inputName} placeholder='Search...' />
+            </Form>
+          </Animation>
+        </Box>
+
+        <Icon
+          onClick={toggleShow}
+          name={show ? closeIcon : mainIcon}
+          backgroundColor={backgroundColor}
+          background
+          noBackgroundChange
+          size={50}
+          boxShadow={boxShadow}
+        />
+      </Box>
+    </>
   )
 }
 

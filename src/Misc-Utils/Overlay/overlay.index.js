@@ -13,8 +13,16 @@ const Overlay = ({
   zIndex,
   disableScrollOnShow,
   dataCy,
+  className,
+  appendToBody,
 }) => {
   const overlayRef = useRef(null)
+
+  useEffect(() => {
+    if (appendToBody) {
+      document.querySelector('body').append(overlayRef.current)
+    }
+  }, [])
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyInput, true)
@@ -34,6 +42,7 @@ const Overlay = ({
     <>
       <Animation name='showHide' show={show} el={overlayRef} />
       <Wrapper
+        className={className}
         ref={overlayRef}
         onClick={onClick}
         backgroundcolor={backgroundcolor}
