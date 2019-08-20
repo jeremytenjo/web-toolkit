@@ -20,7 +20,7 @@ jobs:
           scope: '@tenjojeremy'
       - run: yarn    
          env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: yarn lint:check
       - run: yarn cy:run-ci
       - run: yarn build:storybook
