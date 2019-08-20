@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: echo "//packagecloud.io/armando/node-test-package/npm/:_authToken=${{secrets.gpnToken}}" > ~/repo/.npmrc
+      - run: docker login docker.pkg.github.com -u tenjojeremy -p PASSWORD/TOKEN
       - run: yarn    
       - run: yarn lint:check
       - run: yarn cy:run-ci
