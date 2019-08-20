@@ -10,11 +10,10 @@ const Overlay = ({
   onClick,
   backgroundcolor,
   noAnimation,
-  zIndex,
   disableScrollOnShow,
   dataCy,
-  className,
   appendToBody,
+  ...restStyles
 }) => {
   const overlayRef = useRef(null)
 
@@ -42,13 +41,12 @@ const Overlay = ({
     <>
       <Animation name='showHide' show={show} el={overlayRef} />
       <Wrapper
-        className={className}
         ref={overlayRef}
         onClick={onClick}
         backgroundcolor={backgroundcolor}
         noAnimation={noAnimation}
-        zIndex={zIndex}
         data-cy={dataCy}
+        {...restStyles}
       />
     </>
   )

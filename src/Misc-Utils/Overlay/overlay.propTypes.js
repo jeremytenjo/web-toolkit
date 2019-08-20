@@ -1,4 +1,4 @@
-import { bool, func, string, number } from 'prop-types'
+import { bool, func, string } from 'prop-types'
 
 export const defaultProps = {
   show: null,
@@ -16,7 +16,6 @@ export const propTypes = {
   noAnimation: bool,
   onClick: func,
   backgroundcolor: string,
-  zIndex: number,
   disableScrollOnShow: bool,
   dataCy: string,
 }

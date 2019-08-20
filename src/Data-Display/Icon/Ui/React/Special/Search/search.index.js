@@ -35,6 +35,7 @@ const IconSearch = ({
           backgroundcolor='black'
           onClick={toggleShow}
           appendToBody
+          zIndex='-1'
         />
 
         <Box {...WrapperInput}>
