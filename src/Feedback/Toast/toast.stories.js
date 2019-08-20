@@ -7,16 +7,19 @@ const ProviderMock = ({ children }) => <ToastProvider>{children}</ToastProvider>
 
 const Clicker = () => {
   const { showToast } = ToastState() || {}
+  console.log(ToastState)
 
   return (
-    <ProviderMock>
+    <>
       <button onClick={() => showToast('success', 'success message')}>
         Show
       </button>
-    </ProviderMock>
+    </>
   )
 }
 
 storiesOf('Feedback/Notifications/Toasts', module).add('Default', () => (
-  <Clicker />
+  <ProviderMock>
+    <Clicker />
+  </ProviderMock>
 ))
