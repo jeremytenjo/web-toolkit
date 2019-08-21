@@ -10,8 +10,7 @@ const toatsPaths = toatsReq.keys()
 
 // Real life example
 const Children = () => {
-  const { showToast } =
-    ToastState({ foreground: 'white', background: 'black' }) || {}
+  const { showToast } = ToastState()
 
   return (
     <B style={{ position: 'top', bottom: 0 }}>
