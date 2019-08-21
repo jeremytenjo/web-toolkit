@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
-import Style1 from './Styles/toast.1.index'
 import ToastState, { ToastProvider } from './toast.index'
 
-const Clicker = () => {
+const toatsReq = require.context('./Styles', true, /.js$/)
+const toatsPaths = toatsReq.keys()
+
+const Children = () => {
   const { showToast } =
     ToastState({ foreground: 'white', background: 'black' }) || {}
 
@@ -23,18 +25,40 @@ const Clicker = () => {
   )
 }
 
-const Variations = () => (
-  <>
-    <B title='style 1'>
-      <Style1 display='block' />
-    </B>
-  </>
-)
+// Style Variations
+export const Styles = () => {
+  const [vars, setvars] = useState([])
+  useEffect(() => {
+    getStyles(toatsPaths)
+  }, [])
 
-storiesOf('Feedback/Notifications/Toasts', module)
-  .add('Styles', () => <Variations />)
+  const getStyles = async (paths) => {
+    const Elements = paths.map(async (location) => {
+      let styleNumber = location.split('.')[2]
+      let title = `Style ${styleNumber}`
+      const loc = location.substring(1)
+      let Mod = await import(`./Styles${loc}`)
+      Mod = Mod.default
+
+      return (
+        <>
+          <B title={title} key={title} noBackground>
+            <Mod />
+          </B>
+        </>
+      )
+    })
+
+    setvars(await Promise.all(Elements))
+  }
+
+  return <div style={{ display: 'grid', gridAutoFlow: 'column' }}>{vars}</div>
+}
+
+storiesOf('Feedback/Notifications/Toast', module)
+  .add('Styles', () => <Styles />)
   .add('Default', () => (
     <ToastProvider>
-      <Clicker />
+      <Children />
     </ToastProvider>
   ))
