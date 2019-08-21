@@ -12,7 +12,11 @@ const Clicker = () => {
 
   return (
     <>
-      <button onClick={() => showToast('success', 'success message')}>
+      <button
+        onClick={() =>
+          showToast({ type: 'success', message: 'success message' })
+        }
+      >
         Show
       </button>
     </>

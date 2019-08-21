@@ -5,7 +5,6 @@ import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
 import Textfield from '../../../../../../Input/Form/Text-Field/Ui/React/Styles/textfield.1.index'
 import Icon from '../../Base/icon.index'
 import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
-import Overlay from '../../../../../../Misc-Utils/Overlay/overlay.index'
 
 import { defaultProps, propTypes } from './search.propTypes'
 import { Wrapper, WrapperInput } from './search.styles'
@@ -30,14 +29,6 @@ const IconSearch = ({
   return (
     <>
       <Box {...Wrapper}>
-        <Overlay
-          show={show}
-          backgroundcolor='black'
-          onClick={toggleShow}
-          appendToBody
-          zIndex='-1'
-        />
-
         <Box {...WrapperInput}>
           <Animation show={show}>
             <Form onSubmitSuccess={onSubmit}>

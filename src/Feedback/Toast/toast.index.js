@@ -1,45 +1,42 @@
-import React, { useState, createContext, useContext, useRef } from 'react'
-
-import Icon from '../../Data-Display/Icon/Ui/React/Base/icon.index'
-
-import { Wrapper } from './toast.styles'
-import animation from './toast.animation'
+import React, { useState, createContext, useContext } from 'react'
 
 export const ToastContext = createContext(null)
 
 export const ToastProvider = ({ children }) => {
-  const tastRef = useRef()
   const [background, setBackground] = useState('black')
   const [foreground, setforeground] = useState('white')
-  const [variant, setVariant] = useState('')
   const [text, setText] = useState('')
+  const [type, setType] = useState('success')
+  const [Toast, setToast] = useState(null)
 
-  const showToast = (message, variant) => {
-    animation(tastRef.current)
+  const showToast = async ({
+    message,
+    style = 1,
+    type: newType = 'success',
+  }) => {
+    let mod = await import(`./Styles/toast.${style}.index`)
+    setToast(
+      mod.default({
+        background,
+        type,
+        foreground,
+      }),
+    )
     setText(message)
-    setVariant(variant)
+    setType(newType)
   }
 
   return (
     <ToastContext.Provider
       value={{
         showToast,
-        variant,
         text,
         setBackground,
         setforeground,
       }}
     >
       {children}
-      <Wrapper
-        variant={variant}
-        background={background}
-        foreground={foreground}
-        ref={tastRef}
-      >
-        <Icon name='checkmark/1' />
-        <span>{text}</span>
-      </Wrapper>
+      {Toast && Toast}
     </ToastContext.Provider>
   )
 }

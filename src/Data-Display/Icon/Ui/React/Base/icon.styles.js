@@ -127,8 +127,13 @@ export const WrapperIcon = styled.div`
      stroke: var(--color-${color});     
      `}
 
-
-  }
+ /* Plain */
+ ${({ plain }) =>
+   plain &&
+   `
+        margin: 0;
+   width:auto;
+        `}
 `
 
 export const Label = styled.div`
