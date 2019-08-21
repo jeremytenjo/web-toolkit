@@ -1,5 +1,6 @@
 import React, { useState, createContext, useContext } from 'react'
 
+import Animation from '../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 export const ToastContext = createContext(null)
 
 export const ToastProvider = ({ children }) => {
@@ -30,7 +31,9 @@ export const ToastProvider = ({ children }) => {
       }}
     >
       {children}
-      {Toast && Toast}
+      <Animation name='outmostIn' show={Toast}>
+        {Toast && Toast}
+      </Animation>
     </ToastContext.Provider>
   )
 }

@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
   justify-content: start;
   padding: var(--spacing-s) var(--spacing-m);
   grid-gap: var(--spacing-s);
+  user-select: none;
 
   img {
     width: 20px;
@@ -46,7 +47,7 @@ export default ({
     display={display}
     font={font}
   >
-    <Icon name={iconName} plain />
+    <Icon name={iconName} plain cursor='auto' />
     <span> {message}</span>
   </Wrapper>
 )

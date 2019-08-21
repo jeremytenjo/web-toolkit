@@ -11,7 +11,7 @@ const Clicker = () => {
     ToastState({ foreground: 'white', background: 'black' }) || {}
 
   return (
-    <>
+    <B style={{ position: 'top', bottom: 0 }}>
       <button
         onClick={() =>
           showToast({ type: 'success', message: 'Added to watchlist' })
@@ -19,7 +19,7 @@ const Clicker = () => {
       >
         Show
       </button>
-    </>
+    </B>
   )
 }
 
