@@ -3,16 +3,14 @@ import React, { useState, createContext, useContext } from 'react'
 export const ToastContext = createContext(null)
 
 export const ToastProvider = ({ children }) => {
-  const [background, setBackground] = useState('black')
-  const [foreground, setforeground] = useState('white')
-  const [text, setText] = useState('')
-  const [type, setType] = useState('success')
   const [Toast, setToast] = useState(null)
 
   const showToast = async ({
-    message,
+    message = 'message',
     style = 1,
-    type: newType = 'success',
+    type = 'success',
+    background = 'black',
+    foreground = 'white',
   }) => {
     let mod = await import(`./Styles/toast.${style}.index`)
     setToast(
@@ -20,19 +18,15 @@ export const ToastProvider = ({ children }) => {
         background,
         type,
         foreground,
+        message,
       }),
     )
-    setText(message)
-    setType(newType)
   }
 
   return (
     <ToastContext.Provider
       value={{
         showToast,
-        text,
-        setBackground,
-        setforeground,
       }}
     >
       {children}

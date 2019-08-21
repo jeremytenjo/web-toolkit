@@ -35,7 +35,7 @@ export default ({
   type = 'success',
   background = 'black',
   foreground = 'white',
-  message = 'Added to watchlist',
+  message = 'message',
   iconName = 'checkmark/1',
   display = 'none',
   font = 'primary',

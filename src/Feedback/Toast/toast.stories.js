@@ -14,7 +14,7 @@ const Clicker = () => {
     <>
       <button
         onClick={() =>
-          showToast({ type: 'success', message: 'success message' })
+          showToast({ type: 'success', message: 'Added to watchlist' })
         }
       >
         Show
