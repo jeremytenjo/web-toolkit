@@ -26,6 +26,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('zAuthentication|AccessPage', module).add('variations', () => (
+storiesOf('zAuthentication|zAccessPage', module).add('variations', () => (
   <Variations />
 ))
