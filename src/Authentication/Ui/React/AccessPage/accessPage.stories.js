@@ -17,8 +17,8 @@ const Variations = () => (
         variation={1}
         onSuccess={(userInfo) => console.log(userInfo)}
         logo={Logo}
-        name='Estilitta'
-        desc='Find a stylist for you'
+        name='Example'
+        desc='Example auth page'
         service='firebase'
         providers={['apple', 'google', 'facebook']}
       />
@@ -26,4 +26,7 @@ const Variations = () => (
   </>
 )
 
-storiesOf('AccessPage', module).add('variations', () => <Variations />)
+storiesOf('Authentication|AccessPage/Ui/React', module).add(
+  'variations',
+  () => <Variations />,
+)
