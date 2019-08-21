@@ -26,7 +26,7 @@ const Children = () => {
 }
 
 // Style Variations
-export const Styles = () => {
+const Styles = () => {
   const [vars, setvars] = useState([])
   useEffect(() => {
     getStyles(toatsPaths)
