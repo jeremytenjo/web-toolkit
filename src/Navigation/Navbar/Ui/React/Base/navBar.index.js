@@ -87,6 +87,7 @@ const NavBar = ({
                     backgroundColor={iconStyles.backgroundColor}
                     inputProps={inputProps}
                     plain={isPlain}
+                    center
                     {...iconStyles}
                   />
                 ) : null}

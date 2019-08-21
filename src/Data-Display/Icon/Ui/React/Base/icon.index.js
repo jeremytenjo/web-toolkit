@@ -35,6 +35,7 @@ const Icon = ({
   backgroundColor,
   plain,
   backgroundSize,
+  center,
   ...restStyles
 }) => {
   const [IconComp, setIconComp] = useState(null)
@@ -77,6 +78,7 @@ const Icon = ({
             backgroundColor={backgroundColor}
             isStroke={isStroke}
             backgroundSize={backgroundSize}
+            center={center}
             {...restStyles}
           >
             {IconComp}

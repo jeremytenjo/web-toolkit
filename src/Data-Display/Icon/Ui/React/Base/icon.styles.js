@@ -134,6 +134,12 @@ export const WrapperIcon = styled.div`
         margin: 0;
    width:auto;
         `}
+ /* Center */
+ ${({ center }) =>
+   center &&
+   `
+        margin: 0 auto;
+        `}
 `
 
 export const Label = styled.div`
