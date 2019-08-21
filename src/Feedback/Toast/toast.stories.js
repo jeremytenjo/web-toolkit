@@ -8,6 +8,7 @@ import ToastState, { ToastProvider } from './toast.index'
 const toatsReq = require.context('./Styles', true, /.js$/)
 const toatsPaths = toatsReq.keys()
 
+// Real life example
 const Children = () => {
   const { showToast } =
     ToastState({ foreground: 'white', background: 'black' }) || {}
