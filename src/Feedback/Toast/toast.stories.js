@@ -31,7 +31,6 @@ const Styles = () => {
   useEffect(() => {
     getStyles(toatsPaths)
   }, [])
-
   const getStyles = async (paths) => {
     const Elements = paths.map(async (location) => {
       let styleNumber = location.split('.')[2]
@@ -39,7 +38,6 @@ const Styles = () => {
       const loc = location.substring(1)
       let Mod = await import(`./Styles${loc}`)
       Mod = Mod.default
-
       return (
         <>
           <B title={title} key={title} noBackground>
@@ -48,10 +46,8 @@ const Styles = () => {
         </>
       )
     })
-
     setvars(await Promise.all(Elements))
   }
-
   return <div style={{ display: 'grid', gridAutoFlow: 'column' }}>{vars}</div>
 }
 
