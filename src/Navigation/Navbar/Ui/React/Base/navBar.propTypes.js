@@ -1,4 +1,4 @@
-import { string, func, number, object } from 'prop-types'
+import { string, func, array, number, object } from 'prop-types'
 
 export const defaultProps = {
   color: 'primary',
@@ -7,6 +7,7 @@ export const defaultProps = {
   onClick: () => null,
   onSearchSubmit: () => null,
   shadow: 2,
+  mediaQueries: [600, 900],
 }
 
 export const propTypes = {
@@ -16,4 +17,5 @@ export const propTypes = {
   onClick: func,
   onSearchSubmit: func,
   shadow: number,
+  mediaQueries: array,
 }

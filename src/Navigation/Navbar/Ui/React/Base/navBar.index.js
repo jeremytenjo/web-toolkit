@@ -17,12 +17,16 @@ const NavBar = ({
   position,
   shadow,
   onSearchSubmit,
+  mediaQueries,
+  ...otherSyles
 }) => {
   return (
     <Wrapper
       backgroundColor={backgroundColor}
       position={position}
       shadow={shadow}
+      mediaQueries={mediaQueries}
+      {...otherSyles}
     >
       <List
         padding='none'

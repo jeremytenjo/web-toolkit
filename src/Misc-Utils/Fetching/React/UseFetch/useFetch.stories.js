@@ -20,6 +20,7 @@ const GET = () => {
 }
 
 const POST = () => {
+  // Working but have to replace url
   const url = 'http://dummy.restapiexample.com/api/v1/create '
   const body = { name: 'test', salary: '123', age: '23' }
   const { request, response, error } = useFetch({ url, method: 'post' })
