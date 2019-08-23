@@ -5,7 +5,15 @@ export default ({ url, method = 'get' }) => {
   const [error, setError] = useState(null)
   const [response, setResponse] = useState(null)
 
-  const request = async (body) => {
+  const request = async (params) => {
+    const {
+      body = null,
+      headers = {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    } = params || {}
+
     try {
       setLoading(true)
       let res = null
@@ -14,6 +22,7 @@ export default ({ url, method = 'get' }) => {
         res = await res.json()
       } else {
         res = await fetch(url, {
+          headers,
           method,
           body: JSON.stringify(body),
         })

@@ -23,13 +23,13 @@ const POST = () => {
   const url = 'http://dummy.restapiexample.com/api/v1/create '
   const body = { name: 'test', salary: '123', age: '23' }
   const { request, response, error } = useFetch({ url, method: 'post' })
-  const req = async () => request(body)
+  const req = async () => request({ body })
 
   return (
     <B title='POST'>
       <button onClick={req}>POST</button>
       {response && ' is Working'}
-      {error && ' is NOT Working'}
+      {error && ` is NOT Working`}
     </B>
   )
 }
