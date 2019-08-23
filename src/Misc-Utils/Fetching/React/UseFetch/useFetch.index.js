@@ -5,7 +5,7 @@ export default ({ url, method = 'get' }) => {
   const [error, setError] = useState(null)
   const [response, setResponse] = useState(null)
 
-  const request = async ({ body }) => {
+  const request = async (body) => {
     try {
       setLoading(true)
       let res = null
