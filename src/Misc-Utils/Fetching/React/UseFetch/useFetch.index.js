@@ -26,7 +26,7 @@ export default ({ url, method = 'get' }) => {
           method,
           body: JSON.stringify(body),
         })
-        res = res.json()
+        res = await res.json()
       }
       setResponse(res)
     } catch (e) {
