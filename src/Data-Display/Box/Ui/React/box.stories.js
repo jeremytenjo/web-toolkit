@@ -22,10 +22,8 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Box/Ui/React', module).add(
-  'default',
-  () => <Variations />,
-  {
+storiesOf('Data-Display|Box/Ui/React', module)
+  .add('default', () => <Variations />, {
     notes: { markdown },
-  },
-)
+  })
+  .add('fullscreen', () => <Box fullscreen backgroundColor='black' />)
