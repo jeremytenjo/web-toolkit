@@ -2,7 +2,7 @@ import { string, func } from 'prop-types'
 
 export const defaultProps = {
   src: '',
-  text: 'Chip',
+  size: 184,
   onClick: () => null,
 }
 

@@ -5,12 +5,12 @@ import Image from '../../../../../../../Media/Image/Ui/React/image.index'
 import { defaultProps, propTypes } from './poster.1.propTypes'
 import { Wrapper } from './poster.1.styles'
 
-const Poster1 = ({ src, onClick, alt = 'poster', ...rest }) => {
+const Poster1 = ({ src, onClick, alt = 'poster', size, ...rest }) => {
   const handleClick = () => onClick(rest)
 
   return (
     <Wrapper onClick={handleClick}>
-      <Image src={src} width={119} height={184} alt={alt} />
+      <Image src={src} width={size / 1.5} height={size} alt={alt} />
     </Wrapper>
   )
 }
