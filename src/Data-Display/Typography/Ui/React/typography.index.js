@@ -18,7 +18,13 @@ const defineTag = (variant) => {
 }
 
 const Typography = (
-  { variant = 'body1', color = null, text = '', ...otherStyles },
+  {
+    variant = 'body1',
+    color = null,
+    onClick = () => null,
+    text = '',
+    ...otherStyles
+  },
   ref,
 ) => {
   const style = {
@@ -28,7 +34,7 @@ const Typography = (
   const Tag = defineTag(variant)
 
   return (
-    <Tag style={style} variant={variant} ref={ref}>
+    <Tag style={style} variant={variant} ref={ref} onClick={onClick}>
       {text}
     </Tag>
   )
