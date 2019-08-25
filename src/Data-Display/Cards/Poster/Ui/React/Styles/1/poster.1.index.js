@@ -1,16 +1,37 @@
-import React, { memo } from 'react'
+import React, { memo, lazy, Suspense } from 'react'
 
 import Image from '../../../../../../../Media/Image/Ui/React/image.index'
 
 import { defaultProps, propTypes } from './poster.1.propTypes'
 import { Wrapper } from './poster.1.styles'
 
-const Poster1 = ({ src, onClick, alt = 'poster', size, ...rest }) => {
+const Typography = lazy(() =>
+  import(
+    /* webpackChunkName: 'Typography' */ '../../../../../../Typography/Ui/React/typography.index'
+  ),
+)
+
+const Poster1 = ({ src, onClick, alt, backgroundColor, size, ...rest }) => {
   const handleClick = () => onClick(rest)
+  const height = size
+  const width = height / 1.5
 
   return (
-    <Wrapper onClick={handleClick}>
-      <Image src={src} width={size / 1.5} height={size} alt={alt} />
+    <Wrapper
+      onClick={handleClick}
+      style={{
+        width: width,
+        height: height,
+      }}
+      src={src}
+      backgroundColor={backgroundColor}
+    >
+      {src && <Image src={src} width={width} height={height} alt={alt} />}
+      {!src && (
+        <Suspense fallback={null}>
+          <Typography text={alt} color='white' variant='caption' />
+        </Suspense>
+      )}
     </Wrapper>
   )
 }

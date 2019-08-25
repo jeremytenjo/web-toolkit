@@ -10,8 +10,11 @@ const image =
 
 const Variations = () => (
   <>
-    <B title='1' noBackground>
+    <B title='default' noBackground>
       <One src={image} onClick={() => console.log('sdf')} />
+    </B>
+    <B title='no photo' noBackground>
+      <One alt='this is a poster' onClick={() => console.log('sdf')} />
     </B>
   </>
 )

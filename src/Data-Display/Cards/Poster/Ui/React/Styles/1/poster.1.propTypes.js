@@ -1,8 +1,10 @@
 import { string, func } from 'prop-types'
 
 export const defaultProps = {
-  src: '',
+  src: null,
   size: 184,
+  alt: 'poster',
+  backgroundColor: 'black-opaque',
   onClick: () => null,
 }
 

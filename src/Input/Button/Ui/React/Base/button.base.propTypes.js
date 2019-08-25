@@ -1,4 +1,4 @@
-import { string, func, bool, any, object } from 'prop-types'
+import { string, func, bool, any, object, oneOf, node } from 'prop-types'
 
 export const defaultProps = {
   type: 'button',
@@ -28,7 +28,7 @@ export const propTypes = {
   disabled: bool,
   Icon: any,
   color: string,
-  text: string,
+  text: oneOf([node, string]),
   style: object,
   textStyle: object,
   onClick: func,
