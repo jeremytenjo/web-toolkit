@@ -18,6 +18,14 @@ export const Wrapper = styled.div`
   grid-gap: var(--spacing-s);
   user-select: none;
 
+  /* location */
+  ${({ location }) =>
+    location === 'center'
+      ? `
+  margin: 0 auto;  
+  `
+      : ``}
+
   * {
     cursor: auto;
   }
@@ -44,12 +52,14 @@ export default ({
   iconName = 'checkmark/1',
   display = 'none',
   font = 'primary',
+  location = 'center',
 }) => (
   <Wrapper
     background={background}
     foreground={foreground}
     display={display}
     font={font}
+    location={location}
   >
     <Icon name={iconName} plain />
     <span> {message}</span>

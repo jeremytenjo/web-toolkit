@@ -12,6 +12,7 @@ export const ToastProvider = ({ children }) => {
     type = 'success',
     background = 'black',
     foreground = 'white',
+    location = 'center',
   }) => {
     let mod = await import(`./Styles/toast.${style}.index`)
     setToast(
@@ -20,6 +21,7 @@ export const ToastProvider = ({ children }) => {
         type,
         foreground,
         message,
+        location,
       }),
     )
   }
