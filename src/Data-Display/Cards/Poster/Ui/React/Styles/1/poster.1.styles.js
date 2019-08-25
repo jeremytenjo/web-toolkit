@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
     justify-content: center;
     background-color: var(--color-${backgroundColor});
     border-radius: 9px;
-
   `}
 
   div {

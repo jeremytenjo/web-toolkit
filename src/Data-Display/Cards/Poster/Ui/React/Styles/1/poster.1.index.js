@@ -11,7 +11,15 @@ const Typography = lazy(() =>
   ),
 )
 
-const Poster1 = ({ src, onClick, alt, backgroundColor, size, ...rest }) => {
+const Poster1 = ({
+  src,
+  onClick,
+  alt,
+  loading,
+  backgroundColor,
+  size,
+  ...rest
+}) => {
   const handleClick = () => onClick(rest)
   const height = size
   const width = height / 1.5
