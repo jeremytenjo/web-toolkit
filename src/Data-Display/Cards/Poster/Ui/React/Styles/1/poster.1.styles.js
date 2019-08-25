@@ -4,10 +4,10 @@ export const Wrapper = styled.div`
   position: relative;
 
   /* No src */
-  ${({ src, backgroundColor }) =>
-    !src &&
+  ${({ src, backgroundColor, loading }) =>
+    (!src || loading) &&
     `
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     background-color: var(--color-${backgroundColor});

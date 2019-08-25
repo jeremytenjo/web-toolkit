@@ -25,20 +25,21 @@ const AnimationIndex = ({
   }, [])
 
   useEffect(() => {
-    if (show !== null && animation !== null) {
-      animation.default({
-        el: element.current,
-        name,
-        config,
-        show,
-        ...rest,
-      })
-    }
-  }, [show])
+    if (show !== null && animation !== null) execAnimation()
+  }, [show, animation])
+
+  const execAnimation = () => {
+    animation.default({
+      el: element.current,
+      name,
+      config,
+      show,
+      ...rest,
+    })
+  }
 
   const getFunction = async () => {
     const module = await import(`./Types/animation.${name}`)
-
     setAnimation(module)
   }
 
