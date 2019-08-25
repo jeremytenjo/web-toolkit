@@ -46,7 +46,12 @@ const Poster1 = ({
       {src && <Image src={src} width={width} height={height} alt={alt} />}
       {!src && (
         <Suspense fallback={null}>
-          <Typography text={alt} color='white' variant='caption' />
+          <Typography
+            text={alt}
+            color='white'
+            variant='caption'
+            textAlign='center'
+          />
         </Suspense>
       )}
 
