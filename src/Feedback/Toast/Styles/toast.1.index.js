@@ -17,6 +17,10 @@ export const Wrapper = styled.div`
   padding: var(--spacing-s) var(--spacing-m);
   grid-gap: var(--spacing-s);
   user-select: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   /* location */
   ${({ location }) =>
