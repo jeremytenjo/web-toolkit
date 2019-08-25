@@ -66,7 +66,6 @@ const NavBar = ({
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
 
             const handleClick = () => {
-              console.log(`/${url}`)
               url && history.push(`/${url}`)
             }
 
