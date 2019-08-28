@@ -5,9 +5,7 @@
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
+  "files": ["build"],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && rmdir /s /q build && gpush",
@@ -51,7 +49,8 @@
     "react-router-dom": "^5.0.1",
     "react-stars": "^2.2.5",
     "storybook-react-router": "^1.0.5",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "react-swipeable-views": "^0.13.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -78,7 +77,6 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.10",
-    "react-swipeable-views": "^0.13.3",
     "start-server-and-test": "^1.10.0",
     "webpack-cli": "^3.3.6",
     "yup": "^0.27.0"
