@@ -13,7 +13,13 @@ const Variations = () => {
       <B title='default'>
         <button onClick={() => setOpen(true)}>OPEN</button>
 
-        <Drawer open={open} onChange={() => setOpen(false)}>
+        <Drawer
+          open={open}
+          onChange={() => setOpen(false)}
+          swipeableViewsProps={{
+            onTransitionEnd: () => console.log('onTransitionEnd'),
+          }}
+        >
           <div>
             <p> Here goes the content of your bottom sheet</p>
             <p> Here goes the content of your bottom sheet</p>
