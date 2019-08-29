@@ -19,6 +19,22 @@ const GET = () => {
   )
 }
 
+const Dynamic = () => {
+  const { request, response, error } = useFetch({ method: 'get' })
+  const req = async () =>
+    request({ url: 'http://dummy.restapiexample.com/api/v1/employees' })
+
+  console.log(response)
+
+  return (
+    <B title='Dynamic url'>
+      <button onClick={req}>Dynamic</button>
+      {response && ' is Working'}
+      {error && ' is NO Working'}
+    </B>
+  )
+}
+
 const POST = () => {
   // Working but have to replace url
   const url = 'http://dummy.restapiexample.com/api/v1/create '
@@ -38,6 +54,7 @@ const POST = () => {
 const Variations = () => (
   <>
     <GET />
+    <Dynamic />
     <POST />
   </>
 )

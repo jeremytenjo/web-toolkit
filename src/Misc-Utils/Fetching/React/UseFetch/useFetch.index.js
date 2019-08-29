@@ -12,16 +12,17 @@ export default ({ url, method = 'get' }) => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
+      url: dynamicUrl = url,
     } = params || {}
 
     try {
       setLoading(true)
       let res = null
       if (method === 'get') {
-        res = await fetch(url)
+        res = await fetch(dynamicUrl)
         res = await res.json()
       } else {
-        res = await fetch(url, {
+        res = await fetch(dynamicUrl, {
           headers,
           method,
           body: JSON.stringify(body),
