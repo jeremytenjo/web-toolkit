@@ -52,7 +52,7 @@ const Icon = ({
 
   useEffect(() => {
     getModule()
-  }, [name])
+  }, [name, label])
 
   const handleClick = () => {
     link && router.history.push(link)

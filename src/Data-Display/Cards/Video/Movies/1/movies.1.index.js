@@ -12,7 +12,6 @@ const CardMovie1 = ({
   title,
   overview,
   favorite,
-  moreLinks,
   onLoadMore,
   onFavoriteToggle,
   onPlay,
@@ -21,44 +20,67 @@ const CardMovie1 = ({
   starIcon,
   playLabel,
   plusLabel,
-  starLabel,
+  starLabelIsFavorite,
+  starLabelIsNotFavorite,
   iconBackgroundColor,
+  titleVariant,
+  overviewVariant,
   ...rest
 }) => {
+  const favIcon = favorite ? `${starIcon}-filled` : starIcon
+  const starLabel = favorite ? starLabelIsFavorite : starLabelIsNotFavorite
+
   const handleOnPlay = () => onPlay(rest)
   const handleLoadMore = () => onLoadMore(rest)
   const handleFavoriteToggle = () => onFavoriteToggle(rest)
   return (
-    <Box backgroundColor='white' borderRadius='20px'>
-      <Poster src={poster} />
-      <Typography text={title} variation='h4' />
-      <Typography text={overview} variation='body2' />
+    <Box
+      backgroundColor='white'
+      borderRadius='20px'
+      gridAutoFlow='column'
+      gridGap='s'
+      padding='s'
+    >
+      <Poster src={poster} size={184} />
 
-      <Box gridAutoFlow='column' justifyContent='space-between'>
-        <Icon
-          name={plusIcon}
-          color='primary-darker'
-          label={plusLabel}
-          onClick={handleLoadMore}
-          background
-          backgroundColor={iconBackgroundColor}
-        />
-        <Icon
-          name={playIcon}
-          color='primary-darker'
-          label={playLabel}
-          onClick={handleOnPlay}
-          background
-          backgroundColor={iconBackgroundColor}
-        />
-        <Icon
-          name={starIcon}
-          color='primary-darker'
-          label={starLabel}
-          background
-          backgroundColor={iconBackgroundColor}
-          onClick={handleFavoriteToggle}
-        />
+      <Box gridGap='s' padding='none'>
+        <Typography text={title} variant={titleVariant} />
+        <Typography text={overview} variant={overviewVariant} />
+
+        <Box
+          gridAutoFlow='column'
+          justifyContent='space-between'
+          grid-template-columns='60px 60px 60px'
+          justify-items='center'
+          align-items='start'
+        >
+          <Icon
+            name={plusIcon}
+            color='primary-darker'
+            label={plusLabel}
+            onClick={handleLoadMore}
+            background
+            backgroundColor={iconBackgroundColor}
+          />
+
+          <Icon
+            name={playIcon}
+            color='primary-darker'
+            label={playLabel}
+            onClick={handleOnPlay}
+            background
+            backgroundColor={iconBackgroundColor}
+          />
+
+          <Icon
+            name={favIcon}
+            color='primary-darker'
+            label={starLabel}
+            background
+            backgroundColor={iconBackgroundColor}
+            onClick={handleFavoriteToggle}
+          />
+        </Box>
       </Box>
     </Box>
   )
