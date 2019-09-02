@@ -22,6 +22,7 @@ const CardMovie1 = ({
   playLabel,
   plusLabel,
   starLabel,
+  iconBackgroundColor,
   ...rest
 }) => {
   const handleOnPlay = () => onPlay(rest)
@@ -40,6 +41,7 @@ const CardMovie1 = ({
           label={plusLabel}
           onClick={handleLoadMore}
           background
+          backgroundColor={iconBackgroundColor}
         />
         <Icon
           name={playIcon}
@@ -47,12 +49,14 @@ const CardMovie1 = ({
           label={playLabel}
           onClick={handleOnPlay}
           background
+          backgroundColor={iconBackgroundColor}
         />
         <Icon
           name={starIcon}
           color='primary-darker'
           label={starLabel}
           background
+          backgroundColor={iconBackgroundColor}
           onClick={handleFavoriteToggle}
         />
       </Box>

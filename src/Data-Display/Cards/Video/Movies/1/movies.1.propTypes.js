@@ -10,18 +10,22 @@ export const defaultProps = {
   plusLabel: 'Load More',
   starIcon: 'star/feather',
   starLabel: 'Add to watchlist',
+  iconBackgroundColor: 'primary-lighter',
   favorite: null,
   moreLinks: null,
   onPlay: () => null,
   onLoadMore: () => null,
+  onFavoriteToggle: () => null,
 }
 
 export const propTypes = {
   poster: string,
   title: string,
   overview: string,
+  iconBackgroundColor: string,
   favorite: bool,
   moreLinks: array,
   onPlay: func,
   onLoadMore: func,
+  onFavoriteToggle: func,
 }

@@ -1,12 +1,12 @@
 export default {
   primary: '#24c3a9',
   primaryDarker: '#005a34',
-  primaryBackground: '#aaffdb',
+  primaryLighter: '#aaffdb',
   primaryOpaque: 'rgba(36,195,151, 0.9)',
 
   secondary: '#6700ca',
   secondaryDarker: '#6700ca',
-  secondaryBackground: '#ebe8ff',
+  secondaryLighter: '#ebe8ff',
   secondaryOpaque: 'rgba(103,0,202, 0.9)',
 
   disabledForeground: '#828282',

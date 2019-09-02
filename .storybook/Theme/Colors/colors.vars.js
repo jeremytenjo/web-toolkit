@@ -3,11 +3,11 @@ import colors from './colors.index'
 const {
   primary,
   primaryDarker,
-  primaryBackground,
+  primaryLighter,
   primaryOpaque,
   secondary,
   secondaryDarker,
-  secondaryBackground,
+  secondaryLighter,
   disabledForeground,
   disabledBackground,
   lightgrey,
@@ -30,12 +30,12 @@ export default `
 :root {
   --color-primary: ${primary};
   --color-primary-darker: ${primaryDarker};
-  --color-primary-background: ${primaryBackground};
+  --color-primary-lighter: ${primaryLighter};
   --color-primary-opaque: ${primaryOpaque};
 
   --color-secondary: ${secondary};
   --color-secondary-darker: ${secondaryDarker};
-  --color-secondary-background: ${secondaryBackground};
+  --color-secondary-lighter: ${secondaryLighter};
 
   --color-disabled-darker: ${disabledForeground};
   --color-disabled-background: ${disabledBackground};

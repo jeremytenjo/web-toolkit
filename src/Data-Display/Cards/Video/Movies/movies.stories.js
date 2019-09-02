@@ -16,6 +16,7 @@ const favorite = null
 const moreLinks = null
 const onLoadMore = () => console.log('load more')
 const onPlay = () => console.log('onPlay')
+const onFavoriteToggle = () => console.log('onFavoriteToggle')
 
 const Styles = () => {
   const [vars, setvars] = useState([])
@@ -38,6 +39,7 @@ const Styles = () => {
               moreLinks={moreLinks}
               onLoadMore={onLoadMore}
               onPlay={onPlay}
+              onFavoriteToggle={onFavoriteToggle}
             />
           </B>
         </>

@@ -47,7 +47,7 @@ export const States = ({ TextField }) => {
       <B title='all color' noBackground>
         <TextField
           placeholder={placeholder}
-          backgroundColor='primary-background'
+          backgroundColor='primary-lighter'
           textColor='primary-darker'
           foregroundColor='primary-darker'
         />
