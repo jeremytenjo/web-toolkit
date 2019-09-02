@@ -14,6 +14,7 @@ const CardMovie1 = ({
   favorite,
   moreLinks,
   onLoadMore,
+  onFavoriteToggle,
   onPlay,
   playIcon,
   plusIcon,
@@ -25,6 +26,7 @@ const CardMovie1 = ({
 }) => {
   const handleOnPlay = () => onPlay(rest)
   const handleLoadMore = () => onLoadMore(rest)
+  const handleFavoriteToggle = () => onFavoriteToggle(rest)
   return (
     <Box backgroundColor='white' borderRadius='20px'>
       <Poster src={poster} />
@@ -51,6 +53,7 @@ const CardMovie1 = ({
           color='primary-darker'
           label={starLabel}
           background
+          onClick={handleFavoriteToggle}
         />
       </Box>
     </Box>

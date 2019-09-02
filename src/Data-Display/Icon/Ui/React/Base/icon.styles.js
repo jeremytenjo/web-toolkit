@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
     label &&
     `    
   grid-gap: var(--spacing-xxs);
+  justify-items: center;
   `};
 `
 export const WrapperIcon = styled.div`
@@ -40,17 +41,7 @@ export const WrapperIcon = styled.div`
     border: 2px solid var(--color-${backgroundColor});
     }
   `}
-
-  /* noBackgroundChange */
-  ${({ background, noBackgroundChange }) =>
-    background &&
-    !noBackgroundChange &&
-    `
-    &:active {
-    background-color: transparent;
-    }
-  `}
-
+ 
   /*  No Background */
   ${({ noBackground }) =>
     noBackground &&
