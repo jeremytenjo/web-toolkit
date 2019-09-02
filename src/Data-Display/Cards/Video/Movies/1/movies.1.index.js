@@ -36,7 +36,7 @@ const CardMovie1 = ({
   return (
     <Box
       backgroundColor='white'
-      borderRadius='20px'
+      borderRadius='10px'
       gridAutoFlow='column'
       gridGap='s'
       padding='s'
