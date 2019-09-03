@@ -43,9 +43,9 @@ const CardMovie1 = ({
     >
       <Poster src={poster} size={184} />
 
-      <Box gridGap='s' padding='none'>
-        <Typography text={title} variant={titleVariant} />
-        <Typography text={overview} variant={overviewVariant} />
+      <Box gridGap='s' padding='none' alignContent='center'>
+        {title && <Typography text={title} variant={titleVariant} />}
+        {overview && <Typography text={overview} variant={overviewVariant} />}
 
         <Box
           gridAutoFlow='column'

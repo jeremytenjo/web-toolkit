@@ -1,9 +1,9 @@
 import { string, func, array, bool } from 'prop-types'
 
 export const defaultProps = {
-  poster: '',
-  title: '',
-  overview: '',
+  poster: null,
+  title: null,
+  overview: null,
   playIcon: 'play/feather',
   playLabel: 'Play',
   plusIcon: 'plus/feather',
