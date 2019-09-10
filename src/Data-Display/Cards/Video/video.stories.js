@@ -55,8 +55,8 @@ const Styles = () => {
               onPlay={onPlay}
               onFavoriteToggle={onFavoriteToggle}
               isTv
-              seasons={[{ value: 1, label: '1' }]}
-              episodes={[{ value: 1, label: '1' }]}
+              seasons={[{ value: 1, label: '1' }, { value: 2, label: '2' }]}
+              episodes={[{ value: 1, label: '1' }, { value: 2, label: '2' }]}
               onSeasonChange={(e) => console.log(e)}
               onEpisodeChange={(e) => console.log(e)}
             />

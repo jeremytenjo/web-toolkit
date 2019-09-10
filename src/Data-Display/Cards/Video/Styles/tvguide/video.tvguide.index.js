@@ -39,8 +39,6 @@ const CardMovie1 = ({
   const handleOnPlay = () => onPlay(rest)
   const handleLoadMore = () => onLoadMore(rest)
   const handleFavoriteToggle = () => onFavoriteToggle(rest)
-  const handleSeasonChange = () => onSeasonChange()
-  const handleEpisodeChange = () => onEpisodeChange()
 
   return (
     <Box
@@ -69,7 +67,7 @@ const CardMovie1 = ({
                 data={seasons}
                 backgroundColor='primary-lighter'
                 title='Season'
-                onChange={handleSeasonChange}
+                onChange={onSeasonChange}
                 titleColor='primary-darker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
@@ -78,7 +76,7 @@ const CardMovie1 = ({
                 data={episodes}
                 backgroundColor='primary-lighter'
                 title='Episode'
-                onChange={handleEpisodeChange}
+                onChange={onEpisodeChange}
                 titleColor='primary-darker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
