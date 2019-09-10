@@ -34,6 +34,7 @@ const Icon = ({
   noBackgroundChange,
   outlined,
   labelVariant,
+  labelColor,
   link,
   inputProps,
   router,
@@ -89,7 +90,11 @@ const Icon = ({
             {IconComp}
           </WrapperIcon>
           {label && (
-            <Typogrgraphy color={color} variant={labelVariant} text={label} />
+            <Typogrgraphy
+              color={labelColor}
+              variant={labelVariant}
+              text={label}
+            />
           )}
         </Wrapper>
       </WrappingComp>
