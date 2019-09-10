@@ -14,7 +14,7 @@ const Select = ({
 }) => {
   const selectRef = useRef(null)
   const [selectedValue, setselectedValue] = useState(
-    initialValue || data[0][valueKey],
+    initialValue || data.length > 0 ? data[0][valueKey] : 0,
   )
   const handleChange = () => {
     const newValue = selectRef.current.value

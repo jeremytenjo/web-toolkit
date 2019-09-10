@@ -1,11 +1,12 @@
 import React, { memo } from 'react'
 
-import Box from '../../../../../Box/Ui/React/box.index'
-import Poster from '../../../../Poster/Ui/React/Styles/1/poster.1.index'
-import Typography from '../../../../../Typography/Ui/React/typography.index'
-import Icon from '../../../../../Icon/Ui/React/Base/icon.index'
+import Box from '../../../../Box/Ui/React/box.index'
+import Poster from '../../../Poster/Ui/React/Styles/1/poster.1.index'
+import Typography from '../../../../Typography/Ui/React/typography.index'
+import Icon from '../../../../Icon/Ui/React/Base/icon.index'
+import Select from '../../../../../Input/Form/Select/Ui/React/Styles/tvguide/select.tvguide.index'
 
-import { defaultProps, propTypes } from './movies.tvguide.propTypes'
+import { defaultProps, propTypes } from './video.tvguide.propTypes'
 
 const CardMovie1 = ({
   poster,
@@ -25,6 +26,11 @@ const CardMovie1 = ({
   iconBackgroundColor,
   titleVariant,
   overviewVariant,
+  isTv,
+  seasons,
+  episodes,
+  onSeasonChange,
+  onEpisodeChange,
   ...rest
 }) => {
   const favIcon = favorite ? `${starIcon}-filled` : starIcon
@@ -33,6 +39,9 @@ const CardMovie1 = ({
   const handleOnPlay = () => onPlay(rest)
   const handleLoadMore = () => onLoadMore(rest)
   const handleFavoriteToggle = () => onFavoriteToggle(rest)
+  const handleSeasonChange = () => onSeasonChange()
+  const handleEpisodeChange = () => onEpisodeChange()
+
   return (
     <Box
       backgroundColor='white'
@@ -54,14 +63,34 @@ const CardMovie1 = ({
           justify-items='center'
           align-items='start'
         >
-          <Icon
-            name={plusIcon}
-            color='primary-darker'
-            label={plusLabel}
-            onClick={handleLoadMore}
-            background
-            backgroundColor={iconBackgroundColor}
-          />
+          {isTv && (
+            <>
+              <Select
+                data={seasons}
+                backgroundColor='primary-lighter'
+                title='season'
+                onChange={handleSeasonChange}
+                fontColor='primary-darker'
+              />
+              <Select
+                data={episodes}
+                backgroundColor='primary-lighter'
+                title='Episode'
+                onChange={handleEpisodeChange}
+                fontColor='primary-darker'
+              />
+            </>
+          )}
+          {!isTv && (
+            <Icon
+              name={plusIcon}
+              color='primary-darker'
+              label={plusLabel}
+              onClick={handleLoadMore}
+              background
+              backgroundColor={iconBackgroundColor}
+            />
+          )}
 
           <Icon
             name={playIcon}

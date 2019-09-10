@@ -14,7 +14,7 @@ const Item = ({
   title,
 }) => {
   return (
-    <Box justifyItems='center' gridGap={title && 's'}>
+    <Box justifyItems='center' gridGap={title && 'xxs'}>
       <Box
         size={43}
         backgroundColor={backgroundColor}
@@ -26,7 +26,7 @@ const Item = ({
         {label}
       </Box>
 
-      {title && <Typogrgraphy text={title} color={fontColor} />}
+      {title && <Typogrgraphy text={title} variant='body2' color={fontColor} />}
     </Box>
   )
 }

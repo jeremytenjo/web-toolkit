@@ -17,9 +17,13 @@ export const defaultProps = {
   overviewVariant: 'body2',
   favorite: null,
   moreLinks: null,
+  seasons: [],
+  episodes: [],
   onPlay: () => null,
   onLoadMore: () => null,
   onFavoriteToggle: () => null,
+  onSeasonChange: () => null,
+  onEpisodeChange: () => null,
 }
 
 export const propTypes = {

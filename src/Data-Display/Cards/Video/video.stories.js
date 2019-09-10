@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Box from '../../../Box/Ui/React/box.index'
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Box from '../../Box/Ui/React/box.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 const req = require.context('./', true, /index.js$/)
 const paths = req.keys()
 
 const poster =
   'http://cdn.collider.com/wp-content/uploads/2017/03/guardians-of-the-galaxy-2-imax-poster.jpg'
-const title = 'Guardians of the Galaxy'
+const titleTest = 'Guardians of the Galaxy'
 const overview =
   'The misadventures of a group of friends as they navigate the pitfalls of work, life and love in Manhattan.'
 const favorite = null
@@ -35,7 +35,7 @@ const Styles = () => {
           <B title={title} key={Math.random()} noBackground>
             <Mod
               poster={poster}
-              title={title}
+              title={titleTest}
               overview={overview}
               favorite={favorite}
               moreLinks={moreLinks}
@@ -47,7 +47,7 @@ const Styles = () => {
           <B title={`${title} - isTv`} key={Math.random()} noBackground>
             <Mod
               poster={poster}
-              title={title}
+              title={titleTest}
               overview={overview}
               favorite={favorite}
               moreLinks={moreLinks}
