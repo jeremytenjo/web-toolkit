@@ -10,6 +10,7 @@ export const defaultProps = {
   label: null,
   font: 'primary',
   backgroundColor: 'primary',
+  labelVariant: 'body2',
   noBackground: null,
   dark: null,
   noBackgroundChange: null,

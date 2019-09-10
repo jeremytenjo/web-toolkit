@@ -132,14 +132,3 @@ export const WrapperIcon = styled.div`
         margin: 0 auto;
         `}
 `
-
-export const Label = styled.div`
-  font-weight: normal;
-  font-size: 12px;
-  text-align: center;
-
-  ${({ color, font }) => ` 
-  color: var(--color-${color}); 
-  font-family: var(--font-${font}); 
-  `}
-`

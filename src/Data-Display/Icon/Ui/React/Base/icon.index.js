@@ -7,12 +7,17 @@ import React, {
   Suspense,
 } from 'react'
 
-import { WrapperIcon, Wrapper, Label } from './icon.styles'
+import { WrapperIcon, Wrapper } from './icon.styles'
 import { defaultProps, propTypes } from './icon.propTypes'
 
 const FileInput = lazy(() =>
   import(
     /* webpackChunkName: 'ButtonIcon' */ '../../../../../Media/Files/Ui/React/fileInput.index'
+  ),
+)
+const Typogrgraphy = lazy(() =>
+  import(
+    /* webpackChunkName: 'ButtonIcon' */ '../../../../Typography/Ui/React/typography.index'
   ),
 )
 
@@ -28,7 +33,7 @@ const Icon = ({
   dark,
   noBackgroundChange,
   outlined,
-  font,
+  labelVariant,
   link,
   inputProps,
   router,
@@ -84,9 +89,7 @@ const Icon = ({
             {IconComp}
           </WrapperIcon>
           {label && (
-            <Label color={color} font={font}>
-              {label}
-            </Label>
+            <Typogrgraphy color={color} variant={labelVariant} text={label} />
           )}
         </Wrapper>
       </WrappingComp>
