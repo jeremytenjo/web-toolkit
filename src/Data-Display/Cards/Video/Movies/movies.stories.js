@@ -28,9 +28,11 @@ const Styles = () => {
     const Elements = paths.map(async (location, i) => {
       let Mod = await import(`${location}`)
       Mod = Mod.default
+      const title = location.split('.')[2]
+
       return (
         <>
-          <B title={i + 1} key={Math.random()} noBackground>
+          <B title={title} key={Math.random()} noBackground>
             <Mod
               poster={poster}
               title={title}
@@ -42,12 +44,25 @@ const Styles = () => {
               onFavoriteToggle={onFavoriteToggle}
             />
           </B>
+          <B title={`${title} - isTv`} key={Math.random()} noBackground>
+            <Mod
+              poster={poster}
+              title={title}
+              overview={overview}
+              favorite={favorite}
+              moreLinks={moreLinks}
+              onLoadMore={onLoadMore}
+              onPlay={onPlay}
+              onFavoriteToggle={onFavoriteToggle}
+              isTv
+            />
+          </B>
         </>
       )
     })
     setvars(await Promise.all(Elements))
   }
-  return <Box gridAutoFlow='column'>{vars}</Box>
+  return <Box gridAutoFlow='row'>{vars}</Box>
 }
 
 storiesOf('Data-Display|Cards/Movies', module).add('variations', () => (

@@ -1,11 +1,11 @@
 import React, { memo } from 'react'
 
-import Box from '../../../../Box/Ui/React/box.index'
-import Poster from '../../../Poster/Ui/React/Styles/1/poster.1.index'
-import Typography from '../../../../Typography/Ui/React/typography.index'
-import Icon from '../../../../Icon/Ui/React/Base/icon.index'
+import Box from '../../../../../Box/Ui/React/box.index'
+import Poster from '../../../../Poster/Ui/React/Styles/1/poster.1.index'
+import Typography from '../../../../../Typography/Ui/React/typography.index'
+import Icon from '../../../../../Icon/Ui/React/Base/icon.index'
 
-import { defaultProps, propTypes } from './movies.1.propTypes'
+import { defaultProps, propTypes } from './movies.tvguide.propTypes'
 
 const CardMovie1 = ({
   poster,
