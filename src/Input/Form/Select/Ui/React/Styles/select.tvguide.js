@@ -1,13 +1,18 @@
 import React, { memo } from 'react'
 
-import Box from '../../../../../../../Data-Display/Box/Ui/React/box.index'
-import SelectBase from '../../Base/select.index'
+import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
+import SelectBase from '../Base/select.index'
 
-const Item = ({ label }) => {
+const Item = ({
+  label,
+  backgroundColor = 'primary',
+  foregroundColor = 'primary-darker',
+}) => {
   return (
     <Box
       size={43}
-      backgroundColor='primary'
+      backgroundColor={backgroundColor}
+      color={foregroundColor}
       borderRadius='100px'
       justifyItems='center'
       alignItems='center'
