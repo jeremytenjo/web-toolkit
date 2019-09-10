@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import Box from '../../../../../Data-Display/Box/Ui/React/box.index'
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
-const req = require.context('./Styles', true, /.js$/)
+const req = require.context('./Styles', true, /index.js$/)
 const paths = req.keys()
 
 const data = [{ value: 1, label: '1' }, { value: 2, label: '2' }]

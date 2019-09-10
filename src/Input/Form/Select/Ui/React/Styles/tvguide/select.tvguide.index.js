@@ -1,15 +1,17 @@
 import React, { memo } from 'react'
 
-import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
-import Typogrgraphy from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
-import SelectBase from '../Base/select.index'
+import Box from '../../../../../../../Data-Display/Box/Ui/React/box.index'
+import Typogrgraphy from '../../../../../../../Data-Display/Typography/Ui/React/typography.index'
+import SelectBase from '../../Base/select.index'
+
+import { defaultProps, propTypes } from './select.tvguide.propTypes'
 
 const Item = ({
   label,
-  backgroundColor = 'primary',
-  foregroundColor = 'primary-darker',
-  fontColor = 'black',
-  title = null,
+  backgroundColor,
+  foregroundColor,
+  fontColor,
+  title,
 }) => {
   return (
     <Box justifyItems='center' gridGap={title && 's'}>
@@ -28,6 +30,9 @@ const Item = ({
     </Box>
   )
 }
+
+Item.defaultProps = defaultProps
+Item.propTypes = propTypes
 
 const SelectTVGuide = ({ data, title }) => {
   return <SelectBase data={data} title={title} Item={Item} />
