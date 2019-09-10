@@ -5,6 +5,7 @@ export const defaultProps = {
   display: 'grid',
   children: null,
   padding: 'xs',
+  size: null,
   mediaQueries: [600, 900],
 }
 

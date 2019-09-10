@@ -4,6 +4,13 @@ import withMediaQueries from '../../../../Theme/MediaQuery/WithMediaQueries/with
 
 export const Wrapper = styled.div`
   ${({ mediaQueries, ...styles }) => withMediaQueries({ styles, mediaQueries })}
+  ${({ size }) =>
+    size &&
+    `
+  width: ${size}px;
+  height: ${size}px;
+  `}
+
   ${({ fullscreen }) =>
     fullscreen &&
     `
