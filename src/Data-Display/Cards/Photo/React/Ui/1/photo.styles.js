@@ -22,7 +22,7 @@ export const TopRow = {
   left: 0,
   right: 0,
   overflow: 'hidden',
-  position: ['absolute', 'relative'],
+  position: 'absolute',
   top: 0,
   zIndex: 1,
   gridAutoFlow: 'column',
