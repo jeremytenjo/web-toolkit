@@ -7,6 +7,7 @@ import Menu from '../../../../../../Input/Menu/menu.index'
 import Donut from '../../../../../../Feedback/Progress/Ui/React/Donut/donut.index'
 import Chip from '../../../../../Chip/Ui/React/chip.index'
 import LikeButton from '../../../../../Icon/Ui/React/Special/Like/like.index'
+import Box from '../../../../../Box/Ui/React/box.index'
 
 import {
   Wrapper,
@@ -38,12 +39,12 @@ const CardPhoto = ({
   //Template
   return (
     <Wrapper style={style}>
-      <TopRow>
+      <Box {...TopRow}>
         <IconBack to={goBackUrl} onGoBack={goBack} />
         {menuOptions.length > 0 && (
           <Menu options={menuOptions} onSelect={onMenuOptionSelect} />
         )}
-      </TopRow>
+      </Box>
       <ImageCon>
         {photoUrl ? (
           <Image src={photoUrl} cursor='default' position='top' width='100%' />

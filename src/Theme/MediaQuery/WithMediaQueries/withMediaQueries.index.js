@@ -24,7 +24,10 @@ export default ({ styles, mediaQueries }) => {
 
   for (let [key, value] of Object.entries(styles)) {
     const hasMediaQueries = Array.isArray(value) && key !== 'children'
-    const singleValue = typeof value === 'string'
+    const singleValue = !Array.isArray(value)
+    const isNumber = typeof value === 'number'
+    const formatValue = isNumber ? value.toString() : value
+
     if (hasMediaQueries) {
       value.map((val, index) => {
         string +=
@@ -37,7 +40,7 @@ export default ({ styles, mediaQueries }) => {
         `
       })
     } else if (singleValue)
-      string += `${decamelize(key, '-')}: ${getCssVar(key, value)};`
+      string += `${decamelize(key, '-')}: ${getCssVar(key, formatValue)};`
   }
   return string
 }

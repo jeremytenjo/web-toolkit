@@ -16,17 +16,17 @@ export const Wrapper = styled.div`
   }
 `
 
-export const TopRow = styled.div`
-  padding: var(--spacing-s);
-  display: flex;
-  justify-content: space-between;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-`
+export const TopRow = {
+  padding: 's',
+  justifyContent: 'space-between',
+  left: 0,
+  right: 0,
+  overflow: 'hidden',
+  position: ['absolute', 'relative'],
+  top: 0,
+  zIndex: 1,
+  gridAutoFlow: 'column',
+}
 
 export const ImageCon = styled.div`
   overflow: auto;
