@@ -9,10 +9,10 @@ const Item = ({
   backgroundColor = 'primary',
   foregroundColor = 'primary-darker',
   fontColor = 'black',
-  title = 'seasons',
+  title = null,
 }) => {
   return (
-    <Box justifyItems='center' gridGap='s'>
+    <Box justifyItems='center' gridGap={title && 's'}>
       <Box
         size={43}
         backgroundColor={backgroundColor}
@@ -24,13 +24,13 @@ const Item = ({
         {label}
       </Box>
 
-      <Typogrgraphy text={title} color={fontColor} />
+      {title && <Typogrgraphy text={title} color={fontColor} />}
     </Box>
   )
 }
 
-const SelectTVGuide = ({ data }) => {
-  return <SelectBase data={data} Item={Item} />
+const SelectTVGuide = ({ data, title }) => {
+  return <SelectBase data={data} title={title} Item={Item} />
 }
 
 export default memo(SelectTVGuide)

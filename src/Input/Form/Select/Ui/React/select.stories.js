@@ -25,6 +25,9 @@ const Styles = () => {
           <B title={title} key={i} noBackground>
             <Mod data={data} />
           </B>
+          <B title={`${title} - with title`} key={i} noBackground>
+            <Mod data={data} title='seasons' />
+          </B>
         </>
       )
     })

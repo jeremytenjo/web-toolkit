@@ -3,7 +3,15 @@ import React, { memo, Fragment, useState, useRef } from 'react'
 import { defaultProps, propTypes } from './select.propTypes'
 import { Wrapper, SelectStyle } from './select.styles'
 
-const Select = ({ data, initialValue, valueKey, labelKey, Item, onChange }) => {
+const Select = ({
+  data,
+  initialValue,
+  valueKey,
+  labelKey,
+  Item,
+  onChange,
+  title,
+}) => {
   const selectRef = useRef(null)
   const [selectedValue, setselectedValue] = useState(
     initialValue || data[0][valueKey],
@@ -23,7 +31,7 @@ const Select = ({ data, initialValue, valueKey, labelKey, Item, onChange }) => {
           </Fragment>
         ))}
       </select>
-      <Item label={selectedValue} />
+      <Item label={selectedValue} title={title} />
     </div>
   )
 }
