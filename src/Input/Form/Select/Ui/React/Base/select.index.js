@@ -10,7 +10,7 @@ const Select = ({
   labelKey,
   Item,
   onChange,
-  title,
+  ...itemProps
 }) => {
   const selectRef = useRef(null)
   const [selectedValue, setselectedValue] = useState(
@@ -31,7 +31,7 @@ const Select = ({
           </Fragment>
         ))}
       </select>
-      <Item label={selectedValue} title={title} />
+      <Item label={selectedValue} {...itemProps} />
     </div>
   )
 }

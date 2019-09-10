@@ -4,7 +4,8 @@ export const defaultProps = {
   label: null,
   backgroundColor: 'primary',
   foregroundColor: 'primary-darker',
-  fontColor: 'black',
+  titleColor: 'black',
+  titleVariant: 'body2',
   title: null,
 }
 
@@ -12,6 +13,6 @@ export const propTypes = {
   label: string,
   backgroundColor: string,
   foregroundColor: string,
-  fontColor: string,
+  titleColor: string,
   title: string,
 }

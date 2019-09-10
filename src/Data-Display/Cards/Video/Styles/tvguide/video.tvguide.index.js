@@ -68,16 +68,20 @@ const CardMovie1 = ({
               <Select
                 data={seasons}
                 backgroundColor='primary-lighter'
-                title='season'
+                title='Season'
                 onChange={handleSeasonChange}
-                fontColor='primary-darker'
+                titleColor='primary-darker'
+                wrapperStyles={{ padding: 'none' }}
+                size={45}
               />
               <Select
                 data={episodes}
                 backgroundColor='primary-lighter'
                 title='Episode'
                 onChange={handleEpisodeChange}
-                fontColor='primary-darker'
+                titleColor='primary-darker'
+                wrapperStyles={{ padding: 'none' }}
+                size={45}
               />
             </>
           )}

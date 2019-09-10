@@ -10,11 +10,14 @@ const Item = ({
   label,
   backgroundColor,
   foregroundColor,
-  fontColor,
+  titleColor,
+  titleVariant,
   title,
+  wrapperStyles,
+  ...styles
 }) => {
   return (
-    <Box justifyItems='center' gridGap={title && 'xxs'}>
+    <Box justifyItems='center' gridGap={title && 'xxs'} {...wrapperStyles}>
       <Box
         size={43}
         backgroundColor={backgroundColor}
@@ -22,11 +25,14 @@ const Item = ({
         borderRadius='100px'
         justifyItems='center'
         alignItems='center'
+        {...styles}
       >
         {label}
       </Box>
 
-      {title && <Typogrgraphy text={title} variant='body2' color={fontColor} />}
+      {title && (
+        <Typogrgraphy text={title} variant={titleVariant} color={titleColor} />
+      )}
     </Box>
   )
 }
@@ -34,8 +40,8 @@ const Item = ({
 Item.defaultProps = defaultProps
 Item.propTypes = propTypes
 
-const SelectTVGuide = ({ data, title }) => {
-  return <SelectBase data={data} title={title} Item={Item} />
+const SelectTVGuide = ({ data, ...rest }) => {
+  return <SelectBase data={data} Item={Item} {...rest} />
 }
 
 export default memo(SelectTVGuide)
