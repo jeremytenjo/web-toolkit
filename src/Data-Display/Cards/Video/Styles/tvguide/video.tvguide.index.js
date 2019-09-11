@@ -31,6 +31,7 @@ const CardMovie1 = ({
   episodes,
   onSeasonChange,
   onEpisodeChange,
+  selectProps,
   ...rest
 }) => {
   const favIcon = favorite ? `${starIcon}-filled` : starIcon
@@ -71,6 +72,7 @@ const CardMovie1 = ({
                 titleColor='primary-darker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
+                selectProps={selectProps}
               />
               <Select
                 data={episodes}
@@ -80,6 +82,7 @@ const CardMovie1 = ({
                 titleColor='primary-darker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
+                selectProps={selectProps}
               />
             </>
           )}
