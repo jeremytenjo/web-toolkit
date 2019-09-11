@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 
 const StyledButton = styled.button`
   /* Base */
-  background-color: ${({ color }) => `var(--color-${color}-background)`};
+  background-color: ${({ color }) => `var(--color-${color}-lighter)`};
   border-radius: 100px;
   cursor: pointer;
   padding: 0 var(--spacing-s);
@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   text-align: center;
   transition: 0.2s ease-in-out;
   height: 40px;  
-  border: 2px solid ${({ color }) => `var(--color-${color}-background)`};
+  border: 2px solid ${({ color }) => `var(--color-${color}-lighter)`};
   user-select: none;
   box-sizing: content-box;
   &:focus {outline:0;}
@@ -37,10 +37,10 @@ const StyledButton = styled.button`
   ${({ disabled }) =>
     disabled &&
     `
-  background-color: var(--color-disabled-background);
-  border: 2px solid var(--color-disabled-background);
+  background-color: var(--color-disabled-lighter);
+  border: 2px solid var(--color-disabled-lighter);
   &:active {
-    border: 2px solid var(--color-disabled-background);
+    border: 2px solid var(--color-disabled-lighter);
   }`}
 
   /* Outlined */
