@@ -26,10 +26,11 @@ const Select = ({
     <div style={Wrapper}>
       <select style={SelectStyle} ref={selectRef} onChange={handleChange}>
         {data.map((item, index) => {
+          const value = valueKey === 'index' ? index + 1 : item[valueKey]
           const label = labelKey === 'index' ? index + 1 : item[labelKey]
           return (
             <Fragment key={index}>
-              <option value={item[valueKey]}>{label}</option>
+              <option value={value}>{label}</option>
             </Fragment>
           )
         })}
