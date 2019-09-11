@@ -22,11 +22,14 @@ const Styles = () => {
 
       return (
         <>
-          <B title={title} key={i} noBackground>
+          <B title={title} key={i} background>
             <Mod data={data} />
           </B>
-          <B title={`${title} - with title`} key={i} noBackground>
+          <B title={`${title} - with title`} key={i} background>
             <Mod data={data} title='seasons' />
+          </B>
+          <B title={`${title} - with labelKey === index`} key={i} background>
+            <Mod data={data} title='seasons' labelKey='index' />
           </B>
         </>
       )
