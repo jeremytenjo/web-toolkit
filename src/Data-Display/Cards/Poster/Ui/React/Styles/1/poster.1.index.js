@@ -41,7 +41,7 @@ const Poster1 = ({
       src={src}
       backgroundColor={backgroundColor}
       ref={wrapperRef}
-      loading={loading}
+      isLoading={loading}
     >
       {src && <Image src={src} width={width} height={height} alt={alt} />}
       {!src && (

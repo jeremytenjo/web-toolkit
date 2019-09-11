@@ -4,8 +4,8 @@ export const Wrapper = styled.div`
   position: relative;
 
   /* No src */
-  ${({ src, backgroundColor, loading }) =>
-    (!src || loading) &&
+  ${({ src, backgroundColor, isLoading }) =>
+    (!src || isLoading) &&
     `
     display: flex !important;
     align-items: center;
