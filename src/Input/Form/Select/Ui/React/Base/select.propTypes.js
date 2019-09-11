@@ -1,4 +1,4 @@
-import { string, func, array } from 'prop-types'
+import { string, func, array, oneOfType, number } from 'prop-types'
 
 export const defaultProps = {
   data: [],
@@ -12,6 +12,6 @@ export const propTypes = {
   data: array,
   valueKey: string,
   labelKey: string,
-  initialValue: string,
+  initialValue: oneOfType([string, number]),
   onChange: func,
 }
