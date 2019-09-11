@@ -1,5 +1,5 @@
 // Keyframes should be set before used in animate()
-export default ({ el, config, show }) => {
+export default ({ el, config, show, direction = 'bottomUp' }) => {
   const LOWEST_POINT = '0'
   const HEIGHEST_POINT = '-80px'
   const configEnd = {
@@ -34,6 +34,14 @@ export default ({ el, config, show }) => {
 
   el.style.display = 'block'
   el.style.position = 'fixed'
+
+  if (direction === 'bottomUp') {
+    el.style.right = 0
+    el.style.bottom = 0
+    el.style.left = 0
+    el.style.margin = '0 auto'
+  }
+
   el.animate(keyframesStart, config)
   const anim = el.animate(keyframesEnd, configEnd)
   anim.onfinish = () => {
