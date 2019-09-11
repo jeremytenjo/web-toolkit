@@ -60,7 +60,7 @@ const CardMovie1 = ({
         <Box
           gridAutoFlow='column'
           justifyContent='space-between'
-          grid-template-columns='60px 60px 60px'
+          grid-auto-columns='60px'
           justify-items='center'
           align-items='start'
         >
