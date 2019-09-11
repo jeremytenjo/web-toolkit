@@ -1,4 +1,4 @@
-import { string } from 'prop-types'
+import { string, oneOfType, number } from 'prop-types'
 
 export const defaultProps = {
   label: null,
@@ -10,7 +10,7 @@ export const defaultProps = {
 }
 
 export const propTypes = {
-  label: string,
+  label: oneOfType([string, number]),
   backgroundColor: string,
   foregroundColor: string,
   titleColor: string,

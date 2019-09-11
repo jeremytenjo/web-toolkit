@@ -72,7 +72,7 @@ const CardMovie1 = ({
                 titleColor='primary-darker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
-                selectProps={selectProps}
+                {...selectProps}
               />
               <Select
                 data={episodes}
@@ -82,7 +82,7 @@ const CardMovie1 = ({
                 titleColor='primary-darker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
-                selectProps={selectProps}
+                {...selectProps}
               />
             </>
           )}
