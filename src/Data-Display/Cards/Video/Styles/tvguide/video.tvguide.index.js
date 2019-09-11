@@ -41,8 +41,6 @@ const CardMovie1 = ({
   const handleLoadMore = () => onLoadMore(rest)
   const handleFavoriteToggle = () => onFavoriteToggle(rest)
 
-  console.log(selectProps)
-
   return (
     <Box
       backgroundColor='white'
