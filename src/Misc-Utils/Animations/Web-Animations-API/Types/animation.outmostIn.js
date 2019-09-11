@@ -33,6 +33,7 @@ export default ({ el, config, show }) => {
   ]
 
   el.style.display = 'block'
+  el.style.position = 'fixed'
   el.animate(keyframesStart, config)
   const anim = el.animate(keyframesEnd, configEnd)
   anim.onfinish = () => {
