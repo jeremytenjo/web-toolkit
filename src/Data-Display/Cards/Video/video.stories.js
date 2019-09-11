@@ -59,6 +59,9 @@ const Styles = () => {
               episodes={[{ value: 1, label: '1' }, { value: 2, label: '2' }]}
               onSeasonChange={(e) => console.log(e)}
               onEpisodeChange={(e) => console.log(e)}
+              selectProps={{
+                initialValue: 1,
+              }}
             />
           </B>
         </>
@@ -69,6 +72,6 @@ const Styles = () => {
   return <Box gridAutoFlow='row'>{vars}</Box>
 }
 
-storiesOf('Data-Display|Cards/Movies', module).add('variations', () => (
+storiesOf('Data-Display|Cards/Video', module).add('variations', () => (
   <Styles />
 ))

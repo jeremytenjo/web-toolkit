@@ -12,14 +12,20 @@ const Select = ({
   onChange,
   ...itemProps
 }) => {
+  const selectedValueDefault = initialValue
+    ? initialValue
+    : data.length > 0 && valueKey === 'index'
+    ? 1
+    : data[0][valueKey] || 0
   const selectRef = useRef(null)
-  const [selectedValue, setselectedValue] = useState(
-    initialValue || data.length > 0 ? data[0][valueKey] : 0,
-  )
+  const [selectedValue, setselectedValue] = useState(selectedValueDefault)
+
   const handleChange = () => {
-    const newValue = selectRef.current.value
-    setselectedValue(newValue)
-    onChange(newValue)
+    const {
+      current: { value },
+    } = selectRef
+    setselectedValue(value)
+    onChange(value)
   }
 
   return (
