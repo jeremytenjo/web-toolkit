@@ -45,7 +45,9 @@ const CardMovie1 = ({
     <Box
       backgroundColor='white'
       borderRadius='10px'
-      gridAutoFlow='column'
+      gridAutoFlow={isTv ? 'row' : 'column'}
+      justifyItems='center'
+      textAlign={isTv ? 'center' : 'left'}
       gridGap='s'
       padding='s'
     >
