@@ -17,6 +17,7 @@ const NavBar = ({
   position,
   shadow,
   onSearchSubmit,
+  labelVariant,
   mediaQueries,
   ...otherSyles
 }) => {
@@ -64,6 +65,11 @@ const NavBar = ({
             const key = label || currentUrl || icon || index
             const isPlain = iconStyles.plain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
+            const _color = iconStyles.color
+              ? iconStyles.color
+              : isActive
+              ? color
+              : 'grey'
 
             const handleClick = () => {
               url && history.push(`/${url}`)
@@ -81,13 +87,9 @@ const NavBar = ({
                   <Icon
                     name={icon}
                     label={label}
-                    color={
-                      iconStyles.color
-                        ? iconStyles.color
-                        : isActive
-                        ? color
-                        : 'grey'
-                    }
+                    color={_color}
+                    labelColor={_color}
+                    labelVariant={labelVariant}
                     size={iconStyles.size}
                     background={!!iconStyles.backgroundColor}
                     backgroundColor={iconStyles.backgroundColor}
