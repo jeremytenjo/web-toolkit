@@ -27,7 +27,7 @@ const Item = ({
         alignItems='center'
         {...styles}
       >
-        {label}
+        <Typogrgraphy text={label} variant={titleVariant} />
       </Box>
 
       {title && (
