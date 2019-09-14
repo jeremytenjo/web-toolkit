@@ -1,11 +1,13 @@
 {
   "name": "@tenjojeremy/web-toolkit",
-  "version": "4.76.0",
+  "version": "4.77.0",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && rmdir /s /q build && gpush",
@@ -34,8 +36,7 @@
       "yarn lint:fix",
       "yarn pretty",
       "prettier --list-different",
-      "jest --passWithNoTests",
-      "yarn cy:run"
+      "jest --passWithNoTests"
     ]
   },
   "dependencies": {
