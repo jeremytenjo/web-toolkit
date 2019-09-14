@@ -32,6 +32,7 @@ const CardMovie1 = ({
   onSeasonChange,
   onEpisodeChange,
   selectProps,
+  posterAlt,
   ...rest
 }) => {
   const favIcon = favorite ? `${starIcon}-filled` : starIcon
@@ -51,7 +52,7 @@ const CardMovie1 = ({
       gridGap='s'
       padding='s'
     >
-      <Poster src={poster} size={184} />
+      <Poster src={poster} size={184} alt={posterAlt} />
 
       <Box gridGap='s' padding='none' alignContent='center'>
         {title && <Typography text={title} variant={titleVariant} />}

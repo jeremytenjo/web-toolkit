@@ -15,6 +15,7 @@ export const defaultProps = {
   iconBackgroundColor: 'primary-lighter',
   titleVariant: 'h6',
   overviewVariant: 'body2',
+  posterAlt: 'poster',
   favorite: null,
   moreLinks: null,
   seasons: [],
@@ -28,6 +29,7 @@ export const defaultProps = {
 
 export const propTypes = {
   poster: string,
+  posterAlt: string,
   title: string,
   overview: string,
   iconBackgroundColor: string,
