@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react'
-import getDaysInMonth from 'date-fns/get_days_in_month'
-import isSameDay from 'date-fns/is_same_day'
+import getDaysInMonth from 'date-fns/getDaysInMonth'
+import isSameDay from 'date-fns/isSameDay'
 
 import daysList from '../Utils/daysList'
 import monthList from '../Utils/monthList'
