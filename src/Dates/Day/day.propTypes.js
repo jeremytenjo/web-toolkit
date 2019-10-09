@@ -16,7 +16,7 @@ export const defaultProps = {
 export const propTypes = {
   number: number,
   isCurrentDay: bool,
-  active: bool,
+  isActive: bool,
   acceptedColor: string,
   pendingColor: string,
   rejectedColor: string,
