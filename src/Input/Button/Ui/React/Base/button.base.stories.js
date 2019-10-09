@@ -3,7 +3,12 @@ import React, { useState, useEffect } from 'react'
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Button1 from '../Styles/button.1.index'
 
-export default { title: 'Input|Form/Button' }
+import Button from './button.base'
+
+export default {
+  title: 'Input|Form/Button',
+  component: Button,
+}
 
 export const Base = ({ Button = Button1 }) => {
   const [loading, setLoading] = useState(null)
