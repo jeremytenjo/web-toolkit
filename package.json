@@ -5,7 +5,9 @@
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
   "license": "MIT",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn build:library && yarn publish --minor && rmdir /s /q build && gpush",
@@ -40,6 +42,7 @@
   "dependencies": {
     "@material-ui/core": "^4.3.2",
     "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-docs": "^5.2.3",
     "decamelize": "^3.2.0",
     "node-emoji": "^1.10.0",
     "react-bottom-scroll-listener": "^3.0.0",

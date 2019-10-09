@@ -5,7 +5,7 @@ import Button1 from '../Styles/button.1.index'
 
 export default { title: 'Input|Form/Button' }
 
-const States = ({ Button }) => {
+export const Base = ({ Button = Button1 }) => {
   const [loading, setLoading] = useState(null)
   return (
     <div>
@@ -40,8 +40,6 @@ const States = ({ Button }) => {
   )
 }
 
-export const Base = () => <States Button={Button1} />
-
 export const Styles = () => {
   const stylesReq = require.context('../Styles/', true, /.js$/)
   const stylesPaths = stylesReq.keys()
@@ -62,7 +60,7 @@ export const Styles = () => {
       return (
         <>
           <B title={title} key={title} noBackground>
-            <States Button={Mod} />
+            <Base Button={Mod} />
           </B>
         </>
       )
