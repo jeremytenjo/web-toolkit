@@ -13,12 +13,6 @@ addParameters({
   viewport: ViewportOptions,
 })
 
-// Load Stories
-const req = require.context('../src', true, /\.stories\.js$/)
-function loadStories() {
-  req.keys().forEach((filename) => req(filename))
-}
-
 window.historyRouter = {
   push: () => null,
   location: {
@@ -26,4 +20,4 @@ window.historyRouter = {
   },
 }
 
-configure(loadStories, module)
+configure(require.context('../src', true, /\.stories\.js$/), module)
