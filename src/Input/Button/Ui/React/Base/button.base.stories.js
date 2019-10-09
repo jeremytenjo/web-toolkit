@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { storiesOf } from '@storybook/react'
+import React, { useState, useEffect } from 'react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import markdown from '../button.readme.md'
-import Button from '../Styles/button.1.index'
+import Button1 from '../Styles/button.1.index'
 
-export const States = ({ Button }) => {
+export default { title: 'Input|Form/Button' }
+
+const States = ({ Button }) => {
   const [loading, setLoading] = useState(null)
   return (
     <div>
@@ -40,11 +40,36 @@ export const States = ({ Button }) => {
   )
 }
 
-// Stories
-storiesOf('Input|Form/Button', module).add(
-  'Base',
-  () => <States Button={Button} />,
-  {
-    notes: { markdown },
-  },
-)
+export const Base = () => <States Button={Button1} />
+
+export const Styles = () => {
+  const stylesReq = require.context('../Styles/', true, /.js$/)
+  const stylesPaths = stylesReq.keys()
+
+  const [vars, setvars] = useState([])
+  useEffect(() => {
+    getStyles(stylesPaths)
+  }, [])
+
+  const getStyles = async (paths) => {
+    const Elements = paths.map(async (location) => {
+      let styleNumber = location.split('.')[2]
+      let title = `Style${styleNumber}`
+      let modLocation = location.substr(1)
+      let Mod = await import(`../Styles${modLocation}`)
+      Mod = Mod.default
+
+      return (
+        <>
+          <B title={title} key={title} noBackground>
+            <States Button={Mod} />
+          </B>
+        </>
+      )
+    })
+
+    setvars(await Promise.all(Elements))
+  }
+
+  return <div style={{ display: 'grid', gridAutoFlow: 'column' }}>{vars}</div>
+}
