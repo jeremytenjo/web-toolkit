@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 
-import { defaultProps, propTypes } from './appbar.canadagov.propTypes'
-import { Wrapper, Other } from './appbar.canadagov.styles'
+import { defaultProps, propTypes } from './canadagov.propTypes'
+import { Wrapper, Other } from './canadagov.styles'
 
 const AppbarCangov = () => {
   return (
