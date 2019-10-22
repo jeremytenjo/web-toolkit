@@ -9,5 +9,5 @@ hygen wt react-init-nobase --category Data-Display --name AppBar
 ### New baseless React component (Example)
 
 ```sh
-hygen wt react-new --category Data-Display --name AppBar
+hygen wt react-new --category Data-Display/AppBar --name nameofstyle
 ```
