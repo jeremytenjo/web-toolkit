@@ -1,5 +1,5 @@
 ---
-to: src/<%= category %>/<%= name %>/Ui/React/Styles/<%= h.lowercase(name) %>/<%= h.lowercase(name) %>.propTypes.js
+to: src/<%= category %>/Ui/React/Styles/<%= h.lowercase(name) %>/<%= h.lowercase(name) %>.propTypes.js
 ---
 import { string, func } from 'prop-types'
 

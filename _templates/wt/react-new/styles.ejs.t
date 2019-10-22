@@ -1,5 +1,5 @@
 ---
-to: src/<%= category %>/<%= name %>/Ui/React/Styles/<%= h.lowercase(name) %>/<%= h.lowercase(name) %>.styles.js
+to: src/<%= category %>/Ui/React/Styles/<%= h.lowercase(name) %>/<%= h.lowercase(name) %>.styles.js
 ---
 import styled from 'styled-components'
 
