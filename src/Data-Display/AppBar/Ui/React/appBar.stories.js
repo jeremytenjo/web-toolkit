@@ -17,8 +17,8 @@ const StylesList = () => {
   }, [])
 
   const getStyles = async (paths) => {
-    const Elements = paths.map(async (location, i) => {
-      let styleName = location.split('.')[1]
+    const Elements = paths.map(async (location) => {
+      let styleName = location.split('/')[2].split('.')[0]
       let title = `${styleName}`
       let modLocation = location.substr(1)
       let Mod = await import(`./Styles${modLocation}`)
