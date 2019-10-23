@@ -1,36 +1,79 @@
 import React, { useState } from 'react'
-import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 import Drawer from './drawer.index'
 
-const Variations = () => {
-  const [open, setOpen] = useState(null)
+export default {
+  title: 'Feedback|Drawer',
+}
 
+const Left = () => {
+  const [open, setOpen] = useState(false)
+  const toggle = () => setOpen(!open)
   return (
     <>
-      <B title='default'>
-        <button onClick={() => setOpen(true)}>OPEN</button>
-
-        <Drawer
-          open={open}
-          onChange={() => setOpen(false)}
-          swipeableViewsProps={{
-            onTransitionEnd: () => console.log('onTransitionEnd'),
-          }}
-        >
-          <div>
-            <p> Here goes the content of your bottom sheet</p>
-            <p> Here goes the content of your bottom sheet</p>
-            <p> Here goes the content of your bottom sheet</p>
-            <p> Here goes the content of your bottom sheet</p>
-            <p> Here goes the content of your bottom sheet</p>
-          </div>
+      <B title='left'>
+        <button onClick={toggle}>Left</button>
+        <Drawer position='left' open={open} onClose={toggle}>
+          Hello asdf asdf asdf f asd fasdf fas d
         </Drawer>
       </B>
     </>
   )
 }
 
-storiesOf('Feedback|Drawer', module).add('Variations', () => <Variations />)
+const Top = () => {
+  const [open, setOpen] = useState(false)
+  const toggle = () => setOpen(!open)
+  return (
+    <>
+      <B title='top'>
+        <button onClick={toggle}>top</button>
+        <Drawer position='top' open={open} onClose={toggle}>
+          Hello asdf asdf asdf f asd fasdf fas d
+        </Drawer>
+      </B>
+    </>
+  )
+}
+
+const Right = () => {
+  const [open, setOpen] = useState(false)
+  const toggle = () => setOpen(!open)
+  return (
+    <>
+      <B title='right'>
+        <button onClick={toggle}>right</button>
+        <Drawer position='right' open={open} onClose={toggle}>
+          Hello asdf asdf asdf f asd fasdf fas d
+        </Drawer>
+      </B>
+    </>
+  )
+}
+const Bottom = () => {
+  const [open, setOpen] = useState(false)
+  const toggle = () => setOpen(!open)
+  return (
+    <>
+      <B title='bottom'>
+        <button onClick={toggle}>bottom</button>
+        <Drawer position='bottom' open={open} onClose={toggle}>
+          Hello asdf asdf asdf f asd fasdf fas d
+        </Drawer>
+      </B>
+    </>
+  )
+}
+
+const Example = () => (
+  <>
+    <Left />
+    <Top />
+    <Right />
+    <Bottom />
+  </>
+)
+
+export const Default = () => <Example />
