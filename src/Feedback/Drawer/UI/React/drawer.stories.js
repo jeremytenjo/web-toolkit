@@ -6,6 +6,7 @@ import Drawer from './drawer.index'
 
 export default {
   title: 'Feedback|Drawer',
+  component: Drawer,
 }
 
 const Left = () => {
