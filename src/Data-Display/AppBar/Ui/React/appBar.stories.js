@@ -25,8 +25,12 @@ const StylesList = () => {
       Mod = Mod.default
 
       return (
-        <B title={title} key={title} noBackground>
-          <Mod />
+        <B title={title} key={title} noBackground style={{ width: '100%' }}>
+          <Mod
+            title='Healthcare'
+            logo='https://www.pinclipart.com/picdir/big/107-1070245_epteca-youtube-round-icon-png-clipart.png'
+            onClick={() => console.log('fgsdff')}
+          />
         </B>
       )
     })

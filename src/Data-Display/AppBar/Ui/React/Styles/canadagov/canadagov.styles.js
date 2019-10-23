@@ -1,5 +1,21 @@
-import styled from 'styled-components'
+export const WrapperStyles = {
+  justifyContent: 'space-between',
+  gridAutoFlow: 'column',
+  alignItems: 'center',
+  width: '100%',
+  boxShadow: 'var(--boxShadow-2)',
+}
 
-export const Wrapper = styled.div``
+export const TypographyWrapperStyles = {
+  justifyContent: 'space-between',
+  gridAutoFlow: 'column',
+  alignItems: 'center',
+  gridGap: 'xs',
+  cursor: 'pointer',
+  userSelect: 'none',
+  padding: '0',
+}
 
-export const Other = styled.span``
+export const ImageStyles = {
+  cursor: 'initial',
+}

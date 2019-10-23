@@ -1,13 +1,19 @@
-import { string, func } from 'prop-types'
+import { string, func, object } from 'prop-types'
 
 export const defaultProps = {
-  type: 'primary',
-  text: 'Chip',
+  title: 'primary',
+  logo: 'Chip',
+  wrapperProps: {},
+  imageProps: { size: 29 },
+  typographyProps: { carot: true, color: 'primary' },
   onClick: () => null,
 }
 
 export const propTypes = {
-  type: string,
-  text: string,
+  title: string,
+  logo: string,
+  wrapperProps: object,
+  imageProps: object,
+  typographyProps: object,
   onClick: func,
 }
