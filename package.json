@@ -52,7 +52,7 @@
     "react-stars": "^2.2.5",
     "react-swipeable-views": "^0.13.3",
     "storybook-react-router": "^1.0.5",
-    "styled-components": "^4.3.2",
+    "styled-components": "^4.4.0",
     "twit": "^2.2.11"
   },
   "devDependencies": {
