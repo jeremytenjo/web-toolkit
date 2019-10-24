@@ -1,6 +1,6 @@
-const initTwitterApi = require('./twitter.api')
+import initTwitterApi from './twitter.api'
 
-module.exports = ({ tweet, twitterApiConfig }) => {
+export default ({ tweet, twitterApiConfig }) => {
   const twitterApi = initTwitterApi({ twitterApiConfig })
 
   twitterApi.post('statuses/update', { status: tweet }, (err) => {

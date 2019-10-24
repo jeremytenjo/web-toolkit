@@ -1,3 +1,3 @@
-const twit = require('twit')
+import twit from 'twit'
 
-module.exports = ({ twitterApiConfig }) => new twit(twitterApiConfig)
+export default ({ twitterApiConfig }) => new twit(twitterApiConfig)
