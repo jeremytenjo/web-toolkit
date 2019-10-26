@@ -32,7 +32,8 @@ const Top = () => {
       <B title='top'>
         <button onClick={toggle}>top</button>
         <Drawer position='top' open={open} onClose={toggle}>
-          Hello asdf asdf asdf f asd fasdf fas d
+          Hello asdf asdf asdf f asd fasdf fas d asdfasdfasdfasdf asdf asdf as
+          fas fas fasdfasdf asdf asdfas fas d
         </Drawer>
       </B>
     </>
