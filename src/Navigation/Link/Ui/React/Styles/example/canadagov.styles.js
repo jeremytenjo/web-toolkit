@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   transition: 0.2s;
+  user-select: none;
   ${({ active, backgroundColor }) =>
     active &&
     `
