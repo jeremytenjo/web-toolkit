@@ -3,7 +3,7 @@ import { string, func, object } from 'prop-types'
 export const defaultProps = {
   link: '/',
   text: 'Heathcare',
-  icon: 'close/material',
+  icon: 'heart/gov',
   foregroundColor: 'primary',
   backgroundColor: 'primary-lighter',
   wrapperProps: {},
