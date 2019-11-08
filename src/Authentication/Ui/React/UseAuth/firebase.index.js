@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import React, { useState, createContext, useContext } from 'react'
 
 import firebaseAuth from '../../../Functions/Firebase/auth.check'
 
-export default ({ baseUrl }) => {
+export const FirebaseAuthContext = createContext(null)
+
+export const FirebaseAuthProvider = ({ children }) => {
   const [signinIng, setSignining] = useState(null)
   const [error, setError] = useState(null)
 
@@ -10,7 +12,7 @@ export default ({ baseUrl }) => {
   let res = null
   let cmUser = null
 
-  const attemptSignIn = async () => {
+  const attemptSignIn = async ({ baseUrl }) => {
     setSignining(true)
 
     userRes = await firebaseAuth()
@@ -49,5 +51,17 @@ export default ({ baseUrl }) => {
     }
   }
 
-  return { attemptSignIn, signinIng, error }
+  return (
+    <FirebaseAuthContext.Provider
+      value={{
+        attemptSignIn,
+        signinIng,
+        error,
+      }}
+    >
+      {children}
+    </FirebaseAuthContext.Provider>
+  )
 }
+
+export default () => useContext(FirebaseAuthContext)
