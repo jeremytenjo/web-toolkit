@@ -4,7 +4,7 @@ import firebaseAuth from '../../../Functions/Firebase/auth.check'
 
 export const FirebaseAuthContext = createContext(null)
 
-export const FirebaseAuthProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [signinIng, setSignining] = useState(null)
   const [error, setError] = useState(null)
 
