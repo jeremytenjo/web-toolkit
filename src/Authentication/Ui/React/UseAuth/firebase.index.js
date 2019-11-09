@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   let res = null
   let cmUser = null
 
-  const attemptSignIn = async ({ baseUrl }) => {
+  const attemptSignIn = async ({ redirectUrl = '/login' }) => {
     setSignining(true)
 
     userRes = await firebaseAuth()
@@ -44,7 +44,7 @@ export const AuthProvider = ({ children }) => {
         setError(errMsg)
         setSignining(false)
 
-        return { res: user, redirect: baseUrl }
+        return { res: user, redirect: redirectUrl }
       } else {
         return { res: false }
       }
