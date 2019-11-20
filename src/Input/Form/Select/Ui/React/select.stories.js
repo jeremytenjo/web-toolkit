@@ -7,7 +7,10 @@ import B from '../../../../../../.storybook/Custom-Components/VariationBlock/var
 const req = require.context('./Styles', true, /index.js$/)
 const paths = req.keys()
 
-const data = [{ value: 1, label: '1' }, { value: 2, label: '2' }]
+const data = [
+  { value: 1, label: '1' },
+  { value: 2, label: '2' },
+]
 const Styles = () => {
   const [vars, setvars] = useState([])
   useEffect(() => {
