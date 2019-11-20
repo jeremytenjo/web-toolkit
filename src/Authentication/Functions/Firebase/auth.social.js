@@ -1,6 +1,6 @@
 import firebase from 'firebase/app'
 
-const getProviderMethod = (provider) => {
+const getProviderMethod = ({ provider = '' }) => {
   let method
   switch (provider) {
     case 'google':

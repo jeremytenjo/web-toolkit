@@ -1,13 +1,11 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
-export default async (_email, _password) => {
-  return new Promise(async (resolve, reject) => {
-    const email = _email || ''
-    const password = _password || ''
-    let userData
-
+export default async ({ email = '', password = '' }) =>
+  new Promise(async (resolve, reject) => {
     if (email !== '' && password !== '') {
+      let userData
+
       try {
         userData = await firebase
           .auth()
@@ -21,4 +19,3 @@ export default async (_email, _password) => {
       reject('Please include an email and pasword')
     }
   })
-}
