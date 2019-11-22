@@ -8,6 +8,10 @@ Log in with a social media account.
 
 Providers: Google, Facebook
 
+Defaults: `provider = 'google'`
+
+Returns `user` or `error`
+
 ### Usage
 
 ```js
@@ -20,7 +24,11 @@ res = await authSocial({ provider: 'google' })
 
 # Continue with Email
 
-Log in with a email.
+Login or Register with a email.
+
+Defaults: `action = 'login'` | `email = ''` | `register = ''`
+
+Returns `user` or `error`
 
 ### Usage
 
@@ -29,12 +37,16 @@ import authEmail from @tenjojeremy/web-toolkit/build/Authentication/Functions/Fi
 ```
 
 ```js
-res = await authEmail({ email: 'test@gmail', password: 'password1246' })
+const { user, error } = await authEmail({
+  action: 'login',
+  email: 'test@gmail',
+  password: 'password1246',
+})
 ```
 
 # Check
 
-Check if the user is signed in. Returns user object or false
+Check if the user is signed in. Returns `user object` or `false`
 
 ### Usage
 
