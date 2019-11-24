@@ -1,16 +1,55 @@
-import { Meta } from '@storybook/addon-docs/blocks'
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Typography from './typography.index'
 
 <Meta title='Data-display|Typography|React' />
 
-## Typography
+## Usage
+
+```js
+import Typography from '@tenjojeremy/web-toolkit/build/Data-Display/Typography/Ui/React/typography.index'
+ ```
+
+```js
+ <Typography tag='h4' variant='h3' text='Header 3' />
+ ```
+
+<Props of={Typography} />
+
+
+ ## Styling 
+
+ `variant` h3 will apply class .typography-h3 {}
+
+<Preview>
+<Story name='varitions'>
+   <>
+    <B background>
+      <div style={{ display: 'grid', gridGap: '20px' }}>
+        <Typography variant='h1' text='Header 1' />
+        <Typography variant='h2' text='Header 2' />
+        <Typography variant='h3' tag='h4' text='Header 3' />
+        <Typography variant='h4' text='Header 4' />
+        <Typography variant='h5' text='Header 5' />
+        <Typography variant='h6' text='Header 6' />
+        <Typography variant='subtitle1' text='Subtitle 1' />
+        <Typography variant='subtitle2' text='Subtitle 2' />
+        <Typography variant='body1' text='Body 1' />
+        <Typography variant='body2' text='Body 2' />
+        <Typography variant='button' text='Button' />
+        <Typography variant='caption' text='Caption' />
+        <Typography variant='overline' text='Overline' />
+      </div>
+    </B>
+  </>
+</Story>
+</Preview>
+
+
+
+ ## Classes examples 
 
 ```css
-
-  :root {
-  --typography-primary: Montserrat;
-  --typography-secondary: Roboto;
-  }
-
  .typography-h1 {
     font-family:  var(--font-primary);
     font-style: normal;
@@ -74,10 +113,4 @@ import { Meta } from '@storybook/addon-docs/blocks'
     color: var(--color-black)
   }
 }
-```
-
-#### Usage
-
-```css
-margin: var(--spacing-xxs);
 ```
