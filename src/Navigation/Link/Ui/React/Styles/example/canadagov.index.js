@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { useLocation, useHistory } from 'react-router-dom'
 
 import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
 import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
@@ -15,9 +14,10 @@ const Example = ({
   foregroundColor,
   backgroundColor,
   wrapperProps,
+  router,
 }) => {
-  const { push } = useHistory()
-  const { pathname } = useLocation()
+  const { push } = router
+  const { pathname } = window.location
   const active = pathname === link
 
   const handleClick = () => {

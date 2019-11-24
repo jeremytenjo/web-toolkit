@@ -6,7 +6,6 @@ import React, {
   Fragment,
   Suspense,
 } from 'react'
-import { useHistory } from 'react-router-dom'
 
 import { WrapperIcon, Wrapper } from './icon.styles'
 import { defaultProps, propTypes } from './icon.propTypes'
@@ -42,14 +41,14 @@ const Icon = ({
   plain,
   backgroundSize,
   center,
+  router,
   ...restStyles
 }) => {
-  const { push } = useHistory()
-
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
   const iconType = name.split('/')[1]
   const isStroke = strokeTypes.includes(iconType)
+  const { push } = router
 
   const getModule = async () => {
     if (name) {

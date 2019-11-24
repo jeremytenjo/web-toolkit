@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { useHistory } from 'react-router-dom'
 
 import Icon from '../../Base/icon.index'
 
@@ -7,8 +6,9 @@ const IconBack = ({
   onGoBack = () => null,
   to = null,
   icon = 'arrow/material',
+  router = { push: () => null },
 }) => {
-  const { push } = useHistory()
+  const { push } = router
 
   // Functions
   const goBack = () => {

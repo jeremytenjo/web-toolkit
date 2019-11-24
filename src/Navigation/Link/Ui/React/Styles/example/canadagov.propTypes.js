@@ -8,6 +8,7 @@ export const defaultProps = {
   backgroundColor: 'primary-lighter',
   wrapperProps: {},
   onClick: () => null,
+  router: { push: () => null },
 }
 
 export const propTypes = {

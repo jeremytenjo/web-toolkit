@@ -5,6 +5,7 @@ export const defaultProps = {
   font: 'primary',
   data: [],
   style: {},
+  router: { push: () => null },
 }
 
 export const propTypes = {

@@ -5,6 +5,7 @@ export const defaultProps = {
   title: 'No active',
   buttonText: 'FIND STYLIST',
   redUrl: '/explore',
+  router: { push: () => null },
 }
 
 export const propTypes = {

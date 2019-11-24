@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Route } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Bar from '../Base/navBar.index'
@@ -12,7 +13,11 @@ const testFileInput = (file) => {
   console.log(file)
 }
 
-const Child = (router) => {
+const Child = () => {
+  let history = useHistory()
+  let location = useLocation()
+  let router = { history, location }
+
   return (
     <>
       <B title='Example 1' noBackground style={{ width: 'auto' }}>

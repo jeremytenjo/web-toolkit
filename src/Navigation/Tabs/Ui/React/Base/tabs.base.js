@@ -1,14 +1,13 @@
 import React from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
 
 import { Wrapper } from './tabs.base.styles'
 import { defaultProps, propTypes } from './tabs.base.propTypes'
 
-const Tabs = ({ Tab, data, color, font, style, pathname }) => {
-  const { push } = useHistory()
+const Tabs = ({ Tab, data, color, font, style, pathname, router }) => {
+  const { push } = router
   const {
     location: { pathname: Lpathname },
-  } = useLocation()
+  } = window
 
   const currentUrl = pathname || Lpathname
 
