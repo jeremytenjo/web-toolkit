@@ -14,7 +14,7 @@ const Typography = (
   {
     tag = 'span',
     variant = 'body1',
-    color = null,
+    color = 'black',
     onClick = () => null,
     text = '',
     ...otherStyles
@@ -22,7 +22,7 @@ const Typography = (
   ref,
 ) => {
   const style = {
-    color: color ? `var(--color-${color})` : null,
+    color: `var(--color-${color})`,
     ...otherStyles,
   }
   const className = `typography-${variant}`

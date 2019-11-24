@@ -11,7 +11,7 @@ export default `
 }
 
 .typography-h1 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: 300;
   font-size: 96px;
@@ -19,7 +19,7 @@ export default `
   color: var(--color-black)
 }
 .typography-h2 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: 300;
   font-size: 60px;
@@ -27,14 +27,14 @@ export default `
   color: var(--color-black)
 }
 .typography-h3 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
 font-style: normal;
 font-weight: normal;
 font-size: 48px;
 color: var(--color-black)
 }
 .typography-h4 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: normal;
   font-size: 34px;
@@ -43,7 +43,7 @@ color: var(--color-black)
 }
 
 .typography-h5 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -51,7 +51,7 @@ color: var(--color-black)
 }
 
 .typography-h6 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -60,7 +60,7 @@ color: var(--color-black)
 }
 
 .typography-body1 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -69,7 +69,7 @@ color: var(--color-black)
 }
 
 .typography-body2 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
@@ -78,7 +78,7 @@ color: var(--color-black)
 }
 
 .typography-subtitle1 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -87,14 +87,14 @@ color: var(--color-black)
 }
 
 .typography-subtitle2 {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   color: var(--color-black)
 }
 .typography-button {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -103,7 +103,7 @@ color: var(--color-black)
   color: var(--color-black)
 }
 .typography-caption {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -111,7 +111,7 @@ letter-spacing: 0.4px;
 color: var(--color-black)
 }
 .typography-overline {
-  font-family:  var(--font-primary);
+  font-family:  var(--fontPrimary);
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
