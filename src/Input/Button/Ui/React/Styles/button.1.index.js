@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 
 const StyledButton = styled.button`
   /* Base */
-  background-color: ${({ color }) => `var(--color-${color}-lighter)`};
+  background-color: ${({ color }) => `var(--color-${color}Lighter)`};
   border-radius: 100px;
   cursor: pointer;
   padding: 0 var(--spacing-s);
@@ -19,28 +19,28 @@ const StyledButton = styled.button`
   text-align: center;
   transition: 0.2s ease-in-out;
   height: 40px;  
-  border: 2px solid ${({ color }) => `var(--color-${color}-lighter)`};
+  border: 2px solid ${({ color }) => `var(--color-${color}Lighter)`};
   user-select: none;
   box-sizing: content-box;
   &:focus {outline:0;}
 
 
   &:active {
-    border: 2px solid ${({ color }) => `var(--color-${color}-darker)`};
+    border: 2px solid ${({ color }) => `var(--color-${color}Darker)`};
   }
 
   /* Active */
   ${({ active, color }) =>
-    active && `border: 2px solid var(--color-${color}-darker);`}
+    active && `border: 2px solid var(--color-${color}Darker);`}
 
   /* Disabled */
   ${({ disabled }) =>
     disabled &&
     `
-  background-color: var(--color-disabled-lighter);
-  border: 2px solid var(--color-disabled-lighter);
+  background-color: var(--color-disabledLighter);
+  border: 2px solid var(--color-disabledLighter);
   &:active {
-    border: 2px solid var(--color-disabled-lighter);
+    border: 2px solid var(--color-disabledLighter);
   }`}
 
   /* Outlined */
@@ -58,7 +58,7 @@ const StyledButton = styled.button`
     `
   svg {
     margin-left: 10px;
-    fill: var(--color-${color}-darker);
+    fill: var(--color-${color}Darker);
     }
   `}
 
@@ -86,7 +86,7 @@ const LoadingCon = styled.div`
     right:0;
     bottom: 0;
     left: 0;
-    background-color: var(--color-${color}-opaque);
+    background-color: var(--color-${color}Opaque);
     border-radius: 100px;
     display: flex;
     align-items: center;

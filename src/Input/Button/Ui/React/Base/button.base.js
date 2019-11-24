@@ -41,12 +41,12 @@ const Button = ({
 }) => {
   const spinnerRef = useRef(null)
   const textColor = disabled
-    ? 'disabled-darker'
+    ? 'disabledDarker'
     : outlined
     ? 'white'
     : type === 'FAB'
     ? 'white'
-    : `${color}-darker`
+    : `${color}Darker`
 
   const WrappingComp = inputProps ? FileInput : Fragment
 

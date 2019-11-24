@@ -30,15 +30,15 @@ export default `
 :root {
   --color-primary: ${primary};
   --color-primaryDarker: ${primaryDarker};
-  --color-primary-lighter: ${primaryLighter};
-  --color-primary-opaque: ${primaryOpaque};
+  --color-primaryLighter: ${primaryLighter};
+  --color-primaryOpaque: ${primaryOpaque};
 
   --color-secondary: ${secondary};
   --color-secondaryDarker: ${secondaryDarker};
-  --color-secondary-lighter: ${secondaryLighter};
+  --color-secondaryLighter: ${secondaryLighter};
 
-  --color-disabled-darker: ${disabledForeground};
-  --color-disabled-background: ${disabledBackground};
+  --color-disabledDarker: ${disabledForeground};
+  --color-disabledBackground: ${disabledBackground};
 
   --color-darkgrey: ${darkgrey};
   --color-lightgrey: ${lightgrey};  
@@ -49,16 +49,16 @@ export default `
   --color-red: ${red};
 
   --color-white: ${white};
-  --color-white-opaque: ${whiteOpaque};
+  --color-whiteOpaque: ${whiteOpaque};
 
   --color-black: ${black};
-  --color-black-background: ${blackBackground};
-  --color-black-opaque: ${blackOpaque};
+  --color-blackBackground: ${blackBackground};
+  --color-blackOpaque: ${blackOpaque};
 
   --color-success: ${success};
-  --color-success-foreground: ${successForeground};
+  --color-successForeground: ${successForeground};
 
   --color-error: ${error};
-  --color-error-foreground: ${errorForeground};
+  --color-errorforeground: ${errorForeground};
 }
 `
