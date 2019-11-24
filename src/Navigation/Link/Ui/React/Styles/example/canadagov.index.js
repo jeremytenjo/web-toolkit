@@ -16,12 +16,12 @@ const Example = ({
   backgroundColor,
   wrapperProps,
 }) => {
-  const history = useHistory()
+  const { push } = useHistory()
   const { pathname } = useLocation()
   const active = pathname === link
 
   const handleClick = () => {
-    history.push(link)
+    push(link)
     onClick()
   }
 

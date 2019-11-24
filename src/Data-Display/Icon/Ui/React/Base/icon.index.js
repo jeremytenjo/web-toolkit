@@ -13,12 +13,12 @@ import { defaultProps, propTypes } from './icon.propTypes'
 
 const FileInput = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Media/Files/Ui/React/fileInput.index'
+    /* webpackChunkName: 'FileInput' */ '../../../../../Media/Files/Ui/React/fileInput.index'
   ),
 )
 const Typogrgraphy = lazy(() =>
   import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../Typography/Ui/React/typography.index'
+    /* webpackChunkName: 'Typogrgraphy' */ '../../../../Typography/Ui/React/typography.index'
   ),
 )
 

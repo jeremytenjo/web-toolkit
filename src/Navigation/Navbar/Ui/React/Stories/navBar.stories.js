@@ -1,6 +1,5 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import StoryRouter from 'storybook-react-router'
 import { Route } from 'react-router-dom'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
@@ -48,7 +47,6 @@ const Variations = () => {
 }
 
 storiesOf('Navigation|Nav Bar/React', module)
-  .addDecorator(StoryRouter())
   .add('Example', () => <Variations />)
   .add('Bottom', () => (
     <B

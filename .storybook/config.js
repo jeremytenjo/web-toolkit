@@ -1,4 +1,6 @@
-import { configure, addParameters } from '@storybook/react'
+import { configure, addParameters, addDecorator } from '@storybook/react'
+import StoryRouter from 'storybook-react-router'
+
 import theme from './Theme/storybook.theme'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 import './Firebase/firebase.index'
@@ -22,11 +24,6 @@ addParameters({
   },
 })
 
-window.historyRouter = {
-  push: () => null,
-  location: {
-    pathanme: '',
-  },
-}
+addDecorator(StoryRouter())
 
 configure(require.context('../src', true, /\.stories\.(js|mdx)$/), module)
