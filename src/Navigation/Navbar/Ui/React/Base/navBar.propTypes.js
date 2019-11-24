@@ -4,7 +4,6 @@ export const defaultProps = {
   color: 'primary',
   backgroundColor: 'white-opaque',
   labelVariant: 'body2',
-  router: window.historyRouter || {},
   onClick: () => null,
   onSearchSubmit: () => null,
   shadow: 2,

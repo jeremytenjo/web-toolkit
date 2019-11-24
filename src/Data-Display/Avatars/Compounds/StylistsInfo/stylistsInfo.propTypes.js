@@ -6,7 +6,6 @@ export const defaultProps = {
   id: '',
   rating: 0,
   onClick: () => null,
-  router: window.historyRouter || {},
 }
 
 export const propTypes = {

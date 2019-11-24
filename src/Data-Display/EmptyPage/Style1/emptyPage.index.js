@@ -1,12 +1,15 @@
 import React, { memo } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import Buttom from '../../../Input/Button/Ui/React/Styles/button.1.index'
 
 import { defaultProps, propTypes } from './emptyPage.propTypes'
 import { Wrapper, InnerWrapper, Title } from './emptyPage.styles'
 
-const EmptyPage = ({ image, title, buttonText, redUrl, router }) => {
-  const redirect = () => router.history.push(redUrl)
+const EmptyPage = ({ image, title, buttonText, redUrl }) => {
+  const { push } = useHistory()
+
+  const redirect = () => push(redUrl)
 
   return (
     <Wrapper>

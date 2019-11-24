@@ -19,7 +19,6 @@ export const defaultProps = {
   link: null,
   inputProps: null,
   plain: null,
-  router: window.historyRouter || {},
 }
 
 export const propTypes = {

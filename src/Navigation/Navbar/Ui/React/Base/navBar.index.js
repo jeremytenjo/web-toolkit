@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import { useHistory, useLocation } from 'react-router-dom'
 
 import List from '../../../../../Data-Display/List/Ui/React/list.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
@@ -13,7 +14,6 @@ const NavBar = ({
   backgroundColor,
   color,
   onInput,
-  router,
   position,
   shadow,
   onSearchSubmit,
@@ -21,6 +21,11 @@ const NavBar = ({
   mediaQueries,
   ...otherSyles
 }) => {
+  const {
+    push,
+    location: { pathname },
+  } = useHistory()
+
   return (
     <Wrapper
       backgroundColor={backgroundColor}
@@ -51,10 +56,6 @@ const NavBar = ({
             },
             index,
           ) => {
-            const {
-              location: { pathname },
-              history,
-            } = router
             const splitUrl = url ? url.split('/')[0] : undefined
             const currentUrl = splitUrl === '/' ? '/' : `/${splitUrl}`
             const splitpathname = pathname ? pathname.split('/')[1] : undefined
@@ -72,7 +73,7 @@ const NavBar = ({
               : 'grey'
 
             const handleClick = () => {
-              url && history.push(`/${url}`)
+              url && push(`/${url}`)
             }
 
             return (
