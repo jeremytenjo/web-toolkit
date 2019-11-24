@@ -1,7 +1,7 @@
 import { string, func, number } from 'prop-types'
 
 export const defaultProps = {
-  color: 'primary-lighter',
+  color: 'primaryLighter',
   letterColor: 'primaryDarker',
   borderColor: null,
   name: 'N',

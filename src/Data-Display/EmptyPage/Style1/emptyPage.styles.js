@@ -21,7 +21,7 @@ export const InnerWrapper = styled.div`
 `
 
 export const Title = styled.span`
-  font-family: var(--font-secondary);
+  font-family: var(--typography-secondary);
   font-weight: bolder;
   font-size: 16px;
 `

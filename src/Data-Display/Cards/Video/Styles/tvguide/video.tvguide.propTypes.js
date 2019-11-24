@@ -12,7 +12,7 @@ export const defaultProps = {
   starIcon: 'star/feather',
   starLabelIsFavorite: 'Remove from watchlist',
   starLabelIsNotFavorite: 'Add to watchlist',
-  iconBackgroundColor: 'primary-lighter',
+  iconBackgroundColor: 'primaryLighter',
   titleVariant: 'h6',
   overviewVariant: 'body2',
   posterAlt: 'poster',

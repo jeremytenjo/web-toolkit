@@ -6,12 +6,12 @@ Fonts available:
 export default `
 
 :root {
- --font-primary: Montserrat;
- --font-secondary: Montserrat;
+ --typography-primary: Montserrat;
+ --typography-secondary: Montserrat;
 }
 
 h1 {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: 300;
   font-size: 96px;
@@ -19,7 +19,7 @@ h1 {
   color: var(--color-black)
 }
 h2 {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: 300;
   font-size: 60px;
@@ -27,14 +27,14 @@ h2 {
   color: var(--color-black)
 }
 h3 {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 48px;
 color: var(--color-black)
 }
 h4 {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 34px;
@@ -43,7 +43,7 @@ h4 {
 }
 
 h5 {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -51,7 +51,7 @@ h5 {
 }
 
 h6 {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -60,7 +60,7 @@ h6 {
 }
 
 p[variant="body1"] {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -69,7 +69,7 @@ p[variant="body1"] {
 }
 
 p[variant="body2"] {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
@@ -78,7 +78,7 @@ color: var(--color-black)
 }
 
 span[variant="subtitle1"] {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -87,14 +87,14 @@ color: var(--color-black)
 }
 
 span[variant="subtitle2"] {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   color: var(--color-black)
 }
 span[variant="button"] {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: medium;
   font-size: 14px;
@@ -103,7 +103,7 @@ span[variant="button"] {
   color: var(--color-black)
 }
 span[variant="caption"] {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -111,7 +111,7 @@ letter-spacing: 0.4px;
 color: var(--color-black)
 }
 span[variant="overline"] {
-  font-family: var(--font-primary);
+  font-family: var(--typography-primary);
   font-style: normal;
   font-weight: 500;
   font-size: 10px;

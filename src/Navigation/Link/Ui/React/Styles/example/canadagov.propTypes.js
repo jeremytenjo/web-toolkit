@@ -5,7 +5,7 @@ export const defaultProps = {
   text: 'Heathcare',
   icon: 'heart/gov',
   foregroundColor: 'primary',
-  backgroundColor: 'primary-lighter',
+  backgroundColor: 'primaryLighter',
   wrapperProps: {},
   onClick: () => null,
   router: { push: () => null },

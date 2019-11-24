@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
 export const Text = styled.span`
   color: ${({ color }) => `var(--color-${color}-darker)`};
   user-select: none;
-  font-family: var(--font-secondary);
+  font-family: var(--typography-secondary);
   font-style: normal;
   font-weight: bold;
   font-size: 13px;

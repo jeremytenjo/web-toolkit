@@ -69,7 +69,7 @@ const CardMovie1 = ({
             <>
               <Select
                 data={seasons}
-                backgroundColor='primary-lighter'
+                backgroundColor='primaryLighter'
                 title='Season'
                 onChange={onSeasonChange}
                 titleColor='primaryDarker'
@@ -79,7 +79,7 @@ const CardMovie1 = ({
               />
               <Select
                 data={episodes}
-                backgroundColor='primary-lighter'
+                backgroundColor='primaryLighter'
                 title='Episode'
                 onChange={onEpisodeChange}
                 titleColor='primaryDarker'
