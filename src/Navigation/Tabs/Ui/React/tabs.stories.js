@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { useHistory, useLocation } from 'react-router-dom'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
@@ -19,21 +20,27 @@ const data2 = [
   { label: 'TV SHOWS', link: '/profile/favourites' },
 ]
 
-const Variations = () => (
-  <>
-    <B title='1' noBackground style={{ width: '100%' }}>
-      <Tabs1 data={data} />
-    </B>
+const Variations = () => {
+  let history = useHistory()
+  let location = useLocation()
+  let router = { history, location }
 
-    <B title='2' noBackground style={{ width: '100%' }}>
-      <Tabs2 data={data2} font='secondary' />
-    </B>
+  return (
+    <>
+      <B title='1' noBackground style={{ width: '100%' }}>
+        <Tabs1 router={history} data={data} />
+      </B>
 
-    <B title='3' contentStyle={{ width: '100%', backgroundColor: 'black' }}>
-      <Tabs3 data={data2} font='secondary' color='black' />
-    </B>
-  </>
-)
+      <B title='2' noBackground style={{ width: '100%' }}>
+        <Tabs2 router={router} data={data2} font='secondary' />
+      </B>
+
+      <B title='3' contentStyle={{ width: '100%', backgroundColor: 'black' }}>
+        <Tabs3 router={router} data={data2} font='secondary' color='black' />
+      </B>
+    </>
+  )
+}
 
 storiesOf('Navigation|Tabs/Ui/React/', module).add(
   'styles',

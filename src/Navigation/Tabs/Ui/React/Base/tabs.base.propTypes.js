@@ -1,11 +1,10 @@
-import { string, array, object } from 'prop-types'
+import { string, array, object, shape } from 'prop-types'
 
 export const defaultProps = {
   color: 'primary',
   font: 'primary',
   data: [],
   style: {},
-  router: { push: () => null },
 }
 
 export const propTypes = {
@@ -13,5 +12,5 @@ export const propTypes = {
   font: string,
   data: array,
   style: object,
-  router: object,
+  router: shape({ history: object.isRequired, location: object.isRequired }),
 }

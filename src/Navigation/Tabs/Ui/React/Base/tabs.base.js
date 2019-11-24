@@ -3,19 +3,17 @@ import React from 'react'
 import { Wrapper } from './tabs.base.styles'
 import { defaultProps, propTypes } from './tabs.base.propTypes'
 
-const Tabs = ({ Tab, data, color, font, style, pathname, router }) => {
-  const { push } = router
+const Tabs = ({ Tab, data, color, font, style, router }) => {
   const {
-    location: { pathname: Lpathname },
-  } = window
-
-  const currentUrl = pathname || Lpathname
+    history: { push },
+    location: { pathname },
+  } = router
 
   //Template
   return (
     <Wrapper style={{ ...style }} color={color}>
       {data.map(({ label, link }) => {
-        const active = currentUrl === link
+        const active = pathname === link
 
         return (
           <Tab
