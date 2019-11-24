@@ -21,10 +21,8 @@ const NavBar = ({
   mediaQueries,
   ...otherSyles
 }) => {
-  const {
-    push,
-    location: { pathname },
-  } = useHistory()
+  const { push } = useHistory()
+  const { pathname } = useLocation()
 
   return (
     <Wrapper
