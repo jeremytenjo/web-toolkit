@@ -10,31 +10,31 @@ export default `
  --typography-secondary: Montserrat;
 }
 
-h1 {
-  font-family: var(--typography-primary);
+.typography-h1 {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: 300;
   font-size: 96px;
   letter-spacing: -1.5px;
   color: var(--color-black)
 }
-h2 {
-  font-family: var(--typography-primary);
+.typography-h2 {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: 300;
   font-size: 60px;
   letter-spacing: -0.5px;
   color: var(--color-black)
 }
-h3 {
-  font-family: var(--typography-primary);
+.typography-h3 {
+  font-family:  var(--font-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 48px;
 color: var(--color-black)
 }
-h4 {
-  font-family: var(--typography-primary);
+.typography-h4 {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 34px;
@@ -42,16 +42,16 @@ h4 {
   color: var(--color-black)
 }
 
-h5 {
-  font-family: var(--typography-primary);
+.typography-h5 {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   color: var(--color-black)
 }
 
-h6 {
-  font-family: var(--typography-primary);
+.typography-h6 {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -59,8 +59,8 @@ h6 {
   color: var(--color-black)
 }
 
-p[variant="body1"] {
-  font-family: var(--typography-primary);
+.typography-body1 {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -68,8 +68,8 @@ p[variant="body1"] {
   color: var(--color-black)
 }
 
-p[variant="body2"] {
-  font-family: var(--typography-primary);
+.typography-body2 {
+  font-family:  var(--font-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
@@ -77,8 +77,8 @@ letter-spacing: 0.25px;
 color: var(--color-black)
 }
 
-span[variant="subtitle1"] {
-  font-family: var(--typography-primary);
+.typography-subtitle1 {
+  font-family:  var(--font-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -86,32 +86,32 @@ letter-spacing: 0.15px;
 color: var(--color-black)
 }
 
-span[variant="subtitle2"] {
-  font-family: var(--typography-primary);
+.typography-subtitle2 {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   color: var(--color-black)
 }
-span[variant="button"] {
-  font-family: var(--typography-primary);
+.typography-button {
+  font-family:  var(--font-primary);
   font-style: normal;
-  font-weight: medium;
+  font-weight: bold;
   font-size: 14px;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   color: var(--color-black)
 }
-span[variant="caption"] {
-  font-family: var(--typography-primary);
+.typography-caption {
+  font-family:  var(--font-primary);
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
 letter-spacing: 0.4px;
 color: var(--color-black)
 }
-span[variant="overline"] {
-  font-family: var(--typography-primary);
+.typography-overline {
+  font-family:  var(--font-primary);
   font-style: normal;
   font-weight: 500;
   font-size: 10px;

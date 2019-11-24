@@ -11,7 +11,7 @@ const Variatons = () => (
       <div style={{ display: 'grid', gridGap: '20px' }}>
         <Typography variant='h1' text='Header 1' />
         <Typography variant='h2' text='Header 2' />
-        <Typography variant='h3' text='Header 3' />
+        <Typography variant='h3' tag='h4' text='Header 3' />
         <Typography variant='h4' text='Header 4' />
         <Typography variant='h5' text='Header 5' />
         <Typography variant='h6' text='Header 6' />
