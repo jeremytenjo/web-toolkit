@@ -29,12 +29,12 @@ const {
 export default `
 :root {
   --color-primary: ${primary};
-  --color-primary-darker: ${primaryDarker};
+  --color-primaryDarker: ${primaryDarker};
   --color-primary-lighter: ${primaryLighter};
   --color-primary-opaque: ${primaryOpaque};
 
   --color-secondary: ${secondary};
-  --color-secondary-darker: ${secondaryDarker};
+  --color-secondaryDarker: ${secondaryDarker};
   --color-secondary-lighter: ${secondaryLighter};
 
   --color-disabled-darker: ${disabledForeground};

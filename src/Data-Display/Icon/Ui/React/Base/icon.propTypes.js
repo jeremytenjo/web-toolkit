@@ -11,7 +11,7 @@ export const defaultProps = {
   font: 'primary',
   backgroundColor: 'primary',
   labelVariant: 'body2',
-  labelColor: 'primary-darker',
+  labelColor: 'primaryDarker',
   noBackground: null,
   dark: null,
   noBackgroundChange: null,

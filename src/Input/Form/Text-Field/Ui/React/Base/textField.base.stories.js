@@ -48,8 +48,8 @@ export const States = ({ TextField }) => {
         <TextField
           placeholder={placeholder}
           backgroundColor='primary-lighter'
-          textColor='primary-darker'
-          foregroundColor='primary-darker'
+          textColor='primaryDarker'
+          foregroundColor='primaryDarker'
         />
       </B>
 

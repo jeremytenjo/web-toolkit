@@ -72,7 +72,7 @@ const CardMovie1 = ({
                 backgroundColor='primary-lighter'
                 title='Season'
                 onChange={onSeasonChange}
-                titleColor='primary-darker'
+                titleColor='primaryDarker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
                 {...selectProps}
@@ -82,7 +82,7 @@ const CardMovie1 = ({
                 backgroundColor='primary-lighter'
                 title='Episode'
                 onChange={onEpisodeChange}
-                titleColor='primary-darker'
+                titleColor='primaryDarker'
                 wrapperStyles={{ padding: 'none' }}
                 size={45}
                 {...selectProps}
@@ -92,7 +92,7 @@ const CardMovie1 = ({
           {!isTv && (
             <Icon
               name={plusIcon}
-              color='primary-darker'
+              color='primaryDarker'
               label={plusLabel}
               onClick={handleLoadMore}
               background
@@ -102,7 +102,7 @@ const CardMovie1 = ({
 
           <Icon
             name={playIcon}
-            color='primary-darker'
+            color='primaryDarker'
             label={playLabel}
             onClick={handleOnPlay}
             background
@@ -111,7 +111,7 @@ const CardMovie1 = ({
 
           <Icon
             name={favIcon}
-            color='primary-darker'
+            color='primaryDarker'
             label={starLabel}
             background
             backgroundColor={iconBackgroundColor}

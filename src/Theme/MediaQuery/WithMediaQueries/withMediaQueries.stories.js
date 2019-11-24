@@ -17,7 +17,7 @@ const Variations = () => (
         transition='2s'
       >
         <h4>Featured</h4>
-        <Icon name='search/material' color='primary-darker' />
+        <Icon name='search/material' color='primaryDarker' />
       </Box>
     </B>
   </>
