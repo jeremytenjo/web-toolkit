@@ -6,12 +6,14 @@ import { Wrapper } from './tabs.1.styles'
 import { defaultProps, propTypes } from './tabs.1.propTypes'
 
 const Tabs = ({ data, color, style, router }) => {
-  const { push } = router
+  const {
+    history: { push },
+    location: { pathname },
+  } = router
   const tabWidth = 100 / data.length
-  const currentUrl = window.location.pathname
   let currentTabIndex
 
-  currentTabIndex = data.findIndex((tab) => tab.link === currentUrl)
+  currentTabIndex = data.findIndex((tab) => tab.link === pathname)
   currentTabIndex === -1 && (currentTabIndex = 0)
 
   //Template

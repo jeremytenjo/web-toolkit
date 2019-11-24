@@ -28,7 +28,7 @@ const Variations = () => {
   return (
     <>
       <B title='1' noBackground style={{ width: '100%' }}>
-        <Tabs1 router={history} data={data} />
+        <Tabs1 router={router} data={data} />
       </B>
 
       <B title='2' noBackground style={{ width: '100%' }}>
