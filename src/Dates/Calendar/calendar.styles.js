@@ -13,7 +13,7 @@ export const WeekDaysTitles = styled.div`
   grid-auto-columns: 1fr;
 
   span {
-    font-family: var(--typography-primary);
+    font-family: var(--font-primary);
     font-style: normal;
     font-weight: bold;
     font-size: 14px;

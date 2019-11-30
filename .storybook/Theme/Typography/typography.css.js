@@ -6,8 +6,8 @@ Fonts available:
 export default `
 
 :root {
- --typography-primary: Montserrat;
- --typography-secondary: Montserrat;
+ --font-primary: Montserrat;
+ --font-secondary: Montserrat;
 }
 
 .typography-h1 {

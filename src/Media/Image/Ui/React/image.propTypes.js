@@ -8,7 +8,7 @@ export const defaultProps = {
   index: null,
   round: null,
   borderColor: null,
-  lettersFont: 'var(--typography-primary)',
+  lettersFont: 'var(--font-primary)',
   letterColor: 'primary',
   size: 50,
   width: null,

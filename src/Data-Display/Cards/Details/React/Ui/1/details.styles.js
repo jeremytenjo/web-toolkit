@@ -16,7 +16,7 @@ export const InfoCon = styled.div`
 `
 
 export const Location = styled.div`
-  font-family: var(--typography-secondary);
+  font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
@@ -37,7 +37,7 @@ export const ContactIcons = styled.div`
 `
 
 export const NumReview = styled.div`
-  font-family: var(--typography-secondary);
+  font-family: var(--font-secondary);
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);

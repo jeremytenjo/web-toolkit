@@ -19,7 +19,7 @@ export const DayCon = styled.div`
   justify-self: center;
   cursor: pointer;
   user-select: none;
-  font-family: var(--typography-primary);
+  font-family: var(--font-primary);
   transition: .2s;
 
   &:active {
