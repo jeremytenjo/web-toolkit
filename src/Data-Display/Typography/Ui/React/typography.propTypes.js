@@ -1,4 +1,4 @@
-import { string, func } from 'prop-types'
+import { string, func, oneOfType, number } from 'prop-types'
 
 export const defaultProps = {
   tag: 'span',
@@ -13,5 +13,5 @@ export const propTypes = {
   variant: string,
   color: string,
   onClick: func,
-  text: string,
+  text: oneOfType([string, number]),
 }
