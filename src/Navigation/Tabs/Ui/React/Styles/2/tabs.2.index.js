@@ -23,7 +23,7 @@ const Tab = styled.div`
     color: var(--color-${color});
     `
         : `
-    color: var(--color-${color}-opaque);
+    color: var(--color-${color}Opaque);
     `}
   }
 `

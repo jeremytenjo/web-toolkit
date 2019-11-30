@@ -2,7 +2,7 @@ import { string, func, array, number, object, shape } from 'prop-types'
 
 export const defaultProps = {
   color: 'primary',
-  backgroundColor: 'white-opaque',
+  backgroundColor: 'whiteOpaque',
   labelVariant: 'body2',
   onClick: () => null,
   onSearchSubmit: () => null,

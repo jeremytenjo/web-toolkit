@@ -4,7 +4,7 @@ export const defaultProps = {
   src: null,
   size: 184,
   alt: 'poster',
-  backgroundColor: 'black-opaque',
+  backgroundColor: 'blackOpaque',
   onClick: () => null,
 }
 
