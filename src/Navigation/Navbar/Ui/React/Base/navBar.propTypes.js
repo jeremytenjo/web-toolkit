@@ -1,13 +1,14 @@
 import { string, func, array, number, object, shape } from 'prop-types'
 
 export const defaultProps = {
-  color: 'primary',
-  backgroundColor: 'whiteOpaque',
   labelVariant: 'body2',
   onClick: () => null,
   onSearchSubmit: () => null,
-  shadow: 2,
-  mediaQueries: [600, 900],
+  styles: {
+    color: 'primary',
+    backgroundColor: 'whiteOpaque',
+    shadow: 2,
+  },
 }
 
 export const propTypes = {

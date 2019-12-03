@@ -10,25 +10,14 @@ import { Wrapper } from './navBar.styles'
 
 const NavBar = ({
   data,
-  backgroundColor,
-  color,
   onInput,
-  position,
-  shadow,
   onSearchSubmit,
   labelVariant,
-  mediaQueries,
   router,
-  ...otherSyles
+  styles,
 }) => {
   return (
-    <Wrapper
-      backgroundColor={backgroundColor}
-      position={position}
-      shadow={shadow}
-      mediaQueries={mediaQueries}
-      {...otherSyles}
-    >
+    <Wrapper styles={styles}>
       <List
         padding='none'
         style={{
@@ -69,7 +58,7 @@ const NavBar = ({
             const _color = iconStyles.color
               ? iconStyles.color
               : isActive
-              ? color
+              ? styles.colors
               : 'grey'
 
             const handleClick = () => {
@@ -105,7 +94,7 @@ const NavBar = ({
                   <Avatar
                     src={src}
                     radius={100}
-                    borderColor={isActive && color}
+                    borderColor={isActive && styles.color}
                     paddedBorder
                     inputProps={inputProps}
                     size={40}

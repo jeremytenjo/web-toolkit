@@ -42,6 +42,8 @@ export default (props) => {
       array.push(getString({ varName: 'spacing', key, value }))
     else if (key.includes('color'))
       array.push(getString({ varName: 'color', key, value }))
+    else if (key.includes('shadow'))
+      array.push(getString({ varName: 'boxShadow', key, value }))
     else array.push(getString({ key, value }))
   })
 
