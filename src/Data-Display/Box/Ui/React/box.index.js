@@ -6,7 +6,7 @@ import { Wrapper } from './box.styles'
 const Box = ({ children, name, styles, fullscreen, size }) => {
   return (
     <Wrapper
-      styles={styles}
+      styles={{ ...styles, display: 'grid', padding: 'xs' }}
       data-box-name={name}
       fullscreen={fullscreen}
       size={size}
