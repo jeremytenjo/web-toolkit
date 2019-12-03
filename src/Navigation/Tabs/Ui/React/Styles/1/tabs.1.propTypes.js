@@ -4,7 +4,7 @@ export const defaultProps = {
   color: 'primary',
   data: [],
   style: {},
-  router: { push: () => null },
+  router: { history: { push: () => null }, location: { pathname: () => null } },
 }
 
 export const propTypes = {
