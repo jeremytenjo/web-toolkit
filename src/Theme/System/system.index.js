@@ -2,42 +2,50 @@ import decamelize from 'decamelize'
 
 export default (props) => {
   const {
-    theme: { mediaQueries },
+    styles,
+    theme: { mediaQueries = [700, 1200] },
   } = props
+  const array = []
+  let string = ''
 
-  Object.entries(props).forEach(([key, value]) => {
-    if (
-      key.includes('padding') ||
-      key.includes('margin') ||
-      key.includes('gap')
-    )
-      return getString({ varName: 'spacing', key, value })
-    else if (key.includes('color'))
-      return getString({ varName: 'color', key, value })
-    else if (key === 'mediaQueries') return ''
-    else {
-      getString(key, value)
-    }
-  })
+  const getString = ({ varName, key, value }) => {
+    const _key = decamelize(key, '-')
+    const isArray = Array.isArray(value)
+    const _value = varName ? `var(--${varName}-${value})` : value
 
-  const getString = (varName, key, value) => {
-    const isArray = value.isArray()
     return isArray
       ? handleMediaQueries({ key, value, varName })
-      : `${decamelize(key, '-')}: var(--${varName}-${value});`
+      : `${_key}: ${_value};`
   }
 
   const handleMediaQueries = ({ key, value, varName }) => {
     let string = ''
-    const _value = varName ? `var(--${varName}-${value})` : value
     const _key = decamelize(key, '-')
 
     string = mediaQueries.map((item, index) => {
-      return `@media (min-width: ${mediaQueries[index]}px) {            
+      const cValue = value[index]
+      const _value = varName ? `var(--${varName}-${cValue})` : cValue
+
+      return `@media (min-width: ${mediaQueries[index]}px) {       
         ${_key}: ${_value};       
       }`
     })
     string = string.join('\n')
     return string
   }
+  Object.entries(styles).forEach(([key, value]) => {
+    if (
+      key.includes('padding') ||
+      key.includes('margin') ||
+      key.includes('gap')
+    )
+      array.push(getString({ varName: 'spacing', key, value }))
+    else if (key.includes('color'))
+      array.push(getString({ varName: 'color', key, value }))
+    else array.push(getString({ key, value }))
+  })
+
+  string = array.join('\n')
+
+  return string
 }
