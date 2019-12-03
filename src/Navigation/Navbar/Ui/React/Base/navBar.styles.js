@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import Position from '../../../../../Misc-Utils/Position/position.index'
-import system from '../../../../../Theme/System/system.index'
+import system from '../../../../../Theme/System/React/system.index'
 
 export const Wrapper = styled.div`
   ${system}

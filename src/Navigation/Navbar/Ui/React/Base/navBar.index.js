@@ -58,7 +58,7 @@ const NavBar = ({
             const _color = iconStyles.color
               ? iconStyles.color
               : isActive
-              ? styles.colors
+              ? styles.color
               : 'grey'
 
             const handleClick = () => {

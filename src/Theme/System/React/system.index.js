@@ -33,6 +33,7 @@ export default (props) => {
     string = string.join('\n')
     return string
   }
+
   Object.entries(styles).forEach(([key, value]) => {
     if (
       key.includes('padding') ||
@@ -40,9 +41,9 @@ export default (props) => {
       key.includes('gap')
     )
       array.push(getString({ varName: 'spacing', key, value }))
-    else if (key.includes('color'))
+    else if (key.includes('color') || key.includes('Color'))
       array.push(getString({ varName: 'color', key, value }))
-    else if (key.includes('shadow'))
+    else if (key.includes('shadow') || key.includes('Shadow'))
       array.push(getString({ varName: 'boxShadow', key, value }))
     else array.push(getString({ key, value }))
   })
