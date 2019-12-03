@@ -13,9 +13,23 @@ import System from '@tenjojeremy/web-toolkit/build/Theme/System/Ui/React/typogra
  ```
 
 ```js
- <System tag='h4' variant='h3' text='Header 3' />
+import React from 'react'
+import styled from 'styled-components'
+
+import system from '../system.index'
+
+const Wrapper = styled.div`
+  ${system}
+`
+
+export default () => (
+  <Wrapper styles={{ color: 'primary', margin: ['s', 'xl'] }}>
+    Theme system
+  </Wrapper>
+)
+
  ```
- 
+
 <Preview>
 <Story name='example'>
    <>
