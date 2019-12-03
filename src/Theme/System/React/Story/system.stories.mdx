@@ -8,6 +8,10 @@ import Example from './system.example'
 
 ## Usage
 
+Pass a `styles` object with styles, arrays generate media queries set in the styles components theme provider
+
+if mediaQueries = [700, 1200]  color: ['primary', 'secondary'] === 0-700 = primary, 700-1200=secondary
+
 ```js
 import System from '@tenjojeremy/web-toolkit/build/Theme/System/React/system.index'
  ```
@@ -23,7 +27,7 @@ const Wrapper = styled.div`
 `
 
 export default () => (
-  <Wrapper styles={{ color: 'primary', margin: ['s', 'xl'] }}>
+  <Wrapper styles={{ color: ['primary', 'secondary'], margin:'xl' }}>
     Theme system
   </Wrapper>
 )

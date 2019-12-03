@@ -7,6 +7,7 @@ export default (props) => {
   } = props
   const array = []
   let string = ''
+  mediaQueries.unshift(0)
 
   const getString = ({ varName, key, value }) => {
     const _key = decamelize(key, '-')
@@ -22,13 +23,18 @@ export default (props) => {
     let string = ''
     const _key = decamelize(key, '-')
 
-    string = mediaQueries.map((item, index) => {
+    string = mediaQueries.map((width, index) => {
       const cValue = value[index]
       const _value = varName ? `var(--${varName}-${cValue})` : cValue
+      const property = `${_key}: ${_value};`
 
-      return `@media (min-width: ${mediaQueries[index]}px) {       
-        ${_key}: ${_value};       
+      return width === 0
+        ? property
+        : cValue
+        ? `@media (min-width: ${width}px) {       
+        ${property}      
       }`
+        : ''
     })
     string = string.join('\n')
     return string
