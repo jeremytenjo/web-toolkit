@@ -1,4 +1,7 @@
 import React, { memo } from 'react'
+import styled from 'styled-components'
+
+import system from '../../../../Theme/System/React/system.index'
 
 import { defaultProps, propTypes } from './typography.propTypes'
 
@@ -12,23 +15,23 @@ const defineTag = (tag, variant) => {
   }
 }
 
-const Typography = ({ tag, variant, color, onClick, text, ...otherStyles }) => {
-  const style = {
-    color: `var(--color-${color})`,
-    ...otherStyles,
-  }
+const Typography = ({ tag, variant, styles, onClick, text }) => {
   const className = `typography-${variant}`
   const Tag = defineTag(tag, variant)
 
+  const El = styled[Tag]`
+    ${system}
+  `
+
   return (
-    <Tag
-      style={style}
+    <El
+      styles={styles}
       className={className}
       variant={variant}
       onClick={onClick}
     >
       {text}
-    </Tag>
+    </El>
   )
 }
 

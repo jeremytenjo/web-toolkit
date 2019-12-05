@@ -121,6 +121,22 @@ const CardMovie1 = ({
             onClick={handleFavoriteToggle}
           />
         </Box>
+
+        {isTv && (
+          <>
+            <Box>
+              <Typography
+                text='Last episode watched: S12 E22'
+                variant='subtitle2'
+              />
+            </Box>
+            <Typography
+              text='Play next episode'
+              variant='subtitle1'
+              styles={{ color: 'primary' }}
+            />
+          </>
+        )}
       </Box>
     </Box>
   )

@@ -1,9 +1,9 @@
-import { string, func, oneOfType, number } from 'prop-types'
+import { string, func, oneOfType, number, object } from 'prop-types'
 
 export const defaultProps = {
   tag: 'span',
   variant: 'body1',
-  color: 'black',
+  styles: { color: 'black' },
   onClick: () => null,
   text: '',
 }
@@ -11,7 +11,7 @@ export const defaultProps = {
 export const propTypes = {
   tag: string,
   variant: string,
-  color: string,
+  styles: object,
   onClick: func,
   text: oneOfType([string, number]),
 }
