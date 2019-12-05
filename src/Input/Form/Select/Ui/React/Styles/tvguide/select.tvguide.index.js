@@ -17,15 +17,23 @@ const Item = ({
   ...styles
 }) => {
   return (
-    <Box justifyItems='center' gridGap={title && 'xxs'} {...wrapperStyles}>
+    <Box
+      styles={{
+        justifyItems: 'center',
+        gridGap: title && 'xxs',
+        ...wrapperStyles,
+      }}
+    >
       <Box
         size={43}
-        backgroundColor={backgroundColor}
-        color={foregroundColor}
-        borderRadius='100px'
-        justifyItems='center'
-        alignItems='center'
-        {...styles}
+        styles={{
+          backgroundColor: backgroundColor,
+          color: foregroundColor,
+          borderRadius: '100px',
+          justifyItems: 'center',
+          alignItems: 'center',
+          ...styles,
+        }}
       >
         <Typogrgraphy text={label} variant={titleVariant} />
       </Box>

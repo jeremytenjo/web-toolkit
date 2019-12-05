@@ -42,28 +42,31 @@ const CardMovie1 = ({
   const handleLoadMore = () => onLoadMore(rest)
   const handleFavoriteToggle = () => onFavoriteToggle(rest)
 
-  return (
-    <Box
-      backgroundColor='white'
-      borderRadius='10px'
-      gridAutoFlow={isTv ? 'row' : 'column'}
-      justifyItems='center'
-      textAlign={isTv ? 'center' : 'left'}
-      gridGap='s'
-      padding='s'
-    >
-      <Poster src={poster} size={184} alt={posterAlt} />
+  const wrapper = {
+    backgroundColor: 'white',
+    borderRadius: '10px',
+    gridAutoFlow: isTv ? 'row' : 'column',
+    justifyItems: 'center',
+    textAlign: isTv ? 'center' : 'left',
+    gridGap: 's',
+    padding: 's',
+  }
 
-      <Box gridGap='s' padding='none' alignContent='center'>
+  return (
+    <Box styles={wrapper}>
+      <Poster src={poster} size={184} alt={posterAlt} />
+      <Box styles={{ gridGap: 's', padding: 'none', alignContent: 'center' }}>
         {title && <Typography text={title} variant={titleVariant} />}
         {overview && <Typography text={overview} variant={overviewVariant} />}
 
         <Box
-          gridAutoFlow='column'
-          justifyContent='space-between'
-          grid-auto-columns='60px'
-          justify-items='center'
-          align-items='start'
+          styles={{
+            gridAutoFlow: 'column',
+            justifyContent: 'space-between',
+            gridAutoColumns: '60px',
+            justifyItems: 'center',
+            alignItems: 'start',
+          }}
         >
           {isTv && (
             <>
