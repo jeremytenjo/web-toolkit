@@ -25,7 +25,7 @@ const Typography = ({ tag, variant, styles, onClick, text }) => {
 
   return (
     <El
-      styles={styles}
+      styles={{ color: 'black', ...styles }}
       className={className}
       variant={variant}
       onClick={onClick}

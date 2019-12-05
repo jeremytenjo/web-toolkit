@@ -33,6 +33,8 @@ const CardMovie1 = ({
   onEpisodeChange,
   selectProps,
   posterAlt,
+  lastEpWatched,
+  onPlayNextClick,
   ...rest
 }) => {
   const favIcon = favorite ? `${starIcon}-filled` : starIcon
@@ -124,16 +126,21 @@ const CardMovie1 = ({
 
         {isTv && (
           <>
-            <Box>
+            {lastEpWatched && (
               <Typography
-                text='Last episode watched: S12 E22'
+                text={`Last episode watched: ${lastEpWatched}`}
                 variant='subtitle2'
               />
-            </Box>
+            )}
             <Typography
               text='Play next episode'
               variant='subtitle1'
-              styles={{ color: 'primary' }}
+              styles={{
+                color: 'primary',
+                cursor: 'pointer',
+                userSelect: 'none',
+              }}
+              onClick={onPlayNextClick}
             />
           </>
         )}

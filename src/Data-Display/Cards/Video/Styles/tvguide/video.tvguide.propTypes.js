@@ -20,6 +20,8 @@ export const defaultProps = {
   moreLinks: null,
   seasons: [],
   episodes: [],
+  lastEpWatched: null,
+  onPlayNextClick: () => null,
   onPlay: () => null,
   onLoadMore: () => null,
   onFavoriteToggle: () => null,
@@ -37,6 +39,7 @@ export const propTypes = {
   isTv: bool,
   moreLinks: array,
   onPlay: func,
+  onPlayNextClick: func,
   onLoadMore: func,
   onFavoriteToggle: func,
 }
