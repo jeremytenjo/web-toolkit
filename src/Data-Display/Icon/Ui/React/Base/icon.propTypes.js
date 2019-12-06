@@ -8,9 +8,7 @@ export const defaultProps = {
   background: null,
   size: 45,
   label: null,
-  font: 'primary',
   backgroundColor: 'primary',
-  labelVariant: 'body2',
   labelStyles: { color: 'primaryDarker' },
   noBackground: null,
   dark: null,
@@ -19,7 +17,7 @@ export const defaultProps = {
   link: null,
   inputProps: null,
   plain: null,
-  labelProps: null,
+  labelProps: { tag: 'span', variant: 'body2' },
   router: { push: () => null },
 }
 
@@ -27,7 +25,6 @@ export const propTypes = {
   name: string.isRequired,
   style: object,
   color: string,
-  font: string,
   backgroundColor: string,
   onClick: func,
   background: bool,

@@ -22,12 +22,10 @@ const Typography = ({ tag, variant, styles, onClick, text }) => {
   const El = styled[Tag]`
     ${system}
   `
-
   return (
     <El
       styles={{ color: 'black', ...styles }}
       className={className}
-      variant={variant}
       onClick={onClick}
     >
       {text}
