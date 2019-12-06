@@ -34,7 +34,7 @@ const Icon = ({
   noBackgroundChange,
   outlined,
   labelVariant,
-  labelColor,
+  labelStyles,
   link,
   inputProps,
   backgroundColor,
@@ -92,7 +92,7 @@ const Icon = ({
           </WrapperIcon>
           {label && (
             <Typogrgraphy
-              styles={{ color: labelColor }}
+              styles={labelStyles}
               variant={labelVariant}
               text={label}
             />
