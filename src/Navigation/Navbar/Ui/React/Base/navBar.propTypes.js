@@ -9,6 +9,7 @@ export const defaultProps = {
     backgroundColor: 'whiteOpaque',
     boxShadow: 2,
   },
+  labelStyles: { color: 'primary' },
 }
 
 export const propTypes = {

@@ -14,6 +14,7 @@ const NavBar = ({
   onSearchSubmit,
   labelVariant,
   router,
+  labelStyles,
   styles,
 }) => {
   return (
@@ -78,7 +79,7 @@ const NavBar = ({
                     name={icon}
                     label={label}
                     color={_color}
-                    labelStyles={{ color: _color }}
+                    labelStyles={{ ...labelStyles, color: _color }}
                     labelVariant={labelVariant}
                     size={iconStyles.size}
                     background={!!iconStyles.backgroundColor}
