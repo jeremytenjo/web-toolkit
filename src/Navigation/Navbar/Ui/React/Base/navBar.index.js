@@ -12,7 +12,7 @@ const NavBar = ({
   data,
   onInput,
   onSearchSubmit,
-  labelVariant,
+  labelProps,
   router,
   labelStyles,
   styles,
@@ -80,7 +80,7 @@ const NavBar = ({
                     label={label}
                     color={_color}
                     labelStyles={{ ...labelStyles, color: _color }}
-                    labelVariant={labelVariant}
+                    labelProps={labelProps}
                     size={iconStyles.size}
                     background={!!iconStyles.backgroundColor}
                     backgroundColor={iconStyles.backgroundColor}
