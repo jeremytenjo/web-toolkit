@@ -53,6 +53,7 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
               : isActive
               ? styles.color
               : 'grey'
+            debugger
             const {
               styles: labelSyles,
               variant: labelVariant = 'navbar',
