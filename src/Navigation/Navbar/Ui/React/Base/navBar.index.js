@@ -51,9 +51,9 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
             const _color = iconStyles.color
               ? iconStyles.color
               : isActive
-              ? styles.color
+              ? styles.color || 'primary'
               : 'grey'
-            debugger
+
             const {
               styles: labelSyles,
               variant: labelVariant = 'navbar',
