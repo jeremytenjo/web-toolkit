@@ -21,20 +21,12 @@ const Child = () => {
   return (
     <>
       <B title='Example 1' noBackground style={{ width: 'auto' }}>
-        <Bar
-          router={router}
-          data={data}
-          activeColor='primary'
-          defaultColor='grey'
-          onInput={testFileInput}
-        />
+        <Bar router={router} data={data} onInput={testFileInput} />
       </B>
       <B title='Example 2' noBackground style={{ width: 'auto' }}>
         <Bar
           router={router}
           data={data2}
-          activeColor='primary'
-          defaultColor='grey'
           onInput={testFileInput}
           onSearchSubmit={(value) => console.log(value)}
         />
@@ -52,8 +44,6 @@ const Child = () => {
         <Bar
           router={router}
           data={data2}
-          activeColor='primary'
-          defaultColor='grey'
           onInput={testFileInput}
           onSearchSubmit={(value) => console.log(value)}
         />

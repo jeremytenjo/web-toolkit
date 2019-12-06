@@ -45,7 +45,7 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
               splitpathname === '/' ? '/' : `/${splitpathname}`
             const isActive = currentpathname === currentUrl
             const inputProps = file ? { onInput } : null
-            const key = label || icon || currentUrl || index
+            const key = label.text || icon || currentUrl || index
             const isPlain = iconStyles.plain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
             const _color = iconStyles.color
