@@ -106,4 +106,8 @@ letter-spacing: 0.4px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
+.typography-navbar {
+  font-family:  var(--fontPrimary);
+  font-size: 10px;
+}
 `

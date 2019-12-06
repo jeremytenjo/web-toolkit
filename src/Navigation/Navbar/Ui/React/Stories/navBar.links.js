@@ -1,11 +1,11 @@
 export default [
   {
-    label: 'Explore',
+    label: { text: 'Explore' },
     icon: 'camera/material',
     url: '/',
   },
   {
-    label: 'Schedule',
+    label: { text: 'Schedule' },
     icon: 'phone/material',
     url: 'schedule',
   },
@@ -21,7 +21,7 @@ export default [
     },
   },
   {
-    label: 'Chat',
+    label: { text: 'Chat' },
     icon: 'calendar/feather',
     url: 'chat',
   },

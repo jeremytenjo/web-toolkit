@@ -1,6 +1,6 @@
 export default [
   {
-    label: 'MOVIES',
+    label: { text: 'MOVIES' },
     icon: 'film/material',
     url: 'movies',
   },
@@ -17,7 +17,7 @@ export default [
     },
   },
   {
-    label: 'TV',
+    label: { text: 'TV' },
     icon: 'tv/material',
     url: 'schedule',
   },

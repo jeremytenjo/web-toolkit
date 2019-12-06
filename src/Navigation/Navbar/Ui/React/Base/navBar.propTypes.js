@@ -1,15 +1,14 @@
 import { func, object, shape } from 'prop-types'
 
 export const defaultProps = {
-  labelVariant: 'body2',
-  onClick: () => null,
-  onSearchSubmit: () => null,
   styles: {
     color: 'primary',
     backgroundColor: 'whiteOpaque',
     boxShadow: 2,
   },
-  labelStyles: { color: 'primary' },
+  label: { variant: 'body2', styles: { color: 'primary' } },
+  onClick: () => null,
+  onSearchSubmit: () => null,
 }
 
 export const propTypes = {

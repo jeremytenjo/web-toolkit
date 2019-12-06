@@ -7,7 +7,6 @@ export const defaultProps = {
   onClick: () => null,
   background: null,
   size: 45,
-  label: null,
   backgroundColor: 'primary',
   labelStyles: { color: 'primaryDarker' },
   noBackground: null,
@@ -17,7 +16,7 @@ export const defaultProps = {
   link: null,
   inputProps: null,
   plain: null,
-  labelProps: { tag: 'span', variant: 'body2' },
+  label: { tag: 'span', variant: 'body2' },
   router: { push: () => null },
 }
 

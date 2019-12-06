@@ -28,12 +28,10 @@ const Icon = ({
   color,
   onClick,
   size,
-  label,
   noBackground,
   dark,
   noBackgroundChange,
   outlined,
-  labelStyles,
   link,
   inputProps,
   backgroundColor,
@@ -41,7 +39,7 @@ const Icon = ({
   backgroundSize,
   center,
   router,
-  labelProps,
+  label,
 }) => {
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
@@ -88,9 +86,7 @@ const Icon = ({
           >
             {IconComp}
           </WrapperIcon>
-          {label && (
-            <Typogrgraphy styles={labelStyles} text={label} {...labelProps} />
-          )}
+          {label && <Typogrgraphy {...label} />}
         </Wrapper>
       </WrappingComp>
     </Suspense>

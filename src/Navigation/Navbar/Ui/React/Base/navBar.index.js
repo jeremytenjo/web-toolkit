@@ -8,15 +8,7 @@ import SearchIcon from '../../../../../Data-Display/Icon/Ui/React/Special/Search
 import { defaultProps, propTypes } from './navBar.propTypes'
 import { Wrapper } from './navBar.styles'
 
-const NavBar = ({
-  data,
-  onInput,
-  onSearchSubmit,
-  labelProps,
-  router,
-  labelStyles,
-  styles,
-}) => {
+const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
   return (
     <Wrapper styles={styles}>
       <List
@@ -33,7 +25,7 @@ const NavBar = ({
               file = null,
               src = null,
               icon,
-              label,
+              label = {},
               top,
               url,
               iconStyles = { plain: true },
@@ -53,7 +45,7 @@ const NavBar = ({
               splitpathname === '/' ? '/' : `/${splitpathname}`
             const isActive = currentpathname === currentUrl
             const inputProps = file ? { onInput } : null
-            const key = label || currentUrl || icon || index
+            const key = label || icon || currentUrl || index
             const isPlain = iconStyles.plain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
             const _color = iconStyles.color
@@ -61,6 +53,15 @@ const NavBar = ({
               : isActive
               ? styles.color
               : 'grey'
+            const {
+              styles: labelSyles,
+              variant: labelVariant = 'navbar',
+            } = label
+            const labelProps = {
+              ...label,
+              variant: labelVariant,
+              styles: { ...labelSyles, color: _color },
+            }
 
             const handleClick = () => {
               url && push(`/${url}`)
@@ -77,10 +78,8 @@ const NavBar = ({
                 ) : icon ? (
                   <Icon
                     name={icon}
-                    label={label}
                     color={_color}
-                    labelStyles={{ ...labelStyles, color: _color }}
-                    labelProps={labelProps}
+                    label={labelProps}
                     size={iconStyles.size}
                     background={!!iconStyles.backgroundColor}
                     backgroundColor={iconStyles.backgroundColor}
