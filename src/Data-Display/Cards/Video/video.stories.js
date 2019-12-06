@@ -46,6 +46,7 @@ const Styles = () => {
           </B>
           <B title={`${title} - isTv`} key={Math.random()} noBackground>
             <Mod
+              onPlayNext={(e) => console.log(e)}
               poster={poster}
               title={titleTest}
               overview={overview}

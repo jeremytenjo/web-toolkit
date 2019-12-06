@@ -34,7 +34,7 @@ const CardMovie1 = ({
   selectProps,
   posterAlt,
   lastEpWatched,
-  onPlayNextClick,
+  onPlayNext,
   ...rest
 }) => {
   const [nextEpisode, setnextEpisode] = useState(null)
@@ -45,13 +45,31 @@ const CardMovie1 = ({
 
   useEffect(() => {
     createNextEp()
-  }, [])
+  }, [lastEpWatched])
 
   const createNextEp = () => {
     if (lastEpWatched) {
       const { season, episode } = lastEpWatched
-      // create next episdoe and season
+      const nextSeason = parseInt(season, 10) + 1
+      const nextEp = parseInt(episode, 10) + 1
+      const episodesInCurrentSeason = parseInt(episodes.length, 10)
+      const numberOfSeasons = parseInt(seasons.length, 10)
+      const isThereNextEpisodeInCurrentSeason =
+        nextEp <= episodesInCurrentSeason
+
+      if (isThereNextEpisodeInCurrentSeason) {
+        setnextEpisode({ nextEpisode: nextEp, season: parseInt(season, 10) })
+      } else {
+        const isThereNextSeason = nextSeason <= numberOfSeasons
+        if (isThereNextSeason) {
+          setnextEpisode({ nextEpisode: 1, season: nextSeason })
+        }
+      }
     }
+  }
+
+  const handlePlayNext = () => {
+    onPlayNext({ nextEpisode })
   }
 
   const handleOnPlay = () => onPlay(rest)
@@ -140,18 +158,20 @@ const CardMovie1 = ({
 
         {isTv && (
           <>
-            {lastEpWatched && <Typography text={label} variant='subtitle2' />}
             {nextEpisode && (
-              <Typography
-                text='Play next episode'
-                variant='subtitle1'
-                styles={{
-                  color: 'primary',
-                  cursor: 'pointer',
-                  userSelect: 'none',
-                }}
-                onClick={onPlayNextClick}
-              />
+              <>
+                <Typography text={label} variant='subtitle2' />
+                <Typography
+                  text='Play next episode'
+                  variant='subtitle1'
+                  styles={{
+                    color: 'primary',
+                    cursor: 'pointer',
+                    userSelect: 'none',
+                  }}
+                  onClick={handlePlayNext}
+                />
+              </>
             )}
           </>
         )}
