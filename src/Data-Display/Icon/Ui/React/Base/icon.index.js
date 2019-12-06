@@ -92,7 +92,7 @@ const Icon = ({
           </WrapperIcon>
           {label && (
             <Typogrgraphy
-              color={labelColor}
+              styles={{ color: labelColor }}
               variant={labelVariant}
               text={label}
             />
