@@ -29,7 +29,7 @@ export const propTypes = {
   background: bool,
   noBackground: bool,
   size: number,
-  label: string,
+  label: object,
   dark: bool,
   noBackgroundChange: bool,
   plain: bool,
