@@ -28,8 +28,8 @@ const IconSearch = ({
 
   return (
     <>
-      <Box {...Wrapper}>
-        <Box {...WrapperInput}>
+      <Box styles={Wrapper}>
+        <Box styles={WrapperInput}>
           <Animation show={show}>
             <Form onSubmitSuccess={onSubmit}>
               <Textfield name={inputName} placeholder='Search...' />
