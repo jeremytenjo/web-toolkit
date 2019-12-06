@@ -19,6 +19,7 @@ export const defaultProps = {
   link: null,
   inputProps: null,
   plain: null,
+  labelProps: null,
   router: { push: () => null },
 }
 

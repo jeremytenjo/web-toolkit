@@ -42,7 +42,7 @@ const Icon = ({
   backgroundSize,
   center,
   router,
-  ...restStyles
+  labelProps,
 }) => {
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
@@ -86,7 +86,6 @@ const Icon = ({
             isStroke={isStroke}
             backgroundSize={backgroundSize}
             center={center}
-            {...restStyles}
           >
             {IconComp}
           </WrapperIcon>
@@ -95,6 +94,7 @@ const Icon = ({
               styles={labelStyles}
               variant={labelVariant}
               text={label}
+              {...labelProps}
             />
           )}
         </Wrapper>
