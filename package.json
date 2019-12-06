@@ -60,7 +60,7 @@
     "@babel/core": "^7.7.2",
     "@babel/plugin-syntax-throw-expressions": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.5.0",
-    "@storybook/react": "^5.2.3",
+    "@storybook/react": "^5.2.8",
     "@tenjojeremy/eslint-config": "^1.7.0",
     "@tenjojeremy/webpack-config": "^1.9.0",
     "babel-loader": "^8.0.6",
