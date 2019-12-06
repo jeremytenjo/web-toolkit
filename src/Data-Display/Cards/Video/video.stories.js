@@ -53,7 +53,7 @@ const Styles = () => {
               moreLinks={moreLinks}
               onLoadMore={onLoadMore}
               onPlay={onPlay}
-              lastEpWatched='S01 E02'
+              lastEpWatched={{ season: '01', episode: '02' }}
               onFavoriteToggle={onFavoriteToggle}
               isTv
               seasons={[

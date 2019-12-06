@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useState, useEffect } from 'react'
 
 import Box from '../../../../Box/Ui/React/box.index'
 import Poster from '../../../Poster/Ui/React/Styles/1/poster.1.index'
@@ -37,8 +37,22 @@ const CardMovie1 = ({
   onPlayNextClick,
   ...rest
 }) => {
+  const [nextEpisode, setnextEpisode] = useState(null)
   const favIcon = favorite ? `${starIcon}-filled` : starIcon
   const starLabel = favorite ? starLabelIsFavorite : starLabelIsNotFavorite
+  const { season, episode } = lastEpWatched || {}
+  let label = `Last episode watched: S${season}E${episode}`
+
+  useEffect(() => {
+    createNextEp()
+  }, [])
+
+  const createNextEp = () => {
+    if (lastEpWatched) {
+      const { season, episode } = lastEpWatched
+      // create next episdoe and season
+    }
+  }
 
   const handleOnPlay = () => onPlay(rest)
   const handleLoadMore = () => onLoadMore(rest)
@@ -126,22 +140,19 @@ const CardMovie1 = ({
 
         {isTv && (
           <>
-            {lastEpWatched && (
+            {lastEpWatched && <Typography text={label} variant='subtitle2' />}
+            {nextEpisode && (
               <Typography
-                text={`Last episode watched: ${lastEpWatched}`}
-                variant='subtitle2'
+                text='Play next episode'
+                variant='subtitle1'
+                styles={{
+                  color: 'primary',
+                  cursor: 'pointer',
+                  userSelect: 'none',
+                }}
+                onClick={onPlayNextClick}
               />
             )}
-            <Typography
-              text='Play next episode'
-              variant='subtitle1'
-              styles={{
-                color: 'primary',
-                cursor: 'pointer',
-                userSelect: 'none',
-              }}
-              onClick={onPlayNextClick}
-            />
           </>
         )}
       </Box>
