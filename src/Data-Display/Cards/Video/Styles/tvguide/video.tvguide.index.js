@@ -69,7 +69,7 @@ const CardMovie1 = ({
   }
 
   const handlePlayNext = () => {
-    onPlayNext({ nextEpisode })
+    onPlayNext(nextEpisode)
   }
 
   const handleOnPlay = () => onPlay(rest)
