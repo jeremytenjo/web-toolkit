@@ -98,7 +98,7 @@ const CardMovie1 = ({
             <Icon
               name={plusIcon}
               color='primaryDarker'
-              label={plusLabel}
+              label={{ text: plusLabel, variant: 'body2' }}
               onClick={handleLoadMore}
               background
               backgroundColor={iconBackgroundColor}
@@ -108,7 +108,7 @@ const CardMovie1 = ({
           <Icon
             name={playIcon}
             color='primaryDarker'
-            label={playLabel}
+            label={{ text: playLabel, variant: 'body2' }}
             onClick={handleOnPlay}
             background
             backgroundColor={iconBackgroundColor}
@@ -117,7 +117,7 @@ const CardMovie1 = ({
           <Icon
             name={favIcon}
             color='primaryDarker'
-            label={starLabel}
+            label={{ text: starLabel, variant: 'body2' }}
             background
             backgroundColor={iconBackgroundColor}
             onClick={handleFavoriteToggle}
