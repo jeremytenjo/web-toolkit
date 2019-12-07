@@ -74,7 +74,7 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
                   <SearchIcon
                     onSubmit={onSearchSubmit}
                     icon={icon}
-                    iconStyles={iconStyles}
+                    styles={iconStyles}
                   />
                 ) : icon ? (
                   <Icon

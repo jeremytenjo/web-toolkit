@@ -16,6 +16,7 @@ const IconSearch = ({
   onSubmit,
   boxShadow,
   inputName,
+  styles,
 }) => {
   const [show, setShow] = useState(null)
   const toggleShow = () => setShow(!show)
@@ -38,6 +39,7 @@ const IconSearch = ({
         </Box>
 
         <Icon
+          style={styles}
           onClick={toggleShow}
           name={show ? closeIcon : mainIcon}
           backgroundColor={backgroundColor}
