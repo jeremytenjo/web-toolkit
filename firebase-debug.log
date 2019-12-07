@@ -1,0 +1,49 @@
+[debug] [2019-12-07T01:42:50.749Z] ----------------------------------------------------------------------
+[debug] [2019-12-07T01:42:50.754Z] Command:       C:\Program Files\nodejs\node.exe C:\Dev\Personal_Projects\Web-Toolkit\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-12-07T01:42:50.754Z] CLI Version:   7.7.0
+[debug] [2019-12-07T01:42:50.754Z] Platform:      win32
+[debug] [2019-12-07T01:42:50.754Z] Node Version:  v12.13.1
+[debug] [2019-12-07T01:42:50.755Z] Time:          Fri Dec 06 2019 18:42:50 GMT-0700 (Mountain Standard Time)
+[debug] [2019-12-07T01:42:50.755Z] ----------------------------------------------------------------------
+[debug] [2019-12-07T01:42:50.755Z] 
+[debug] [2019-12-07T01:42:50.763Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-07T01:42:50.764Z] > authorizing via signed-in user
+[debug] [2019-12-07T01:42:50.764Z] [iam] checking project tenjo-web-toolkit for permissions ["firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2019-12-07T01:42:50.765Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-12-07T01:42:50.766Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-12-07T01:42:50.958Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-07T01:42:50.975Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tenjo-web-toolkit:testIamPermissions  
+
+[debug] [2019-12-07T01:42:51.325Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-07T01:42:51.328Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tenjo-web-toolkit  
+ 
+[debug] [2019-12-07T01:42:51.626Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'tenjo-web-toolkit'...
+[info] 
+[info] i  deploying storage, hosting
+[debug] [2019-12-07T01:42:51.664Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/tenjo-web-toolkit  
+ 
+[debug] [2019-12-07T01:42:52.118Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2019-12-07T01:42:52.121Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/tenjo-web-toolkit:test  
+
+[debug] [2019-12-07T01:42:52.341Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[debug] [2019-12-07T01:42:52.349Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/tenjo-web-toolkit/versions  
+
+[debug] [2019-12-07T01:42:53.474Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-07T01:42:53.479Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/tenjo-web-toolkit/releases?pageSize=10&pageToken=  
+ 
+[debug] [2019-12-07T01:42:53.698Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-07T01:42:53.699Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/tenjo-web-toolkit/rulesets/d89f143a-b3c4-456b-8847-84d1fcdc9412  
+ 
+[debug] [2019-12-07T01:42:53.848Z] <<< HTTP RESPONSE 200
+[info] i  storage: latest version of storage.rules already up to date, skipping upload...
+[info] i  hosting[tenjo-web-toolkit]: beginning deploy...
+[info] i  hosting[tenjo-web-toolkit]: found 32 files in .storybook/storybook-build
+[debug] [2019-12-07T01:42:54.088Z] [hosting] hash cache [LnN0b3J5Ym9va1xzdG9yeWJvb2stYnVpbGQ] stored for 32 files
+[debug] [2019-12-07T01:42:54.088Z] [hosting][hash queue][FINAL]
+[debug] [2019-12-07T01:42:54.088Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/tenjo-web-toolkit/versions/6ef53405a53072ce:populateFiles  
+ <request body omitted>

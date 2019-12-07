@@ -30,8 +30,10 @@ export default ({ url, method = 'get' }) => {
         res = await res.json()
       }
       setResponse(res)
+      return res
     } catch (e) {
       setError(e)
+      return { error: e }
     } finally {
       setLoading(false)
     }
