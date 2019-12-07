@@ -162,7 +162,7 @@ const CardMovie1 = ({
           <>
             {lastAirDate && (
               <Typography
-                text={`Last episode aired on ${formatDate(
+                text={`Last episode aired ${formatDate(
                   new Date(lastAirDate),
                   'MMMM d',
                 )}`}
