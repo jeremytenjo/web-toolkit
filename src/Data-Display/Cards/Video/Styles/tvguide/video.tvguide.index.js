@@ -160,21 +160,21 @@ const CardMovie1 = ({
 
         {isTv && (
           <>
+            {lastAirDate && (
+              <Typography
+                text={`Last episode aired on ${formatDate(
+                  new Date(lastAirDate),
+                  'MMMM d',
+                )}`}
+                variant='navbar'
+                styles={{
+                  cursor: 'pointer',
+                  userSelect: 'none',
+                }}
+              />
+            )}
             {nextEpisode && (
               <>
-                {lastAirDate && (
-                  <Typography
-                    text={`Last episode aired on ${formatDate(
-                      new Date(lastAirDate),
-                      'MMMM dd',
-                    )}`}
-                    variant='navbar'
-                    styles={{
-                      cursor: 'pointer',
-                      userSelect: 'none',
-                    }}
-                  />
-                )}
                 <Typography text={label} variant='subtitle2' />
                 <Typography
                   text='Play next episode'
