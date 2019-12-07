@@ -36,7 +36,7 @@ const CardMovie1 = ({
   posterAlt,
   lastEpWatched,
   onPlayNext,
-  lastAirDate,
+  lastAiredEpisode,
   ...rest
 }) => {
   const [nextEpisode, setnextEpisode] = useState(null)
@@ -160,12 +160,12 @@ const CardMovie1 = ({
 
         {isTv && (
           <>
-            {lastAirDate && (
+            {lastAiredEpisode && (
               <Typography
                 text={`Last episode aired ${formatDate(
-                  new Date(lastAirDate),
+                  new Date(lastAiredEpisode.lastAirDate),
                   'MMMM d',
-                )}`}
+                )} (S${lastAiredEpisode.season}/E${lastAiredEpisode.episode})`}
                 variant='navbar'
                 styles={{
                   cursor: 'pointer',

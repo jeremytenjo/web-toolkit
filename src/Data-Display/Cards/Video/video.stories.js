@@ -46,7 +46,11 @@ const Styles = () => {
           </B>
           <B title={`${title} - isTv`} key={Math.random()} noBackground>
             <Mod
-              lastAirDate='2019-07-31'
+              lastAiredEpisode={{
+                lastAirDate: '2019-07-31',
+                episode: 1,
+                season: 2,
+              }}
               onPlayNext={(e) => console.log(e)}
               poster={poster}
               title={titleTest}

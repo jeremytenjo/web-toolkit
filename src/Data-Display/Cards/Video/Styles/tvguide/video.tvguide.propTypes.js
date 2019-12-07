@@ -1,4 +1,4 @@
-import { string, func, array, bool } from 'prop-types'
+import { string, func, array, bool, object } from 'prop-types'
 
 export const defaultProps = {
   poster: null,
@@ -18,7 +18,7 @@ export const defaultProps = {
   posterAlt: 'poster',
   favorite: null,
   moreLinks: null,
-  lastAirDate: null,
+  lastAiredEpisode: null,
   seasons: [],
   episodes: [],
   lastEpWatched: null,
@@ -35,7 +35,7 @@ export const propTypes = {
   posterAlt: string,
   title: string,
   overview: string,
-  lastAirDate: string,
+  lastAiredEpisode: object,
   iconBackgroundColor: string,
   favorite: bool,
   isTv: bool,
