@@ -1,4 +1,5 @@
 import React, { memo, useState, useEffect } from 'react'
+import formatDate from 'date-fns/format'
 
 import Box from '../../../../Box/Ui/React/box.index'
 import Poster from '../../../Poster/Ui/React/Styles/1/poster.1.index'
@@ -35,6 +36,7 @@ const CardMovie1 = ({
   posterAlt,
   lastEpWatched,
   onPlayNext,
+  lastAirDate,
   ...rest
 }) => {
   const [nextEpisode, setnextEpisode] = useState(null)
@@ -160,6 +162,19 @@ const CardMovie1 = ({
           <>
             {nextEpisode && (
               <>
+                {lastAirDate && (
+                  <Typography
+                    text={`Last episode aired on ${formatDate(
+                      new Date(lastAirDate),
+                      'MMMM dd',
+                    )}`}
+                    variant='navbar'
+                    styles={{
+                      cursor: 'pointer',
+                      userSelect: 'none',
+                    }}
+                  />
+                )}
                 <Typography text={label} variant='subtitle2' />
                 <Typography
                   text='Play next episode'
