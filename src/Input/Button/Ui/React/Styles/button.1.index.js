@@ -30,8 +30,7 @@ const StyledButton = styled.button`
   }
 
   /* Active */
-  ${({ active, color }) =>
-    active && `border: 2px solid var(--color-${color}Darker);`}
+  ${({ active, color }) => active && `border: 2px solid var(--color-${color}Darker);`}
 
   /* Disabled */
   ${({ disabled }) =>
@@ -96,11 +95,6 @@ const LoadingCon = styled.div`
 
 export default (props) => (
   <>
-    <Button
-      Wrapper={Wrapper}
-      StyledButton={StyledButton}
-      LoadingCon={LoadingCon}
-      {...props}
-    />
+    <Button Wrapper={Wrapper} StyledButton={StyledButton} LoadingCon={LoadingCon} {...props} />
   </>
 )

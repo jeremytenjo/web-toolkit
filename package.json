@@ -39,10 +39,15 @@
       "jest --passWithNoTests"
     ]
   },
+  "eslintConfig": {
+    "extends": "@tenjojeremy/eslint-config"
+  },
+  "prettier": "@tenjojeremy/prettier-config",
   "dependencies": {
     "@material-ui/core": "^4.3.2",
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-docs": "^5.2.3",
+    "@tenjojeremy/prettier-config": "^0.3.0",
     "decamelize": "^3.2.0",
     "node-emoji": "^1.10.0",
     "react-bottom-scroll-listener": "^3.0.0",
@@ -62,7 +67,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.5.0",
     "@storybook/react": "^5.2.8",
     "@tenjojeremy/eslint-config": "^1.7.0",
-    "@tenjojeremy/webpack-config": "^1.9.0",
+    "@tenjojeremy/webpack-config": "^1.18.0",
     "babel-loader": "^8.0.6",
     "blob": "^0.0.5",
     "cypress": "^3.5.0",
@@ -73,7 +78,7 @@
     "fs": "^0.0.1-security",
     "husky": "^3.0.3",
     "image-compressor.js": "^1.1.4",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.10",

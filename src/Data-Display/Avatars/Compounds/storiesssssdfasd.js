@@ -8,7 +8,6 @@ const rating = 5
 const photoUrl =
   'https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'
 
-storiesOf('Data-Display|Avatar/Ui/React/Compounds', module).add(
-  'StylistsInfo',
-  () => <StylistsInfo name={name} rating={rating} photoUrl={photoUrl} />,
-)
+storiesOf('Data-Display|Avatar/Ui/React/Compounds', module).add('StylistsInfo', () => (
+  <StylistsInfo name={name} rating={rating} photoUrl={photoUrl} />
+))

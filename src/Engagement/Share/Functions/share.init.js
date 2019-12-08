@@ -3,10 +3,8 @@ import ShareSchema from '../share.schema'
 const shareFunction = async (data) => {
   let dataIsValid = null
   let errorMessage_Not_Supported = 'Fail: Web Share is not supported'
-  let errorMessage_Web_Share_Fail =
-    'Fail: Sorry there was an issue with webshare please open big-web-features'
-  let errorMessage_Schema_Fail =
-    'Fail: Data has to be object {title, text, url} all strings'
+  let errorMessage_Web_Share_Fail = 'Fail: Sorry there was an issue with webshare please open big-web-features'
+  let errorMessage_Schema_Fail = 'Fail: Data has to be object {title, text, url} all strings'
 
   if (!navigator.share) return { errorMessage: errorMessage_Not_Supported }
 

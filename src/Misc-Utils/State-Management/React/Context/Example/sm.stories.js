@@ -16,7 +16,4 @@ const App = () => {
   )
 }
 
-storiesOf('Misc-Utils|State-Management/React', module).add(
-  'Context API',
-  () => <App />,
-)
+storiesOf('Misc-Utils|State-Management/React', module).add('Context API', () => <App />)

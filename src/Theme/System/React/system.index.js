@@ -14,9 +14,7 @@ export default (props) => {
     const isArray = Array.isArray(value)
     const _value = varName ? `var(--${varName}-${value})` : value
 
-    return isArray
-      ? handleMediaQueries({ key, value, varName })
-      : `${_key}: ${_value};`
+    return isArray ? handleMediaQueries({ key, value, varName }) : `${_key}: ${_value};`
   }
 
   const handleMediaQueries = ({ key, value, varName }) => {
@@ -41,18 +39,9 @@ export default (props) => {
   }
 
   Object.entries(styles).forEach(([key, value]) => {
-    if (
-      key.includes('padding') ||
-      key.includes('margin') ||
-      key.includes('gap') ||
-      key.includes('Gap')
-    )
+    if (key.includes('padding') || key.includes('margin') || key.includes('gap') || key.includes('Gap'))
       array.push(getString({ varName: 'spacing', key, value }))
-    else if (
-      key.includes('color') ||
-      key.includes('Color') ||
-      key.includes('fill')
-    )
+    else if (key.includes('color') || key.includes('Color') || key.includes('fill'))
       array.push(getString({ varName: 'color', key, value }))
     else array.push(getString({ key, value }))
   })

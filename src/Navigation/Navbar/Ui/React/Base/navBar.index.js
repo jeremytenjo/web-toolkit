@@ -20,19 +20,7 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
         }}
       >
         {data.map(
-          (
-            {
-              file = null,
-              src = null,
-              icon,
-              label = {},
-              top,
-              url,
-              iconStyles = { plain: true },
-              search,
-            },
-            index,
-          ) => {
+          ({ file = null, src = null, icon, label = {}, top, url, iconStyles = { plain: true }, search }, index) => {
             const {
               history: { push },
               location: { pathname },
@@ -41,23 +29,15 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
             const splitUrl = url ? url.split('/')[0] : undefined
             const currentUrl = splitUrl === '/' ? '/' : `/${splitUrl}`
             const splitpathname = pathname ? pathname.split('/')[1] : undefined
-            const currentpathname =
-              splitpathname === '/' ? '/' : `/${splitpathname}`
+            const currentpathname = splitpathname === '/' ? '/' : `/${splitpathname}`
             const isActive = currentpathname === currentUrl
             const inputProps = file ? { onInput } : null
             const key = label.text || icon || currentUrl || index
             const isPlain = iconStyles.plain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
-            const _color = iconStyles.color
-              ? iconStyles.color
-              : isActive
-              ? styles.color || 'primary'
-              : 'grey'
+            const _color = iconStyles.color ? iconStyles.color : isActive ? styles.color || 'primary' : 'grey'
 
-            const {
-              styles: labelSyles,
-              variant: labelVariant = 'navbar',
-            } = label
+            const { styles: labelSyles, variant: labelVariant = 'navbar' } = label
             const labelProps = {
               ...label,
               variant: labelVariant,
@@ -71,11 +51,7 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
             return (
               <div key={key} style={iconPosition} onClick={handleClick}>
                 {search ? (
-                  <SearchIcon
-                    onSubmit={onSearchSubmit}
-                    icon={icon}
-                    styles={iconStyles}
-                  />
+                  <SearchIcon onSubmit={onSearchSubmit} icon={icon} styles={iconStyles} />
                 ) : icon ? (
                   <Icon
                     name={icon}

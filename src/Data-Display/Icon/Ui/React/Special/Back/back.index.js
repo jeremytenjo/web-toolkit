@@ -2,12 +2,7 @@ import React, { memo } from 'react'
 
 import Icon from '../../Base/icon.index'
 
-const IconBack = ({
-  onGoBack = () => null,
-  to = null,
-  icon = 'arrow/material',
-  router = { push: () => null },
-}) => {
+const IconBack = ({ onGoBack = () => null, to = null, icon = 'arrow/material', router = { push: () => null } }) => {
   const { push } = router
 
   // Functions

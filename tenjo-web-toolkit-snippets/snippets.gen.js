@@ -3,8 +3,7 @@ const fs = require('fs')
 const glob = require('glob')
 var emoji = require('node-emoji')
 
-const capitalizeFirstLetter = (string) =>
-  string.charAt(0).toUpperCase() + string.slice(1)
+const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1)
 
 // 1. Loop though files and create string with snippets
 const frameworks = [{ name: 'React', shortName: 'r' }]
@@ -65,19 +64,13 @@ glob(`build/**/*.index.js`, function(err, files) {
   const successEmogi = emoji.get('white_check_mark')
 
   // 2. create snipet file and attach created snippets
-  fs.writeFile(
-    'tenjo-web-toolkit-snippets/snippets/snippets.json',
-    fileString,
-    function(err) {
-      if (err) throw err
-      console.log(`${successEmogi}  snippet.json created`)
-    },
-  )
+  fs.writeFile('tenjo-web-toolkit-snippets/snippets/snippets.json', fileString, function(err) {
+    if (err) throw err
+    console.log(`${successEmogi}  snippet.json created`)
+  })
 
   // 3. Add snippets to README
-  fs.writeFile('tenjo-web-toolkit-snippets/README.md', fileString, function(
-    err,
-  ) {
+  fs.writeFile('tenjo-web-toolkit-snippets/README.md', fileString, function(err) {
     if (err) throw err
     console.log(`${successEmogi}  README.md created`)
   })

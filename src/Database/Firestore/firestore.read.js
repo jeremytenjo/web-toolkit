@@ -17,9 +17,7 @@ export default async (_userId, _collection, _payload) => {
 
     return resultsDocs
   } else {
-    throw new Error(
-      `Parameters with false need a value ${(userId, collection, payload)}`,
-    )
+    throw new Error(`Parameters with false need a value ${(userId, collection, payload)}`)
   }
 }
 
@@ -50,21 +48,13 @@ const getByCondition = async (userId, collection, payload) => {
       if (payload.sortBy && payload.where) {
         docsRef = await db
           .collection(collection)
-          .where(
-            payload.where.field,
-            payload.where.condition,
-            payload.where.value,
-          )
+          .where(payload.where.field, payload.where.condition, payload.where.value)
           .orderBy(payload.sortBy.field, payload.sortBy.type)
           .get()
       } else if (payload.where) {
         docsRef = await db
           .collection(collection)
-          .where(
-            payload.where.field,
-            payload.where.condition,
-            payload.where.value,
-          )
+          .where(payload.where.field, payload.where.condition, payload.where.value)
           .get()
       }
 

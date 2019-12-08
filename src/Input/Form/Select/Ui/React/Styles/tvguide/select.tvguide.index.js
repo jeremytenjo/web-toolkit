@@ -38,9 +38,7 @@ const Item = ({
         <Typogrgraphy text={label} variant={titleVariant} />
       </Box>
 
-      {title && (
-        <Typogrgraphy text={title} variant={titleVariant} color={titleColor} />
-      )}
+      {title && <Typogrgraphy text={title} variant={titleVariant} color={titleColor} />}
     </Box>
   )
 }

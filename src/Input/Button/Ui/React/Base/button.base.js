@@ -4,20 +4,14 @@ import Typography from '../../../../../Data-Display/Typography/Ui/React/typograp
 import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
 const ButtonIcon = lazy(() =>
-  import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
-  ),
+  import(/* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'),
 )
 const Dots = lazy(() =>
-  import(
-    /* webpackChunkName: 'LoadingDots' */ '../../../../../Feedback/Progress/Ui/React/Dots/dots.index'
-  ),
+  import(/* webpackChunkName: 'LoadingDots' */ '../../../../../Feedback/Progress/Ui/React/Dots/dots.index'),
 )
 
 const FileInput = lazy(() =>
-  import(
-    /* webpackChunkName: 'FileiNput' */ '../../../../../Media/Files/Ui/React/fileInput.index'
-  ),
+  import(/* webpackChunkName: 'FileiNput' */ '../../../../../Media/Files/Ui/React/fileInput.index'),
 )
 
 import { defaultProps, propTypes } from './button.base.propTypes'
@@ -40,13 +34,7 @@ const Button = ({
   inputProps,
 }) => {
   const spinnerRef = useRef(null)
-  const textColor = disabled
-    ? 'disabledDarker'
-    : outlined
-    ? 'white'
-    : type === 'FAB'
-    ? 'white'
-    : `${color}Darker`
+  const textColor = disabled ? 'disabledDarker' : outlined ? 'white' : type === 'FAB' ? 'white' : `${color}Darker`
 
   const WrappingComp = inputProps ? FileInput : Fragment
 

@@ -11,21 +11,9 @@ const StylistsInfo = ({ name, rating, src, onInfoClick, onRatingChange }) => {
 
   return (
     <Wrapper width={120}>
-      <Avatar
-        onClick={onInfoClick}
-        name={name}
-        rating={rating}
-        src={src}
-        radius={10}
-        size={size}
-      />
+      <Avatar onClick={onInfoClick} name={name} rating={rating} src={src} radius={10} size={size} />
       <StylistName onClick={onInfoClick}>{name}</StylistName>
-      <Rating
-        onRatingChange={onRatingChange}
-        value={rating}
-        starDimension='16'
-        starSpacing='1'
-      />
+      <Rating onRatingChange={onRatingChange} value={rating} starDimension='16' starSpacing='1' />
     </Wrapper>
   )
 }

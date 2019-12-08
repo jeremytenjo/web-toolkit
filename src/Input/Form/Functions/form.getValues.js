@@ -11,13 +11,7 @@ const serialize = function(form) {
     // console.log(field)
     // console.log(field.type)
     // Don't serialize fields without a name, submits, buttons, file and reset inputs, and disabled fields
-    if (
-      !field.name ||
-      field.disabled ||
-      field.type === 'reset' ||
-      field.type === 'submit' ||
-      field.type === 'button'
-    )
+    if (!field.name || field.disabled || field.type === 'reset' || field.type === 'submit' || field.type === 'button')
       continue
 
     // handle text, number, checkbox, radio fields

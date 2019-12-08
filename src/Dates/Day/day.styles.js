@@ -24,9 +24,7 @@ export const DayCon = styled.div`
 
   &:active {
     background-color: ${({ activeColor }) =>
-      activeColor
-        ? `var(--color-${activeColor}-background)`
-        : 'rgba(0, 0, 0, 0.1)'};
+      activeColor ? `var(--color-${activeColor}-background)` : 'rgba(0, 0, 0, 0.1)'};
   }
 
   ${({ activeColor, ...props }) =>

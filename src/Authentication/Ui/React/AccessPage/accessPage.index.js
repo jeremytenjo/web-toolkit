@@ -9,15 +9,7 @@ import Icon from '../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 
 import { defaultProps, propTypes } from './accessPage.propTypes'
 
-const AccessPage = ({
-  variation,
-  onSuccess,
-  logo,
-  name,
-  desc,
-  service,
-  providers,
-}) => {
+const AccessPage = ({ variation, onSuccess, logo, name, desc, service, providers }) => {
   const errorRef = useRef(null)
   const [errMessage, setErrMessage] = useState(null)
 
@@ -34,12 +26,7 @@ const AccessPage = ({
   }
 
   return (
-    <Box
-      name='access_wrapper'
-      backgroundColor={['white', 'primary']}
-      height='100%'
-      padding='none'
-    >
+    <Box name='access_wrapper' backgroundColor={['white', 'primary']} height='100%' padding='none'>
       <Box
         name='access_inner_wrapper'
         padding='none'
@@ -48,31 +35,15 @@ const AccessPage = ({
         alignContent='space-between'
         backgroundColor='white'
       >
-        <Box
-          name='Info'
-          justifyItems='center'
-          textAlign='center'
-          height='fit-content'
-        >
+        <Box name='Info' justifyItems='center' textAlign='center' height='fit-content'>
           <Image src={logo} size={93} />
           <Typography text={name} color='primary' />
           <Typography text={desc} />
         </Box>
 
-        <Box
-          name='providers'
-          alignItems='center'
-          textAlign='center'
-          height='fit-content'
-          gridGap='m'
-        >
+        <Box name='providers' alignItems='center' textAlign='center' height='fit-content' gridGap='m'>
           <Typography text='Continue with' />
-          <Box
-            name='providers_list'
-            gridAutoFlow='column'
-            justifyContent='center'
-            gridGap='xl'
-          >
+          <Box name='providers_list' gridAutoFlow='column' justifyContent='center' gridGap='xl'>
             {providers.map((p) => (
               <Icon
                 key={p}
@@ -88,12 +59,7 @@ const AccessPage = ({
           </Box>
 
           <Animation name='showHide' show={errMessage} el={errorRef} />
-          <Typography
-            text={errMessage}
-            variant='body2'
-            color='error'
-            ref={errorRef}
-          />
+          <Typography text={errMessage} variant='body2' color='error' ref={errorRef} />
         </Box>
       </Box>
     </Box>

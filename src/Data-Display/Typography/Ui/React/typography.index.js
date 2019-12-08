@@ -23,11 +23,7 @@ const Typography = ({ tag, variant, styles, onClick, text }) => {
     ${system}
   `
   return (
-    <El
-      styles={{ color: 'black', ...styles }}
-      className={className}
-      onClick={onClick}
-    >
+    <El styles={{ color: 'black', ...styles }} className={className} onClick={onClick}>
       {text}
     </El>
   )

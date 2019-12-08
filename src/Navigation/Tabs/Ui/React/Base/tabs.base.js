@@ -16,13 +16,7 @@ const Tabs = ({ Tab, data, color, font, style, router }) => {
         const active = pathname === link
 
         return (
-          <Tab
-            color={color}
-            key={label}
-            onClick={() => push(link)}
-            font={font}
-            active={active}
-          >
+          <Tab color={color} key={label} onClick={() => push(link)} font={font} active={active}>
             <span>{label}</span>
           </Tab>
         )

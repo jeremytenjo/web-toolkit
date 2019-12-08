@@ -9,15 +9,7 @@ import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-AP
 import { defaultProps, propTypes } from './search.propTypes'
 import { Wrapper, WrapperInput } from './search.styles'
 
-const IconSearch = ({
-  mainIcon,
-  closeIcon,
-  backgroundColor,
-  onSubmit,
-  boxShadow,
-  inputName,
-  styles,
-}) => {
+const IconSearch = ({ mainIcon, closeIcon, backgroundColor, onSubmit, boxShadow, inputName, styles }) => {
   const [show, setShow] = useState(null)
   const toggleShow = () => setShow(!show)
 

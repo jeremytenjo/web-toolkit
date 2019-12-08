@@ -5,12 +5,7 @@ import checkInvalidValues from '../../Functions/form.checkInvalidValues'
 
 import { defaultProps, propTypes } from './form.propTypes'
 
-const Form = ({
-  children,
-  onSubmitSuccess,
-  onSubmitFail,
-  emptyFormMessage,
-}) => {
+const Form = ({ children, onSubmitSuccess, onSubmitFail, emptyFormMessage }) => {
   const formRef = useRef(null)
   const { isEmptyForm, setisEmptyForm } = useState(null)
 

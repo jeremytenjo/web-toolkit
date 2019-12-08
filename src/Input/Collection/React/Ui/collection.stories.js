@@ -10,11 +10,7 @@ const Variations = () => {
   return (
     <>
       <B title='default' noBackground>
-        <Collection
-          ItemComponent={Chip}
-          itemComponentTextKey='text'
-          placeholder='add'
-        />
+        <Collection ItemComponent={Chip} itemComponentTextKey='text' placeholder='add' />
       </B>
 
       <B title='not editable' noBackground>

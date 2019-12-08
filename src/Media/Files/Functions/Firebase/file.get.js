@@ -11,8 +11,6 @@ export default async (_userId, _collection, _payload) => {
 
     return uploadedFileData
   } else {
-    throw new Error(
-      `Parameters with false need a value ${(userId, collection, payload)}`,
-    )
+    throw new Error(`Parameters with false need a value ${(userId, collection, payload)}`)
   }
 }

@@ -1,7 +1,6 @@
 export default ({ email, password, photoURL: iconURL, name }) =>
   new Promise(async (resolve, reject) => {
-    const credentailApiSupported =
-      window.PasswordCredential || window.FederatedCredential
+    const credentailApiSupported = window.PasswordCredential || window.FederatedCredential
 
     if (credentailApiSupported) {
       try {

@@ -24,8 +24,6 @@ export default (data) => {
       }
     })
   } else {
-    throw new Error(
-      `Missing nesseasry params ${{ userId, collection, fnName, payload }}`,
-    )
+    throw new Error(`Missing nesseasry params ${{ userId, collection, fnName, payload }}`)
   }
 }

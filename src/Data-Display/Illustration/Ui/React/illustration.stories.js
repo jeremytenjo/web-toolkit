@@ -7,11 +7,7 @@ import List from '../../../List/Ui/React/list.index'
 const illustrationsReq = require.context('./', true, /.js$/)
 const illustrationsPaths = illustrationsReq.keys()
 
-const ignorePaths = [
-  'illustration.index',
-  'illustration.styles',
-  'illustration.stories',
-]
+const ignorePaths = ['illustration.index', 'illustration.styles', 'illustration.stories']
 
 const Illustrations = () => {
   const [vars, setvars] = useState([])
@@ -42,7 +38,4 @@ const Illustrations = () => {
   return <List>{vars}</List>
 }
 
-storiesOf('Data-Display|Illustrations/Ui/React', module).add(
-  'collection',
-  () => <Illustrations />,
-)
+storiesOf('Data-Display|Illustrations/Ui/React', module).add('collection', () => <Illustrations />)

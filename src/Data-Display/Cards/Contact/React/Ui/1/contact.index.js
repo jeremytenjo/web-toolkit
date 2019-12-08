@@ -6,24 +6,9 @@ import Rating from '../../../../../../Feedback/Rating/Ui/React/ratings.index'
 import Button from '../../../../../../Input/Button/Ui/React/Styles/button.1.index'
 
 import { defaultProps, propTypes } from './contact.propTypes'
-import {
-  Wrapper,
-  Info,
-  City,
-  Name,
-  ButtonCon,
-  AvatarInfoCOn,
-} from './contact.styles'
+import { Wrapper, Info, City, Name, ButtonCon, AvatarInfoCOn } from './contact.styles'
 
-const Contact = ({
-  name,
-  rating,
-  city,
-  onContactClick,
-  onAvatarClick,
-  photoUrl,
-  onChatBtnClick,
-}) => (
+const Contact = ({ name, rating, city, onContactClick, onAvatarClick, photoUrl, onChatBtnClick }) => (
   <Wrapper>
     <AvatarInfoCOn>
       <Avatar photoUrl={photoUrl} name={name} onClick={onAvatarClick} />
@@ -35,12 +20,7 @@ const Contact = ({
     </AvatarInfoCOn>
     <ButtonCon>
       <Button onClick={onContactClick} text='Book' />
-      <Icon
-        name='comment/material'
-        onCLick={onChatBtnClick}
-        color='primary'
-        dark
-      />
+      <Icon name='comment/material' onCLick={onChatBtnClick} color='primary' dark />
     </ButtonCon>
   </Wrapper>
 )

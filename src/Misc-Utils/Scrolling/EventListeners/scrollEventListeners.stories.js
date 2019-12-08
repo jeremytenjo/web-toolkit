@@ -29,6 +29,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Misc-Utils|Event Listeners/Scroll', module).add('Variations', () => (
-  <Variations />
-))
+storiesOf('Misc-Utils|Event Listeners/Scroll', module).add('Variations', () => <Variations />)

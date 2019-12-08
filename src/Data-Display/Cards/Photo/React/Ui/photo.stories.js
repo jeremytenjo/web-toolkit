@@ -25,22 +25,12 @@ const Variations = () => {
       <B title='style1 - in modal' noBackground>
         <button onClick={() => setmodal(true)}>OPEN </button>
 
-        <Modal
-          show={modal}
-          onClose={() => setmodal(false)}
-          animationStyle='showHide'
-        >
-          <Photo1
-            photoUrl={photoUrl}
-            menuOptions={cardOptions}
-            style={{ width: 300, height: 600 }}
-          />
+        <Modal show={modal} onClose={() => setmodal(false)} animationStyle='showHide'>
+          <Photo1 photoUrl={photoUrl} menuOptions={cardOptions} style={{ width: 300, height: 600 }} />
         </Modal>
       </B>
     </>
   )
 }
 
-storiesOf('Data-Display|Cards/Photo', module).add('styles', () => (
-  <Variations />
-))
+storiesOf('Data-Display|Cards/Photo', module).add('styles', () => <Variations />)

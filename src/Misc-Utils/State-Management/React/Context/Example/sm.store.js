@@ -13,8 +13,6 @@ const ProviderComposer = ({ contexts, children }) =>
     children,
   )
 
-const ContextProvider = ({ children }) => (
-  <ProviderComposer contexts={providers}>{children}</ProviderComposer>
-)
+const ContextProvider = ({ children }) => <ProviderComposer contexts={providers}>{children}</ProviderComposer>
 
 export default ContextProvider

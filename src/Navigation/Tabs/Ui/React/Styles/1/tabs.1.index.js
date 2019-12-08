@@ -19,12 +19,7 @@ const Tabs = ({ data, color, style, router }) => {
   //Template
   return (
     <Wrapper style={{ ...style }} color={color}>
-      <TabsMui
-        value={currentTabIndex}
-        indicatorColor={color}
-        textColor={color}
-        variant='fullWidth'
-      >
+      <TabsMui value={currentTabIndex} indicatorColor={color} textColor={color} variant='fullWidth'>
         {data.map((item) => (
           <Tab
             style={{

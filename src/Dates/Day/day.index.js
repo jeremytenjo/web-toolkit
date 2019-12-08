@@ -52,11 +52,7 @@ const Day = ({
 
       <StatusCon>
         {statuses.map((item) => (
-          <CircleIcon
-            {...circleDefaultProps}
-            key={item}
-            color={statusColors[item]}
-          />
+          <CircleIcon {...circleDefaultProps} key={item} color={statusColors[item]} />
         ))}
       </StatusCon>
     </Wrapper>

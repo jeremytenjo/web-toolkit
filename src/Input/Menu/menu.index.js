@@ -29,20 +29,11 @@ const Menu = ({ options, onSelect }) => {
       <Icon name='options/material' onClick={handleClick} />
 
       {optionsLength > 0 && (
-        <Menu_ui
-          id='simple-menu'
-          anchorEl={anchorEl}
-          open={!!anchorEl}
-          onClose={handleClose}
-        >
+        <Menu_ui id='simple-menu' anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
           {options.map(
             (option) =>
               option && (
-                <MenuItem
-                  key={option}
-                  data-option={option}
-                  onClick={handleClose}
-                >
+                <MenuItem key={option} data-option={option} onClick={handleClose}>
                   {option}
                 </MenuItem>
               ),

@@ -6,9 +6,7 @@ import { defaultProps, propTypes } from './poster.1.propTypes'
 import { Wrapper } from './poster.1.styles'
 
 const Typography = lazy(() =>
-  import(
-    /* webpackChunkName: 'Typography' */ '../../../../../../Typography/Ui/React/typography.index'
-  ),
+  import(/* webpackChunkName: 'Typography' */ '../../../../../../Typography/Ui/React/typography.index'),
 )
 const Animation = lazy(() =>
   import(
@@ -16,15 +14,7 @@ const Animation = lazy(() =>
   ),
 )
 
-const Poster1 = ({
-  src,
-  onClick,
-  alt,
-  loading,
-  backgroundColor,
-  size,
-  ...rest
-}) => {
+const Poster1 = ({ src, onClick, alt, loading, backgroundColor, size, ...rest }) => {
   const wrapperRef = useRef(null)
 
   const handleClick = () => onClick(rest)
@@ -46,12 +36,7 @@ const Poster1 = ({
       {src && <Image src={src} width={width} height={height} alt={alt} />}
       {!src && (
         <Suspense fallback={null}>
-          <Typography
-            text={alt}
-            color='white'
-            variant='caption'
-            textAlign='center'
-          />
+          <Typography text={alt} color='white' variant='caption' textAlign='center' />
         </Suspense>
       )}
 

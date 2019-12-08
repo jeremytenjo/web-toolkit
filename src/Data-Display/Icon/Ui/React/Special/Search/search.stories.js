@@ -15,15 +15,9 @@ const Variations = () => (
         marginTop: '50px',
       }}
     >
-      <SearchIcon
-        mainIcon='search/feather'
-        closeIcon='close/feather'
-        onSubmit={(value) => console.log(value)}
-      />
+      <SearchIcon mainIcon='search/feather' closeIcon='close/feather' onSubmit={(value) => console.log(value)} />
     </B>
   </>
 )
 
-storiesOf('Data-Display|Icon/React/Special', module).add('Search', () => (
-  <Variations />
-))
+storiesOf('Data-Display|Icon/React/Special', module).add('Search', () => <Variations />)

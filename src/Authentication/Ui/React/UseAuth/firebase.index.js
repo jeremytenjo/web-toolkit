@@ -29,9 +29,7 @@ export const AuthProvider = ({ children }) => {
       return { res }
     } else {
       // Check Credential Manager if not Signed in fiebase
-      const cmModule = await import(
-        '../../../Functions/WebApi/CredentialMangment/cm.get'
-      )
+      const cmModule = await import('../../../Functions/WebApi/CredentialMangment/cm.get')
       cmUser = await cmModule.default()
 
       if (cmUser) {

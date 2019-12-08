@@ -13,17 +13,10 @@ const Variations = () => {
   return (
     <>
       <B title='style1' noBackground>
-        <Contact
-          name={name}
-          rating={5}
-          city='Vancouver, BC'
-          photoUrl={photoUrl}
-        />
+        <Contact name={name} rating={5} city='Vancouver, BC' photoUrl={photoUrl} />
       </B>
     </>
   )
 }
 
-storiesOf('Data-Display|Cards/Contact', module).add('default', () => (
-  <Variations />
-))
+storiesOf('Data-Display|Cards/Contact', module).add('default', () => <Variations />)

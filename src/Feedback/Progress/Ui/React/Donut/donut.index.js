@@ -1,9 +1,7 @@
 import React, { memo } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-const Donut = ({ style, color = 'primary' }) => (
-  <Wrapper style={style} color={color} />
-)
+const Donut = ({ style, color = 'primary' }) => <Wrapper style={style} color={color} />
 
 // Style
 const donutSpin = keyframes`

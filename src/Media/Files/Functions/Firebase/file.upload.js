@@ -29,20 +29,12 @@ export default async (userId = null, files = null, collection = null) => {
     // fullsize image
     fullsizeImg_file = await imagesResize(compressedFile, 800)
     fullsizeImg_savePath = `users/${userId}/${fileName}`
-    fullsizeImg_fileUrl = await storageAdd(
-      userId,
-      fullsizeImg_savePath,
-      fullsizeImg_file,
-    )
+    fullsizeImg_fileUrl = await storageAdd(userId, fullsizeImg_savePath, fullsizeImg_file)
 
     // thumb image
     thumbImg_file = await imagesResize(compressedFile, 300)
     thumbImg_savePath = `users/${userId}/${fileName}_thumb`
-    thumbImg_fileUrl = await storageAdd(
-      userId,
-      thumbImg_savePath,
-      thumbImg_file,
-    )
+    thumbImg_fileUrl = await storageAdd(userId, thumbImg_savePath, thumbImg_file)
 
     uploadedFileData = {
       userId,
@@ -60,8 +52,6 @@ export default async (userId = null, files = null, collection = null) => {
 
     return uploadedFileData
   } else {
-    throw new Error(
-      `Parameters with false need a value ${(files, userId, collection)}`,
-    )
+    throw new Error(`Parameters with false need a value ${(files, userId, collection)}`)
   }
 }

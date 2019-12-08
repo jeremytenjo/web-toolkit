@@ -24,10 +24,7 @@ const Variations = () => {
 
       <B title='In a Form'>
         <Form onSubmitSuccess={handleForm}>
-          <FileInput
-            data-name='file_input'
-            validation={[{ name: 'required', message: 'required' }]}
-          >
+          <FileInput data-name='file_input' validation={[{ name: 'required', message: 'required' }]}>
             <button>Upload file</button>
           </FileInput>
 

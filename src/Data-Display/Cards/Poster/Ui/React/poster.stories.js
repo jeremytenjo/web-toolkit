@@ -5,8 +5,7 @@ import B from '../../../../../../.storybook/Custom-Components/VariationBlock/var
 
 import markdown from './poster.readme.md'
 import One from './Styles/1/poster.1.index'
-const image =
-  'https://images-na.ssl-images-amazon.com/images/I/818NtgncwLL._SL1500_.jpg'
+const image = 'https://images-na.ssl-images-amazon.com/images/I/818NtgncwLL._SL1500_.jpg'
 
 const Variations = () => (
   <>
@@ -22,10 +21,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Cards/Poster', module).add(
-  'variations',
-  () => <Variations />,
-  {
-    notes: { markdown },
-  },
-)
+storiesOf('Data-Display|Cards/Poster', module).add('variations', () => <Variations />, {
+  notes: { markdown },
+})

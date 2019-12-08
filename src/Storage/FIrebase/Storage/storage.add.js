@@ -14,9 +14,7 @@ export default async (_userId, _savePath, _payload) => {
 
     return resultsDocs
   } else {
-    throw new Error(
-      `Parameters with false need a value ${(userId, savePath, payload)}`,
-    )
+    throw new Error(`Parameters with false need a value ${(userId, savePath, payload)}`)
   }
 }
 

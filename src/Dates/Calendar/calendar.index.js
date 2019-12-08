@@ -8,12 +8,7 @@ import Day from '../Day/day.index'
 import DatePicker from '../DatePicker/datePicker.index'
 
 import { defaultProps, propTypes } from './calendar.propTypes'
-import {
-  Wrapper,
-  WeekDaysTitles,
-  DayGrid,
-  DatePickersCon,
-} from './calendar.styles'
+import { Wrapper, WeekDaysTitles, DayGrid, DatePickersCon } from './calendar.styles'
 
 const Calendar = ({ onDateSelect, yearRange, events }) => {
   const currentYear = new Date().getFullYear()
@@ -85,11 +80,7 @@ const Calendar = ({ onDateSelect, yearRange, events }) => {
     <Wrapper>
       <DatePickersCon>
         <DatePicker type='month' onSelect={handleMonthSelect} />
-        <DatePicker
-          type='year'
-          onSelect={handleYearSelect}
-          yearRange={yearRange}
-        />
+        <DatePicker type='year' onSelect={handleYearSelect} yearRange={yearRange} />
       </DatePickersCon>
       <WeekDaysTitles>
         {daysList.map((title) => (
@@ -101,9 +92,7 @@ const Calendar = ({ onDateSelect, yearRange, events }) => {
           const isCurrentDay = defineIsCurrentDate(day)
           const active = day === selectedDay
           const dayDate = new Date(`${selectedMonth} ${day}, ${selectedYear}`)
-          const filterDate = events.filter(({ date }) =>
-            isSameDay(date, dayDate),
-          )
+          const filterDate = events.filter(({ date }) => isSameDay(date, dayDate))
           const statuses = [...new Set(filterDate.map(({ status }) => status))]
 
           return day ? (

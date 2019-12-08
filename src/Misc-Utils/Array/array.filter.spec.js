@@ -80,7 +80,5 @@ test('Filter array of objects', () => {
     condition: '===',
     value: 2,
   })
-  expect(result).toContainEqual(
-    expect.objectContaining({ id: 2, name: 'hayle' }),
-  )
+  expect(result).toContainEqual(expect.objectContaining({ id: 2, name: 'hayle' }))
 })

@@ -16,11 +16,7 @@ const Variations = () => {
       <B title='Center'>
         <button onClick={showit}>Show Modal</button>
 
-        <Modal
-          show={show}
-          animationStyle='centerOut'
-          onClose={() => setShow(false)}
-        >
+        <Modal show={show} animationStyle='centerOut' onClose={() => setShow(false)}>
           <Dialog onAccept={hideit} title='title' message='Message' />
         </Modal>
       </B>
@@ -28,10 +24,6 @@ const Variations = () => {
   )
 }
 
-storiesOf('Feedback|Modal/Ui/React', module).add(
-  'variations',
-  () => <Variations />,
-  {
-    notes: { markdown },
-  },
-)
+storiesOf('Feedback|Modal/Ui/React', module).add('variations', () => <Variations />, {
+  notes: { markdown },
+})

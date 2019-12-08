@@ -6,16 +6,7 @@ import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 import { defaultProps, propTypes } from './canadagov.propTypes'
 import { Wrapper } from './canadagov.styles'
 
-const Example = ({
-  link,
-  text,
-  icon,
-  onClick,
-  foregroundColor,
-  backgroundColor,
-  wrapperProps,
-  router,
-}) => {
+const Example = ({ link, text, icon, onClick, foregroundColor, backgroundColor, wrapperProps, router }) => {
   const { push } = router
   const { pathname } = window.location
   const active = pathname === link

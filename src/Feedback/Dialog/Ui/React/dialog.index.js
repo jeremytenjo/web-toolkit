@@ -21,12 +21,7 @@ const Dialog = ({
   return (
     <Wrapper ref={dialogRef} fullscreen={fullscreen}>
       <Typography variant='h5' text={title} textAlign='left' color='white' />
-      <Typography
-        variant='body1'
-        text={message}
-        textAlign='left'
-        color='white'
-      />
+      <Typography variant='body1' text={message} textAlign='left' color='white' />
 
       <ConfirmationCon>
         <Button outlined text={confirmationCancelText} onClick={onCancel} />

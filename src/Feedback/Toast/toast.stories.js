@@ -15,13 +15,7 @@ const Children = () => {
   return (
     <>
       <B style={{ position: 'top', bottom: 0 }}>
-        <button
-          onClick={() =>
-            showToast({ type: 'success', message: 'Added to watchlist' })
-          }
-        >
-          Show
-        </button>
+        <button onClick={() => showToast({ type: 'success', message: 'Added to watchlist' })}>Show</button>
       </B>
 
       <B title='center' style={{ position: 'top', bottom: 0 }}>

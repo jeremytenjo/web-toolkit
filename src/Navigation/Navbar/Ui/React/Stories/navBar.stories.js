@@ -24,12 +24,7 @@ const Child = () => {
         <Bar router={router} data={data} onInput={testFileInput} />
       </B>
       <B title='Example 2' noBackground style={{ width: 'auto' }}>
-        <Bar
-          router={router}
-          data={data2}
-          onInput={testFileInput}
-          onSearchSubmit={(value) => console.log(value)}
-        />
+        <Bar router={router} data={data2} onInput={testFileInput} onSearchSubmit={(value) => console.log(value)} />
       </B>
       <B
         noBackground
@@ -41,12 +36,7 @@ const Child = () => {
           right: 0,
         }}
       >
-        <Bar
-          router={router}
-          data={data2}
-          onInput={testFileInput}
-          onSearchSubmit={(value) => console.log(value)}
-        />
+        <Bar router={router} data={data2} onInput={testFileInput} onSearchSubmit={(value) => console.log(value)} />
       </B>
     </>
   )
@@ -60,6 +50,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Navigation|Nav Bar/React', module).add('Example', () => (
-  <Variations />
-))
+storiesOf('Navigation|Nav Bar/React', module).add('Example', () => <Variations />)

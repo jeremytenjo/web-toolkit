@@ -2,13 +2,7 @@
 import React, { useRef, useEffect, useState, memo } from 'react'
 
 import { defaultProps, propTypes } from './chat.propTypes'
-import {
-  ChatWrapper,
-  ChatList,
-  CurrentUserCompWrapper,
-  OtherUserCompWrapper,
-  InputCompWrapper,
-} from './chat.styles'
+import { ChatWrapper, ChatList, CurrentUserCompWrapper, OtherUserCompWrapper, InputCompWrapper } from './chat.styles'
 
 // Main
 const Chat = ({
@@ -55,8 +49,7 @@ const Chat = ({
     ChatList_Ref.current.removeEventListener('scroll', handleScroll)
   }
 
-  const scrollToBottom = () =>
-    (ChatList_Ref.current.scrollTop = ChatList_Ref.current.scrollHeight)
+  const scrollToBottom = () => (ChatList_Ref.current.scrollTop = ChatList_Ref.current.scrollHeight)
 
   const handleScroll = () => {
     const reachedTop = ChatList_Ref.current.scrollTop === 0
@@ -98,12 +91,7 @@ const Chat = ({
         {loadMessages(messagesData)}
       </ChatList>
       <InputCompWrapper>
-        <InputComp
-          ref={inputRef}
-          styles={inputCompStyles}
-          onChange={messageInputOnChange}
-          onFocus={scrollToBottom}
-        />
+        <InputComp ref={inputRef} styles={inputCompStyles} onChange={messageInputOnChange} onFocus={scrollToBottom} />
       </InputCompWrapper>
     </ChatWrapper>
   )

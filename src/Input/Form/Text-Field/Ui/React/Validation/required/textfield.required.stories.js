@@ -24,17 +24,10 @@ const Variations = () => {
             placeholder={placeholder}
             name='exampleField1'
             errorMessage='this is an error message'
-            validation={[
-              { name: 'required', message: 'Input required in this field' },
-            ]}
+            validation={[{ name: 'required', message: 'Input required in this field' }]}
           />
           <br />
-          <Button
-            dataCy='textfield_submitButton'
-            type='submit'
-            text='Submit'
-            color='secondary'
-          />
+          <Button dataCy='textfield_submitButton' type='submit' text='Submit' color='secondary' />
           <br />
           <br />
           <span>value:{submitValue}</span>
@@ -45,10 +38,6 @@ const Variations = () => {
 }
 
 // Stories
-storiesOf('Input|Form/TextField/Validation', module).add(
-  'Required',
-  () => <Variations />,
-  {
-    notes: { markdown },
-  },
-)
+storiesOf('Input|Form/TextField/Validation', module).add('Required', () => <Variations />, {
+  notes: { markdown },
+})

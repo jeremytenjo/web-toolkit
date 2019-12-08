@@ -12,32 +12,25 @@ const dataSet1 = ['block', 'block', 'block', 'block']
 const dataSet2 = ['block', 'block', 'block', 'block', 'block', 'block', 'block']
 const dataSetImages = [
   {
-    src:
-      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+    src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
   {
-    src:
-      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+    src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
   {
-    src:
-      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+    src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
   {
-    src:
-      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+    src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
   {
-    src:
-      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+    src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
   {
-    src:
-      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+    src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
   {
-    src:
-      'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
+    src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
 ]
 
@@ -53,17 +46,8 @@ const Variations = () => (
       <List data={dataSet2} ItemComponent={itemComponent} direction='column' />
     </B>
 
-    <B
-      title='Direction - Horizontal - Overflow'
-      background
-      contentStyle={{ width: '50%', padding: 0 }}
-    >
-      <List
-        data={dataSet2}
-        ItemComponent={itemComponent}
-        direction='column'
-        overflows
-      />
+    <B title='Direction - Horizontal - Overflow' background contentStyle={{ width: '50%', padding: 0 }}>
+      <List data={dataSet2} ItemComponent={itemComponent} direction='column' overflows />
     </B>
 
     <B title='with Children' background>
@@ -75,14 +59,7 @@ const Variations = () => (
     </B>
 
     <B title='Grid' background>
-      <List
-        data={dataSet2}
-        ItemComponent={itemComponent}
-        grid
-        repeat={3}
-        repeatOnMinWidth={4}
-        minWidth={800}
-      />
+      <List data={dataSet2} ItemComponent={itemComponent} grid repeat={3} repeatOnMinWidth={4} minWidth={800} />
     </B>
 
     <B title='photoGrid' style={{ width: '100%' }} background>
@@ -115,10 +92,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|List/Ui/React', module).add(
-  'Variations',
-  () => <Variations />,
-  {
-    notes: { markdown },
-  },
-)
+storiesOf('Data-Display|List/Ui/React', module).add('Variations', () => <Variations />, {
+  notes: { markdown },
+})

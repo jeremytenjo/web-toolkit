@@ -14,10 +14,7 @@ const DataTabs = [
 
 const Variations = () => (
   <>
-    <B
-      title='simple'
-      contentStyle={{ overflow: 'auto', height: 200, width: 'auto' }}
-    >
+    <B title='simple' contentStyle={{ overflow: 'auto', height: 200, width: 'auto' }}>
       <p>text</p>
       <p>text</p>
       <p>text</p>
@@ -40,6 +37,4 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Misc-Utils|Position/Sticky', module).add('variations', () => (
-  <Variations />
-))
+storiesOf('Misc-Utils|Position/Sticky', module).add('variations', () => <Variations />)

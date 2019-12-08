@@ -7,14 +7,7 @@ import Animation from '../../../../Misc-Utils/Animations/Web-Animations-API/anim
 import { defaultProps, propTypes } from './fileInput.propTypes'
 import { Wrapper, Input, ChildrenWrap } from './fileInput.styles'
 
-const FileInput = ({
-  accept,
-  children,
-  onInput,
-  name,
-  validation,
-  ...nativeProps
-}) => {
+const FileInput = ({ accept, children, onInput, name, validation, ...nativeProps }) => {
   const inputRef = useRef(null)
   const [errorMessages, seterrorMessages] = useState([])
   const errMessagesRef = useRef(null)
@@ -22,9 +15,7 @@ const FileInput = ({
   // Tracks validilty with react
   const [isValid, setIsValid] = useState(validation.length === 0)
   // Tracks validilty with data attribute for use with Form component
-  const [isValidFormCheck, setIsValidFormCheck] = useState(
-    validation.length === 0,
-  )
+  const [isValidFormCheck, setIsValidFormCheck] = useState(validation.length === 0)
 
   useEffect(() => {
     startOnSubmitListener()
@@ -99,12 +90,7 @@ const FileInput = ({
         style={{ marginTop: 'var(--spacing-xs)', display: 'none' }}
       >
         {errorMessages.map((message) => (
-          <Typography
-            key={message}
-            text={message}
-            color='red'
-            variant='body2'
-          />
+          <Typography key={message} text={message} color='red' variant='body2' />
         ))}
       </div>
     </Wrapper>

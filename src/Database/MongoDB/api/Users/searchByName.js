@@ -5,9 +5,7 @@ const searchByName = async (req, res) => {
   const regxName = new RegExp(payload)
 
   try {
-    const foundUsers = await collection
-      .find({ name: { $regex: regxName, options: 'i' } })
-      .toArray()
+    const foundUsers = await collection.find({ name: { $regex: regxName, options: 'i' } }).toArray()
 
     res.json(foundUsers)
   } catch (error) {

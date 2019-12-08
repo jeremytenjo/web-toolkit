@@ -3,15 +3,7 @@ import React, { memo, Fragment, useState, useRef } from 'react'
 import { defaultProps, propTypes } from './select.propTypes'
 import { Wrapper, SelectStyle } from './select.styles'
 
-const Select = ({
-  data,
-  initialValue,
-  valueKey,
-  labelKey,
-  Item,
-  onChange,
-  ...itemProps
-}) => {
+const Select = ({ data, initialValue, valueKey, labelKey, Item, onChange, ...itemProps }) => {
   const selectedValueDefault = initialValue
     ? initialValue
     : data.length > 0 && valueKey === 'index'

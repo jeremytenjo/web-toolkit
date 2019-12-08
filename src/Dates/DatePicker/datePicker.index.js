@@ -6,14 +6,7 @@ import Icon from '../../Data-Display/Icon/Ui/React/Base/icon.index'
 import { defaultProps, propTypes } from './datePicker.propTypes'
 import { Wrapper } from './datePicker.styles'
 
-const DatePicker = ({
-  arrowColor,
-  onSelect,
-  color,
-  type,
-  yearRange,
-  arrowName,
-}) => {
+const DatePicker = ({ arrowColor, onSelect, color, type, yearRange, arrowName }) => {
   const selectRef = useRef(null)
 
   const currentYear = new Date().getFullYear()
@@ -49,8 +42,7 @@ const DatePicker = ({
 
   const handlePrev = () => {
     const selectedItem = selectRef.current.value
-    const selectedItemIndex =
-      data.findIndex((item) => item === selectedItem) - 1
+    const selectedItemIndex = data.findIndex((item) => item === selectedItem) - 1
     const prevItem = data[selectedItemIndex]
     const returnItem = prevItem || data[data.length - 1]
 
@@ -59,8 +51,7 @@ const DatePicker = ({
   }
   const handleNext = () => {
     const selectedItem = selectRef.current.value
-    const selectedItemIndex =
-      data.findIndex((item) => item === selectedItem) + 1
+    const selectedItemIndex = data.findIndex((item) => item === selectedItem) + 1
     const nextItem = data[selectedItemIndex]
     const returnItem = nextItem || data[0]
 
@@ -82,12 +73,7 @@ const DatePicker = ({
         </select>
       )}
 
-      <Icon
-        name={arrowName}
-        color={arrowColor}
-        onClick={handleNext}
-        style={{ transform: 'rotate(180deg)' }}
-      />
+      <Icon name={arrowName} color={arrowColor} onClick={handleNext} style={{ transform: 'rotate(180deg)' }} />
     </Wrapper>
   )
 }

@@ -9,13 +9,7 @@ import Chip from '../../../../../Chip/Ui/React/chip.index'
 import LikeButton from '../../../../../Icon/Ui/React/Special/Like/like.index'
 import Box from '../../../../../Box/Ui/React/box.index'
 
-import {
-  Wrapper,
-  TopRow,
-  ImageCon,
-  donutStyle,
-  LikeIconCon,
-} from './photo.styles'
+import { Wrapper, TopRow, ImageCon, donutStyle, LikeIconCon } from './photo.styles'
 import { defaultProps } from './photo.propTypes'
 
 const CardPhoto = ({
@@ -41,9 +35,7 @@ const CardPhoto = ({
     <Wrapper style={style}>
       <Box {...TopRow}>
         <IconBack to={goBackUrl} onGoBack={goBack} />
-        {menuOptions.length > 0 && (
-          <Menu options={menuOptions} onSelect={onMenuOptionSelect} />
-        )}
+        {menuOptions.length > 0 && <Menu options={menuOptions} onSelect={onMenuOptionSelect} />}
       </Box>
       <ImageCon>
         {photoUrl ? (
@@ -53,11 +45,7 @@ const CardPhoto = ({
         )}
         {likeable && (
           <LikeIconCon>
-            <LikeButton
-              liked={liked}
-              onLike={handleOnLike}
-              onUnlike={handleOnUnlike}
-            />
+            <LikeButton liked={liked} onLike={handleOnLike} onUnlike={handleOnUnlike} />
           </LikeIconCon>
         )}
       </ImageCon>

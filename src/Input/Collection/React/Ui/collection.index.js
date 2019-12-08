@@ -26,26 +26,14 @@ const Collection = ({
   }, [])
 
   const loadTextField = async () => {
-    let { default: Comp } = await import(
-      `../../../Form/Text-Field/Ui/React/Styles/${textFieldStyle}`
-    )
-    setTextField(
-      <Comp
-        color='secondary'
-        name='item'
-        placeholder={placeholder}
-        clearOnSubmit
-      />,
-    )
+    let { default: Comp } = await import(`../../../Form/Text-Field/Ui/React/Styles/${textFieldStyle}`)
+    setTextField(<Comp color='secondary' name='item' placeholder={placeholder} clearOnSubmit />)
   }
 
   const handleSubmit = ({ item }) => {
     const dataCopy = data.slice()
     // 1.dont add if already exists
-    if (
-      !dataCopy.some((el) => el[itemComponentTextKey] === item) &&
-      item !== ''
-    ) {
+    if (!dataCopy.some((el) => el[itemComponentTextKey] === item) && item !== '') {
       const newItem = { [itemComponentTextKey]: item }
       //2. add to array
       dataCopy.push(newItem)
@@ -68,16 +56,8 @@ const Collection = ({
 
   return (
     <Wrapper>
-      <List
-        overflows
-        data={data}
-        direction='column'
-        ItemComponent={ItemComponent}
-        onItemClick={handleItemClick}
-      />
-      {editable && (
-        <Form onSubmitSuccess={handleSubmit}>{TextField && TextField}</Form>
-      )}
+      <List overflows data={data} direction='column' ItemComponent={ItemComponent} onItemClick={handleItemClick} />
+      {editable && <Form onSubmitSuccess={handleSubmit}>{TextField && TextField}</Form>}
     </Wrapper>
   )
 }

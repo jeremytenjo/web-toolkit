@@ -3,15 +3,7 @@ import StarRatings from 'react-stars'
 
 import { defaultProps, propTypes } from './ratings.propTypes'
 
-const Ratings = ({
-  rating,
-  onChange,
-  count,
-  isSelectable,
-  starDimension,
-  starSpacing,
-  edit,
-}) => (
+const Ratings = ({ rating, onChange, count, isSelectable, starDimension, starSpacing, edit }) => (
   <StarRatings
     edit={edit}
     changeRating={onChange}

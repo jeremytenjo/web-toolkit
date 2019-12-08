@@ -16,6 +16,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Data-Display|Empty Page', module).add('Variations', () => (
-  <Variations />
-))
+storiesOf('Data-Display|Empty Page', module).add('Variations', () => <Variations />)

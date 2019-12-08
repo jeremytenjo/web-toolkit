@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  background-color: ${({ backgroundcolor }) =>
-    `var(--color-${backgroundcolor}Opaque)`};
+  background-color: ${({ backgroundcolor }) => `var(--color-${backgroundcolor}Opaque)`};
   display: ${({ noAnimation }) => (noAnimation ? 'block' : 'none')};
   position: fixed;
   top: 0;

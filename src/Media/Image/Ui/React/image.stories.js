@@ -10,24 +10,13 @@ import Image from './image.index'
 const Variations = () => (
   <>
     <B title='default'>
-      <Image
-        src={testImage}
-        width={400}
-        height={400}
-        onClick={() => console.log('Clicked')}
-      />
+      <Image src={testImage} width={400} height={400} onClick={() => console.log('Clicked')} />
     </B>
 
     <B title='isLazyLoaded'>
-      <Image
-        isLazyLoaded
-        src={testImage2}
-        onClick={() => console.log('Clicked')}
-      />
+      <Image isLazyLoaded src={testImage2} onClick={() => console.log('Clicked')} />
     </B>
   </>
 )
 
-storiesOf('Media|Image/Ui/React', module).add('variations', () => (
-  <Variations />
-))
+storiesOf('Media|Image/Ui/React', module).add('variations', () => <Variations />)

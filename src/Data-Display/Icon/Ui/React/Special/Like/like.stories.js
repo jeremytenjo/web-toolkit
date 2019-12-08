@@ -11,23 +11,13 @@ const Example = () => {
   return (
     <>
       <B title='Default ' color='black'>
-        <Like
-          liked={liked}
-          onLike={() => setLiked(true)}
-          onUnlike={() => setLiked(false)}
-        />
+        <Like liked={liked} onLike={() => setLiked(true)} onUnlike={() => setLiked(false)} />
       </B>
 
       <B title='Liked' color='black'>
-        <Like
-          liked
-          onLike={() => setLiked(true)}
-          onUnlike={() => setLiked(false)}
-        />
+        <Like liked onLike={() => setLiked(true)} onUnlike={() => setLiked(false)} />
       </B>
     </>
   )
 }
-storiesOf('Data-Display|Icon/React/Special', module).add('Like', () => (
-  <Example />
-))
+storiesOf('Data-Display|Icon/React/Special', module).add('Like', () => <Example />)

@@ -13,24 +13,14 @@ const Variations = () => (
     </B>
 
     <B title='background' noBackground>
-      <Icon
-        name='camera/material'
-        color='white'
-        background
-        noBackgroundChange
-      />
+      <Icon name='camera/material' color='white' background noBackgroundChange />
     </B>
     <B title='plain' noBackground>
       <Icon name='camera/material' plain />
     </B>
 
     <B title='color' noBackground>
-      <Icon
-        name='camera/material'
-        background
-        color='secondary'
-        noBackgroundChange
-      />
+      <Icon name='camera/material' background color='secondary' noBackgroundChange />
     </B>
 
     <B title='outlined' noBackground>
@@ -47,13 +37,7 @@ const Variations = () => (
       <Icon name='camera/feather' color='primary' label='Label' size={60} />
     </B>
     <B title='backgroundSize' color='black' noBackground>
-      <Icon
-        name='camera/feather'
-        color='primary'
-        label='Label'
-        size={20}
-        backgroundSize={80}
-      />
+      <Icon name='camera/feather' color='primary' label='Label' size={20} backgroundSize={80} />
     </B>
     <B title='file upload' color='black' noBackground>
       <Icon

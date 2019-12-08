@@ -5,8 +5,7 @@ import TextField from '../Base/textField.base'
 
 const Wrapper = styled.div`
   transition: .2s;
-  background-color: ${({ backgroundColor }) =>
-    `var(--color-${backgroundColor})`};
+  background-color: ${({ backgroundColor }) => `var(--color-${backgroundColor})`};
   color: ${({ textColor }) => `var(--color-${textColor})`};
   border-radius: 10px;
   padding: 8px;
@@ -25,8 +24,7 @@ const Wrapper = styled.div`
   ${({ round }) => round && ` border-radius: 100px;`}
 
     /* Focused */
-  ${({ isFocused, foregroundColor }) =>
-    isFocused && `border: 2px solid var(--color-${foregroundColor});`}
+  ${({ isFocused, foregroundColor }) => isFocused && `border: 2px solid var(--color-${foregroundColor});`}
 
     svg {
     fill: ${({ foregroundColor }) => `var(--color-${foregroundColor})`};

@@ -1,7 +1,6 @@
 export default () =>
   new Promise(async (resolve) => {
-    const credentailApiSupported =
-      window.PasswordCredential || window.FederatedCredential
+    const credentailApiSupported = window.PasswordCredential || window.FederatedCredential
     let user
 
     if (credentailApiSupported) {
