@@ -56,8 +56,7 @@ const CardMovie1 = ({
       const nextEp = parseInt(episode, 10) + 1
       const episodesInCurrentSeason = parseInt(episodes.length, 10)
       const numberOfSeasons = parseInt(seasons.length, 10)
-      const isThereNextEpisodeInCurrentSeason =
-        nextEp <= episodesInCurrentSeason
+      const isThereNextEpisodeInCurrentSeason = nextEp <= episodesInCurrentSeason
 
       if (isThereNextEpisodeInCurrentSeason) {
         setnextEpisode({ nextEpisode: nextEp, season: parseInt(season, 10) })
@@ -162,10 +161,9 @@ const CardMovie1 = ({
           <>
             {lastAiredEpisode && (
               <Typography
-                text={`Latest episode aired ${formatDate(
-                  new Date(lastAiredEpisode.lastAirDate),
-                  'MMMM d',
-                )} (S${lastAiredEpisode.season}/E${lastAiredEpisode.episode})`}
+                text={`Latest episode aired ${formatDate(new Date(lastAiredEpisode.lastAirDate), 'MMMM d')} (S${
+                  lastAiredEpisode.season
+                }/E${lastAiredEpisode.episode})`}
                 variant='navbar'
                 styles={{
                   cursor: 'pointer',
