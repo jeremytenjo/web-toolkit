@@ -54,16 +54,14 @@
     "twit": "^2.2.11"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.1.11",
-    "@tenjojeremy/prettier-config": "^0.3.0",
-    "storybook-react-router": "^1.0.5",
-    "@storybook/addon-docs": "^5.2.3",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.7.2",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-docs": "^5.2.3",
     "@storybook/react": "^5.2.8",
+    "@tenjojeremy/babel-config": "^1.5.0",
     "@tenjojeremy/eslint-config": "^1.7.0",
-    "@tenjojeremy/webpack-config": "^1.18.0",
-    "babel-loader": "^8.0.6",
+    "@tenjojeremy/prettier-config": "^0.3.0",
     "cypress": "^3.5.0",
     "date-fns": "^2.3.0",
     "eslint-plugin-cypress": "^2.6.1",
@@ -72,9 +70,11 @@
     "husky": "^3.0.3",
     "image-compressor.js": "^1.1.4",
     "jest": "^24.9.0",
+    "lint-staged": "^9.5.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "start-server-and-test": "^1.10.0",
+    "storybook-react-router": "^1.0.5",
     "yup": "^0.27.0"
   }
 }
