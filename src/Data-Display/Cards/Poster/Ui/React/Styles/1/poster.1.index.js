@@ -36,7 +36,7 @@ const Poster1 = ({ src, onClick, alt, loading, backgroundColor, size, ...rest })
       {src && <Image src={src} width={width} height={height} alt={alt} />}
       {!src && (
         <Suspense fallback={null}>
-          <Typography text={alt} color='white' variant='caption' textAlign='center' />
+          <Typography text={alt} styles={{ color: 'white', textAlign: 'center' }} variant='caption' />
         </Suspense>
       )}
 
