@@ -26,12 +26,7 @@ const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
   }
 
   return (
-    <Box
-      name='access_wrapper'
-      backgroundColor={['white', 'primary']}
-      height='100%'
-      padding='none'
-    >
+    <Box name='access_wrapper' backgroundColor={['white', 'primary']} height='100%' padding='none'>
       <Box
         name='access_inner_wrapper'
         styles={{
@@ -42,10 +37,7 @@ const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
           backgroundColor: 'white',
         }}
       >
-        <Box
-          name='Info'
-          styles={{ justifyItems: 'center', textAlign: 'center', height: 'fit-content' }}
-        >
+        <Box name='Info' styles={{ justifyItems: 'center', textAlign: 'center', height: 'fit-content' }}>
           <Image src={logo} size={93} />
           <Typography text={name} color='primary' />
           <Typography text={desc} />
@@ -61,10 +53,7 @@ const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
           }}
         >
           <Typography text='Continue with' />
-          <Box
-            name='providers_list'
-            styles={{ gridAutoFlow: 'column', justifyContent: 'center', gridGap: 'xl' }}
-          >
+          <Box name='providers_list' styles={{ gridAutoFlow: 'column', justifyContent: 'center', gridGap: 'xl' }}>
             {providers.map((p) => (
               <Icon
                 key={p}
@@ -80,7 +69,9 @@ const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
           </Box>
 
           <Animation name='showHide' show={errMessage} el={errorRef} />
-          <Typography text={errMessage} variant='body2' color='error' ref={errorRef} />
+          <div ref={errorRef}>
+            <Typography text={errMessage} variant='body2' color='error' />
+          </div>
         </Box>
       </Box>
     </Box>
