@@ -39,7 +39,7 @@ const Styles = () => {
     })
     setvars(await Promise.all(Elements))
   }
-  return <Box styles={{gridAutoFlow:'column'}}>{vars}</Box>
+  return <Box styles={{ gridAutoFlow: 'column' }}>{vars}</Box>
 }
 
 storiesOf('Input|Form/Select', module).add('variations', () => <Styles />)
