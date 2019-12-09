@@ -26,6 +26,11 @@
     "lint:check": "eslint ./src",
     "check-staged": "lint-staged"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx}": [
       "yarn lint:fix",
