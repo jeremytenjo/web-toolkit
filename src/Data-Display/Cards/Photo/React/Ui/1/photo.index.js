@@ -33,11 +33,9 @@ const CardPhoto = ({
   //Template
   return (
     <Wrapper style={style}>
-      <Box {...TopRow}>
+      <Box styles={TopRow}>
         <IconBack to={goBackUrl} onGoBack={goBack} />
-        {menuOptions.length > 0 && (
-          <Menu options={menuOptions} onSelect={onMenuOptionSelect} />
-        )}
+        {menuOptions.length > 0 && <Menu options={menuOptions} onSelect={onMenuOptionSelect} />}
       </Box>
       <ImageCon>
         {photoUrl ? (

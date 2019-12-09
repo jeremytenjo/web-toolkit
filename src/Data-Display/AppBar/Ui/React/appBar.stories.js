@@ -36,7 +36,7 @@ const StylesList = () => {
     })
     setvars(await Promise.all(Elements))
   }
-  return <Box gridAutoFlow='column'>{vars}</Box>
+  return <Box styles={{ gridAutoFlow: 'column' }}>{vars}</Box>
 }
 
 export const styles = () => <StylesList />
