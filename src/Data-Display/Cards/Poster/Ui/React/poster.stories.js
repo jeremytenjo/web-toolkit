@@ -13,7 +13,10 @@ const Variations = () => (
       <One src={image} onClick={() => console.log('sdf')} />
     </B>
     <B title='no photo'>
-      <One alt='this is a poster' onClick={() => console.log('sdf')} />
+      <One
+        alt='this is a poster jfhajklsdhf ljk ahslk lkashd f fjklahsljk fjljaksh dfjklhasjkld fhljkas hdfjklhasjk fhkjas hdfjklhasdfjklhaskj fhljkas fhlkjashdf jkas j fhjkasdhfjklashldfjkhasjkl lkjasd fjklas sdhfjklahsfkjasdhf lkjashdfkjhasljdkfhaks  h aklsdf fhklajshfd'
+        onClick={() => console.log('sdf')}
+      />
     </B>
     <B title='loading'>
       <One loading alt='this is a poster' onClick={() => console.log('sdf')} />

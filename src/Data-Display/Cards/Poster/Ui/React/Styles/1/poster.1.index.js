@@ -6,9 +6,7 @@ import { defaultProps, propTypes } from './poster.1.propTypes'
 import { Wrapper } from './poster.1.styles'
 
 const Typography = lazy(() =>
-  import(
-    /* webpackChunkName: 'Typography' */ '../../../../../../Typography/Ui/React/typography.index'
-  ),
+  import(/* webpackChunkName: 'Typography' */ '../../../../../../Typography/Ui/React/typography.index'),
 )
 const Animation = lazy(() =>
   import(

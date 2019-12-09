@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   position: relative;
+  word-break: break-word;
+  overflow-y: scroll;
 
   /* No src */
   ${({ src, backgroundColor, isLoading }) =>
