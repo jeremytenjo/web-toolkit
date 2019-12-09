@@ -8,7 +8,15 @@ import Button from '../../../../../../Input/Button/Ui/React/Styles/button.1.inde
 import { defaultProps, propTypes } from './contact.propTypes'
 import { Wrapper, Info, City, Name, ButtonCon, AvatarInfoCOn } from './contact.styles'
 
-const Contact = ({ name, rating, city, onContactClick, onAvatarClick, photoUrl, onChatBtnClick }) => (
+const Contact = ({
+  name,
+  rating,
+  city,
+  onContactClick,
+  onAvatarClick,
+  photoUrl,
+  onChatBtnClick,
+}) => (
   <Wrapper>
     <AvatarInfoCOn>
       <Avatar photoUrl={photoUrl} name={name} onClick={onAvatarClick} />

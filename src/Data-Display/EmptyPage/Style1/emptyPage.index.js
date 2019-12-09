@@ -15,7 +15,12 @@ const EmptyPage = ({ image, title, buttonText, redUrl, router }) => {
       <InnerWrapper>
         {image}
         <Title>{title}</Title>
-        <Buttom href={redUrl} text={buttonText} onClick={redirect} style={{ width: 250 }} />
+        <Buttom
+          href={redUrl}
+          text={buttonText}
+          onClick={redirect}
+          style={{ width: 250 }}
+        />
       </InnerWrapper>
     </Wrapper>
   )

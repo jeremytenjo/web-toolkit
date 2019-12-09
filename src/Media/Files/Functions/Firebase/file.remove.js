@@ -14,6 +14,8 @@ export default async (_userId, _fileId, _fileName, _collection) => {
 
     return 'Success'
   } else {
-    throw new Error(`Parameters with false need a value ${(files, fileId, fileName, collection)}`)
+    throw new Error(
+      `Parameters with false need a value ${(files, fileId, fileName, collection)}`,
+    )
   }
 }

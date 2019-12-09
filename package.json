@@ -26,11 +26,6 @@
     "lint:check": "eslint ./src",
     "check-staged": "lint-staged"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx}": [
       "yarn lint:fix",
@@ -61,7 +56,7 @@
     "@storybook/react": "^5.2.8",
     "@tenjojeremy/babel-config": "^1.5.0",
     "@tenjojeremy/eslint-config": "^1.7.0",
-    "@tenjojeremy/prettier-config": "^0.3.0",
+    "@tenjojeremy/prettier-config": "^0.4.0",
     "cypress": "^3.5.0",
     "date-fns": "^2.3.0",
     "eslint-plugin-cypress": "^2.6.1",

@@ -58,7 +58,13 @@ export default ({
   font = 'primary',
   location = 'center',
 }) => (
-  <Wrapper background={background} foreground={foreground} display={display} font={font} location={location}>
+  <Wrapper
+    background={background}
+    foreground={foreground}
+    display={display}
+    font={font}
+    location={location}
+  >
     <Icon name={iconName} plain />
     <span> {message}</span>
   </Wrapper>

@@ -23,7 +23,9 @@ const Autocomplete = ({ inputStyle, data }) => {
   }, [])
 
   const importTextfield = async () => {
-    let mod = await import(`../../../Form/Text-Field/Ui/React/Styles/textfield.${inputStyle}.index.js`)
+    let mod = await import(
+      `../../../Form/Text-Field/Ui/React/Styles/textfield.${inputStyle}.index.js`
+    )
     setTextField(mod.default({ onInput: handleInput }))
   }
 

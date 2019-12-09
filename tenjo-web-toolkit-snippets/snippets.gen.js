@@ -64,7 +64,9 @@ glob(`build/**/*.index.js`, function(err, files) {
   const successEmogi = emoji.get('white_check_mark')
 
   // 2. create snipet file and attach created snippets
-  fs.writeFile('tenjo-web-toolkit-snippets/snippets/snippets.json', fileString, function(err) {
+  fs.writeFile('tenjo-web-toolkit-snippets/snippets/snippets.json', fileString, function(
+    err,
+  ) {
     if (err) throw err
     console.log(`${successEmogi}  snippet.json created`)
   })

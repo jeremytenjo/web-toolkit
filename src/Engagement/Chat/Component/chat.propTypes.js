@@ -1,5 +1,15 @@
 import React from 'react'
-import { func, array, arrayOf, object, shape, bool, string, number, oneOfType } from 'prop-types'
+import {
+  func,
+  array,
+  arrayOf,
+  object,
+  shape,
+  bool,
+  string,
+  number,
+  oneOfType,
+} from 'prop-types'
 
 import Input from '../../../Input/Form/Text-Field/Ui/React/Styles/textfield.1.index'
 

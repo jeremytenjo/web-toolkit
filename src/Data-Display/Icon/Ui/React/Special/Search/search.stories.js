@@ -15,7 +15,11 @@ const Variations = () => (
         marginTop: '50px',
       }}
     >
-      <SearchIcon mainIcon='search/feather' closeIcon='close/feather' onSubmit={(value) => console.log(value)} />
+      <SearchIcon
+        mainIcon='search/feather'
+        closeIcon='close/feather'
+        onSubmit={(value) => console.log(value)}
+      />
     </B>
   </>
 )

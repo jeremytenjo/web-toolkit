@@ -1,4 +1,13 @@
-import PropTypes, { array, object, func, element, oneOf, number, string, bool } from 'prop-types'
+import PropTypes, {
+  array,
+  object,
+  func,
+  element,
+  oneOf,
+  number,
+  string,
+  bool,
+} from 'prop-types'
 
 export const defaultProps = {
   data: [],

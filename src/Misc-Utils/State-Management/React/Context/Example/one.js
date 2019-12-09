@@ -5,7 +5,8 @@ import useUploads from './Data/uploads.state'
 export default () => {
   const { uploadsCreate, uploadRead, uploadsUpdate, uploadsDelete } = useUploads()
 
-  const createItem = () => uploadsCreate({ data: { id: 2, name: 'person 2', country: 'colombia' } })
+  const createItem = () =>
+    uploadsCreate({ data: { id: 2, name: 'person 2', country: 'colombia' } })
   const readItem = () => uploadRead({ id: 2 })
   const updateItem = () =>
     uploadsUpdate({

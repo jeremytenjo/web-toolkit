@@ -7,7 +7,8 @@ import B from '../../../../.storybook/Custom-Components/VariationBlock/variation
 const req = require.context('./', true, /index.js$/)
 const paths = req.keys()
 
-const poster = 'http://cdn.collider.com/wp-content/uploads/2017/03/guardians-of-the-galaxy-2-imax-poster.jpg'
+const poster =
+  'http://cdn.collider.com/wp-content/uploads/2017/03/guardians-of-the-galaxy-2-imax-poster.jpg'
 const titleTest = 'Guardians of the Galaxy'
 const overview =
   'The misadventures of a group of friends as they navigate the pitfalls of work, life and love in Manhattan.'

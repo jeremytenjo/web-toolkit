@@ -27,7 +27,14 @@ const Image = ({
   }
 
   const ImageComp = () => (
-    <Wrapper width={width} height={height} size={size} onClick={() => onClick(props)} cursor={cursor} style={style}>
+    <Wrapper
+      width={width}
+      height={height}
+      size={size}
+      onClick={() => onClick(props)}
+      cursor={cursor}
+      style={style}
+    >
       {src && <InnerImage alt={alt} src={src} />}
     </Wrapper>
   )

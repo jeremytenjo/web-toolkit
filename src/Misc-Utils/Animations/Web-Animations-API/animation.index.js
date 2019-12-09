@@ -7,7 +7,14 @@ const defaultConfig = {
   easing: 'ease-out',
 }
 
-const AnimationIndex = ({ name = 'showHide', el = null, config = defaultConfig, show, children, ...rest }) => {
+const AnimationIndex = ({
+  name = 'showHide',
+  el = null,
+  config = defaultConfig,
+  show,
+  children,
+  ...rest
+}) => {
   const wrapperRef = useRef(null)
   const element = el || wrapperRef
 

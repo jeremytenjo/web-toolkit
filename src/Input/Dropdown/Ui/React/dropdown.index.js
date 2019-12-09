@@ -11,7 +11,9 @@ const Dropdown = ({ inputStyle }) => {
   }, [])
 
   const importTextfield = async () => {
-    let mod = await import(`../../../Form/Text-Field/Ui/React/Styles/textfield.${inputStyle}.index.js`)
+    let mod = await import(
+      `../../../Form/Text-Field/Ui/React/Styles/textfield.${inputStyle}.index.js`
+    )
     setTextField(mod.default)
   }
 

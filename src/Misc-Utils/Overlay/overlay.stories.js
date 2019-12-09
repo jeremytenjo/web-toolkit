@@ -11,7 +11,12 @@ const Variations = () => {
   return (
     <>
       <B title='default' noBackground>
-        <Button onClick={() => setshow(true)} text='show overlay' color='secondary' dataCy='show-button' />
+        <Button
+          onClick={() => setshow(true)}
+          text='show overlay'
+          color='secondary'
+          dataCy='show-button'
+        />
         <Overlay show={show} onClick={() => setshow(false)} dataCy='overlay' />
 
         <p>adsf</p>

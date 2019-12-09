@@ -10,7 +10,12 @@ import Image from './image.index'
 const Variations = () => (
   <>
     <B title='default'>
-      <Image src={testImage} width={400} height={400} onClick={() => console.log('Clicked')} />
+      <Image
+        src={testImage}
+        width={400}
+        height={400}
+        onClick={() => console.log('Clicked')}
+      />
     </B>
 
     <B title='isLazyLoaded'>

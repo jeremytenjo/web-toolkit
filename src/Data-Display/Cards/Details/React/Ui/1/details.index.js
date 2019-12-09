@@ -5,7 +5,15 @@ import StarsRating from '../../../../../../Feedback/Rating/Ui/React/ratings.inde
 import Typography from '../../../../../Typography/Ui/React/typography.index'
 import Avatar from '../../../../../Avatars/avatar.index'
 
-import { Wrapper, ContactIcons, InfoCon, Rating, Location, LocationIcons, NumReview } from './details.styles'
+import {
+  Wrapper,
+  ContactIcons,
+  InfoCon,
+  Rating,
+  Location,
+  LocationIcons,
+  NumReview,
+} from './details.styles'
 import { defaultProps, propTypes } from './details.propTypes'
 
 const DetailsCard = ({ src, name, rating, location }) => {
@@ -19,7 +27,14 @@ const DetailsCard = ({ src, name, rating, location }) => {
       <InfoCon>
         <Typography variant='h6' text={name} />
         <Rating onClick={() => console.log('open review')}>
-          <StarsRating count={5} value={rating} size={17} color1={'#EEEEEE'} color2={'#ffd700'} edit={false} />
+          <StarsRating
+            count={5}
+            value={rating}
+            size={17}
+            color1={'#EEEEEE'}
+            color2={'#ffd700'}
+            edit={false}
+          />
         </Rating>
         <NumReview>
           <span> {reviewsLength}</span> Reviews

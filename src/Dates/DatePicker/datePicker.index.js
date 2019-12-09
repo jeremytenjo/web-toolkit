@@ -73,7 +73,12 @@ const DatePicker = ({ arrowColor, onSelect, color, type, yearRange, arrowName })
         </select>
       )}
 
-      <Icon name={arrowName} color={arrowColor} onClick={handleNext} style={{ transform: 'rotate(180deg)' }} />
+      <Icon
+        name={arrowName}
+        color={arrowColor}
+        onClick={handleNext}
+        style={{ transform: 'rotate(180deg)' }}
+      />
     </Wrapper>
   )
 }

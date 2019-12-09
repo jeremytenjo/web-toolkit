@@ -95,6 +95,11 @@ const LoadingCon = styled.div`
 
 export default (props) => (
   <>
-    <Button Wrapper={Wrapper} StyledButton={StyledButton} LoadingCon={LoadingCon} {...props} />
+    <Button
+      Wrapper={Wrapper}
+      StyledButton={StyledButton}
+      LoadingCon={LoadingCon}
+      {...props}
+    />
   </>
 )

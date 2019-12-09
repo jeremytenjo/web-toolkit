@@ -26,7 +26,11 @@ const Variations = () => {
         <button onClick={() => setmodal(true)}>OPEN </button>
 
         <Modal show={modal} onClose={() => setmodal(false)} animationStyle='showHide'>
-          <Photo1 photoUrl={photoUrl} menuOptions={cardOptions} style={{ width: 300, height: 600 }} />
+          <Photo1
+            photoUrl={photoUrl}
+            menuOptions={cardOptions}
+            style={{ width: 300, height: 600 }}
+          />
         </Modal>
       </B>
     </>

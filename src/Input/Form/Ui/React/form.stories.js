@@ -21,7 +21,12 @@ const General = () => {
     <>
       <B title='default'>
         <Form onSubmitSuccess={handleSubmitSuccess} onSubmitFail={handleSubmitFail}>
-          <TextField type='text' placeholder='textfield1' name='textfield1' validation={[{ name: 'required' }]} />
+          <TextField
+            type='text'
+            placeholder='textfield1'
+            name='textfield1'
+            validation={[{ name: 'required' }]}
+          />
 
           <br />
 

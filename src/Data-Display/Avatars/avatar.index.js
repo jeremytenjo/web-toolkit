@@ -6,16 +6,35 @@ import Typography from '../Typography/Ui/React/typography.index'
 import { defaultProps, propTypes } from './avatar.propTypes'
 import { Wrapper } from './avatar.styles'
 
-const FileInput = lazy(() => import(/* webpackChunkName: 'ButtonIcon' */ '../../Media/Files/Ui/React/fileInput.index'))
+const FileInput = lazy(() =>
+  import(
+    /* webpackChunkName: 'ButtonIcon' */ '../../Media/Files/Ui/React/fileInput.index'
+  ),
+)
 
-const Avatar = ({ color, name, src, onClick, size, radius, inputProps, letterColor, borderColor, paddedBorder }) => {
+const Avatar = ({
+  color,
+  name,
+  src,
+  onClick,
+  size,
+  radius,
+  inputProps,
+  letterColor,
+  borderColor,
+  paddedBorder,
+}) => {
   const border = {
-    border: `2px solid ${borderColor ? `var(--color-${borderColor})` : paddedBorder ? 'transparent' : null} `,
+    border: `2px solid ${
+      borderColor ? `var(--color-${borderColor})` : paddedBorder ? 'transparent' : null
+    } `,
   }
   let initials = name.split(' ')
 
   initials =
-    initials.length > 1 ? initials[0].substring(0, 1) + initials[1].substring(0, 1) : initials[0].substring(0, 1)
+    initials.length > 1
+      ? initials[0].substring(0, 1) + initials[1].substring(0, 1)
+      : initials[0].substring(0, 1)
 
   const WrappingComp = inputProps ? FileInput : Fragment
 
@@ -31,7 +50,13 @@ const Avatar = ({ color, name, src, onClick, size, radius, inputProps, letterCol
           paddedBorder={paddedBorder}
         >
           {src ? (
-            <Image src={src} onClick={onClick} size={size} borderRadius={radius} style={border} />
+            <Image
+              src={src}
+              onClick={onClick}
+              size={size}
+              borderRadius={radius}
+              style={border}
+            />
           ) : (
             <Typography text={initials} color={letterColor} />
           )}

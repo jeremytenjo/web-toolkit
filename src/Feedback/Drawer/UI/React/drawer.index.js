@@ -7,13 +7,22 @@ const Drawer = ({ open, position, children, onClose }) => {
   }, [open])
 
   const toggleDrawer = () => (event) => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    if (
+      event &&
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
       return
     }
   }
 
   return (
-    <SwipeableDrawer anchor={position} open={open} onClose={onClose} onOpen={() => toggleDrawer(position, true)}>
+    <SwipeableDrawer
+      anchor={position}
+      open={open}
+      onClose={onClose}
+      onOpen={() => toggleDrawer(position, true)}
+    >
       {children}
     </SwipeableDrawer>
   )

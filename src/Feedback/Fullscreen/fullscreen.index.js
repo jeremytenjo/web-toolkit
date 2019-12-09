@@ -18,7 +18,11 @@ const Fullscreen = ({ children, maxWidth, onClose, backgroundcolor, noAnimation 
   return (
     <Wrapper maxWidth={maxWidth}>
       {children}
-      <Overlay noAnimation={noAnimation} onClick={onClose} backgroundcolor={backgroundcolor} />
+      <Overlay
+        noAnimation={noAnimation}
+        onClick={onClose}
+        backgroundcolor={backgroundcolor}
+      />
     </Wrapper>
   )
 }

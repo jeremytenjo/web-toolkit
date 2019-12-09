@@ -28,7 +28,11 @@ export const States = ({ TextField }) => {
       </B>
       <B title='save input in session storage' noBackground>
         <Form onSubmitSuccess={handleSubmit}>
-          <TextField placeholder={placeholder} name='textfieldsetInSessionStorage' setInSessionStorage />
+          <TextField
+            placeholder={placeholder}
+            name='textfieldsetInSessionStorage'
+            setInSessionStorage
+          />
         </Form>
       </B>
 
@@ -62,6 +66,10 @@ export const States = ({ TextField }) => {
 }
 
 // Stories
-storiesOf('Input|Form/TextField', module).add('Base', () => <States TextField={TextField} />, {
-  notes: { markdown },
-})
+storiesOf('Input|Form/TextField', module).add(
+  'Base',
+  () => <States TextField={TextField} />,
+  {
+    notes: { markdown },
+  },
+)

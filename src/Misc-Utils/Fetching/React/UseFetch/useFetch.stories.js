@@ -21,7 +21,8 @@ const GET = () => {
 
 const Dynamic = () => {
   const { request, response, error } = useFetch({ method: 'get' })
-  const req = async () => request({ url: 'http://dummy.restapiexample.com/api/v1/employees' })
+  const req = async () =>
+    request({ url: 'http://dummy.restapiexample.com/api/v1/employees' })
 
   console.log(response)
 
@@ -58,4 +59,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Misc-Utilities|Fetching/Functions/React|', module).add('variations', () => <Variations />)
+storiesOf('Misc-Utilities|Fetching/Functions/React|', module).add('variations', () => (
+  <Variations />
+))

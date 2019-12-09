@@ -46,7 +46,11 @@ const Variations = () => (
       <List data={dataSet2} ItemComponent={itemComponent} direction='column' />
     </B>
 
-    <B title='Direction - Horizontal - Overflow' background contentStyle={{ width: '50%', padding: 0 }}>
+    <B
+      title='Direction - Horizontal - Overflow'
+      background
+      contentStyle={{ width: '50%', padding: 0 }}
+    >
       <List data={dataSet2} ItemComponent={itemComponent} direction='column' overflows />
     </B>
 
@@ -59,7 +63,14 @@ const Variations = () => (
     </B>
 
     <B title='Grid' background>
-      <List data={dataSet2} ItemComponent={itemComponent} grid repeat={3} repeatOnMinWidth={4} minWidth={800} />
+      <List
+        data={dataSet2}
+        ItemComponent={itemComponent}
+        grid
+        repeat={3}
+        repeatOnMinWidth={4}
+        minWidth={800}
+      />
     </B>
 
     <B title='photoGrid' style={{ width: '100%' }} background>

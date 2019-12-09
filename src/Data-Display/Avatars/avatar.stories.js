@@ -21,13 +21,23 @@ const Variations = () => {
         <Avatar name='Hayle' />
       </B>
       <B title='editable'>
-        <Avatar type='secondary' name='Hayle Whitehead' inputProps={{ onInput: (file) => console.log(file) }} />
+        <Avatar
+          type='secondary'
+          name='Hayle Whitehead'
+          inputProps={{ onInput: (file) => console.log(file) }}
+        />
       </B>
       <B title='border'>
         <Avatar type='secondary' name='Hayle Whitehead' borderColor='primary' src={img} />
       </B>
       <B title='paddedBorder'>
-        <Avatar type='secondary' name='Hayle Whitehead' borderColor='primary' paddedBorder src={img} />
+        <Avatar
+          type='secondary'
+          name='Hayle Whitehead'
+          borderColor='primary'
+          paddedBorder
+          src={img}
+        />
       </B>
     </>
   )

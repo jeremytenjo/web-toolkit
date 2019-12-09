@@ -2,7 +2,11 @@ export default ({ el, show, config, displayType = 'display' }) => {
   const showAttr = displayType === 'display' ? 'block' : 'visible'
   const hideAttr = displayType === 'display' ? 'none' : 'hidden'
 
-  if ((el.style[displayType] === showAttr && show) || (el.style[displayType] === hideAttr && !show)) return null
+  if (
+    (el.style[displayType] === showAttr && show) ||
+    (el.style[displayType] === hideAttr && !show)
+  )
+    return null
 
   el.style[displayType] = showAttr
 

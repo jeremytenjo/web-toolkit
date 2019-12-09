@@ -26,8 +26,12 @@ const Collection = ({
   }, [])
 
   const loadTextField = async () => {
-    let { default: Comp } = await import(`../../../Form/Text-Field/Ui/React/Styles/${textFieldStyle}`)
-    setTextField(<Comp color='secondary' name='item' placeholder={placeholder} clearOnSubmit />)
+    let { default: Comp } = await import(
+      `../../../Form/Text-Field/Ui/React/Styles/${textFieldStyle}`
+    )
+    setTextField(
+      <Comp color='secondary' name='item' placeholder={placeholder} clearOnSubmit />,
+    )
   }
 
   const handleSubmit = ({ item }) => {
@@ -56,7 +60,13 @@ const Collection = ({
 
   return (
     <Wrapper>
-      <List overflows data={data} direction='column' ItemComponent={ItemComponent} onItemClick={handleItemClick} />
+      <List
+        overflows
+        data={data}
+        direction='column'
+        ItemComponent={ItemComponent}
+        onItemClick={handleItemClick}
+      />
       {editable && <Form onSubmitSuccess={handleSubmit}>{TextField && TextField}</Form>}
     </Wrapper>
   )

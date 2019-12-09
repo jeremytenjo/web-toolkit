@@ -26,7 +26,12 @@ const AccessPage = ({ variation, onSuccess, logo, name, desc, service, providers
   }
 
   return (
-    <Box name='access_wrapper' backgroundColor={['white', 'primary']} height='100%' padding='none'>
+    <Box
+      name='access_wrapper'
+      backgroundColor={['white', 'primary']}
+      height='100%'
+      padding='none'
+    >
       <Box
         name='access_inner_wrapper'
         padding='none'
@@ -41,9 +46,20 @@ const AccessPage = ({ variation, onSuccess, logo, name, desc, service, providers
           <Typography text={desc} />
         </Box>
 
-        <Box name='providers' alignItems='center' textAlign='center' height='fit-content' gridGap='m'>
+        <Box
+          name='providers'
+          alignItems='center'
+          textAlign='center'
+          height='fit-content'
+          gridGap='m'
+        >
           <Typography text='Continue with' />
-          <Box name='providers_list' gridAutoFlow='column' justifyContent='center' gridGap='xl'>
+          <Box
+            name='providers_list'
+            gridAutoFlow='column'
+            justifyContent='center'
+            gridGap='xl'
+          >
             {providers.map((p) => (
               <Icon
                 key={p}

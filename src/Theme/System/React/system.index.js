@@ -39,7 +39,12 @@ export default (props) => {
   }
 
   Object.entries(styles).forEach(([key, value]) => {
-    if (key.includes('padding') || key.includes('margin') || key.includes('gap') || key.includes('Gap'))
+    if (
+      key.includes('padding') ||
+      key.includes('margin') ||
+      key.includes('gap') ||
+      key.includes('Gap')
+    )
       array.push(getString({ varName: 'spacing', key, value }))
     else if (key.includes('color') || key.includes('Color') || key.includes('fill'))
       array.push(getString({ varName: 'color', key, value }))

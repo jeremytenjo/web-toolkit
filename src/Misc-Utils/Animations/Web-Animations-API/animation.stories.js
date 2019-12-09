@@ -23,4 +23,6 @@ const Variations = () => {
   )
 }
 
-storiesOf('Misc-Utils|Aniamation/Web Animation API', module).add('variations', () => <Variations />)
+storiesOf('Misc-Utils|Aniamation/Web Animation API', module).add('variations', () => (
+  <Variations />
+))

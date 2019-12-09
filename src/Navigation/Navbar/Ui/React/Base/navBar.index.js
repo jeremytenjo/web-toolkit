@@ -20,7 +20,19 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
         }}
       >
         {data.map(
-          ({ file = null, src = null, icon, label = {}, top, url, iconStyles = { plain: true }, search }, index) => {
+          (
+            {
+              file = null,
+              src = null,
+              icon,
+              label = {},
+              top,
+              url,
+              iconStyles = { plain: true },
+              search,
+            },
+            index,
+          ) => {
             const {
               history: { push },
               location: { pathname },
@@ -35,7 +47,11 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
             const key = label.text || icon || currentUrl || index
             const isPlain = iconStyles.plain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
-            const _color = iconStyles.color ? iconStyles.color : isActive ? styles.color || 'primary' : 'grey'
+            const _color = iconStyles.color
+              ? iconStyles.color
+              : isActive
+              ? styles.color || 'primary'
+              : 'grey'
 
             const { styles: labelSyles, variant: labelVariant = 'navbar' } = label
             const labelProps = {

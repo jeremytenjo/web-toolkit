@@ -1,7 +1,13 @@
 import React from 'react'
 
 export default () => (
-  <svg width='30' height='31' viewBox='0 0 30 31' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <svg
+    width='30'
+    height='31'
+    viewBox='0 0 30 31'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
     <g clipPath='url(#clip0)'>
       <path
         d='M29.8353 15.5694C29.8353 14.3416 29.7362 13.4457 29.5218 12.5166H15.5791V18.0581H23.7631C23.5982 19.4352 22.7072 21.5092 20.7271 22.9028L20.6994 23.0883L25.1078 26.5223L25.4132 26.553C28.2182 23.9481 29.8353 20.1154 29.8353 15.5694'
@@ -22,7 +28,12 @@ export default () => (
     </g>
     <defs>
       <clipPath id='clip0'>
-        <rect width='29.1234' height='29.9675' fill='white' transform='translate(0.727264 0.305176)' />
+        <rect
+          width='29.1234'
+          height='29.9675'
+          fill='white'
+          transform='translate(0.727264 0.305176)'
+        />
       </clipPath>
     </defs>
   </svg>

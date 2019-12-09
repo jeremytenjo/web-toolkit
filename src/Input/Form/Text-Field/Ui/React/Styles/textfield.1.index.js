@@ -24,7 +24,8 @@ const Wrapper = styled.div`
   ${({ round }) => round && ` border-radius: 100px;`}
 
     /* Focused */
-  ${({ isFocused, foregroundColor }) => isFocused && `border: 2px solid var(--color-${foregroundColor});`}
+  ${({ isFocused, foregroundColor }) =>
+    isFocused && `border: 2px solid var(--color-${foregroundColor});`}
 
     svg {
     fill: ${({ foregroundColor }) => `var(--color-${foregroundColor})`};

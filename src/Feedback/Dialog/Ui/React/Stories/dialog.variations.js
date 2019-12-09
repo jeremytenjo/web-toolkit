@@ -6,7 +6,13 @@ import Typography from '../../../../../Data-Display/Typography/Ui/React/typograp
 const Variations = ({ Dialog, name }) => {
   return (
     <div>
-      <Typography text={name} variant='h6' color='white' fontWeight='bold' paddingLeft='20px' />
+      <Typography
+        text={name}
+        variant='h6'
+        color='white'
+        fontWeight='bold'
+        paddingLeft='20px'
+      />
 
       <B title=' title & message'>
         <Dialog title='title' message='Message' />

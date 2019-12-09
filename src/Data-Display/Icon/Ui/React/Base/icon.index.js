@@ -4,10 +4,14 @@ import { WrapperIcon, Wrapper } from './icon.styles'
 import { defaultProps, propTypes } from './icon.propTypes'
 
 const FileInput = lazy(() =>
-  import(/* webpackChunkName: 'FileInput' */ '../../../../../Media/Files/Ui/React/fileInput.index'),
+  import(
+    /* webpackChunkName: 'FileInput' */ '../../../../../Media/Files/Ui/React/fileInput.index'
+  ),
 )
 const Typogrgraphy = lazy(() =>
-  import(/* webpackChunkName: 'Typogrgraphy' */ '../../../../Typography/Ui/React/typography.index'),
+  import(
+    /* webpackChunkName: 'Typogrgraphy' */ '../../../../Typography/Ui/React/typography.index'
+  ),
 )
 
 const Icon = ({

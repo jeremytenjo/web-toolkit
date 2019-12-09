@@ -204,14 +204,25 @@ const TextField = ({
             data-cy={dataCy || name}
           />
 
-          <Animation name={animationType} show={input !== ''} el={closeIconRef} displayType='visibility' />
+          <Animation
+            name={animationType}
+            show={input !== ''}
+            el={closeIconRef}
+            displayType='visibility'
+          />
           <CloseIconCon
             ref={closeIconRef}
             textColor={textColor}
             style={{ visibility: 'hidden' }}
             data-cy='textfield_closeIcon'
           >
-            <Icon name='close/material' onClick={clearIconClick} size={16} fill='black' backgroundSize={25} />
+            <Icon
+              name='close/material'
+              onClick={clearIconClick}
+              size={16}
+              fill='black'
+              backgroundSize={25}
+            />
           </CloseIconCon>
         </InputCon>
 

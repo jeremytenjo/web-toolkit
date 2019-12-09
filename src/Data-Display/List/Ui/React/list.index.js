@@ -56,7 +56,11 @@ const List = ({
   )
 
   // Template
-  return onScrollEnd ? <BottomScrollListener onBottom={onScrollEnd}>{Main}</BottomScrollListener> : Main()
+  return onScrollEnd ? (
+    <BottomScrollListener onBottom={onScrollEnd}>{Main}</BottomScrollListener>
+  ) : (
+    Main()
+  )
 }
 
 List.defaultProps = defaultProps

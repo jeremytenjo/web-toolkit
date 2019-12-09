@@ -11,7 +11,11 @@ const Example = () => {
   return (
     <>
       <B title='Default ' color='black'>
-        <Like liked={liked} onLike={() => setLiked(true)} onUnlike={() => setLiked(false)} />
+        <Like
+          liked={liked}
+          onLike={() => setLiked(true)}
+          onUnlike={() => setLiked(false)}
+        />
       </B>
 
       <B title='Liked' color='black'>
