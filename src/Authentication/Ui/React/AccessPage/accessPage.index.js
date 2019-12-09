@@ -9,7 +9,7 @@ import Icon from '../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 
 import { defaultProps, propTypes } from './accessPage.propTypes'
 
-const AccessPage = ({ variation, onSuccess, logo, name, desc, service, providers }) => {
+const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
   const errorRef = useRef(null)
   const [errMessage, setErrMessage] = useState(null)
 
@@ -26,21 +26,18 @@ const AccessPage = ({ variation, onSuccess, logo, name, desc, service, providers
   }
 
   return (
-    <Box
-      name='access_wrapper'
-      backgroundColor={['white', 'primary']}
-      height='100%'
-      padding='none'
-    >
+    <Box name='access_wrapper' backgroundColor={['white', 'primary']} height='100%' padding='none'>
       <Box
         name='access_inner_wrapper'
-        padding='none'
-        paddingTop='xxl'
-        paddingBottom='xxl'
-        alignContent='space-between'
-        backgroundColor='white'
+        styles={{
+          padding: 'none',
+          paddingTop: 'xxl',
+          paddingBottom: 'xxl',
+          alignContent: 'space-between',
+          backgroundColor: 'white',
+        }}
       >
-        <Box name='Info' justifyItems='center' textAlign='center' height='fit-content'>
+        <Box name='Info' styles={{ justifyItems: 'center', textAlign: 'center', height: 'fit-content' }}>
           <Image src={logo} size={93} />
           <Typography text={name} color='primary' />
           <Typography text={desc} />
@@ -48,18 +45,10 @@ const AccessPage = ({ variation, onSuccess, logo, name, desc, service, providers
 
         <Box
           name='providers'
-          alignItems='center'
-          textAlign='center'
-          height='fit-content'
-          gridGap='m'
+          styles={{ alignItems: 'center', textAlign: 'center', height: 'fit-content', gridGap: 'm' }}
         >
           <Typography text='Continue with' />
-          <Box
-            name='providers_list'
-            gridAutoFlow='column'
-            justifyContent='center'
-            gridGap='xl'
-          >
+          <Box name='providers_list' styles={{ gridAutoFlow: 'column', justifyContent: 'center', gridGap: 'xl' }}>
             {providers.map((p) => (
               <Icon
                 key={p}
