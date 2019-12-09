@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   z-index: 999;
   border-radius: 100px;
   width: fit-content;
+  min-width: 150px;
   max-width: 300px;
   display: grid;
   grid-auto-flow: column;
@@ -21,6 +22,7 @@ export const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
+  word-break: break-word;
 
   /* location */
   ${({ location }) =>
@@ -44,7 +46,7 @@ export const Wrapper = styled.div`
     text-align: left;
     font-weight: 100;
     font-size: 14px;
-    white-space: nowrap;
+    line-height: 20px;
   }
 `
 
@@ -52,19 +54,13 @@ export default ({
   type = 'success',
   background = 'black',
   foreground = 'white',
-  message = 'message',
+  message = 'message a mejfalsd ',
   iconName = 'checkmark/1',
   display = 'none',
   font = 'primary',
   location = 'center',
 }) => (
-  <Wrapper
-    background={background}
-    foreground={foreground}
-    display={display}
-    font={font}
-    location={location}
-  >
+  <Wrapper background={background} foreground={foreground} display={display} font={font} location={location}>
     <Icon name={iconName} plain />
     <span> {message}</span>
   </Wrapper>
