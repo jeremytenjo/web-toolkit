@@ -1,31 +1,18 @@
-import React from 'react'
-import { Route, Redirect } from 'react-router-dom'
+import React, { useEffect, memo } from 'react'
+import { Route, useHistory } from 'react-router-dom'
 
-const authFunc = () => true
-const useAuth = () => true
-export default async ({ children, auth = true, ...rest }) => {
-  const hasAuthed = useAuth
-  let isAuth = true
+const CRoute = ({ component, authState, redirectTo = '/login', isPrivate = false, ...rest }) => {
+  const history = useHistory()
+  const { userInfo, attemptSignIn } = authState()
+  const hasAccess = !isPrivate || userInfo
+  const attemptLogin = userInfo === null && isPrivate
 
-  if (auth && !hasAuthed) {
-    isAuth = await authFunc()
-  }
+  useEffect(() => {
+    if (attemptLogin) attemptSignIn()
+    if (userInfo !== null && !userInfo) history.push(redirectTo)
+  }, [attemptLogin, userInfo])
 
-  return (
-    <Route
-      {...rest}
-      render={({ location }) =>
-        isAuth ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: '/login',
-              state: { from: location },
-            }}
-          />
-        )
-      }
-    />
-  )
+  return <Route {...rest} render={() => (hasAccess ? component() : null)} />
 }
+
+export default memo(CRoute)
