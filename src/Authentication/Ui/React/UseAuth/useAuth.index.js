@@ -1,10 +1,8 @@
 import React, { useState, createContext, useContext } from 'react'
 
-import checkAuth from '../../../Functions/Firebase/auth.check'
-
 export const AuthContext = createContext(null)
 
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = ({ children, service = 'firebase' }) => {
   const [userInfo, setuserInfo] = useState(null)
   const [signinIng, setSignining] = useState(null)
   const [error, setError] = useState(null)
@@ -13,10 +11,11 @@ export const AuthProvider = ({ children }) => {
   let res = null
   let cmUser = null
 
-  const attemptSignIn = async () => {
+  const signIn = async () => {
     setSignining(true)
 
-    userRes = await checkAuth()
+    const authCheck = await import(`../../../Functions/${service}/auth.check`)
+    userRes = await authCheck.default()
 
     if (userRes) {
       const { uid, displayName, email, photoURL } = userRes
@@ -46,12 +45,13 @@ export const AuthProvider = ({ children }) => {
     }
     setSignining(false)
   }
-
+  const signOut = () => {}
   return (
     <AuthContext.Provider
       value={{
         userInfo,
-        attemptSignIn,
+        signIn,
+        signOut,
         signinIng,
         error,
       }}

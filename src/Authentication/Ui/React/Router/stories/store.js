@@ -1,8 +1,8 @@
 import React, { cloneElement } from 'react'
 
-import { AuthProvider as FirebaseAuthProvider } from '../../UseAuth/firebase.index'
+import { AuthProvider } from '../../UseAuth/useAuth.index'
 
-const providers = [<FirebaseAuthProvider key={1} />]
+const providers = [<AuthProvider key={1} service='firebase' />]
 
 const ProviderComposer = ({ contexts, children }) =>
   contexts.reduceRight(

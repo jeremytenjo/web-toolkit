@@ -9,12 +9,12 @@ const CRoute = ({
   ...rest
 }) => {
   const { push } = useHistory()
-  const { userInfo, attemptSignIn } = authState()
+  const { userInfo, signIn } = authState()
   const hasAccess = !isPrivate || userInfo
   const attemptLogin = userInfo === null && isPrivate
 
   useEffect(() => {
-    if (attemptLogin) attemptSignIn()
+    if (attemptLogin) signIn()
   }, [attemptLogin])
 
   useEffect(() => {

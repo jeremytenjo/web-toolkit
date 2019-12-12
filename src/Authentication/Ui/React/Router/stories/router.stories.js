@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { useHistory, Switch } from 'react-router-dom'
 
 import Route from '../route'
-import useAuth from '../../UseAuth/firebase.index'
+import useAuth from '../../UseAuth/useAuth.index'
 
 import Store from './store'
 
@@ -14,6 +14,7 @@ const LoginPage = () => <div>Login Page: Needs Authenticaion</div>
 
 const Story = () => {
   let history = useHistory()
+  const { signIn, signOut } = useAuth
 
   return (
     <Store>
@@ -21,6 +22,12 @@ const Story = () => {
       <button onClick={() => history.push('/privatePage1')}>Private Page 1</button>
       <button onClick={() => history.push('/privatePage2')}>Private Page 2</button>
       <button onClick={() => history.push('/login')}>Login Page</button>
+      <br />
+      <br />
+
+      <button onClick={() => signIn()}>Sign in</button>
+      <button onClick={() => signOut()}>Sign Out</button>
+
       <br />
       <br />
 

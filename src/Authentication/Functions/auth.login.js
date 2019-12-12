@@ -1,4 +1,4 @@
-import fbLogin from './Firebase/auth.email'
+import fbLogin from './firebase/auth.email'
 import cmSave from './WebApi/CredentialMangment/cm.save'
 
 export default async ({ email, password }) => {
