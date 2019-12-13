@@ -27,3 +27,5 @@ export default async ({ email, password }) => {
 
   return { user: userInfo }
 }
+
+// email: cmUser.id, password

@@ -1,58 +1,69 @@
 import React, { useState, createContext, useContext } from 'react'
 
+import saveToCredentialManager from '../../../Functions/WebApi/CredentialMangment/cm.save'
+
 export const AuthContext = createContext(null)
 
-export const AuthProvider = ({ children, service = 'firebase' }) => {
-  const [userInfo, setuserInfo] = useState(null)
-  const [signinIng, setSignining] = useState(null)
+export const AuthProvider = ({ children, service = 'firebase', action = 'login' }) => {
+  const [user, setUser] = useState(null)
+  const [signingIn, setSigningIn] = useState(null)
   const [error, setError] = useState(null)
 
-  let userRes = null
-  let res = null
-  let cmUser = null
+  const signIn = async ({ provider = 'email', credentials }) => {
+    setSigningIn(true)
+    const search = provider === 'email' ? 'email' : 'social'
+    const signIn = await import(`../../../Functions/${service}/auth.${search}`)
+    const {
+      error: signInError,
+      user: signedInUser,
+      credentialManagerData,
+    } = await signIn.default({
+      provider,
+      action,
+      credentials,
+    })
 
-  const signIn = async () => {
-    setSignining(true)
+    if (signedInUser) {
+      setUser(signedInUser)
+      saveToCredentialManager(credentialManagerData)
+    } else if (signInError) {
+      setError(signInError)
+    }
 
+    setSigningIn(false)
+  }
+
+  const check = async () => {
     const authCheck = await import(`../../../Functions/${service}/auth.check`)
-    userRes = await authCheck.default()
+    const { user: userRes } = await authCheck.default()
 
     if (userRes) {
-      const { uid, displayName, email, photoURL } = userRes
-
-      res = {
-        id: uid,
-        name: displayName,
-        email,
-        photoURL,
-      }
-
-      setuserInfo(res)
+      setUser(userRes)
+      saveToCredentialManager(userRes)
     } else {
-      // Check Credential Manager if not Signed in fiebase
+      // Check Credential Manager if not Signed in
       const cmModule = await import('../../../Functions/WebApi/CredentialMangment/cm.get')
-      cmUser = await cmModule.default()
+      const { user: cmUser } = await cmModule.default()
 
-      if (cmUser) {
-        const { password } = cmUser
-        const signInModule = await import('../../../Functions/auth.login')
-        res = await signInModule.default({ email: cmUser.id, password })
-        const { errMsg, user } = res
-
-        setError(errMsg)
-        setuserInfo(user)
-      }
+      return cmUser
     }
-    setSignining(false)
   }
-  const signOut = () => {}
+
+  const signOut = async () => {
+    const signOutFunc = await import(`../../../Functions/${service}/auth.signOut`)
+    await signOutFunc.default()
+
+    setUser(false)
+  }
+
   return (
     <AuthContext.Provider
       value={{
-        userInfo,
+        user,
         signIn,
         signOut,
-        signinIng,
+        signingIn,
+        check,
         error,
       }}
     >

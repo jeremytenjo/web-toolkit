@@ -9,11 +9,11 @@ export default () =>
           password: true,
         })
 
-        resolve(user)
+        resolve({ user })
       } catch (e) {
-        resolve(e)
+        resolve({ error: e })
       }
     } else {
-      resolve(false)
+      resolve({ error: 'credential manager not supported' })
     }
   })

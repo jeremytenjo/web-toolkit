@@ -5,7 +5,7 @@ export default () =>
   new Promise((resolve, reject) => {
     try {
       firebase.auth().onAuthStateChanged(async (user) => {
-        user ? resolve(user) : resolve(false)
+        user ? resolve({ user }) : resolve(false)
       })
     } catch (e) {
       reject(e)

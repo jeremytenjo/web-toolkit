@@ -1,8 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
-import cmSave from '../WebApi/CredentialMangment/cm.save'
-
 const actions = {
   login: async (email, password) =>
     await firebase.auth().signInWithEmailAndPassword(email, password),
@@ -12,17 +10,19 @@ const actions = {
 
 export default async ({
   action = 'login',
-  email = '',
-  password = '',
-  credentialManager = true,
+  credentials: { email = '', password = '', credentialManager },
 }) =>
   new Promise(async (resolve, reject) => {
     if (email !== '' && password !== '') {
       try {
-        const user = await actions[action]()
+        const user = await actions[action](email, password)
+        const credentialManagerData = {
+          id: user.user.email,
+          email: user.user.email,
+          password,
+        }
 
-        credentialManager && cmSave(user)
-        resolve({ user })
+        resolve({ user, credentialManagerData })
       } catch (err) {
         resolve({ error: err.message })
       }

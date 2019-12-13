@@ -1,5 +1,5 @@
 import React, { useEffect, memo } from 'react'
-import { Route, useHistory } from 'react-router-dom'
+import { Route, useHistory, Redirect } from 'react-router-dom'
 
 const CRoute = ({
   component,
@@ -9,19 +9,35 @@ const CRoute = ({
   ...rest
 }) => {
   const { push } = useHistory()
-  const { userInfo, signIn } = authState()
-  const hasAccess = !isPrivate || userInfo
-  const attemptLogin = userInfo === null && isPrivate
+  const { user, check } = authState()
+  const hasAccess = !isPrivate || user
+  const checkLogin = user === null && isPrivate
 
   useEffect(() => {
-    if (attemptLogin) signIn()
-  }, [attemptLogin])
+    if (checkLogin) check()
+  }, [checkLogin])
 
   useEffect(() => {
-    if (userInfo !== null && !userInfo) push(redirectTo)
-  }, [userInfo])
+    if (user !== null && !user) push(redirectTo)
+  }, [user])
 
-  return <Route {...rest} render={() => (hasAccess ? component() : null)} />
+  return (
+    <Route
+      {...rest}
+      render={() =>
+        hasAccess ? (
+          component()
+        ) : (
+          <Redirect
+            to={{
+              pathname: redirectTo,
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  )
 }
 
 export default memo(CRoute)

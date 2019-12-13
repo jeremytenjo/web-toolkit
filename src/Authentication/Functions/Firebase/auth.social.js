@@ -20,9 +20,12 @@ const getProviderMethod = ({ provider = '' }) => {
 export default async (provider) => {
   try {
     const providerMethod = getProviderMethod(provider)
-    const result = await firebase.auth().signInWithPopup(providerMethod)
+    const {
+      credential: { accessToken },
+      user,
+    } = await firebase.auth().signInWithPopup(providerMethod)
 
-    return { accessToken: result.credential.accessToken, user: result.user }
+    return { accessToken, user }
   } catch (error) {
     return {
       error: {
