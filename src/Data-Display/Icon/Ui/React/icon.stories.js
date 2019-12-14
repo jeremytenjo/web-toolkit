@@ -31,16 +31,16 @@ const Variations = () => (
       <Icon name='camera/material' size={60} />
     </B>
     <B title='label' color='black' noBackground>
-      <Icon name='camera/material' label='Label' size={60} />
+      <Icon name='camera/material' label={{ text: 'label' }} size={60} />
     </B>
     <B title='isStroke' color='black' noBackground>
-      <Icon name='camera/feather' color='primary' label='Label' size={60} />
+      <Icon name='camera/feather' color='primary' label={{ text: 'label' }} size={60} />
     </B>
     <B title='backgroundSize' color='black' noBackground>
       <Icon
         name='camera/feather'
         color='primary'
-        label='Label'
+        label={{ text: 'label' }}
         size={20}
         backgroundSize={80}
       />

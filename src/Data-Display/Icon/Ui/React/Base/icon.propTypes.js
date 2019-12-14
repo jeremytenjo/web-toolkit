@@ -16,8 +16,7 @@ export const defaultProps = {
   link: null,
   inputProps: null,
   plain: null,
-  label: null,
-  labelProps: { tag: 'span', variant: 'body2' },
+  label: { tag: 'span', variant: 'body2', text: null },
   router: { push: () => null },
 }
 
@@ -30,8 +29,7 @@ export const propTypes = {
   background: bool,
   noBackground: bool,
   size: number,
-  labelProps: object,
-  label: string,
+  label: object,
   dark: bool,
   noBackgroundChange: bool,
   plain: bool,

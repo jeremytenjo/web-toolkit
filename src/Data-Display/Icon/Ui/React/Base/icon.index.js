@@ -33,7 +33,6 @@ const Icon = ({
   center,
   router,
   label,
-  labelProps,
 }) => {
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
@@ -80,7 +79,7 @@ const Icon = ({
           >
             {IconComp}
           </WrapperIcon>
-          {label && <Typogrgraphy text={label} {...labelProps} />}
+          {label.text && <Typogrgraphy {...label} />}
         </Wrapper>
       </WrappingComp>
     </Suspense>
