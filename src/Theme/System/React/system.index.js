@@ -5,8 +5,7 @@ export default (props) => {
     styles,
     theme: { mediaQueries = [700, 1200] },
   } = props
-  const array = []
-  let string = ''
+  const selectors = []
   mediaQueries.unshift(0)
 
   const getString = ({ varName, key, value }) => {
@@ -38,20 +37,49 @@ export default (props) => {
     return string
   }
 
-  Object.entries(styles).forEach(([key, value]) => {
-    if (
-      key.includes('padding') ||
-      key.includes('margin') ||
-      key.includes('gap') ||
-      key.includes('Gap')
-    )
-      array.push(getString({ varName: 'spacing', key, value }))
-    else if (key.includes('color') || key.includes('Color') || key.includes('fill'))
-      array.push(getString({ varName: 'color', key, value }))
-    else array.push(getString({ key, value }))
-  })
+  const handleStyles = ({ styles }) => {
+    const array = []
+    let string = ''
 
-  string = array.join('\n')
+    Object.entries(styles).forEach(([key, value]) => {
+      if (key.includes(':')) {
+        selectors.push({ selector: key, styles: value })
+      } else if (
+        key.includes('padding') ||
+        key.includes('margin') ||
+        key.includes('gap') ||
+        key.includes('Gap')
+      )
+        array.push(getString({ varName: 'spacing', key, value }))
+      else if (key.includes('color') || key.includes('Color') || key.includes('fill'))
+        array.push(getString({ varName: 'color', key, value }))
+      else array.push(getString({ key, value }))
+    })
 
-  return string
+    string = array.join('\n')
+    return string
+  }
+
+  const handleSelectors = () => {
+    let masterString = ''
+    if (selectors.length) {
+      const se = selectors.map(({ selector, styles }) => {
+        let string = `${selector} {`
+        string += handleStyles({ styles })
+        string += `}`
+        return string
+      })
+
+      masterString = se.join('\n')
+      return masterString
+    }
+
+    return masterString
+  }
+
+  const genStyles = handleStyles({ styles })
+
+  const selectorStyles = handleSelectors({ selectors })
+
+  return `${genStyles} ${selectorStyles}`
 }

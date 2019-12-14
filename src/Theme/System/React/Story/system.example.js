@@ -8,7 +8,15 @@ const Wrapper = styled.div`
 `
 
 export default () => (
-  <Wrapper styles={{ color: ['primary', 'secondary'], margin: 'xl' }}>
+  <Wrapper
+    styles={{
+      color: ['primary', 'secondary'],
+      margin: 'xl',
+      ':hover': {
+        backgroundColor: ['white', 'red'],
+      },
+    }}
+  >
     Theme system
   </Wrapper>
 )
