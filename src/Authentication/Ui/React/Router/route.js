@@ -3,7 +3,13 @@ import { Route, useHistory, Redirect } from 'react-router-dom'
 
 import useAuth from '../UseAuth/useAuth.index'
 
-const CRoute = ({ component, redirectTo = '/login', isPrivate = false, ...rest }) => {
+const CRoute = ({
+  component,
+  redirectTo = '/login',
+  isPrivate = false,
+  children,
+  ...rest
+}) => {
   const { push } = useHistory()
   const { user, check } = useAuth()
   const hasAccess = !isPrivate || user
@@ -22,7 +28,11 @@ const CRoute = ({ component, redirectTo = '/login', isPrivate = false, ...rest }
       {...rest}
       render={() =>
         hasAccess ? (
-          component()
+          component ? (
+            component()
+          ) : (
+            children
+          )
         ) : (
           <Redirect
             to={{
