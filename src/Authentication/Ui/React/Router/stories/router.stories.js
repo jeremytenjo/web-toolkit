@@ -40,23 +40,13 @@ const Example = () => {
       <br />
 
       <Switch>
-        <Route component={PublicPage} authState={useAuth} exact path='/' />
+        <Route component={PublicPage} exact path='/' />
 
-        <Route
-          component={PrivatePage1}
-          authState={useAuth}
-          path='/privatePage1'
-          isPrivate
-        />
+        <Route component={PrivatePage1} path='/privatePage1' isPrivate />
 
-        <Route
-          component={PrivatePage2}
-          authState={useAuth}
-          path='/privatePage2'
-          isPrivate
-        />
+        <Route component={PrivatePage2} path='/privatePage2' isPrivate />
 
-        <Route component={LoginPage} authState={useAuth} path='/login' />
+        <Route component={LoginPage} path='/login' />
       </Switch>
 
       {signingIn && 'signing In...'}

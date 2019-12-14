@@ -1,15 +1,11 @@
 import React, { useEffect, memo } from 'react'
 import { Route, useHistory, Redirect } from 'react-router-dom'
 
-const CRoute = ({
-  component,
-  authState,
-  redirectTo = '/login',
-  isPrivate = false,
-  ...rest
-}) => {
+import useAuth from '../UseAuth/useAuth.index'
+
+const CRoute = ({ component, redirectTo = '/login', isPrivate = false, ...rest }) => {
   const { push } = useHistory()
-  const { user, check } = authState()
+  const { user, check } = useAuth()
   const hasAccess = !isPrivate || user
   const checkLogin = user === null && isPrivate
 
