@@ -1,4 +1,4 @@
-import { string, func, object } from 'prop-types'
+import { string, func } from 'prop-types'
 
 export const defaultProps = {
   link: '/',
@@ -6,7 +6,7 @@ export const defaultProps = {
   icon: 'heart/gov',
   foregroundColor: 'primary',
   backgroundColor: 'primaryLighter',
-  wrapperProps: {},
+  activeColor: 'white',
   onClick: () => null,
   router: { push: () => null },
 }
@@ -17,6 +17,5 @@ export const propTypes = {
   icon: string,
   foregroundColor: string,
   backgroundColor: string,
-  wrapperProps: object,
   onClick: func,
 }

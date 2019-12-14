@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
 import { Route } from 'react-router-dom'
 import StoryRouter from 'storybook-react-router'
@@ -9,7 +9,7 @@ import B from '../../../../../.storybook/Custom-Components/VariationBlock/variat
 const req = require.context('./Styles', true, /index.js$/)
 const paths = req.keys()
 
-const StylesList = () => {
+const LinkStyles = () => {
   const [vars, setvars] = useState([])
   useEffect(() => {
     getStyles(paths)
@@ -24,9 +24,14 @@ const StylesList = () => {
       Mod = Mod.default
 
       return (
-        <B title={title} key={title} noBackground>
-          <Mod />
-        </B>
+        <Fragment key={Math.random()}>
+          <B title={title} key={`${title}a`} noBackground>
+            <Mod />
+          </B>
+          <B title={`${title} - matcheds page`} key={`${title}b`} noBackground>
+            <Mod link='/iframe.html' />
+          </B>
+        </Fragment>
       )
     })
     setvars(await Promise.all(Elements))
@@ -37,7 +42,7 @@ const StylesList = () => {
 const Variations = () => {
   return (
     <>
-      <Route path='/' component={StylesList} />
+      <Route path='/' component={LinkStyles} />
     </>
   )
 }

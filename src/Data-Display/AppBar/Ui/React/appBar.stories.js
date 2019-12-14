@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 
 import Box from '../../../Box/Ui/React/box.index'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
@@ -25,13 +25,15 @@ const StylesList = () => {
       Mod = Mod.default
 
       return (
-        <B title={title} key={title} noBackground style={{ width: '100%' }}>
-          <Mod
-            title='Healthcare'
-            logo='https://www.pinclipart.com/picdir/big/107-1070245_epteca-youtube-round-icon-png-clipart.png'
-            onClick={() => console.log('fgsdff')}
-          />
-        </B>
+        <Fragment key={Math.random()}>
+          <B title={title} noBackground style={{ width: '100%' }}>
+            <Mod
+              title='Healthcare'
+              logo='https://www.pinclipart.com/picdir/big/107-1070245_epteca-youtube-round-icon-png-clipart.png'
+              onClick={() => console.log('fgsdff')}
+            />
+          </B>
+        </Fragment>
       )
     })
     setvars(await Promise.all(Elements))

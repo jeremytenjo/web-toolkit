@@ -2,9 +2,10 @@ import React, { memo } from 'react'
 
 import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
 import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
+import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
 
 import { defaultProps, propTypes } from './canadagov.propTypes'
-import { Wrapper } from './canadagov.styles'
+import { wrapperSyles } from './canadagov.styles'
 
 const Example = ({
   link,
@@ -13,12 +14,12 @@ const Example = ({
   onClick,
   foregroundColor,
   backgroundColor,
-  wrapperProps,
+  activeColor,
   router,
 }) => {
   const { push } = router
   const { pathname } = window.location
-  const active = pathname === link
+  const isActive = pathname === link
 
   const handleClick = () => {
     push(link)
@@ -26,16 +27,13 @@ const Example = ({
   }
 
   return (
-    <Wrapper
-      active={active}
-      foregroundColor={foregroundColor}
-      backgroundColor={backgroundColor}
+    <Box
+      styles={wrapperSyles({ isActive, activeColor, backgroundColor, foregroundColor })}
       onClick={handleClick}
-      wrapperProps={wrapperProps}
     >
-      <Icon name={icon} plain />
-      <Typography text={text} color={foregroundColor} />
-    </Wrapper>
+      <Icon name={icon} plain color={foregroundColor} />
+      <Typography text={text} styles={{ color: foregroundColor }} />
+    </Box>
   )
 }
 
