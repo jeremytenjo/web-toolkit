@@ -11,16 +11,11 @@ const CRoute = ({
   ...rest
 }) => {
   const { push } = useHistory()
-  const { user, check } = useAuth()
+  const { user } = useAuth()
   const hasAccess = !isPrivate || user
-  const checkLogin = user === null && isPrivate
 
   useEffect(() => {
-    if (checkLogin) check()
-  }, [checkLogin])
-
-  useEffect(() => {
-    if (user !== null && !user) push(redirectTo)
+    if (!user && isPrivate) push(redirectTo)
   }, [user])
 
   return (

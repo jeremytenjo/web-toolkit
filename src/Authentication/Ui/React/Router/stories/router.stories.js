@@ -21,7 +21,7 @@ const Example = () => {
       <button onClick={() => push('/')}>Public Page</button>
       <button onClick={() => push('/privatePage1')}>Private Page 1</button>
       <button onClick={() => push('/privatePage2')}>Private Page 2</button>
-      <button onClick={() => push('/login')}>Login Page</button>
+      <button onClick={() => push('/account/login')}>Login Page</button>
       <br />
       <br />
 
@@ -46,7 +46,7 @@ const Example = () => {
 
         <Route component={PrivatePage2} path='/privatePage2' isPrivate />
 
-        <Route component={LoginPage} path='/login' />
+        <Route component={LoginPage} path='/account/login' />
       </Switch>
 
       {signingIn && 'signing In...'}
