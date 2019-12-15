@@ -2,15 +2,15 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { useHistory, Switch } from 'react-router-dom'
 
-import Route from '../route'
-import useAuth from '../../UseAuth/useAuth.index'
+import Route from '../route.index'
+import useAuth from '../../../UseAuth/useAuth.index'
 
 import Store from './store'
 
 const PublicPage = () => <div>Public Page</div>
 const PrivatePage1 = () => <div>Private Page 1</div>
 const PrivatePage2 = () => <div>Private Page 2</div>
-const LoginPage = () => <div>Login Page: Needs Authenticaion</div>
+const LoginPage = () => <div>Login Page</div>
 
 const Example = () => {
   const { push } = useHistory()
@@ -25,20 +25,6 @@ const Example = () => {
       <br />
       <br />
 
-      <button
-        onClick={() =>
-          signIn({
-            credentials: { email: 'tenjojeremy@gmail.com', password: 'testpass' },
-          })
-        }
-      >
-        Sign in
-      </button>
-      <button onClick={() => signOut()}>Sign Out</button>
-
-      <br />
-      <br />
-
       <Switch>
         <Route component={PublicPage} exact path='/' />
 
@@ -49,9 +35,25 @@ const Example = () => {
         <Route component={LoginPage} path='/account/login' />
       </Switch>
 
-      {signingIn && 'signing In...'}
+      <br />
+      <button
+        onClick={() =>
+          signIn({
+            credentials: { email: 'tenjojeremy@gmail.com', password: 'testpass' },
+          })
+        }
+      >
+        Sign in
+      </button>
 
-      {user && 'Logged In success'}
+      <button onClick={() => signOut()}>Sign Out</button>
+      <br />
+      <br />
+      <br />
+      {signingIn && 'signing In...'}
+      <span id='signinStatus' style={{ color: 'yellow' }}>
+        ({user ? 'Signed In' : 'Signed Out'})
+      </span>
     </>
   )
 }
