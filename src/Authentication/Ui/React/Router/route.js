@@ -5,7 +5,7 @@ import useAuth from '../UseAuth/useAuth.index'
 
 const CRoute = ({
   component,
-  redirectTo = '/login',
+  redirectTo = '/account/login',
   isPrivate = false,
   children,
   ...rest
