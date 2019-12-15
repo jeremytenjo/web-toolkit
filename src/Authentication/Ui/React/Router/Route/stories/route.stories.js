@@ -7,10 +7,10 @@ import useAuth from '../../../UseAuth/useAuth.index'
 
 import Store from './store'
 
-const PublicPage = () => <div>Public Page</div>
-const PrivatePage1 = () => <div>Private Page 1</div>
-const PrivatePage2 = () => <div>Private Page 2</div>
-const LoginPage = () => <div>Login Page</div>
+const PublicPage = () => <div data-cy='page-public'>Public Page</div>
+const PrivatePage1 = () => <div data-cy='page-private1'>Private Page 1</div>
+const PrivatePage2 = () => <div data-cy='page-private2'>Private Page 2</div>
+const LoginPage = () => <div data-cy='page-login'>Login Page</div>
 
 const Example = () => {
   const { push } = useHistory()
@@ -18,10 +18,18 @@ const Example = () => {
 
   return (
     <>
-      <button onClick={() => push('/')}>Public Page</button>
-      <button onClick={() => push('/privatePage1')}>Private Page 1</button>
-      <button onClick={() => push('/privatePage2')}>Private Page 2</button>
-      <button onClick={() => push('/account/login')}>Login Page</button>
+      <button data-cy='button-public' onClick={() => push('/')}>
+        Public Page
+      </button>
+      <button data-cy='button-private1' onClick={() => push('/privatePage1')}>
+        Private Page 1
+      </button>
+      <button data-cy='button-private2' onClick={() => push('/privatePage2')}>
+        Private Page 2
+      </button>
+      <button data-cy='button-login' onClick={() => push('/account/login')}>
+        Login Page
+      </button>
       <br />
       <br />
 
@@ -37,6 +45,7 @@ const Example = () => {
 
       <br />
       <button
+        data-cy='button-signin'
         onClick={() =>
           signIn({
             credentials: { email: 'tenjojeremy@gmail.com', password: 'testpass' },
@@ -46,12 +55,14 @@ const Example = () => {
         Sign in
       </button>
 
-      <button onClick={() => signOut()}>Sign Out</button>
+      <button data-cy='button-signout' onClick={() => signOut()}>
+        Sign Out
+      </button>
       <br />
       <br />
       <br />
       {signingIn && 'signing In...'}
-      <span id='signinStatus' style={{ color: 'yellow' }}>
+      <span data-cy='signinStatus' style={{ color: 'blue' }}>
         ({user ? 'Signed In' : 'Signed Out'})
       </span>
     </>
