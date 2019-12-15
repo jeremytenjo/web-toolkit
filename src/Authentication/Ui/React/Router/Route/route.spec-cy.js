@@ -15,5 +15,8 @@ context('Route: Authentication', () => {
     cy.wait(3000)
     cy.get('[data-cy="button-private1"]').click()
     cy.get('[data-cy="page-private1"]').contains('Private Page 1')
+
+    cy.get('[data-cy="button-signout"]').click()
+    cy.get('[data-cy="page-login"]').contains('Login Page')
   })
 })
