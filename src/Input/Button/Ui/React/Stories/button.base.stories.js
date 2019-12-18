@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Button1 from '../Styles/1'
-
-import Button from './button.base'
+import Button from '../Base/button.base'
 
 export default {
   title: 'Input|Form/Button',
@@ -12,6 +11,7 @@ export default {
 
 export const Base = ({ Button = Button1 }) => {
   const [loading, setLoading] = useState(null)
+
   return (
     <div>
       <B title='color - primary'>
