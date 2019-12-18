@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Button1 from '../Styles/button.1.index'
+import Button1 from '../Styles/1'
 
 import Button from './button.base'
 

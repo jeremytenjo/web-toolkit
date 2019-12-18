@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from '../Base/button.base'
+import Button from '../../Base/button.base'
 
 const Wrapper = styled.div`
   position: relative;

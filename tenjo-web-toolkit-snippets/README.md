@@ -186,7 +186,7 @@
   
  "Button 1": {
 "prefix": "wtbu1r",
-"body": ["import Button from '@tenjojeremy/web-toolkit/build/Input/Button/Ui/React/Styles/button.1.index.js'"],
+"body": ["import Button from '@tenjojeremy/web-toolkit/build/Input/Button/Ui/React/Styles/1.js'"],
 },
   
  "Collection": {
