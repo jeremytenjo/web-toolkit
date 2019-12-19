@@ -1,4 +1,4 @@
-import React, { memo, lazy, Suspense, useRef, Fragment } from 'react'
+import React, { memo, lazy, Suspense, useRef, Fragment, useEffect, useState } from 'react'
 
 import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
 import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
@@ -8,11 +8,6 @@ import { defaultProps, propTypes } from './button.base.propTypes'
 const ButtonIcon = lazy(() =>
   import(
     /* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
-  ),
-)
-const Dots = lazy(() =>
-  import(
-    /* webpackChunkName: 'LoadingDots' */ '../../../../../Feedback/Progress/Ui/React/Dots/dots.index'
   ),
 )
 
@@ -38,7 +33,9 @@ const ButtonBase = ({
   dataCy,
   loading,
   inputProps,
+  loadingComp,
 }) => {
+  const [ProgressComponent, setProgressComponent] = useState(null)
   const spinnerRef = useRef(null)
   const textColor = disabled
     ? 'disabledDarker'
@@ -47,8 +44,20 @@ const ButtonBase = ({
     : type === 'FAB'
     ? 'white'
     : `${color}Darker`
-
+  const isLoading = typeof loading !== 'string' ? loading : false
   const WrappingComp = inputProps ? FileInput : Fragment
+
+  useEffect(() => {
+    if (typeof loading !== 'string') {
+      importLoadingComoponent()
+    }
+  }, [])
+
+  const importLoadingComoponent = async () => {
+    let Comp = await import(`../../../../../Feedback/Progress/Ui/React/${loadingComp}`)
+    Comp = Comp.default
+    setProgressComponent(Comp)
+  }
 
   return (
     <Suspense fallback={null}>
@@ -64,7 +73,7 @@ const ButtonBase = ({
             icon={iconName}
             style={style}
             data-cy={dataCy}
-            loading={loading}
+            isLoading={isLoading}
           >
             <Typography text={text} variant='button' color={textColor} />
             {iconName && (
@@ -74,11 +83,11 @@ const ButtonBase = ({
             )}
           </StyledButton>
           <Suspense fallback={null}>
-            <Animation name='showHide' show={loading} el={spinnerRef} />
+            <Animation name='showHide' show={isLoading} el={spinnerRef} />
 
             <div ref={spinnerRef} style={{ display: 'none' }}>
               <LoadingCon color={color}>
-                <Dots />
+                {ProgressComponent && <ProgressComponent />}
               </LoadingCon>
             </div>
           </Suspense>
