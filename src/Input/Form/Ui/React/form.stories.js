@@ -6,7 +6,6 @@ import Button from '../../../Button/Ui/React/Styles/1'
 // Inputs
 import TextField from '../../Text-Field/Ui/React/Styles/1'
 
-import markdown from './form.readme.md'
 import Form from './form.index'
 
 const General = () => {
@@ -33,8 +32,11 @@ const General = () => {
           <Button
             dataCy='upload_button'
             text='Upload'
-            color='secondary'            
-            inputProps={{ errorMessage: 'Please upload profile picture', name:'file_upload' }}
+            color='secondary'
+            inputProps={{
+              errorMessage: 'Please upload profile picture',
+              name: 'file_upload',
+            }}
           />
 
           <br />
@@ -50,6 +52,4 @@ const General = () => {
   )
 }
 
-storiesOf('Input|Form', module).add('Full Example', () => <General />, {
-  notes: { markdown },
-})
+storiesOf('Input|Form', module).add('Full Example', () => <General />)
