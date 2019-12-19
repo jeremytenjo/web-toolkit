@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Button from '../../../../../../Button/Ui/React/Styles/1'
 import Form from '../../../../../Ui/React/form.index'
-import markdown from '../../textField.readme.md'
 import TextField from '../../Styles/1/index'
 
 // Test data
@@ -43,10 +42,4 @@ const Variations = () => {
 }
 
 // Stories
-storiesOf('Input|Form/TextField/Validation', module).add(
-  'Required',
-  () => <Variations />,
-  {
-    notes: { markdown },
-  },
-)
+storiesOf('Input|Form/TextField/Validation', module).add('Required', () => <Variations />)
