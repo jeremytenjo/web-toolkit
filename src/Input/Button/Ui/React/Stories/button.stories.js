@@ -31,6 +31,9 @@ const Variants = ({ Component: Button }) => {
         <br />
         <Button loading={loading} />
       </B>
+      <B title='File Input'>
+        <Button iconName='camera/material' inputProps={{onInput: (file)=> console.log(file)}} />
+      </B>
       <B title='iconName'>
         <Button iconName='camera/material' />
       </B>

@@ -11,10 +11,9 @@ const ButtonIcon = lazy(() =>
   ),
 )
 
-const FileInput = lazy(() =>
-  import(
+const FileInput = lazy(() => import(
     /* webpackChunkName: 'FileiNput' */ '../../../../../Media/Files/Ui/React/fileInput.index'
-  ),
+  )
 )
 
 const ButtonBase = ({
