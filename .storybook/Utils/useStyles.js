@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import B from '../Custom-Components/VariationBlock/variationBlock.index'
+import { storiesOf } from '@storybook/react'
 
-export default ({ req, Base, name, props }) => {
+export const useStyles = ({ req, Base, name, props }) => {
   const paths = req.keys()
   const [Elements, setElements] = useState(null)
 
@@ -16,31 +17,23 @@ export default ({ req, Base, name, props }) => {
       const title = styleName
       let Comp = await import(`../../src/${name}/Ui/React/Styles/1/index`)
       Comp = Comp.default
-
-      var result = Object.keys(props).map(function(key) {
-        return [key, props[key]]
-      })
-
-      console.log(result)
-
-      const getAllSubsets = (theArray) =>
-        theArray.reduce(
-          (subsets, value) => subsets.concat(subsets.map((set) => [value, ...set])),
-          [[]],
-        )
-
-      console.log(getAllSubsets([1, 2, 3]))
-
-      return (
-        <>
-          <B title={title} key={title} noBackground>
+      const El = () => (
+        <Fragment key={title}>
+          <B title={title} noBackground>
             <Base Button={Comp} />
           </B>
-        </>
+        </Fragment>
       )
+
+      storiesOf('Input|Button', module).add(styleName, El)
+
+      return El()
     })
 
-    setElements(await Promise.all(Elements))
+    const els = await Promise.all(Elements)
+    const styles = <div style={{ display: 'grid', gridAutoFlow: 'column' }}>{els}</div>
+
+    setElements(styles)
   }
 
   return { Elements }
