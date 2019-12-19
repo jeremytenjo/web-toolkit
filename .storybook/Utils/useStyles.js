@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 import B from '../Custom-Components/VariationBlock/variationBlock.index'
 import { storiesOf } from '@storybook/react'
 
-export const useStyles = ({ req, Variants, name, props }) => {
+export const useStyles = ({ req, Variants, name }) => {
   const paths = req.keys()
   const [Elements, setElements] = useState(null)
 

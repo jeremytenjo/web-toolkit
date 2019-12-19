@@ -3,12 +3,12 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Form from '../../../../Ui/React/form.index'
-import TextField from '../Styles/1'
+import { useStyles } from '../../../../../../../.storybook/Utils/useStyles'
 
 // Test data
 const placeholder = 'this is a Placeholder'
 
-export const States = ({ TextField }) => {
+export const Variants = ({ Component: TextField }) => {
   const [f, setsubmitValue] = useState(null)
   const handleSubmit = ({ exampleField }) => {
     setsubmitValue(exampleField)
@@ -64,7 +64,17 @@ export const States = ({ TextField }) => {
   )
 }
 
-// Stories
-storiesOf('Input|Form/TextField', module).add('Base', () => (
-  <States TextField={TextField} />
-))
+const All_Styles = () => {
+  const req = require.context('../Styles', true, /index.js$/)
+  const { Elements } = useStyles({
+    req,
+    Variants,
+    name: 'Input/Form/Text-Field',
+  })
+
+  return Elements
+}
+
+storiesOf('Input|Form/TextField', module).add('All_Styles', () => <All_Styles />)
+
+

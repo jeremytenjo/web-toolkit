@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import { useStyles } from '../../../../../../.storybook/Utils/useStyles'
-import { defaultProps } from '../Base/button.base.propTypes'
 
 const Variants = ({ Component: Button }) => {
   const [loading, setLoading] = useState(null)
@@ -50,7 +49,6 @@ const All_Styles = () => {
     req,
     Variants,
     name: 'Input/Button',
-    props: defaultProps,
   })
 
   return Elements
