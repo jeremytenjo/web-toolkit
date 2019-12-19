@@ -201,7 +201,7 @@
   
  "Textfield 1": {
 "prefix": "wtte1r",
-"body": ["import Textfield from '@tenjojeremy/web-toolkit/build/Input/Form/Text-Field/Ui/React/Styles/textfield.1.index.js'"],
+"body": ["import Textfield from '@tenjojeremy/web-toolkit/build/Input/Form/Text-Field/Ui/React/Styles/1'"],
 },
   
  "Form": {

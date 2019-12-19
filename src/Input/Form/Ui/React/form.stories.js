@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Button from '../../../Button/Ui/React/Styles/1'
 // Inputs
-import TextField from '../../Text-Field/Ui/React/Styles/textfield.1.index'
+import TextField from '../../Text-Field/Ui/React/Styles/1/index'
 
 import markdown from './form.readme.md'
 import Form from './form.index'

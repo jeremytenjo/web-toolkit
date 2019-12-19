@@ -2,7 +2,7 @@ import React, { useState, memo, useEffect } from 'react'
 
 import Form from '../../../../../../Input/Form/Ui/React/form.index'
 import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
-import Textfield from '../../../../../../Input/Form/Text-Field/Ui/React/Styles/textfield.1.index'
+import Textfield from '../../../../../../Input/Form/Text-Field/Ui/React/Styles/1'
 import Icon from '../../Base/icon.index'
 import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 

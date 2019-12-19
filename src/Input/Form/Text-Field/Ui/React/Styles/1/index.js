@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import TextField from '../Base/textField.base'
+import TextField from '../../Base/textField.base'
 
 const Wrapper = styled.div`
   transition: .2s;

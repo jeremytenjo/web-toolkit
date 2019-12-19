@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Form from '../../../../Ui/React/form.index'
 import markdown from '../textField.readme.md'
-import TextField from '../Styles/textfield.1.index'
+import TextField from '../Styles/1'
 
 // Test data
 const placeholder = 'this is a Placeholder'

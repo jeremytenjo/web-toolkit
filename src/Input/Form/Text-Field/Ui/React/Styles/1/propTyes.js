@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import markdown from '../textField.readme.md'
-import { States as TextFieldStates } from '../Base/textField.base.stories'
+import B from '../../../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import markdown from '../../textField.readme.md'
+import { States as TextFieldStates } from '../../Stories/textField.base.stories'
 
 const stylesReq = require.context('./', true, /index\.js$/)
 const stylesPaths = stylesReq.keys()
