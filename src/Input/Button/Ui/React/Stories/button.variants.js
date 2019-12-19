@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import { useStyles } from '../../../../../../.storybook/Utils/useStyles'
@@ -43,7 +42,7 @@ const Variants = ({ Component: Button }) => {
   )
 }
 
-const All_Styles = () => {
+export default () => {
   const req = require.context('../Styles', true, /index.js$/)
   const { Elements } = useStyles({
     req,
@@ -54,4 +53,3 @@ const All_Styles = () => {
   return Elements
 }
 
-storiesOf('Input|button', module).add('All_Styles', () => <All_Styles />)
