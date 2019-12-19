@@ -58,30 +58,20 @@ const TextField = ({
   const [focus, setfocus] = useState(null)
 
   useEffect(() => {
+    initialValidation(input)
     startOnSubmitListener()
-    return removeOnSubmitListener
-  }, [])
 
-  // handle Session stoage
-  useEffect(() => {
     if (setInSessionStorage) {
       let sessionInput = sessionStorage.getItem(name)
-      if (sessionInput !== '') {
-        setInput(sessionInput)
-      }
+      if (sessionInput !== '') setInput(sessionInput)
     }
-  }, [])
 
-  useEffect(() => {
-    if (setInSessionStorage && input !== '') sessionStorage.setItem(name, input)
-  }, [input])
-
-  useEffect(() => {
-    initialValidation(input)
+    return removeOnSubmitListener
   }, [])
 
   useEffect(() => {
     isValidFormCheck !== null && hasValidation && onChangeVaildation(input)
+    if (setInSessionStorage && input !== '') sessionStorage.setItem(name, input)
   }, [input])
 
   // Functions
@@ -89,6 +79,7 @@ const TextField = ({
     const parentForm = inputRef.current.parentNode.parentNode.parentNode
     parentForm.addEventListener('submit', handleFormListener, true)
   }
+
   const removeOnSubmitListener = () => {
     const parentForm = inputRef.current.parentNode.parentNode.parentNode
     parentForm.removeEventListener('submit', handleFormListener)
@@ -101,7 +92,8 @@ const TextField = ({
     setIsValid(isInputvalid)
     setIsValidFormCheck(isInputvalid)
   }
-  const clearIconClick = () => {
+
+  const onClearIconClick = () => {
     inputRef.current.focus()
     setInput('')
     onInput('')
@@ -173,6 +165,7 @@ const TextField = ({
         textColor={textColor}
         isValid={isValid}
       >
+        {/* Left Icon */}
         {iconLeft && (
           <IconLeftCon onClick={onLeftIconClick}>
             <Icon
@@ -187,6 +180,7 @@ const TextField = ({
 
         {label && label}
 
+        {/* Input */}
         <InputCon>
           <Input
             ref={inputRef}
@@ -218,7 +212,7 @@ const TextField = ({
           >
             <Icon
               name='close/material'
-              onClick={clearIconClick}
+              onClick={onClearIconClick}
               size={16}
               fill='black'
               backgroundSize={25}
@@ -226,6 +220,7 @@ const TextField = ({
           </CloseIconCon>
         </InputCon>
 
+        {/* Right Icon */}
         {iconRight && (
           <IconRightCon onClick={onRightIconClick}>
             <Icon
@@ -239,6 +234,7 @@ const TextField = ({
         )}
       </Wrapper>
 
+      {/* Error Message */}
       <Animation name={animationType} show={!isValid} el={errMessagesRef} />
       <div
         data-cy='textfield_errorMessages'
@@ -246,7 +242,12 @@ const TextField = ({
         style={{ marginTop: 'var(--spacing-xs', display: 'none' }}
       >
         {errorMessages.map((message) => (
-          <Typography key={message} text={message} color='red' variant='body2' />
+          <Typography
+            key={message}
+            text={message}
+            styles={{ color: 'red' }}
+            variant='body2'
+          />
         ))}
       </div>
     </>

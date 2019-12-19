@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Button from '../../../Button/Ui/React/Styles/1'
 // Inputs
-import TextField from '../../Text-Field/Ui/React/Styles/1/index'
+import TextField from '../../Text-Field/Ui/React/Styles/1'
 
 import markdown from './form.readme.md'
 import Form from './form.index'
@@ -33,9 +33,8 @@ const General = () => {
           <Button
             dataCy='upload_button'
             text='Upload'
-            color='secondary'
-            name='file_upload'
-            inputProps={{ errorMessage: 'Please upload profile picture' }}
+            color='secondary'            
+            inputProps={{ errorMessage: 'Please upload profile picture', name:'file_upload' }}
           />
 
           <br />
