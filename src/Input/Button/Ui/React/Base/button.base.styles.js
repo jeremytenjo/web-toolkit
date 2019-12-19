@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import system from '../../../../../Theme/System/React/system.index'
-
 export const BaseWrapper = styled.div`
 position: relative;
 `
