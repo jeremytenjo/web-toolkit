@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 import B from '../Custom-Components/VariationBlock/variationBlock.index'
 import { storiesOf } from '@storybook/react'
 
-export const useStyles = ({ req, Base, name, props }) => {
+export const useStyles = ({ req, Variants, name, props }) => {
   const paths = req.keys()
   const [Elements, setElements] = useState(null)
 
@@ -12,6 +12,7 @@ export const useStyles = ({ req, Base, name, props }) => {
 
   const getElements = async () => {
     const Elements = paths.map(async (location) => {
+      const storyName = name.replace('/', '|')
       const cleanLocation = location.substring(2)
       const styleName = location.split('/')[1]
       const title = styleName
@@ -20,12 +21,12 @@ export const useStyles = ({ req, Base, name, props }) => {
       const El = () => (
         <Fragment key={title}>
           <B title={title} noBackground>
-            <Base Button={Comp} />
+            <Variants Component={Comp} />
           </B>
         </Fragment>
       )
 
-      storiesOf('Input|Button', module).add(styleName, El)
+      storiesOf(storyName, module).add(styleName, El)
 
       return El()
     })

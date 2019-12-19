@@ -3,10 +3,9 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import { useStyles } from '../../../../../../.storybook/Utils/useStyles'
-import BaseButton from '../Base/button.base'
 import { defaultProps } from '../Base/button.base.propTypes'
 
-const Base = ({ Button = BaseButton }) => {
+const Variants = ({ Component: Button }) => {
   const [loading, setLoading] = useState(null)
 
   return (
@@ -44,7 +43,12 @@ const Base = ({ Button = BaseButton }) => {
 
 const All_Styles = () => {
   const req = require.context('../Styles', true, /index.js$/)
-  const { Elements } = useStyles({ req, Base, name: 'Input/Button', props: defaultProps })
+  const { Elements } = useStyles({
+    req,
+    Variants,
+    name: 'Input/Button',
+    props: defaultProps,
+  })
 
   return Elements
 }
