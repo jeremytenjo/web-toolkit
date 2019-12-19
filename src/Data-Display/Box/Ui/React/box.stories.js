@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Icon from '../../../Icon/Ui/React/Base/icon.index'
 
-import markdown from './box.readme.md'
 import Box from './box.index'
 
 const Variations = () => (
@@ -26,7 +25,5 @@ const Variations = () => (
 )
 
 storiesOf('Data-Display|Box/Ui/React', module)
-  .add('default', () => <Variations />, {
-    notes: { markdown },
-  })
-  .add('fullscreen', () => <Box fullscreen backgroundColor='black' />)
+  .add('default', () => <Variations />)
+  .add('fullscreen', () => <Box fullscreen styles={{ backgroundColor: 'black' }} />)
