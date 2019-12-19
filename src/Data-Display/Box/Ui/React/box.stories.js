@@ -10,7 +10,14 @@ import Box from './box.index'
 const Variations = () => (
   <>
     <B title='default' background style={{ width: '400px', padding: 0 }}>
-      <Box justifyContent='space-between' gridAutoFlow={['column', 'row']} width='100%'>
+      <Box
+        styles={{
+          justifyContent: 'space-between',
+          gridAutoFlow: ['column', 'row'],
+          width: '100%',
+          alignItems: 'center',
+        }}
+      >
         <h4>Featured</h4>
         <Icon name='search/material' color='primary' />
       </Box>
