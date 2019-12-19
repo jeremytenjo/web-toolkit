@@ -3,6 +3,8 @@ import React, { memo, lazy, Suspense, useRef, Fragment } from 'react'
 import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
 import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 
+import { defaultProps, propTypes } from './button.base.propTypes'
+
 const ButtonIcon = lazy(() =>
   import(
     /* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
@@ -20,9 +22,7 @@ const FileInput = lazy(() =>
   ),
 )
 
-import { defaultProps, propTypes } from './button.base.propTypes'
-
-const Button = ({
+const ButtonBase = ({
   Wrapper,
   StyledButton,
   LoadingCon,
@@ -88,7 +88,7 @@ const Button = ({
   )
 }
 
-Button.defaultProps = defaultProps
-Button.propTypes = propTypes
+ButtonBase.defaultProps = defaultProps
+ButtonBase.propTypes = propTypes
 
-export default memo(Button)
+export default memo(ButtonBase)
