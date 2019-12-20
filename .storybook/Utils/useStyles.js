@@ -16,8 +16,8 @@ export const useStyles = ({ req, Variants, name }) => {
       const cleanLocation = location.substring(2)
       const styleName = location.split('/')[1]
       const title = styleName
-      let Comp = await import(`../../src/${name}/Ui/React/Styles/1/index`)
-      Comp = Comp.default
+      const { default: Comp } = await import(`../../src/${name}/Ui/React/Styles/1/index`)
+
       const El = () => (
         <Fragment key={title}>
           <B title={title} noBackground>
