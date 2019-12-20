@@ -1,5 +1,5 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
-// import Variants from './button.variants'
+import Example from './example'
 
 <Meta title='Engagement|Push Notifications/React' />
 
@@ -8,12 +8,12 @@ import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
 ```js
 import PushNotification from '@tenjojeremy/web-toolkit/build/Engagement/Push-Notifications/React'
  ```
+Add to `Store`
 
 <Preview>
 <Story name='Example'>
    <>
-    {/* <Variants /> */}
-    d
+    <Example />    
   </>
 </Story>
 </Preview>
@@ -27,4 +27,3 @@ Add to `manifest.json`  `gcm_sender_id`. Insert the value below AS IT IS, withou
 	"gcm_sender_id": "103953800507"
 }
 ```
-
