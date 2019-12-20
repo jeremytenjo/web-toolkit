@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import { useStyles } from '../../../../../../.storybook/Utils/useStyles'
@@ -29,12 +30,6 @@ const Variants = ({ Component: Button }) => {
         <br />
         <Button loading={loading} />
       </B>
-      <B title='File Input'>
-        <Button
-          iconName='camera/material'
-          inputProps={{ onInput: (file) => console.log(file) }}
-        />
-      </B>
       <B title='iconName'>
         <Button iconName='camera/material' />
       </B>
@@ -45,7 +40,7 @@ const Variants = ({ Component: Button }) => {
   )
 }
 
-export default () => {
+const All_Styles = () => {
   const req = require.context('../Styles', true, /index.js$/)
   const { Elements } = useStyles({
     req,
@@ -55,3 +50,5 @@ export default () => {
 
   return Elements
 }
+
+storiesOf('Input|button', module).add('All_Styles', () => <All_Styles />)
