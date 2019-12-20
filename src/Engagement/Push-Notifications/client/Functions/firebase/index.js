@@ -28,3 +28,17 @@ export default async () => {
       })
   }
 }
+
+const registerServiceWorker = () => {
+  if ('serviceWorker' in navigator && 'PushManager' in window) {
+    window.addEventListener('load', async () => {
+      const registration = await navigator.serviceWorker.register(
+        '/firebase-messaging-sw.js',
+        {
+          updateViaCache: 'none',
+        },
+      )
+      messaging.useServiceWorker(registration)
+    })
+  }
+}

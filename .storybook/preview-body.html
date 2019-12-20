@@ -2,7 +2,6 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async function() {
       navigator.serviceWorker.register('/storybook-sw.js')
-      navigator.serviceWorker.register('/firebase-messaging-sw.js')
     })
   }
 </script>
