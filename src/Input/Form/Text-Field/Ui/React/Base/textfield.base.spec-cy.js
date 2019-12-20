@@ -2,7 +2,7 @@ import { cypressVisitBaseUrl } from '../../../../../../../.storybook/contants'
 
 context('Textfield: Base', () => {
   beforeEach(() => {
-    cy.visit(`${cypressVisitBaseUrl}input-form-textfield--base`)
+    cy.visit(`${cypressVisitBaseUrl}input-form-text-field--all-styles`)
   })
 
   it('Should render typed text', function() {
