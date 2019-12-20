@@ -3,42 +3,75 @@ import 'firebase/messaging'
 
 const messaging = firebase.messaging()
 
-messaging.usePublicVapidKey(
-  'BHlOUk7fnlpYBMFaEHNckPkosvoUoLULGg0uAVLyKxepB6wxBqai_cK0S0LithVoKSLQANnENNdStvUorfFJGcc',
-)
-
 export default async () => {
-  try {
-    const currentToken = await messaging.getToken()
-    if (currentToken) {
-      console.log({ currentToken })
-    }
-  } catch (error) {
-    console.log('An error occurred while retrieving token. ', error)
-  }
+  if (firebase.messaging.isSupported()) {
+    let token = null
+    let registration = null
 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('./firebase-messaging-sw.js')
-      .then(function(registration) {
-        console.log('Registration successful, scope is:', registration.scope)
-      })
-      .catch(function(err) {
-        console.log('Service worker registration failed, error:', err)
-      })
+    registration = await registerServiceWorker()
+    await setPublicKey()
+    await setNotificationListener({ swRegistration: registration })
+    token = await getToken()
+
+    console.log({ token })
+  } else {
+    console.log('Firebase messaging not supported in this browser')
   }
 }
 
-const registerServiceWorker = () => {
-  if ('serviceWorker' in navigator && 'PushManager' in window) {
-    window.addEventListener('load', async () => {
-      const registration = await navigator.serviceWorker.register(
-        '/firebase-messaging-sw.js',
-        {
-          updateViaCache: 'none',
-        },
-      )
-      messaging.useServiceWorker(registration)
-    })
+const setPublicKey = () => {
+  try {
+    messaging.usePublicVapidKey(
+      'BHlOUk7fnlpYBMFaEHNckPkosvoUoLULGg0uAVLyKxepB6wxBqai_cK0S0LithVoKSLQANnENNdStvUorfFJGcc',
+    )
+  } catch (error) {
+    console.error('Error in setPublicKey ', error)
   }
+}
+
+const registerServiceWorker = async () => {
+  let registration = null
+  try {
+    registration = await navigator.serviceWorker.register(`/firebase-messaging-sw.js`, {
+      updateViaCache: 'none',
+    })
+    return registration
+  } catch (error) {
+    console.error('Error in registerServiceWorker ', error)
+  }
+}
+
+const setNotificationListener = async ({ swRegistration }) => {
+  try {
+    messaging.useServiceWorker(swRegistration)
+    messaging.onMessage((payload) => {
+      console.log({ payload })
+      const title = payload.notification.title
+      const options = {
+        body: payload.notification.body,
+        icon: payload.notification.icon,
+        actions: [
+          {
+            action: payload.fcmOptions.link,
+            title: 'Book Appointment',
+          },
+        ],
+      }
+      swRegistration.showNotification(title, options)
+    })
+  } catch (error) {
+    console.error('Error in setNotificationListener. ', error)
+  }
+}
+
+const getToken = async () => {
+  let currentToken = null
+  try {
+    console.log('getting token')
+    currentToken = await messaging.getToken()
+  } catch (error) {
+    console.error('Error in getToken ', error)
+  }
+
+  return currentToken
 }
