@@ -14,6 +14,7 @@ export default async () => {
     token = await getToken()
 
     console.log(token)
+    alert(token)
   } else {
     console.log('Firebase messaging not supported in this browser')
   }
