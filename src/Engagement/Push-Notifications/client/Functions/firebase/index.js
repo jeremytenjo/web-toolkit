@@ -13,7 +13,7 @@ export default async () => {
     await setNotificationListener({ swRegistration: registration })
     token = await getToken()
 
-    console.log({ token })
+    console.log(token)
   } else {
     console.log('Firebase messaging not supported in this browser')
   }
@@ -52,7 +52,7 @@ const setNotificationListener = async ({ swRegistration }) => {
         icon: payload.notification.icon,
         actions: [
           {
-            action: payload.fcmOptions.link,
+            action: 'payload.fcmOptions.link',
             title: 'Book Appointment',
           },
         ],
@@ -65,13 +65,10 @@ const setNotificationListener = async ({ swRegistration }) => {
 }
 
 const getToken = async () => {
-  let currentToken = null
   try {
-    console.log('getting token')
-    currentToken = await messaging.getToken()
+    const currentToken = await messaging.getToken()
+    return currentToken
   } catch (error) {
     console.error('Error in getToken ', error)
   }
-
-  return currentToken
 }
