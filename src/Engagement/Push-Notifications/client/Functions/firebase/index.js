@@ -32,9 +32,11 @@ const setPublicKey = () => {
 const registerServiceWorker = async () => {
   let registration = null
   try {
-    registration = await navigator.serviceWorker.register(`/firebase-messaging-sw.js`, {
+    await navigator.serviceWorker.register(`/firebase-messaging-sw.js`, {
       updateViaCache: 'none',
     })
+    registration = await navigator.serviceWorker.ready
+
     return registration
   } catch (error) {
     console.error('Error in registerServiceWorker ', error)
