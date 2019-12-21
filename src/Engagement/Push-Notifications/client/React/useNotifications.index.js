@@ -7,7 +7,7 @@ export const NotificationsProvider = ({ children, service = 'firebase' }) => {
 
   useEffect(() => {
     const hasPermission = Notification.permission
-    if (hasPermission) {
+    if (isSupported() && hasPermission) {
       setNotificationListener()
       setInitialized(true)
     }
