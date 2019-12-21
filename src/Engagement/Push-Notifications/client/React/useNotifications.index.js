@@ -7,7 +7,7 @@ export const NotificationsProvider = ({ children, service = 'firebase' }) => {
 
   useEffect(() => {
     const hasPermission = Notification.permission
-    if (isSupported() && hasPermission) {
+    if (hasPermission) {
       setNotificationListener()
       setInitialized(true)
     }
@@ -16,21 +16,19 @@ export const NotificationsProvider = ({ children, service = 'firebase' }) => {
   const isSupported = () =>
     'Notification' in window && 'serviceWorker' in navigator && 'PushManager' in window
 
-  const init = async () => {
+  const setNotificationListener = async () => {
     if (isSupported() && !initialized) {
       const permission = await Notification.requestPermission()
-      if (permission === 'granted') await setNotificationListener()
+      if (permission === 'granted') {
+        const { default: initFunc } = await import(`../Functions/${service}`)
+        initFunc()
+      }
     }
     setInitialized(true)
   }
 
-  const setNotificationListener = async () => {
-    const { default: initFunc } = await import(`../Functions/${service}`)
-    initFunc()
-  }
-
   return (
-    <NotificationsContext.Provider value={{ isSupported, init }}>
+    <NotificationsContext.Provider value={{ isSupported, setNotificationListener }}>
       {children}
     </NotificationsContext.Provider>
   )
