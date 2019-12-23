@@ -48,8 +48,8 @@ font-size: 48px;
 .typography-h6 {
   font-family:  var(--fontPrimary);
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 16px;
   letter-spacing: 0.15px;
 }
 

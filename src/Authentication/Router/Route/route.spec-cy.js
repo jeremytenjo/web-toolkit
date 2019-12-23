@@ -1,5 +1,5 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
-import { cypressVisitBaseUrl } from '../../../../../../.storybook/contants'
+import { cypressVisitBaseUrl } from '../../../../.storybook/contants'
 
 context('Route: Authentication', () => {
   beforeEach(() => {
