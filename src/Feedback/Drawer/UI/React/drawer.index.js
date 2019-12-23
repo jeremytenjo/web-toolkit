@@ -1,7 +1,16 @@
 import React, { useEffect, memo } from 'react'
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 
-const Drawer = ({ open, position, children, onClose }) => {
+const Drawer = ({
+  open,
+  position,
+  children,
+  onClose,
+  PaperProps = {
+    bottom: { style: { borderRadius: '20px 20px 0 0' } },
+    top: { style: { borderRadius: '0 0 20px 20px' } },
+  },
+}) => {
   useEffect(() => {
     open !== null && toggleDrawer(position, true)
   }, [open])
@@ -18,6 +27,7 @@ const Drawer = ({ open, position, children, onClose }) => {
 
   return (
     <SwipeableDrawer
+      PaperProps={PaperProps[position]}
       anchor={position}
       open={open}
       onClose={onClose}
