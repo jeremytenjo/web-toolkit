@@ -62,7 +62,7 @@ const Example = () => {
       <br />
       <br />
       {signingIn && 'signing In...'}
-      <span data-cy='signinStatus' style={{ color: 'blue' }}>
+      <span data-cy='signinStatus' style={{ color: user ? 'green' : 'orange' }}>
         ({user ? 'Signed In' : 'Signed Out'})
       </span>
     </>
