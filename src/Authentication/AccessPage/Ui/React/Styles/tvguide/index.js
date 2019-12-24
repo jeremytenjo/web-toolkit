@@ -61,7 +61,13 @@ const AccessPageTvGuide = ({
             )
           })}
         </Box>
-        {error && <Typography text={error} variant='body2' styles={{ color: 'red' }} />}
+        {error && (
+          <Typography
+            text={error}
+            variant='body2'
+            styles={{ color: 'red', textAlign: 'center' }}
+          />
+        )}
       </Box>
     </Drawer>
   )
