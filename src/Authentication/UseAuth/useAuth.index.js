@@ -10,7 +10,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    check()
+    checkIfSignedIn()
   }, [])
 
   const signIn = async ({ provider = 'email', credentials, action = 'login' }) => {
@@ -37,8 +37,8 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
     setSigningIn(false)
   }
 
-  const check = async () => {
-    const authCheck = await import(`../Functions/${service}/auth.check`)
+  const checkIfSignedIn = async () => {
+    const authCheck = await import(`../Functions/${service}/auth.checkIfSignedIn`)
     const { user: userRes } = await authCheck.default()
 
     if (userRes) {
