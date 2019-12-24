@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react'
+import React, { useState, useEffect, createContext, useContext } from 'react'
 
 import saveToCredentialManager from '../Functions/WebApi/CredentialMangment/cm.save'
 
@@ -8,6 +8,10 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
   const [user, setUser] = useState(null)
   const [signingIn, setSigningIn] = useState(null)
   const [error, setError] = useState(null)
+
+  useEffect(() => {
+    check()
+  }, [])
 
   const signIn = async ({ provider = 'email', credentials, action = 'login' }) => {
     setSigningIn(true)
@@ -63,7 +67,6 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
         signIn,
         signOut,
         signingIn,
-        check,
         error,
         setUser,
       }}
