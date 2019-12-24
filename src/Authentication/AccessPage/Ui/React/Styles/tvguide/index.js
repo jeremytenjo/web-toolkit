@@ -5,7 +5,7 @@ import Drawer from '../../../../../../Feedback/Drawer/UI/React/drawer.index'
 import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
 import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 import { defaultProps, propTypes } from '../../Base/accessPage.propTypes'
-
+import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 const AccessPageTvGuide = ({
   show,
   onSuccess,
@@ -16,8 +16,11 @@ const AccessPageTvGuide = ({
   typographyVariant,
 }) => {
   const [error, seterror] = useState(null)
+  const [loading, setLoading] = useState(null)
+
   const handleLogin = async (provider) => {
     try {
+      setLoading(true)
       const { default: func } = await import(
         `../../../../../Functions/${service}/auth.social`
       )
@@ -27,6 +30,8 @@ const AccessPageTvGuide = ({
     } catch (error) {
       onError(error)
       seterror(error.errorMessage)
+    } finally {
+      setLoading(false)
     }
   }
   return (
@@ -68,6 +73,13 @@ const AccessPageTvGuide = ({
             styles={{ color: 'red', textAlign: 'center' }}
           />
         )}
+        <Animation show={loading}>
+          <Typography
+            text='Loading...'
+            variant='body2'
+            styles={{ color: 'green', textAlign: 'center' }}
+          />
+        </Animation>
       </Box>
     </Drawer>
   )

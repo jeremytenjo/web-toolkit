@@ -6,6 +6,11 @@ import Logo from '../../../../../../.storybook/Images/logo.svg'
 
 const Variants = ({ Component: AccessPage }) => {
   const [show, setShow] = useState(false)
+
+  const handleSuccess = (userInfo) => {
+    console.log({ userInfo })
+    setShow(false)
+  }
   return (
     <div>
       <button onClick={() => setShow(!show)}>Show</button>
@@ -14,7 +19,7 @@ const Variants = ({ Component: AccessPage }) => {
         onClose={() => setShow(false)}
         variation={1}
         type='login'
-        onSuccess={(userInfo) => console.log(userInfo)}
+        onSuccess={handleSuccess}
         logo={Logo}
         name='Example'
         desc='Example auth page'
