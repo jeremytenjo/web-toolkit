@@ -65,6 +65,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
         signingIn,
         check,
         error,
+        setUser,
       }}
     >
       {children}
