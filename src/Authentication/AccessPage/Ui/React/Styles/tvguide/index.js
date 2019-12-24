@@ -1,4 +1,4 @@
-import React, { memo, Fragment } from 'react'
+import React, { memo, useState, Fragment } from 'react'
 
 import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
 import Drawer from '../../../../../../Feedback/Drawer/UI/React/drawer.index'
@@ -15,16 +15,18 @@ const AccessPageTvGuide = ({
   service,
   typographyVariant,
 }) => {
+  const [error, seterror] = useState(null)
   const handleLogin = async (provider) => {
     try {
       const { default: func } = await import(
         `../../../../../Functions/${service}/auth.social`
       )
-      const data = await func({ provider })
-
-      onSuccess(data)
+      const { error, accessToken, user } = await func({ provider })
+      if (user) onSuccess({ accessToken, user })
+      else seterror(error.errorMessage)
     } catch (error) {
       onError(error)
+      seterror(error.errorMessage)
     }
   }
   return (
@@ -59,6 +61,7 @@ const AccessPageTvGuide = ({
             )
           })}
         </Box>
+        {error && <Typography text={error} variant='body2' styles={{ color: 'red' }} />}
       </Box>
     </Drawer>
   )
