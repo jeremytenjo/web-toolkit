@@ -38,7 +38,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
   }
 
   const checkIfSignedIn = async () => {
-    const authCheck = await import(`../Functions/${service}/auth.checkIfSignedIn`)
+    const authCheck = await import(`../Functions/${service}/auth.check`)
     const { user: userRes } = await authCheck.default()
 
     if (userRes) {
