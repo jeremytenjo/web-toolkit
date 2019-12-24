@@ -44,8 +44,8 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
       // Check Credential Manager if not Signed in
       const cmModule = await import('../Functions/WebApi/CredentialMangment/cm.get')
       const { user: cmUser } = await cmModule.default()
-
-      return cmUser
+      if (cmUser) setUser(cmUser)
+      else setUser(false)
     }
   }
 
