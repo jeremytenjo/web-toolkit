@@ -10,7 +10,7 @@ export default {
 }
 
 const Left = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(null)
   const toggle = () => setOpen(!open)
   return (
     <>
@@ -25,7 +25,7 @@ const Left = () => {
 }
 
 const Top = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(null)
   const toggle = () => setOpen(!open)
   return (
     <>
@@ -41,7 +41,7 @@ const Top = () => {
 }
 
 const Right = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(null)
   const toggle = () => setOpen(!open)
   return (
     <>
@@ -55,7 +55,7 @@ const Right = () => {
   )
 }
 const Bottom = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(null)
   const toggle = () => setOpen(!open)
   return (
     <>

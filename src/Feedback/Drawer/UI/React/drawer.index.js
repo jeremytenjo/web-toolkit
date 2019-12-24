@@ -29,7 +29,7 @@ const Drawer = ({
     <SwipeableDrawer
       PaperProps={PaperProps[position]}
       anchor={position}
-      open={open}
+      open={!!open}
       onClose={onClose}
       onOpen={() => toggleDrawer(position, true)}
     >
