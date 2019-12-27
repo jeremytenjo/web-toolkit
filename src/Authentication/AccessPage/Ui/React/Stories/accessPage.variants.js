@@ -5,7 +5,7 @@ import { useStyles } from '../../../../../../.storybook/Utils/useStyles'
 import Logo from '../../../../../../.storybook/Images/logo.svg'
 
 const Variants = ({ Component: AccessPage }) => {
-  const [show, setShow] = useState(false)
+  const [user, setShow] = useState(false)
 
   const handleSuccess = (userInfo) => {
     console.log({ userInfo })
@@ -13,9 +13,9 @@ const Variants = ({ Component: AccessPage }) => {
   }
   return (
     <div>
-      <button onClick={() => setShow(!show)}>Show</button>
+      <button onClick={() => setShow(!user)}>Show</button>
       <AccessPage
-        show={show}
+        user={user}
         onClose={() => setShow(false)}
         variation={1}
         type='login'
