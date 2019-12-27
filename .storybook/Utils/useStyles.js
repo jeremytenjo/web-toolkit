@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 import B from '../Custom-Components/VariationBlock/variationBlock.index'
 import { storiesOf } from '@storybook/react'
 
-export const useStyles = ({ req, Variants, name }) => {
+export const useStyles = ({ req, Variants, name, short }) => {
   const paths = req.keys()
   const [Elements, setElements] = useState(null)
 
@@ -16,9 +16,8 @@ export const useStyles = ({ req, Variants, name }) => {
       const cleanLocation = location.substring(2)
       const styleName = location.split('/')[1]
       const title = styleName
-      const { default: Comp } = await import(
-        `../../src/${name}/Ui/React/Styles/${title}/index`
-      )
+      const ext = short ? '/Styles/' : '/Ui/React/Styles/'
+      const { default: Comp } = await import(`../../src/${name}${ext}${title}/index`)
 
       const El = () => (
         <Fragment key={title}>
