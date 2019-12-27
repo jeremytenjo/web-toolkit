@@ -10,11 +10,10 @@ export const defaultProps = {
   plusIcon: 'plus/feather',
   plusLabel: 'Load More',
   starIcon: 'star/feather',
-  starLabelIsFavorite: 'Remove from watchlist',
-  starLabelIsNotFavorite: 'Add to watchlist',
   iconBackgroundColor: 'primaryLighter',
   titleVariant: 'h6',
   overviewVariant: 'body2',
+  buttonTextVariant: 'body2',
   posterAlt: 'poster',
   favorite: null,
   moreLinks: null,
@@ -22,12 +21,12 @@ export const defaultProps = {
   seasons: [],
   episodes: [],
   lastEpWatched: null,
-  onPlayNext: () => null,
   onPlay: () => null,
   onLoadMore: () => null,
   onFavoriteToggle: () => null,
   onSeasonChange: () => null,
   onEpisodeChange: () => null,
+  onClose: () => null,
 }
 
 export const propTypes = {
@@ -41,7 +40,6 @@ export const propTypes = {
   isTv: bool,
   moreLinks: array,
   onPlay: func,
-  onPlayNext: func,
   onLoadMore: func,
   onFavoriteToggle: func,
 }
