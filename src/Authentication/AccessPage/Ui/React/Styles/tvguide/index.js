@@ -7,7 +7,7 @@ import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 import { defaultProps, propTypes } from '../../Base/accessPage.propTypes'
 import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 const AccessPageTvGuide = ({
-  show,
+  user,
   onSuccess,
   onError,
   providers,
@@ -15,6 +15,7 @@ const AccessPageTvGuide = ({
   service,
   typographyVariant,
 }) => {
+  const userIsSignedin = user === null ? null : !user
   const [error, seterror] = useState(null)
   const [loading, setLoading] = useState(null)
 
@@ -35,7 +36,7 @@ const AccessPageTvGuide = ({
     }
   }
   return (
-    <Drawer open={show} position='bottom' onClose={onClose}>
+    <Drawer open={userIsSignedin} position='bottom' onClose={onClose}>
       <Box styles={{ padding: 'm', justifyContent: 'center', gridGap: 's' }}>
         <Typography
           text='Sign In'

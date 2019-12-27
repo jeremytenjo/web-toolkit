@@ -3,6 +3,7 @@ import { string, func } from 'prop-types'
 export const defaultProps = {
   onSuccess: () => null,
   logo: null,
+  user: null,
   name: '',
   type: 'login',
   typographyVariant: 'h6',
