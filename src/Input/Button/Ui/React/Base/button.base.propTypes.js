@@ -8,6 +8,7 @@ export const defaultProps = {
   disabled: null,
   Icon: null,
   color: 'primary',
+  typographyVariant: 'button',
   style: {},
   textStyle: {},
   text: 'Button',

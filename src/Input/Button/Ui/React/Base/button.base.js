@@ -11,9 +11,10 @@ const ButtonIcon = lazy(() =>
   ),
 )
 
-const FileInput = lazy(() => import(
+const FileInput = lazy(() =>
+  import(
     /* webpackChunkName: 'FileiNput' */ '../../../../../Media/Files/Ui/React/fileInput.index'
-  )
+  ),
 )
 
 const ButtonBase = ({
@@ -32,6 +33,7 @@ const ButtonBase = ({
   dataCy,
   loading,
   inputProps,
+  typographyVariant,
   loadingComp,
 }) => {
   const [ProgressComponent, setProgressComponent] = useState(null)
@@ -74,7 +76,7 @@ const ButtonBase = ({
             data-cy={dataCy}
             isLoading={isLoading}
           >
-            <Typography text={text} variant='button' color={textColor} />
+            <Typography text={text} variant={typographyVariant} color={textColor} />
             {iconName && (
               <Suspense fallback={null}>
                 <ButtonIcon name={iconName} noBackground />

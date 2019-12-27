@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const BaseWrapper = styled.div`
-position: relative;
+  position: relative;
 `
 export const BaseButton = styled.button`
   background-color: ${({ color }) => `var(--color-${color}Lighter)`};
