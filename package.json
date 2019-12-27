@@ -1,6 +1,6 @@
 {
   "name": "@tenjojeremy/web-toolkit",
-  "version": "4.152.0",
+  "version": "4.153.0",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
   "description": "Library of reusable UI and utilities",
   "publisher": "tenjojeremy",
@@ -45,6 +45,7 @@
   "prettier": "@tenjojeremy/prettier-config",
   "dependencies": {
     "@material-ui/core": "^4.3.2",
+    "cross-env": "^6.0.3",
     "decamelize": "^3.2.0",
     "react-bottom-scroll-listener": "^3.0.0",
     "react-lazyload": "^2.6.2",
