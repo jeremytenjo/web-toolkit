@@ -22,7 +22,7 @@ export const NotificationsProvider = ({ children, service = 'firebase' }) => {
       const permission = await Notification.requestPermission()
       if (permission === 'granted') {
         const token = await setNotificationListener()
-        setToken(token)
+        token && setToken(token)
       }
     }
     setInitialized(true)

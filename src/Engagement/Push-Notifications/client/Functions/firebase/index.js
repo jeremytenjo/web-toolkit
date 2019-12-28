@@ -9,7 +9,7 @@ export default async () => {
     let registration = null
 
     registration = await registerServiceWorker()
-    await setPublicKey()
+    // await setPublicKey()
     await setNotificationListener({ swRegistration: registration })
     token = await getToken()
 
@@ -71,6 +71,6 @@ const getToken = async () => {
     const currentToken = await messaging.getToken()
     return currentToken
   } catch (error) {
-    console.error('Error in getToken ', error)
+    throw `Error in getToken = ${error}`
   }
 }
