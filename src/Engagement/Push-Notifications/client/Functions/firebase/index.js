@@ -13,8 +13,7 @@ export default async () => {
     await setNotificationListener({ swRegistration: registration })
     token = await getToken()
 
-    console.log(token)
-    alert(token)
+    return token
   } else {
     console.log('Firebase messaging not supported in this browser')
   }
@@ -23,7 +22,7 @@ export default async () => {
 const setPublicKey = () => {
   try {
     messaging.usePublicVapidKey(
-      'BHlOUk7fnlpYBMFaEHNckPkosvoUoLULGg0uAVLyKxepB6wxBqai_cK0S0LithVoKSLQANnENNdStvUorfFJGcc',
+      'BN3rLeTGSC1Z64OCHAJea9VahXHaq3QjO1i8WtdvvP9haL-DJjHAbpH9CQyaaNgkuR2QWRQj2tkskbZZ7IKScEE',
     )
   } catch (error) {
     console.error('Error in setPublicKey ', error)

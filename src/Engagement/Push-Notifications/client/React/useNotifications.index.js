@@ -4,6 +4,7 @@ export const NotificationsContext = createContext(null)
 
 export const NotificationsProvider = ({ children, service = 'firebase' }) => {
   const [initialized, setInitialized] = useState(false)
+  const [token, setToken] = useState(false)
 
   useEffect(() => {
     const hasPermission = Notification.permission
@@ -20,7 +21,8 @@ export const NotificationsProvider = ({ children, service = 'firebase' }) => {
     if (isSupported() && !initialized) {
       const permission = await Notification.requestPermission()
       if (permission === 'granted') {
-        await setNotificationListener()
+        const token = await setNotificationListener()
+        setToken(token)
       }
     }
     setInitialized(true)
@@ -32,7 +34,7 @@ export const NotificationsProvider = ({ children, service = 'firebase' }) => {
   }
 
   return (
-    <NotificationsContext.Provider value={{ isSupported, init }}>
+    <NotificationsContext.Provider value={{ isSupported, init, token }}>
       {children}
     </NotificationsContext.Provider>
   )
