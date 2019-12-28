@@ -86,6 +86,12 @@ export const WrapperIcon = styled.div`
   `}
 
   svg {
+    color: ${({ color, dark }) =>
+      color && !dark
+        ? `var(--color-${color})`
+        : color && dark
+        ? `var(--color-${color}-darker)`
+        : 'var(--color-white)'};
     fill: ${({ color, dark }) =>
       color && !dark
         ? `var(--color-${color})`

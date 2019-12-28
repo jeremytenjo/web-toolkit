@@ -68,7 +68,7 @@ export default () => {
   const { Elements } = useStyles({
     req,
     Variants,
-    name: 'Input/Form/Text-Field',
+    dir: 'Input/Form/Text-Field',
   })
 
   return Elements

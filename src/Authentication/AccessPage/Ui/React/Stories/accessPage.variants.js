@@ -35,7 +35,7 @@ export default () => {
   const { Elements } = useStyles({
     req,
     Variants,
-    name: 'Authentication/AccessPage',
+    dir: 'Authentication/AccessPage',
   })
 
   return Elements

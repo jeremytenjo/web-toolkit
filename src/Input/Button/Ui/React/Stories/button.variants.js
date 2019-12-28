@@ -50,7 +50,7 @@ export default () => {
   const { Elements } = useStyles({
     req,
     Variants,
-    name: 'Input/Button',
+    dir: 'Input/Button',
   })
 
   return Elements

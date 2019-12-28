@@ -1,6 +1,6 @@
 import React, { useState, createContext, useContext } from 'react'
 
-import Animation from '../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Animation from '../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 export const ToastContext = createContext(null)
 
 export const ToastProvider = ({ children }) => {
@@ -14,7 +14,7 @@ export const ToastProvider = ({ children }) => {
     foreground = 'white',
     location = 'center',
   }) => {
-    let mod = await import(`./Styles/toast.${style}.index`)
+    let mod = await import(`../Styles/${style}`)
     setToast(
       mod.default({
         background,

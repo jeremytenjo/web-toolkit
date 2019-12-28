@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Icon from '../../../Data-Display/Icon/Ui/React/Base/icon.index'
+import Icon from '../../../../Data-Display/Icon/Ui/React/Base/icon.index'
 
 export const Wrapper = styled.div`
   background: ${({ background }) => `var(--color-${background})`};
@@ -55,19 +55,24 @@ export default ({
   background = 'black',
   foreground = 'white',
   message = 'message a mejfalsd ',
-  iconName = 'checkmark/1',
+  iconNameSuccess = 'checkmark/1',
+  iconNameError = 'close/1',
   display = 'none',
   font = 'primary',
   location = 'center',
-}) => (
-  <Wrapper
-    background={background}
-    foreground={foreground}
-    display={display}
-    font={font}
-    location={location}
-  >
-    <Icon name={iconName} plain />
-    <span> {message}</span>
-  </Wrapper>
-)
+}) => {
+  const iconName = type === 'success' ? iconNameSuccess : iconNameError
+  const iconColor = type === 'success' ? 'success' : 'error'
+  return (
+    <Wrapper
+      background={background}
+      foreground={foreground}
+      display={display}
+      font={font}
+      location={location}
+    >
+      <Icon name={iconName} color={iconColor} plain />
+      <span> {message}</span>
+    </Wrapper>
+  )
+}

@@ -1,0 +1,44 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import Variants, {Example} from './toast.variants'
+
+<Meta title='Feedback|Notifications/Toast' />
+
+## Usage
+
+```js
+import useToast from '@tenjojeremy/web-toolkit/build/Feedback/Toast/Base/toast.index'
+
+```
+
+```js
+
+const { showToast } = useToast()
+
+ ```
+
+```js
+showToast({
+  location: 'center',
+  type: 'success',
+  message: 'Added to watchlist',
+})
+ ```
+
+## Styles
+
+<Preview>
+<Story name='All Styles'>
+   <>
+    <Variants />
+  </>
+</Story>
+</Preview>
+
+<Preview>
+<Story name='Example'>
+   <>
+    <Example />
+  </>
+</Story>
+</Preview>
+
