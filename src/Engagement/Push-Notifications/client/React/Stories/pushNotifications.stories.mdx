@@ -7,14 +7,17 @@ import Example from './example'
 
 Add provider to Store
 ```js
-import { NotificationsProvider } from '@tenjojeremy/web-toolkit/build/Engagement/Push-Notifications/clinet/React/useNotifications.index'
+import { NotificationsProvider } from '@tenjojeremy/web-toolkit/build/Engagement/Push-Notifications/client/React/useNotifications.index'
  ```
 
 use in comoponent
 ```js
-import useNotifications from '@tenjojeremy/web-toolkit/build/Engagement/Push-Notifications/clinet/React/useNotifications.index'
+import useNotifications from '@tenjojeremy/web-toolkit/build/Engagement/Push-Notifications/client/React/useNotifications.index'
  ```
-Add to `Store`
+
+ ```js
+const { init, token, isSupported } = useNotifications()
+ ```
 
 <Preview>
 <Story name='Example'>

@@ -17,8 +17,7 @@ export const BaseButton = styled.button`
   border: 2px solid ${({ color }) => `var(--color-${color}Lighter)`};
   user-select: none;
   box-sizing: content-box;
-  &:focus {outline:0;}
-
+  &:focus {outline:none;} 
 
   &:active {
     border: 2px solid ${({ color }) => `var(--color-${color}Darker)`};
