@@ -162,7 +162,8 @@ const CardMovie1 = ({
 
   const formatNumber = (number) => {
     const type = typeof number
-    if (type === 'number') return number.toString().length === 1 ? `0${number}` : number
+    if (type === 'string' || type === 'number')
+      return number.toString().length === 1 ? `0${number}` : number
     else return '01'
   }
 
