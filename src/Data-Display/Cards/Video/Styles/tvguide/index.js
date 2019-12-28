@@ -180,7 +180,7 @@ const CardMovie1 = ({
 
   return (
     <Box styles={wrapper}>
-      <Poster src={poster} size={184} alt={posterAlt} />
+      <Poster src={poster} size={250} alt={posterAlt} />
 
       <Box
         styles={{
@@ -216,7 +216,7 @@ const CardMovie1 = ({
         {isTv && (
           <Typography
             text='Select Episode'
-            styles={{ color: 'grey' }}
+            styles={{ color: 'darkgrey' }}
             variant={overviewVariant}
           />
         )}
@@ -280,7 +280,7 @@ const CardMovie1 = ({
           <>
             <Typography
               text='or Play'
-              styles={{ color: 'grey' }}
+              styles={{ color: 'darkgrey' }}
               variant={overviewVariant}
             />
 
