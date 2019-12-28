@@ -13,6 +13,7 @@ const AnimationIndex = ({
   config = defaultConfig,
   show,
   children,
+  style = {},
   ...rest
 }) => {
   const wrapperRef = useRef(null)
@@ -44,7 +45,7 @@ const AnimationIndex = ({
   }
 
   return children ? (
-    <div style={{ display: 'none' }} ref={wrapperRef}>
+    <div style={{ display: 'none', ...style }} ref={wrapperRef}>
       {children}
     </div>
   ) : null
