@@ -1,5 +1,6 @@
 import React, { memo, useState, useEffect } from 'react'
 
+import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 import Box from '../../../../Box/Ui/React/box.index'
 import Poster from '../../../Poster/Ui/React/Styles/1/poster.1.index'
 import Typography from '../../../../Typography/Ui/React/typography.index'
@@ -9,6 +10,8 @@ import Button from '../../../../../Input/Button/Ui/React/Styles/1/index'
 import { defaultProps, propTypes } from '../../Base/base.propTypes'
 
 const CardMovie1 = ({
+  loadingMessage,
+  loadingMessageStyles,
   poster,
   title,
   overview,
@@ -192,6 +195,7 @@ const CardMovie1 = ({
           justifyContent: 'space-between',
           gridAutoFlow: 'column',
           width: '100%',
+          alignItems: 'center',
         }}
       >
         <Icon
@@ -202,6 +206,10 @@ const CardMovie1 = ({
             color: 'white',
           }}
         />
+
+        <Animation show={loadingMessage} name='blinking'>
+          <Typography text={loadingMessage} styles={loadingMessageStyles} />
+        </Animation>
 
         <Icon name={favIcon} color='yellow' onClick={handleFavoriteToggle} />
       </Box>
