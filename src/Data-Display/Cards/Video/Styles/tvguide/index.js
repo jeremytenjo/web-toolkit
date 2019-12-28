@@ -130,7 +130,7 @@ const CardMovie1 = ({
     updateLastWatched(lastWatched)
   }
 
-  // Handle lastest episode
+  // Handle last aired episode
   useEffect(() => {
     createLatest()
   }, [lastAiredEpisode])
@@ -159,8 +159,12 @@ const CardMovie1 = ({
 
   const handleLoadMore = () => onLoadMore(rest)
   const handleFavoriteToggle = () => onFavoriteToggle(rest)
-  const formatNumber = (number) =>
-    number.toString().length === 1 ? `0${number}` : number
+
+  const formatNumber = (number) => {
+    const type = typeof number
+    if (type === 'number') return number.toString().length === 1 ? `0${number}` : number
+    else return '01'
+  }
 
   // Styles
   const wrapper = {
@@ -284,7 +288,9 @@ const CardMovie1 = ({
               variant={overviewVariant}
             />
 
-            <Box styles={{ gridAutoFlow: 'column', gridGap: 's' }}>
+            <Box
+              styles={{ gridAutoFlow: 'column', gridGap: 's', justifyContent: 'center' }}
+            >
               {lastWatched && (
                 <Button
                   style={buttonStyles}
