@@ -5,7 +5,10 @@ import useNotifications from '../useNotifications.index'
 import Store from './store'
 
 const Child = () => {
-  const { init } = useNotifications()
+  const { init, token, message } = useNotifications()
+
+  console.log(token)
+  console.log(message)
 
   return (
     <>

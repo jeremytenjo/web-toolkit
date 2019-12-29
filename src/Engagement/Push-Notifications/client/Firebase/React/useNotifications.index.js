@@ -1,14 +1,19 @@
 import React, { useState, useEffect, createContext, useContext } from 'react'
+import firebase from 'firebase/app'
+import 'firebase/messaging'
+
+const messaging = firebase.messaging()
 
 export const NotificationsContext = createContext(null)
 
-export const NotificationsProvider = ({ children, service = 'firebase' }) => {
-  const [initialized, setInitialized] = useState(false)
-  const [token, setToken] = useState(false)
+export const NotificationsProvider = ({ children }) => {
+  const [initialized, setInitialized] = useState(null)
+  const [token, setToken] = useState(null)
+  const [message, setMessage] = useState(null)
 
   useEffect(() => {
-    const hasPermission = Notification.permission
-    if (isSupported() && hasPermission === 'granted') {
+    const hasPermission = Notification.permission === 'granted'
+    if (isSupported() && hasPermission) {
       setNotificationListener()
       setInitialized(true)
     }
@@ -20,21 +25,19 @@ export const NotificationsProvider = ({ children, service = 'firebase' }) => {
   const init = async () => {
     if (isSupported() && !initialized) {
       const permission = await Notification.requestPermission()
-      if (permission === 'granted') {
-        const token = await setNotificationListener()
-        token && setToken(token)
-      }
+      if (permission === 'granted') setNotificationListener()
     }
     setInitialized(true)
   }
 
   const setNotificationListener = async () => {
-    const { default: initFunc } = await import(`../Functions/${service}`)
-    initFunc()
+    const token = await messaging.getToken()
+    token && setToken(token)
+    messaging.onMessage((payload) => setMessage(payload))
   }
 
   return (
-    <NotificationsContext.Provider value={{ isSupported, init, token }}>
+    <NotificationsContext.Provider value={{ isSupported, init, token, message }}>
       {children}
     </NotificationsContext.Provider>
   )
