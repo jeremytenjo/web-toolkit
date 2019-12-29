@@ -10,6 +10,10 @@ const Child = () => {
   console.log(token)
   console.log(message)
 
+  if (message) {
+    var notification = new Notification(message.notification.title)
+  }
+
   return (
     <>
       <button onClick={() => init()}>Initialize</button>
