@@ -188,7 +188,7 @@ const CardMovie1 = ({
 
   return (
     <Box styles={wrapper}>
-      <Poster src={poster} size={250} alt={posterAlt} />
+      <Poster src={poster} size={300} alt={posterAlt} />
 
       <Box
         styles={{
