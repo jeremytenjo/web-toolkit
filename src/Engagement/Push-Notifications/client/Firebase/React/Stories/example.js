@@ -1,5 +1,6 @@
 import React from 'react'
 
+import icon from '../../../../../../../public/logo-192.png'
 import useNotifications from '../useNotifications.index'
 
 import Store from './store'
@@ -11,7 +12,12 @@ const Child = () => {
   console.log(message)
 
   if (message) {
-    var notification = new Notification(message.notification.title)
+    const {
+      notification: { title, body },
+    } = message
+    const options = { icon, body }
+
+    new Notification(title, options)
   }
 
   return (
