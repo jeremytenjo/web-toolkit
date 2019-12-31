@@ -39,4 +39,21 @@ const { init, token, isSupported } = useNotifications()
 
 2. Create `firebase-messaging-sw.js` file. This handles background notitifactons when app not in use
 
-3. `useNotifications.js` handles messages when app is open
+3. add firebase-messaging-sw registration to window in order to show notitifactions
+
+```js 
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+    .then(function(registration) {
+      window.firebaseMessagingSWRegistration = registration
+    })
+    .catch(function(error) {
+      console.log('Service worker registration failed, error:', error);
+    });
+  }
+  </script>
+```
+
+
+4. `useNotifications.js` handles messages when app is open
