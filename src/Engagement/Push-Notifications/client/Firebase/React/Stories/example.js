@@ -21,7 +21,8 @@ const Child = () => {
         notification: { title, body },
       } = message
       const options = { icon, body }
-      showNotification(title, options)
+
+      showNotification({ title, options })
     }
   }
 
