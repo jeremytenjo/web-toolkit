@@ -23,9 +23,8 @@ export const NotificationsProvider = ({ children }) => {
   const isSupported = () =>
     'Notification' in window && 'serviceWorker' in navigator && 'PushManager' in window
 
-  const registerServiceWroker = async () => {
+  const registerServiceWroker = () =>
     navigator.serviceWorker.register('/firebase-messaging-sw.js')
-  }
 
   const init = async () => {
     if (isSupported() && !initialized) {
@@ -41,9 +40,9 @@ export const NotificationsProvider = ({ children }) => {
     messaging.onMessage((payload) => setMessage(payload))
   }
 
-  const showNotification = async ({ message }) => {
-    const registrations = await navigator.serviceWorker.getRegistrations
-    registrations[0].showNotification(message)
+  const showNotification = async ({ title, options }) => {
+    const registrations = await navigator.serviceWorker.getRegistrations()
+    if (registrations.length) registrations[0].showNotification(title, options)
   }
 
   return (
