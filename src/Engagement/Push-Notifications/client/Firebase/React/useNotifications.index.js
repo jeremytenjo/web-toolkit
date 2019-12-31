@@ -10,7 +10,6 @@ export const NotificationsProvider = ({ children }) => {
   const [initialized, setInitialized] = useState(null)
   const [token, setToken] = useState(null)
   const [message, setMessage] = useState(null)
-  const [registration, setRegistration] = useState(null)
 
   useEffect(() => {
     const hasPermission = Notification.permission === 'granted'
@@ -26,8 +25,6 @@ export const NotificationsProvider = ({ children }) => {
 
   const registerServiceWroker = async () => {
     navigator.serviceWorker.register('/firebase-messaging-sw.js')
-    const registration = await navigator.serviceWorker.ready
-    setRegistration(registration)
   }
 
   const init = async () => {
@@ -44,9 +41,14 @@ export const NotificationsProvider = ({ children }) => {
     messaging.onMessage((payload) => setMessage(payload))
   }
 
+  const showNotification = async ({ message }) => {
+    const registrations = await navigator.serviceWorker.getRegistrations
+    registrations[0].showNotification(message)
+  }
+
   return (
     <NotificationsContext.Provider
-      value={{ isSupported, init, token, message, registration }}
+      value={{ isSupported, init, token, message, showNotification }}
     >
       {children}
     </NotificationsContext.Provider>
