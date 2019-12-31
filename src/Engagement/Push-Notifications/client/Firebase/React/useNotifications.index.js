@@ -25,9 +25,8 @@ export const NotificationsProvider = ({ children }) => {
     'Notification' in window && 'serviceWorker' in navigator && 'PushManager' in window
 
   const registerServiceWroker = async () => {
-    const registration = await navigator.serviceWorker.register(
-      '/firebase-messaging-sw.js',
-    )
+    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+    const registration = await navigator.serviceWorker.ready
     setRegistration(registration)
   }
 
