@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import icon from '../../../../../../../public/logo-192.png'
 import useNotifications from '../useNotifications.index'
@@ -6,18 +6,23 @@ import useNotifications from '../useNotifications.index'
 import Store from './store'
 
 const Child = () => {
-  const { init, token, message } = useNotifications()
+  const { init, token, message, showNotification } = useNotifications()
 
   console.log(token)
   console.log(message)
 
-  if (message) {
-    const {
-      notification: { title, body },
-    } = message
-    const options = { icon, body }
+  useEffect(() => {
+    handleMessage()
+  }, [message])
 
-    new Notification(title, options)
+  const handleMessage = () => {
+    if (message) {
+      const {
+        notification: { title, body },
+      } = message
+      const options = { icon, body }
+      showNotification(title, options)
+    }
   }
 
   return (
