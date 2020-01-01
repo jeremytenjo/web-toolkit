@@ -73,7 +73,7 @@ const CardMovie1 = ({
   // Handle next episode
   useEffect(() => {
     createNextEp()
-  }, [lastWatched])
+  }, [lastWatched, episodes, seasons])
 
   const createNextEp = () => {
     if (lastWatched) {
