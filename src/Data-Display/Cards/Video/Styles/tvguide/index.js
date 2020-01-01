@@ -209,9 +209,11 @@ const CardMovie1 = ({
           }}
         />
 
-        <Animation show={loadingMessage} name='blinking'>
-          <Typography text={loadingMessage} styles={loadingMessageStyles} />
-        </Animation>
+        {loadingMessage && (
+          <Animation show={loadingMessage} name='blinking'>
+            <Typography text={loadingMessage} styles={loadingMessageStyles} />
+          </Animation>
+        )}
 
         {infoMessage && <Typography text={infoMessage} styles={infoMessageStyles} />}
 
