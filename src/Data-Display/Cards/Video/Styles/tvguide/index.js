@@ -46,7 +46,7 @@ const CardMovie1 = ({
   const [nextEpisodeLabel, setnextEpisodeLabel] = useState('')
 
   const [lastWatched, setLastWatched] = useState(
-    localStorage.getItem(`${title}_lastWatched`),
+    JSON.parse(localStorage.getItem(`${title}_lastWatched`)),
   )
   const [lastWatchedLabel, setLastWatchedLabel] = useState('')
 
