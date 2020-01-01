@@ -35,6 +35,8 @@ const CardMovie1 = ({
   posterAlt,
   lastAiredEpisode,
   onClose,
+  infoMessage,
+  infoMessageStyles,
   ...rest
 }) => {
   const favIcon = favorite ? `${starIcon}-filled` : starIcon
@@ -210,6 +212,8 @@ const CardMovie1 = ({
         <Animation show={loadingMessage} name='blinking'>
           <Typography text={loadingMessage} styles={loadingMessageStyles} />
         </Animation>
+
+        {infoMessage && <Typography text={infoMessage} styles={infoMessageStyles} />}
 
         <Icon name={favIcon} color='yellow' onClick={handleFavoriteToggle} />
       </Box>

@@ -1,6 +1,8 @@
 import { string, func, array, bool, object } from 'prop-types'
 
 export const defaultProps = {
+  infoMessage: null,
+  infoMessageStyles: { color: 'white' },
   loadingMessage: null,
   loadingMessageStyles: { color: 'primary' },
   poster: null,
