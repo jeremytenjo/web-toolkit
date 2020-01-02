@@ -6,6 +6,7 @@ const Drawer = ({
   position,
   children,
   onClose,
+  disableSwipeToOpen,
   PaperProps = {
     bottom: { style: { borderRadius: '20px 20px 0 0' } },
     top: { style: { borderRadius: '0 0 20px 20px' } },
@@ -28,6 +29,7 @@ const Drawer = ({
   return (
     <SwipeableDrawer
       PaperProps={PaperProps[position]}
+      disableSwipeToOpen={disableSwipeToOpen}
       anchor={position}
       open={!!open}
       onClose={onClose}
