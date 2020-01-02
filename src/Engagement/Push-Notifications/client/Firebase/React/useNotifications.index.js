@@ -23,8 +23,11 @@ export const NotificationsProvider = ({ children }) => {
   const isSupported = () =>
     'Notification' in window && 'serviceWorker' in navigator && 'PushManager' in window
 
-  const registerServiceWroker = () =>
-    navigator.serviceWorker.register('/firebase-messaging-sw.js')
+  const registerServiceWroker = () => {
+    if (process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/firebase-messaging-sw.js')
+    }
+  }
 
   const init = async () => {
     if (isSupported() && !initialized) {
