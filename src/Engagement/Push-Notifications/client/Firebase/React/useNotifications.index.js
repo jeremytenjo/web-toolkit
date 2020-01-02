@@ -1,5 +1,7 @@
 import React, { useState, useEffect, createContext, useContext } from 'react'
 import firebase from 'firebase/app'
+
+import isProduction from '../../../../../Misc-Utils/Enviroment/isProduction'
 import 'firebase/messaging'
 
 const messaging = firebase.messaging()
@@ -7,6 +9,7 @@ const messaging = firebase.messaging()
 export const NotificationsContext = createContext(null)
 
 export const NotificationsProvider = ({ children }) => {
+  const isProductionApp = isProduction()
   const [initialized, setInitialized] = useState(null)
   const [token, setToken] = useState(null)
   const [message, setMessage] = useState(null)
@@ -24,7 +27,7 @@ export const NotificationsProvider = ({ children }) => {
     'Notification' in window && 'serviceWorker' in navigator && 'PushManager' in window
 
   const registerServiceWroker = () => {
-    if (process.env.NODE_ENV === 'production') {
+    if (isProductionApp) {
       navigator.serviceWorker.register('/firebase-messaging-sw.js')
     }
   }
