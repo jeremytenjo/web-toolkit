@@ -6,7 +6,7 @@ const Drawer = ({
   position,
   children,
   onClose,
-  disableSwipeToOpen,
+  disableSwipeToOpen = true,
   PaperProps = {
     bottom: { style: { borderRadius: '20px 20px 0 0' } },
     top: { style: { borderRadius: '0 0 20px 20px' } },
