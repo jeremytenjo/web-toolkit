@@ -60,7 +60,7 @@
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-docs": "^5.2.3",
     "@storybook/react": "^5.2.8",
-    "@tenjojeremy/babel-config": "^1.5.0",
+    "@tenjojeremy/babel-config": "^1.10.0",
     "@tenjojeremy/eslint-config": "^1.7.0",
     "@tenjojeremy/prettier-config": "^0.4.0",
     "cypress": "^3.5.0",
