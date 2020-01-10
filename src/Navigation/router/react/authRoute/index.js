@@ -6,26 +6,21 @@ import { Route, useHistory, Redirect } from '../index'
 const AuthRoute = ({
   component,
   redirectTo = '/account/login',
-  isPrivate = false,
   children,
   ...rest
 }) => {
-  console.log({ useAuth })
-
   const { push } = useHistory()
   const { user } = useAuth()
 
-  const hasAccess = !isPrivate || user
-
   useEffect(() => {
-    if (!user && isPrivate) push(redirectTo)
+    if (!user) push(redirectTo)
   }, [user])
 
   return (
     <Route
       {...rest}
       render={() =>
-        hasAccess ? (
+        user ? (
           component ? (
             component()
           ) : (
