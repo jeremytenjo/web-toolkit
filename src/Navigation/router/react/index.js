@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Route as RouteReactRouter,
   useHistory as useHistoryReactouer,
@@ -6,8 +7,8 @@ import {
   Switch as SwitchReactRouter,
 } from 'react-router-dom'
 
-export const Route = () => RouteReactRouter
-export const useHistory = () => useHistoryReactouer
-export const useLocation = () => useLocationReactouer
-export const Redirect = () => RedirectReactRouter
-export const Switch = () => SwitchReactRouter
+export const Route = () => <RouteReactRouter />
+export const useHistory = () => <useHistoryReactouer />
+export const useLocation = () => <useLocationReactouer />
+export const Redirect = () => <RedirectReactRouter />
+export const Switch = () => <SwitchReactRouter />
