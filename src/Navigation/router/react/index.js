@@ -1,17 +1,19 @@
 import React from 'react'
 import {
   BrowserRouter as BrowserRouterReactRouter,
-  useHistory as useHistoryReactRouter,
-  useLocation as useLocationReactRouter,
+  Route as RouteReactRouter,
   Redirect as RedirectReactRouter,
   Switch as SwitchReactRouter,
+  useHistory as useHistoryReactRouter,
+  useLocation as useLocationReactRouter,
 } from 'react-router-dom'
 
-import CustomRouteReactRouter from './route'
+import CustomAuthRoute from './authRoute'
 
 // Components
 export const BrowserRouter = (props) => <BrowserRouterReactRouter {...props} />
-export const Route = (props) => <CustomRouteReactRouter {...props} />
+export const Route = (props) => <RouteReactRouter {...props} />
+export const AuthRoute = (props) => <CustomAuthRoute {...props} />
 export const Redirect = (props) => <RedirectReactRouter {...props} />
 export const Switch = (props) => <SwitchReactRouter {...props} />
 

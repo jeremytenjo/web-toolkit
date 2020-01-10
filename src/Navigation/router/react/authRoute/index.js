@@ -1,8 +1,7 @@
 import React, { useEffect, memo } from 'react'
-import { Route } from 'react-router-dom'
 
 import useAuth from '../../../../Authentication/useAuth'
-import { useHistory, Redirect } from '../index'
+import { Route, useHistory, Redirect } from '../index'
 
 const CRoute = ({
   component,
@@ -11,8 +10,11 @@ const CRoute = ({
   children,
   ...rest
 }) => {
+  console.log({ useAuth })
+
   const { push } = useHistory()
   const { user } = useAuth()
+
   const hasAccess = !isPrivate || user
 
   useEffect(() => {

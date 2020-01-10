@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import useAuth from '../../../../../Authentication/useAuth'
 import { useHistory, Switch } from '../../index'
-import Route from '../index'
+import AuthRoute from '../index'
 
 import Store from './store'
 
@@ -34,13 +34,13 @@ const Example = () => {
       <br />
 
       <Switch>
-        <Route component={PublicPage} exact path='/' />
+        <AuthRoute component={PublicPage} exact path='/' />
 
-        <Route component={PrivatePage1} path='/privatePage1' isPrivate />
+        <AuthRoute component={PrivatePage1} path='/privatePage1' isPrivate />
 
-        <Route component={PrivatePage2} path='/privatePage2' isPrivate />
+        <AuthRoute component={PrivatePage2} path='/privatePage2' isPrivate />
 
-        <Route component={LoginPage} path='/account/login' />
+        <AuthRoute component={LoginPage} path='/account/login' />
       </Switch>
 
       <br />
@@ -80,4 +80,4 @@ const Story = () => (
   </Store>
 )
 
-storiesOf('Routing|React/Route', module).add('Authentication', () => <Story />)
+storiesOf('Routing|React/Route', module).add('AuthRoute', () => <Story />)
