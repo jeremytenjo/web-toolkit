@@ -11,6 +11,8 @@ const AuthRoute = ({
 }) => {
   const { push } = useHistory()
   const { user } = useAuth()
+  const components = component ? component() : children
+  const redirectProps = { to: { pathname: redirectUrl } }
 
   useEffect(() => {
     if (!user) push(redirectUrl)
@@ -19,22 +21,7 @@ const AuthRoute = ({
   return (
     <Route
       {...rest}
-      render={() =>
-        user ? (
-          component ? (
-            component()
-          ) : (
-            children
-          )
-        ) : (
-          <Redirect
-            to={{
-              pathname: redirectUrl,
-              state: { from: location },
-            }}
-          />
-        )
-      }
+      render={() => (user ? components : <Redirect {...redirectProps} />)}
     />
   )
 }
