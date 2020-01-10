@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { useHistory, Switch } from 'react-router-dom'
 
+import { useHistory, Switch } from '../../../../Navigation/router/react'
 import Route from '../route.index'
 import useAuth from '../../../UseAuth/useAuth.index'
 
