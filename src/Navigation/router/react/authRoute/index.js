@@ -3,7 +3,7 @@ import React, { useEffect, memo } from 'react'
 import useAuth from '../../../../Authentication/useAuth'
 import { Route, useHistory, Redirect } from '../index'
 
-const CRoute = ({
+const AuthRoute = ({
   component,
   redirectTo = '/account/login',
   isPrivate = false,
@@ -44,4 +44,4 @@ const CRoute = ({
   )
 }
 
-export default memo(CRoute)
+export default memo(AuthRoute)
