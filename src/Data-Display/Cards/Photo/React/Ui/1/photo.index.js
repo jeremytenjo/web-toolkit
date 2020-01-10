@@ -7,7 +7,7 @@ import Menu from '../../../../../../Input/Menu/menu.index'
 import Donut from '../../../../../../Feedback/Progress/Ui/React/donut'
 import Chip from '../../../../../Chip/Ui/React/chip.index'
 import LikeButton from '../../../../../Icon/Ui/React/Special/Like/like.index'
-import Box from '../../../../../Box/Ui/React/box.index'
+import Box from '../../../../../Box/Ui/React'
 
 import { Wrapper, TopRow, ImageCon, donutStyle, LikeIconCon } from './photo.styles'
 import { defaultProps } from './photo.propTypes'

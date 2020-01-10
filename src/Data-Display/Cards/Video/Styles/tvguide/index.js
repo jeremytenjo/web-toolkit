@@ -1,7 +1,7 @@
 import React, { memo, useState, useEffect } from 'react'
 
 import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
-import Box from '../../../../Box/Ui/React/box.index'
+import Box from '../../../../Box/Ui/React'
 import Poster from '../../../Poster/Ui/React/Styles/1/poster.1.index'
 import Typography from '../../../../Typography/Ui/React/typography.index'
 import Icon from '../../../../Icon/Ui/React/Base/icon.index'

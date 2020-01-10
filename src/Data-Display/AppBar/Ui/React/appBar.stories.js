@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react'
 
-import Box from '../../../Box/Ui/React/box.index'
+import Box from '../../../Box/Ui/React'
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 export default {

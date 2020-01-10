@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Box from '../../../../../Box/Ui/React/box.index'
+import Box from '../../../../../Box/Ui/React'
 import Typography from '../../../../../Typography/Ui/React/typography.index'
 import Image from '../../../../../../Media/Image/Ui/React/image.index'
 

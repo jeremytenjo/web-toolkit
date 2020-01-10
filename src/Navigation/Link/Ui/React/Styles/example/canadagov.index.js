@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 
 import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
 import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
-import Box from '../../../../../../Data-Display/Box/Ui/React/box.index'
+import Box from '../../../../../../Data-Display/Box/Ui/React'
 
 import { defaultProps, propTypes } from './canadagov.propTypes'
 import { wrapperSyles } from './canadagov.styles'

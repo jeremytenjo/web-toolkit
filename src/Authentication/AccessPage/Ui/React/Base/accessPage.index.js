@@ -2,7 +2,7 @@ import React, { memo, useState, useRef } from 'react'
 
 import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
 import capitalize from '../../../../../Misc-Utils/String/capitalize.index'
-import Box from '../../../../../Data-Display/Box/Ui/React/box.index'
+import Box from '../../../../../Data-Display/Box/Ui/React'
 import Image from '../../../../../Media/Image/Ui/React/image.index'
 import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
 import Icon from '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'

@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Box from '../../../../../../../Data-Display/Box/Ui/React/box.index'
+import Box from '../../../../../../../Data-Display/Box/Ui/React'
 import Typogrgraphy from '../../../../../../../Data-Display/Typography/Ui/React/typography.index'
 import SelectBase from '../../Base/select.index'
 
