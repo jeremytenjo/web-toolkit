@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { useHistory, Switch } from '../../../../Navigation/router/react'
-import Route from '../route.index'
-import useAuth from '../../../UseAuth/useAuth.index'
+import useAuth from '../../../../../Authentication/useAuth'
+import { useHistory, Switch } from '../../index'
+import Route from '../index'
 
 import Store from './store'
 
@@ -14,7 +14,7 @@ const LoginPage = () => <div data-cy='page-login'>Login Page</div>
 
 const Example = () => {
   const { push } = useHistory()
-  const { signIn, signOut, signingIn, user } = useAuth()
+  const { signIn, signOut, signingIn, user, error } = useAuth()
 
   return (
     <>
@@ -65,6 +65,11 @@ const Example = () => {
       <span data-cy='signinStatus' style={{ color: user ? 'green' : 'orange' }}>
         ({user ? 'Signed In' : 'Signed Out'})
       </span>
+
+      <br />
+      <br />
+      <br />
+      {error && <span style={{ color: '#b71c1c' }}>{error}</span>}
     </>
   )
 }
@@ -75,4 +80,4 @@ const Story = () => (
   </Store>
 )
 
-storiesOf('Routing|React-Router', module).add('Route', () => <Story />)
+storiesOf('Routing|React/Route', module).add('Authentication', () => <Story />)

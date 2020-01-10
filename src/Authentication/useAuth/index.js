@@ -30,6 +30,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
     if (signedInUser) {
       setUser(signedInUser)
       saveToCredentialManager(credentialManagerData)
+      setError(false)
     } else if (signInError) {
       setError(signInError)
     }

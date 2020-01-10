@@ -1,7 +1,8 @@
 import React, { useEffect, memo } from 'react'
+import { Route } from 'react-router-dom'
 
-import { Route, useHistory, Redirect } from '../../../Navigation/router/react'
-import useAuth from '../../UseAuth/useAuth.index'
+import useAuth from '../../../../Authentication/useAuth'
+import { useHistory, Redirect } from '../index'
 
 const CRoute = ({
   component,
