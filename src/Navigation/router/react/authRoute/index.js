@@ -5,7 +5,7 @@ import { Route, useHistory, Redirect } from '../index'
 
 const AuthRoute = ({
   component,
-  redirectTo = '/account/login',
+  redirectUrl = '/account/login',
   children,
   ...rest
 }) => {
@@ -13,7 +13,7 @@ const AuthRoute = ({
   const { user } = useAuth()
 
   useEffect(() => {
-    if (!user) push(redirectTo)
+    if (!user) push(redirectUrl)
   }, [user])
 
   return (
@@ -29,7 +29,7 @@ const AuthRoute = ({
         ) : (
           <Redirect
             to={{
-              pathname: redirectTo,
+              pathname: redirectUrl,
               state: { from: location },
             }}
           />
