@@ -38,6 +38,4 @@ const Illustrations = () => {
   return <List>{vars}</List>
 }
 
-storiesOf('Data-Display|Illustrations', module).add('collection', () => (
-  <Illustrations />
-))
+storiesOf('Data-Display|Illustrations', module).add('collection', () => <Illustrations />)
