@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
-import useFetch from './useFetch.index'
+import useFetch from '..'
 
 const GET = () => {
   const url = 'http://dummy.restapiexample.com/api/v1/employees'
