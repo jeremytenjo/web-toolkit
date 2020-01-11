@@ -5,7 +5,7 @@ import B from '../../../../../.storybook/Custom-Components/VariationBlock/variat
 
 import Example from './animation.example'
 
-const variationsReq = require.context('./Types', true, /.js$/)
+const variationsReq = require.context('../types', true, /.js$/)
 const animationTypesPaths = variationsReq.keys()
 
 const Variations = () => {

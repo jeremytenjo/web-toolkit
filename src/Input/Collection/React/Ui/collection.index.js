@@ -27,7 +27,7 @@ const Collection = ({
 
   const loadTextField = async () => {
     let { default: Comp } = await import(
-      `../../../Form/Text-Field/Ui/React/styles/${textFieldStyle}`
+      `../../../form/textField/styles/${textFieldStyle}`
     )
     setTextField(
       <Comp color='secondary' name='item' placeholder={placeholder} clearOnSubmit />,

@@ -51,7 +51,7 @@ const ButtonBase = ({
   }, [])
 
   const importLoadingComoponent = async () => {
-    let Comp = await import(`../../../../../Feedback/Progress/Ui/React/${loadingComp}`)
+    let Comp = await import(`../../../feedback/progress/${loadingComp}`)
     Comp = Comp.default
     setProgressComponent(Comp)
   }

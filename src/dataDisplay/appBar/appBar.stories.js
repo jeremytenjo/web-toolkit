@@ -7,7 +7,7 @@ export default {
   title: 'Data-Display|AppBar/Ui/React',
 }
 
-const req = require.context('./Styles', true, /index.js$/)
+const req = require.context('./styles', true, /index.js$/)
 const paths = req.keys()
 
 const StylesList = () => {

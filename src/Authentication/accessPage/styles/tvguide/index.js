@@ -22,9 +22,7 @@ const AccessPageTvGuide = ({
   const handleLogin = async (provider) => {
     try {
       setLoading(true)
-      const { default: func } = await import(
-        `../../../../../Functions/${service}/auth.social`
-      )
+      const { default: func } = await import(`../../../functions/${service}/auth.social`)
       const { error, accessToken, user } = await func({ provider })
       if (user) onSuccess({ accessToken, user })
       else seterror(error.errorMessage)
