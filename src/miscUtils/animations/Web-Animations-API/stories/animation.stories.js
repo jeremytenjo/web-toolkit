@@ -12,7 +12,10 @@ const Variations = () => {
   return (
     <>
       {animationTypesPaths.map((path) => {
-        const type = path.split('.')[2]
+        const type = path
+          .split('/')
+          .join('')
+          .split('.')[1]
         return (
           <B title={type} key={path}>
             <Example type={type} />
