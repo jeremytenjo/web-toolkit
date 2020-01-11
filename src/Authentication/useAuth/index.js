@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext, useContext } from 'react'
 
-import saveToCredentialManager from '../Functions/WebApi/CredentialMangment/cm.save'
+import saveToCredentialManager from '../functions/WebApi/CredentialMangment/cm.save'
 
 export const AuthContext = createContext(null)
 
@@ -39,7 +39,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
   }
 
   const checkIfSignedIn = async () => {
-    const authCheck = await import(`../Functions/${service}/auth.check`)
+    const authCheck = await import(`../functions/${service}/auth.check`)
     const { user: userRes } = await authCheck.default()
 
     if (userRes) {
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
       saveToCredentialManager(userRes)
     } else {
       // Check Credential Manager if not Signed in
-      const cmModule = await import('../Functions/WebApi/CredentialMangment/cm.get')
+      const cmModule = await import('../functions/WebApi/CredentialMangment/cm.get')
       const { user: cmUser } = await cmModule.default()
       if (cmUser) setUser(cmUser)
       else setUser(false)
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
   }
 
   const signOut = async () => {
-    const signOutFunc = await import(`../Functions/${service}/auth.signOut`)
+    const signOutFunc = await import(`../functions/${service}/auth.signOut`)
     await signOutFunc.default()
 
     setUser(false)

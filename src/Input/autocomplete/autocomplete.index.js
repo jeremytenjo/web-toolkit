@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState, useRef } from 'react'
 
-import List from '../../../../Data-Display/List/Ui/React/list.index'
-import Animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import List from '../../dataDisplay/list/index'
+import Animation from '../../miscUtils/animations/Web-Animations-API/index'
 
 import { defaultProps, propTypes } from './autocomplete.propTypes'
 import { Wrapper, Other } from './autocomplete.styles'
@@ -24,7 +24,7 @@ const Autocomplete = ({ inputStyle, data }) => {
 
   const importTextfield = async () => {
     let mod = await import(
-      `../../../Form/Text-Field/Ui/React/Styles/textfield.${inputStyle}.index.js`
+      `../../../Form/Text-Field/Ui/React/styles/textfield.${inputStyle}.index.js`
     )
     setTextField(mod.default({ onInput: handleInput }))
   }

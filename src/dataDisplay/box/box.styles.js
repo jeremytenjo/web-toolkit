@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import system from '../../../../Theme/System/React/system.index'
+import system from '../../theme/system/system.index'
 
 export const Wrapper = styled.div`
   ${system}

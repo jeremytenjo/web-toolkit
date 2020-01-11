@@ -1,4 +1,4 @@
-import toBolean from '../../../Misc-Utils/String/toBoolean.index'
+import toBolean from '../../../miscUtils/string/toBoolean.index'
 
 const checkInvalidValues = function(form) {
   // Loop through each field in the form

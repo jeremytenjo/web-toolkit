@@ -1,7 +1,7 @@
 import React from 'react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Typography from '../../../dataDisplay/typography'
 
 const Variations = ({ Dialog, name }) => {
   return (

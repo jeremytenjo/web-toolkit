@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Dialog from '../../../Dialog/Ui/React/Styles/Style1/dialog.style1.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Dialog from '../../dialog/styles/Style1/dialog.style1.index'
+import Modal from '../'
 
 import markdown from './README.md'
-import Modal from './modal.index'
 
 const Variations = () => {
   const [show, setShow] = useState(null)

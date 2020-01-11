@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createContext, useContext } from 'react'
 import firebase from 'firebase/app'
 
-import isProduction from '../../../../../Misc-Utils/Enviroment/isProduction'
+import isProduction from '../../../../miscUtils/enviroment/isProduction'
 import 'firebase/messaging'
 
 const messaging = firebase.messaging()

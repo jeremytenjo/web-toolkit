@@ -1,13 +1,13 @@
 import React, { memo, useState, useEffect } from 'react'
 
-import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
-import Box from '../../../../Box/Ui/React'
-import Poster from '../../../Poster/Ui/React/Styles/1/poster.1.index'
-import Typography from '../../../../Typography/Ui/React/typography.index'
-import Icon from '../../../../Icon/Ui/React/Base/icon.index'
-import Select from '../../../../../Input/Form/Select/Ui/React/Styles/tvguide/select.tvguide.index'
-import Button from '../../../../../Input/Button/Ui/React/Styles/1/index'
-import { defaultProps, propTypes } from '../../Base/base.propTypes'
+import Animation from '../../../../../miscUtils/animations/Web-Animations-API'
+import Box from '../../../../box'
+import Poster from '../../../poster/Ui/React/Styles/1'
+import Typography from '../../../../typography'
+import Icon from '../../../../icon'
+import Select from '../../../../../input/form/select/styles/tvguide/select.tvguide.index'
+import Button from '../../../../../input/button/Styles/1'
+import { defaultProps, propTypes } from '../../base/propTypes'
 
 const CardMovie1 = ({
   loadingMessage,

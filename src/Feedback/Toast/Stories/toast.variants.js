@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import ToastState, { ToastProvider } from '../Base/toast.index'
+import ToastState, { ToastProvider } from '../base/toast.index'
 import { useStyles } from '../../../../.storybook/Utils/useStyles'
 
 const Children = () => {

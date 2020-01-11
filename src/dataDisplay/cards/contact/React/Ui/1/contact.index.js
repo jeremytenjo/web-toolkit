@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Icon from '../../../../../Icon/Ui/React/Base/icon.index'
-import Avatar from '../../../../../Avatars/avatar.index'
-import Rating from '../../../../../../Feedback/Rating/Ui/React/ratings.index'
-import Button from '../../../../../../Input/Button/Ui/React/Styles/1'
+import Icon from '../../../../../icon'
+import Avatar from '../../../../../avatars'
+import Rating from '../../../../../../feedback/rating'
+import Button from '../../../../../../input/button/Styles/1'
 
 import { defaultProps, propTypes } from './contact.propTypes'
 import { Wrapper, Info, City, Name, ButtonCon, AvatarInfoCOn } from './contact.styles'

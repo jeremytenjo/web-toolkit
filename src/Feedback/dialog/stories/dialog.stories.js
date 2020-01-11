@@ -1,10 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import markdown from '../README.md'
-import DialogStyle1 from '../Styles/Style1/dialog.style1.index'
-import List from '../../../../../Data-Display/List/Ui/React/list.index'
+import DialogStyle1 from '../styles/Style1/dialog.style1.index'
+import List from '../../../dataDisplay/list/index'
 
+import markdown from './README.md'
 import Variations from './dialog.variations'
 
 const All = () => (

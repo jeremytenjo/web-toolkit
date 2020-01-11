@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import icon from '../../../../../../../public/logo-192.png'
+import icon from '../../../../../../public/logo-192.png'
 import useNotifications from '../useNotifications.index'
 
 import Store from './store'

@@ -2,9 +2,9 @@ import React, { Fragment, useState, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
 import StoryRouter from 'storybook-react-router'
 
-import { Route } from '../../../router/react/index'
-import Box from '../../../../Data-Display/Box/Ui/React'
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import { Route } from '../router/index'
+import Box from '../../dataDisplay/box/index'
+import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 const req = require.context('./Styles', true, /index.js$/)
 const paths = req.keys()

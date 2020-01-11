@@ -1,7 +1,7 @@
 import React, { memo, useRef, useState, useEffect } from 'react'
 
-import monthData from '../Utils/monthList'
-import Icon from '../../Data-Display/Icon/Ui/React/Base/icon.index'
+import monthData from '../utils/monthList'
+import Icon from '../../dataDisplay/icon'
 
 import { defaultProps, propTypes } from './datePicker.propTypes'
 import { Wrapper } from './datePicker.styles'

@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import IllChat from '../Illustration/Ui/React/chat/style1'
+import IllChat from '../illustration/chat/style1'
 
 import EmptyPage from './Style1/emptyPage.index'
 

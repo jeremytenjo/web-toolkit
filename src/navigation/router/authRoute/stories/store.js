@@ -1,6 +1,6 @@
 import React, { cloneElement } from 'react'
 
-import { AuthProvider } from '../../../../../Authentication/useAuth'
+import { AuthProvider } from '../../../../authentication/useAuth/index'
 
 const providers = [<AuthProvider key={1} service='firebase' />]
 

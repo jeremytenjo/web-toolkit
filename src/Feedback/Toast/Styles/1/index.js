@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Icon from '../../../../Data-Display/Icon/Ui/React/Base/icon.index'
+import Icon from '../../../../dataDisplay/icon'
 
 export const Wrapper = styled.div`
   background: ${({ background }) => `var(--color-${background})`};

@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 
-import Box from '../../../../../Box/Ui/React'
-import Typography from '../../../../../Typography/Ui/React/typography.index'
-import Image from '../../../../../../Media/Image/Ui/React/image.index'
+import Box from '../../../box'
+import Typography from '../../../typography'
+import Image from '../../../../media/image'
 
 import { WrapperStyles, TypographyWrapperStyles, ImageStyles } from './canadagov.styles'
 import { defaultProps, propTypes } from './canadagov.propTypes'

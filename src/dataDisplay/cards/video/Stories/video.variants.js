@@ -95,7 +95,7 @@ export default () => {
   const { Elements } = useStyles({
     req,
     Variants,
-    dir: 'Data-Display/Cards/Video',
+    dir: 'dataDisplay/Cards/Video',
     short: true,
   })
 

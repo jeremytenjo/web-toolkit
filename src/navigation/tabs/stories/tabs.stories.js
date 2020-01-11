@@ -1,12 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { useHistory, useLocation } from '../../../router/react'
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import { useHistory, useLocation } from '../../router'
+import Tabs1 from '../styles/1'
+import Tabs2 from '../styles/2'
+import Tabs3 from '../styles/3'
 
-import Tabs1 from './Styles/1/tabs.1.index'
-import Tabs2 from './Styles/2/tabs.2.index'
-import Tabs3 from './Styles/3/tabs.3.index'
 import markdown from './tabs.readme.md'
 
 const data = [

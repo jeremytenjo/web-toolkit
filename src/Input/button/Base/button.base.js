@@ -1,20 +1,16 @@
 import React, { memo, lazy, Suspense, useRef, Fragment, useEffect, useState } from 'react'
 
-import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
-import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Typography from '../../../dataDisplay/typography'
+import Animation from '../../../miscUtils/animations/Web-Animations-API'
 
 import { defaultProps, propTypes } from './button.base.propTypes'
 
 const ButtonIcon = lazy(() =>
-  import(
-    /* webpackChunkName: 'ButtonIcon' */ '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
-  ),
+  import(/* webpackChunkName: 'ButtonIcon' */ '../../../dataDisplay/icon'),
 )
 
 const FileInput = lazy(() =>
-  import(
-    /* webpackChunkName: 'FileiNput' */ '../../../../../Media/Files/Ui/React/fileInput.index'
-  ),
+  import(/* webpackChunkName: 'FileiNput' */ '../../../media/files/fileInput.index'),
 )
 
 const ButtonBase = ({

@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import useAuth from '../../../../../Authentication/useAuth'
+import useAuth from '../../../../authentication/useAuth/index'
 import { useHistory, Switch } from '../../index'
 import AuthRoute from '../index'
 

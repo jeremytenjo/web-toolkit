@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Tabs from '../../../Navigation/Tabs/Ui/React/Styles/1/tabs.1.index'
+import Tabs from '../../../navigation/tabs/styles/1'
 
 import sticky from './sticky.index'
 

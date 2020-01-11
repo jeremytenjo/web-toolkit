@@ -1,11 +1,11 @@
 import React, { memo, useState, useRef } from 'react'
 
-import Animation from '../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
-import capitalize from '../../../../../Misc-Utils/String/capitalize.index'
-import Box from '../../../../../Data-Display/Box/Ui/React'
-import Image from '../../../../../Media/Image/Ui/React/image.index'
-import Typography from '../../../../../Data-Display/Typography/Ui/React/typography.index'
-import Icon from '../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
+import Animation from '../../../miscUtils/animations/Web-Animations-API'
+import capitalize from '../../../miscUtils/string/capitalize.index'
+import Box from '../../../dataDisplay/box'
+import Image from '../../../media/image/index'
+import Typography from '../../../dataDisplay/typography'
+import Icon from '../../../dataDisplay/icon/index'
 
 import { defaultProps, propTypes } from './accessPage.propTypes'
 
@@ -15,7 +15,7 @@ const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
 
   const handleClick = async (provider) => {
     const capProvider = capitalize(service)
-    let res = await import(`../../../Functions/${capProvider}/auth.social`)
+    let res = await import(`../../../functions/${capProvider}/auth.social`)
     const { token, user, error } = await res.default(provider)
     if (error) return setErrMessage(error.errorMessage)
     onSuccess({ token, user })

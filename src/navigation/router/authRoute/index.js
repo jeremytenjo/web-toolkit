@@ -1,14 +1,9 @@
 import React, { useEffect, memo } from 'react'
 
-import useAuth from '../../../../Authentication/useAuth'
+import useAuth from '../../../authentication/useAuth'
 import { Route, useHistory, Redirect } from '../index'
 
-const AuthRoute = ({
-  component,
-  redirectUrl = '/account/login',
-  children,
-  ...rest
-}) => {
+const AuthRoute = ({ component, redirectUrl = '/account/login', children, ...rest }) => {
   const { push } = useHistory()
   const { user } = useAuth()
   const components = component ? component() : children

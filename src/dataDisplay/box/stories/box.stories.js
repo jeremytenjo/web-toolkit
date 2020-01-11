@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Icon from '../../../../Icon/Ui/React/Base/icon.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Icon from '../../icon'
 import Box from '../index'
 
 const Variations = () => (

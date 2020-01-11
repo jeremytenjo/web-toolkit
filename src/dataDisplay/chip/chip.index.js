@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Icon from '../../../Icon/Ui/React/Base/icon.index'
+import Icon from '../icon/index'
 
 import { defaultProps, propTypes } from './chip.propTypes'
 import { Wrapper, Text } from './chip.styles'

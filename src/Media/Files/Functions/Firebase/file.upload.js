@@ -1,8 +1,8 @@
-import { storageAdd } from '../../../../Storage/FIrebase/Storage/storage.index'
-import { firestoreCreate } from '../../../../Database/Firestore/firestore.index'
-import compressImage from '../../../Image/Utils/Compress/images.compress.index'
-import imagesResize from '../../../Image/Utils/Resize/image.resize.index'
-import imagesFixOrientation from '../../../Image/Utils/FixOrientation/images.fixOrientation.index'
+import { storageAdd } from '../../../../storage/firebase/Storage/storage.index'
+import { firestoreCreate } from '../../../../database/firestore/firestore.index'
+import compressImage from '../../../image/utils/compress'
+import imagesResize from '../../../image/utils/resize'
+import imagesFixOrientation from '../../../image/utils/fixOrientation'
 
 export default async (userId = null, files = null, collection = null) => {
   let uploadedFileData

@@ -1,7 +1,7 @@
 import React, { memo, useRef, useState } from 'react'
 
-import getValues from '../../Functions/form.getValues'
-import checkInvalidValues from '../../Functions/form.checkInvalidValues'
+import getValues from '../../functions/form.getValues'
+import checkInvalidValues from '../../functions/form.checkInvalidValues'
 
 import { defaultProps, propTypes } from './form.propTypes'
 

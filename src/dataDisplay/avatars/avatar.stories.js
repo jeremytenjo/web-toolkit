@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
-import Avatar from './avatar.index'
+import Avatar from './'
 
 const img =
   'https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'

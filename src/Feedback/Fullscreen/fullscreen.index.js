@@ -1,6 +1,6 @@
 import React, { useEffect, memo } from 'react'
 
-import Overlay from '../../Misc-Utils/Overlay/overlay.index'
+import Overlay from '../../miscUtils/overlay/index'
 
 import { defaultProps, propTypes } from './fullscreen.propTypes'
 import { Wrapper } from './fullscreen.styles'

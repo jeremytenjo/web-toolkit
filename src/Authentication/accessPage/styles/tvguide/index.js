@@ -1,11 +1,11 @@
 import React, { memo, useState, Fragment } from 'react'
 
-import Typography from '../../../../../../Data-Display/Typography/Ui/React/typography.index'
-import Drawer from '../../../../../../Feedback/Drawer/UI/React/drawer.index'
-import Box from '../../../../../../Data-Display/Box/Ui/React'
-import Icon from '../../../../../../Data-Display/Icon/Ui/React/Base/icon.index'
-import { defaultProps, propTypes } from '../../Base/accessPage.propTypes'
-import Animation from '../../../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import Typography from '../../../../dataDisplay/typography'
+import Drawer from '../../../../feedback/drawer/drawer.index'
+import Box from '../../../../dataDisplay/box'
+import Icon from '../../../../dataDisplay/icon'
+import { defaultProps, propTypes } from '../../base/accessPage.propTypes'
+import Animation from '../../../../miscUtils/animations/Web-Animations-API'
 const AccessPageTvGuide = ({
   user,
   onSuccess,

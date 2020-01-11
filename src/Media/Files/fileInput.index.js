@@ -1,8 +1,8 @@
 import React, { useRef, memo, useState, useEffect } from 'react'
 
-import toBoolean from '../../../../Misc-Utils/String/toBoolean.index'
-import Typography from '../../../../Data-Display/Typography/Ui/React/typography.index'
-import Animation from '../../../../Misc-Utils/Animations/Web-Animations-API/animation.index'
+import toBoolean from '../../miscUtils/string/toBoolean.index'
+import Typography from '../../dataDisplay/typography'
+import Animation from '../../miscUtils/animations/Web-Animations-API'
 
 import { defaultProps, propTypes } from './fileInput.propTypes'
 import { Wrapper, Input, ChildrenWrap } from './fileInput.styles'

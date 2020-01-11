@@ -1,11 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Image from '../../../../Media/Image/Ui/React/image.index'
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Image from '../../../media/image'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import List from '../index'
 
 import markdown from './list.readme.md'
-import List from './list.index'
 
 // Test Data
 const dataSet1 = ['block', 'block', 'block', 'block']

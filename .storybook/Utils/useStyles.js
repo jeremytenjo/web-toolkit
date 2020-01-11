@@ -16,7 +16,7 @@ export const useStyles = ({ req, Variants, dir, short }) => {
       const cleanLocation = location.substring(2)
       const styleName = location.split('/')[1]
       const title = styleName
-      const ext = short ? '/Styles/' : '/Ui/React/Styles/'
+      const ext = short ? '/styles/' : '/Ui/React/styles/'
       const { default: Comp } = await import(`../../src/${dir}${ext}${title}/index`)
 
       const El = () => (

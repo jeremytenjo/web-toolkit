@@ -1,9 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-
-import Ratings from './ratings.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import Ratings from '../'
 
 const Variations = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import { useStyles } from '../../../../../../.storybook/Utils/useStyles'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import { useStyles } from '../../../../.storybook/Utils/useStyles'
 
 const Variants = ({ Component: Button }) => {
   const [loading, setLoading] = useState(null)

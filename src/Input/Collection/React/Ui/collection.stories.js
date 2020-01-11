@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Chip from '../../../../Data-Display/Chip/Ui/React/chip.index'
+import Chip from '../../../../dataDisplay/chip/chip.index'
 
 import Collection from './collection.index'
 

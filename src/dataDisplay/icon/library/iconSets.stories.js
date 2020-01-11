@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import List from '../../../../List/Ui/React/list.index'
-import Icon from '../Base/icon.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import List from '../../list/index'
+import Icon from '../index'
 
 const pathsToIgnore = ['./iconSets.stories.js']
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
-import Form from '../../../Form/Ui/React/form.index'
-import List from '../../../../Data-Display/List/Ui/React/list.index'
+import Form from '../../../form/Ui/React/form.index'
+import List from '../../../../dataDisplay/list'
 
 import { defaultProps, propTypes } from './collection.propTypes'
 import { Wrapper } from './collection.styles'
@@ -27,7 +27,7 @@ const Collection = ({
 
   const loadTextField = async () => {
     let { default: Comp } = await import(
-      `../../../Form/Text-Field/Ui/React/Styles/${textFieldStyle}`
+      `../../../Form/Text-Field/Ui/React/styles/${textFieldStyle}`
     )
     setTextField(
       <Comp color='secondary' name='item' placeholder={placeholder} clearOnSubmit />,

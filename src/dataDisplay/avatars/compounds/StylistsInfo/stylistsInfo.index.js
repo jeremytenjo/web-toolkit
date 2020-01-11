@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 
-import Avatar from '../../avatar.index'
-import Rating from '../../../../Feedback/Rating/Ui/React/ratings.index'
+import Avatar from '../../'
+import Rating from '../../../../feedback/rating'
 
 import { defaultProps, propTypes } from './stylistsInfo.propTypes'
 import { Wrapper, StylistName } from './stylistsInfo.styles'
