@@ -5,9 +5,6 @@ var emoji = require('node-emoji')
 
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1)
 
-// 1. Loop though files and create string with snippets
-const frameworks = [{ name: 'React', shortName: 'r' }]
-
 let fileString = '{ '
 const packageName = '@tenjojeremy/web-toolkit'
 
@@ -16,9 +13,12 @@ glob(`build/**/index.js`, function(err, files) {
 
   files.map((file) => {
     let fileSplit = file.split('/')
-    console.log({ fileSplit })
+    fileSplit.pop()
+    fileSplit.shift()
 
+    let isStyle = fileSplit.some((item) => item === 'styles')
     //  Componets/funciton name
+    let longName = fileSplit.join(' ')
     let itemName = fileSplit[fileSplit.length - 1]
     let itemNameSplit = itemName.split('.')
     itemName = itemNameSplit[0]
@@ -33,26 +33,28 @@ glob(`build/**/index.js`, function(err, files) {
       .charAt(1)
       .toLowerCase()
 
-    let letters = firstLetter.concat(SecondLetter)
+    let prefix = firstLetter.concat(SecondLetter)
 
     if (itemNameSplit.length > 3) {
       let secondParam = itemNameSplit[1].split('.')[0]
-      letters = letters.concat(secondParam)
+      prefix = prefix.concat(secondParam)
       itemName = itemName.concat(` ${secondParam}`)
+    }
+
+    if (isStyle) {
+      console.log({ fileSplit })
+      fileSplit.shift()
+      prefix = fileSplit.join('')
+      let first = fileSplit.shift()
+      let last = fileSplit.pop()
+      itemName = `${first}${last}`
     }
 
     let importName = itemName.split(' ')[0]
 
-    //  Framework shortname
-    let framework = frameworks.map(({ name, shortName }) => {
-      let isFramework = fileSplit.includes(name)
-      return isFramework ? shortName : ''
-    })
-    const [inial] = framework
-
     const snippet = `
-    "${itemName}": {
-      "prefix": "wt${letters}${inial}",
+    "${longName}": {
+      "prefix": "wt${prefix}",
       "body": ["import ${importName} from '${packageName}/${file}'"],
     },
     `
