@@ -21,7 +21,7 @@ const StylesList = () => {
       let styleName = location.split('/')[2].split('.')[0]
       let title = `${styleName}`
       let modLocation = location.substr(1)
-      let Mod = await import(`./Styles${modLocation}`)
+      let Mod = await import(`./styles${modLocation}`)
       Mod = Mod.default
 
       return (

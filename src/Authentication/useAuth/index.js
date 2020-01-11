@@ -16,7 +16,7 @@ export const AuthProvider = ({ children, service = 'firebase' }) => {
   const signIn = async ({ provider = 'email', credentials, action = 'login' }) => {
     setSigningIn(true)
     const search = provider === 'email' ? 'email' : 'social'
-    const signIn = await import(`../Functions/${service}/auth.${search}`)
+    const signIn = await import(`../functions/${service}/auth.${search}`)
     const {
       error: signInError,
       user: signedInUser,

@@ -19,7 +19,7 @@ const Styles = () => {
 
   const getStyles = async (paths) => {
     const Elements = paths.map(async (location, i) => {
-      let Mod = await import(`./Styles${location.substring(1)}`)
+      let Mod = await import(`./styles${location.substring(1)}`)
       Mod = Mod.default
       const title = location.split('.')[2]
 
