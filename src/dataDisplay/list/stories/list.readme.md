@@ -1,5 +1,5 @@
 ## Usage
 
 ```js
-import List from '@tenjojeremy/web-toolkit/build/dataDisplay/list'
+import List from '@tenjojeremy/web-toolkit/dataDisplay/list'
 ```
