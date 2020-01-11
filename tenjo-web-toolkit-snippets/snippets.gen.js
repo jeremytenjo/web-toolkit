@@ -11,11 +11,12 @@ const frameworks = [{ name: 'React', shortName: 'r' }]
 let fileString = '{ '
 const packageName = '@tenjojeremy/web-toolkit'
 
-glob(`build/**/*.index.js`, function(err, files) {
+glob(`build/**/index.js`, function(err, files) {
   if (err) throw err
 
   files.map((file) => {
     let fileSplit = file.split('/')
+    console.log({ fileSplit })
 
     //  Componets/funciton name
     let itemName = fileSplit[fileSplit.length - 1]
