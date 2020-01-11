@@ -1,5 +1,5 @@
-import { storageAdd } from '../../../../storage/firebase/Storage/storage.index'
-import { firestoreCreate } from '../../../../database/firestore/firestore.index'
+import { storageAdd } from '../../../../storage/firebase/storage'
+import { firestoreCreate } from '../../../../database/firestore'
 import compressImage from '../../../image/utils/compress'
 import imagesResize from '../../../image/utils/resize'
 import imagesFixOrientation from '../../../image/utils/fixOrientation'

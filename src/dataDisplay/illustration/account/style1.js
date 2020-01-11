@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Illustration from '../illustration.index'
+import Illustration from '../'
 
 const AccountIllustration = () => (
   <Illustration>
