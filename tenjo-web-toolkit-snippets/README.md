@@ -307,10 +307,10 @@
   ]
 },
     
-"miscUtils position Sticky": {
+"miscUtils position sticky": {
   "prefix": "wtst",
   "body": [
-    "import Sticky from '@tenjojeremy/web-toolkit/miscUtils/position/Sticky'"
+    "import Sticky from '@tenjojeremy/web-toolkit/miscUtils/position/sticky'"
   ]
 },
     
@@ -356,10 +356,10 @@
   ]
 },
     
-"storage firebase Storage": {
+"storage firebase storage": {
   "prefix": "wtst",
   "body": [
-    "import Storage from '@tenjojeremy/web-toolkit/storage/firebase/Storage'"
+    "import Storage from '@tenjojeremy/web-toolkit/storage/firebase/storage'"
   ]
 }
      }
