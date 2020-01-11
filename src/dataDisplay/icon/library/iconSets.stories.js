@@ -15,7 +15,7 @@ let iconNames = {}
 iconsPaths.map((path) => {
   let split = path.split('/')
   const shortname = split[1]
-  const hasKey = iconNames.hasOwnProperty(shortname)
+  const hasKey = Object.prototype.hasOwnProperty.call(iconNames, shortname)
 
   if (hasKey) iconNames[shortname].push(path)
   else iconNames[shortname] = [path]

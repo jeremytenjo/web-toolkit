@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable prettier/prettier */
 import { useEffect, useState } from 'react'
 
 const useInterval = ({ startTime }) => {

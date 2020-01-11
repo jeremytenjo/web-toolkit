@@ -17,6 +17,7 @@ glob(`build/**/index.js`, function(err, files) {
     fileSplit.pop()
     fileSplit.shift()
 
+    const buildPath = fileSplit.join('/')
     let isStyle = fileSplit.some((item) => item === 'styles')
     //  Componets/funciton name
     let longName = fileSplit.join(' ')
@@ -56,7 +57,7 @@ glob(`build/**/index.js`, function(err, files) {
 "${longName}": {
   "prefix": "wt${prefix}",
   "body": [
-    "import ${importName} from '${packageName}/${file}'"
+    "import ${importName} from '${packageName}/${buildPath}'"
   ]
 }${comma}
     `
