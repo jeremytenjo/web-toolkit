@@ -6,6 +6,7 @@ export const defaultProps = {
   onClose: () => null,
   show: null,
   style: {},
+  overlayStyles: {},
   type: 'center',
   animationStyle: 'centerOut',
 }
@@ -15,6 +16,7 @@ export const propTypes = {
   children: node,
   type: string,
   style: object,
+  overlayStyles: object,
   onClose: func,
   show: bool,
   animationStyle: string,

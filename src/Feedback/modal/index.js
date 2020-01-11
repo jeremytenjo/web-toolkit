@@ -6,7 +6,15 @@ import Animation from '../../miscUtils/animations/Web-Animations-API'
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper } from './styles'
 
-const Modal = ({ show, type, children, onClose, animationStyle, style }) => {
+const Modal = ({
+  show,
+  type,
+  children,
+  onClose,
+  animationStyle,
+  style,
+  overlayStyles,
+}) => {
   const modalRef = useRef(null)
 
   return (
@@ -16,7 +24,7 @@ const Modal = ({ show, type, children, onClose, animationStyle, style }) => {
         {children}
       </Wrapper>
 
-      <Overlay show={show} onClick={onClose} zIndex={1} />
+      <Overlay show={show} onClick={onClose} zIndex={1} style={overlayStyles} />
     </>
   )
 }
