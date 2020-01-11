@@ -7,11 +7,11 @@
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
-    "deploy": "yarn lint:check && yarn cy:run-ci && yarn build:storybook && firebase deploy && yarn publish:snippets && yarn publish:library && git push",
+    "deploy": "yarn lint:check && yarn cy:run-ci && yarn deploy:firebase && yarn publish:snippets && yarn publish:library && git push",
     "build:snippets": "node tenjo-web-toolkit-snippets/snippets.gen.js",
     "build:library": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./.babelrc ./src --out-dir ./build/ --ignore 'src/**/*.spec.js','src/**/*.spec-cy.js','src/**/*.test.js','src/**/*.stories.js' ",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
-    "deploy:firebase": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
+    "deploy:firebase": "yarn build:storybook && firebase deploy",
     "publish:library": "yarn build:library && npm version minor && cp package.json ./build && cd build && npm publish && cd ../ && rmdir /s /q build",
     "publish:snippets": "yarn build:library && yarn build:snippets && cd tenjo-web-toolkit-snippets && vsce publish minor && gpush && code --install-extension tenjojeremy.tenjo-web-toolkit-snippets --force",
     "test": "jest",

@@ -40,7 +40,7 @@ const FileInput = ({ accept, children, onInput, name, validation, ...nativeProps
 
   const checkValidation = async (file) => {
     const messages = await validation.map(async ({ name, message }) => {
-      const mod = await import(`./Validation/${name}/fileInput.${name}.js`)
+      const mod = await import(`./validation/${name}/fileInput.${name}.js`)
       const errMessage = mod.default({ value: file, message })
       if (errMessage) return errMessage
     })
