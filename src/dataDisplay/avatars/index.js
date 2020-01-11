@@ -3,11 +3,11 @@ import React, { lazy, Suspense, Fragment } from 'react'
 import Image from '../../media/image/index'
 import Typography from '../typography'
 
-import { defaultProps, propTypes } from './avatar.propTypes'
-import { Wrapper } from './avatar.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper } from './styles'
 
 const FileInput = lazy(() =>
-  import(/* webpackChunkName: 'ButtonIcon' */ '../../media/files/fileInput.index'),
+  import(/* webpackChunkName: 'ButtonIcon' */ '../../media/files/fileInput'),
 )
 
 const Avatar = ({

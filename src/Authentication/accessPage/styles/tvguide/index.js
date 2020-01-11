@@ -1,7 +1,7 @@
 import React, { memo, useState, Fragment } from 'react'
 
 import Typography from '../../../../dataDisplay/typography'
-import Drawer from '../../../../feedback/drawer/drawer.index'
+import Drawer from '../../../../feedback/drawer'
 import Box from '../../../../dataDisplay/box'
 import Icon from '../../../../dataDisplay/icon'
 import { defaultProps, propTypes } from '../../base/accessPage.propTypes'

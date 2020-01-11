@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Dialog from '../../dialog/styles/Style1/dialog.style1.index'
+import Dialog from '../../dialog/styles/1'
 import Modal from '../'
 
 import markdown from './README.md'

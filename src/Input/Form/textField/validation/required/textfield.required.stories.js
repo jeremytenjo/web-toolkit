@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 import Button from '../../../../button/styles/1'
-import Form from '../../../form.index'
+import Form from '../../../'
 import TextField from '../../styles/1'
 
 // Test data

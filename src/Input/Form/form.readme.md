@@ -1,5 +1,5 @@
 ## Usage
 
 ```js
-import Form from '@tenjojeremy/web-toolkit/input/Form/form.index'
+import Form from '@tenjojeremy/web-toolkit/input/Form/'
 ```

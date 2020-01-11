@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import DialogStyle1 from '../styles/Style1/dialog.style1.index'
+import DialogStyle1 from '../styles/1'
 import List from '../../../dataDisplay/list/index'
 
 import markdown from './README.md'

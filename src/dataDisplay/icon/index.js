@@ -1,10 +1,10 @@
 import React, { memo, useState, useEffect, lazy, Fragment, Suspense } from 'react'
 
-import { WrapperIcon, Wrapper } from './icon.styles'
-import { defaultProps, propTypes } from './icon.propTypes'
+import { WrapperIcon, Wrapper } from './styles'
+import { defaultProps, propTypes } from './propTypes'
 
 const FileInput = lazy(() =>
-  import(/* webpackChunkName: 'FileInput' */ '../../media/files/fileInput.index'),
+  import(/* webpackChunkName: 'FileInput' */ '../../media/files/fileInput'),
 )
 const Typogrgraphy = lazy(() =>
   import(/* webpackChunkName: 'Typogrgraphy' */ '../typography'),

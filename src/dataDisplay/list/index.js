@@ -2,8 +2,8 @@ import React, { memo } from 'react'
 
 import BottomScrollListener from '../../miscUtils/scrolling/EventListeners/scrollEnd'
 
-import { Wrapper } from './list.styles'
-import { defaultProps, propTypes } from './list.propTypes'
+import { Wrapper } from './styles'
+import { defaultProps, propTypes } from './propTypes'
 
 const List = ({
   photoGrid,

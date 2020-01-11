@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Drawer from '../drawer.index'
+import Drawer from '../'
 
 export default {
   title: 'Feedback|Drawer',
