@@ -62,6 +62,7 @@ glob(`build/**/index.js`, function(err, files) {
   })
 
   fileString += ' }'
+  fileString = JSON.parse(fileString)
 
   const successEmogi = emoji.get('white_check_mark')
 
