@@ -11,7 +11,8 @@ const packageName = '@tenjojeremy/web-toolkit'
 glob(`build/**/index.js`, function(err, files) {
   if (err) throw err
 
-  files.map((file) => {
+  files.map((file, index) => {
+    let comma = index === files.length - 1 ? '' : ','
     let fileSplit = file.split('/')
     fileSplit.pop()
     fileSplit.shift()
@@ -52,17 +53,19 @@ glob(`build/**/index.js`, function(err, files) {
     let importName = itemName.split(' ')[0]
 
     const snippet = `
-    "${longName}": {
-      "prefix": "wt${prefix}",
-      "body": ["import ${importName} from '${packageName}/${file}'"],
-    },
+"${longName}": {
+  "prefix": "wt${prefix}",
+  "body": [
+    "import ${importName} from '${packageName}/${file}'"
+  ]
+}${comma}
     `
 
     fileString += snippet
   })
 
+  console.log({ fileString })
   fileString += ' }'
-  fileString = JSON.parse(fileString)
 
   const successEmogi = emoji.get('white_check_mark')
 
