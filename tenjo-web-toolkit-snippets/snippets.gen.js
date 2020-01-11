@@ -63,8 +63,6 @@ glob(`build/**/index.js`, function(err, files) {
 
     fileString += snippet
   })
-
-  console.log({ fileString })
   fileString += ' }'
 
   const successEmogi = emoji.get('white_check_mark')
