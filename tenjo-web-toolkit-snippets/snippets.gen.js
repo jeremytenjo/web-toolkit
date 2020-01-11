@@ -42,7 +42,6 @@ glob(`build/**/index.js`, function(err, files) {
     }
 
     if (isStyle) {
-      console.log({ fileSplit })
       fileSplit.shift()
       prefix = fileSplit.join('')
       let first = fileSplit.shift()
