@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Icon from '../../../../../icon'
-import Avatar from '../../../../../avatars'
-import Rating from '../../../../../../feedback/rating'
-import Button from '../../../../../../input/button/Styles/1'
+import Icon from '../../../icon'
+import Avatar from '../../../avatars'
+import Rating from '../../../../feedback/rating'
+import Button from '../../../../input/button/Styles/1'
 
-import { defaultProps, propTypes } from './contact.propTypes'
-import { Wrapper, Info, City, Name, ButtonCon, AvatarInfoCOn } from './contact.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper, Info, City, Name, ButtonCon, AvatarInfoCOn } from './styles'
 
 const Contact = ({
   name,

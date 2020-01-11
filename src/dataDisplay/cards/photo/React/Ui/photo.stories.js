@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Contact from '../../../contact/React/Ui/1/contact.index'
+import Contact from '../../../contact/1'
 import Modal from '../../../../../feedback/modal'
 
 import Photo1 from './1/photo.index'
