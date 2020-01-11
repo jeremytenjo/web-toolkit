@@ -1,7 +1,7 @@
 {
 "Index": {
 "prefix": "wtinr",
-"body": ["import Index from '@tenjojeremy/web-toolkit/build/Authentication/AccessPage/Ui/React/styles/tvguide/index.js'"],
+"body": ["import Index from '@tenjojeremy/web-toolkit/build/Authentication/AccessPage/styles/tvguide/index.js'"],
 },
 
 "Index": {
@@ -21,17 +21,17 @@
 
 "Index": {
 "prefix": "wtinr",
-"body": ["import Index from '@tenjojeremy/web-toolkit/build/Feedback/Progress/Ui/React/donut/index.js'"],
+"body": ["import Index from '@tenjojeremy/web-toolkit/build/Feedback/Progress/donut/index.js'"],
 },
 
 "Index": {
 "prefix": "wtinr",
-"body": ["import Index from '@tenjojeremy/web-toolkit/build/Feedback/Progress/Ui/React/dots/index.js'"],
+"body": ["import Index from '@tenjojeremy/web-toolkit/build/Feedback/Progress/dots/index.js'"],
 },
 
 "Index": {
 "prefix": "wtinr",
-"body": ["import Index from '@tenjojeremy/web-toolkit/build/Feedback/Progress/Ui/React/linear/index.js'"],
+"body": ["import Index from '@tenjojeremy/web-toolkit/build/Feedback/Progress/linear/index.js'"],
 },
 
 "Index": {
@@ -41,12 +41,12 @@
 
 "Index": {
 "prefix": "wtinr",
-"body": ["import Index from '@tenjojeremy/web-toolkit/build/input/Button/Ui/React/styles/1/index.js'"],
+"body": ["import Index from '@tenjojeremy/web-toolkit/build/input/Button/styles/1/index.js'"],
 },
 
 "Index": {
 "prefix": "wtinr",
-"body": ["import Index from '@tenjojeremy/web-toolkit/build/input/Form/Text-Field/Ui/React/styles/1/index.js'"],
+"body": ["import Index from '@tenjojeremy/web-toolkit/build/input/Form/Text-Field/styles/1/index.js'"],
 },
 
 "Index": {

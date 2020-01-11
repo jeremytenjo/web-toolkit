@@ -17,4 +17,4 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Chip/Ui/React', module).add('variations', () => <Variations />)
+storiesOf('Data-Display|Chip', module).add('variations', () => <Variations />)

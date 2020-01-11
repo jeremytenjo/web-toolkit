@@ -13,6 +13,6 @@ const All = () => (
   </List>
 )
 
-storiesOf('Feedback|Dialog/Ui/React', module).add('styles', () => <All />, {
+storiesOf('Feedback|Dialog', module).add('styles', () => <All />, {
   notes: { markdown },
 })

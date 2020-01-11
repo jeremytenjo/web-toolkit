@@ -1,4 +1,4 @@
-import { cypressVisitBaseUrl } from '../../../../../../.storybook/contants'
+import { cypressVisitBaseUrl } from '../../../../.storybook/contants'
 
 context('Form: Full Example', () => {
   beforeEach(() => {

@@ -103,6 +103,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|List/Ui/React', module).add('Variations', () => <Variations />, {
+storiesOf('Data-Display|List', module).add('Variations', () => <Variations />, {
   notes: { markdown },
 })

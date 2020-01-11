@@ -43,4 +43,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Data-Display|Avatar/Ui/React', module).add('Variations', () => <Variations />)
+storiesOf('Data-Display|Avatar', module).add('Variations', () => <Variations />)

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import Form from '../../../form/Ui/React/form.index'
+import Form from '../../../form/form.index'
 import List from '../../../../dataDisplay/list'
 
 import { defaultProps, propTypes } from './collection.propTypes'

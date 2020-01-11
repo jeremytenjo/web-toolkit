@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import Form from '../../input/form/Ui/React/form.index'
+import Form from '../../input/form/form.index'
 
 import FileInput from './fileInput.index'
 

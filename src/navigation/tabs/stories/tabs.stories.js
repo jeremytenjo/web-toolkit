@@ -42,6 +42,6 @@ const Variations = () => {
   )
 }
 
-storiesOf('Navigation|Tabs/Ui/React/', module).add('styles', () => <Variations />, {
+storiesOf('Navigation|Tabs/', module).add('styles', () => <Variations />, {
   notes: { markdown },
 })

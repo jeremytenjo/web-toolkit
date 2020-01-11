@@ -1,16 +1,16 @@
 import React, { memo, lazy, Suspense, useRef } from 'react'
 
-import Image from '../../../../../../../media/image/index'
+import Image from '../../../../../media/image/index'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper } from './styles'
 
 const Typography = lazy(() =>
-  import(/* webpackChunkName: 'Typography' */ '../../../../../../typography'),
+  import(/* webpackChunkName: 'Typography' */ '../../../../typography'),
 )
 const Animation = lazy(() =>
   import(
-    /* webpackChunkName: 'Animation' */ '../../../../../../../miscUtils/animations/Web-Animations-API'
+    /* webpackChunkName: 'Animation' */ '../../../../../miscUtils/animations/Web-Animations-API'
   ),
 )
 

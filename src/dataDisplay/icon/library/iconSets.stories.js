@@ -24,7 +24,7 @@ iconsPaths.map((path) => {
 const loadIcons = () => {
   for (let [key, value] of Object.entries(iconNames)) {
     if (!pathsToIgnore.includes(`./${key}`)) {
-      storiesOf('Data-Display|Icon/React/Library/', module).add(key, () => (
+      storiesOf('Data-Display|Icon/Library/', module).add(key, () => (
         <List grid>
           {value.map((path) => {
             let split = path.split('/')

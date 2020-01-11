@@ -13,4 +13,4 @@ const BackComp = () => (
   </>
 )
 
-storiesOf('Data-Display|Icon/React/Special', module).add('Back', () => <BackComp />)
+storiesOf('Data-Display|Icon/Special', module).add('Back', () => <BackComp />)

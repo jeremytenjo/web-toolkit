@@ -23,6 +23,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Box/Ui/React', module)
+storiesOf('Data-Display|Box', module)
   .add('default', () => <Variations />)
   .add('fullscreen', () => <Box fullscreen styles={{ backgroundColor: 'black' }} />)

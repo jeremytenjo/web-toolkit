@@ -1,14 +1,9 @@
 ## Usage
 
 ```js
-import Dialog from '@tenjojeremy/web-toolkit/Feedback/Dialog/Ui/React/Style1'
+import Dialog from '@tenjojeremy/web-toolkit/Feedback/Dialog/Style1'
 ```
 
 ```js
-<Dialog
-  title='title'
-  message='Message'
-  onCancel={handleCancel}
-  onAccept={handleAccept}
-/>
+<Dialog title='title' message='Message' onCancel={handleCancel} onAccept={handleAccept} />
 ```

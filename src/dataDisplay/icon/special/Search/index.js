@@ -1,6 +1,6 @@
 import React, { useState, memo, useEffect } from 'react'
 
-import Form from '../../../../input/form/Ui/React/form.index'
+import Form from '../../../../input/form/form.index'
 import Box from '../../../box/index'
 import Textfield from '../../../../input/form/textField/styles/1/index'
 import Icon from '../../'

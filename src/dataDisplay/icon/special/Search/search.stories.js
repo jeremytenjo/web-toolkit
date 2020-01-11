@@ -24,4 +24,4 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Icon/React/Special', module).add('Search', () => <Variations />)
+storiesOf('Data-Display|Icon/Special', module).add('Search', () => <Variations />)

@@ -24,6 +24,6 @@ const Variations = () => {
   )
 }
 
-storiesOf('Feedback|Modal/Ui/React', module).add('variations', () => <Variations />, {
+storiesOf('Feedback|Modal', module).add('variations', () => <Variations />, {
   notes: { markdown },
 })

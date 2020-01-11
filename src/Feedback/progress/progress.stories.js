@@ -23,4 +23,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Feedback|Progress/Ui/React', module).add('Spinners', () => <Variations />)
+storiesOf('Feedback|Progress', module).add('Spinners', () => <Variations />)

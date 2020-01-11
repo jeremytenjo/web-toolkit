@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 
-import { defaultProps, propTypes } from './box.propTypes'
-import { Wrapper } from './box.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper } from './styles'
 
 const Box = ({ children, name, styles, fullscreen, size, ...rest }) => {
   return (

@@ -4,7 +4,7 @@ import Box from '../box/index'
 import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
 export default {
-  title: 'Data-Display|AppBar/Ui/React',
+  title: 'Data-Display|AppBar',
 }
 
 const req = require.context('./styles', true, /index.js$/)

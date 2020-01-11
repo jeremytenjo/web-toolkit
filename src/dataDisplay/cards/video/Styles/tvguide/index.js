@@ -2,7 +2,7 @@ import React, { memo, useState, useEffect } from 'react'
 
 import Animation from '../../../../../miscUtils/animations/Web-Animations-API'
 import Box from '../../../../box'
-import Poster from '../../../poster/Ui/React/Styles/1'
+import Poster from '../../../poster/styles/1'
 import Typography from '../../../../typography'
 import Icon from '../../../../icon'
 import Select from '../../../../../input/form/select/styles/tvguide/select.tvguide.index'

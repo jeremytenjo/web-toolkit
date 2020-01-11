@@ -1,10 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
 
+import One from './styles/1'
 import markdown from './poster.readme.md'
-import One from './Styles/1'
 const image = 'https://images-na.ssl-images-amazon.com/images/I/818NtgncwLL._SL1500_.jpg'
 
 const Variations = () => (

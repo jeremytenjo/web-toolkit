@@ -58,6 +58,6 @@ const Variations = () => (
   </>
 )
 
-storiesOf('Data-Display|Icon/React', module).add('Base', () => <Variations />, {
+storiesOf('Data-Display|Icon', module).add('Base', () => <Variations />, {
   notes: { markdown },
 })

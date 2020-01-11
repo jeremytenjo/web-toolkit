@@ -43,4 +43,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Misc-Utils|Overlay/Ui/React', module).add('variations', () => <Variations />)
+storiesOf('Misc-Utils|Overlay', module).add('variations', () => <Variations />)
