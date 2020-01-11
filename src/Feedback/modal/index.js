@@ -6,13 +6,13 @@ import Animation from '../../miscUtils/animations/Web-Animations-API'
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper } from './styles'
 
-const Modal = ({ show, type, children, onClose, animationStyle }) => {
+const Modal = ({ show, type, children, onClose, animationStyle, style }) => {
   const modalRef = useRef(null)
 
   return (
     <>
       <Animation name={animationStyle} show={show} el={modalRef} />
-      <Wrapper ref={modalRef} type={type}>
+      <Wrapper ref={modalRef} type={type} style={style}>
         {children}
       </Wrapper>
 
