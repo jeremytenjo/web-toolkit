@@ -91,12 +91,11 @@ const Variants = ({ Component: Video }) => {
 }
 
 export default () => {
-  const req = require.context('../Styles', true, /index.js$/)
+  const req = require.context('../styles', true, /index.js$/)
   const { Elements } = useStyles({
     req,
     Variants,
-    dir: 'dataDisplay/Cards/Video',
-    short: true,
+    dir: 'dataDisplay/cards/video',
   })
 
   return Elements

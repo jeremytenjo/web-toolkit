@@ -56,12 +56,11 @@ const Variants = ({ Component: Toast }) => {
 }
 
 export default () => {
-  const req = require.context('../Styles', true, /index.js$/)
+  const req = require.context('../styles', true, /index.js$/)
   const { Elements } = useStyles({
     req,
     Variants,
-    dir: 'Feedback/Toast',
-    short: true,
+    dir: 'feedback/toast',
   })
 
   return Elements
