@@ -1,4 +1,11 @@
 { 
+"analytics firebase": {
+  "prefix": "wtfi",
+  "body": [
+    "import Firebase from '@tenjojeremy/web-toolkit/analytics/firebase'"
+  ]
+},
+    
 "authentication accessPage styles tvguide": {
   "prefix": "wtaccessPagestylestvguide",
   "body": [
@@ -10,6 +17,13 @@
   "prefix": "wtus",
   "body": [
     "import UseAuth from '@tenjojeremy/web-toolkit/authentication/useAuth'"
+  ]
+},
+    
+"database firestore": {
+  "prefix": "wtfi",
+  "body": [
+    "import Firestore from '@tenjojeremy/web-toolkit/database/firestore'"
   ]
 },
     
@@ -48,6 +62,13 @@
   ]
 },
     
+"dataDisplay chip": {
+  "prefix": "wtch",
+  "body": [
+    "import Chip from '@tenjojeremy/web-toolkit/dataDisplay/chip'"
+  ]
+},
+    
 "dataDisplay icon": {
   "prefix": "wtic",
   "body": [
@@ -76,6 +97,13 @@
   ]
 },
     
+"dataDisplay illustration": {
+  "prefix": "wtil",
+  "body": [
+    "import Illustration from '@tenjojeremy/web-toolkit/dataDisplay/illustration'"
+  ]
+},
+    
 "dataDisplay list": {
   "prefix": "wtli",
   "body": [
@@ -94,6 +122,34 @@
   "prefix": "wtus",
   "body": [
     "import UseNotification from '@tenjojeremy/web-toolkit/engagement/pushNotifications/client/firebase/useNotification'"
+  ]
+},
+    
+"feedback dialog": {
+  "prefix": "wtdi",
+  "body": [
+    "import Dialog from '@tenjojeremy/web-toolkit/feedback/dialog'"
+  ]
+},
+    
+"feedback dialog styles 1": {
+  "prefix": "wtdialogstyles1",
+  "body": [
+    "import dialog1 from '@tenjojeremy/web-toolkit/feedback/dialog/styles/1'"
+  ]
+},
+    
+"feedback drawer": {
+  "prefix": "wtdr",
+  "body": [
+    "import Drawer from '@tenjojeremy/web-toolkit/feedback/drawer'"
+  ]
+},
+    
+"feedback fullscreen": {
+  "prefix": "wtfu",
+  "body": [
+    "import Fullscreen from '@tenjojeremy/web-toolkit/feedback/fullscreen'"
   ]
 },
     
@@ -139,10 +195,24 @@
   ]
 },
     
+"input autocomplete": {
+  "prefix": "wtau",
+  "body": [
+    "import Autocomplete from '@tenjojeremy/web-toolkit/input/autocomplete'"
+  ]
+},
+    
 "input button styles 1": {
   "prefix": "wtbuttonstyles1",
   "body": [
     "import button1 from '@tenjojeremy/web-toolkit/input/button/styles/1'"
+  ]
+},
+    
+"input form": {
+  "prefix": "wtfo",
+  "body": [
+    "import Form from '@tenjojeremy/web-toolkit/input/form'"
   ]
 },
     
@@ -157,6 +227,20 @@
   "prefix": "wtformtextFieldstyles1",
   "body": [
     "import form1 from '@tenjojeremy/web-toolkit/input/form/textField/styles/1'"
+  ]
+},
+    
+"input menu": {
+  "prefix": "wtme",
+  "body": [
+    "import Menu from '@tenjojeremy/web-toolkit/input/menu'"
+  ]
+},
+    
+"media files fileInput": {
+  "prefix": "wtfi",
+  "body": [
+    "import FileInput from '@tenjojeremy/web-toolkit/media/files/fileInput'"
   ]
 },
     
@@ -223,6 +307,13 @@
   ]
 },
     
+"miscUtils position Sticky": {
+  "prefix": "wtst",
+  "body": [
+    "import Sticky from '@tenjojeremy/web-toolkit/miscUtils/position/Sticky'"
+  ]
+},
+    
 "navigation navbar base": {
   "prefix": "wtba",
   "body": [
@@ -262,6 +353,13 @@
   "prefix": "wttabsstyles3",
   "body": [
     "import tabs3 from '@tenjojeremy/web-toolkit/navigation/tabs/styles/3'"
+  ]
+},
+    
+"storage firebase Storage": {
+  "prefix": "wtst",
+  "body": [
+    "import Storage from '@tenjojeremy/web-toolkit/storage/firebase/Storage'"
   ]
 }
      }
