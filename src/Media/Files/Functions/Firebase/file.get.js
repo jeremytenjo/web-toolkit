@@ -1,4 +1,4 @@
-import { firestoreRead } from '../../../../database/firestore/firestore.index'
+import { firestoreRead } from '../../../../database/firestore'
 
 export default async (_userId, _collection, _payload) => {
   const userId = _userId || false
