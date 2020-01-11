@@ -1,6 +1,6 @@
 import React, { cloneElement } from 'react'
 
-import { NotificationsProvider } from '../useNotifications.index'
+import { NotificationsProvider } from '../index'
 
 const providers = [<NotificationsProvider key={1} service='firebase' />]
 
