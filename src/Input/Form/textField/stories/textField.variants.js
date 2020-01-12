@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import B from '../../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../../.storybook/customComponents/variationBlock'
 import Form from '../../'
 import { useStyles } from '../../../../../.storybook/utils/useStyles'
 

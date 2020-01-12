@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import testImage from '../../../../.storybook/customComponents/testImages/testImag.jpg'
 import testImage2 from '../../../../.storybook/customComponents/testImages/test2.jpg'
-import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
 import Image from '../index'
 
 const Variations = () => (

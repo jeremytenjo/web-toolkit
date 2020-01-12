@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
 import Icon from '../index'
 
 import markdown from './icon.readme.md'

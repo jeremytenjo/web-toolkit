@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import { Wrapper, Title, Content } from './variationBlock.styles'
+import { Wrapper, Title, Content } from './styles'
 
 const VariationBlock = ({
   children,

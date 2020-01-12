@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
 import List from '../../list/index'
 
 const illustrationsReq = require.context('./', true, /.js$/)
@@ -25,7 +25,7 @@ const Illustrations = () => {
       let Ill = await import(`./${icon}.js`)
       Ill = Ill.default
 
-      return !ignorePaths.includes(icon) && Ill && iconLength === 1 ? (
+      return !ignorePaths.inscludes(icon) && Ill && iconLength === 1 ? (
         <B key={icon} title={icon} noBackground>
           <Ill />
         </B>

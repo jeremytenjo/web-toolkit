@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Route, useHistory, useLocation } from '../../router'
-import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
 import Bar from '../base/index'
 
 import data from './navBar.links'

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import B from '../../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../../.storybook/customComponents/variationBlock'
 import { useStyles } from '../../../../../.storybook/utils/useStyles'
 
 const poster =

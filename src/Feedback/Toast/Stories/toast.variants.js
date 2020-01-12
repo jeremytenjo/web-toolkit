@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
 import ToastState, { ToastProvider } from '../base/toast.index'
 import { useStyles } from '../../../../.storybook/utils/useStyles'
 

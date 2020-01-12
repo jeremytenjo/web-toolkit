@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
 import { useStyles } from '../../../../.storybook/utils/useStyles'
 import Logo from '../../../../.storybook/images/logo.svg'
 
