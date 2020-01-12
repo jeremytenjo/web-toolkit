@@ -21,7 +21,8 @@
     "cy:run-ci": "start-server-and-test start http://localhost:9002 cy:run",
     "lint:fix": "eslint ./src --fix",
     "lint:check": "eslint ./src",
-    "check-staged": "lint-staged"
+    "check-staged": "lint-staged",
+    "new:component": "node .storybook/generators/component/index.js"
   },
   "husky": {
     "hooks": {
