@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import B from '../Custom-Components/VariationBlock/variationBlock.index'
+import B from '../customComponents/variationBlock/variationBlock.index'
 import { storiesOf } from '@storybook/react'
 
 export const useStyles = ({ req, Variants, dir, short }) => {

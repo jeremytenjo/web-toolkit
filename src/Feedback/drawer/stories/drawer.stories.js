@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
 import Drawer from '../'
 
 export default {

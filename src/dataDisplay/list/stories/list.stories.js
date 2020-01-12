@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Image from '../../../media/image'
-import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
 import List from '../index'
 
 import markdown from './list.readme.md'
@@ -10,7 +10,7 @@ import markdown from './list.readme.md'
 // Test Data
 const dataSet1 = ['block', 'block', 'block', 'block']
 const dataSet2 = ['block', 'block', 'block', 'block', 'block', 'block', 'block']
-const dataSetImages = [
+const dataSetimages = [
   {
     src: 'http://www.sclance.com/wallpapers/wallpaper-walli/wallpaper-walli_1962686.jpg',
   },
@@ -75,7 +75,7 @@ const Variations = () => (
 
     <B title='photoGrid' style={{ width: '100%' }} background>
       <List
-        data={dataSetImages}
+        data={dataSetimages}
         ItemComponent={Image}
         photoGrid
         repeat={3}
@@ -87,7 +87,7 @@ const Variations = () => (
 
     <B title='onScrollEnd' style={{ width: '100%' }} background>
       <List
-        data={dataSetImages}
+        data={dataSetimages}
         ItemComponent={Image}
         photoGrid
         repeat={3}

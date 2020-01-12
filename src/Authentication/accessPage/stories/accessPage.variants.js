@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import { useStyles } from '../../../../.storybook/Utils/useStyles'
-import Logo from '../../../../.storybook/Images/logo.svg'
+import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import { useStyles } from '../../../../.storybook/utils/useStyles'
+import Logo from '../../../../.storybook/images/logo.svg'
 
 const Variants = ({ Component: AccessPage }) => {
   const [user, setShow] = useState(false)

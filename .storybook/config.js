@@ -3,8 +3,8 @@ import StoryRouter from 'storybook-react-router'
 
 import theme from './Theme/storybook.theme'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
-import './Firebase/firebase.index'
-import ViewportOptions from './Addons/Viewport/addon.viewport'
+import './firebase/firebase.index'
+import ViewportOptions from './addons/viewport/addon.viewport'
 
 // Theme
 addParameters({

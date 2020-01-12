@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Box from '../../../../dataDisplay/box/index'
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../../.storybook/customComponents/variationBlock/variationBlock.index'
 
 const req = require.context('../styles', true, /index.js$/)
 const paths = req.keys()

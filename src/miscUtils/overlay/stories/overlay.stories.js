@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
 import Button from '../../../input/button/styles/1/index'
 import Overlay from '../'
 

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../../.storybook/customComponents/variationBlock/variationBlock.index'
 import Form from '../../'
-import { useStyles } from '../../../../../.storybook/Utils/useStyles'
+import { useStyles } from '../../../../../.storybook/utils/useStyles'
 
 // Test data
 const placeholder = 'this is a Placeholder'

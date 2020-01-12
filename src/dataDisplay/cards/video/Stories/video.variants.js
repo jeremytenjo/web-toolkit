@@ -1,7 +1,7 @@
 import React from 'react'
 
-import B from '../../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
-import { useStyles } from '../../../../../.storybook/Utils/useStyles'
+import B from '../../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+import { useStyles } from '../../../../../.storybook/utils/useStyles'
 
 const poster =
   'http://cdn.collider.com/wp-content/uploads/2017/03/guardians-of-the-galaxy-2-imax-poster.jpg'

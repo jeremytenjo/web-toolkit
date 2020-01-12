@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../.storybook/customComponents/variationBlock/variationBlock.index'
 import IllChat from '../illustration/chat/style1'
 
 import EmptyPage from './Style1/emptyPage.index'

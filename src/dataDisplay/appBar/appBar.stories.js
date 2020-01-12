@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 
 import Box from '../box/index'
-import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../.storybook/customComponents/variationBlock/variationBlock.index'
 
 export default {
   title: 'Data-Display|AppBar',

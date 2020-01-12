@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../.storybook/customComponents/variationBlock/variationBlock.index'
 
 import stubs from './calendar.stubs'
 import Calendar from './calendar.index'

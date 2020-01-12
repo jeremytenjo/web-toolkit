@@ -4,7 +4,7 @@ import StoryRouter from 'storybook-react-router'
 
 import { Route } from '../../router'
 import Box from '../../../dataDisplay/box'
-import B from '../../../../.storybook/Custom-Components/VariationBlock/variationBlock.index'
+import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
 
 const req = require.context('../styles', true, /index.js$/)
 const paths = req.keys()
