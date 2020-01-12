@@ -7,6 +7,7 @@ export const defaultProps = {
   show: null,
   style: {},
   overlayStyles: {},
+  animationsStyles: {},
   type: 'center',
   animationStyle: 'centerOut',
 }
@@ -17,6 +18,7 @@ export const propTypes = {
   type: string,
   style: object,
   overlayStyles: object,
+  animationsStyles: object,
   onClose: func,
   show: bool,
   animationStyle: string,

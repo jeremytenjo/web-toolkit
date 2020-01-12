@@ -12,6 +12,7 @@ const Modal = ({
   children,
   onClose,
   animationStyle,
+  animationsStyles,
   style,
   overlayStyles,
 }) => {
@@ -19,7 +20,12 @@ const Modal = ({
 
   return (
     <>
-      <Animation name={animationStyle} show={show} el={modalRef} />
+      <Animation
+        name={animationStyle}
+        show={show}
+        el={modalRef}
+        style={animationsStyles}
+      />
       <Wrapper ref={modalRef} type={type} style={style}>
         {children}
       </Wrapper>
