@@ -1,11 +1,11 @@
-import typographyResets from '../Typography/typography.resets'
-import colorVars from '../Colors/colors.vars'
-import selection from '../Browser/browser.selection'
-import body from '../Browser/browser.body'
+import typographyResets from '../typography/typography.resets'
+import colorVars from '../colors/colors.vars'
+import selection from '../browser/browser.selection'
+import body from '../browser/browser.body'
 import boxShadows from '../../../src/theme/shadow/shadow.index'
-import typography from '../Typography/typography.css'
-import spacing from '../Spacing/spacing.index'
-import transitions from '../Transitions/transitions.index'
+import typography from '../typography/typography.css'
+import spacing from '../spacing/spacing.index'
+import transitions from '../transitions/transitions.index'
 
 export default `
 <style type="text/css">

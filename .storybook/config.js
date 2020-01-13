@@ -1,7 +1,7 @@
 import { configure, addParameters, addDecorator } from '@storybook/react'
 import StoryRouter from 'storybook-react-router'
 
-import theme from './Theme/storybook.theme'
+import theme from './theme/storybook.theme'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 import './firebase/firebase.index'
 import ViewportOptions from './addons/viewport/addon.viewport'
