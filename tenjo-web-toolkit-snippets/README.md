@@ -321,6 +321,13 @@
   ]
 },
     
+"navigation router animatedSwith": {
+  "prefix": "wtan",
+  "body": [
+    "import AnimatedSwith from '@tenjojeremy/web-toolkit/navigation/router/animatedSwith'"
+  ]
+},
+    
 "navigation router authRoute": {
   "prefix": "wtau",
   "body": [
