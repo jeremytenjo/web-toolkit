@@ -1,7 +1,7 @@
 import React from 'react'
 
 import B from '../../../../../.storybook/customComponents/variationBlock'
-import { useStyles } from '../../../../../.storybook/utils/useStyles'
+import { useVariants } from '../../../../../.storybook/utils/useVariants'
 
 const poster =
   'http://cdn.collider.com/wp-content/uploads/2017/03/guardians-of-the-galaxy-2-imax-poster.jpg'
@@ -92,7 +92,7 @@ const Variants = ({ Component: Video }) => {
 
 export default () => {
   const req = require.context('../styles', true, /index.js$/)
-  const { Elements } = useStyles({
+  const { Elements } = useVariants({
     req,
     Variants,
     dir: 'dataDisplay/cards/video',

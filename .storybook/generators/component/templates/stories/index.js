@@ -39,7 +39,7 @@ ${'```'}
   import React from 'react'
 
   import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
-  import { useStyles } from '../../../../.storybook/utils/useStyles'
+  import { useVariants } from '../../../../.storybook/utils/useVariants'
   
   const Variants = ({ Component: ${nameUppercase} }) => { 
     return (
@@ -53,7 +53,7 @@ ${'```'}
   
   export default () => {
     const req = require.context('../styles', true, /index.js$/)
-    const { Elements } = useStyles({
+    const { Elements } = useVariants({
       req,
       Variants,
       dir: ${storybookLocation},

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import B from '../../../../.storybook/customComponents/variationBlock'
-import { useStyles } from '../../../../.storybook/utils/useStyles'
+import { useVariants } from '../../../../.storybook/utils/useVariants'
 import Logo from '../../../../.storybook/images/logo.svg'
 
 const Variants = ({ Component: AccessPage }) => {
@@ -32,7 +32,7 @@ const Variants = ({ Component: AccessPage }) => {
 
 export default () => {
   const req = require.context('../styles', true, /index.js$/)
-  const { Elements } = useStyles({
+  const { Elements } = useVariants({
     req,
     Variants,
     dir: 'authentication/accessPage',

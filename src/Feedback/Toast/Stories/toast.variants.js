@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import B from '../../../../.storybook/customComponents/variationBlock'
 import ToastState, { ToastProvider } from '../base/toast.index'
-import { useStyles } from '../../../../.storybook/utils/useStyles'
+import { useVariants } from '../../../../.storybook/utils/useVariants'
 
 const Children = () => {
   const { showToast } = ToastState()
@@ -57,7 +57,7 @@ const Variants = ({ Component: Toast }) => {
 
 export default () => {
   const req = require.context('../styles', true, /index.js$/)
-  const { Elements } = useStyles({
+  const { Elements } = useVariants({
     req,
     Variants,
     dir: 'feedback/toast',

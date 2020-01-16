@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import B from '../../../../.storybook/customComponents/variationBlock'
-import { useStyles } from '../../../../.storybook/utils/useStyles'
+import { useVariants } from '../../../../.storybook/utils/useVariants'
 
 const Variants = ({ Component: Button }) => {
   const [loading, setLoading] = useState(null)
@@ -47,7 +47,7 @@ const Variants = ({ Component: Button }) => {
 
 export default () => {
   const req = require.context('../styles', true, /index.js$/)
-  const { Elements } = useStyles({
+  const { Elements } = useVariants({
     req,
     Variants,
     dir: 'input/button',

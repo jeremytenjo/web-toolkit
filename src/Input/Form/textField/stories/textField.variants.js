@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import B from '../../../../../.storybook/customComponents/variationBlock'
 import Form from '../../'
-import { useStyles } from '../../../../../.storybook/utils/useStyles'
+import { useVariants } from '../../../../../.storybook/utils/useVariants'
 
 // Test data
 const placeholder = 'this is a Placeholder'
@@ -65,7 +65,7 @@ const Variants = ({ Component: TextField }) => {
 
 export default () => {
   const req = require.context('../styles', true, /index.js$/)
-  const { Elements } = useStyles({
+  const { Elements } = useVariants({
     req,
     Variants,
     dir: 'input/form/textField',
