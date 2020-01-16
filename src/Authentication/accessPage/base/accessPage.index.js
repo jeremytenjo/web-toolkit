@@ -1,7 +1,7 @@
 import React, { memo, useState, useRef } from 'react'
 
 import Animation from '../../../miscUtils/animations/Web-Animations-API'
-import capitalize from '../../../miscUtils/string/capitalize.index'
+import capitalize from '../../../utils/string/capitalize.index'
 import Box from '../../../dataDisplay/box'
 import Image from '../../../media/image/index'
 import Typography from '../../../dataDisplay/typography'

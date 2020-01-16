@@ -17,7 +17,7 @@ export const defaultProps = {
   onClick: () => null,
   definitions: null,
   skeleton: null,
-  cursor: 'pointer',
+  cursor: 'auto',
   position: 'center',
   OnVisibilityParams: {
     offset: 200,

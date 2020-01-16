@@ -1,6 +1,6 @@
 import React, { useState, memo, useEffect, useRef } from 'react'
 
-import toBoolean from '../../../../miscUtils/string/toBoolean.index'
+import toBoolean from '../../../../utils/string/toBoolean.index'
 import Icon from '../../../../dataDisplay/icon'
 import Animation from '../../../../miscUtils/animations/Web-Animations-API'
 import Typography from '../../../../dataDisplay/typography'
