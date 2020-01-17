@@ -286,13 +286,6 @@
   ]
 },
     
-"miscUtils array": {
-  "prefix": "wtar",
-  "body": [
-    "import Array from '@tenjojeremy/web-toolkit/miscUtils/array'"
-  ]
-},
-    
 "miscUtils fetching useFetch": {
   "prefix": "wtus",
   "body": [
@@ -367,6 +360,27 @@
   "prefix": "wtst",
   "body": [
     "import Storage from '@tenjojeremy/web-toolkit/storage/firebase/storage'"
+  ]
+},
+    
+"utils array": {
+  "prefix": "wtar",
+  "body": [
+    "import Array from '@tenjojeremy/web-toolkit/utils/array'"
+  ]
+},
+    
+"utils string capitalize": {
+  "prefix": "wtca",
+  "body": [
+    "import Capitalize from '@tenjojeremy/web-toolkit/utils/string/capitalize'"
+  ]
+},
+    
+"utils string toBoolean": {
+  "prefix": "wtto",
+  "body": [
+    "import ToBoolean from '@tenjojeremy/web-toolkit/utils/string/toBoolean'"
   ]
 }
      }
