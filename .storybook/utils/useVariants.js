@@ -24,17 +24,14 @@ export const useVariants = ({
       const cleanLocation = location.substring(2)
       const styleName = location.split('/')[1]
       const title = styleName
-      const { default: Comp } = await import(`../../src/${dir}/${type}${title}/index`)
-      let testValue = ''
+      let { default: Comp, testValue } = await import(
+        `../../src/${dir}/${type}${title}/index`
+      )
       let Component = Variants ? (
         <Variants Component={Comp} title={title} testValue={testValue} />
       ) : null
 
       if (getSpecTestValue) {
-        const { testValue: importTestValue } = await import(
-          `../../src/${dir}/${type}${title}/${title}.spec.js`
-        )
-        testValue = importTestValue
         Component = (
           <FunctionVariationComponent func={Comp} title={title} testValue={testValue} />
         )

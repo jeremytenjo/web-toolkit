@@ -15,3 +15,5 @@ export default (string) => {
       return Boolean(string)
   }
 }
+
+export const testValue = 'string'
