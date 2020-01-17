@@ -1,8 +1,16 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import B from '../customComponents/variationBlock'
 import { storiesOf } from '@storybook/react'
+import FunctionVariationComponent from './functionVariationComponent'
 
-export const useVariants = ({ req, Variants, dir, short, type = 'styles/' }) => {
+export const useVariants = ({
+  req,
+  Variants,
+  dir,
+  short,
+  type = 'styles/',
+  getSpecTestValue,
+}) => {
   const paths = req.keys()
   const [Elements, setElements] = useState(null)
 
@@ -17,11 +25,25 @@ export const useVariants = ({ req, Variants, dir, short, type = 'styles/' }) => 
       const styleName = location.split('/')[1]
       const title = styleName
       const { default: Comp } = await import(`../../src/${dir}/${type}${title}/index`)
+      let testValue = ''
+      let Component = Variants ? (
+        <Variants Component={Comp} title={title} testValue={testValue} />
+      ) : null
+
+      if (getSpecTestValue) {
+        const { testValue: importTestValue } = await import(
+          `../../src/${dir}/${type}${title}/${title}.spec.js`
+        )
+        testValue = importTestValue
+        Component = (
+          <FunctionVariationComponent func={Comp} title={title} testValue={testValue} />
+        )
+      }
 
       const El = () => (
         <Fragment key={title}>
           <B title={title} noBackground>
-            <Variants Component={Comp} />
+            {Component}
           </B>
         </Fragment>
       )
