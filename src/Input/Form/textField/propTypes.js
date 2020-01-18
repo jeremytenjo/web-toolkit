@@ -1,4 +1,4 @@
-import { string, func, array, obj, bool } from 'prop-types'
+import { string, func, array, bool } from 'prop-types'
 
 export const defaultProps = {
   Wrapper: null,

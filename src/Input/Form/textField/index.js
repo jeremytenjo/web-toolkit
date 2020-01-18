@@ -1,11 +1,11 @@
 import React, { useState, memo, useEffect, useRef } from 'react'
 
-import toBoolean from '../../../../utils/string/toBoolean'
-import Icon from '../../../../dataDisplay/icon'
-import Animation from '../../../../miscUtils/animations/Web-Animations-API'
-import Typography from '../../../../dataDisplay/typography'
+import toBoolean from '../../../utils/string/toBoolean'
+import Icon from '../../../dataDisplay/icon'
+import Animation from '../../../miscUtils/animations/Web-Animations-API'
+import Typography from '../../../dataDisplay/typography'
 
-import { defaultProps, propTypes } from './textField.base.propTypes'
+import { defaultProps, propTypes } from './propTypes'
 
 const TextField = ({
   Wrapper,
@@ -124,7 +124,7 @@ const TextField = ({
   const checkValidation = async (value) => {
     if (hasValidation) {
       const messages = await validation.map(async ({ name, message }) => {
-        const mod = await import(`../validation/${name}/textfield.${name}.js`)
+        const mod = await import(`./validation/${name}`)
         const errMessage = mod.default({ value, message })
 
         if (errMessage) return errMessage
@@ -150,7 +150,6 @@ const TextField = ({
     setfocus(false)
   }
 
-  // Template
   return (
     <>
       <Wrapper
@@ -240,9 +239,9 @@ const TextField = ({
         ref={errMessagesRef}
         style={{ marginTop: 'var(--spacing-xs', display: 'none' }}
       >
-        {errorMessages.map((message) => (
+        {errorMessages.map((message, index) => (
           <Typography
-            key={message}
+            key={`${message}${index}`}
             text={message}
             styles={{ color: 'red' }}
             variant='body2'

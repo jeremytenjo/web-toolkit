@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/customComponents/variationBlock'
-import Button from '../../../../button/styles/1'
-import Form from '../../../'
-import TextField from '../../styles/1'
+import B from '../../../../../../../.storybook/customComponents/variationBlock'
+import Button from '../../../../../button/styles/1'
+import Form from '../../../..'
+import TextField from '../../../styles/1'
 
 // Test data
 const placeholder = 'this is a Placeholder'
