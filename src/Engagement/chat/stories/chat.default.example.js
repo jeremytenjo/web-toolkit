@@ -1,7 +1,7 @@
 // Vendors
 import React, { useState } from 'react'
 
-import Chat from '../../component/chat.index'
+import Chat from '../'
 
 import dataInit from './chat.default.mockData'
 

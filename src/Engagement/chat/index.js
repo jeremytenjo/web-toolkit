@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useRef, useEffect, useState, memo } from 'react'
 
-import { defaultProps, propTypes } from './chat.propTypes'
+import { defaultProps, propTypes } from './propTypes'
 import {
   ChatWrapper,
   ChatList,
   CurrentUserCompWrapper,
   OtherUserCompWrapper,
   InputCompWrapper,
-} from './chat.styles'
+} from './styles'
 
 // Main
 const Chat = ({
