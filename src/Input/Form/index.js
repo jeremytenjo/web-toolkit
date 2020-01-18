@@ -2,7 +2,7 @@ import React, { memo, useRef, useState } from 'react'
 
 import getValues from './functions/form.getValues'
 import checkInvalidValues from './functions/checkInvalidValues'
-import { defaultProps, propTypes } from './form.propTypes'
+import { defaultProps, propTypes } from './propTypes'
 
 const Form = ({ children, onSubmitSuccess, onSubmitFail, emptyFormMessage }) => {
   const formRef = useRef(null)

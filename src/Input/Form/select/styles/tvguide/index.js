@@ -3,8 +3,7 @@ import React, { memo } from 'react'
 import Box from '../../../../../dataDisplay/box'
 import Typogrgraphy from '../../../../../dataDisplay/typography'
 import SelectBase from '../../'
-
-import { defaultProps, propTypes } from './select.tvguide.propTypes'
+import { defaultProps, propTypes } from '../propTypes'
 
 const Item = ({
   label,
