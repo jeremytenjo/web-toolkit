@@ -6,8 +6,8 @@ import Textfield from '../../../../input/form/textField/styles/1/index'
 import Icon from '../../'
 import Animation from '../../../../miscUtils/animations/Web-Animations-API'
 
-import { defaultProps, propTypes } from './search.propTypes'
-import { Wrapper, WrapperInput } from './search.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper, WrapperInput } from './styles'
 
 const IconSearch = ({
   mainIcon,
@@ -24,7 +24,7 @@ const IconSearch = ({
   useEffect(() => {
     const inputEl = document.querySelector(`input[id=${inputName}]`)
     if (show) inputEl.focus()
-    if (!show) inputEl.blur()
+    else inputEl.blur()
   }, [show])
 
   return (

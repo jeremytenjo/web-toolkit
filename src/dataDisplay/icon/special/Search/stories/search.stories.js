@@ -1,9 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../.storybook/customComponents/variationBlock'
-
-import SearchIcon from './index'
+import B from '../../../../../../.storybook/customComponents/variationBlock'
+import SearchIcon from '../index'
 
 const Variations = () => (
   <>
