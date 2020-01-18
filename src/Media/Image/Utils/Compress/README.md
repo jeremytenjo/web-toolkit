@@ -1,4 +1,4 @@
-## Usage
+#### Usage
 
 ```js
 import compressImage from '@tenjojeremy/image/compress'
@@ -6,7 +6,7 @@ import compressImage from '@tenjojeremy/image/compress'
 const res = await compressImage({ file, quality })
 ```
 
-## Props
+#### Props
 
 - file - required
 - quality - default: 0.5

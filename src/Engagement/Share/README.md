@@ -1,10 +1,10 @@
-### Usage
+##### Usage
 
 ```js
 import { Share } from '@bit/tenjojeremy.web-features.share'
 ```
 
-### Properties
+##### Properties
 
 | **propName** | **propType** | **defaultValue** | **isRequired** |
 | ------------ | ------------ | ---------------- | -------------- |
@@ -17,12 +17,12 @@ Requirements:
     * Must be on mobile
 ```
 
-### Information
+##### Information
 
 - Url: https://www.npmjs.com/package/@tenjojeremy/api-share
 - Install: `yarn add @tenjojeremy/api-share`
 
-#### Update
+######## Update
 
 - Export
 
@@ -30,6 +30,6 @@ Requirements:
   - or
   - `yarn update --mayor`
 
-#### Remove
+######## Remove
 
 `npm unpublish @tenjojeremy/api-share --force`

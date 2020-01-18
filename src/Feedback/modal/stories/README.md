@@ -1,4 +1,4 @@
-## Info
+#### Info
 
 [Style Inspiration]()
 
@@ -6,7 +6,7 @@
 
 [Board]()
 
-## Usage
+#### Usage
 
 ```js
 <Modal show={show} animation='centerOut' />

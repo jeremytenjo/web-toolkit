@@ -13,15 +13,15 @@ import Variants from './variants'
 
 <Meta title='${storybookLocation}' />
 
-## Usage
+#### Usage
 
 ${'```'}js
   ${importString}
 ${'```'}
-## Props 
+#### Props 
 <Props of='${nameUppercase}' />
 
-## Styles
+#### Styles
 
 <Preview>
 <Story name='Styles'>

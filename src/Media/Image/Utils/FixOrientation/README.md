@@ -1,4 +1,4 @@
-## Usage
+#### Usage
 
 ```js
 import fixOrientation from '@tenjojeremy/image/fixOrientation'
@@ -6,6 +6,6 @@ import fixOrientation from '@tenjojeremy/image/fixOrientation'
 const res = await fixOrientation({ file })
 ```
 
-## Props
+#### Props
 
 - file - required

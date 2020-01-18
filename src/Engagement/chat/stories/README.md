@@ -1,9 +1,9 @@
-## Installation
+#### Installation
 
 ```sh
 yarn add @tenjojeremy/communication-chat
 ```
 
-### TODO
+##### TODO
 
 - Add testing from On on one chats

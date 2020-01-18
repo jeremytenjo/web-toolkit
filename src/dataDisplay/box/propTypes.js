@@ -4,10 +4,7 @@ export const defaultProps = {
   name: undefined,
   children: null,
   size: null,
-  styles: {
-    padding: 'xs',
-    display: 'grid',
-  },
+  styles: {},
 }
 
 export const propTypes = {

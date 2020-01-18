@@ -1,4 +1,4 @@
-## Usage
+#### Usage
 
 ```js
 import Dialog from '@tenjojeremy/web-toolkit/Feedback/Dialog/Style1'

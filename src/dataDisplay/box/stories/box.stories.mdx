@@ -1,0 +1,45 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+
+import B from '../../../../.storybook/customComponents/variationBlock'
+import Icon from '../../icon'
+import Typography from '../../typography'
+import Box from '../index'
+
+<Meta title='Data-Display|Box' />
+
+
+#### Usage
+
+```js
+import Button from '@tenjojeremy/web-toolkit/dataDisplay/box'
+ ```
+
+#### Props
+
+<Props of={Box} />
+
+#### Styles
+
+<Preview>
+<Story name='All Styles'>
+   <>
+      <B title='default' background contentStyle={{ padding: 0 }}>
+      <Box
+        name='box name'
+        styles={{
+          justifyContent: 'space-between',
+          gridAutoFlow: ['column', 'row'],
+          width: '400px',
+          alignItems: 'center',
+          padding: 'xs',
+        }}
+      >
+        <Typography text='Featured' variant='h6' />
+        <Icon name='search/material' color='primary' />
+      </Box>
+    </B>
+  </>
+</Story>
+</Preview>
+
+

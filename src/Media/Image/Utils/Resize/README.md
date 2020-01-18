@@ -1,4 +1,4 @@
-## Usage
+#### Usage
 
 ```js
 import resize from '@tenjojeremy/image/resize'
@@ -6,7 +6,7 @@ import resize from '@tenjojeremy/image/resize'
 const res = await resize({ file, width })
 ```
 
-## Props
+#### Props
 
 - file - required
 - quality - default: 300

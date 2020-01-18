@@ -12,24 +12,24 @@ Library of reusable UI and utilities
 
 </div>
 
-## Contents
+#### Contents
 
 :white_check_mark: React Components
 :white_check_mark: Firebase Helpers
 
-## Installation
+#### Installation
 
 ```
 yarn add @tenjojeremy/web-toolkit
 ```
 
-## Snippet Extension
+#### Snippet Extension
 
 Download the VS Code snippet extension to save yourself time importing UI and utils 😎
 
 https://marketplace.visualstudio.com/items?itemName=tenjojeremy.tenjo-web-toolkit-snippets
 
-## License
+#### License
 
 This project is licensed under the terms of the
 [MIT license](/LICENSE).

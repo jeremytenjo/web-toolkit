@@ -1,4 +1,4 @@
-## Usage
+#### Usage
 
 ```js
 import Chip from '@tenjojeremy/web-toolkit/data-display/chip/ui/react'
@@ -8,7 +8,7 @@ import Chip from '@tenjojeremy/web-toolkit/data-display/chip/ui/react'
 <Chip text='hello' />
 ```
 
-## Theme Variables Required
+#### Theme Variables Required
 
 ```
   --color-<name>: <color>;
