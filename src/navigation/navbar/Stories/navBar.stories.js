@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import { Route, useHistory, useLocation } from '../../router'
 import B from '../../../../.storybook/customComponents/variationBlock'
-import Bar from '../base/index'
+import Bar from '../index'
 
 import data from './navBar.links'
 import data2 from './navBar.links2'

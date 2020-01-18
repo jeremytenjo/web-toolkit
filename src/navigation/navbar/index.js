@@ -1,12 +1,12 @@
 import React, { memo } from 'react'
 
-import List from '../../../dataDisplay/list'
-import Icon from '../../../dataDisplay/icon'
-import Avatar from '../../../dataDisplay/avatars'
-import SearchIcon from '../../../dataDisplay/icon/special/search/index'
+import List from '../../dataDisplay/list'
+import Icon from '../../dataDisplay/icon'
+import Avatar from '../../dataDisplay/avatars'
+import SearchIcon from '../../dataDisplay/icon/special/search/index'
 
-import { defaultProps, propTypes } from './navBar.propTypes'
-import { Wrapper } from './navBar.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper } from './styles'
 
 const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
   return (
