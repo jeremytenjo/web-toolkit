@@ -1,8 +1,8 @@
 import React, { memo, lazy, Suspense, useRef } from 'react'
 
 import Image from '../../../../../media/image/index'
+import { defaultProps, propTypes } from '../../propTypes'
 
-import { defaultProps, propTypes } from './propTypes'
 import { Wrapper } from './styles'
 
 const Typography = lazy(() =>
@@ -14,7 +14,16 @@ const Animation = lazy(() =>
   ),
 )
 
-const Poster1 = ({ src, onClick, alt, loading, backgroundColor, size, ...rest }) => {
+const Poster1 = ({
+  src,
+  onClick,
+  alt,
+  loading,
+  backgroundColor,
+  size,
+  noAnimation,
+  ...rest
+}) => {
   const wrapperRef = useRef(null)
 
   const handleClick = () => onClick(rest)
@@ -32,6 +41,7 @@ const Poster1 = ({ src, onClick, alt, loading, backgroundColor, size, ...rest })
       backgroundColor={backgroundColor}
       ref={wrapperRef}
       isLoading={loading}
+      noAnimation={noAnimation}
     >
       {src && <Image src={src} width={width} height={height} alt={alt} />}
       {!src && (

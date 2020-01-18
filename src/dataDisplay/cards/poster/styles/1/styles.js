@@ -17,7 +17,11 @@ export const Wrapper = styled.div`
     padding: var(--spacing-s);
   `}
 
-  div {
+  /* noAnimation */
+  ${({ noAnimation }) =>
+    !noAnimation &&
+    `
+    div {
     border-radius: 9px;
     transition: 0.2s;
     transition-timing-function: ease-in-out;
@@ -26,4 +30,7 @@ export const Wrapper = styled.div`
       transform: scale(0.6);
     }
   }
+  `}
+
+
 `

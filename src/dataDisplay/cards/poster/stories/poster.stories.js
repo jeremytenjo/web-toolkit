@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../.storybook/customComponents/variationBlock'
+import B from '../../../../../.storybook/customComponents/variationBlock'
+import One from '../styles/1'
 
-import One from './styles/1'
 import markdown from './poster.readme.md'
 const image = 'https://images-na.ssl-images-amazon.com/images/I/818NtgncwLL._SL1500_.jpg'
 
@@ -20,6 +20,14 @@ const Variations = () => (
     </B>
     <B title='loading'>
       <One loading alt='this is a poster' onClick={() => console.log('sdf')} />
+    </B>
+    <B title='no animations'>
+      <One
+        noAnimation
+        src={image}
+        alt='this is a poster'
+        onClick={() => console.log('sdf')}
+      />
     </B>
   </>
 )
