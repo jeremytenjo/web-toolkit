@@ -4,7 +4,7 @@ import firebase from 'firebase/app'
 import isProduction from '../../../../../miscUtils/enviroment/isProduction'
 import 'firebase/messaging'
 
-const messaging = firebase.messaging()
+const messaging = firebase.messaging.isSupported() ? firebase.messaging() : null
 
 export const NotificationsContext = createContext(null)
 

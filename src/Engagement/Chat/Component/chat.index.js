@@ -89,7 +89,6 @@ const Chat = ({
       ),
     )
 
-  // Template
   return (
     <ChatWrapper styles={wrapperStyles} onSubmit={handleOnSubmit}>
       <ChatList ref={ChatList_Ref}>
@@ -109,9 +108,7 @@ const Chat = ({
   )
 }
 
-// PropTypes
 Chat.defaultProps = defaultProps
 Chat.propTypes = propTypes
 
-// Exports
 export default memo(Chat)
