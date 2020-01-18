@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   word-break: break-word;
   overflow-y: auto;
 
+  div {
+    border-radius: 9px;
+  }
+
   /* No src */
   ${({ src, backgroundColor, isLoading }) =>
     (!src || isLoading) &&
@@ -22,7 +26,6 @@ export const Wrapper = styled.div`
     !noAnimation &&
     `
     div {
-    border-radius: 9px;
     transition: 0.2s;
     transition-timing-function: ease-in-out;
 
