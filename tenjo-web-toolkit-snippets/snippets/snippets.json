@@ -223,10 +223,31 @@
   ]
 },
     
+"input form select styles tvguide": {
+  "prefix": "wtformselectstylestvguide",
+  "body": [
+    "import formtvguide from '@tenjojeremy/web-toolkit/input/form/select/styles/tvguide'"
+  ]
+},
+    
+"input form textField": {
+  "prefix": "wtte",
+  "body": [
+    "import TextField from '@tenjojeremy/web-toolkit/input/form/textField'"
+  ]
+},
+    
 "input form textField styles 1": {
   "prefix": "wtformtextFieldstyles1",
   "body": [
     "import form1 from '@tenjojeremy/web-toolkit/input/form/textField/styles/1'"
+  ]
+},
+    
+"input form textField validation required": {
+  "prefix": "wtre",
+  "body": [
+    "import Required from '@tenjojeremy/web-toolkit/input/form/textField/validation/required'"
   ]
 },
     
