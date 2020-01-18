@@ -118,6 +118,13 @@
   ]
 },
     
+"engagement chat": {
+  "prefix": "wtch",
+  "body": [
+    "import Chat from '@tenjojeremy/web-toolkit/engagement/chat'"
+  ]
+},
+    
 "engagement pushNotifications client firebase useNotification": {
   "prefix": "wtus",
   "body": [
