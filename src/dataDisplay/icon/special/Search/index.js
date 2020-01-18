@@ -19,13 +19,14 @@ const IconSearch = ({
   styles,
 }) => {
   const [show, setShow] = useState(null)
-  const toggleShow = () => setShow(!show)
 
   useEffect(() => {
     const inputEl = document.querySelector(`input[id=${inputName}]`)
     if (show) inputEl.focus()
     else inputEl.blur()
   }, [show])
+
+  const toggleShow = () => setShow(!show)
 
   return (
     <>
