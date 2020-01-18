@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  background-color: ${({ color }) => `var(--color-${color}-background)`};
-  color: ${({ color }) => `var(--color-${color}-darker)`};
+  background-color: ${({ color }) => `var(--color-${color}Background)`};
+  color: ${({ color }) => `var(--color-${color}Darker)`};
   border-radius: 100px;
   padding: 2px 5px;
   display: grid;
@@ -18,15 +18,15 @@ export const Wrapper = styled.div`
   transition: 0.2s;
 
   &:active {
-    border: 2px solid ${({ color }) => `var(--color-${color}-darker)`};
+    border: 2px solid ${({ color }) => `var(--color-${color}Darker)`};
   }
   svg {
-    fill: ${({ color }) => `var(--color-${color}-darker)`};
+    fill: ${({ color }) => `var(--color-${color}Darker)`};
   }
 `
 
 export const Text = styled.span`
-  color: ${({ color }) => `var(--color-${color}-darker)`};
+  color: ${({ color }) => `var(--color-${color}Darker)`};
   user-select: none;
   font-family: var(--font-secondary);
   font-style: normal;

@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ letterColor }) => `var(--color-${letterColor}-background)`};
+  background-color: ${({ letterColor }) => `var(--color-${letterColor}Background)`};
 
   ${({ size, width, height }) => _size(size, width, height)}
 `

@@ -39,10 +39,10 @@ const Wrapper = styled.div`
 const Input = styled.input`
   ::placeholder {
     opacity: 0.5;
-    color: ${({ color }) => `var(--color-${color}-darker)`};
+    color: ${({ color }) => `var(--color-${color}Darker)`};
   }
 
-  color: ${({ color }) => `var(--color-${color}-darker)`};
+  color: ${({ color }) => `var(--color-${color}Darker)`};
   font-family: ${({ font }) => `var(--font-${font})`};
   font-size: 16px;
   width: 100%;

@@ -59,10 +59,10 @@ export const WrapperIcon = styled.div`
     ${({ outlined, color }) =>
       outlined &&
       `
-  border: 2px solid var(--color-${color}-darker);
+  border: 2px solid var(--color-${color}Darker);
   &:active {
-    background-color: var(--color-${color}-background);
-    border: 2px solid var(--color-${color}-darker);    
+    background-color: var(--color-${color}Background);
+    border: 2px solid var(--color-${color}Darker);    
     }
   `}
 
@@ -90,13 +90,13 @@ export const WrapperIcon = styled.div`
       color && !dark
         ? `var(--color-${color})`
         : color && dark
-        ? `var(--color-${color}-darker)`
+        ? `var(--color-${color}Darker)`
         : 'var(--color-white)'};
     fill: ${({ color, dark }) =>
       color && !dark
         ? `var(--color-${color})`
         : color && dark
-        ? `var(--color-${color}-darker)`
+        ? `var(--color-${color}Darker)`
         : 'var(--color-white)'};
     display: block;
     margin: 0 auto;
@@ -113,7 +113,7 @@ export const WrapperIcon = styled.div`
        ${({ outlined, color }) =>
          outlined &&
          `
-         fill: var(--color-${color}-darker);
+         fill: var(--color-${color}Darker);
   `}
 
      /* Stroke */
