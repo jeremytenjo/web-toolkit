@@ -4,6 +4,7 @@ import system from '../../theme/system/system.index'
 
 export const Wrapper = styled.div`
   ${system}
+
   ${({ size }) =>
     size &&
     `
@@ -19,5 +20,12 @@ export const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   top: 0;
+  `}
+  
+  ${({ sticky }) =>
+    sticky &&
+    `
+    top: 0; 
+    position: sticky; 
   `}
 `

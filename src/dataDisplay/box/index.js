@@ -3,14 +3,12 @@ import React, { memo } from 'react'
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper } from './styles'
 
-const Box = ({ children, name, styles, fullscreen, size, ...rest }) => {
+const Box = ({ children, name, styles, ...rest }) => {
   return (
     <Wrapper
       styles={{ display: 'grid', ...styles }}
       data-box-name={name}
       data-cy={name}
-      fullscreen={fullscreen}
-      size={size}
       {...rest}
     >
       {children}

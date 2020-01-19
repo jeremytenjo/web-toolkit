@@ -28,7 +28,8 @@ import Button from '@tenjojeremy/web-toolkit/dataDisplay/box'
         name='box name'
         styles={{
           justifyContent: 'space-between',
-          gridAutoFlow: ['column', 'row'],
+          gridAutoFlow: 'column',
+          background: ['lightblue', 'lightgreen'],
           width: '400px',
           alignItems: 'center',
           padding: 'xs',
@@ -37,6 +38,27 @@ import Button from '@tenjojeremy/web-toolkit/dataDisplay/box'
         <Typography text='Featured' variant='h6' />
         <Icon name='search/material' color='primary' />
       </Box>
+    </B>
+      <B title='sticky' background contentStyle={{ padding: 0, height: '300px' }}>
+        <nav style={ { height: '100px' }}>Imagine a bunch of nav up here</nav>        
+      <Box
+        sticky
+        name='box name'
+        styles={{
+          justifyContent: 'space-between',
+          gridAutoFlow: 'column',
+          background: 'lightpink',
+          width: '400px',
+          alignItems: 'center',
+          padding: 'xs',
+          marginBottom: 'xxl'
+        }}
+      >
+        <Typography text='Featured' variant='h6' />
+        <Icon name='search/material' color='primary' />
+      </Box>
+       <p style={{height: '1000px'}}>And a bunch of content</p>
+  <p style={{height: '1000px'}}>And a bunch of content</p>
     </B>
   </>
 </Story>
