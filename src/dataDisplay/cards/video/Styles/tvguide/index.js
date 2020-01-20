@@ -194,6 +194,7 @@ const CardMovie1 = ({
 
       <Box
         styles={{
+          padding: 'xxs',
           justifyContent: 'space-between',
           gridAutoFlow: 'column',
           width: '100%',
