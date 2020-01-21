@@ -57,6 +57,33 @@ const Variants = ({ Component: Video }) => {
           }}
         />
       </B>
+      <B title={`no poster`} key={Math.random()} noBackground>
+        <Video
+          onPlay={(e) => console.log(e)}
+          title={titleTest}
+          lastAiredEpisode={{
+            episode: 1,
+            season: 2,
+          }}
+          favorite={favorite}
+          moreLinks={moreLinks}
+          onLoadMore={onLoadMore}
+          lastEpWatched={{ season: '01', episode: '02' }}
+          onFavoriteToggle={onFavoriteToggle}
+          isTv
+          seasons={[
+            { value: 1, label: '1' },
+            { value: 2, label: '2' },
+          ]}
+          episodes={[
+            { value: 1, label: '1' },
+            { value: 2, label: '2' },
+          ]}
+          selectProps={{
+            initialValue: 1,
+          }}
+        />
+      </B>
       <B title={`isTv - Loading`} key={Math.random()} noBackground>
         <Video
           loadingMessage='Loading'
