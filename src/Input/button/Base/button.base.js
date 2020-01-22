@@ -1,4 +1,4 @@
-import React, { memo, lazy, Suspense, useRef, Fragment, useEffect, useState } from 'react'
+import React, { memo, lazy, Suspense, Fragment, useEffect, useState } from 'react'
 
 import Typography from '../../../dataDisplay/typography'
 import Animation from '../../../miscUtils/animations/Web-Animations-API'
@@ -33,7 +33,6 @@ const ButtonBase = ({
   loadingComp,
 }) => {
   const [ProgressComponent, setProgressComponent] = useState(null)
-  const spinnerRef = useRef(null)
   const textColor = disabled
     ? 'disabledDarker'
     : outlined
