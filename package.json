@@ -53,6 +53,7 @@
     "twit": "^2.2.11"
   },
   "devDependencies": {
+    "storybook-addon-responsive-views": "^2.3.0",
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
     "@storybook/addon-actions": "^5.3.8",
