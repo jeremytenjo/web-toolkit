@@ -47,9 +47,9 @@ const Icon = ({
     getModule()
   }, [name, label])
 
-  const handleClick = () => {
+  const handleClick = (e) => {
     link && push(link)
-    onClick()
+    onClick(e)
   }
   const WrappingComp = inputProps ? FileInput : Fragment
 
