@@ -23,23 +23,23 @@ const Variants = ({ Component: Button }) => {
       <B title='outlined' color='black'>
         <Button outlined />
       </B>
+      <B title='matchesUrl' color='black'>
+        <Button url='/iframe.html' />
+      </B>
       <B title='loading'>
         <button onClick={() => setLoading(!loading)}>toggle</button>
         <br />
         <br />
         <Button loading={loading} />
       </B>
+      <B title='iconName'>
+        <Button iconName='camera/material' />
+      </B>
       <B title='File Input'>
         <Button
           iconName='camera/material'
           inputProps={{ onInput: (file) => console.log(file) }}
         />
-      </B>
-      <B title='iconName'>
-        <Button iconName='camera/material' />
-      </B>
-      <B title='FAB'>
-        <Button iconName='camera/material' type='FAB' />
       </B>
     </div>
   )

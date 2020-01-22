@@ -56,7 +56,7 @@ const Icon = ({
   return (
     <Suspense fallback={null}>
       <WrappingComp {...inputProps}>
-        <Wrapper label={label}>
+        <Wrapper label={label} data-name='icon-wrapper'>
           <WrapperIcon
             plain={plain}
             style={style}

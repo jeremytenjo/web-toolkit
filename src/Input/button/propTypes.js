@@ -1,7 +1,6 @@
 import { string, func, bool, any, object, oneOfType, node } from 'prop-types'
 
 export const defaultProps = {
-  type: 'button',
   outlined: null,
   active: null,
   iconName: null,
@@ -22,13 +21,10 @@ export const defaultProps = {
   name: 'upload_button',
   inputProps: null,
   icon: 'heart/gov',
-  foregroundColor: 'primary',
   activeColor: 'white',
-  router: { push: () => null },
 }
 
 export const propTypes = {
-  type: string,
   iconName: string,
   outlined: bool,
   active: bool,
@@ -46,5 +42,4 @@ export const propTypes = {
   inputProps: object,
   name: string,
   icon: string,
-  foregroundColor: string,
 }

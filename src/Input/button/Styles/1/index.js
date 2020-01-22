@@ -6,26 +6,24 @@ import { BaseWrapper, BaseButton, BaseLoadingCon } from '../base'
 
 const Wrapper = styled(BaseWrapper)``
 
-const StyledButton = styled(BaseButton)`
-  ${({ isActive, activeColor, backgroundColor, foregroundColor }) => `
-  transition: 0.2s;
-  user-select: none;
-  background-color: ${isActive} ? ${activeColor} : ${backgroundColor};
-  color: ${foregroundColor};
-  padding: var(-spacing-s);
-  padding-left: var(-spacing-m);
-  grid-gap: var(-spacing-s);
-  display: grid;
-  grid-auto-flow: column;
+const ButtonInner = styled(BaseButton)`
+  ${({ activeColor, disabled, matchesUrl }) => `
+  background-color: ${matchesUrl && !disabled && `var(--color-${activeColor})`};
+  border-color: ${matchesUrl && !disabled && `var(--color-${activeColor})`};
   border-radius: 0 50px 50px 0;
-  cursor: pointer;
   width: 200px;
   justify-content: start;
+  grid-gap: 20px;
 
   :hover {
-    background-color: ${activeColor};
+    background-color: ${!disabled && activeColor};
+    border-color: ${!disabled && activeColor};
   };
 `}
+
+  div[data-name="icon-wrapper"] {
+    grid-column-end: -1;
+  }
 `
 
 const LoadingCon = styled(BaseLoadingCon)`
@@ -35,7 +33,7 @@ const LoadingCon = styled(BaseLoadingCon)`
 export default (props) => (
   <Button
     Wrapper={Wrapper}
-    StyledButton={StyledButton}
+    ButtonInner={ButtonInner}
     LoadingCon={LoadingCon}
     {...props}
   />

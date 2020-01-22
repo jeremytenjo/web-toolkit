@@ -1,23 +1,21 @@
 import React, { memo, lazy, Suspense, Fragment, useEffect, useState } from 'react'
 
+import { Link } from '../../navigation/router'
 import Typography from '../../dataDisplay/typography'
 import Animation from '../../miscUtils/animations/Web-Animations-API'
 
 import { defaultProps, propTypes } from './propTypes'
 
-const ButtonIcon = lazy(() =>
-  import(/* webpackChunkName: 'ButtonIcon' */ '../../dataDisplay/icon'),
-)
+const Icon = lazy(() => import(/* webpackChunkName: 'Icon' */ '../../dataDisplay/icon'))
 
 const FileInput = lazy(() =>
   import(/* webpackChunkName: 'FileiNput' */ '../../media/files/fileInput'),
 )
 
-const ButtonBase = ({
+const Button = ({
   Wrapper,
-  StyledButton,
+  ButtonInner,
   LoadingCon,
-  type,
   color,
   text,
   onClick,
@@ -31,22 +29,19 @@ const ButtonBase = ({
   inputProps,
   typographyVariant,
   loadingComp,
+  url,
+  ...rest
 }) => {
   const [ProgressComponent, setProgressComponent] = useState(null)
-  const textColor = disabled
-    ? 'disabledDarker'
-    : outlined
-    ? 'white'
-    : type === 'FAB'
-    ? 'white'
-    : `${color}Darker`
+  const textColor = disabled ? 'disabledDarker' : outlined ? 'white' : `${color}Darker`
   const isLoading = typeof loading !== 'string' ? loading : false
   const WrappingComp = inputProps ? FileInput : Fragment
+  const matchesUrl = url && location.pathname === url
+  const Redirect = url ? Link : Fragment
+  const redirectProps = url ? { to: url } : null
 
   useEffect(() => {
-    if (typeof loading !== 'string') {
-      importLoadingComoponent()
-    }
+    if (typeof loading !== 'string') importLoadingComoponent()
   }, [])
 
   const importLoadingComoponent = async () => {
@@ -58,45 +53,43 @@ const ButtonBase = ({
   return (
     <Suspense fallback={null}>
       <WrappingComp {...inputProps}>
-        <Wrapper data-name='wrapper'>
-          <StyledButton
-            data-name='button'
-            type={type}
-            color={color}
-            onClick={disabled ? () => null : onClick}
-            disabled={disabled}
-            active={active}
-            outlined={outlined}
-            icon={iconName}
-            style={style}
-            data-cy={dataCy}
-            isLoading={isLoading}
-          >
-            <Typography
-              text={text}
-              variant={typographyVariant}
-              styles={{ color: textColor }}
-            />
-            {iconName && (
-              <Suspense fallback={null}>
-                <ButtonIcon name={iconName} noBackground />
-              </Suspense>
-            )}
-          </StyledButton>
-          <Suspense fallback={null}>
-            <Animation name='showHide' show={isLoading}>
-              <LoadingCon color={color}>
-                {ProgressComponent && <ProgressComponent />}
-              </LoadingCon>
-            </Animation>
-          </Suspense>
+        <Wrapper>
+          <Redirect {...redirectProps}>
+            <button onClick={disabled ? () => null : onClick}>
+              <ButtonInner
+                color={color}
+                disabled={disabled}
+                active={active}
+                outlined={outlined}
+                icon={iconName}
+                style={style}
+                data-cy={dataCy}
+                isLoading={isLoading}
+                matchesUrl={matchesUrl}
+                {...rest}
+              >
+                <Typography
+                  text={text}
+                  variant={typographyVariant}
+                  styles={{ color: textColor }}
+                />
+                {iconName && <Icon name={iconName} noBackground />}
+              </ButtonInner>
+            </button>
+          </Redirect>
+
+          <Animation name='showHide' show={isLoading}>
+            <LoadingCon color={color}>
+              {ProgressComponent && <ProgressComponent />}
+            </LoadingCon>
+          </Animation>
         </Wrapper>
       </WrappingComp>
     </Suspense>
   )
 }
 
-ButtonBase.defaultProps = defaultProps
-ButtonBase.propTypes = propTypes
+Button.defaultProps = defaultProps
+Button.propTypes = propTypes
 
-export default memo(ButtonBase)
+export default memo(Button)

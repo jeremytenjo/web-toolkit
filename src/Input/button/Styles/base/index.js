@@ -5,22 +5,47 @@ import Button from '../../'
 
 export const BaseWrapper = styled.div`
   position: relative;
+  button {
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      border: 0;
+      padding: 0;
+    }
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+  }
 `
-export const BaseButton = styled.button`
+export const BaseButton = styled.div`
   background-color: ${({ color }) => `var(--color-${color}Lighter)`};
   border-radius: 100px;
   cursor: pointer;
   padding: 0 var(--spacing-s);
-  display: flex;  
+  display: grid;  
   align-items: center;
   justify-content: center;
+  grid-auto-flow: column;
   text-align: center;
   transition: 0.2s ease-in-out;
   height: 40px;  
   border: 2px solid ${({ color }) => `var(--color-${color}Lighter)`};
   user-select: none;
   box-sizing: content-box;
-  &:focus {outline:none;} 
 
   &:active {
     border: 2px solid ${({ color }) => `var(--color-${color}Darker)`};
@@ -57,22 +82,6 @@ export const BaseButton = styled.button`
     fill: var(--color-${color}Darker);
     }
   `}
-
-  /* FAB */
-  ${({ type, color }) =>
-    type === 'FAB' &&
-    `
-    box-shadow: var(--boxShadow-1);
-    background-color: var(--color-${color});
-    border: 2px solid var(--color-${color});
-     &:active {
-       border: 2px solid var(--color-${color});
-    }
-  svg {
-    margin-left: 10px;
-    fill: var(--color-white);
-    }
-  `}
 `
 
 export const BaseLoadingCon = styled.div`
@@ -93,7 +102,7 @@ export const BaseLoadingCon = styled.div`
 export default (props) => (
   <Button
     Wrapper={BaseWrapper}
-    StyledButton={BaseButton}
+    ButtonInner={BaseButton}
     LoadingCon={BaseLoadingCon}
     {...props}
   />
