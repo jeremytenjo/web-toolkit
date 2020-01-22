@@ -10,7 +10,7 @@ const Variants = ({ Component: Menu }) => {
   return (
     <div>
       <B title='default'>
-        <Menu options={options} />
+        <Menu options={options} onSelect={(e) => console.log(e)} />
       </B>
     </div>
   )

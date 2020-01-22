@@ -1,11 +1,11 @@
 import React, { useState, memo } from 'react'
 import Menu_ui from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
+import Item from '@material-ui/core/MenuItem'
 
 import Icon from '../../../../dataDisplay/icon'
 import { defaultProps, propTypes } from '../../propTypes'
 
-const Menu = ({ options, onSelect }) => {
+const Menu = ({ options, onSelect, itemProps, iconProps, ...rest }) => {
   const optionsLength = options.length
   const [anchorEl, setanchorEl] = useState(null)
 
@@ -15,16 +15,14 @@ const Menu = ({ options, onSelect }) => {
     },
   }) => {
     setanchorEl(null)
-    onSelect(selectedOption)
+    selectedOption && onSelect(selectedOption)
   }
 
-  const handleClick = ({ currentTarget }) => {
-    setanchorEl(currentTarget)
-  }
+  const handleClick = ({ currentTarget }) => setanchorEl(currentTarget)
 
   return (
     <>
-      <Icon name='options/material' onClick={handleClick} />
+      <Icon onClick={handleClick} {...iconProps} />
 
       {optionsLength > 0 && (
         <Menu_ui
@@ -32,13 +30,19 @@ const Menu = ({ options, onSelect }) => {
           anchorEl={anchorEl}
           open={!!anchorEl}
           onClose={handleClose}
+          {...rest}
         >
           {options.map(
             (option) =>
               option && (
-                <MenuItem key={option} data-option={option} onClick={handleClose}>
+                <Item
+                  key={option}
+                  data-option={option}
+                  onClick={handleClose}
+                  {...itemProps}
+                >
                   {option}
-                </MenuItem>
+                </Item>
               ),
           )}
         </Menu_ui>

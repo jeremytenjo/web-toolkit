@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import Box from '../../../../dataDisplay/box/index'
 import { defaultProps, propTypes } from '../../propTypes'
 
-const Menu = () => {
+const Menu = (props) => {
   return <Box>s</Box>
 }
 
