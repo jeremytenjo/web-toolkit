@@ -1,4 +1,7 @@
+import React from 'react'
 import styled from 'styled-components'
+
+import Button from '../../'
 
 export const BaseWrapper = styled.div`
   position: relative;
@@ -87,3 +90,12 @@ export const BaseLoadingCon = styled.div`
     justify-content: center;
   `}
 `
+
+export default (props) => (
+  <Button
+    Wrapper={BaseWrapper}
+    StyledButton={BaseButton}
+    LoadingCon={BaseLoadingCon}
+    {...props}
+  />
+)

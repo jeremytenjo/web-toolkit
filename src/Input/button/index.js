@@ -1,16 +1,16 @@
 import React, { memo, lazy, Suspense, Fragment, useEffect, useState } from 'react'
 
-import Typography from '../../../dataDisplay/typography'
-import Animation from '../../../miscUtils/animations/Web-Animations-API'
+import Typography from '../../dataDisplay/typography'
+import Animation from '../../miscUtils/animations/Web-Animations-API'
 
-import { defaultProps, propTypes } from './button.base.propTypes'
+import { defaultProps, propTypes } from './propTypes'
 
 const ButtonIcon = lazy(() =>
-  import(/* webpackChunkName: 'ButtonIcon' */ '../../../dataDisplay/icon'),
+  import(/* webpackChunkName: 'ButtonIcon' */ '../../dataDisplay/icon'),
 )
 
 const FileInput = lazy(() =>
-  import(/* webpackChunkName: 'FileiNput' */ '../../../media/files/fileInput'),
+  import(/* webpackChunkName: 'FileiNput' */ '../../media/files/fileInput'),
 )
 
 const ButtonBase = ({
@@ -50,7 +50,7 @@ const ButtonBase = ({
   }, [])
 
   const importLoadingComoponent = async () => {
-    let Comp = await import(`../../../feedback/progress/${loadingComp}`)
+    let Comp = await import(`../../feedback/progress/${loadingComp}`)
     Comp = Comp.default
     setProgressComponent(Comp)
   }

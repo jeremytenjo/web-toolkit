@@ -21,6 +21,11 @@ export const defaultProps = {
   accept: '.jpg, .jpeg, .png',
   name: 'upload_button',
   inputProps: null,
+  icon: 'heart/gov',
+  foregroundColor: 'primary',
+  backgroundColor: 'primaryLighter',
+  activeColor: 'white',
+  router: { push: () => null },
 }
 
 export const propTypes = {
@@ -41,4 +46,7 @@ export const propTypes = {
   isInput: bool,
   inputProps: object,
   name: string,
+  icon: string,
+  foregroundColor: string,
+  backgroundColor: string,
 }

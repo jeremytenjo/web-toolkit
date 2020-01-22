@@ -3,7 +3,7 @@ import React from 'react'
 import Icon from '../../../icon'
 import Avatar from '../../../avatars'
 import Rating from '../../../../feedback/rating'
-import Button from '../../../../input/button/styles/1'
+import Button from '../../../../input/button/styles/base'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, Info, City, Name, ButtonCon, AvatarInfoCOn } from './styles'
