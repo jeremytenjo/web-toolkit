@@ -29,8 +29,7 @@ const IconSearch = ({
   const toggleShow = () => setShow(!show)
 
   return (
-    <>
-      <Box styles={Wrapper}>
+    <Box styles={Wrapper}>
         <Box styles={WrapperInput}>
           <Animation show={show}>
             <Form onSubmitSuccess={onSubmit}>
@@ -50,7 +49,6 @@ const IconSearch = ({
           boxShadow={boxShadow}
         />
       </Box>
-    </>
   )
 }
 

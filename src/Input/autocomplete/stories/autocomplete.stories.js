@@ -6,11 +6,9 @@ import Autocomplete from '../index'
 
 const Variants = () => {
   return (
-    <>
-      <B title='Default' noBackground>
+    <B title='Default' noBackground>
         <Autocomplete />
       </B>
-    </>
   )
 }
 

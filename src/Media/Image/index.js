@@ -40,16 +40,12 @@ const Image = ({
   )
 
   // Template
-  return (
-    <>
-      {isLazyLoaded ? (
-        <OnVisibility {...OnVisibilityProps}>
-          <ImageComp />
-        </OnVisibility>
-      ) : (
-        <ImageComp />
-      )}
-    </>
+  return isLazyLoaded ? (
+    <OnVisibility {...OnVisibilityProps}>
+      <ImageComp />
+    </OnVisibility>
+  ) : (
+    <ImageComp />
   )
 }
 

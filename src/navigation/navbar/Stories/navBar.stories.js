@@ -52,11 +52,7 @@ const Child = () => {
 }
 
 const Variations = () => {
-  return (
-    <>
-      <Route path='/' component={Child} />
-    </>
-  )
+  return <Route path='/' component={Child} />
 }
 
 storiesOf('Navigation|Nav Bar/React', module).add('Example', () => <Variations />)

@@ -8,8 +8,7 @@ import Overlay from '../'
 const Variations = () => {
   const [show, setshow] = useState(null)
   return (
-    <>
-      <B title='default' noBackground>
+    <B title='default' noBackground>
         <Button
           onClick={() => setshow(true)}
           text='show overlay'
@@ -39,7 +38,6 @@ const Variations = () => {
         <p>adsf</p>
         <p>adsf</p>
       </B>
-    </>
   )
 }
 

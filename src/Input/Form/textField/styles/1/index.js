@@ -74,8 +74,7 @@ const CloseIconCon = styled.div`
 `
 
 export default (props) => (
-  <>
-    <TextField
+  <TextField
       Wrapper={Wrapper}
       Input={Input}
       IconLeftCon={IconLeftCon}
@@ -84,5 +83,4 @@ export default (props) => (
       CloseIconCon={CloseIconCon}
       {...props}
     />
-  </>
 )

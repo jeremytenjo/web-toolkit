@@ -5,8 +5,7 @@ import B from '../../../../../../.storybook/customComponents/variationBlock'
 import SearchIcon from '../index'
 
 const Variations = () => (
-  <>
-    <B
+  <B
       style={{
         backgroundColor: 'black',
         display: 'flex',
@@ -20,7 +19,6 @@ const Variations = () => (
         onSubmit={(value) => console.log(value)}
       />
     </B>
-  </>
 )
 
 storiesOf('Data-Display|Icon/Special', module).add('Search', () => <Variations />)

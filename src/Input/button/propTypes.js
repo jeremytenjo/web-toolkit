@@ -23,7 +23,6 @@ export const defaultProps = {
   inputProps: null,
   icon: 'heart/gov',
   foregroundColor: 'primary',
-  backgroundColor: 'primaryLighter',
   activeColor: 'white',
   router: { push: () => null },
 }
@@ -48,5 +47,4 @@ export const propTypes = {
   name: string,
   icon: string,
   foregroundColor: string,
-  backgroundColor: string,
 }

@@ -16,8 +16,7 @@ const Variations = () => {
   }
 
   return (
-    <>
-      <B title='required'>
+    <B title='required'>
         <Form onSubmitSuccess={handleSubmit}>
           <TextField
             placeholder={placeholder}
@@ -37,7 +36,6 @@ const Variations = () => {
           <span>value:{submitValue}</span>
         </Form>
       </B>
-    </>
   )
 }
 

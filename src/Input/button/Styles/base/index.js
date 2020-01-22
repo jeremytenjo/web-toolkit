@@ -26,7 +26,6 @@ export const BaseButton = styled.button`
     border: 2px solid ${({ color }) => `var(--color-${color}Darker)`};
   }
 
-
   /* Active */
   ${({ active, color }) => active && `border: 2px solid var(--color-${color}Darker);`}
 

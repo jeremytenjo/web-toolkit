@@ -27,9 +27,7 @@ const Child = () => {
   }
 
   return (
-    <>
-      <button onClick={() => init()}>Initialize</button>
-    </>
+    <button onClick={() => init()}>Initialize</button>
   )
 }
 

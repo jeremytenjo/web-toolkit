@@ -8,11 +8,9 @@ import EmptyPage from './Style1/emptyPage.index'
 
 const Variations = () => {
   return (
-    <>
-      <B title='style1' noBackground>
+    <B title='style1' noBackground>
         <EmptyPage image={<IllChat />} />
       </B>
-    </>
   )
 }
 

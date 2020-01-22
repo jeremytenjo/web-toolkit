@@ -9,8 +9,7 @@ const Children = () => {
   const { showToast } = ToastState()
 
   return (
-    <>
-      <B title='center'>
+    <B title='center'>
         <button
           onClick={() =>
             showToast({
@@ -23,7 +22,6 @@ const Children = () => {
           Show
         </button>
       </B>
-    </>
   )
 }
 
@@ -41,8 +39,7 @@ const Wrapper = styled.div`
 
 const Variants = ({ Component: Toast }) => {
   return (
-    <>
-      <Wrapper>
+    <Wrapper>
         <B title={`type = success`} noBackground>
           <Toast />
         </B>
@@ -51,7 +48,6 @@ const Variants = ({ Component: Toast }) => {
           <Toast type='error' />
         </B>
       </Wrapper>
-    </>
   )
 }
 

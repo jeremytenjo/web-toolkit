@@ -11,11 +11,9 @@ const photoUrl =
 
 const Variations = () => {
   return (
-    <>
-      <B title='style1' noBackground>
+    <B title='style1' noBackground>
         <Contact name={name} rating={5} city='Vancouver, BC' photoUrl={photoUrl} />
       </B>
-    </>
   )
 }
 

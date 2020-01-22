@@ -7,11 +7,9 @@ import Dropdown from './dropdown.index'
 
 const Variants = () => {
   return (
-    <>
-      <B title='Default' noBackground>
+    <B title='Default' noBackground>
         <Dropdown />
       </B>
-    </>
   )
 }
 

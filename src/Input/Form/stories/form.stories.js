@@ -16,8 +16,7 @@ const General = () => {
   const handleSubmitFail = () => setresult('fail')
 
   return (
-    <>
-      <B title='default'>
+    <B title='default'>
         <Form onSubmitSuccess={handleSubmitSuccess} onSubmitFail={handleSubmitFail}>
           <TextField
             type='text'
@@ -47,7 +46,6 @@ const General = () => {
 
         <p data-cy='form_result'>Result: {result}</p>
       </B>
-    </>
   )
 }
 

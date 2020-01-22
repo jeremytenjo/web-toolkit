@@ -58,8 +58,9 @@ const ButtonBase = ({
   return (
     <Suspense fallback={null}>
       <WrappingComp {...inputProps}>
-        <Wrapper>
+        <Wrapper data-name='wrapper'>
           <StyledButton
+            data-name='button'
             type={type}
             color={color}
             onClick={disabled ? () => null : onClick}
@@ -71,7 +72,11 @@ const ButtonBase = ({
             data-cy={dataCy}
             isLoading={isLoading}
           >
-            <Typography text={text} variant={typographyVariant} color={textColor} />
+            <Typography
+              text={text}
+              variant={typographyVariant}
+              styles={{ color: textColor }}
+            />
             {iconName && (
               <Suspense fallback={null}>
                 <ButtonIcon name={iconName} noBackground />
