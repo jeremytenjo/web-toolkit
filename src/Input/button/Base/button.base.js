@@ -80,13 +80,11 @@ const ButtonBase = ({
             )}
           </StyledButton>
           <Suspense fallback={null}>
-            <Animation name='showHide' show={isLoading} el={spinnerRef} />
-
-            <div ref={spinnerRef} style={{ display: 'none' }}>
+            <Animation name='showHide' show={isLoading}>
               <LoadingCon color={color}>
                 {ProgressComponent && <ProgressComponent />}
               </LoadingCon>
-            </div>
+            </Animation>
           </Suspense>
         </Wrapper>
       </WrappingComp>
