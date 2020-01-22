@@ -17,35 +17,35 @@ const General = () => {
 
   return (
     <B title='default'>
-        <Form onSubmitSuccess={handleSubmitSuccess} onSubmitFail={handleSubmitFail}>
-          <TextField
-            type='text'
-            placeholder='textfield1'
-            name='textfield1'
-            validation={[{ name: 'required' }]}
-          />
-
-          <br />
-
-          <Button
-            dataCy='upload_button'
-            text='Upload'
-            color='secondary'
-            inputProps={{
-              errorMessage: 'Please upload profile picture',
-              name: 'file_upload',
-            }}
-          />
-
-          <br />
-
-          <Button type='submit' dataCy='form_submit_button' text='Submit' />
-        </Form>
+      <Form onSubmitSuccess={handleSubmitSuccess} onSubmitFail={handleSubmitFail}>
+        <TextField
+          type='text'
+          placeholder='textfield1'
+          name='textfield1'
+          validation={[{ name: 'required' }]}
+        />
 
         <br />
 
-        <p data-cy='form_result'>Result: {result}</p>
-      </B>
+        <Button
+          dataCy='upload_button'
+          text='Upload'
+          color='secondary'
+          inputProps={{
+            errorMessage: 'Please upload profile picture',
+            name: 'file_upload',
+          }}
+        />
+
+        <br />
+
+        <Button type='submit' dataCy='form_submit_button' text='Submit' />
+      </Form>
+
+      <br />
+
+      <p data-cy='form_result'>Result: {result}</p>
+    </B>
   )
 }
 

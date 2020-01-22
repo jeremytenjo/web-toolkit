@@ -75,12 +75,12 @@ const CloseIconCon = styled.div`
 
 export default (props) => (
   <TextField
-      Wrapper={Wrapper}
-      Input={Input}
-      IconLeftCon={IconLeftCon}
-      IconRightCon={IconRightCon}
-      InputCon={InputCon}
-      CloseIconCon={CloseIconCon}
-      {...props}
-    />
+    Wrapper={Wrapper}
+    Input={Input}
+    IconLeftCon={IconLeftCon}
+    IconRightCon={IconRightCon}
+    InputCon={InputCon}
+    CloseIconCon={CloseIconCon}
+    {...props}
+  />
 )

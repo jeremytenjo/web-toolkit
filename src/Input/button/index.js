@@ -55,7 +55,7 @@ const Button = ({
       <WrappingComp {...inputProps}>
         <Wrapper>
           <Redirect {...redirectProps}>
-            <button onClick={disabled ? () => null : onClick}>
+            <button onClick={disabled ? () => null : onClick} data-cy={dataCy}>
               <ButtonInner
                 color={color}
                 disabled={disabled}
@@ -63,7 +63,6 @@ const Button = ({
                 outlined={outlined}
                 icon={iconName}
                 style={style}
-                data-cy={dataCy}
                 isLoading={isLoading}
                 matchesUrl={matchesUrl}
                 {...rest}

@@ -26,9 +26,7 @@ const Child = () => {
     }
   }
 
-  return (
-    <button onClick={() => init()}>Initialize</button>
-  )
+  return <button onClick={() => init()}>Initialize</button>
 }
 
 export default () => (

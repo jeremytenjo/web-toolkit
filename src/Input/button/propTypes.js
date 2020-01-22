@@ -5,7 +5,6 @@ export const defaultProps = {
   active: null,
   iconName: null,
   disabled: null,
-  Icon: null,
   url: null,
   color: 'primary',
   typographyVariant: 'button',
@@ -18,9 +17,7 @@ export const defaultProps = {
   loadingComp: 'dots',
   isInput: null,
   accept: '.jpg, .jpeg, .png',
-  name: 'upload_button',
   inputProps: null,
-  icon: 'heart/gov',
   activeColor: 'white',
 }
 
@@ -29,7 +26,6 @@ export const propTypes = {
   outlined: bool,
   active: bool,
   disabled: bool,
-  Icon: any,
   color: string,
   url: string,
   text: oneOfType([node, string]),
@@ -40,6 +36,4 @@ export const propTypes = {
   loading: oneOfType([bool, string]),
   isInput: bool,
   inputProps: object,
-  name: string,
-  icon: string,
 }

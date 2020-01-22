@@ -30,25 +30,25 @@ const IconSearch = ({
 
   return (
     <Box styles={Wrapper}>
-        <Box styles={WrapperInput}>
-          <Animation show={show}>
-            <Form onSubmitSuccess={onSubmit}>
-              <Textfield name={inputName} placeholder='Search...' />
-            </Form>
-          </Animation>
-        </Box>
-
-        <Icon
-          style={styles}
-          onClick={toggleShow}
-          name={show ? closeIcon : mainIcon}
-          backgroundColor={backgroundColor}
-          background
-          noBackgroundChange
-          size={50}
-          boxShadow={boxShadow}
-        />
+      <Box styles={WrapperInput}>
+        <Animation show={show}>
+          <Form onSubmitSuccess={onSubmit}>
+            <Textfield name={inputName} placeholder='Search...' />
+          </Form>
+        </Animation>
       </Box>
+
+      <Icon
+        style={styles}
+        onClick={toggleShow}
+        name={show ? closeIcon : mainIcon}
+        backgroundColor={backgroundColor}
+        background
+        noBackgroundChange
+        size={50}
+        boxShadow={boxShadow}
+      />
+    </Box>
   )
 }
 

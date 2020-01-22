@@ -7,8 +7,8 @@ import Back from './'
 
 const BackComp = () => (
   <B title='back' color='black'>
-      <Back />
-    </B>
+    <Back />
+  </B>
 )
 
 storiesOf('Data-Display|Icon/Special', module).add('Back', () => <BackComp />)

@@ -209,10 +209,24 @@
   ]
 },
     
+"input button": {
+  "prefix": "wtbu",
+  "body": [
+    "import Button from '@tenjojeremy/web-toolkit/input/button'"
+  ]
+},
+    
 "input button styles 1": {
   "prefix": "wtbuttonstyles1",
   "body": [
     "import button1 from '@tenjojeremy/web-toolkit/input/button/styles/1'"
+  ]
+},
+    
+"input button styles base": {
+  "prefix": "wtbuttonstylesbase",
+  "body": [
+    "import buttonbase from '@tenjojeremy/web-toolkit/input/button/styles/base'"
   ]
 },
     
@@ -335,10 +349,10 @@
   ]
 },
     
-"navigation navbar base": {
-  "prefix": "wtba",
+"navigation navbar": {
+  "prefix": "wtna",
   "body": [
-    "import Base from '@tenjojeremy/web-toolkit/navigation/navbar/base'"
+    "import Navbar from '@tenjojeremy/web-toolkit/navigation/navbar'"
   ]
 },
     

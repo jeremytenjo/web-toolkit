@@ -13,9 +13,7 @@ const createTests = require('./templates/tests.js')
 
 const name = process.argv[2]
 
-const successMessage = `${emoji.get('white_check_mark')}  ${chalk.yellow(
-  name
-)} created!`
+const successMessage = `${emoji.get('white_check_mark')}  ${chalk.yellow(name)} created!`
 const { isValid, errorMessage } = validate(name)
 
 if (!isValid) return console.log(errorMessage)

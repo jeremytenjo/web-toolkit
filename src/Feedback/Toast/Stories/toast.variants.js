@@ -10,18 +10,18 @@ const Children = () => {
 
   return (
     <B title='center'>
-        <button
-          onClick={() =>
-            showToast({
-              location: 'center',
-              type: 'success',
-              message: 'Added to watchlist',
-            })
-          }
-        >
-          Show
-        </button>
-      </B>
+      <button
+        onClick={() =>
+          showToast({
+            location: 'center',
+            type: 'success',
+            message: 'Added to watchlist',
+          })
+        }
+      >
+        Show
+      </button>
+    </B>
   )
 }
 
@@ -40,14 +40,14 @@ const Wrapper = styled.div`
 const Variants = ({ Component: Toast }) => {
   return (
     <Wrapper>
-        <B title={`type = success`} noBackground>
-          <Toast />
-        </B>
+      <B title={`type = success`} noBackground>
+        <Toast />
+      </B>
 
-        <B title={`type = error`} noBackground>
-          <Toast type='error' />
-        </B>
-      </Wrapper>
+      <B title={`type = error`} noBackground>
+        <Toast type='error' />
+      </B>
+    </Wrapper>
   )
 }
 

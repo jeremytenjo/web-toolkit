@@ -17,25 +17,25 @@ const Variations = () => {
 
   return (
     <B title='required'>
-        <Form onSubmitSuccess={handleSubmit}>
-          <TextField
-            placeholder={placeholder}
-            name='exampleField1'
-            errorMessage='this is an error message'
-            validation={[{ name: 'required', message: 'Input required in this field' }]}
-          />
-          <br />
-          <Button
-            dataCy='textfield_submitButton'
-            type='submit'
-            text='Submit'
-            color='secondary'
-          />
-          <br />
-          <br />
-          <span>value:{submitValue}</span>
-        </Form>
-      </B>
+      <Form onSubmitSuccess={handleSubmit}>
+        <TextField
+          placeholder={placeholder}
+          name='exampleField1'
+          errorMessage='this is an error message'
+          validation={[{ name: 'required', message: 'Input required in this field' }]}
+        />
+        <br />
+        <Button
+          dataCy='textfield_submitButton'
+          type='submit'
+          text='Submit'
+          color='secondary'
+        />
+        <br />
+        <br />
+        <span>value:{submitValue}</span>
+      </Form>
+    </B>
   )
 }
 
