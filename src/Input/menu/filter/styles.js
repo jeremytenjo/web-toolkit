@@ -5,6 +5,7 @@ export default {
     right: 's',
     zIndex: 2,
   },
+  animationBox: { zIndex: 3 },
   filterBox: {
     backgroundColor: 'primaryLighter',
     position: 'fixed',

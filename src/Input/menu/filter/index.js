@@ -28,13 +28,7 @@ const Menu = ({ iconProps, iconWrapperStyles }) => {
         />
       </Box>
 
-      <Animation
-        show={show}
-        name='outmostIn'
-        style={{
-          zIndex: 3,
-        }}
-      >
+      <Animation show={show} name='outmostIn' style={styles.animationBox}>
         <Box styles={styles.filterBox}>
           <Typography text='Filter By' styles={styles.filterBox.title} />
         </Box>
