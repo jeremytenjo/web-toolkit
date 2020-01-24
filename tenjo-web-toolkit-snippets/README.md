@@ -272,10 +272,17 @@
   ]
 },
     
-"input menu": {
-  "prefix": "wtme",
+"input menu filter": {
+  "prefix": "wtfi",
   "body": [
-    "import Menu from '@tenjojeremy/web-toolkit/input/menu'"
+    "import Filter from '@tenjojeremy/web-toolkit/input/menu/filter'"
+  ]
+},
+    
+"input menu material": {
+  "prefix": "wtma",
+  "body": [
+    "import Material from '@tenjojeremy/web-toolkit/input/menu/material'"
   ]
 },
     
