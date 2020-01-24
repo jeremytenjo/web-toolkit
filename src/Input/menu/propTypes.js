@@ -2,10 +2,9 @@ import { array, func, object } from 'prop-types'
 
 export const defaultProps = {
   options: [],
+  iconWrapperStyles: null,
   itemProps: {},
-  iconProps: {
-    name: 'options/material',
-  },
+  iconProps: {},
   onSelect: () => null,
 }
 

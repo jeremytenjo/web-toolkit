@@ -1,5 +1,5 @@
 // Keyframes should be set before used in animate()
-export default ({ el, config, show, direction = 'bottomUp' }) => {
+export default ({ el, config, show, direction = 'bottomUp', returnsOnEnd }) => {
   const LOWEST_POINT = '0'
   const HEIGHEST_POINT = '-80px'
   const configEnd = {
@@ -9,7 +9,7 @@ export default ({ el, config, show, direction = 'bottomUp' }) => {
     direction: 'normal',
     easing: 'ease-in',
   }
-
+  const configEndQuick = { ...configEnd, delay: 0, duration: 200 }
   const keyframesStart = [
     {
       opacity: 0,
@@ -42,9 +42,17 @@ export default ({ el, config, show, direction = 'bottomUp' }) => {
     el.style.margin = '0 auto'
   }
 
-  el.animate(keyframesStart, config)
-  const anim = el.animate(keyframesEnd, configEnd)
-  anim.onfinish = () => {
-    if (!show) el.style.display = 'none'
+  if (show) el.animate(keyframesStart, config)
+
+  if (!returnsOnEnd && show !== null && !show) {
+    const anim = el.animate(keyframesEnd, configEndQuick)
+    anim.onfinish = () => (el.style.display = 'none')
+  }
+
+  if (returnsOnEnd) {
+    const anim = el.animate(keyframesEnd, configEnd)
+    anim.onfinish = () => {
+      if (!show) el.style.display = 'none'
+    }
   }
 }

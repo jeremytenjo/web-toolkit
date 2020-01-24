@@ -2,8 +2,8 @@ import React, { useState, memo } from 'react'
 import Menu_ui from '@material-ui/core/Menu'
 import Item from '@material-ui/core/MenuItem'
 
-import Icon from '../../../../dataDisplay/icon'
-import { defaultProps, propTypes } from '../../propTypes'
+import Icon from '../../../dataDisplay/icon'
+import { defaultProps, propTypes } from '../propTypes'
 
 const Menu = ({ options, onSelect, itemProps, iconProps, ...rest }) => {
   const optionsLength = options.length
@@ -22,7 +22,7 @@ const Menu = ({ options, onSelect, itemProps, iconProps, ...rest }) => {
 
   return (
     <>
-      <Icon onClick={handleClick} {...iconProps} />
+      <Icon onClick={handleClick} name='options/material' {...iconProps} />
 
       {optionsLength > 0 && (
         <Menu_ui

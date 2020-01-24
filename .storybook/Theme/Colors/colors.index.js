@@ -2,7 +2,7 @@ export default {
   primary: '#24c3a9',
   primaryDarker: '#005a34',
   primaryLighter: '#aaffdb',
-  primaryOpaque: 'rgba(36,195,151, 0.9)',
+  primaryOpaque: 'rgba(2, 63, 34, 0.65)',
 
   secondary: '#6700ca',
   secondaryDarker: '#6700ca',

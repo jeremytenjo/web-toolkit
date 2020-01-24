@@ -48,7 +48,11 @@ export default (props) => {
         key.includes('padding') ||
         key.includes('margin') ||
         key.includes('gap') ||
-        key.includes('Gap')
+        key.includes('Gap') ||
+        key.includes('top') ||
+        key.includes('right') ||
+        key.includes('bottom') ||
+        key.includes('left')
       )
         array.push(getString({ varName: 'spacing', key, value }))
       else if (key.includes('color') || key.includes('Color') || key.includes('fill'))

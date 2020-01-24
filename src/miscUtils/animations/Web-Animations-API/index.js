@@ -7,7 +7,7 @@ const defaultConfig = {
   easing: 'ease-out',
 }
 
-const AnimationIndex = ({
+export default ({
   name = 'showHide',
   el = null,
   config = defaultConfig,
@@ -18,7 +18,6 @@ const AnimationIndex = ({
 }) => {
   const wrapperRef = useRef(null)
   const element = el || wrapperRef
-
   const [animation, setAnimation] = useState(null)
 
   useEffect(() => {
@@ -45,10 +44,12 @@ const AnimationIndex = ({
   }
 
   return children ? (
-    <div style={{ display: 'none', ...style }} ref={wrapperRef}>
+    <div
+      style={{ display: 'none', ...style }}
+      ref={wrapperRef}
+      data-animation-wrapper='wrapper'
+    >
       {children}
     </div>
   ) : null
 }
-
-export default AnimationIndex

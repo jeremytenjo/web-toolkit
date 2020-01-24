@@ -33,7 +33,7 @@ export const ToastProvider = ({ children }) => {
       }}
     >
       {children}
-      <Animation name='outmostIn' style={{ zIndex: 999 }} show={Toast}>
+      <Animation name='outmostIn' returnsOnEnd style={{ zIndex: 999 }} show={Toast}>
         {Toast && Toast}
       </Animation>
     </ToastContext.Provider>

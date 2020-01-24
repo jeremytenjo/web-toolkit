@@ -15,15 +15,21 @@ const defineTag = (tag, variant) => {
   }
 }
 
+const El = styled.span`
+  ${system}
+`
+
 const Typography = ({ tag, variant, styles, onClick, text }) => {
   const className = `typography-${variant}`
   const Tag = defineTag(tag, variant)
 
-  const El = styled[Tag]`
-    ${system}
-  `
   return (
-    <El styles={{ color: 'black', ...styles }} className={className} onClick={onClick}>
+    <El
+      as={Tag}
+      styles={{ color: 'black', ...styles }}
+      className={className}
+      onClick={onClick}
+    >
       {text}
     </El>
   )
