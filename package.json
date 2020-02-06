@@ -31,8 +31,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "yarn lint:fix",
-      "yarn pretty",
+      "npm run lint:fix",
+      "npm run pretty",
       "prettier --list-different",
       "jest --passWithNoTests"
     ]
