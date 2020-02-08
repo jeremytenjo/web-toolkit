@@ -27,10 +27,10 @@
   ]
 },
     
-"dataDisplay appBar Styles canadagov": {
-  "prefix": "wtca",
+"dataDisplay appBar styles canadagov": {
+  "prefix": "wtappBarstylescanadagov",
   "body": [
-    "import Canadagov from '@tenjojeremy/web-toolkit/dataDisplay/appBar/Styles/canadagov'"
+    "import appBarcanadagov from '@tenjojeremy/web-toolkit/dataDisplay/appBar/styles/canadagov'"
   ]
 },
     
@@ -62,10 +62,10 @@
   ]
 },
     
-"dataDisplay cards video Styles tvguide": {
-  "prefix": "wttv",
+"dataDisplay cards video styles tvguide": {
+  "prefix": "wtcardsvideostylestvguide",
   "body": [
-    "import Tvguide from '@tenjojeremy/web-toolkit/dataDisplay/cards/video/Styles/tvguide'"
+    "import cardstvguide from '@tenjojeremy/web-toolkit/dataDisplay/cards/video/styles/tvguide'"
   ]
 },
     
@@ -335,10 +335,10 @@
   ]
 },
     
-"miscUtils AddToHomeScreen": {
+"miscUtils addToHomeScreen": {
   "prefix": "wtad",
   "body": [
-    "import AddToHomeScreen from '@tenjojeremy/web-toolkit/miscUtils/AddToHomeScreen'"
+    "import AddToHomeScreen from '@tenjojeremy/web-toolkit/miscUtils/addToHomeScreen'"
   ]
 },
     
