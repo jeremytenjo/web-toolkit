@@ -15,7 +15,7 @@
     "publish:library": "npm run build:library && npm version minor && cp package.json ./build && cd build && npm publish && cd ../ && rmdir /s /q build",
     "publish:snippets": "npm run build:library && npm run build:snippets && cd tenjo-web-toolkit-snippets && vsce publish minor && gpush && code --install-extension tenjojeremy.tenjo-web-toolkit-snippets --force",
     "test": "jest",
-    "pretty": "prettier \"**/*.js\" --write",
+    "prettify": "prettier \"**/*.js\" --write",
     "cy:open": "cypress open",
     "cy:run": "cypress run --browser chrome",
     "cy:run-ci": "start-server-and-test start http://localhost:9002 cy:run",
