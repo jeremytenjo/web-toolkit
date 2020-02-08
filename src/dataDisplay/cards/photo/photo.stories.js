@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/customComponents/variationBlock'
-import Contact from '../../../contact/1'
-import Modal from '../../../../../feedback/modal'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import Contact from '../contact/1'
+import Modal from '../../../feedback/modal'
 
-import Photo1 from './1/photo.index'
+import Photo1 from './styles/1/photo.index'
 
 const avatarImageUrl =
   'https://firebasestorage.googleapis.com/v0/b/estilistta.appspot.com/o/hayle.jpeg?alt=media&token=b8eb9208-6456-4075-9f57-c2c680745604'

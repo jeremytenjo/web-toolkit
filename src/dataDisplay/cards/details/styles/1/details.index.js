@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
 
-import Icon from '../../../../../icon'
-import StarsRating from '../../../../../../feedback/rating'
-import Typography from '../../../../../typography'
-import Avatar from '../../../../../avatars'
+import Icon from '../../../../icon'
+import StarsRating from '../../../../../feedback/rating'
+import Typography from '../../../../typography'
+import Avatar from '../../../../avatars'
 
 import {
   Wrapper,

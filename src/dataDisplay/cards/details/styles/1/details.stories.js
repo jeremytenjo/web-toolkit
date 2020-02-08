@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../../.storybook/customComponents/variationBlock'
+import B from '../../../../../../.storybook/customComponents/variationBlock'
 
 import Details from './details.index'
 

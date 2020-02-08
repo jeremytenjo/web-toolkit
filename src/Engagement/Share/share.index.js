@@ -1,4 +1,4 @@
-import ShareInit from './Functions/share.init'
-import ShareIsSupported from './Functions/share.isSupported'
+import ShareInit from './functions/share.init'
+import ShareIsSupported from './functions/share.isSupported'
 
 export { ShareInit, ShareIsSupported }

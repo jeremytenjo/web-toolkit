@@ -4,8 +4,8 @@ import Box from '../../../box'
 import Typography from '../../../typography'
 import Image from '../../../../media/image'
 
-import { WrapperStyles, TypographyWrapperStyles, ImageStyles } from './canadagov.styles'
-import { defaultProps, propTypes } from './canadagov.propTypes'
+import { WrapperStyles, TypographyWrapperStyles, ImageStyles } from './styles'
+import { defaultProps, propTypes } from './propTypes'
 
 const AppbarCangov = ({
   title,
