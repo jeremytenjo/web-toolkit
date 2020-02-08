@@ -1,0 +1,116 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import Typography from '../'
+
+<Meta title='Data-display|Typography|React' />
+
+#### Usage
+
+```js
+import Typography from '@tenjojeremy/web-toolkit/dataDisplay/typography'
+ ```
+
+```js
+ <Typography tag='h4' variant='h3' text='Header 3' />
+ ```
+
+<Props of={Typography} />
+
+
+ #### Styling 
+
+ `variant` h3 will apply class .typography-h3 {}
+
+<Preview>
+<Story name='varitions'>
+   <>
+    <B background>
+      <div style={{ display: 'grid', gridGap: '20px' }}>
+        <Typography variant='h1' text='Header 1' />
+        <Typography variant='h2' text='Header 2' />
+        <Typography variant='h3' tag='h4' text='Header 3' />
+        <Typography variant='h4' text='Header 4' />
+        <Typography variant='h5' text='Header 5' />
+        <Typography variant='h6' text='Header 6' />
+        <Typography variant='subtitle1' text='Subtitle 1' />
+        <Typography variant='subtitle2' text='Subtitle 2' />
+        <Typography variant='body1' text='Body 1' />
+        <Typography variant='body2' text='Body 2' />
+        <Typography variant='button' text='Button' />
+        <Typography variant='caption' text='Caption' />
+        <Typography variant='overline' text='Overline' />
+      </div>
+    </B>
+  </>
+</Story>
+</Preview>
+
+
+
+ #### Classes examples 
+
+```css
+ .typography-h1 {
+    font-family:  var(--font-primary);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 96px;
+    letter-spacing: -1.5px;
+    color: var(--color-black)
+  }
+
+  .typography-h2 {
+    font-family:  var(--font-primary);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    letter-spacing: -0.5px;
+    color: var(--color-black)
+  }
+
+  .typography-body1 {
+    font-family:  var(--font-primary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: var(--color-black)
+  }
+
+  .typography-subtitle1 {
+    font-family:  var(--font-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  color: var(--color-black)
+  }
+
+  .typography-button {
+    font-family:  var(--font-primary);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: var(--color-black)
+  }
+  .typography-caption {
+    font-family:  var(--font-primary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: var(--color-black)
+  }
+  .typography-overline {
+    font-family:  var(--font-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-black)
+  }
+}
+```

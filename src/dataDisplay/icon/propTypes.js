@@ -1,0 +1,40 @@
+import { string, number, func, object, bool } from 'prop-types'
+
+export const defaultProps = {
+  name: null,
+  style: {},
+  color: 'white',
+  onClick: () => null,
+  background: null,
+  size: 45,
+  backgroundColor: 'primary',
+  labelStyles: { color: 'primaryDarker' },
+  noBackground: null,
+  dark: null,
+  noBackgroundChange: null,
+  outlined: null,
+  link: null,
+  inputProps: null,
+  plain: null,
+  label: { tag: 'span', variant: 'body2', text: null },
+  router: { push: () => null },
+}
+
+export const propTypes = {
+  name: string.isRequired,
+  style: object,
+  color: string,
+  backgroundColor: string,
+  onClick: func,
+  background: bool,
+  noBackground: bool,
+  size: number,
+  label: object,
+  dark: bool,
+  noBackgroundChange: bool,
+  plain: bool,
+  outlined: bool,
+  link: string,
+  inputProps: object,
+  router: object,
+}

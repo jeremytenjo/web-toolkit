@@ -1,0 +1,55 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import styled from 'styled-components'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import System from '../system.index'
+import Example from './system.example'
+
+<Meta title='Theme|System' />
+
+#### Usage
+
+Pass a `styles` object with styles, arrays generate media queries set in the styles components theme provider
+
+if mediaQueries = [700, 1200]  color: ['primary', 'secondary'] === 0-700 = primary, 700-1200=secondary
+
+```js
+import System from '@tenjojeremy/web-toolkit/theme/system/system.index'
+ ```
+
+```js
+import React from 'react'
+import styled from 'styled-components'
+
+import System from '@tenjojeremy/web-toolkit/theme/system/system.index'
+
+const Wrapper = styled.div`
+  ${system}
+`
+
+export default () => (
+  <Wrapper styles={{ color: ['primary', 'secondary'], margin:'xl' }}>
+    Theme system
+  </Wrapper>
+)
+
+ ```
+
+<Preview>
+<Story name='example'>
+   <>
+    <Example />
+  </>
+</Story>
+</Preview>
+
+
+#### Selectors
+
+Add a `:` before selector, accepts arrays in styles 
+
+```js 
+ ':hover': {
+        color: 'white',
+        backgroundColor: ['white', 'red'],
+      },
+``` 
