@@ -12,7 +12,7 @@
     "build:library": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./.babelrc ./src --out-dir ./build/ --ignore 'src/**/*.spec.js','src/**/*.spec-cy.js','src/**/*.test.js','src/**/*.stories.js' ",
     "build:storybook": "build-storybook -c .storybook -o .storybook/storybook-build -s public",
     "deploy:firebase": "npm run build:storybook && firebase deploy",
-    "publish:library": "npm run build:library && npm version minor && cp package.json ./build && cd build && npm publish && cd ../ && rmdir /s /q build",
+    "publish:library": "npm run build:library && npm version minor && cp package.json ./build && cp .npmrc ./build && cd build && npm publish && cd ../ && rmdir /s /q build",
     "publish:snippets": "npm run build:library && npm run build:snippets && cd tenjo-web-toolkit-snippets && vsce publish minor && gpush && code --install-extension tenjojeremy.tenjo-web-toolkit-snippets --force",
     "test": "jest",
     "prettify": "prettier \"**/*.js\" --write",
