@@ -8,8 +8,6 @@ export const Wrapper = {
 
 export const WrapperInput = {
   position: 'absolute',
-  left: '50%',
-  transform: 'translateX(-50%)',
-  top: '-70px',
+  transform: 'translateY(-70px)',
   width: '250px',
 }
