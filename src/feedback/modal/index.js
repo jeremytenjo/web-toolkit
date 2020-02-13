@@ -1,4 +1,4 @@
-import React, { memo, useRef } from 'react'
+import React, { memo, useRef, useEffect } from 'react'
 
 import Overlay from '../../miscUtils/overlay'
 import Animation from '../../miscUtils/animations/Web-Animations-API'
@@ -15,6 +15,12 @@ const Modal = ({
   style,
   overlayStyles,
 }) => {
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyInput, true)
+    return window.removeEventListener('keydown', handleKeyInput)
+  }, [])
+  const handleKeyInput = ({ key }) => key === 'Escape' && onClose()
+
   const modalRef = useRef(null)
 
   return (

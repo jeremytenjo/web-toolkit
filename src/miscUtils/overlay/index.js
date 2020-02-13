@@ -29,11 +29,13 @@ const Overlay = ({
   }, [])
 
   useEffect(() => {
-    if (disableScrollOnShow) show ? disableScroll() : enableScroll()
+    if (disableScrollOnShow && show) handleBodyScroll(show)
   }, [show])
 
-  const disableScroll = () => (document.body.style.overflow = 'hidden')
-  const enableScroll = () => (document.body.style.overflow = 'auto')
+  const handleBodyScroll = (show) => {
+    const overflow = show ? 'hidden' : 'auto'
+    document.body.style.overflow = overflow
+  }
 
   const handleKeyInput = ({ key }) => key === 'Escape' && onClick()
 
