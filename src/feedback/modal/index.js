@@ -8,7 +8,6 @@ import { Wrapper } from './styles'
 
 const Modal = ({
   show,
-  type,
   children,
   onClose,
   animationStyle,
@@ -26,7 +25,7 @@ const Modal = ({
         el={modalRef}
         style={animationsStyles}
       />
-      <Wrapper ref={modalRef} type={type} style={style}>
+      <Wrapper ref={modalRef} style={style}>
         {children}
       </Wrapper>
 

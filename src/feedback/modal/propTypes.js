@@ -8,7 +8,6 @@ export const defaultProps = {
   style: {},
   overlayStyles: {},
   animationsStyles: {},
-  type: 'center',
   animationStyle: 'centerOut',
 }
 

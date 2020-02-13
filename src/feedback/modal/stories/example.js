@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
-import { storiesOf } from '@storybook/react'
 
 import B from '../../../../.storybook/customComponents/variationBlock'
 import Dialog from '../../dialog/styles/1'
-import Modal from '../'
 
-import markdown from './README.md'
+import Modal from '..'
 
-const Variations = () => {
+export default () => {
   const [show, setShow] = useState(null)
   const showit = () => setShow(true)
   const hideit = () => setShow(false)
 
   return (
-    <B title='Center'>
+    <B title='centerOut'>
       <button onClick={showit}>Show Modal</button>
 
       <Modal show={show} animationStyle='centerOut' onClose={() => setShow(false)}>
@@ -22,7 +20,3 @@ const Variations = () => {
     </B>
   )
 }
-
-storiesOf('Feedback|Modal', module).add('example', () => <Variations />, {
-  notes: { markdown },
-})
