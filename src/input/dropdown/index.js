@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState } from 'react'
 
-import { defaultProps, propTypes } from './dropdown.propTypes'
-import { Wrapper, Other } from './dropdown.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper, Other } from './styles'
 
 const Dropdown = ({ inputStyle }) => {
   const [Textfield, setTextField] = useState(null)
@@ -11,7 +11,7 @@ const Dropdown = ({ inputStyle }) => {
   }, [])
 
   const importTextfield = async () => {
-    let mod = await import(`../../../form/textField/styles/${inputStyle}`)
+    let mod = await import(`../form/textField/styles/${inputStyle}`)
     setTextField(mod.default)
   }
 

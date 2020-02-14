@@ -1,10 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../.storybook/customComponents/variationBlock'
-import Chip from '../../../../dataDisplay/chip'
-
-import Collection from './collection.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import Chip from '../../../dataDisplay/chip'
+import Collection from '../index'
 
 const Variations = () => {
   return (
