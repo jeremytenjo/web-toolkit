@@ -2,7 +2,7 @@ import { cypressVisitBaseUrl } from '../../../../.storybook/contants'
 
 context('Overlay', () => {
   beforeEach(() => {
-    cy.visit(`${cypressVisitBaseUrl}misc-utils-overlay--variations`)
+    cy.visit(`${cypressVisitBaseUrl}misc-utils-overlay--example`)
   })
 
   it('shows on button click & hides on overlay click', function() {
