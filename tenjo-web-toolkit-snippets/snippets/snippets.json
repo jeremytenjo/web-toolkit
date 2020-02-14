@@ -160,13 +160,6 @@
   ]
 },
     
-"feedback fullscreen": {
-  "prefix": "wtfu",
-  "body": [
-    "import Fullscreen from '@tenjojeremy/web-toolkit/feedback/fullscreen'"
-  ]
-},
-    
 "feedback modal": {
   "prefix": "wtmo",
   "body": [
@@ -367,6 +360,13 @@
   "prefix": "wtst",
   "body": [
     "import Sticky from '@tenjojeremy/web-toolkit/miscUtils/position/sticky'"
+  ]
+},
+    
+"miscUtils scrolling eventListeners scrollEnd": {
+  "prefix": "wtsc",
+  "body": [
+    "import ScrollEnd from '@tenjojeremy/web-toolkit/miscUtils/scrolling/eventListeners/scrollEnd'"
   ]
 },
     
