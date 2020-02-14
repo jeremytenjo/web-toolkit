@@ -237,6 +237,20 @@
   ]
 },
     
+"input collection": {
+  "prefix": "wtco",
+  "body": [
+    "import Collection from '@tenjojeremy/web-toolkit/input/collection'"
+  ]
+},
+    
+"input dropdown": {
+  "prefix": "wtdr",
+  "body": [
+    "import Dropdown from '@tenjojeremy/web-toolkit/input/dropdown'"
+  ]
+},
+    
 "input form": {
   "prefix": "wtfo",
   "body": [
@@ -255,6 +269,20 @@
   "prefix": "wtformselectstylestvguide",
   "body": [
     "import formtvguide from '@tenjojeremy/web-toolkit/input/form/select/styles/tvguide'"
+  ]
+},
+    
+"input form switch": {
+  "prefix": "wtsw",
+  "body": [
+    "import Switch from '@tenjojeremy/web-toolkit/input/form/switch'"
+  ]
+},
+    
+"input form switch styles 1": {
+  "prefix": "wtformswitchstyles1",
+  "body": [
+    "import form1 from '@tenjojeremy/web-toolkit/input/form/switch/styles/1'"
   ]
 },
     
