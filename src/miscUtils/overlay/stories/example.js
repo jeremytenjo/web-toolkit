@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { storiesOf } from '@storybook/react'
 
 import B from '../../../../.storybook/customComponents/variationBlock'
-import Button from '../../../input/button/styles/base/'
-import Overlay from '../'
+import Button from '../../../input/button/styles/base'
 
-const Variations = () => {
+import Overlay from '..'
+
+export default () => {
   const [show, setshow] = useState(null)
   return (
     <B title='default' noBackground>
@@ -40,5 +40,3 @@ const Variations = () => {
     </B>
   )
 }
-
-storiesOf('Misc-Utils|Overlay', module).add('variations', () => <Variations />)
