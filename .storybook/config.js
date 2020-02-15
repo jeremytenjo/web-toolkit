@@ -6,7 +6,6 @@ import theme from './theme'
 import './firebase'
 import ViewportOptions from './addons/viewport'
 
-// Theme
 addParameters({
   options: {
     name: 'Web Toolkit',
@@ -15,9 +14,6 @@ addParameters({
     showPanel: false,
   },
   viewport: ViewportOptions,
-})
-
-addParameters({
   docs: {
     container: DocsContainer,
     page: DocsPage,
