@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../.storybook/customComponents/variationBlock'
 
-import shadows from './shadow.index'
+import shadows from './'
 
 const vars = shadows.split('boxShadow')
 vars.pop()

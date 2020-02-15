@@ -1,4 +1,4 @@
-import colors from './colors.index'
+import colors from './index'
 
 const {
   primary,

@@ -1,10 +1,10 @@
 import { create } from '@storybook/theming'
-import colors from './colors/colors.index.js'
+import colors from './colors'
 
-import './typography/fonts/fonts.css'
+import './typography/fonts/index.css'
 
 // Add theme to <head>
-import headCss from './head/theme.head'
+import headCss from './head'
 document.write(headCss)
 
 export default () => {
