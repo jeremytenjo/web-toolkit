@@ -1,6 +1,6 @@
 import React, { memo, useRef, useState } from 'react'
 
-import getValues from './functions/form.getValues'
+import getValues from './functions/getValues'
 import checkInvalidValues from './functions/checkInvalidValues'
 import { defaultProps, propTypes } from './propTypes'
 
