@@ -5,8 +5,8 @@ import { defaultProps, propTypes } from './propTypes'
 const Switch = ({ Wrapper }) => {
   return (
     <Wrapper>
-      <input type='checkbox' className='switch' name='s1' id='s1' />
-      <label htmlFor='s1'>Switch</label>
+      <input type='checkbox' name='c1' id='c1' />
+      <label htmlFor='c1'>Checkbox</label>
     </Wrapper>
   )
 }
