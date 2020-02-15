@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-import Animation from '../'
+import Animation from '..'
 
 const Example = ({ type }) => {
   const divRef = useRef(null)

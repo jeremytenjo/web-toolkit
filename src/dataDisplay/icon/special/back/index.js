@@ -10,13 +10,11 @@ const IconBack = ({
 }) => {
   const { push } = router
 
-  // Functions
   const goBack = () => {
     to ? push(to) : goBack()
     onGoBack()
   }
 
-  // Template
   return <Icon name={icon} onClick={goBack} />
 }
 

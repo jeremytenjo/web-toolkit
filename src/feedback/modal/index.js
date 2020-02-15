@@ -17,7 +17,7 @@ const Modal = ({
 }) => {
   useEffect(() => {
     window.addEventListener('keydown', handleKeyInput, true)
-    return window.removeEventListener('keydown', handleKeyInput)
+    return () => window.removeEventListener('keydown', handleKeyInput)
   }, [])
   const handleKeyInput = ({ key }) => key === 'Escape' && onClose()
 

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/customComponents/variationBlock'
 
-import Example from './animation.example'
+import Example from './variants'
 
 const variationsReq = require.context('../types', true, /.js$/)
 const animationTypesPaths = variationsReq.keys()

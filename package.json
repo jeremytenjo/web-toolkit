@@ -32,7 +32,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "npm run lint:fix",
-      "npm run pretty",
+      "npm run prettify",
       "prettier --list-different",
       "jest --passWithNoTests"
     ]
