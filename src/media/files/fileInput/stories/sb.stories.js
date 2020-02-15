@@ -3,7 +3,8 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/customComponents/variationBlock'
 import Form from '../../../../input/form'
-import FileInput from '../'
+
+import FileInput from '..'
 
 const Variations = () => {
   const handleForm = (e) => {

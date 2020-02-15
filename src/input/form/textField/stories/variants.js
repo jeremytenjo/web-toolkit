@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import B from '../../../../../.storybook/customComponents/variationBlock'
-import Form from '../../'
+import Form from '../..'
 import { useVariants } from '../../../../../.storybook/utils/useVariants'
 
 // Test data

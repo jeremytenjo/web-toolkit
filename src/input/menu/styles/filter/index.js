@@ -1,11 +1,11 @@
 import React, { useState, memo } from 'react'
 
-import Typography from '../../../dataDisplay/typography/'
-import Animation from '../../../miscUtils/animations/Web-Animations-API/index'
-import Overlay from '../../../miscUtils/overlay/index'
-import Icon from '../../../dataDisplay/icon/index'
-import Box from '../../../dataDisplay/box/index'
-import { defaultProps, propTypes } from '../propTypes'
+import Typography from '../../../../dataDisplay/typography/'
+import Animation from '../../../../miscUtils/animations/Web-Animations-API/index'
+import Overlay from '../../../../miscUtils/overlay/index'
+import Icon from '../../../../dataDisplay/icon/index'
+import Box from '../../../../dataDisplay/box/index'
+import { defaultProps, propTypes } from '../../propTypes'
 
 import styles from './styles'
 

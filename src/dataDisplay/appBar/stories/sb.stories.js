@@ -1,13 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react'
 
-import Box from '../box/index'
-import B from '../../../.storybook/customComponents/variationBlock'
+import Box from '../../box/index'
+import B from '../../../../.storybook/customComponents/variationBlock'
 
 export default {
   title: 'Data-Display|AppBar',
 }
 
-const req = require.context('./styles', true, /index.js$/)
+const req = require.context('../styles', true, /index.js$/)
 const paths = req.keys()
 
 const StylesList = () => {

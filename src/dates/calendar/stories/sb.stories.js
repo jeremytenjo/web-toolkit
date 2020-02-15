@@ -1,10 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../.storybook/customComponents/variationBlock'
-
-import stubs from './calendar.stubs'
-import Calendar from './calendar.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import stubs from '../calendar.stubs'
+import Calendar from '../calendar.index'
 
 const Variations = () => (
   <B title='Default' background>

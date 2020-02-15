@@ -2,7 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import B from '../../../../.storybook/customComponents/variationBlock'
-import Ratings from '../'
+
+import Ratings from '..'
 
 const Variations = () => {
   return (

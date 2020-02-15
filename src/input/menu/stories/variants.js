@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import B from '../../../../../.storybook/customComponents/variationBlock'
-import { useVariants } from '../../../../../.storybook/utils/useVariants'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import { useVariants } from '../../../../.storybook/utils/useVariants'
 
 const Variants = ({ Component: Menu }) => {
   const [loading, setLoading] = useState(null)

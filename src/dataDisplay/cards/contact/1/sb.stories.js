@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import B from '../../../../../.storybook/customComponents/variationBlock'
 
-import Contact from './'
+import Contact from '.'
 
 const name = 'Hayle Whitehead'
 const photoUrl =
