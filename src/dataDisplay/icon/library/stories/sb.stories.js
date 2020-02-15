@@ -1,13 +1,13 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../.storybook/customComponents/variationBlock'
-import List from '../../list/index'
-import Icon from '../index'
+import B from '../../../../../.storybook/customComponents/variationBlock'
+import List from '../../../list/index'
+import Icon from '../../index'
 
 const pathsToIgnore = ['./iconSets.stories.js']
 
-const iconsReq = require.context('./', true, /.js$/)
+const iconsReq = require.context('../', true, /.js$/)
 const iconsPaths = iconsReq.keys()
 
 let iconNames = {}
@@ -16,9 +16,12 @@ iconsPaths.map((path) => {
   let split = path.split('/')
   const shortname = split[1]
   const hasKey = Object.prototype.hasOwnProperty.call(iconNames, shortname)
+  const isStory = shortname === 'stories'
 
-  if (hasKey) iconNames[shortname].push(path)
-  else iconNames[shortname] = [path]
+  if (!isStory) {
+    if (hasKey) iconNames[shortname].push(path)
+    else iconNames[shortname] = [path]
+  }
 })
 
 const loadIcons = () => {
