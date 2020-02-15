@@ -2,10 +2,10 @@
   "name": "tenjo-web-toolkit-snippets",
   "displayName": "Tenjo-Web-Toolkit-Snippets",
   "repository": "git://github.com/tenjojeremy/Web-Toolkit.git",
-  "description": "Snippets for @tenjojeremy/web-toolkit",
+  "description": "Library repo: https://github.com/tenjojeremy/web-toolkit",
   "icon": "logo-snippets.png",
   "publisher": "tenjojeremy",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "engines": {
     "vscode": "^1.36.0"
   },
