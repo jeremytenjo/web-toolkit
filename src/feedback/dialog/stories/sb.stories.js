@@ -5,7 +5,7 @@ import DialogStyle1 from '../styles/1'
 import List from '../../../dataDisplay/list/index'
 
 import markdown from './README.md'
-import Variations from './dialog.variations'
+import Variations from './variations'
 
 const All = () => (
   <List>

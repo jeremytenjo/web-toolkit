@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 
 import Icon from '../..'
 
-import { defaultProps, propTypes } from './like.propTypes.js'
+import { defaultProps, propTypes } from './propTypes.js'
 
 const IconLike = ({ liked, onLike, onUnlike }) =>
   liked ? (

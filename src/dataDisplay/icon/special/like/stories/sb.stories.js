@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../.storybook/customComponents/variationBlock'
+import B from '../../../../../../.storybook/customComponents/variationBlock'
 
-import Like from './'
+import Like from '..'
 
 const Example = () => {
   const [liked, setLiked] = useState(null)
