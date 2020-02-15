@@ -132,6 +132,20 @@
   ]
 },
     
+"dates calendar": {
+  "prefix": "wtca",
+  "body": [
+    "import Calendar from '@tenjojeremy/web-toolkit/dates/calendar'"
+  ]
+},
+    
+"dates catePicker": {
+  "prefix": "wtca",
+  "body": [
+    "import CatePicker from '@tenjojeremy/web-toolkit/dates/catePicker'"
+  ]
+},
+    
 "engagement chat": {
   "prefix": "wtch",
   "body": [
