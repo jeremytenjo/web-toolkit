@@ -251,6 +251,20 @@
   ]
 },
     
+"input form checkbox": {
+  "prefix": "wtch",
+  "body": [
+    "import Checkbox from '@tenjojeremy/web-toolkit/input/form/checkbox'"
+  ]
+},
+    
+"input form checkbox styles 1": {
+  "prefix": "wtformcheckboxstyles1",
+  "body": [
+    "import form1 from '@tenjojeremy/web-toolkit/input/form/checkbox/styles/1'"
+  ]
+},
+    
 "input form": {
   "prefix": "wtfo",
   "body": [
@@ -307,17 +321,17 @@
   ]
 },
     
-"input menu filter": {
-  "prefix": "wtfi",
+"input menu styles filter": {
+  "prefix": "wtmenustylesfilter",
   "body": [
-    "import Filter from '@tenjojeremy/web-toolkit/input/menu/filter'"
+    "import menufilter from '@tenjojeremy/web-toolkit/input/menu/styles/filter'"
   ]
 },
     
-"input menu material": {
-  "prefix": "wtma",
+"input menu styles material": {
+  "prefix": "wtmenustylesmaterial",
   "body": [
-    "import Material from '@tenjojeremy/web-toolkit/input/menu/material'"
+    "import menumaterial from '@tenjojeremy/web-toolkit/input/menu/styles/material'"
   ]
 },
     
@@ -451,6 +465,13 @@
   "prefix": "wtst",
   "body": [
     "import Storage from '@tenjojeremy/web-toolkit/storage/firebase/storage'"
+  ]
+},
+    
+"theme shadow": {
+  "prefix": "wtsh",
+  "body": [
+    "import Shadow from '@tenjojeremy/web-toolkit/theme/shadow'"
   ]
 },
     
