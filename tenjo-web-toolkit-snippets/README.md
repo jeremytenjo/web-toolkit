@@ -104,6 +104,13 @@
   ]
 },
     
+"dataDisplay icon special srollBackToTop": {
+  "prefix": "wtsr",
+  "body": [
+    "import SrollBackToTop from '@tenjojeremy/web-toolkit/dataDisplay/icon/special/srollBackToTop'"
+  ]
+},
+    
 "dataDisplay illustration": {
   "prefix": "wtil",
   "body": [
