@@ -1,9 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../../../../.storybook/customComponents/variationBlock'
-
-import Details from './details.index'
+import B from '../../../../../../../.storybook/customComponents/variationBlock'
+import Details from '../details.index'
 
 const name = 'Hayle Whitehead'
 const photoUrl =

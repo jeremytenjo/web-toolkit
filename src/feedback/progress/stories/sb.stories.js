@@ -1,11 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../.storybook/customComponents/variationBlock'
-
-import Linear from './linear'
-import Donut from './donut'
-import Dots from './dots'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import Linear from '../linear'
+import Donut from '../donut'
+import Dots from '../dots'
 
 const Variations = () => {
   return (

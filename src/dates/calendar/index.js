@@ -5,10 +5,10 @@ import isSameDay from 'date-fns/isSameDay'
 import daysList from '../utils/daysList'
 import monthList from '../utils/monthList'
 import Day from '../day/day.index'
-import DatePicker from '../catePicker/datePicker.index'
+import DatePicker from '../catePicker'
 
-import { defaultProps, propTypes } from './calendar.propTypes'
-import { Wrapper, WeekDaysTitles, DayGrid, DatePickersCon } from './calendar.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper, WeekDaysTitles, DayGrid, DatePickersCon } from './styles'
 
 const Calendar = ({ onDateSelect, yearRange, events }) => {
   const currentYear = new Date().getFullYear()

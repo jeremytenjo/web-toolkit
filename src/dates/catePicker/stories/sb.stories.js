@@ -1,9 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import B from '../../../.storybook/customComponents/variationBlock'
-
-import DatePicker from './datePicker.index'
+import B from '../../../../.storybook/customComponents/variationBlock'
+import DatePicker from '../index'
 
 const Variations = () => (
   <>

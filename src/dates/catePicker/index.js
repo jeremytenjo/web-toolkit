@@ -3,8 +3,8 @@ import React, { memo, useRef, useState, useEffect } from 'react'
 import monthData from '../utils/monthList'
 import Icon from '../../dataDisplay/icon'
 
-import { defaultProps, propTypes } from './datePicker.propTypes'
-import { Wrapper } from './datePicker.styles'
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper } from './styles'
 
 const DatePicker = ({ arrowColor, onSelect, color, type, yearRange, arrowName }) => {
   const selectRef = useRef(null)
