@@ -5,6 +5,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-sizing: border-box;
   font-family: var(--font-primary);
+  color: black;
 }
 
 *,
