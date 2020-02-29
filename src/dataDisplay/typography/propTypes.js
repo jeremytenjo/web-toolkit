@@ -3,7 +3,7 @@ import { string, func, oneOfType, number, object } from 'prop-types'
 export const defaultProps = {
   tag: 'span',
   variant: 'body2',
-  styles: { color: 'black' },
+  styles: {},
   onClick: () => null,
   text: '',
 }
