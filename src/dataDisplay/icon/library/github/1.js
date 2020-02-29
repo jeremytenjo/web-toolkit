@@ -3,8 +3,6 @@ import React from 'react'
 export default () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    width='512'
-    height='512'
     x='0'
     y='0'
     enableBackground='new 0 0 512 512'
