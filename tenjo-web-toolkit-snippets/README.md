@@ -1,4 +1,11 @@
 { 
+"ambient particles": {
+  "prefix": "wtpa",
+  "body": [
+    "import Particles from '@tenjojeremy/web-toolkit/ambient/particles'"
+  ]
+},
+    
 "analytics firebase": {
   "prefix": "wtfi",
   "body": [
@@ -493,6 +500,13 @@
   "prefix": "wtsh",
   "body": [
     "import Shadow from '@tenjojeremy/web-toolkit/theme/shadow'"
+  ]
+},
+    
+"theme system": {
+  "prefix": "wtsy",
+  "body": [
+    "import System from '@tenjojeremy/web-toolkit/theme/system'"
   ]
 },
     
