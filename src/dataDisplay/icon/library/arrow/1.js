@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ArrowSVG = () => (
+export default () => (
   <svg
     width='8'
     height='12'
@@ -15,5 +15,3 @@ const ArrowSVG = () => (
     />
   </svg>
 )
-
-export default ArrowSVG
