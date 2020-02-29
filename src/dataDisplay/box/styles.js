@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import system from '../../theme/system/system.index'
+import system from '../../theme/system'
 
 export const Wrapper = styled.div`
   ${system}

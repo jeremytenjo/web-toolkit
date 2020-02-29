@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
 
-import system from '../../theme/system/system.index'
+import system from '../../theme/system'
 
 import { defaultProps, propTypes } from './propTypes'
 

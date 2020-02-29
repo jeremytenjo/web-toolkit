@@ -3,7 +3,7 @@ import decamelize from 'decamelize'
 export default (props) => {
   const {
     styles,
-    theme: { mediaQueries = [700, 1200] },
+    theme: { mediaQueries = [400, 700, 1200] },
   } = props
   const selectors = []
   mediaQueries.unshift(0)
