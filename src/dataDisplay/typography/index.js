@@ -24,12 +24,7 @@ const Typography = ({ tag, variant, styles, onClick, text }) => {
   const Tag = defineTag(tag, variant)
 
   return (
-    <El
-      as={Tag}
-      styles={{ color: 'black', ...styles }}
-      className={className}
-      onClick={onClick}
-    >
+    <El as={Tag} styles={styles} className={className} onClick={onClick}>
       {text}
     </El>
   )
