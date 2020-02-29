@@ -46,6 +46,7 @@
     "decamelize": "^4.0.0",
     "react-bottom-scroll-listener": "^3.0.0",
     "react-lazyload": "^2.6.5",
+    "react-particles-js": "^2.7.1",
     "react-router-dom": "^5.1.2",
     "react-stars": "^2.2.5",
     "styled-components": "^5.0.1",
