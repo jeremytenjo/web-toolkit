@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import system from '../'
+import system from '..'
 
 const Wrapper = styled.div`
   ${system}
