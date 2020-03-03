@@ -3,10 +3,11 @@ import decamelize from 'decamelize'
 export default (props) => {
   const {
     styles,
-    theme: { mediaQueries = [400, 700, 1200] },
+    theme: { mediaQueries = { minWidth: [400, 700, 1200], minHeight: [200, 700] } },
   } = props
   const selectors = []
-  mediaQueries.unshift(0)
+  mediaQueries.minWidth.unshift(0)
+  mediaQueries.minHeight.unshift(0)
 
   const getString = ({ varName, key, value }) => {
     const _key = decamelize(key, '-')
@@ -20,7 +21,7 @@ export default (props) => {
     let string = ''
     const _key = decamelize(key, '-')
 
-    string = mediaQueries.map((width, index) => {
+    string = mediaQueries.minWidth.map((width, index) => {
       const cValue = value[index]
       const _value = varName ? `var(--${varName}-${cValue})` : cValue
       const property = `${_key}: ${_value};`
