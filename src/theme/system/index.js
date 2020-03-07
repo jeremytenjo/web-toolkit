@@ -3,7 +3,7 @@ import decamelize from 'decamelize'
 export default (props) => {
   const {
     styles,
-    theme: { mediaQueries = { minWidth: [400, 700, 1200], minHeight: [200, 700] } },
+    theme: { mediaQueries = { minWidth: [400, 700, 1200], minHeight: [400, 700] } },
   } = props
   const selectors = []
   mediaQueries.minWidth.unshift(0)
@@ -18,24 +18,37 @@ export default (props) => {
   }
 
   const handleMediaQueries = ({ key, value, varName }) => {
-    let string = ''
+    let minWidthString = ''
+    let minHeightString = ''
+    let masterString = ''
     const _key = decamelize(key, '-')
+    const mindWidthData = value.filter((val) => typeof val === 'string')
+    const mindHeightData = value.filter((val) => Array.isArray(val))
+    const getString = (data, type = 'width') => {
+      const queries = type === 'width' ? mediaQueries.minWidth : mediaQueries.minHeight
+      let string = ''
+      string = queries.map((width, index) => {
+        const cValue = data[index]
+        const _value = varName ? `var(--${varName}-${cValue})` : cValue
+        const property = `${_key}: ${_value};`
 
-    string = mediaQueries.minWidth.map((width, index) => {
-      const cValue = value[index]
-      const _value = varName ? `var(--${varName}-${cValue})` : cValue
-      const property = `${_key}: ${_value};`
+        return width === 0
+          ? property
+          : cValue
+          ? `@media (min-${type}: ${width}px) {       
+          ${property}      
+        }`
+          : ''
+      })
 
-      return width === 0
-        ? property
-        : cValue
-        ? `@media (min-width: ${width}px) {       
-        ${property}      
-      }`
-        : ''
-    })
-    string = string.join('\n')
-    return string
+      string = string.join('\n')
+      return string
+    }
+
+    minWidthString = mindWidthData.length ? getString(mindWidthData, 'width') : ''
+    minHeightString = mindHeightData.length ? getString(mindHeightData[0], 'height') : ''
+    masterString = minWidthString + minHeightString
+    return masterString
   }
 
   const handleStyles = ({ styles }) => {

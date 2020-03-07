@@ -10,6 +10,9 @@ import Example from './example'
 
 Pass a `styles` object with styles, arrays generate media queries set in the styles components theme provider
 
+```js
+ mediaQueries = { minWidth: [400, 700, 1200], minHeight: [400, 700] }
+```
 if mediaQueries = [700, 1200]  color: ['primary', 'secondary'] === 0-700 = primary, 700-1200=secondary
 
 ```js
@@ -23,7 +26,7 @@ import styled from 'styled-components'
 import System from '@tenjojeremy/web-toolkit/theme/system/system.index'
 
 const Wrapper = styled.div`
-  ${system}
+  {system}
 `
 
 export default () => (
@@ -52,4 +55,20 @@ Add a `:` before selector, accepts arrays in styles
         color: 'white',
         backgroundColor: ['white', 'red'],
       },
+
+``` 
+#### Min Height 
+
+Add an array within an array
+
+```js 
+ <Wrapper
+      styles={{
+        color: ['primary', 'secondary', ['primaryLighter', 'error']],
+        fontSize: [['20px', '33px']],
+,
+      }}
+    >
+      Theme system
+    </Wrapper>
 ``` 
