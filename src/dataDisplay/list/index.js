@@ -50,7 +50,8 @@ const List = ({
       photoGrid={photoGrid}
       {...styles}
     >
-      {children && children.map((child) => <li key='1'>{child}</li>)}
+      {children &&
+        children.map((child, index) => <li key={children.length + index}>{child}</li>)}
       {ItemComponent && loadWithItemComponent()}
       {overflows && <li className='min' />}
     </Wrapper>
