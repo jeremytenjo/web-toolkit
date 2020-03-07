@@ -440,6 +440,13 @@
   ]
 },
     
+"navigation link": {
+  "prefix": "wtli",
+  "body": [
+    "import Link from '@tenjojeremy/web-toolkit/navigation/link'"
+  ]
+},
+    
 "navigation navbar": {
   "prefix": "wtna",
   "body": [
