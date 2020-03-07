@@ -1,11 +1,13 @@
-import { bool, string } from 'prop-types'
+import { string } from 'prop-types'
 
 export const defaultProps = {
-  newTab: true,
-  url: '',
+  target: '_blank',
+  rel: 'noopener noreferrer',
+  href: '',
 }
 
 export const propTypes = {
-  newTab: bool,
-  url: string,
+  target: string,
+  rel: string,
+  href: string,
 }
