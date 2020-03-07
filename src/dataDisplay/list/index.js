@@ -25,15 +25,16 @@ const List = ({
 
   const loadWithItemComponent = () =>
     data.map((item, index) => (
-      <ItemComponent
-        item={item}
-        key={item._id || item.id || index}
-        index={index}
-        onClick={() => onItemClick({ item, index })}
-        id={item._id || item.id || index}
-        definitions={listItemDefinitions}
-        {...item}
-      />
+      <li key={item._id || item.id || index}>
+        <ItemComponent
+          item={item}
+          index={index}
+          onClick={() => onItemClick({ item, index })}
+          id={item._id || item.id || index}
+          definitions={listItemDefinitions}
+          {...item}
+        />
+      </li>
     ))
 
   const Main = (scrollRef) => (
@@ -49,13 +50,12 @@ const List = ({
       photoGrid={photoGrid}
       {...styles}
     >
-      {children && children}
+      {children && children.map((child) => <li key='1'>{child}</li>)}
       {ItemComponent && loadWithItemComponent()}
-      {overflows && <span className='min' />}
+      {overflows && <li className='min' />}
     </Wrapper>
   )
 
-  // Template
   return onScrollEnd ? (
     <BottomScrollListener onBottom={onScrollEnd}>{Main}</BottomScrollListener>
   ) : (

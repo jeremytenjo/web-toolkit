@@ -1,7 +1,12 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.ul`
   /* Shared */
+  list-style: none;
+  margin:0;
+   padding: 0;
+   text-indent: 0;
+   list-style-type: 0;
   transition: 0.2s;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
@@ -59,11 +64,10 @@ export const Wrapper = styled.div`
   @media (min-width: ${minWidth}px) {
     grid-template-columns: repeat(${repeatOnMinWidth}, minmax(10px, 1fr));
   }   
-  > div {
+  li > :first-child {
     padding-top: 100%;
     width: auto;
   }
-    `} 
-
+    `}
 
 `
