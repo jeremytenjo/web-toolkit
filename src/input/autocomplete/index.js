@@ -34,7 +34,6 @@ const Autocomplete = ({ inputStyle, data }) => {
   return (
     <Wrapper>
       {Textfield}
-
       <Animation name='showHide' show={showList} el={listRef} />
       <div ref={listRef} style={{ display: 'none' }}>
         <List direction='row'>
