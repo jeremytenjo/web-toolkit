@@ -9,16 +9,16 @@ import Image from '../index'
 const Variations = () => (
   <>
     <B title='default'>
-      <Image
-        src={testImage}
-        width={400}
-        height={400}
-        onClick={() => console.log('Clicked')}
-      />
+      <Image src={testImage} size={400} onClick={() => console.log('Clicked')} />
     </B>
 
     <B title='isLazyLoaded'>
-      <Image isLazyLoaded src={testImage2} onClick={() => console.log('Clicked')} />
+      <Image
+        isLazyLoaded
+        size={400}
+        src={testImage2}
+        onClick={() => console.log('Clicked')}
+      />
     </B>
   </>
 )

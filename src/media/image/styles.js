@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
+import system from '../../theme/system'
+
 export const Wrapper = styled.div`
+  ${system}
+
   min-height: 100%;
   background-repeat: no-repeat;
   cursor: ${({ cursor }) => cursor};

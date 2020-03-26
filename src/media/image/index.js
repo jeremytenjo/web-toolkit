@@ -16,7 +16,7 @@ const Image = ({
   size,
   width,
   height,
-  style,
+  styles,
   ...props
 }) => {
   // In case  the src key in not called src in props, expects {src: <propsrcname>}
@@ -33,13 +33,12 @@ const Image = ({
       size={size}
       onClick={() => onClick(props)}
       cursor={cursor}
-      style={style}
+      styles={styles}
     >
       {src && <InnerImage alt={alt} src={src} />}
     </Wrapper>
   )
 
-  // Template
   return isLazyLoaded ? (
     <OnVisibility {...OnVisibilityProps}>
       <ImageComp />

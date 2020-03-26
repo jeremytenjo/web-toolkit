@@ -1,5 +1,6 @@
 export default `
 :root {
+    --spacing-center: 0 auto;
     --spacing-unit: 16px;
     --spacing-none: 0;
     --spacing-xxs: calc(0.25 * var(--spacing-unit));

@@ -10,7 +10,7 @@ export const defaultProps = {
   borderColor: null,
   lettersFont: 'var(--font-primary)',
   letterColor: 'primary',
-  size: 50,
+  size: null,
   width: null,
   height: null,
   isLazyLoaded: null,
@@ -24,7 +24,7 @@ export const defaultProps = {
     once: true,
   },
   inputProps: null,
-  style: null,
+  styles: {},
 }
 
 export const propTypes = {
