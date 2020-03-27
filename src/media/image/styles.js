@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   ${system}
 
   overflow: hidden;
-  padding-top: 591.44px / 1127.34px * 100%;
   position: relative;
   tansition: var(--transition-main);
   display: grid;
