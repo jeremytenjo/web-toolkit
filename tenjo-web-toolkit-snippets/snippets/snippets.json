@@ -531,6 +531,13 @@
   ]
 },
     
+"utils array functions removeDuplicates": {
+  "prefix": "wtre",
+  "body": [
+    "import RemoveDuplicates from '@tenjojeremy/web-toolkit/utils/array/functions/removeDuplicates'"
+  ]
+},
+    
 "utils array": {
   "prefix": "wtar",
   "body": [
