@@ -5,22 +5,20 @@ import system from '../../theme/system'
 export const Wrapper = styled.div`
   ${system}
 
-  min-height: 100%;
-  background-repeat: no-repeat;
-  cursor: ${({ cursor }) => cursor};
-  transition: 0.2s;
-  height: 0;
   overflow: hidden;
   padding-top: 591.44px / 1127.34px * 100%;
   position: relative;
   background-color: lightgray;
   tansition: var(--transition-main);
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
-  background-color: ${({ letterColor }) => `var(--color-${letterColor}Background)`};
 
-  ${({ size, width, height }) => _size(size, width, height)}
+  ${({ letterColor }) =>
+    letterColor && `background-color: var(--color-${letterColor}Background)`};
+
+  ${({ size, width, height }) =>
+    size ? _size(size) : width && height ? _size(null, width, height) : ''}
 `
 
 const _size = (size, width, height) => `
