@@ -38,7 +38,7 @@ export default () => (
         fontSize: ['20px', '33px'],
         margin: 'xl',
         transition: '.2s',
-        height: ['200px', '500px'],
+        height: ['100px', '500px'],
       }}
     >
       Theme system

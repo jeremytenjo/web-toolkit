@@ -8,6 +8,8 @@ export default (props) => {
   const selectors = []
   mediaQueries.minWidth.unshift(0)
   mediaQueries.minHeight.unshift(0)
+  const minWidthMediaQueries = Array.from(new Set(mediaQueries.minWidth))
+  const minHeightMediaQueries = Array.from(new Set(mediaQueries.minHeight))
 
   const getString = ({ varName, key, value }) => {
     const _key = decamelize(key, '-')
@@ -28,7 +30,7 @@ export default (props) => {
     mindHeightData = mindHeightData[0] || []
 
     const getMediaQueryValue = (_key, item, index, type) => {
-      const queries = type === 'width' ? mediaQueries.minWidth : mediaQueries.minHeight
+      const queries = type === 'width' ? minWidthMediaQueries : minHeightMediaQueries
       const _value = varName ? `var(--${varName}-${item})` : item
       const property = `${_key}: ${_value};`
 
