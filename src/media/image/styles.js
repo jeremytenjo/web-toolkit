@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   overflow: hidden;
   padding-top: 591.44px / 1127.34px * 100%;
   position: relative;
-  background-color: lightgray;
   tansition: var(--transition-main);
   display: grid;
   justify-content: center;
