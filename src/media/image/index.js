@@ -12,10 +12,6 @@ const Image = ({
   definitions,
   isLazyLoaded,
   OnVisibilityProps,
-  cursor,
-  size,
-  width,
-  height,
   styles,
   ...props
 }) => {
@@ -27,14 +23,7 @@ const Image = ({
   }
 
   const ImageComp = () => (
-    <Wrapper
-      width={width}
-      height={height}
-      size={size}
-      onClick={() => onClick(props)}
-      cursor={cursor}
-      styles={styles}
-    >
+    <Wrapper onClick={() => onClick(props)} styles={styles}>
       {src && <InnerImage alt={alt} src={src} />}
     </Wrapper>
   )

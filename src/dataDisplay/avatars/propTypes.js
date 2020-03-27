@@ -7,7 +7,7 @@ export const defaultProps = {
   name: 'N',
   src: null,
   paddedBorder: null,
-  size: 80,
+  size: '80px',
   radius: 100,
   onClick: () => null,
 }

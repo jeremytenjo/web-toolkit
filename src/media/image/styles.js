@@ -7,21 +7,12 @@ export const Wrapper = styled.div`
 
   overflow: hidden;
   position: relative;
-  tansition: var(--transition-main);
   display: grid;
   justify-content: center;
   align-items: center;
 
   ${({ letterColor }) =>
     letterColor && `background-color: var(--color-${letterColor}Background)`};
-
-  ${({ size, width, height }) =>
-    size ? _size(size) : width && height ? _size(null, width, height) : ''}
-`
-
-const _size = (size, width, height) => `
-width: ${width || size}px;
-height: ${height || size}px;
 `
 
 export const InnerImage = styled.img`

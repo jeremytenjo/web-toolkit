@@ -43,7 +43,6 @@ const Avatar = ({
           color={color}
           src={src}
           radius={radius}
-          letterColor={letterColor}
           size={size}
           paddedBorder={paddedBorder}
         >
@@ -53,7 +52,7 @@ const Avatar = ({
               onClick={onClick}
               size={size}
               borderRadius={radius}
-              style={border}
+              styles={{ ...border, width: size, height: size }}
             />
           ) : (
             <Typography text={initials} color={letterColor} />
