@@ -126,8 +126,7 @@ export const WrapperIcon = styled.div`
  ${({ plain }) =>
    plain &&
    `
-        margin: 0;
-   width:auto;
+        margin: 0;  
         `}
  /* Center */
  ${({ center }) =>
