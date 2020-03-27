@@ -20,10 +20,11 @@ export default () => (
     >
       Theme system
     </Wrapper>
+
     <Wrapper
       styles={{
         color: ['primary', 'secondary', ['primaryLighter', 'error']],
-        fontSize: [['20px', '33px']],
+        fontSize: ['20px', '33px'],
         margin: 'xl',
         transition: '.2s',
       }}

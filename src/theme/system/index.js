@@ -24,7 +24,7 @@ export default (props) => {
     const _key = decamelize(key, '-')
     const mindWidthData = value.filter((val) => typeof val === 'string')
     const mindHeightData = value.filter((val) => Array.isArray(val))
-    const getString = (data, type = 'width') => {
+    const getString_mq = (data, type = 'width') => {
       const queries = type === 'width' ? mediaQueries.minWidth : mediaQueries.minHeight
       let string = ''
       string = queries.map((width, index) => {
@@ -45,8 +45,10 @@ export default (props) => {
       return string
     }
 
-    minWidthString = mindWidthData.length ? getString(mindWidthData, 'width') : ''
-    minHeightString = mindHeightData.length ? getString(mindHeightData[0], 'height') : ''
+    minWidthString = mindWidthData.length ? getString_mq(mindWidthData, 'width') : ''
+    minHeightString = mindHeightData.length
+      ? getString_mq(mindHeightData[0], 'height')
+      : ''
     masterString = minWidthString + minHeightString
     return masterString
   }
