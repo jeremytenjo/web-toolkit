@@ -1,5 +1,7 @@
 import decamelize from 'decamelize'
 
+import removeDuplicatesInArray from '../../utils/array/functions/removeDuplicates'
+
 export default (props) => {
   const {
     styles,
@@ -8,8 +10,8 @@ export default (props) => {
   const selectors = []
   mediaQueries.minWidth.unshift(0)
   mediaQueries.minHeight.unshift(0)
-  const minWidthMediaQueries = Array.from(new Set(mediaQueries.minWidth))
-  const minHeightMediaQueries = Array.from(new Set(mediaQueries.minHeight))
+  const minWidthMediaQueries = removeDuplicatesInArray({ data: mediaQueries.minWidth })
+  const minHeightMediaQueries = removeDuplicatesInArray({ data: mediaQueries.minHeight })
 
   const getString = ({ varName, key, value }) => {
     const _key = decamelize(key, '-')
