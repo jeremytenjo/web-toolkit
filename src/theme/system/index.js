@@ -13,6 +13,7 @@ export default (props) => {
     const _key = decamelize(key, '-')
     const isArray = Array.isArray(value)
     const _value = varName ? `var(--${varName}-${value})` : value
+    if (!_key || !_value) return ''
 
     return isArray ? handleMediaQueries({ key, value, varName }) : `${_key}: ${_value};`
   }
