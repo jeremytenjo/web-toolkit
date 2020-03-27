@@ -31,5 +31,17 @@ export default () => (
     >
       Theme system
     </Wrapper>
+
+    <Wrapper
+      styles={{
+        backgroundColor: ['primary', 'secondary', ['primaryLighter', 'error']],
+        fontSize: ['20px', '33px'],
+        margin: 'xl',
+        transition: '.2s',
+        height: ['200px', '500px'],
+      }}
+    >
+      Theme system
+    </Wrapper>
   </>
 )

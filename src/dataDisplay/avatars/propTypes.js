@@ -17,7 +17,7 @@ export const propTypes = {
   name: string,
   letterColor: string,
   src: string,
-  size: number,
+  size: string,
   radius: number,
   onClick: func,
 }

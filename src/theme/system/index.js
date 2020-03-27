@@ -24,32 +24,34 @@ export default (props) => {
     let masterString = ''
     const _key = decamelize(key, '-')
     const mindWidthData = value.filter((val) => typeof val === 'string')
-    const mindHeightData = value.filter((val) => Array.isArray(val))
-    const getString_mq = (data, type = 'width') => {
+    let mindHeightData = value.filter((val) => Array.isArray(val))
+    mindHeightData = mindHeightData[0] || []
+
+    const getMediaQueryValue = (_key, item, index, type) => {
       const queries = type === 'width' ? mediaQueries.minWidth : mediaQueries.minHeight
-      let string = ''
-      string = queries.map((width, index) => {
-        const cValue = data[index]
-        const _value = varName ? `var(--${varName}-${cValue})` : cValue
-        const property = `${_key}: ${_value};`
+      const _value = varName ? `var(--${varName}-${item})` : item
+      const property = `${_key}: ${_value};`
 
-        return width === 0
-          ? property
-          : cValue
-          ? `@media (min-${type}: ${width}px) {       
-          ${property}      
+      return index === 0
+        ? property
+        : _value
+        ? `@media (min-${type}: ${queries[index]}px) {
+          ${property}
         }`
-          : ''
-      })
-
-      string = string.join('\n')
-      return string
+        : ''
     }
 
-    minWidthString = mindWidthData.length ? getString_mq(mindWidthData, 'width') : ''
-    minHeightString = mindHeightData.length
-      ? getString_mq(mindHeightData[0], 'height')
-      : ''
+    // handle min WIDTH
+    minWidthString = mindWidthData.map((item, index) => {
+      return getMediaQueryValue(_key, item, index, 'width')
+    })
+    minWidthString = minWidthString.join('\n')
+    // handle min HEIGHT
+    minHeightString = mindHeightData.map((item, index) => {
+      return getMediaQueryValue(_key, item, index, 'height')
+    })
+    minHeightString = minHeightString.join('\n')
+
     masterString = minWidthString + minHeightString
     return masterString
   }
