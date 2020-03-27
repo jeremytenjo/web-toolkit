@@ -76,6 +76,13 @@
   ]
 },
     
+"dataDisplay carousel": {
+  "prefix": "wtca",
+  "body": [
+    "import Carousel from '@tenjojeremy/web-toolkit/dataDisplay/carousel'"
+  ]
+},
+    
 "dataDisplay chip": {
   "prefix": "wtch",
   "body": [
