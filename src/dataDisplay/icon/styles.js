@@ -20,8 +20,8 @@ export const WrapperIcon = styled.div`
   transition: 0.3s;
   border-radius: 100px;
   animation-timing-function: ease-out;
-  width: ${({ backgroundSize, size, plain }) => (!plain && backgroundSize) || size}px;
-  height: ${({ backgroundSize, size, plain }) => (!plain && backgroundSize) || size}px;
+  width: ${({ backgroundSize, size }) => backgroundSize || size}px;
+  height: ${({ backgroundSize, size }) => backgroundSize || size}px;
 
   &:active {
     background-color: rgba(0, 0, 0, 0.1);
@@ -70,6 +70,8 @@ export const WrapperIcon = styled.div`
       ${({ plain }) =>
         plain &&
         `     
+        width: auto;
+        height: auto;
   &:active {
     background-color: transparent;
     border: none;    
