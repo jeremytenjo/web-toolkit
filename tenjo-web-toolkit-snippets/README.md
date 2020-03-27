@@ -503,6 +503,13 @@
   ]
 },
     
+"navigation utils scrollIntoView": {
+  "prefix": "wtsc",
+  "body": [
+    "import ScrollIntoView from '@tenjojeremy/web-toolkit/navigation/utils/scrollIntoView'"
+  ]
+},
+    
 "storage firebase storage": {
   "prefix": "wtst",
   "body": [
