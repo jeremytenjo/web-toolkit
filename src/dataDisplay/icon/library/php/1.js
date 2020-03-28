@@ -2,13 +2,7 @@ import React from 'react'
 
 function Icon() {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='2500'
-      height='1309'
-      preserveAspectRatio='xMinYMin meet'
-      viewBox='0 0 256 134'
-    >
+    <svg viewBox='0 0 256 134'>
       <g fillRule='evenodd'>
         <ellipse cx='128' cy='66.63' fill='#8993BE' rx='128' ry='66.63'></ellipse>
         <path

@@ -2,13 +2,7 @@ import React from 'react'
 
 function Icon() {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='1771'
-      height='2300'
-      enableBackground='new 221.807 89.47 440 621.061'
-      viewBox='221.807 89.47 440 621.061'
-    >
+    <svg viewBox='221.807 89.47 440 621.061'>
       <filter id='a' width='150%' height='150%' x='-5%' y='-5%'>
         <feFlood floodColor='#000' floodOpacity='0.5' result='floodFill'></feFlood>
         <feComposite
