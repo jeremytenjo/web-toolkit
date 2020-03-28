@@ -11,9 +11,11 @@ export default ({ el, config, show }) => {
     },
   ]
 
-  el.style.display = 'block'
-  const anim = el.animate(keyframes, config)
-  anim.onfinish = () => {
-    if (!show) el.style.display = 'none'
+  if (el.animate) {
+    el.style.display = 'block'
+    const anim = el.animate(keyframes, config)
+    anim.onfinish = () => {
+      if (!show) el.style.display = 'none'
+    }
   }
 }

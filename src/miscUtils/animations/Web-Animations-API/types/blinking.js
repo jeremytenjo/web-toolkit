@@ -11,14 +11,15 @@ export default ({ el, config, show }) => {
       opacity: show ? 1 : 0,
     },
   ]
-
-  el.style.display = 'block'
-  const anim = el.animate(keyframes, {
-    ...config,
-    iterations: Infinity,
-    duration: 1000,
-  })
-  anim.onfinish = () => {
-    if (!show) el.style.display = 'none'
+  if (el.animate) {
+    el.style.display = 'block'
+    const anim = el.animate(keyframes, {
+      ...config,
+      iterations: Infinity,
+      duration: 1000,
+    })
+    anim.onfinish = () => {
+      if (!show) el.style.display = 'none'
+    }
   }
 }

@@ -32,27 +32,29 @@ export default ({ el, config, show, direction = 'bottomUp', returnsOnEnd }) => {
     },
   ]
 
-  el.style.display = 'block'
-  el.style.position = 'fixed'
+  if (el.animate) {
+    el.style.display = 'block'
+    el.style.position = 'fixed'
 
-  if (direction === 'bottomUp') {
-    el.style.right = 0
-    el.style.bottom = 0
-    el.style.left = 0
-    el.style.margin = '0 auto'
-  }
+    if (direction === 'bottomUp') {
+      el.style.right = 0
+      el.style.bottom = 0
+      el.style.left = 0
+      el.style.margin = '0 auto'
+    }
 
-  if (show) el.animate(keyframesStart, config)
+    if (show) el.animate(keyframesStart, config)
 
-  if (!returnsOnEnd && show !== null && !show) {
-    const anim = el.animate(keyframesEnd, configEndQuick)
-    anim.onfinish = () => (el.style.display = 'none')
-  }
+    if (!returnsOnEnd && show !== null && !show) {
+      const anim = el.animate(keyframesEnd, configEndQuick)
+      anim.onfinish = () => (el.style.display = 'none')
+    }
 
-  if (returnsOnEnd) {
-    const anim = el.animate(keyframesEnd, configEnd)
-    anim.onfinish = () => {
-      if (!show) el.style.display = 'none'
+    if (returnsOnEnd) {
+      const anim = el.animate(keyframesEnd, configEnd)
+      anim.onfinish = () => {
+        if (!show) el.style.display = 'none'
+      }
     }
   }
 }

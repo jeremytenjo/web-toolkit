@@ -20,9 +20,11 @@ export default ({ el, show, config, displayType = 'display' }) => {
     [displayType]: showAttr,
   }
 
-  const anim = el.animate([start, to], config)
+  if (el.animate) {
+    const anim = el.animate([start, to], config)
 
-  anim.onfinish = () => {
-    if (!show) el.style[displayType] = hideAttr
+    anim.onfinish = () => {
+      if (!show) el.style[displayType] = hideAttr
+    }
   }
 }
