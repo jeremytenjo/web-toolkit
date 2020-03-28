@@ -46,8 +46,9 @@ export default () => (
 
     <Wrapper
       styles={{
-        color: '--lime',
+        backgroundColor: '--lime',
         gridGap: ['m', '--200px'],
+        fontWeight: 900,
       }}
     >
       <div>no theme style</div>

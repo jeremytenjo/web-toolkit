@@ -14,8 +14,8 @@ export default (props) => {
   const minHeightMediaQueries = removeDuplicatesInArray({ data: mediaQueries.minHeight })
 
   const handleVariableValue = ({ varName, value }) => {
-    console.log(value)
-    const ignoreChangingToVariable = value.slice(0, 2) === '--'
+    const isString = typeof value === 'string'
+    const ignoreChangingToVariable = isString && value.slice(0, 2) === '--'
     const cleanValue = ignoreChangingToVariable ? value.substring(2) : value
     const withVariable = `var(--${varName}-${cleanValue})`
     const newValue = varName && !ignoreChangingToVariable ? withVariable : cleanValue
