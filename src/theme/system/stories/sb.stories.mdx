@@ -37,6 +37,17 @@ export default () => (
 
  ```
 
+ Ignore theme variables by addding `--` before value
+
+ ```js
+<Wrapper
+      styles={{
+        color: '--lightblue',
+        gridGap: ['m', '--20px'],
+      }}
+    />
+ ```
+
 <Preview>
 <Story name='example'>
    <>

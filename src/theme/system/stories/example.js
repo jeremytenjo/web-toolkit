@@ -43,5 +43,15 @@ export default () => (
     >
       Theme system
     </Wrapper>
+
+    <Wrapper
+      styles={{
+        color: '--lime',
+        gridGap: ['m', '--200px'],
+      }}
+    >
+      <div>no theme style</div>
+      <div>no theme style</div>
+    </Wrapper>
   </>
 )

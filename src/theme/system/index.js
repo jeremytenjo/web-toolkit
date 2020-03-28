@@ -13,10 +13,18 @@ export default (props) => {
   const minWidthMediaQueries = removeDuplicatesInArray({ data: mediaQueries.minWidth })
   const minHeightMediaQueries = removeDuplicatesInArray({ data: mediaQueries.minHeight })
 
+  const handleVariableValue = ({ varName, value }) => {
+    const ignoreChangingToVariable = value.slice(0, 2) === '--'
+    const cleanValue = ignoreChangingToVariable ? value.substring(2) : value
+    const withVariable = `var(--${varName}-${cleanValue})`
+    const newValue = varName && !ignoreChangingToVariable ? withVariable : cleanValue
+    return newValue
+  }
+
   const getString = ({ varName, key, value }) => {
     const _key = decamelize(key, '-')
     const isArray = Array.isArray(value)
-    const _value = varName ? `var(--${varName}-${value})` : value
+    const _value = handleVariableValue({ varName, value })
     if (!_key || !_value) return ''
 
     return isArray ? handleMediaQueries({ key, value, varName }) : `${_key}: ${_value};`
@@ -33,7 +41,7 @@ export default (props) => {
 
     const getMediaQueryValue = (_key, item, index, type) => {
       const queries = type === 'width' ? minWidthMediaQueries : minHeightMediaQueries
-      const _value = varName ? `var(--${varName}-${item})` : item
+      const _value = handleVariableValue({ varName, value: item })
       const property = `${_key}: ${_value};`
 
       return index === 0
