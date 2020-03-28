@@ -2,12 +2,7 @@ import React from 'react'
 
 function Icon() {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='2500'
-      height='2438'
-      viewBox='0 130.746 595.279 580.398'
-    >
+    <svg viewBox='0 130.746 595.279 580.398'>
       <radialGradient
         id='a'
         cx='-183.69'
