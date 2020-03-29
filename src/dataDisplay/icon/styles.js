@@ -81,8 +81,7 @@ export const WrapperIcon = styled.div`
         : color && dark
         ? `var(--color-${color}Darker)`
         : 'var(--color-white)'};
-    display: block;
-    margin: 0 auto;
+    
     align-self: center;
     ${({ width, size }) => `width: ${width || size};`}
     ${({ height, size }) => `height: ${height || size};`}
@@ -108,10 +107,5 @@ export const WrapperIcon = styled.div`
      stroke: var(--color-${color});     
      `}
 
- /* Plain */
- ${({ plain }) =>
-   plain &&
-   `
-        margin: 0;  
-        `}
+
 `
