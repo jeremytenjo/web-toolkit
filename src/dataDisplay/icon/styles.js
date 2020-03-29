@@ -23,6 +23,7 @@ export const WrapperIcon = styled.div`
   padding: ${({ backgroundSize }) =>
     backgroundSize ? `${backgroundSize}` : 'var(--spacing-xs, 10px)'} ;
   
+  &:hover,
   &:active {
     background-color: rgba(0, 0, 0, 0.1);
   }
@@ -34,6 +35,7 @@ export const WrapperIcon = styled.div`
     background-color: var(--color-${backgroundColor});    
     border: 2px solid var(--color-${backgroundColor});
 
+    &:hover,
     &:active {
     background-color: var(--color-${backgroundColor});   
     border: 2px solid var(--color-${backgroundColor});
@@ -45,6 +47,7 @@ export const WrapperIcon = styled.div`
       outlined &&
       `
   border: 2px solid var(--color-${color}Darker);
+  &:hover,
   &:active {
     background-color: var(--color-${color}Background);
     border: 2px solid var(--color-${color}Darker);    
