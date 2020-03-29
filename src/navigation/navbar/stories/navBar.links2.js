@@ -12,8 +12,6 @@ export default [
       color: 'white',
       backgroundColor: 'primary',
       boxShadow: '0px 4px 12px rgba(36, 195, 169, 0.5)',
-      size: 50,
-      plain: false,
     },
   },
   {

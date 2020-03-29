@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   background-color: ${({ backgroundColor }) => `var(--color-${backgroundColor})`};
   color: ${({ textColor }) => `var(--color-${textColor})`};
   border-radius: 10px;
-  padding: 8px;
+  padding: var(--spacing-xxs, 4px) var(--spacing-s, 8px);
   display: flex;
   align-items: center;
   text-align: center;

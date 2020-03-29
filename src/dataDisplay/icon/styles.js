@@ -21,7 +21,7 @@ export const WrapperIcon = styled.div`
   border-radius: 100px;
   animation-timing-function: ease-out;
   padding: ${({ backgroundSize }) =>
-    backgroundSize ? `${backgroundSize}px` : 'var(--spacing-xs, 10px)'} ;
+    backgroundSize ? `${backgroundSize}` : 'var(--spacing-xs, 10px)'} ;
   
   &:active {
     background-color: rgba(0, 0, 0, 0.1);
@@ -80,8 +80,8 @@ export const WrapperIcon = styled.div`
     display: block;
     margin: 0 auto;
     align-self: center;
-    ${({ width, size }) => width || (size && `width: ${width || size}px;`)}
-    ${({ height, size }) => height || (size && `height: ${height || size}px;`)}
+    ${({ width, size }) => `width: ${width || size};`}
+    ${({ height, size }) => `height: ${height || size};`}
      /*  No Background */
   ${({ noBackground }) =>
     noBackground &&

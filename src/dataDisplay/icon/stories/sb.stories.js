@@ -8,7 +8,7 @@ import markdown from './readme.md'
 
 const Variations = () => (
   <>
-    <B title='Default' color='black'>
+    <B title='Default'>
       <Icon name='camera/material' />
     </B>
 
@@ -16,8 +16,11 @@ const Variations = () => (
       <Icon name='camera/material' plain />
     </B>
 
-    <B title='size' color='black'>
-      <Icon name='camera/material' size={90} />
+    <B title='size'>
+      <Icon name='camera/material' size='90px' />
+    </B>
+    <B title='size - where width and height are different'>
+      <Icon name='express/1' width='auto' height='20px' />
     </B>
 
     <B title='color'>
@@ -29,7 +32,7 @@ const Variations = () => (
         name='camera/material'
         color='white'
         backgroundColor='primary'
-        backgroundSize={20}
+        backgroundSize='20px'
       />
     </B>
 
@@ -37,23 +40,23 @@ const Variations = () => (
       <Icon name='camera/material' color='primary' outlined background />
     </B>
 
-    <B title='label' color='black'>
+    <B title='label'>
       <Icon name='camera/material' label={{ text: 'label' }} />
     </B>
-    <B title='isStroke' color='black'>
+    <B title='isStroke'>
       <Icon name='camera/feather' color='primary' />
     </B>
-    <B title='backgroundSize' color='black'>
-      <Icon name='camera/feather' color='primary' backgroundSize={40} />
+    <B title='backgroundSize'>
+      <Icon name='camera/feather' color='primary' backgroundSize='40px' />
     </B>
-    <B title='file upload' color='black'>
+    <B title='file upload'>
       <Icon
         name='camera/material'
         inputProps={{
           name: 'file_upload',
           onInput: (file) => console.log(file),
         }}
-        size={60}
+        size='60px'
       />
     </B>
   </>

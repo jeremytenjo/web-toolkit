@@ -2,14 +2,14 @@ import styled from 'styled-components'
 
 import system from '../../theme/system'
 
-export const Wrapper = styled.div`
+export const BoxWrapper = styled.div`
   ${system}
 
   ${({ size }) =>
     size &&
     `
-  width: ${size}px;
-  height: ${size}px;
+  width: ${size};
+  height: ${size};
   `}
 
   ${({ fullscreen }) =>

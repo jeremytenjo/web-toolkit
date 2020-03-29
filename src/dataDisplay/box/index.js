@@ -1,10 +1,10 @@
 import React, { memo, forwardRef } from 'react'
 
-import { Wrapper } from './styles'
+import { BoxWrapper } from './styles'
 
 const Box = ({ children, name, styles = {}, ...rest }, ref) => {
   return (
-    <Wrapper
+    <BoxWrapper
       ref={ref}
       styles={{ display: 'grid', ...styles }}
       data-box-name={name}
@@ -12,7 +12,7 @@ const Box = ({ children, name, styles = {}, ...rest }, ref) => {
       {...rest}
     >
       {children}
-    </Wrapper>
+    </BoxWrapper>
   )
 }
 

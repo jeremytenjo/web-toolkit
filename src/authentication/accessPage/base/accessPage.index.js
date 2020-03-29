@@ -46,7 +46,7 @@ const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
           name='Info'
           styles={{ justifyItems: 'center', textAlign: 'center', height: 'fit-content' }}
         >
-          <Image src={logo} size={93} />
+          <Image src={logo} size='93px' />
           <Typography text={name} color='primary' />
           <Typography text={desc} />
         </Box>
@@ -72,8 +72,8 @@ const AccessPage = ({ onSuccess, logo, name, desc, service, providers }) => {
                 style={{ boxShadow: ' 0px 1px 4px rgba(0, 0, 0, 0.25)' }}
                 backgroundColor='white'
                 name={`${p}/logo`}
-                backgroundSize={65}
-                size={23}
+                backgroundSize='65px'
+                size='23px'
                 onClick={() => handleClick(p)}
               />
             ))}

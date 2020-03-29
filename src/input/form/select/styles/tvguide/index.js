@@ -24,7 +24,7 @@ const Item = ({
       }}
     >
       <Box
-        size={43}
+        size='43px'
         styles={{
           backgroundColor: backgroundColor,
           color: foregroundColor,

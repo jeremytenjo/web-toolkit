@@ -29,13 +29,15 @@ const Poster1 = ({
   const handleClick = () => onClick(rest)
   const height = size
   const width = height / 1.5
+  const heightString = `${height}px`
+  const widthString = `${width}px`
 
   return (
     <Wrapper
       onClick={handleClick}
       style={{
-        width: width,
-        height: height,
+        width: widthString,
+        height: heightString,
       }}
       src={src}
       backgroundColor={backgroundColor}
@@ -43,7 +45,13 @@ const Poster1 = ({
       isLoading={loading}
       noAnimation={noAnimation}
     >
-      {src && <Image src={src} width={width} height={height} alt={alt} />}
+      {src && (
+        <Image
+          src={src}
+          styles={{ width: widthString, height: heightString }}
+          alt={alt}
+        />
+      )}
       {!src && (
         <Suspense fallback={null}>
           <Typography

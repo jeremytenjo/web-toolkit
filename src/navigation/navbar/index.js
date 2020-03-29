@@ -90,7 +90,7 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
                     borderColor={isActive && styles.color}
                     paddedBorder
                     inputProps={inputProps}
-                    size={40}
+                    size='40px'
                   />
                 )}
               </div>

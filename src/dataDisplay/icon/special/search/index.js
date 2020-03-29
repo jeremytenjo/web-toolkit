@@ -43,9 +43,6 @@ const IconSearch = ({
         onClick={toggleShow}
         name={show ? closeIcon : mainIcon}
         backgroundColor={backgroundColor}
-        background
-        noBackgroundChange
-        size={50}
         boxShadow={boxShadow}
       />
     </Box>

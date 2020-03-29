@@ -211,9 +211,8 @@ const TextField = ({
             <Icon
               name='close/material'
               onClick={onClearIconClick}
-              size={16}
+              size='16px'
               fill='black'
-              backgroundSize={25}
             />
           </CloseIconCon>
         </InputCon>

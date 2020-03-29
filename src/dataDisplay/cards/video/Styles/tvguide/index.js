@@ -259,7 +259,7 @@ const CardMovie1 = ({
                 onChange={handleOnSeasonChange}
                 titleColor='primaryDarker'
                 wrapperStyles={{ padding: 'none' }}
-                size={45}
+                size='45px'
                 {...selectProps}
               />
               <Select
@@ -269,7 +269,7 @@ const CardMovie1 = ({
                 onChange={handleOnEpisodeChange}
                 titleColor='primaryDarker'
                 wrapperStyles={{ padding: 'none' }}
-                size={45}
+                size='45px'
                 {...selectProps}
               />
             </>

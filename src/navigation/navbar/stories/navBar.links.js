@@ -16,7 +16,6 @@ export default [
     iconStyles: {
       color: 'white',
       backgroundColor: 'primary',
-      size: 50,
       boxShadow: '0px 4px 12px rgba(36, 195, 169, 0.5)',
     },
   },
