@@ -2,13 +2,7 @@ import React from 'react'
 
 function Icon() {
   return (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      width='2500'
-      height='2373'
-      preserveAspectRatio='xMinYMin meet'
-      viewBox='0 0 256 243'
-    >
+    <svg viewBox='0 0 256 243'>
       <defs>
         <linearGradient id='a' x1='-82.637%' x2='103.767%' y1='-92.82%' y2='106.042%'>
           <stop offset='0%' stopColor='#F9A03C'></stop>
