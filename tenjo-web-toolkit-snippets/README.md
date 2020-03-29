@@ -370,6 +370,13 @@
   ]
 },
     
+"input useClickOutside": {
+  "prefix": "wtus",
+  "body": [
+    "import UseClickOutside from '@tenjojeremy/web-toolkit/input/useClickOutside'"
+  ]
+},
+    
 "media files fileInput": {
   "prefix": "wtfi",
   "body": [
