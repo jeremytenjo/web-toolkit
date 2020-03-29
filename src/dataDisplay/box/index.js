@@ -1,11 +1,11 @@
-import React, { memo } from 'react'
+import React, { memo, forwardRef } from 'react'
 
-import { defaultProps, propTypes } from './propTypes'
 import { Wrapper } from './styles'
 
-const Box = ({ children, name, styles, ...rest }) => {
+const Box = ({ children, name, styles = {}, ...rest }, ref) => {
   return (
     <Wrapper
+      ref={ref}
       styles={{ display: 'grid', ...styles }}
       data-box-name={name}
       data-cy={name}
@@ -16,7 +16,4 @@ const Box = ({ children, name, styles, ...rest }) => {
   )
 }
 
-Box.defaultProps = defaultProps
-Box.propTypes = propTypes
-
-export default memo(Box)
+export default memo(forwardRef(Box))
