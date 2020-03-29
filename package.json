@@ -51,8 +51,10 @@
     "react-particles-js": "^2.7.1",
     "react-router-dom": "^5.1.2",
     "react-stars": "^2.2.5",
-    "styled-components": "^5.0.1",
     "twit": "^2.2.11"
+  },
+  "peerDependencies": {
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "cross-env": "^7.0.0",
