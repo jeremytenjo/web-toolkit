@@ -1,0 +1,39 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import Example from './example'
+
+<Meta title='Input|UseClickOutside' />
+
+## Usage
+
+```js
+import useClickOutside from '@tenjojeremy/web-toolkit/input/useClickOutside'
+```
+
+## Example
+
+<Story name='Example'>
+  <Example />
+</Story>
+
+```js
+import React, { useRef } from 'react'
+
+import Box from '../../../dataDisplay/box'
+import useClickOutside from '../'
+
+export default () => {
+  const boxRef = useRef(null)
+
+  const onClickOutside = () => {
+    alert('clicked outside green box')
+  }
+
+  useClickOutside(boxRef, onClickOutside)
+
+  return (
+    <Box ref={boxRef} styles={boxStyles}>
+      Click outside this box
+    </Box>
+  )
+}
+```
