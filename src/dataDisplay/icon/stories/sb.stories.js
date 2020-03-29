@@ -8,44 +8,45 @@ import markdown from './readme.md'
 
 const Variations = () => (
   <>
-    <B title='Default' color='black' noBackground>
+    <B title='Default' color='black'>
       <Icon name='camera/material' />
     </B>
 
-    <B title='background' noBackground>
-      <Icon name='camera/material' color='white' background noBackgroundChange />
-    </B>
-    <B title='plain' noBackground>
+    <B title='plain'>
       <Icon name='camera/material' plain />
     </B>
 
-    <B title='color' noBackground>
-      <Icon name='camera/material' background color='secondary' noBackgroundChange />
+    <B title='size' color='black'>
+      <Icon name='camera/material' size={90} />
     </B>
 
-    <B title='outlined' noBackground>
+    <B title='color'>
+      <Icon name='camera/material' color='secondary' />
+    </B>
+
+    <B title='backgroundColor'>
+      <Icon
+        name='camera/material'
+        color='white'
+        backgroundColor='primary'
+        backgroundSize={20}
+      />
+    </B>
+
+    <B title='outlined'>
       <Icon name='camera/material' color='primary' outlined background />
     </B>
 
-    <B title='size' color='black' noBackground>
-      <Icon name='camera/material' size={60} />
+    <B title='label' color='black'>
+      <Icon name='camera/material' label={{ text: 'label' }} />
     </B>
-    <B title='label' color='black' noBackground>
-      <Icon name='camera/material' label={{ text: 'label' }} size={60} />
+    <B title='isStroke' color='black'>
+      <Icon name='camera/feather' color='primary' />
     </B>
-    <B title='isStroke' color='black' noBackground>
-      <Icon name='camera/feather' color='primary' label={{ text: 'label' }} size={60} />
+    <B title='backgroundSize' color='black'>
+      <Icon name='camera/feather' color='primary' backgroundSize={40} />
     </B>
-    <B title='backgroundSize' color='black' noBackground>
-      <Icon
-        name='camera/feather'
-        color='primary'
-        label={{ text: 'label' }}
-        size={20}
-        backgroundSize={80}
-      />
-    </B>
-    <B title='file upload' color='black' noBackground>
+    <B title='file upload' color='black'>
       <Icon
         name='camera/material'
         inputProps={{

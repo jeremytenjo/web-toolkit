@@ -11,15 +11,12 @@ const Typogrgraphy = lazy(() =>
 )
 
 const Icon = ({
-  background,
   name,
   style,
   color,
   onClick,
   size,
-  noBackground,
   dark,
-  noBackgroundChange,
   outlined,
   link,
   inputProps,
@@ -64,11 +61,8 @@ const Icon = ({
             style={style}
             color={color}
             onClick={handleClick}
-            background={!!background}
             size={size}
-            noBackground={noBackground}
             dark={dark}
-            noBackgroundChange={noBackgroundChange}
             outlined={outlined}
             backgroundColor={backgroundColor}
             isStroke={isStroke}

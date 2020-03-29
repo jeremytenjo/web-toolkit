@@ -12,6 +12,7 @@ const Example = () => {
     </B>
   )
 }
-storiesOf('Data-Display|Icon/Scroll back to top', module).add('ScrollBackToTop', () => (
-  <Example />
-))
+storiesOf('Data-Display|Icon/Special/Scroll back to top', module).add(
+  'ScrollBackToTop',
+  () => <Example />,
+)

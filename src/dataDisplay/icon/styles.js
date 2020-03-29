@@ -20,21 +20,19 @@ export const WrapperIcon = styled.div`
   transition: 0.3s;
   border-radius: 100px;
   animation-timing-function: ease-out;
-  width: ${({ backgroundSize, size }) => backgroundSize || size}px;
-  height: ${({ backgroundSize, size }) => backgroundSize || size}px;
-
+  padding: ${({ backgroundSize }) =>
+    backgroundSize ? `${backgroundSize}px` : 'var(--spacing-xs, 10px)'} ;
+  
   &:active {
     background-color: rgba(0, 0, 0, 0.1);
   }
   
-  /* Background */
-  ${({ background, size, backgroundColor }) =>
-    background &&
+  /* backgroundColor */
+  ${({ backgroundColor }) =>
+    !!backgroundColor &&
     `
     background-color: var(--color-${backgroundColor});    
     border: 2px solid var(--color-${backgroundColor});
-    width: ${size}px;
-    height: ${size}px;  
 
     &:active {
     background-color: var(--color-${backgroundColor});   
@@ -42,20 +40,7 @@ export const WrapperIcon = styled.div`
     }
   `}
  
-  /*  No Background */
-  ${({ noBackground }) =>
-    noBackground &&
-    `    
-    border: none;
-    width:auto;
-    height:auto;
-    &:active {
-    background-color: transparent;
-    border: none;
-    }
-  `}
-
-    /* Outlined */
+     /* Outlined */
     ${({ outlined, color }) =>
       outlined &&
       `
@@ -72,17 +57,11 @@ export const WrapperIcon = styled.div`
         `     
         width: auto;
         height: auto;
+        padding: none;
   &:active {
     background-color: transparent;
     border: none;    
     }
-  `}
-
-      /* boxShadow */
-      ${({ boxShadow }) =>
-        boxShadow &&
-        `
-        box-shadow: ${boxShadow};
   `}
 
   svg {
@@ -101,8 +80,8 @@ export const WrapperIcon = styled.div`
     display: block;
     margin: 0 auto;
     align-self: center;
-    width: ${({ size, width }) => width || size}px;
-    ${({ height }) => height && `height: ${height}px`}
+    ${({ width, size }) => width || (size && `width: ${width || size}px;`)}
+    ${({ height, size }) => height || (size && `height: ${height || size}px;`)}
      /*  No Background */
   ${({ noBackground }) =>
     noBackground &&
@@ -130,11 +109,5 @@ export const WrapperIcon = styled.div`
    plain &&
    `
         margin: 0;  
-        `}
- /* Center */
- ${({ center }) =>
-   center &&
-   `
-        margin: 0 auto;
         `}
 `
