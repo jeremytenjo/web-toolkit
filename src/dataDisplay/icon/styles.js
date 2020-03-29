@@ -57,7 +57,7 @@ export const WrapperIcon = styled.div`
         `     
         width: auto;
         height: auto;
-        padding: none;
+        padding: 0;
   &:active {
     background-color: transparent;
     border: none;    

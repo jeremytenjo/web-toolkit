@@ -45,7 +45,6 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
             const isActive = currentpathname === currentUrl
             const inputProps = file ? { onInput } : null
             const key = label.text || icon || currentUrl || index
-            const isPlain = iconStyles.plain
             const iconPosition = top ? { transform: 'translateY(-30px)' } : null
             const _color = iconStyles.color
               ? iconStyles.color
@@ -73,12 +72,7 @@ const NavBar = ({ data, onInput, onSearchSubmit, router, styles }) => {
                     name={icon}
                     color={_color}
                     label={labelProps}
-                    size={iconStyles.size}
-                    background={!!iconStyles.backgroundColor}
-                    backgroundColor={iconStyles.backgroundColor}
                     inputProps={inputProps}
-                    plain={isPlain}
-                    center
                     {...iconStyles}
                   />
                 ) : null}
