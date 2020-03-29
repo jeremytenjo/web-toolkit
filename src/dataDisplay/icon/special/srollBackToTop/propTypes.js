@@ -1,6 +1,6 @@
 export const defaultProps = {
   offset: 20,
-  iconProps: {},
+  iconProps: { size: '12px', backgroundSize: '20px' },
   animationProps: {},
 }
 
