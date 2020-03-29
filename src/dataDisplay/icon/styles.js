@@ -61,6 +61,7 @@ export const WrapperIcon = styled.div`
         width: auto;
         height: auto;
         padding: 0;
+  &:hover,      
   &:active {
     background-color: transparent;
     border: none;    
