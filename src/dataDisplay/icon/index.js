@@ -28,6 +28,7 @@ const Icon = ({
   label,
   height,
   width,
+  wrapperStyles,
 }) => {
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
@@ -55,7 +56,7 @@ const Icon = ({
   return (
     <Suspense fallback={null}>
       <WrappingComp {...inputProps}>
-        <Wrapper label={label} data-name='icon-wrapper'>
+        <Wrapper label={label} data-name='icon-wrapper' style={wrapperStyles}>
           <WrapperIcon
             plain={plain}
             style={style}

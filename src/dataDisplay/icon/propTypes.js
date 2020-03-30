@@ -3,6 +3,7 @@ import { string, func, object, bool } from 'prop-types'
 export const defaultProps = {
   name: null,
   style: {},
+  wrapperStyles: {},
   color: 'white',
   onClick: () => null,
   backgroundSize: '10px',
@@ -21,6 +22,7 @@ export const defaultProps = {
 export const propTypes = {
   name: string.isRequired,
   style: object,
+  wrapperStyles: object,
   color: string,
   backgroundColor: string,
   onClick: func,
