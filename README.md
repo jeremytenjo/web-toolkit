@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://tenjo-web-toolkit.web.app/" rel="noopener" target="_blank"><img width="110" src="https://firebasestorage.googleapis.com/v0/b/tenjo-web-toolkit.appspot.com/o/logo.svg?alt=media&token=75c5c13e-de0b-40f5-b0a0-3045f13a61d7" alt="Web-Toolkit logo"></a></p>
+  <a href="https://tenjo-web-toolkit.web.app/" rel="noopener" target="_blank"><img width="110" src="https://firebasestorage.googleapis.com/v0/b/tenjo-web-toolkit.appspot.com/o/logo.svg?alt=media&token=0991f39a-0e64-46a5-a097-7ad433798434" alt="Web-Toolkit logo"></a></p>
 </p>
 
 <h2 align="center">Web-Toolkit</h2>
