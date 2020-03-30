@@ -29,7 +29,7 @@ const Overlay = ({
   }, [])
 
   useEffect(() => {
-    if (disableScrollOnShow && show) handleBodyScroll(show)
+    if (disableScrollOnShow && show !== null) handleBodyScroll(show)
   }, [show])
 
   const handleBodyScroll = (show) => {
