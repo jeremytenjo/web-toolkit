@@ -7,6 +7,8 @@ export default (props) => {
     styles,
     theme: { mediaQueries = { minWidth: [400, 700, 1200], minHeight: [400, 700] } },
   } = props
+  if (!styles) return ''
+
   const selectors = []
   mediaQueries.minWidth.unshift(0)
   mediaQueries.minHeight.unshift(0)
