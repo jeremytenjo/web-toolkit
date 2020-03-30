@@ -1,5 +1,5 @@
 // Keyframes should be set before used in animate()
-export default ({ el, config, show }) => {
+export default ({ el, config, show, displayType = 'block' }) => {
   const keyframes = [
     {
       opacity: show ? 0 : 1,
@@ -12,7 +12,7 @@ export default ({ el, config, show }) => {
   ]
 
   if (el.animate) {
-    el.style.display = 'block'
+    el.style.display = displayType
     const anim = el.animate(keyframes, config)
     anim.onfinish = () => {
       if (!show) el.style.display = 'none'

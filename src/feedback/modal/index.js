@@ -1,7 +1,7 @@
 import React, { memo, useRef, useEffect } from 'react'
 
 import Overlay from '../../miscUtils/overlay'
-import Animation from '../../miscUtils/animations/Web-Animations-API'
+import useAnimation from '../../miscUtils/animations/Web-Animations-API'
 
 import { defaultProps, propTypes } from './propTypes'
 import { ModalWrapper } from './styles'
@@ -17,20 +17,23 @@ const Modal = ({
 }) => {
   useEffect(() => {
     window.addEventListener('keydown', handleKeyInput, true)
-    return () => window.removeEventListener('keydown', handleKeyInput)
+    return () => {
+      window.removeEventListener('keydown', handleKeyInput, true)
+    }
   }, [])
   const handleKeyInput = ({ key }) => key === 'Escape' && onClose()
 
   const modalRef = useRef(null)
 
+  useAnimation({
+    name: animationStyle,
+    show: show,
+    el: modalRef,
+    style: animationsStyles,
+  })
+
   return (
     <>
-      <Animation
-        name={animationStyle}
-        show={show}
-        el={modalRef}
-        style={animationsStyles}
-      />
       <ModalWrapper ref={modalRef} style={style}>
         {children}
       </ModalWrapper>

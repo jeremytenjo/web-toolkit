@@ -25,7 +25,9 @@ const Overlay = ({
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyInput, true)
-    return () => window.removeEventListener('keydown', handleKeyInput)
+    return () => {
+      window.removeEventListener('keydown', handleKeyInput, true)
+    }
   }, [])
 
   useEffect(() => {
