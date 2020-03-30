@@ -9,7 +9,7 @@ const Variants = ({ Component: Button }) => {
   return (
     <div>
       <B title='color - primary'>
-        <Button color='primary' />
+        <Button color='primary' text='Hello' />
       </B>
       <B title='alternative color'>
         <Button color='secondary' />

@@ -1,4 +1,4 @@
-import { string, number, func, object, bool } from 'prop-types'
+import { string, func, object, bool } from 'prop-types'
 
 export const defaultProps = {
   name: null,
@@ -24,7 +24,7 @@ export const propTypes = {
   color: string,
   backgroundColor: string,
   onClick: func,
-  size: number,
+  size: string,
   label: object,
   dark: bool,
   plain: bool,
