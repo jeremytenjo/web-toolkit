@@ -5,7 +5,7 @@
   "description": "Library repo: https://github.com/tenjojeremy/web-toolkit",
   "icon": "logo-snippets.png",
   "publisher": "tenjojeremy",
-  "version": "1.52.0",
+  "version": "1.53.0",
   "engines": {
     "vscode": "^1.36.0"
   },
