@@ -31,7 +31,7 @@ function Carousel({ children, wrapperStyles, infinite, initialndex }) {
   const handleItemChange = (nextIndex) => setActiveItem(nextIndex)
 
   return (
-    <Box styles={{ ...styles.wrapper, wrapperStyles }}>
+    <Box name='carousel' styles={{ ...styles.wrapper, ...wrapperStyles }}>
       <SwipeableViews
         axis='x'
         index={activeItem}

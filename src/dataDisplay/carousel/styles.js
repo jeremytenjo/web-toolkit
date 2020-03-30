@@ -3,15 +3,14 @@ export const wrapper = {
 }
 export const leftArrow = {
   position: 'absolute',
-  top: 0,
-  bottom: 0,
+  top: '50%',
+  transform: 'translateY(-50%)',
   left: 0,
 }
 
 export const rightArrow = {
   position: 'absolute',
-  top: 0,
-  bottom: 0,
   right: 0,
-  transform: 'rotate(180deg)',
+  top: '50%',
+  transform: 'translateY(-50%) rotate(180deg)',
 }
