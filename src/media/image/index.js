@@ -1,6 +1,10 @@
-import React, { memo } from 'react'
+import React, { memo, lazy, Suspense } from 'react'
 
-import LazyLoad from '../../miscUtils/rendering/lazyLoad'
+const LazyLoad = lazy(() =>
+  import(
+    /* webpackChunkLazyLoad: 'LazyLoadWrapper' */ '../../miscUtils/rendering/lazyLoad'
+  ),
+)
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, InnerImage } from './styles'
@@ -29,9 +33,11 @@ const Image = ({
   )
 
   return isLazyLoaded ? (
-    <LazyLoad {...lazyLoadProps}>
-      <ImageComp />
-    </LazyLoad>
+    <Suspense fallback={null}>
+      <LazyLoad {...lazyLoadProps}>
+        <ImageComp />
+      </LazyLoad>
+    </Suspense>
   ) : (
     <ImageComp />
   )
