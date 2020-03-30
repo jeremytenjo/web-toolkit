@@ -19,7 +19,7 @@ export const defaultProps = {
     once: true,
   },
   inputProps: null,
-  styles: {},
+  styles: { width: '300px', height: '300px' },
 }
 
 export const propTypes = {
