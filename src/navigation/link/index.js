@@ -1,10 +1,16 @@
 import React, { memo } from 'react'
 
-import { defaultProps, propTypes } from './propTypes'
-import A from './styles'
+import Box from '../../dataDisplay/box'
 
-const Link = ({ children, ...rest }) => {
-  return <A {...rest}>{children}</A>
+import { defaultProps, propTypes } from './propTypes'
+import * as localStyles from './styles'
+
+const Link = ({ children, styles, ...rest }) => {
+  return (
+    <Box styles={{ ...localStyles.wrapper, ...styles }} {...rest} as='a'>
+      {children}
+    </Box>
+  )
 }
 
 Link.defaultProps = defaultProps
