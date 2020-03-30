@@ -3,6 +3,9 @@ import LazyLoad from 'react-lazyload'
 
 export default memo(({ children, ...props }) => {
   const isSupported = window.IntersectionObserver || false
+  const defaultProps = { offset: 100, once: true }
 
-  return isSupported ? <LazyLoad {...props}>{children}</LazyLoad> : children
+  const mergedProps = { ...defaultProps, ...props }
+
+  return isSupported ? <LazyLoad {...mergedProps}>{children}</LazyLoad> : children
 })

@@ -9,7 +9,7 @@ const LazyLoad = lazy(() =>
 )
 
 const Box = (
-  { children, name, styles = {}, isLazyLoaded, lazyLoadProps = {}, ...rest },
+  { children, name, styles = {}, isLazyLoaded, lazyLoadProps = { offset: 400 }, ...rest },
   ref,
 ) => {
   const BoxComponent = () => (
