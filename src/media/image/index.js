@@ -1,13 +1,13 @@
 import React, { memo, lazy, Suspense } from 'react'
 
+import { defaultProps, propTypes } from './propTypes'
+import { Wrapper, InnerImage } from './styles'
+
 const LazyLoad = lazy(() =>
   import(
     /* webpackChunkLazyLoad: 'LazyLoadWrapper' */ '../../miscUtils/rendering/lazyLoad'
   ),
 )
-
-import { defaultProps, propTypes } from './propTypes'
-import { Wrapper, InnerImage } from './styles'
 
 const Image = ({
   src,
