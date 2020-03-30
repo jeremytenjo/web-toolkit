@@ -6,7 +6,7 @@ import Dialog from '../../dialog/styles/1'
 import Modal from '..'
 
 export default () => {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(null)
   const showit = () => setShow(true)
   const hideit = () => setShow(false)
 

@@ -1,18 +1,13 @@
-import React from 'react'
-import { object } from 'prop-types'
-
-import Icon from '../icon'
+import { object, bool, number } from 'prop-types'
 
 export const defaultProps = {
+  initialndex: 0,
   wrapperStyles: {},
-  renderCenterLeftControls: ({ previousSlide }) => (
-    <Icon onClick={previousSlide} name='arrow/1' />
-  ),
-  renderCenterRightControls: ({ nextSlide }) => (
-    <Icon onClick={nextSlide} name='arrow/1' style={{ transform: 'rotate(180deg)' }} />
-  ),
+  infinite: true,
 }
 
 export const propTypes = {
+  initialndex: number,
   wrapperStyles: object,
+  infinite: bool,
 }

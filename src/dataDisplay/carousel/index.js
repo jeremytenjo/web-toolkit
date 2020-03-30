@@ -1,14 +1,53 @@
-import React, { memo } from 'react'
-import NukaCarousel from 'nuka-carousel'
+import React, { useState } from 'react'
+import SwipeableViews from 'react-swipeable-views'
 
 import Box from '../box'
+import Icon from '../icon/index'
 
 import { defaultProps, propTypes } from './propTypes'
+import * as styles from './styles'
 
-const Carousel = ({ children, wrapperStyles, ...rest }) => {
+function Carousel({ children, wrapperStyles, infinite, initialndex }) {
+  const [activeItem, setActiveItem] = useState(initialndex)
+  const childrenLength = children.length
+  const showLeftArrow = infinite || activeItem !== 0
+  const showRightArrow = infinite || activeItem !== childrenLength
+
+  const handleNext = () => {
+    let nextItem = activeItem + 1
+    const nextItemIsHigherThanTotal = nextItem > childrenLength
+    nextItem = nextItemIsHigherThanTotal ? 0 : nextItem
+
+    setActiveItem(nextItem)
+  }
+
+  const handleBack = () => {
+    let prevItem = activeItem - 1
+    const prevItemIsLowerThanTotal = prevItem === -1
+    prevItem = prevItemIsLowerThanTotal ? childrenLength : prevItem
+    setActiveItem(prevItem)
+  }
+
+  const handleItemChange = (nextIndex) => setActiveItem(nextIndex)
+
   return (
-    <Box styles={{ width: '100%', ...wrapperStyles }}>
-      <NukaCarousel {...rest}>{children}</NukaCarousel>
+    <Box styles={{ ...styles.wrapper, wrapperStyles }}>
+      <SwipeableViews
+        axis='x'
+        index={activeItem}
+        onChangeIndex={handleItemChange}
+        enableMouseEvents
+      >
+        {children.map(() => children)}
+      </SwipeableViews>
+
+      {showLeftArrow && (
+        <Icon name='arrow/1' onClick={handleBack} style={styles.leftArrow} />
+      )}
+
+      {showRightArrow && (
+        <Icon name='arrow/1' onClick={handleNext} style={styles.rightArrow} />
+      )}
     </Box>
   )
 }
@@ -16,4 +55,4 @@ const Carousel = ({ children, wrapperStyles, ...rest }) => {
 Carousel.defaultProps = defaultProps
 Carousel.propTypes = propTypes
 
-export default memo(Carousel)
+export default Carousel

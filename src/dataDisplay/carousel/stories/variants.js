@@ -10,10 +10,10 @@ import stubs from './stubs'
 const { simple } = stubs
 
 export default () => {
-  const [showModal, setshowModal] = useState(true)
+  const [showModal, setshowModal] = useState(null)
   return (
     <div>
-      <B title='default' contentStyle={{ width: '100%' }}>
+      <B title='default'>
         <Carousel>
           <Image {...simple} />
           <Image {...simple} />
@@ -21,7 +21,7 @@ export default () => {
         </Carousel>
       </B>
 
-      <B title='custom controls' contentStyle={{ width: '100%' }}>
+      <B title='custom controls'>
         <Carousel
           renderTopCenterControls={({ currentSlide }) => <div>Slide: {currentSlide}</div>}
           renderCenterLeftControls={({ previousSlide }) => (
@@ -37,7 +37,7 @@ export default () => {
         </Carousel>
       </B>
 
-      <B title='in modal' contentStyle={{ width: '100%' }}>
+      <B title='in modal'>
         <button onClick={() => setshowModal(!showModal)}>toggle</button>
         <Modal show={showModal} onClose={() => setshowModal(false)}>
           <Carousel>

@@ -1,19 +1,18 @@
 import React, { useEffect, useRef } from 'react'
 
-import Animation from '../animations/Web-Animations-API'
+import useAnimation from '../animations/Web-Animations-API'
+import Box from '../../dataDisplay/box'
 
 import { defaultProps, propTypes } from './propTypes'
-import { Wrapper } from './styles'
+import * as styles from './styles'
 
 const Overlay = ({
   show,
   onClick,
-  backgroundcolor,
-  noAnimation,
   disableScrollOnShow,
   dataCy,
   appendToBody,
-  ...restStyles
+  wrapperStyles,
 }) => {
   const overlayRef = useRef(null)
 
@@ -41,18 +40,20 @@ const Overlay = ({
 
   const handleKeyInput = ({ key }) => key === 'Escape' && onClick()
 
+  useAnimation({
+    name: 'showHide',
+    show,
+    el: overlayRef,
+  })
+
   return (
-    <>
-      <Animation name='showHide' show={show} el={overlayRef} />
-      <Wrapper
-        ref={overlayRef}
-        onClick={onClick}
-        backgroundcolor={backgroundcolor}
-        noAnimation={noAnimation}
-        data-cy={dataCy}
-        {...restStyles}
-      />
-    </>
+    <Box
+      name='overlay'
+      ref={overlayRef}
+      onClick={onClick}
+      data-cy={dataCy}
+      styles={{ ...styles.wrapper, ...wrapperStyles }}
+    />
   )
 }
 
