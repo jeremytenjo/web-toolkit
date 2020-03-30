@@ -1,18 +1,9 @@
-import React, { memo, lazy, Suspense, forwardRef } from 'react'
+import React, { memo, forwardRef } from 'react'
 
 import { BoxWrapper } from './styles'
 
-const LazyLoad = lazy(() =>
-  import(
-    /* webpackChunkLazyLoad: 'LazyLoadWrapper' */ '../../miscUtils/rendering/lazyLoad'
-  ),
-)
-
-const Box = (
-  { children, name, styles = {}, isLazyLoaded, lazyLoadProps = { offset: 400 }, ...rest },
-  ref,
-) => {
-  const BoxComponent = () => (
+const Box = ({ children, name, styles = {}, ...rest }, ref) => {
+  return (
     <BoxWrapper
       ref={ref}
       styles={{ display: 'grid', ...styles }}
@@ -22,16 +13,6 @@ const Box = (
     >
       {children}
     </BoxWrapper>
-  )
-
-  return isLazyLoaded ? (
-    <Suspense fallback={null}>
-      <LazyLoad {...lazyLoadProps}>
-        <BoxComponent />
-      </LazyLoad>
-    </Suspense>
-  ) : (
-    <BoxComponent />
   )
 }
 
