@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const ModalWrapper = styled.div`
   display: none;
   opacity: 0;
   width: fit-content;

@@ -4,7 +4,7 @@ import Overlay from '../../miscUtils/overlay'
 import Animation from '../../miscUtils/animations/Web-Animations-API'
 
 import { defaultProps, propTypes } from './propTypes'
-import { Wrapper } from './styles'
+import { ModalWrapper } from './styles'
 
 const Modal = ({
   show,
@@ -31,9 +31,9 @@ const Modal = ({
         el={modalRef}
         style={animationsStyles}
       />
-      <Wrapper ref={modalRef} style={style}>
+      <ModalWrapper ref={modalRef} style={style}>
         {children}
-      </Wrapper>
+      </ModalWrapper>
 
       <Overlay show={show} onClick={onClose} zIndex={1} style={overlayStyles} />
     </>
