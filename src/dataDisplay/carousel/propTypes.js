@@ -1,13 +1,15 @@
-import { object, bool, number } from 'prop-types'
+import { object, bool, func, number } from 'prop-types'
 
 export const defaultProps = {
-  initialndex: 0,
+  index: 0,
+  setIndex: null,
   wrapperStyles: {},
   infinite: true,
 }
 
 export const propTypes = {
-  initialndex: number,
+  index: number,
+  setIndex: func.isRequired,
   wrapperStyles: object,
   infinite: bool,
 }

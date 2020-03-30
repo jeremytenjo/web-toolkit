@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SwipeableViews from 'react-swipeable-views'
 
 import Box from '../box'
@@ -7,34 +7,33 @@ import Icon from '../icon/index'
 import { defaultProps, propTypes } from './propTypes'
 import * as styles from './styles'
 
-function Carousel({ children, wrapperStyles, infinite, initialndex }) {
-  const [activeItem, setActiveItem] = useState(initialndex)
+function Carousel({ children, wrapperStyles, infinite, index, setIndex }) {
   const childrenLength = children.length
-  const showLeftArrow = infinite || activeItem !== 0
-  const showRightArrow = infinite || activeItem !== childrenLength
+  const showLeftArrow = infinite || index !== 0
+  const showRightArrow = infinite || index !== childrenLength
 
   const handleNext = () => {
-    let nextItem = activeItem + 1
+    let nextItem = index + 1
     const nextItemIsHigherThanTotal = nextItem > childrenLength
     nextItem = nextItemIsHigherThanTotal ? 0 : nextItem
 
-    setActiveItem(nextItem)
+    setIndex(nextItem)
   }
 
   const handleBack = () => {
-    let prevItem = activeItem - 1
+    let prevItem = index - 1
     const prevItemIsLowerThanTotal = prevItem === -1
     prevItem = prevItemIsLowerThanTotal ? childrenLength : prevItem
-    setActiveItem(prevItem)
+    setIndex(prevItem)
   }
 
-  const handleItemChange = (nextIndex) => setActiveItem(nextIndex)
+  const handleItemChange = (nextIndex) => setIndex(nextIndex)
 
   return (
     <Box name='carousel' styles={{ ...styles.wrapper, ...wrapperStyles }}>
       <SwipeableViews
         axis='x'
-        index={activeItem}
+        index={index}
         onChangeIndex={handleItemChange}
         enableMouseEvents
       >

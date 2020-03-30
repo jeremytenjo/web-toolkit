@@ -11,26 +11,12 @@ const { simple } = stubs
 
 export default () => {
   const [showModal, setshowModal] = useState(null)
+  const [index, setIndex] = useState(0)
+
   return (
     <div>
       <B title='default'>
-        <Carousel>
-          <Image {...simple} />
-          <Image {...simple} />
-          <Image {...simple} />
-        </Carousel>
-      </B>
-
-      <B title='custom controls'>
-        <Carousel
-          renderTopCenterControls={({ currentSlide }) => <div>Slide: {currentSlide}</div>}
-          renderCenterLeftControls={({ previousSlide }) => (
-            <button onClick={previousSlide}>Previous</button>
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <button onClick={nextSlide}>Next</button>
-          )}
-        >
+        <Carousel index={index} setIndex={setIndex}>
           <Image {...simple} />
           <Image {...simple} />
           <Image {...simple} />
@@ -40,7 +26,7 @@ export default () => {
       <B title='in modal'>
         <button onClick={() => setshowModal(!showModal)}>toggle</button>
         <Modal show={showModal} onClose={() => setshowModal(false)}>
-          <Carousel>
+          <Carousel index={index} setIndex={setIndex}>
             <Image {...simple} />
             <Image {...simple} />
             <Image {...simple} />
