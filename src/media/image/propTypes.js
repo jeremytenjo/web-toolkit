@@ -2,7 +2,7 @@ import { string, number, bool, object, func } from 'prop-types'
 
 export const defaultProps = {
   src: '',
-  alt: 'estilistta',
+  alt: '',
   name: '',
   index: null,
   round: null,
@@ -14,8 +14,8 @@ export const defaultProps = {
   definitions: null,
   skeleton: null,
   position: 'center',
-  OnVisibilityParams: {
-    offset: 200,
+  lazyLoadProps: {
+    offset: 100,
     once: true,
   },
   inputProps: null,

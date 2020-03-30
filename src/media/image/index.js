@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import OnVisibility from '../../miscUtils/rendering/lazyLoad'
+import LazyLoad from '../../miscUtils/rendering/lazyLoad'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, InnerImage } from './styles'
@@ -11,7 +11,7 @@ const Image = ({
   onClick,
   definitions,
   isLazyLoaded,
-  OnVisibilityProps,
+  lazyLoadProps,
   styles,
   ...props
 }) => {
@@ -29,9 +29,9 @@ const Image = ({
   )
 
   return isLazyLoaded ? (
-    <OnVisibility {...OnVisibilityProps}>
+    <LazyLoad {...lazyLoadProps}>
       <ImageComp />
-    </OnVisibility>
+    </LazyLoad>
   ) : (
     <ImageComp />
   )
