@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import OnVisibility from '../../miscUtils/rendering/renderingOnVisibility'
+import OnVisibility from '../../miscUtils/rendering/lazyLoad'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, InnerImage } from './styles'
