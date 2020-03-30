@@ -7,7 +7,15 @@ import Icon from '../icon/index'
 import { defaultProps, propTypes } from './propTypes'
 import * as styles from './styles'
 
-function Carousel({ children, wrapperStyles, infinite, index, setIndex, iconColor }) {
+function Carousel({
+  children,
+  wrapperStyles,
+  infinite,
+  index,
+  setIndex,
+  iconColor,
+  iconName,
+}) {
   const childrenLength = children.length
   const showLeftArrow = infinite || index !== 0
   const showRightArrow = infinite || index !== childrenLength
@@ -42,7 +50,7 @@ function Carousel({ children, wrapperStyles, infinite, index, setIndex, iconColo
 
       {showLeftArrow && (
         <Icon
-          name='arrow/1'
+          name={iconName}
           onClick={handleBack}
           color={iconColor}
           style={styles.leftArrow}
@@ -51,7 +59,7 @@ function Carousel({ children, wrapperStyles, infinite, index, setIndex, iconColo
 
       {showRightArrow && (
         <Icon
-          name='arrow/1'
+          name={iconName}
           onClick={handleNext}
           style={styles.rightArrow}
           color={iconColor}
