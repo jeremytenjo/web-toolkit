@@ -447,6 +447,13 @@
   ]
 },
     
+"miscUtils rendering lazyLoad": {
+  "prefix": "wtla",
+  "body": [
+    "import LazyLoad from '@tenjojeremy/web-toolkit/miscUtils/rendering/lazyLoad'"
+  ]
+},
+    
 "miscUtils scrolling eventListeners scrollEnd": {
   "prefix": "wtsc",
   "body": [
