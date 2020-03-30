@@ -67,6 +67,7 @@ export const Wrapper = styled.ul`
   li > :first-child {
     padding-top: 100%;
     width: auto;
+    height: auto;    
   }
     `}
 
