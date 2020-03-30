@@ -10,7 +10,9 @@ const IconSrollBackTop = ({ iconProps, animationProps, offset }) => {
   const [show, setshow] = useState(null)
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, true)
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true)
+    }
   }, [])
 
   const handleScroll = () => {
