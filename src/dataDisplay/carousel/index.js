@@ -7,7 +7,7 @@ import Icon from '../icon/index'
 import { defaultProps, propTypes } from './propTypes'
 import * as styles from './styles'
 
-function Carousel({ children, wrapperStyles, infinite, index, setIndex }) {
+function Carousel({ children, wrapperStyles, infinite, index, setIndex, iconColor }) {
   const childrenLength = children.length
   const showLeftArrow = infinite || index !== 0
   const showRightArrow = infinite || index !== childrenLength
@@ -41,11 +41,21 @@ function Carousel({ children, wrapperStyles, infinite, index, setIndex }) {
       </SwipeableViews>
 
       {showLeftArrow && (
-        <Icon name='arrow/1' onClick={handleBack} style={styles.leftArrow} />
+        <Icon
+          name='arrow/1'
+          onClick={handleBack}
+          color={iconColor}
+          style={styles.leftArrow}
+        />
       )}
 
       {showRightArrow && (
-        <Icon name='arrow/1' onClick={handleNext} style={styles.rightArrow} />
+        <Icon
+          name='arrow/1'
+          onClick={handleNext}
+          style={styles.rightArrow}
+          color={iconColor}
+        />
       )}
     </Box>
   )
