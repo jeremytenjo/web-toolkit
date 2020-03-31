@@ -20,7 +20,7 @@ const Carousel = ({
   const childrenLength = children.length
   const hasOneItem = childrenLength === 1
   const showLeftArrow = infinite || index !== 0
-  const showRightArrow = infinite || index !== childrenLength
+  const showRightArrow = infinite || index !== childrenLength - 1
 
   const handleNext = () => {
     let nextItem = index + 1
@@ -37,16 +37,13 @@ const Carousel = ({
     setIndex(prevItem)
   }
 
-  const handleItemChange = (nextIndex) => setIndex(nextIndex)
+  const handleItemChange = (nextIndex) => {
+    setIndex(nextIndex)
+  }
 
   return (
     <Box name='carousel' styles={{ ...styles.wrapper, ...wrapperStyles }}>
-      <SwipeableViews
-        axis='x'
-        index={index}
-        onChangeIndex={handleItemChange}
-        enableMouseEvents
-      >
+      <SwipeableViews index={index} onChangeIndex={handleItemChange} enableMouseEvents>
         {children.map(() => children)}
       </SwipeableViews>
 
