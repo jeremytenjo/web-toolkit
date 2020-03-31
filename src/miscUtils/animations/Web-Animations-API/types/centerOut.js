@@ -19,6 +19,10 @@ export default ({ el, config, show, displayType = 'block' }) => {
       if (!show) el.style.display = 'none'
     }
   } else {
-    if (!show) el.style.display = 'none'
+    if (show) el.style.opacity = 1
+    else {
+      el.style.opacity = 0
+      el.style.display = 'none'
+    }
   }
 }

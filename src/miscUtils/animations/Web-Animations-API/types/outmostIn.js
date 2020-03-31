@@ -59,6 +59,8 @@ export default ({ el, config, show, direction = 'bottomUp', returnsOnEnd }) => {
       }
     }
   } else {
-    if (!show) el.style.display = 'none'
+    if (!show) {
+      el.style.display = 'none'
+    }
   }
 }
