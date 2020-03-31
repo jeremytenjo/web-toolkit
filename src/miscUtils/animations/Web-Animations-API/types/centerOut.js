@@ -11,11 +11,14 @@ export default ({ el, config, show, displayType = 'block' }) => {
     },
   ]
 
+  el.style.display = displayType
+
   if (el.animate) {
-    el.style.display = displayType
     const anim = el.animate(keyframes, config)
     anim.onfinish = () => {
       if (!show) el.style.display = 'none'
     }
+  } else {
+    if (!show) el.style.display = 'none'
   }
 }

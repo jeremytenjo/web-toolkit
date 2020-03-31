@@ -32,17 +32,17 @@ export default ({ el, config, show, direction = 'bottomUp', returnsOnEnd }) => {
     },
   ]
 
+  el.style.display = 'block'
+  el.style.position = 'fixed'
+
+  if (direction === 'bottomUp') {
+    el.style.right = 0
+    el.style.bottom = 0
+    el.style.left = 0
+    el.style.margin = '0 auto'
+  }
+
   if (el.animate) {
-    el.style.display = 'block'
-    el.style.position = 'fixed'
-
-    if (direction === 'bottomUp') {
-      el.style.right = 0
-      el.style.bottom = 0
-      el.style.left = 0
-      el.style.margin = '0 auto'
-    }
-
     if (show) el.animate(keyframesStart, config)
 
     if (!returnsOnEnd && show !== null && !show) {
@@ -56,5 +56,7 @@ export default ({ el, config, show, direction = 'bottomUp', returnsOnEnd }) => {
         if (!show) el.style.display = 'none'
       }
     }
+  } else {
+    if (!show) el.style.display = 'none'
   }
 }
