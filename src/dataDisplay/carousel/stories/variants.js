@@ -7,7 +7,7 @@ import Carousel from '../'
 
 import stubs from './stubs'
 
-const { simple } = stubs
+const { simple, simple2 } = stubs
 
 export default () => {
   const [showModal, setshowModal] = useState(null)
@@ -19,7 +19,7 @@ export default () => {
         <Carousel index={index} setIndex={setIndex}>
           <Image {...simple} />
           <Image {...simple} />
-          <Image {...simple} />
+          <Image {...simple2} />
         </Carousel>
       </B>
 
@@ -29,7 +29,7 @@ export default () => {
           <Carousel index={index} setIndex={setIndex}>
             <Image {...simple} />
             <Image {...simple} />
-            <Image {...simple} />
+            <Image {...simple2} />
           </Carousel>
         </Modal>
       </B>

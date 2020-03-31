@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import system from '../../theme/system'
 
-export const Wrapper = styled.div`
+export const ImageWrapper = styled.div`
   ${system}
 
   overflow: hidden;

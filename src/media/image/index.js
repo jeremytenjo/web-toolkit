@@ -1,7 +1,7 @@
 import React, { memo, lazy, Suspense } from 'react'
 
 import { defaultProps, propTypes } from './propTypes'
-import { Wrapper, InnerImage } from './styles'
+import { ImageWrapper, InnerImage } from './styles'
 
 const LazyLoad = lazy(() =>
   import(
@@ -28,9 +28,9 @@ const Image = ({
   }
 
   const ImageComp = () => (
-    <Wrapper onClick={() => onClick(props)} styles={styles}>
+    <ImageWrapper onClick={() => onClick(props)} styles={styles}>
       {src && <InnerImage alt={alt} src={src} style={{ objectFit }} />}
-    </Wrapper>
+    </ImageWrapper>
   )
 
   return isLazyLoaded ? (
