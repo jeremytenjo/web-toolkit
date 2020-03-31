@@ -21,11 +21,16 @@ export const WrapperIcon = styled.div`
   border-radius: 100px;
   animation-timing-function: ease-out;
   padding: ${({ backgroundSize }) =>
-    backgroundSize ? `${backgroundSize}` : 'var(--spacing-xs, 10px)'} ;
+    backgroundSize ? `${backgroundSize}` : 'var(--spacing-xs, 10px)'} ;  
   
-  &:hover,
   &:active {
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   }
   
   /* backgroundColor */
@@ -35,11 +40,17 @@ export const WrapperIcon = styled.div`
     background-color: var(--color-${backgroundColor});    
     border: 2px solid var(--color-${backgroundColor});
 
-    &:hover,
     &:active {
     background-color: var(--color-${backgroundColor});   
     border: 2px solid var(--color-${backgroundColor});
     }
+
+    @media (hover: hover) {
+    &:hover {
+    background-color: var(--color-${backgroundColor});   
+    border: 2px solid var(--color-${backgroundColor});
+    }
+}
   `}
  
      /* Outlined */
@@ -47,10 +58,16 @@ export const WrapperIcon = styled.div`
       outlined &&
       `
   border: 2px solid var(--color-${color}Darker);
-  &:hover,
-  &:active {
-    background-color: var(--color-${color}Background);
-    border: 2px solid var(--color-${color}Darker);    
+
+    &:active {
+    background-color: var(--color-${color}Background);   
+    border: 2px solid var(--color-${color}Darker);
+    }
+
+    @media (hover: hover) {
+    &:hover {
+    background-color: var(--color-${color}Background);   
+    border: 2px solid var(--color-${color}Darker);
     }
   `}
 
@@ -61,11 +78,19 @@ export const WrapperIcon = styled.div`
         width: auto;
         height: auto;
         padding: 0;
-  &:hover,      
+        
   &:active {
     background-color: transparent;
     border: none;    
     }
+
+    @media (hover: hover) {
+      &:hover {
+    background-color: transparent;
+    border: none;    
+    }
+    }
+
   `}
 
   svg {
