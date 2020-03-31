@@ -26,5 +26,7 @@ export default ({ el, show, config, displayType = 'display' }) => {
     anim.onfinish = () => {
       if (!show) el.style[displayType] = hideAttr
     }
+  } else {
+    if (!show) el.style[displayType] = hideAttr
   }
 }
