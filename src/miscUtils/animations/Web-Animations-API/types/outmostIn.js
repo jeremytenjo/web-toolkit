@@ -32,6 +32,8 @@ export default ({ el, config, show, direction = 'bottomUp', returnsOnEnd }) => {
     },
   ]
 
+  if (!el.animate) el.style.transition = '0.2s'
+
   el.style.display = 'block'
   el.style.position = 'fixed'
 
