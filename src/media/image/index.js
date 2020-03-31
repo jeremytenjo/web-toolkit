@@ -13,6 +13,7 @@ const Image = ({
   src,
   alt,
   onClick,
+  objectFit,
   definitions,
   isLazyLoaded,
   lazyLoadProps,
@@ -28,7 +29,7 @@ const Image = ({
 
   const ImageComp = () => (
     <Wrapper onClick={() => onClick(props)} styles={styles}>
-      {src && <InnerImage alt={alt} src={src} />}
+      {src && <InnerImage alt={alt} src={src} style={{ objectFit }} />}
     </Wrapper>
   )
 

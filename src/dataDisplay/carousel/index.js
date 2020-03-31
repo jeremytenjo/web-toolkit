@@ -7,7 +7,7 @@ import Icon from '../icon/index'
 import { defaultProps, propTypes } from './propTypes'
 import * as styles from './styles'
 
-function Carousel({
+const Carousel = ({
   children,
   wrapperStyles,
   infinite,
@@ -15,8 +15,10 @@ function Carousel({
   setIndex,
   iconColor,
   iconName,
-}) {
+}) => {
+  children = Array.isArray(children) ? children : [children]
   const childrenLength = children.length
+  const hasOneItem = childrenLength === 1
   const showLeftArrow = infinite || index !== 0
   const showRightArrow = infinite || index !== childrenLength
 
@@ -48,7 +50,7 @@ function Carousel({
         {children.map(() => children)}
       </SwipeableViews>
 
-      {showLeftArrow && (
+      {showLeftArrow && !hasOneItem && (
         <Icon
           name={iconName}
           onClick={handleBack}
@@ -57,7 +59,7 @@ function Carousel({
         />
       )}
 
-      {showRightArrow && (
+      {showRightArrow && !hasOneItem && (
         <Icon
           name={iconName}
           onClick={handleNext}

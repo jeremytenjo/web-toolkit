@@ -20,6 +20,7 @@ export const defaultProps = {
   },
   inputProps: null,
   styles: { width: '300px', height: '300px' },
+  objectFit: 'cover',
 }
 
 export const propTypes = {
@@ -32,6 +33,7 @@ export const propTypes = {
   index: number,
   onClick: func,
   definitions: object,
+  objectFit: string,
   skeleton: bool,
   round: bool,
   borderColor: string,
