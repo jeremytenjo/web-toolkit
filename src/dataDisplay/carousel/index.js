@@ -43,7 +43,7 @@ const Carousel = ({
 
   return (
     <Box name='carousel' styles={{ ...styles.wrapper, ...wrapperStyles }}>
-      <SwipeableViews index={index} onChangeIndex={handleItemChange} enableMouseEvents>
+      <SwipeableViews index={index} onChangeIndex={handleItemChange}>
         {children.map((child, index) => {
           return <Fragment key={index + Math.random()}>{child}</Fragment>
         })}
