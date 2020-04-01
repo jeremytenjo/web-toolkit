@@ -1,10 +1,13 @@
 import React from 'react'
 
 export default () => (
-  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 129 129'>
+  <svg viewBox='0 0 9 15' fill='none'>
     <path
-      fill='#b5fffc'
-      d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z'
-    ></path>
+      d='M7.10913 13.9727L1.10913 7.97272L7.10913 1.97272'
+      stroke='currentColor'
+      strokeWidth='2'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+    />
   </svg>
 )

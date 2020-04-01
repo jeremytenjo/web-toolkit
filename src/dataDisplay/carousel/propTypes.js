@@ -5,7 +5,7 @@ export const defaultProps = {
   setIndex: null,
   wrapperStyles: {},
   iconColor: 'white',
-  iconName: 'arrow/1',
+  iconName: 'arrow/feather',
   infinite: null,
 }
 
