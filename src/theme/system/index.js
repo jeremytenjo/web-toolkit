@@ -1,5 +1,4 @@
-import decamelize from 'decamelize'
-
+import decamelize from '../../utils/string/decamelize/index'
 import removeDuplicatesInArray from '../../utils/array/functions/removeDuplicates'
 
 export default (props) => {

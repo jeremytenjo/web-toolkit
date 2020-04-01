@@ -44,7 +44,6 @@
   "prettier": "@tenjojeremy/prettier-config",
   "dependencies": {
     "@material-ui/core": "^4.9.1",
-    "decamelize": "^4.0.0",
     "react-bottom-scroll-listener": "^3.0.0",
     "react-lazyload": "^2.6.5",
     "react-particles-js": "^2.7.1",
