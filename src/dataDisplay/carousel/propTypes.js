@@ -6,7 +6,7 @@ export const defaultProps = {
   wrapperStyles: {},
   iconColor: 'white',
   iconName: 'arrow/1',
-  infinite: true,
+  infinite: null,
 }
 
 export const propTypes = {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SwipeableViews from 'react-swipeable-views'
 
 import Box from '../box'
@@ -22,19 +22,19 @@ const Carousel = ({
   const showLeftArrow = infinite || index !== 0
   const showRightArrow = infinite || index !== childrenLength - 1
 
-  const handleNext = () => {
-    let nextItem = index + 1
-    const nextItemIsHigherThanTotal = nextItem > childrenLength
-    nextItem = nextItemIsHigherThanTotal ? 0 : nextItem
-
-    setIndex(nextItem)
-  }
-
   const handleBack = () => {
     let prevItem = index - 1
     const prevItemIsLowerThanTotal = prevItem === -1
-    prevItem = prevItemIsLowerThanTotal ? childrenLength : prevItem
+    prevItem = prevItemIsLowerThanTotal ? childrenLength - 1 : prevItem
     setIndex(prevItem)
+  }
+
+  const handleNext = () => {
+    let nextItem = index + 1
+    const nextItemIsHigherThanTotal = nextItem > childrenLength - 1
+    nextItem = nextItemIsHigherThanTotal ? 0 : nextItem
+
+    setIndex(nextItem)
   }
 
   const handleItemChange = (nextIndex) => {
@@ -44,7 +44,9 @@ const Carousel = ({
   return (
     <Box name='carousel' styles={{ ...styles.wrapper, ...wrapperStyles }}>
       <SwipeableViews index={index} onChangeIndex={handleItemChange} enableMouseEvents>
-        {children.map(() => children)}
+        {children.map((child, index) => {
+          return <Fragment key={index + Math.random()}>{child}</Fragment>
+        })}
       </SwipeableViews>
 
       {showLeftArrow && !hasOneItem && (
