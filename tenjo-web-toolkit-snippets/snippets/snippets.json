@@ -566,6 +566,13 @@
   ]
 },
     
+"utils string decamelize": {
+  "prefix": "wtde",
+  "body": [
+    "import Decamelize from '@tenjojeremy/web-toolkit/utils/string/decamelize'"
+  ]
+},
+    
 "utils string toBoolean": {
   "prefix": "wtto",
   "body": [
