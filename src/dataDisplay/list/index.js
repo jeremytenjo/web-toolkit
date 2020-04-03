@@ -22,6 +22,7 @@ const List = ({
   ...styles
 }) => {
   const dataLength = data.length
+  children = Array.isArray(children) ? children : [children]
 
   const loadWithItemComponent = () =>
     data.map((item, index) => (
