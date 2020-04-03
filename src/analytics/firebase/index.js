@@ -1,3 +1,3 @@
-import 'firebase/performance'
+import firebase from 'firebase/app'
 
-export default (firebase) => firebase.performance()
+export default () => firebase.analytics()
