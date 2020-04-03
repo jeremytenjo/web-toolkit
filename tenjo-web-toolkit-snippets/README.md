@@ -461,6 +461,13 @@
   ]
 },
     
+"miscUtils viewport useMatchMedia": {
+  "prefix": "wtus",
+  "body": [
+    "import UseMatchMedia from '@tenjojeremy/web-toolkit/miscUtils/viewport/useMatchMedia'"
+  ]
+},
+    
 "navigation link": {
   "prefix": "wtli",
   "body": [
