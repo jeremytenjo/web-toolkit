@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 export default ({ url, method = 'get' }) => {
-  const [loading, setLoading] = useState(false)
+  const aborController = useRef(new AbortController())
+  const [fetching, setFetching] = useState(false)
   const [error, setError] = useState(null)
   const [response, setResponse] = useState(null)
 
-  const request = async (params) => {
+  const request = async (params = {}) => {
     const {
       body = null,
       headers = {
@@ -13,13 +14,13 @@ export default ({ url, method = 'get' }) => {
         'Content-Type': 'application/json',
       },
       url: dynamicUrl = url,
-    } = params || {}
+    } = params
 
     try {
-      setLoading(true)
+      setFetching(true)
       let res = null
       if (method === 'get') {
-        res = await fetch(dynamicUrl)
+        res = await fetch(dynamicUrl, { signal: aborController.current.signal })
         res = await res.json()
       } else {
         res = await fetch(dynamicUrl, {
@@ -31,13 +32,25 @@ export default ({ url, method = 'get' }) => {
       }
       setResponse(res)
       return res
-    } catch (e) {
-      setError(e)
-      return { error: e }
+    } catch (error) {
+      if (error.name === 'AbortError'){
+        setResponse(false)
+         return { aborted: true}
+        }
+       else {
+        setError()
+        return { error }
+      }    
     } finally {
-      setLoading(false)
+      setFetching(false)
     }
   }
 
-  return { loading, request, error, response }
+  const abort = () => {
+    if ("AbortController" in window) {
+    fetching && aborController.current.abort()
+   }
+  }
+
+  return { fetching, request, error, response, abort }
 }
