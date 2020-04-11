@@ -2,20 +2,20 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 <Meta title='Data|Validator' />
 
-Uses (Joi)[https://hapi.dev/module/joi/#example] under the hood 
+Uses Joi under the hood - [Documentation](https://hapi.dev/module/joi/#example)
 
 
-## Usage
+### Usage
 ```js 
 import validator from '@tenjojeremy/web-toolkit/data/validator'
 ```
 
-## Example
+### Example
 
 ```js
 import validator from '@tenjojeremy/web-toolkit/data/validator'
 
-export default validator.object({
+const schema = validator.object({
   name: validator
     .string()
     .min(3)
@@ -30,5 +30,4 @@ export default validator.object({
   position: validator.string().required(),
   avatar: validator.string()
 });
-
 ```
