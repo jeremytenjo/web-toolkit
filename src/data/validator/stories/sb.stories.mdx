@@ -1,0 +1,34 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title='Data|Validator' />
+
+Uses (Joi)[https://hapi.dev/module/joi/#example] under the hood 
+
+
+## Usage
+```js 
+import validator from '@tenjojeremy/web-toolkit/data/validator'
+```
+
+## Example
+
+```js
+import validator from '@tenjojeremy/web-toolkit/data/validator'
+
+export default validator.object({
+  name: validator
+    .string()
+    .min(3)
+    .max(30)
+    .required(),
+  email: validator
+    .string()
+    .email({ tlds: { allow: ["com", "net"] } })
+    .required(),
+  teamId: validator.string(),
+  leagueId: validator.string(),
+  position: validator.string().required(),
+  avatar: validator.string()
+});
+
+```
