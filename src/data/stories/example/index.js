@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import generateStubs from "./data/users/stubs";
 
 export default () => {
-  const example = async () => {
-    const stubs = await generateStubs;
+  const [stubs, setStubs] = useState('')
+  useEffect(()=>{
+    gen()
+  },[])
 
-    console.log({ stubs });
+  const gen = async () => {
+    const newStubs = await generateStubs;
+
+    console.log({ newStubs });
+    setStubs(JSON.stringify(newStubs,null,2))
   };
-
-  example();
-  return <div>Data Example</div>;
+ 
+  return <code style={{color:'white'}}>{stubs}</code>;
 }
