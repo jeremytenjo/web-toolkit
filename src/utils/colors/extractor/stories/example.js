@@ -29,6 +29,8 @@ const ColorExtractorExample = () => {
 
   return (
     <Box styles={{ width: 'fit-content', gridGap: 'm' }}>
+      <FileUpload onInput={handleInput} />
+
       <Image src={img} />
 
       <Box styles={{ gridGap: 'm', gridAutoFlow: 'column' }}>
@@ -44,7 +46,6 @@ const ColorExtractorExample = () => {
           )
         })}
       </Box>
-      <FileUpload onInput={handleInput} />
     </Box>
   )
 }
