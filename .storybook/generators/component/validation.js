@@ -2,24 +2,25 @@ const fs = require('fs-extra')
 const emoji = require('node-emoji')
 const chalk = require('chalk')
 
-module.exports = (name) => {
+module.exports = (path) => {
   let result = { isValid: true }
+  let fullpath = `src/${path}`
 
-  // no name
-  if (!name) {
+  // no path
+  if (!path) {
     result.isValid = false
     result.errorMessage = `${emoji.get(
       'x',
-    )}  missing second name parameter eg: node generators/component/index.js ${chalk.yellow(
-      '<name>',
+    )}  missing second path parameter eg: node generators/component/index.js ${chalk.yellow(
+      '<path>',
     )}`
   }
 
   // component already exists
-  if (fs.existsSync(name)) {
+  if (fs.existsSync(fullpath)) {
     result.isValid = false
     result.errorMessage = `${emoji.get('x')}  component ${chalk.yellow(
-      name,
+      path,
     )} already exists`
   }
 

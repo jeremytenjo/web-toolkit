@@ -2,16 +2,17 @@ const createFile = require('../../utils/createFile')
 const createTitle = require('./utils/createTitle')
 const createImportString = require('./utils/createImportString')
 
-module.exports = ({ name, nameUppercase, outputPathBase }) => {
-  const storybookLocation = createTitle(name)
+module.exports = ({ name, path, nameUppercase, outputPathBase }) => {
+  const title = createTitle(path)
 
   // generate MDX
-  const importString = createImportString(name, nameUppercase)
-  const outputPathMdx = outputPathBase(`stories/${name}.stories.mdx`)
+  const importString = createImportString(name, nameUppercase, undefined, path)
+  const outputPathMdx = outputPathBase(`stories/sb.stories.mdx`)
   const contentMdx = `import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import ${nameUppercase} from '..'
 import Variants from './variants'
 
-<Meta title='${storybookLocation}' />
+<Meta title='${title}' />
 
 #### Usage
 
@@ -38,7 +39,7 @@ ${'```'}
   const contentVariants = `
   import React from 'react'
 
-  import B from '../../../../.storybook/customComponents/variationBlock/variationBlock.index'
+  import B from '../../../../.storybook/customComponents/variationBlock'
   import { useVariants } from '../../../../.storybook/utils/useVariants'
   
   const Variants = ({ Component: ${nameUppercase} }) => { 
@@ -56,7 +57,7 @@ ${'```'}
     const { Elements } = useVariants({
       req,
       Variants,
-      dir: ${storybookLocation},
+      dir: '${path}',
     })
   
     return Elements

@@ -1,6 +1,6 @@
-module.exports = (name, nameUppercase, base = '@tenjojeremy/web-toolkit/') => {
+module.exports = (name, nameUppercase, base = '@tenjojeremy/web-toolkit/', path) => {
   console.log(__dirname)
-  let importString = `import ${nameUppercase} from '${base}input/${nameUppercase}/styles/1'`
+  let importString = `import ${nameUppercase} from '${base}${path}/styles/1'`
 
   return importString
 }
