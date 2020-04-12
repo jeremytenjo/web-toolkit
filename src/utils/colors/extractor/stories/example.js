@@ -22,6 +22,8 @@ const ColorExtractorExample = () => {
   }
 
   const handleInput = async (file) => {
+    if (!file) return null
+
     const fileUrl = await fileReader(file)
     setImg(fileUrl)
     extract(fileUrl)
