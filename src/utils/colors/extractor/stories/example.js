@@ -1,14 +1,51 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 
+import fileReader from '../../../../media/files/fileReader'
+import FileUpload from '../../../../media/files/fileInput'
+import Box from '../../../../dataDisplay/box/'
 import Image from '../../../../media/image/'
+import extractColors from '../'
 
 import imageExample from './image.jpg'
 
 const ColorExtractorExample = () => {
+  const [img, setImg] = useState(imageExample)
+  const [colors, setColors] = useState({})
+
+  useEffect(() => {
+    extract(img)
+  }, [])
+
+  const extract = async (img) => {
+    const palette = await extractColors(img)
+    setColors(palette)
+  }
+
+  const handleInput = async (file) => {
+    const fileUrl = await fileReader(file)
+    setImg(fileUrl)
+    extract(fileUrl)
+  }
+
   return (
-    <div>
-      <Image src={imageExample} />
-    </div>
+    <Box styles={{ width: 'fit-content', gridGap: 'm' }}>
+      <Image src={img} />
+
+      <Box styles={{ gridGap: 'm', gridAutoFlow: 'column' }}>
+        {Object.entries(colors).map((item) => {
+          const [title, value] = item
+          return (
+            <Box key={Math.random()} styles={{ gridGap: 's' }}>
+              <span style={{ color: 'white' }}>{title}</span>
+              <svg width='50' height='50'>
+                <rect width='300' height='100' style={{ fill: value.hex }} />
+              </svg>
+            </Box>
+          )
+        })}
+      </Box>
+      <FileUpload onInput={handleInput} />
+    </Box>
   )
 }
 

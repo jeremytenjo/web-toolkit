@@ -7,7 +7,14 @@ import Animation from '../../../utils/animations/wap'
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, Input, ChildrenWrap } from './styles'
 
-const FileInput = ({ accept, children, onInput, name, validation, ...nativeProps }) => {
+const FileInput = ({
+  accept,
+  children = <button>Upload</button>,
+  onInput,
+  name,
+  validation,
+  ...nativeProps
+}) => {
   const inputRef = useRef(null)
   const [errorMessages, seterrorMessages] = useState([])
   const errMessagesRef = useRef(null)
