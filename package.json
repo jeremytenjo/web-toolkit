@@ -25,19 +25,6 @@
     "check-staged": "lint-staged",
     "new:component": "node .storybook/generators/component/index.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "npm run lint:fix",
-      "npm run prettify",
-      "prettier --list-different",
-      "jest --passWithNoTests"
-    ]
-  },
   "eslintConfig": {
     "extends": "@tenjojeremy/eslint-config"
   },
