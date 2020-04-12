@@ -2,7 +2,7 @@ import React, { memo, lazy, Suspense, Fragment, useEffect, useState } from 'reac
 
 import { Link } from '../../navigation/router'
 import Typography from '../../dataDisplay/typography'
-import Animation from '../../utils/animations/Web-Animations-API'
+import Animation from '../../utils/animations/wap'
 
 import { defaultProps, propTypes } from './propTypes'
 

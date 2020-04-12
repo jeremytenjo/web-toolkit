@@ -1,6 +1,6 @@
 import React, { memo, useState, useRef } from 'react'
 
-import Animation from '../../../utils/animations/Web-Animations-API'
+import Animation from '../../../utils/animations/wap'
 import capitalize from '../../../utils/string/capitalize'
 import Box from '../../../dataDisplay/box'
 import Image from '../../../media/image/index'

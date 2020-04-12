@@ -2,7 +2,7 @@ import React, { useRef, memo, useState, useEffect } from 'react'
 
 import toBoolean from '../../../utils/string/toBoolean'
 import Typography from '../../../dataDisplay/typography'
-import Animation from '../../../utils/animations/Web-Animations-API'
+import Animation from '../../../utils/animations/wap'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, Input, ChildrenWrap } from './styles'

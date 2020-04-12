@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-import useAnimation from '../animations/Web-Animations-API'
+import useAnimation from '../animations/wap'
 import Box from '../../dataDisplay/box'
 
 import { defaultProps, propTypes } from './propTypes'

@@ -10,7 +10,7 @@ const Typography = lazy(() =>
 )
 const Animation = lazy(() =>
   import(
-    /* webpackChunkName: 'Animation' */ '../../../../../utils/animations/Web-Animations-API'
+    /* webpackChunkName: 'Animation' */ '../../../../../utils/animations/wap'
   ),
 )
 

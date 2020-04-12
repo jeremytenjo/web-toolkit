@@ -1,6 +1,6 @@
 import React, { useState, createContext, useContext } from 'react'
 
-import Animation from '../../utils/animations/Web-Animations-API'
+import Animation from '../../utils/animations/wap'
 export const ToastContext = createContext(null)
 
 export const ToastProvider = ({ children }) => {

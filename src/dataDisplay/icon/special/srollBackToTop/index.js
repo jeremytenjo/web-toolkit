@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react'
 
-import Animation from '../../../../utils/animations/Web-Animations-API'
+import Animation from '../../../../utils/animations/wap'
 import Icon from '../..'
 
 import { iconStyles } from './styles'
