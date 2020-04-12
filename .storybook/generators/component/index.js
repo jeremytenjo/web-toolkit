@@ -12,23 +12,25 @@ const createStyles = require('./templates/styles.js')
 const createTests = require('./templates/tests.js')
 
 const path = process.argv[2]
-let name = path.split('/')
-name = name[name.length - 1]
-
+const splitPath = path.split('/')
+const name = splitPath[splitPath.length - 1]
 const successMessage = `${emoji.get('white_check_mark')}  ${chalk.yellow(path)} created!`
-const { isValid, errorMessage } = validate(path)
+const error = validate(path)
 
-if (!isValid) return console.log(errorMessage)
-else {
-  const nameUppercase = capitalize(name)
-  const outputPathBase = getOutputPathBase(path)
-  const payload = { path, name, nameUppercase, outputPathBase }
+if (error) return console.log(error)
 
+const nameUppercase = capitalize(name)
+const outputPathBase = getOutputPathBase(path)
+const payload = { path, name, nameUppercase, outputPathBase }
+
+const createTemplates = async () => {
   createIndex(payload)
   createPropTypes(payload)
-  createStories(payload)
+  await createStories(payload)
   createStyles(payload)
   createTests(payload)
 
-  return console.log(successMessage)
+  console.log(successMessage)
 }
+
+return createTemplates()
