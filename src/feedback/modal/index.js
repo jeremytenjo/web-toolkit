@@ -1,7 +1,7 @@
 import React, { memo, useRef, useEffect } from 'react'
 
-import Overlay from '../../miscUtils/overlay'
-import useAnimation from '../../miscUtils/animations/Web-Animations-API'
+import Overlay from '../../utils/overlay'
+import useAnimation from '../../utils/animations/Web-Animations-API'
 
 import { defaultProps, propTypes } from './propTypes'
 import { ModalWrapper } from './styles'

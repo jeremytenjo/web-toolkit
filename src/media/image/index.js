@@ -5,7 +5,7 @@ import { ImageWrapper, InnerImage } from './styles'
 
 const LazyLoad = lazy(() =>
   import(
-    /* webpackChunkLazyLoad: 'LazyLoadWrapper' */ '../../miscUtils/rendering/lazyLoad'
+    /* webpackChunkLazyLoad: 'LazyLoadWrapper' */ '../../utils/rendering/lazyLoad'
   ),
 )
 

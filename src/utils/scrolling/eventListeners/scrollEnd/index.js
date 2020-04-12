@@ -5,6 +5,6 @@ export default BottomScrollListener
 
 // On bottom of entire screen
 
-// import BottomScrollListener from '@tenjojeremy/web-toolkit/miscUtils/Scrolling/EventListeners/scrollEnd'
+// import BottomScrollListener from '@tenjojeremy/web-toolkit/utils/Scrolling/EventListeners/scrollEnd'
 
 // <BottomScrollListener onBottom={callback} />

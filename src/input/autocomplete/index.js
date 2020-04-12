@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState, useRef } from 'react'
 
 import List from '../../dataDisplay/list/index'
-import Animation from '../../miscUtils/animations/Web-Animations-API/index'
+import Animation from '../../utils/animations/Web-Animations-API/index'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, Other } from './styles'

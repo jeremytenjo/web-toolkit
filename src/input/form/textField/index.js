@@ -2,7 +2,7 @@ import React, { useState, memo, useEffect, useRef } from 'react'
 
 import toBoolean from '../../../utils/string/toBoolean'
 import Icon from '../../../dataDisplay/icon'
-import Animation from '../../../miscUtils/animations/Web-Animations-API'
+import Animation from '../../../utils/animations/Web-Animations-API'
 import Typography from '../../../dataDisplay/typography'
 
 import { defaultProps, propTypes } from './propTypes'
