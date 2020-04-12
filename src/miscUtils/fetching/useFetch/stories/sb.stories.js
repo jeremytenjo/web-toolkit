@@ -7,7 +7,10 @@ import useFetch from '..'
 
 const GET = () => {
   const url = 'http://dummy.restapiexample.com/api/v1/employees'
-  const { request, response, fetching, error } = useFetch({ url, method: 'get' })
+  const { request, response, fetching, error } = useFetch({
+    url,
+    method: 'get',
+  })
   const req = async () => request()
 
   return (
@@ -22,7 +25,10 @@ const GET = () => {
 
 const Aborted = () => {
   const url = 'http://dummy.restapiexample.com/api/v1/employees'
-  const { request, response, fetching, error , abort } = useFetch({ url, method: 'get' })
+  const { request, response, fetching, error, abort } = useFetch({
+    url,
+    method: 'get',
+  })
 
   const req = async () => request()
   const abortFetch = async () => abort()
@@ -59,7 +65,10 @@ const POST = () => {
   // Working but have to replace url
   const url = 'http://dummy.restapiexample.com/api/v1/create '
   const body = { name: 'test', salary: '123', age: '23' }
-  const { request, response, fetching, error } = useFetch({ url, method: 'post' })
+  const { request, response, fetching, error } = useFetch({
+    url,
+    method: 'post',
+  })
   const req = async () => request({ body })
 
   return (
