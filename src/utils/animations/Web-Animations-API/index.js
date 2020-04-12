@@ -39,7 +39,7 @@ export default ({
   }
 
   const getFunction = async () => {
-    const module = await import(`./types/${name}`)
+    const module = await import(`./presets/${name}`)
     setAnimation(module)
   }
 
