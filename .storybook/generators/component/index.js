@@ -15,6 +15,8 @@ const path = process.argv[2]
 const splitPath = path.split('/')
 const name = splitPath[splitPath.length - 1]
 const successMessage = `${emoji.get('white_check_mark')}  ${chalk.yellow(path)} created!`
+console.log(`${chalk.green('Generating')}  ${chalk.yellow(path)} ...`)
+
 const error = validate(path)
 
 if (error) return console.log(error)
@@ -24,13 +26,19 @@ const outputPathBase = getOutputPathBase(path)
 const payload = { path, name, nameUppercase, outputPathBase }
 
 const createTemplates = async () => {
-  createIndex(payload)
-  createPropTypes(payload)
-  await createStories(payload)
-  createStyles(payload)
-  createTests(payload)
+  try {
+    createIndex(payload)
+    createPropTypes(payload)
+    await createStories(payload)
+    createStyles(payload)
+    createTests(payload)
 
-  console.log(successMessage)
+    process.stdout.write('\033c')
+
+    console.log(successMessage)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 return createTemplates()
