@@ -11,22 +11,34 @@ const createStories = require('./templates/stories/index.js')
 const createStyles = require('./templates/styles.js')
 const createTests = require('./templates/tests.js')
 
-const name = process.argv[2]
+const path = process.argv[2]
+const splitPath = path.split('/')
+const name = splitPath[splitPath.length - 1]
+const successMessage = `${emoji.get('white_check_mark')}  ${chalk.yellow(path)} created!`
+console.log(`${chalk.green('Generating')}  ${chalk.yellow(path)} ...`)
 
-const successMessage = `${emoji.get('white_check_mark')}  ${chalk.yellow(name)} created!`
-const { isValid, errorMessage } = validate(name)
+const error = validate(path)
 
-if (!isValid) return console.log(errorMessage)
-else {
-  const nameUppercase = capitalize(name)
-  const outputPathBase = getOutputPathBase(name)
-  const payload = { name, nameUppercase, outputPathBase }
+if (error) return console.log(error)
 
-  createIndex(payload)
-  createPropTypes(payload)
-  createStories(payload)
-  createStyles(payload)
-  createTests(payload)
+const nameUppercase = capitalize(name)
+const outputPathBase = getOutputPathBase(path)
+const payload = { path, name, nameUppercase, outputPathBase }
 
-  return console.log(successMessage)
+const createTemplates = async () => {
+  try {
+    createIndex(payload)
+    createPropTypes(payload)
+    await createStories(payload)
+    createStyles(payload)
+    createTests(payload)
+
+    process.stdout.write('\033c')
+
+    console.log(successMessage)
+  } catch (error) {
+    console.log(error)
+  }
 }
+
+return createTemplates()

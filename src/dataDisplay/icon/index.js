@@ -32,7 +32,7 @@ const Icon = ({
 }) => {
   const [IconComp, setIconComp] = useState(null)
   const strokeTypes = ['feather']
-  const iconType = name.split('/')[1]
+  const iconType = name.split('/')[1].split('-')[0]
   const isStroke = strokeTypes.includes(iconType)
   const { push } = router
 

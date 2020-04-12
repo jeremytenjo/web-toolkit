@@ -2,12 +2,19 @@ import React, { useRef, memo, useState, useEffect } from 'react'
 
 import toBoolean from '../../../utils/string/toBoolean'
 import Typography from '../../../dataDisplay/typography'
-import Animation from '../../../miscUtils/animations/Web-Animations-API'
+import Animation from '../../../utils/animations/wap'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, Input, ChildrenWrap } from './styles'
 
-const FileInput = ({ accept, children, onInput, name, validation, ...nativeProps }) => {
+const FileInput = ({
+  accept,
+  children = <button>Upload</button>,
+  onInput,
+  name,
+  validation,
+  ...nativeProps
+}) => {
   const inputRef = useRef(null)
   const [errorMessages, seterrorMessages] = useState([])
   const errMessagesRef = useRef(null)

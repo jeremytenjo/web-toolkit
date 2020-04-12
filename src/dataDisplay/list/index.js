@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import BottomScrollListener from '../../miscUtils/scrolling/eventListeners/scrollEnd'
+import BottomScrollListener from '../../utils/scrolling/eventListeners/scrollEnd'
 
 import { Wrapper } from './styles'
 import { defaultProps, propTypes } from './propTypes'

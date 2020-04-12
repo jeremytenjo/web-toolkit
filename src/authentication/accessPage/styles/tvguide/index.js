@@ -5,7 +5,7 @@ import Drawer from '../../../../feedback/drawer'
 import Box from '../../../../dataDisplay/box'
 import Icon from '../../../../dataDisplay/icon'
 import { defaultProps, propTypes } from '../../base/accessPage.propTypes'
-import Animation from '../../../../miscUtils/animations/Web-Animations-API'
+import Animation from '../../../../utils/animations/wap'
 const AccessPageTvGuide = ({
   user,
   onSuccess,

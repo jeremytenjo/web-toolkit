@@ -412,59 +412,59 @@
   ]
 },
     
-"miscUtils addToHomeScreen": {
+"utils addToHomeScreen": {
   "prefix": "wtad",
   "body": [
-    "import AddToHomeScreen from '@tenjojeremy/web-toolkit/miscUtils/addToHomeScreen'"
+    "import AddToHomeScreen from '@tenjojeremy/web-toolkit/utils/addToHomeScreen'"
   ]
 },
     
-"miscUtils animations Web-Animations-API": {
+"utils animations Web-Animations-API": {
   "prefix": "wtwe",
   "body": [
-    "import Web-Animations-API from '@tenjojeremy/web-toolkit/miscUtils/animations/Web-Animations-API'"
+    "import Web-Animations-API from '@tenjojeremy/web-toolkit/utils/animations/Web-Animations-API'"
   ]
 },
     
-"miscUtils fetching useFetch": {
+"utils fetching useFetch": {
   "prefix": "wtus",
   "body": [
-    "import UseFetch from '@tenjojeremy/web-toolkit/miscUtils/fetching/useFetch'"
+    "import UseFetch from '@tenjojeremy/web-toolkit/utils/fetching/useFetch'"
   ]
 },
     
-"miscUtils overlay": {
+"utils overlay": {
   "prefix": "wtov",
   "body": [
-    "import Overlay from '@tenjojeremy/web-toolkit/miscUtils/overlay'"
+    "import Overlay from '@tenjojeremy/web-toolkit/utils/overlay'"
   ]
 },
     
-"miscUtils position sticky": {
+"utils position sticky": {
   "prefix": "wtst",
   "body": [
-    "import Sticky from '@tenjojeremy/web-toolkit/miscUtils/position/sticky'"
+    "import Sticky from '@tenjojeremy/web-toolkit/utils/position/sticky'"
   ]
 },
     
-"miscUtils rendering lazyLoad": {
+"utils rendering lazyLoad": {
   "prefix": "wtla",
   "body": [
-    "import LazyLoad from '@tenjojeremy/web-toolkit/miscUtils/rendering/lazyLoad'"
+    "import LazyLoad from '@tenjojeremy/web-toolkit/utils/rendering/lazyLoad'"
   ]
 },
     
-"miscUtils scrolling eventListeners scrollEnd": {
+"utils scrolling eventListeners scrollEnd": {
   "prefix": "wtsc",
   "body": [
-    "import ScrollEnd from '@tenjojeremy/web-toolkit/miscUtils/scrolling/eventListeners/scrollEnd'"
+    "import ScrollEnd from '@tenjojeremy/web-toolkit/utils/scrolling/eventListeners/scrollEnd'"
   ]
 },
     
-"miscUtils viewport useMatchMedia": {
+"utils viewport useMatchMedia": {
   "prefix": "wtus",
   "body": [
-    "import UseMatchMedia from '@tenjojeremy/web-toolkit/miscUtils/viewport/useMatchMedia'"
+    "import UseMatchMedia from '@tenjojeremy/web-toolkit/utils/viewport/useMatchMedia'"
   ]
 },
     

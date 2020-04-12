@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect } from 'react'
 
-import Animation from '../../../../../miscUtils/animations/Web-Animations-API'
+import Animation from '../../../../../utils/animations/wap'
 import Box from '../../../../box'
 import Poster from '../../../poster/styles/1'
 import Typography from '../../../../typography'
