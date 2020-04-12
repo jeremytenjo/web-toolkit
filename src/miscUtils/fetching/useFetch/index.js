@@ -33,23 +33,22 @@ export default ({ url, method = 'get' }) => {
       setResponse(res)
       return res
     } catch (error) {
-      if (error.name === 'AbortError'){
+      if (error.name === 'AbortError') {
         setResponse(false)
-         return { aborted: true}
-        }
-       else {
+        return { aborted: true }
+      } else {
         setError()
         return { error }
-      }    
+      }
     } finally {
       setFetching(false)
     }
   }
 
   const abort = () => {
-    if ("AbortController" in window) {
-    fetching && aborController.current.abort()
-   }
+    if ('AbortController' in window) {
+      fetching && aborController.current.abort()
+    }
   }
 
   return { fetching, request, error, response, abort }
