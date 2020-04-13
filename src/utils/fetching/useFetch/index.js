@@ -40,7 +40,6 @@ export default ({ url, method = 'get' }) => {
       setResponse(res)
       return res
     } catch (error) {
-      console.log({ error })
       if (error.name === 'AbortError') {
         setResponse(false)
         return { aborted: true }
