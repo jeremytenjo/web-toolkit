@@ -38,7 +38,7 @@ const Modal = ({
         {children}
       </ModalWrapper>
 
-      <Overlay show={show} onClick={onClose} zIndex={1} style={overlayStyles} />
+      <Overlay show={show} onClick={onClose} wrapperStyles={overlayStyles} />
     </>
   )
 }
