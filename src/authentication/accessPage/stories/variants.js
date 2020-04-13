@@ -21,7 +21,6 @@ const Variants = ({ Component: AccessPage }) => {
         type='login'
         onSuccess={handleSuccess}
         logo={Logo}
-        name='Example'
         desc='Example auth page'
         service='firebase'
         providers={['apple', 'google', 'facebook']}
