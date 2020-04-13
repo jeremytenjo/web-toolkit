@@ -56,7 +56,7 @@ const AccessPageTvGuide = ({
                 <Icon
                   onClick={() => handleLogin(prov)}
                   name={`${prov}/logo`}
-                  size='60px'
+                  size='20px'
                   style={{
                     boxShadow: ' 0px 1px 4px rgba(0, 0, 0, 0.25)',
                     padding: '17px',
