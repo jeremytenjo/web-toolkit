@@ -11,6 +11,7 @@ module.exports = async (callerPath, fileName) => {
 
   const file = files[0] || fileName
   const relativePath = path.relative(callerPath, file)
+  const relativePathFormatted = relativePath.replace(/\\/g, '/')
 
-  return relativePath
+  return relativePathFormatted
 }
