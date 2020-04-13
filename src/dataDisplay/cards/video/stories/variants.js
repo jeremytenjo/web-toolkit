@@ -29,6 +29,18 @@ const Variants = ({ Component: Video }) => {
           onFavoriteToggle={onFavoriteToggle}
         />
       </B>
+      <B title='Movie - favorite' key={Math.random()} noBackground>
+        <Video
+          poster={poster}
+          title={titleTest}
+          overview={overview}
+          favorite
+          moreLinks={moreLinks}
+          onLoadMore={onLoadMore}
+          onPlay={onPlay}
+          onFavoriteToggle={onFavoriteToggle}
+        />
+      </B>
       <B title={`isTv`} key={Math.random()} noBackground>
         <Video
           onPlay={(e) => console.log(e)}
