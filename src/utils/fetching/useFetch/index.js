@@ -1,10 +1,17 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default ({ url, method = 'get' }) => {
-  const aborController = useRef(new AbortController())
+  const aborController = useRef(null)
   const [fetching, setFetching] = useState(false)
   const [error, setError] = useState(null)
   const [response, setResponse] = useState(null)
+
+  useEffect(() => {
+    initializeAbortController()
+    return () => {
+      fetching && abort()
+    }
+  }, [])
 
   const request = async (params = {}) => {
     const {
@@ -33,6 +40,7 @@ export default ({ url, method = 'get' }) => {
       setResponse(res)
       return res
     } catch (error) {
+      console.log({ error })
       if (error.name === 'AbortError') {
         setResponse(false)
         return { aborted: true }
@@ -45,11 +53,18 @@ export default ({ url, method = 'get' }) => {
     }
   }
 
+  const initializeAbortController = () => {
+    aborController.current = abortControllerIsSupported ? new AbortController() : {}
+  }
+
   const abort = () => {
-    if ('AbortController' in window) {
-      fetching && aborController.current.abort()
+    if (abortControllerIsSupported() && fetching) {
+      aborController.current.abort()
+      aborController.current = new AbortController()
     }
   }
+
+  const abortControllerIsSupported = () => 'AbortController' in window
 
   return { fetching, request, error, response, abort }
 }

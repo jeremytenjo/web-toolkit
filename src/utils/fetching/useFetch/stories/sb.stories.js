@@ -33,6 +33,8 @@ const Aborted = () => {
   const req = async () => request()
   const abortFetch = async () => abort()
 
+  console.log({ response, fetching, error })
+
   return (
     <B title='Aborted'>
       <button onClick={req}>fetch</button>
