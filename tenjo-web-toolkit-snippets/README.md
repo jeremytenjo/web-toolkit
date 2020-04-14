@@ -566,6 +566,13 @@
   ]
 },
     
+"utils network useIsOnline": {
+  "prefix": "wtus",
+  "body": [
+    "import UseIsOnline from '@tenjojeremy/web-toolkit/utils/network/useIsOnline'"
+  ]
+},
+    
 "utils overlay": {
   "prefix": "wtov",
   "body": [
