@@ -31,6 +31,9 @@ export const WrapperIcon = styled.div`
     &:hover {
       background-color: rgba(0, 0, 0, 0.1);
     }
+    &:active {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
   
   /* backgroundColor */
