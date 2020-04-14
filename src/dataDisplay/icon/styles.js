@@ -32,7 +32,7 @@ export const WrapperIcon = styled.div`
       background-color: rgba(0, 0, 0, 0.1);
     }
     &:active {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
   
