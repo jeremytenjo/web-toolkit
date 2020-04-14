@@ -26,7 +26,9 @@ const FileInput = ({
 
   useEffect(() => {
     startOnSubmitListener()
-    return removeOnSubmitListener
+    return () => {
+      removeOnSubmitListener()
+    }
   }, [])
 
   const startOnSubmitListener = () => {

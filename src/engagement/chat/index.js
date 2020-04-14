@@ -36,7 +36,9 @@ const Chat = ({
   useEffect(() => {
     scrollToBottom()
     addEventListeners()
-    return removeEventListeners()
+    return () => {
+      removeEventListeners()
+    }
   }, [])
 
   // Scroll to bottom when new messages are sent/reevided

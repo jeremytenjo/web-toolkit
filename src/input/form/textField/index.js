@@ -66,7 +66,9 @@ const TextField = ({
       if (sessionInput !== '') setInput(sessionInput)
     }
 
-    return removeOnSubmitListener
+    return () => {
+      removeOnSubmitListener()
+    }
   }, [])
 
   useEffect(() => {
