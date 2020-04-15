@@ -174,10 +174,24 @@
   ]
 },
     
-"dates catePicker": {
-  "prefix": "wtca",
+"dates countdown": {
+  "prefix": "wtco",
   "body": [
-    "import CatePicker from '@tenjojeremy/web-toolkit/dates/catePicker'"
+    "import Countdown from '@tenjojeremy/web-toolkit/dates/countdown'"
+  ]
+},
+    
+"dates datePicker": {
+  "prefix": "wtda",
+  "body": [
+    "import DatePicker from '@tenjojeremy/web-toolkit/dates/datePicker'"
+  ]
+},
+    
+"dates timeout useTimeout": {
+  "prefix": "wtus",
+  "body": [
+    "import UseTimeout from '@tenjojeremy/web-toolkit/dates/timeout/useTimeout'"
   ]
 },
     
@@ -570,6 +584,13 @@
   "prefix": "wtus",
   "body": [
     "import UseIsOnline from '@tenjojeremy/web-toolkit/utils/network/useIsOnline'"
+  ]
+},
+    
+"utils numbers makeTwoDigit": {
+  "prefix": "wtma",
+  "body": [
+    "import MakeTwoDigit from '@tenjojeremy/web-toolkit/utils/numbers/makeTwoDigit'"
   ]
 },
     
