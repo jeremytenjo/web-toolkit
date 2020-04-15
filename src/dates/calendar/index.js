@@ -5,7 +5,7 @@ import isSameDay from 'date-fns/isSameDay'
 import daysList from '../utils/daysList'
 import monthList from '../utils/monthList'
 import Day from '../day/day.index'
-import DatePicker from '../catePicker'
+import DatePicker from '../datePicker'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, WeekDaysTitles, DayGrid, DatePickersCon } from './styles'
