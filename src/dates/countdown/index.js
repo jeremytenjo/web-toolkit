@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useState, Fragment } from 'react'
 
 import Box from '../../dataDisplay/box'
 import Typography from '../../dataDisplay/typography'
@@ -11,7 +11,7 @@ import * as styles from './styles'
 const Countdown = ({
   endDate,
   wrapperStyles,
-  typographyProps,
+  typographyStyles,
   separator,
   onTimeUp,
   noText,
@@ -63,13 +63,16 @@ const Countdown = ({
       const isLastInterval = timeLeftKeys.length === index + 1
       const separatorString = isLastInterval ? '' : separator
       const name = noText ? '' : interval
+      const mergedTypographyStyles = { ...styles.typographyStyles, ...typographyStyles }
 
       newTimerComponents.push(
-        <Typography
-          key={key}
-          styles={{ ...styles.typographyProps, ...typographyProps }}
-          text={`${timeLeftInterval} ${name} ${separatorString}`}
-        />,
+        <Fragment key={key}>
+          <Typography
+            styles={mergedTypographyStyles}
+            text={`${timeLeftInterval} ${name}`}
+          />
+          <Typography styles={mergedTypographyStyles} text={`${separatorString}`} />
+        </Fragment>,
       )
     })
 
