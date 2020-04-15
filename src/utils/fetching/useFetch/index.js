@@ -53,7 +53,7 @@ export default ({ url, method = 'get' }) => {
   }
 
   const initializeAbortController = () => {
-    aborController.current = abortControllerIsSupported ? new AbortController() : {}
+    aborController.current = abortControllerIsSupported() ? new AbortController() : {}
   }
 
   const abort = () => {
