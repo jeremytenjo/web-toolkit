@@ -1,3 +1,3 @@
 import firebase from 'firebase/app'
 
-export default () => firebase.analytics()
+export default firebase.analytics()

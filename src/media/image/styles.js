@@ -13,6 +13,10 @@ export const ImageWrapper = styled.div`
 
   ${({ letterColor }) =>
     letterColor && `background-color: var(--color-${letterColor}Background)`};
+
+  img[data-base64='true'] {
+    filter: blur(10px);
+  }
 `
 
 export const InnerImage = styled.img`
@@ -21,4 +25,17 @@ export const InnerImage = styled.img`
   left: 0;
   width: 100%;
   height: 100%;
+  transform: scale(1);
+
+  animation-name: blurOut;
+  animation-duration: 0.2s;
+
+  @keyframes blurOut {
+    from {
+      filter: blur(10px);
+    }
+    to {
+      filter: blur(none);
+    }
+  }
 `

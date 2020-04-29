@@ -6,4 +6,5 @@ export default {
   storageBucket: 'tenjo-web-toolkit.appspot.com',
   messagingSenderId: '761012518504',
   appId: '1:761012518504:web:4cbe27f5fe948d41',
+  measurementId: 'G-ZP2HMZRJD0',
 }
