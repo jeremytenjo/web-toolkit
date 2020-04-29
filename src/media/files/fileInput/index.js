@@ -3,6 +3,7 @@ import React, { useRef, memo, useState, useEffect } from 'react'
 import toBoolean from '../../../utils/string/toBoolean'
 import Typography from '../../../dataDisplay/typography'
 import Animation from '../../../utils/animations/wap'
+import fileReader from '../fileReader/index'
 
 import { defaultProps, propTypes } from './propTypes'
 import { Wrapper, Input, ChildrenWrap } from './styles'
@@ -13,6 +14,7 @@ const FileInput = ({
   onInput,
   name,
   validation,
+  returnBase64,
   ...nativeProps
 }) => {
   const inputRef = useRef(null)
@@ -58,17 +60,29 @@ const FileInput = ({
   }
 
   const handleFileUpload = async () => {
-    const filesList = inputRef.current.files
-    let errorList = []
+    const {
+      current: { files },
+    } = inputRef
+    const filesList = []
+    const errorList = []
 
-    Array.from(filesList).forEach((file) => {
-      const currentErrorMessages = checkValidation(file)
-      if (currentErrorMessages.length > 0) {
-        errorList.push([...currentErrorMessages])
-      }
-    })
+    await Promise.all(
+      Array.from(files).map(async (file) => {
+        const currentErrorMessages = checkValidation(file)
+        if (currentErrorMessages.length > 0) {
+          errorList.push([...currentErrorMessages])
+        } else {
+          const fileBase64 = returnBase64
+            ? await fileReader({ file, fullCompress: true })
+            : undefined
+          filesList.push({ file, fileBase64 })
+        }
+      }),
+    )
 
-    if (errorList.length === 0) {
+    const noErrors = errorList.length === 0
+
+    if (noErrors) {
       filesList.length === 1 ? onInput(filesList[0]) : onInput(filesList)
       seterrorMessages([])
       setIsValid(true)

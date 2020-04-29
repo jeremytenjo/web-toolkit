@@ -21,12 +21,12 @@ const ColorExtractorExample = () => {
     setColors(palette)
   }
 
-  const handleInput = async (file) => {
+  const handleInput = async (payload) => {
+    const { file, fileBase64 } = payload
     if (!file) return null
 
-    const fileUrl = await fileReader(file)
-    setImg(fileUrl)
-    extract(fileUrl)
+    setImg(fileBase64)
+    extract(fileBase64)
   }
 
   return (

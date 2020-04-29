@@ -6,6 +6,7 @@ export const defaultProps = {
   name: 'input_name',
   isValid: null,
   errorMessage: null,
+  returnBase64: true,
   validation: [],
 }
 
@@ -14,6 +15,7 @@ export const propTypes = {
   onInput: func,
   name: string.isRequired,
   isValid: bool,
+  returnBase64: bool,
   errorMessage: string,
   validation: array,
 }

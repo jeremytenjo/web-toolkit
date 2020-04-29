@@ -13,7 +13,7 @@ const Variations = () => {
   return (
     <>
       <B title='Single File' noBackground style={{ width: 'auto' }}>
-        <FileInput onInput={(e) => console.log(e)}>Upload</FileInput>
+        <FileInput onInput={(e) => console.log(e)} />
       </B>
 
       <B title='Multiple Files' noBackground style={{ width: 'auto' }}>
@@ -40,4 +40,4 @@ const Variations = () => {
   )
 }
 
-storiesOf('Files/React', module).add('Examples', () => <Variations />)
+storiesOf('Input|Form/File Input', module).add('Example', () => <Variations />)
