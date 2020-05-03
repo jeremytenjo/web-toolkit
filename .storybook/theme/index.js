@@ -16,5 +16,8 @@ export default () => {
     base: 'dark',
     brandUrl: 'https://github.com/tenjojeremy/Web-Toolkit',
     colorSecondary: primary,
+    appBg: '#081427',
+    appContentBg: '#0A1930',
+    barBg: '#081427',
   })
 }

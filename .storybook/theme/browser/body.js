@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   font-family: var(--font-primary);
   color: black;
-  background-color: #333333;
+  background-color: #0A1930;
 }
 
 *,
