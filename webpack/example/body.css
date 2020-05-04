@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  src: url('/fonts/roboto.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: url('/fonts/montserrat.woff2') format('woff2');
+}
+
+h1 {
+  font-family: Roboto;
+}
+h2 {
+  font-family: Montserrat;
+}
