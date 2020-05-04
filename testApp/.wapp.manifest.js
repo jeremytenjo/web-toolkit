@@ -9,7 +9,7 @@ module.exports = {
     startUrl: '/',
     colors: { primary: '#24c3a9' },
     logo: {
-      path: 'bin/defaults/images/logo',
+      path: 'src/images/logo',
     },
   },
   animateOnSiteLoad: 500,

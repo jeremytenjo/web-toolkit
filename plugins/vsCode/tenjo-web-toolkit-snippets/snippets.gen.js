@@ -8,7 +8,7 @@ const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + strin
 let fileString = '{ '
 const packageName = '@tenjojeremy/web-toolkit'
 
-glob(`build/**/index.js`, function(err, files) {
+glob(`components/.build/**/index.js`, function(err, files) {
   if (err) throw err
 
   files.map((file, index) => {

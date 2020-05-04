@@ -17,8 +17,7 @@ const { initBodyTag, generateAddBodyTag } = require('../generators/bodyTag')
 const offlineSupport = require('../generators/offlineSupport')
 const addNetworkFiles = require('./network/addIsOnlineState')
 
-module.exports = async (env) => {
-  const wappManifest = require(projectDir('.wapp.manifest.js'))
+module.exports = async (env, wappManifest) => {
   const payload = { wappManifest, env }
 
   initGenerateAppIndex()
@@ -26,17 +25,17 @@ module.exports = async (env) => {
   initBodyTag()
   await addNetworkFiles()
   await generateSplash(payload)
-  await generateAnimateOnSiteLoad(payload)
-  await generateBabel(payload)
-  await generateFirebase(payload)
-  await generateTheme(payload)
-  await generateRouter(payload)
-  await generateStoreAndListen(payload)
-  await generateFonts(payload)
-  await generateAddExtraBuildFiles(payload)
-  await generateAddBodyTag(payload)
-  await offlineSupport(payload)
-  await generateAppIndex(payload)
+  // await generateAnimateOnSiteLoad(payload)
+  // await generateBabel(payload)
+  // await generateFirebase(payload)
+  // await generateTheme(payload)
+  // await generateRouter(payload)
+  // await generateStoreAndListen(payload)
+  // await generateFonts(payload)
+  // await generateAddExtraBuildFiles(payload)
+  // await generateAddBodyTag(payload)
+  // await offlineSupport(payload)
+  // await generateAppIndex(payload)
 
   logSuccessMessage('Wapp Build Created', 'star2')
 }

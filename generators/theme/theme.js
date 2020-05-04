@@ -14,7 +14,7 @@ module.exports = async ({ wappManifest }) => {
   const successMessage = `Theme generated `
   let srcDefaultMerge = {}
   const outputFile = wappDir('theme.js')
-  const defaultDir = wappRootDir('bin/defaults/theme')
+  const defaultDir = wappRootDir('defaults/theme')
   const srcThemeDir = projectDir('src/theme')
   const colors = require(projectDir('src/theme/colors'))
   let defaultStringsObject = {}
