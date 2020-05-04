@@ -5,7 +5,7 @@ import Box from '../../../../box'
 import Poster from '../../../poster/styles/1'
 import Typography from '../../../../typography'
 import Icon from '../../../../icon'
-import Select from '../../../../../input/form/select/styles/tvguide/'
+import Select from '../../../../../input/form/select/styles/tvguide'
 import Button from '../../../../../input/button/styles/base'
 import { defaultProps, propTypes } from '../../base/propTypes'
 
