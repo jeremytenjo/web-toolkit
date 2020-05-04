@@ -1,18 +1,10 @@
-import React from 'react'
-import { BrowserRouter } from '@tenjojeremy/web-toolkit/navigation/router'
-
-import Core from '../templates/core'
-
-import HomeRoutes from './home/routes'
-import ProfileRoutes from './profile/routes'
+import React, { Suspense } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 const RouterWrapper = () => {
   return (
     <BrowserRouter>
-      <Core>
-        <HomeRoutes />
-        <ProfileRoutes />
-      </Core>
+      <Suspense fallback={null}>Add pages routes in ./src/pages/_router</Suspense>
     </BrowserRouter>
   )
 }

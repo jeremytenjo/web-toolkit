@@ -6,7 +6,7 @@ const { logSuccessMessage } = require('../utils/logMessage')
 
 module.exports = async () => {
   const successMessage = `Router generated`
-  const defaultRouter = wappRootDir('/router/router.js')
+  const defaultRouter = wappRootDir('defaults/router/router.js')
   const outputFile = projectDir('src/pages/router.js')
   const pagesSrc = projectDir('src/pages')
   const files = await filehound
