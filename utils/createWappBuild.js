@@ -19,15 +19,16 @@ const addNetworkFiles = require('./network/addIsOnlineState')
 
 module.exports = async (env, wappManifest) => {
   const payload = { wappManifest, env }
+  const { isTest } = global
 
   initGenerateAppIndex()
   initExtraBuildFiles()
   initBodyTag()
   await addNetworkFiles()
   await generateSplash(payload)
-  // await generateAnimateOnSiteLoad(payload)
-  // await generateBabel(payload)
-  // await generateFirebase(payload)
+  await generateAnimateOnSiteLoad(payload)
+  await generateBabel(isTest)
+  await generateFirebase(payload)
   // await generateTheme(payload)
   // await generateRouter(payload)
   // await generateStoreAndListen(payload)
