@@ -1,6 +1,5 @@
 const firebaseConfig = require(`./src/firebase/firebase.config`)
 const serviceWorkerReceiverFunction = require(`./src/firebase/serviceWorkerReceiverFunction`)
-const colors = require('./bin/defaults/theme/colors')
 
 module.exports = {
   projectInfo: {
@@ -8,7 +7,7 @@ module.exports = {
     shortName: 'Wapp',
     description: 'Wapp',
     startUrl: '/',
-    colors,
+    colors: { primary: '#24c3a9' },
     logo: {
       path: 'bin/defaults/images/logo',
     },
@@ -22,7 +21,7 @@ module.exports = {
     database: 'firestore',
     authentication: true,
     analytics: true,
-    perfomanceMonitoring: true
+    perfomanceMonitoring: true,
   },
   docs: {
     config: {

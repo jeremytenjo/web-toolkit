@@ -1,3 +1,6 @@
+manifest example
+
+```js
 module.exports = {
   projectInfo: {
     name: 'Webpack Config',
@@ -34,3 +37,4 @@ module.exports = {
     },
   },
 }
+```

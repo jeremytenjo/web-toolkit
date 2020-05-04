@@ -7,7 +7,6 @@ node_modules/
 /coverage
 
 # production
-build
 .storybook/storybook-build
 tenjo-web-toolkit-snippets/snippets/snippets.json
 

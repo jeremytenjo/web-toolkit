@@ -1,8 +1,8 @@
 const concurrently = require('concurrently')
 
-const { wappRootDir } = require('../utils/getModulePath')
+const { wappRootDir } = require('../../utils/getModulePath')
 
-const createWappBuild = require('./createWappBuild')
+const createWappBuild = require('../createWappBuild')
 
 module.exports = async () => {
   const wappWebpackManifest = wappRootDir('.webpack.manifest.js')

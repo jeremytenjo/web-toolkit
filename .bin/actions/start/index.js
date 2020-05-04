@@ -1,16 +1,15 @@
-const start = require('./start')
-const withFirebaseFunctions = require('./withFirebaseFunctions')
+const concurrently = require('concurrently')
 
-const action = process.argv[3]
+const { wappRootDir } = require('../../utils/getModulePath')
+const createWappBuild = require('../createWappBuild')
 
-module.exports = () => {
-  switch (action) {
-    case 'withFirebaseFunctions':
-      withFirebaseFunctions()
-      break
+module.exports = async (additionalScripts) => {
+  const webpackManifest = wappRootDir('.webpack.manifest.js')
+  const env = 'dev'
+  const scripts = [`npx webpack-scripts start ${webpackManifest}`]
 
-    default:
-      start()
-      break
-  }
+  if (additionalScripts) scripts.push(additionalScripts)
+
+  await createWappBuild(env)
+  await concurrently(scripts)
 }

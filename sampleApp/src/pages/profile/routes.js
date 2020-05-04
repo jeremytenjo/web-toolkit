@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Route, Switch } from '@tenjojeremy/web-toolkit/navigation/router'
 
-import ProfileTemplate from './'
+import ProfileTemplate from '.'
 
 export default () => (
   <Route
