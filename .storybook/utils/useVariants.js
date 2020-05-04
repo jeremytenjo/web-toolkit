@@ -25,7 +25,7 @@ export const useVariants = ({
       const styleName = location.split('/')[1]
       const title = styleName
       let { default: Comp, testValue } = await import(
-        `../../src/${dir}/${type}${title}/index`
+        `../../components/${dir}/${type}${title}/index`
       )
       let Component = Variants ? (
         <Variants Component={Comp} title={title} testValue={testValue} />

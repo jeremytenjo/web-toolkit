@@ -22,4 +22,4 @@ addParameters({
 
 addDecorator(StoryRouter())
 
-configure(require.context('../src', true, /sb.stories\.(js|mdx)$/), module)
+configure(require.context('../components', true, /sb.stories\.(js|mdx)$/), module)
