@@ -5,6 +5,10 @@
   "description": "Library of reusable UI and utilities",
   "publisher": "Jeremy Tenjo",
   "license": "MIT",
+  "main": "./bin/index.js",
+  "bin": {
+    "wapp": "./bin/index.js"
+  },
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
     "deploy": "npm run lint:check && npm run cy:run-ci && npm run deploy:firebase && npm run publish:snippets && npm run publish:library && git push",
@@ -48,9 +52,6 @@
     "@storybook/addon-actions": "^5.3.12",
     "@storybook/addon-docs": "^5.3.12",
     "@storybook/react": "^5.3.12",
-    "@tenjojeremy/babel-config": "^1.15.0",
-    "@tenjojeremy/eslint-config": "^3.0.3",
-    "@tenjojeremy/prettier-config": "latest",
     "cross-env": "^7.0.0",
     "cypress": "^4.0.1",
     "date-fns": "^2.9.0",
