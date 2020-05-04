@@ -5,9 +5,9 @@
   "description": "Library of reusable UI and utilities",
   "publisher": "Jeremy Tenjo",
   "license": "MIT",
-  "main": "./bin/index.js",
+  "main": "./.bin/index.js",
   "bin": {
-    "wapp": "./bin/index.js"
+    "wapp": "./.bin/index.js"
   },
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook -s public --quiet",
