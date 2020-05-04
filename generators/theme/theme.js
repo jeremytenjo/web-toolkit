@@ -2,7 +2,7 @@ const filehound = require('filehound')
 const fs = require('fs-extra')
 
 const { wappRootDir, projectDir, wappDir } = require('../../utils/getModulePath')
-const toCSSVariable = require('../../converters/cssVariables')
+const toCSSVariable = require('../../utils/converters/cssVariables')
 const createFile = require('../../utils/createFile')
 const addToIndex = require('../../utils/addToIndex')
 const { logSuccessMessage } = require('../../utils/logMessage')

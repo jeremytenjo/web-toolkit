@@ -1,5 +1,5 @@
-const { logSuccessMessage } = require('../utils/logMessage')
-const { projectDir } = require('../utils/getModulePath')
+const { logSuccessMessage } = require('./logMessage')
+const { projectDir } = require('./getModulePath')
 const generateAnimateOnSiteLoad = require('../generators/animateOnSiteLoad')
 const generateSplash = require('../generators/splash')
 const generateBabel = require('../generators/babel')
@@ -15,7 +15,7 @@ const {
 } = require('../generators/extraBuildFiles')
 const { initBodyTag, generateAddBodyTag } = require('../generators/bodyTag')
 const offlineSupport = require('../generators/offlineSupport')
-const addNetworkFiles = require('../utils/network/addIsOnlineState')
+const addNetworkFiles = require('./network/addIsOnlineState')
 
 module.exports = async (env) => {
   const wappManifest = require(projectDir('.wapp.manifest.js'))

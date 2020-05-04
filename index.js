@@ -2,4 +2,4 @@
 
 const arg1 = process.argv[2]
 
-require(`./actions/${arg1}/index.js`)()
+require(`./scripts/${arg1}/index.js`)()
