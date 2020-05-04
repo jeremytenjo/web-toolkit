@@ -1,6 +1,6 @@
 const getProjectRoot = () => process.cwd()
 
-exports.wappRootDir = (folder = 'defaults') => __dirname.replace('bin\\utils', folder)
+exports.wappRootDir = (folder = 'defaults') => __dirname.replace('utils', folder)
 
 exports.projectDir = (path = '') => {
   const { isTest } = global
