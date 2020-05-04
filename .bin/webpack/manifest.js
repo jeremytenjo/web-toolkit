@@ -1,5 +1,5 @@
-const colors = require('./bin/defaults/theme/colors')
-const { projectDir, wappDir } = require('./bin/utils/getModulePath')
+const colors = require('./../defaults/theme/colors')
+const { projectDir, wappDir } = require('./../utils/getModulePath')
 
 const fonts = require(wappDir('fonts'))
 const splashScreen = require(wappDir('splashScreen/splashScreen'))
