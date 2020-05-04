@@ -1,6 +1,9 @@
+const globals = require('./plugins/babel/auto-import/eslint-globals')
+
 module.exports = {
   globals: {
     MyGlobal: true,
+    ...globals,
   },
   env: {
     browser: true,
@@ -51,5 +54,11 @@ module.exports = {
     'react/jsx-fragments': [0, 'syntax'],
     'react-hooks/rules-of-hooks': 2,
     'react/react-in-jsx-scope': 0,
+    'react/jsx-no-undef': [
+      true,
+      {
+        allowGlobals: true,
+      },
+    ],
   },
 }

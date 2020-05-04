@@ -41,7 +41,8 @@
     "react-stars": "^2.2.5",
     "react-swipeable-views": "^0.13.9",
     "styled-components": "^5.0.1",
-    "twit": "^2.2.11"
+    "twit": "^2.2.11",
+    "image-compressor.js": "^1.1.4"
   },
   "peerDependencies": {
     "styled-components": "^5.0.1"
@@ -59,7 +60,6 @@
     "filehound": "^1.17.4",
     "firebase": "^7.14.2",
     "husky": "^4.2.1",
-    "image-compressor.js": "^1.1.4",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
     "node-emoji": "^1.10.0",
