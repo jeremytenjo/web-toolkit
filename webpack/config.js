@@ -1,10 +1,13 @@
-module.exports = (mode, webpackManifest) => {
-  const entry = require('./options/entry')(webpackManifest)
-  const output = require('./options/output')(webpackManifest)
-  const devtool = require('./options/devTool')(webpackManifest)
-  const devServer = require('./options/devServer')(webpackManifest)
-  const performance = require('./options/performance')(webpackManifest)
-  const optimization = require('./options/optimization')(webpackManifest)
+module.exports = (env, argv) => {
+  const { mode, wappManifestPath } = argv
+
+  const wappManifest = require(wappManifestPath)
+  const entry = require('./options/entry')(wappManifest)
+  const output = require('./options/output')(wappManifest)
+  const devtool = require('./options/devTool')(wappManifest)
+  const devServer = require('./options/devServer')(wappManifest)
+  const performance = require('./options/performance')(wappManifest)
+  const optimization = require('./options/optimization')(wappManifest)
   const module = require('./options/module')
   const getPlugins = require('./options/plugins')
 
@@ -16,6 +19,6 @@ module.exports = (mode, webpackManifest) => {
     performance,
     optimization,
     module,
-    plugins: getPlugins(webpackManifest, mode),
+    plugins: getPlugins(wappManifest, mode),
   }
 }

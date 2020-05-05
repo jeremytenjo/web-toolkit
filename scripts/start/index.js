@@ -7,13 +7,11 @@ module.exports = async () => {
   const { isTest } = global
   const env = 'dev'
   const wappManifestPath = isTest
-    ? '../../testApp/.wapp.manifest'
+    ? '../../.testApp/.wapp.manifest'
     : projectDir('.wapp.manifest.js')
   const wappManifest = require(wappManifestPath)
 
   // await createWappBuild(env, wappManifest)
-  const webpackManifest = require('../../utils/getWebpackManifest')(wappManifest)
-
-  webpack('start', webpackManifest)
+  webpack('start')
   // await concurrently(scripts)
 }
