@@ -1,4 +1,4 @@
-const isTest = process.argv[2] === 'test'
+const isTest = process.argv[2] === '--test'
 
 const colors = require('./defaults/theme/colors')
 const { projectDir, wappDir, wappRootDir } = require('./utils/getModulePath')

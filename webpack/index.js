@@ -4,7 +4,7 @@ const { projectDir, wappRootDir } = require('../utils/getModulePath')
 
 module.exports = (action) => {
   const { isTest } = global
-  const testString = isTest ? 'test' : ''
+  const testString = isTest ? '--test' : ''
   const configFilePath = wappRootDir('webpack/config.js')
   const wappManifestPath = wappRootDir('final.wapp.manifest.js')
 
