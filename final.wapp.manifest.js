@@ -8,7 +8,7 @@ const splashScreen = require(wappDir('splashScreen/splashScreen', isTest))
 const headCss = require(wappDir('theme', isTest))
 const extraBuildFiles = require(wappDir('extraBuildFiles', isTest))
 let bodyTag = require(wappDir('bodyTag', isTest))
-const wappManifest = require(projectDir('.wapp.manifest.js', isTest))
+const userWappManifest = require(projectDir('.wapp.manifest.js', isTest))
 const headTags = fonts
 bodyTag = `${bodyTag}${splashScreen}`
 
@@ -39,4 +39,4 @@ const defaultWappManifest = {
   },
 }
 
-module.exports = { ...defaultWappManifest, ...wappManifest }
+module.exports = { ...defaultWappManifest, ...userWappManifest }
