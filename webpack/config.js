@@ -1,7 +1,4 @@
-module.exports = (env, argv) => {
-  const { mode, manifestPath } = argv
-
-  const webpackManifest = require(manifestPath)
+module.exports = (mode, webpackManifest) => {
   const entry = require('./options/entry')(webpackManifest)
   const output = require('./options/output')(webpackManifest)
   const devtool = require('./options/devTool')(webpackManifest)

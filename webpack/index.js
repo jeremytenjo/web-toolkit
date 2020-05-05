@@ -1,29 +1,46 @@
 const shell = require('shelljs')
+const webpack = require('webpack')
 
-module.exports = (action, manifestPath) => {
-  const projectDir = process.cwd()
-  const webpackDir = __dirname
-  const configFilePath = `${webpackDir}/config.js`
+const { projectDir, wappRootDir } = require('../utils/getModulePath')
 
-  const startCommand = `webpack-dev-server --config ${configFilePath} --mode development --color --hot --inline --manifestPath ${manifestPath}`
-  const buildCommand = `webpack --config ${configFilePath} -p --manifestPath ${manifestPath} --color`
-  const analyzeCommand = `webpack-bundle-analyzer --port 4200 ${projectDir}/build/stats.json`
+module.exports = (action, webpackManifest) => {
+  const webpackConfig = require(wappRootDir('webpack/config.js'))('dev', webpackManifest)
 
-  switch (action) {
-    case 'start':
-      shell.exec(startCommand)
-      break
+  console.log({ webpackConfig })
+  const compiler = webpack('dev', webpackConfig)
 
-    case 'build':
-      shell.exec(buildCommand)
-      break
+  const watching = compiler.watch(
+    {
+      // Example watchOptions
+      aggregateTimeout: 300,
+      poll: undefined,
+    },
+    (err, stats) => {
+      // Stats Object
+      // Print watch/build result here...
+      console.log(stats)
+    },
+  )
 
-    case 'analyze':
-      shell.exec(analyzeCommand)
-      break
+  //   const startCommand = `webpack-dev-server --config ${configFilePath} --mode development --color --hot --inline --manifestPath ${manifestPath}`
+  //   const buildCommand = `webpack --config ${configFilePath} -p --manifestPath ${manifestPath} --color`
+  //   const analyzeCommand = `webpack-bundle-analyzer --port 4200 ${projectDir}/build/stats.json`
 
-    default:
-      shell.exec(startCommand)
-      break
-  }
+  //   switch (action) {
+  //     case 'start':
+  //       shell.exec(startCommand)
+  //       break
+
+  //     case 'build':
+  //       shell.exec(buildCommand)
+  //       break
+
+  //     case 'analyze':
+  //       shell.exec(analyzeCommand)
+  //       break
+
+  //     default:
+  //       shell.exec(startCommand)
+  //       break
+  //   }
 }
