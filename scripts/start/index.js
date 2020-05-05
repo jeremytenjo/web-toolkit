@@ -13,6 +13,6 @@ module.exports = async () => {
 
   await createWappBuild(env, wappManifest)
   const webpackManifest = require('../../utils/getWebpackManifest')(wappManifest)
-  // webpack('start', webpackManifest)
+  webpack('start', webpackManifest)
   // await concurrently(scripts)
 }
