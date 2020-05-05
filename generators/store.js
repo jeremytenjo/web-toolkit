@@ -42,7 +42,7 @@ const generateStore = async (wappManifest, hydrate) => {
 
     orderedFiles.map(async (path, i) => {
       const index = i + 1
-      const pathSplit = path.split('\\')
+      const pathSplit = path.split('/')
       const fileNameFull = pathSplit[pathSplit.length - 1]
       const fileName = pathSplit.pop().split('.')[0]
       const fileNameUppercase = fileName[0].toUpperCase() + fileName.slice(1)

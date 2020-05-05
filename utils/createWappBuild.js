@@ -31,7 +31,7 @@ module.exports = async (env, wappManifest) => {
   await generateFirebase(payload)
   await generateTheme(payload)
   await generateRouter(payload)
-  // await generateStoreAndListen(payload)
+  await generateStoreAndListen(payload)
   // await generateFonts(payload)
   // await generateAddExtraBuildFiles(payload)
   // await generateAddBodyTag(payload)
