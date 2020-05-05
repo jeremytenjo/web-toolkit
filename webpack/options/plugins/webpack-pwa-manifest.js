@@ -14,6 +14,8 @@ module.exports = (webpackManifest) => {
       share_target,
     },
   } = webpackManifest
+  console.log({ path })
+
   const logoPath = `${path}/logo.png`
   const logoPathMaskable = `${path}/logo-maskable.png`
   const logoPathMaskableExists = fs.existsSync(logoPathMaskable)
