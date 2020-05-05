@@ -10,7 +10,7 @@ const extraBuildFiles = require(wappDir('extraBuildFiles', isTest))
 let bodyTag = require(wappDir('bodyTag', isTest))
 const userWappManifest = require(projectDir('.wapp.manifest.js', isTest))
 const entry = projectDir('src/_index.js', isTest)
-const outputPath = projectDir('src/.build', isTest)
+const outputPath = projectDir('.build', isTest)
 const headTags = fonts
 bodyTag = `${bodyTag}${splashScreen}`
 
