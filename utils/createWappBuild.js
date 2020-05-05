@@ -32,11 +32,11 @@ module.exports = async (env, wappManifest) => {
   await generateTheme(payload)
   await generateRouter(payload)
   await generateStoreAndListen(payload)
-  // await generateFonts(payload)
-  // await generateAddExtraBuildFiles(payload)
-  // await generateAddBodyTag(payload)
-  // await offlineSupport(payload)
-  // await generateAppIndex(payload)
+  await generateFonts(payload)
+  await generateAddExtraBuildFiles(payload)
+  await generateAddBodyTag(payload)
+  await offlineSupport(payload)
+  await generateAppIndex(payload)
 
   logSuccessMessage('Wapp Build Created', 'star2')
 }
