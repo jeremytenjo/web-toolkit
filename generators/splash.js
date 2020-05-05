@@ -13,8 +13,8 @@ module.exports = async ({
     },
   },
 }) => {
-  const svgFile = projectDir(`${path}/logo.svg`)
-  const pngFile = projectDir(`${path}/logo.png`)
+  const svgFile = projectDir(`src/images/logo/logo.svg`)
+  const pngFile = projectDir(`src/images/logo/logo.png`)
   const pngExists = existsSync(pngFile)
   const createdToPNGMessage = `logo.png created`
   const createdSplashMessage = `Splash Screen created`
