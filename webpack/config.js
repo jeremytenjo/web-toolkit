@@ -11,6 +11,17 @@ module.exports = (env, argv) => {
   const module = require('./options/module')
   const getPlugins = require('./options/plugins')
 
+  console.log({
+    entry,
+    output,
+    devtool,
+    devServer,
+    performance,
+    optimization,
+    module,
+    plugins: getPlugins(wappManifest, mode),
+  })
+
   return {
     entry,
     output,

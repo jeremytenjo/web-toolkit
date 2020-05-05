@@ -15,4 +15,5 @@ exports.wappDir = (path = '', _isTest) => {
 
   return `${getProjectRoot()}${dir}/src/.wapp/_${path}`
 }
+
 exports.buildDir = (path = '') => `${getProjectRoot()}/build/${path}`

@@ -10,7 +10,7 @@
     "wapp": "index.js"
   },
   "scripts": {
-    "wapp": "node index.js",
+    "wapp:test": "node index.js start test",
     "start": "start-storybook -p 9002 -c .storybook -s .storybook/public --quiet",
     "deploy": "npm run lint:check && npm run cy:run-ci && npm run deploy:firebase && npm run publish:library && git push",
     "deploy:quick": "npm run deploy:firebase && npm run publish:library && git push",

@@ -37,7 +37,7 @@ module.exports = (webpackManifest) => {
       )
       console.log()
       console.log(chalk.cyan('Note that the development build is not optimized.'))
-      console.log(chalk.cyan(`To create a production build, use yarn build`))
+      console.log(chalk.cyan(`To create a production build, use npm run build`))
       console.log()
     },
   }
