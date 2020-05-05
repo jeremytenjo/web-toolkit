@@ -1,6 +1,6 @@
 const concurrently = require('concurrently')
 
-const createWappBuild = require('../../utils/createWappBuild')
+const createWappBuild = require('../../generators/createWappBuild')
 const webpack = require('../../webpack')
 
 module.exports = async () => {
@@ -11,7 +11,7 @@ module.exports = async () => {
     : projectDir('.wapp.manifest.js')
   const wappManifest = require(wappManifestPath)
 
-  // await createWappBuild(env, wappManifest)
+  await createWappBuild(env, wappManifest)
   webpack('start')
   // await concurrently(scripts)
 }
