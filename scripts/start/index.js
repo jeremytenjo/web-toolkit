@@ -11,7 +11,7 @@ module.exports = async () => {
     : projectDir('.wapp.manifest.js')
   const wappManifest = require(wappManifestPath)
 
-  // await createWappBuild(env, wappManifest)
+  await createWappBuild(env, wappManifest)
   webpack('start')
   // await concurrently(scripts)
 }
